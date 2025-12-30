@@ -395,8 +395,23 @@ function editNode(id){
 }
 
 function toggleNode(id){
-  pushHistory(); find(currentMap,id).collapsed^=true; render();
+  pushHistory();
+  find(currentMap, id).collapsed ^= true;
+  render().then(() => {
+    focusNode(id);
+  });
 }
+function focusNode(id){
+  const el = document.querySelector(`.node[data-id="${id}"]`);
+  if(!el) return;
+
+  el.scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+    inline: "center"
+  });
+}
+
 function deleteNode(id){
   if(id===currentMap.id) return alert("Root cannot be deleted");
   if(!confirm("Delete node?")) return;
