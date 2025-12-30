@@ -61,6 +61,43 @@ svg {
   white-space:nowrap;
   box-shadow:0 0 0 1px #b7c6be;
 }
+/* ===== Inline Edit Polish ===== */
+.node-text {
+  cursor: text;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: background 0.15s ease, outline 0.15s ease;
+}
+
+.node-text[contenteditable="true"] {
+  background: rgba(255,255,255,0.7);
+  outline: 2px dashed #6aa84f;
+  outline-offset: 2px;
+
+  /* remove browser default */
+  box-shadow: none;
+  caret-color: #2d6a4f;
+
+  /* better text feel */
+  line-height: 1.4;
+}
+
+/* prevent ugly resize handles / artifacts */
+.node-text[contenteditable="true"]:focus {
+  border: none;
+}
+
+/* remove spellcheck underline (important) */
+.node-text {
+  -webkit-user-modify: read-write-plaintext-only;
+}
+.node-text[contenteditable="true"] {
+  background: #ffffff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(106,168,79,0.6);
+}
+
+
 
 
 .node-header {
@@ -286,10 +323,56 @@ function addChild(id){
   render();
 }
 function editNode(id){
-  const n=find(currentMap,id);
-  const t=prompt("Edit",n.text); if(!t) return;
-  pushHistory(); n.text=t; render();
+  const nodeEl = document.querySelector(`[data-id="${id}"]`);
+  if(!nodeEl) return;
+
+  const span = nodeEl.querySelector(".node-text");
+  const oldText = span.textContent;
+
+  pushHistory();
+
+  span.contentEditable = "true";
+  span.focus();
+
+  const range = document.createRange();
+  range.selectNodeContents(span);
+  range.collapse(false);
+  const sel = window.getSelection();
+  sel.removeAllRanges();
+  sel.addRange(range);
+
+  function finish(save){
+    span.contentEditable = "false";
+    span.removeEventListener("keydown", onKey);
+    span.removeEventListener("blur", onBlur);
+
+    if(save){
+      const n = find(currentMap,id);
+      n.text = span.textContent.trim() || oldText;
+    } else {
+      span.textContent = oldText;
+    }
+    render();
+  }
+
+  function onKey(e){
+    if(e.key === "Enter"){
+      e.preventDefault();
+      finish(true);
+    }
+    if(e.key === "Escape"){
+      finish(false);
+    }
+  }
+
+  function onBlur(){
+    finish(true);
+  }
+
+  span.addEventListener("keydown", onKey);
+  span.addEventListener("blur", onBlur);
 }
+
 function toggleNode(id){
   pushHistory(); find(currentMap,id).collapsed^=true; render();
 }
@@ -353,7 +436,13 @@ function draw(n, depth){
 
   const h=document.createElement("div");
   h.className="node-header";
-  h.innerHTML=`<span>${n.text}</span><button class="menu-btn">⋮</button>`;
+  el.dataset.id = n.id;
+
+h.innerHTML = `
+  <span class="node-text">${n.text}</span>
+  <button class="menu-btn">⋮</button>
+`;
+
 
   const m=document.createElement("div");
   m.className="menu";
