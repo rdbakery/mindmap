@@ -407,22 +407,42 @@ function deleteNode(id){
 const NODE_H=36, GAP_X=220, GAP_Y=24;
 
 function computeH(n){
-  if(n.collapsed||!n.children.length){ n._h=NODE_H; return n._h; }
-  let h=0;
-  n.children.forEach(c=>h+=computeH(c)+GAP_Y);
-  n._h=Math.max(h-GAP_Y,NODE_H);
+  const h = n._realH || 44; // fallback
+  if(n.collapsed || !n.children.length){
+    n._h = h;
+    return n._h;
+  }
+  let total = 0;
+  n.children.forEach(c => total += computeH(c) + GAP_Y);
+  n._h = Math.max(total - GAP_Y, h);
   return n._h;
 }
 
-function layout(n,x,y){
-  n._x=x; n._y=y;
-  if(n.collapsed) return;
-  let cy=y-n._h/2;
-  n.children.forEach(c=>{
-    layout(c,x+GAP_X,cy+c._h/2);
-    cy+=c._h+GAP_Y;
+
+const MIN_GAP_X = 120;     // minimum horizontal gap
+const GAP_FACTOR = 0.6;   // gap grows with node width
+
+function layout(n, x, y) {
+  n._x = x;
+  n._y = y;
+
+  if (n.collapsed) return;
+
+  let cy = y - n._h / 2;
+
+  const parentWidth = n._realW || 120;
+  const dynamicGapX = Math.max(
+    MIN_GAP_X,
+    parentWidth * GAP_FACTOR
+  );
+
+  n.children.forEach(c => {
+    const childX = x + parentWidth + dynamicGapX;
+    layout(c, childX, cy + c._h / 2);
+    cy += c._h + GAP_Y;
   });
 }
+
 
 function resize(n){
   let mx=0,my=0;
@@ -441,12 +461,26 @@ function resize(n){
 async function render(){
   document.querySelectorAll(".node").forEach(n=>n.remove());
   svg.innerHTML="";
+
+  // First render (unknown sizes)
+  computeH(currentMap);
+  layout(currentMap,80,currentMap._h/2+40);
+  draw(currentMap,0);
+
+  // Measure actual DOM sizes
+  measureNodes();
+
+  // Second layout using real sizes
+  document.querySelectorAll(".node").forEach(n=>n.remove());
+  svg.innerHTML="";
   computeH(currentMap);
   layout(currentMap,80,currentMap._h/2+40);
   resize(currentMap);
   draw(currentMap,0);
+
   await saveMap(activeId,currentMap.text,currentMap);
 }
+
 
 function draw(n, depth){
   const el=document.createElement("div");
@@ -484,7 +518,7 @@ h.innerHTML = `
 
   if(n.collapsed) return;
   n.children.forEach(c=>{
-    drawLine(n._x+el.offsetWidth,n._y,c._x,c._y);
+    drawLine(n._x + n._realW, n._y, c._x, c._y);
     draw(c, depth+1);
   });
 }
@@ -566,6 +600,17 @@ function exportPDF(){
     pdf.save(`${safeName(currentMap.text)}.pdf`);
   });
 }
+function measureNodes() {
+  document.querySelectorAll(".node").forEach(el => {
+    const id = el.dataset.id;
+    const node = find(currentMap, id);
+    if (node) {
+      node._realH = el.offsetHeight;
+      node._realW = el.offsetWidth;
+    }
+  });
+}
+
 
 function closeMenus(){
   document.querySelectorAll(".menu").forEach(m=>m.style.display="none");
