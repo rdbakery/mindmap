@@ -216,11 +216,22 @@ const clone = o => JSON.parse(JSON.stringify(o));
 const safeName = n => (n||"mindmap").replace(/[<>:"/\\|?*]+/g,"").replace(/\s+/g,"_");
 
 /* ===== Node Color by Level ===== */
-function nodeColor(depth){
-  const baseLight = 72;   // 🔥 darker root
-  const step = 5;        // smooth lightening per level
-  const light = Math.min(baseLight + depth * step, 92);
-  return `hsl(150, 30%, ${light}%)`;
+function nodeColor(depth) {
+  const palette = [
+    "#cfd2ff", // Root (soft violet)
+    "#cfe3f8", // Level 1 (light blue)
+    "#cfeee5", // Level 2 (mint)
+    "#e3f4ee", // Level 3 (lighter mint)
+  ];
+
+  if (depth < palette.length) {
+    return palette[depth];
+  }
+
+  // For deeper levels → auto lighten
+  const extra = depth - palette.length + 1;
+  const lightness = Math.min(92, 85 + extra * 2);
+  return `hsl(160, 35%, ${lightness}%)`;
 }
 
 
