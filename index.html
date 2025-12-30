@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mind Map (IndexedDB – Stable)</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<style>
+body {
+  margin:0;
+  background:#0b0f0e;
+  font-family:Segoe UI;
+  color:#e6f4ea;
+}
+
+/* ===== Toolbar ===== */
+.toolbar {
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#081c15;
+  padding:8px;
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  border-bottom:1px solid #2d6a4f;
+}
+
+.toolbar button,
+.toolbar select {
+  background:#1f3d2b;
+  color:#e6f4ea;
+  border:1px solid #2d6a4f;
+  padding:6px 10px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+/* ===== Canvas ===== */
+#canvas {
+  position:relative;
+  min-height:100vh;
+}
+
+svg {
+  position:absolute;
+  top:0;
+  left:0;
+  pointer-events:none; /* 🔥 CRITICAL FIX */
+}
+
+/* ===== Nodes ===== */
+.node {
+  position:absolute;
+  background:#1f3d2b;
+  padding:8px 12px;
+  border-radius:8px;
+  font-size:13px;
+  white-space:nowrap;
+  box-shadow:0 0 0 1px #2d6a4f;
+}
+
+.node-header {
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+.menu-btn {
+  background:none;
+  border:none;
+  color:#95d5b2;
+  font-size:16px;
+  cursor:pointer;
+}
+
+/* ===== Menu (FIXED) ===== */
+.menu {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background: #081c15;
+  border: 1px solid #2d6a4f;
+  border-radius: 6px;
+  width: max-content;      /* 🔥 shrink to content */
+  min-width: 90px;        /* controlled minimum */
+  max-width: 180px;        /* prevent too wide */
+  display: none;
+  z-index: 2000;
+  pointer-events: auto;
+}
+
+
+.menu button {
+  all: unset;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 12px;       /* ⬅ reduced padding */
+  cursor: pointer;
+  color: #e6f4ea;
+  white-space: nowrap;     /* ⬅ keep text on one line */
+}
+
+
+.menu button:hover {
+  background:#1b4332;
+}
+</style>
+</head>
+
+<body>
+
+<div class="toolbar">
+  <select id="mapSelector"></select>
+  <button onclick="createMap()">➕ New</button>
+  <button onclick="renameMap()">✏️ Rename</button>
+  <button onclick="deleteMap()">🗑 Delete</button>
+  <button onclick="undo()">Undo</button>
+  <button onclick="redo()">Redo</button>
+  <button onclick="exportJSON()">Export JSON</button>
+  <button onclick="exportPNG()">Export PNG</button>
+  <button onclick="exportPDF()">Export PDF</button>
+  <input type="file" accept=".json" onchange="importJSON(event)">
+</div>
+
+<div id="canvas">
+  <svg id="svg"></svg>
+</div>
+
+<script>
+/* ================= UTIL ================= */
+const uid = () => Math.random().toString(36).slice(2);
+const clone = o => JSON.parse(JSON.stringify(o));
+const safeName = n => (n||"mindmap").replace(/[<>:"/\\|?*]+/g,"").replace(/\s+/g,"_");
+
+/* ================= INDEXED DB ================= */
+const DB_NAME="mindmapDB", STORE="files";
+
+function openDB(){
+  return new Promise(res=>{
+    const r=indexedDB.open(DB_NAME,1);
+    r.onupgradeneeded=e=>{
+      e.target.result.createObjectStore(STORE,{keyPath:"key"});
+    };
+    r.onsuccess=()=>res(r.result);
+  });
+}
+
+async function saveMap(id,name,data){
+  const db=await openDB();
+  db.transaction(STORE,"readwrite")
+    .objectStore(STORE)
+    .put({key:`mindmaps/${id}.json`,id,name,json:data});
+}
+
+async function loadMap(id){
+  const db=await openDB();
+  return new Promise(res=>{
+    db.transaction(STORE)
+      .objectStore(STORE)
+      .get(`mindmaps/${id}.json`)
+      .onsuccess=e=>res(e.target.result?.json);
+  });
+}
+
+async function listMaps(){
+  const db=await openDB();
+  return new Promise(res=>{
+    const out=[];
+    db.transaction(STORE)
+      .objectStore(STORE)
+      .openCursor().onsuccess=e=>{
+        const c=e.target.result;
+        if(!c) return res(out);
+        out.push({id:c.value.id,name:c.value.name});
+        c.continue();
+      };
+  });
+}
+
+async function deleteMapDB(id){
+  const db=await openDB();
+  db.transaction(STORE,"readwrite")
+    .objectStore(STORE)
+    .delete(`mindmaps/${id}.json`);
+}
+
+/* ================= STATE ================= */
+let currentMap=null, activeId=null;
+let undoStack=[], redoStack=[];
+
+/* ================= INIT ================= */
+(async()=>{
+  const maps=await listMaps();
+  if(!maps.length){
+    activeId=uid();
+    currentMap={id:activeId,text:"My First Mind Map",collapsed:false,children:[]};
+    await saveMap(activeId,currentMap.text,currentMap);
+  } else {
+    activeId=maps[0].id;
+    currentMap=await loadMap(activeId);
+  }
+  refreshSelector();
+  render();
+})();
+
+/* ================= MAP MGMT ================= */
+async function refreshSelector(){
+  mapSelector.innerHTML="";
+  const maps=await listMaps();
+  maps.forEach(m=>{
+    const o=document.createElement("option");
+    o.value=m.id; o.textContent=m.name;
+    if(m.id===activeId) o.selected=true;
+    mapSelector.appendChild(o);
+  });
+}
+
+mapSelector.onchange=async e=>{
+  activeId=e.target.value;
+  currentMap=await loadMap(activeId);
+  undoStack=[]; redoStack=[];
+  render();
+};
+
+async function createMap(){
+  const n=prompt("Map name"); if(!n) return;
+  activeId=uid();
+  currentMap={id:activeId,text:n,collapsed:false,children:[]};
+  undoStack=[]; redoStack=[];
+  await saveMap(activeId,n,currentMap);
+  refreshSelector(); render();
+}
+
+async function renameMap(){
+  const n=prompt("Rename",currentMap.text); if(!n) return;
+  currentMap.text=n;
+  await saveMap(activeId,n,currentMap);
+  refreshSelector(); render();
+}
+
+async function deleteMap(){
+  if(!confirm("Delete map?")) return;
+  await deleteMapDB(activeId);
+  const maps=await listMaps();
+  if(!maps.length) location.reload();
+  activeId=maps[0].id;
+  currentMap=await loadMap(activeId);
+  refreshSelector(); render();
+}
+
+/* ================= UNDO / REDO ================= */
+function pushHistory(){ undoStack.push(clone(currentMap)); redoStack=[]; }
+function undo(){ if(!undoStack.length) return;
+  redoStack.push(clone(currentMap));
+  currentMap=undoStack.pop(); render();
+}
+function redo(){ if(!redoStack.length) return;
+  undoStack.push(clone(currentMap));
+  currentMap=redoStack.pop(); render();
+}
+
+/* ================= TREE ================= */
+function find(n,id){
+  if(n.id===id) return n;
+  for(const c of n.children){ const f=find(c,id); if(f) return f; }
+}
+
+function removeNode(p,id){
+  p.children=p.children.filter(c=>c.id!==id);
+  p.children.forEach(c=>removeNode(c,id));
+}
+
+function addChild(id){
+  pushHistory();
+  find(currentMap,id).children.push({
+    id:uid(), text:"New Node", collapsed:false, children:[]
+  });
+  render();
+}
+
+function editNode(id){
+  const n=find(currentMap,id);
+  const t=prompt("Edit",n.text); if(!t) return;
+  pushHistory(); n.text=t; render();
+}
+
+function toggleNode(id){
+  pushHistory();
+  const n=find(currentMap,id);
+  n.collapsed=!n.collapsed;
+  render();
+}
+
+function deleteNode(id){
+  if(id===currentMap.id) return alert("Root cannot be deleted");
+  if(!confirm("Delete node?")) return;
+  pushHistory(); removeNode(currentMap,id); render();
+}
+
+/* ================= LAYOUT ================= */
+const NODE_H=36, GAP_X=220, GAP_Y=24;
+
+function computeH(n){
+  if(n.collapsed||!n.children.length){
+    n._h=NODE_H; return n._h;
+  }
+  let h=0;
+  n.children.forEach(c=>h+=computeH(c)+GAP_Y);
+  n._h=Math.max(h-GAP_Y,NODE_H);
+  return n._h;
+}
+
+function layout(n,x,y){
+  n._x=x; n._y=y;
+  if(n.collapsed) return;
+  let cy=y-n._h/2;
+  n.children.forEach(c=>{
+    layout(c,x+GAP_X,cy+c._h/2);
+    cy+=c._h+GAP_Y;
+  });
+}
+
+function resize(n){
+  let mx=0,my=0;
+  (function w(n){
+    mx=Math.max(mx,n._x+320);
+    my=Math.max(my,n._y+160);
+    n.children.forEach(w);
+  })(n);
+  canvas.style.width=mx+"px";
+  canvas.style.height=my+"px";
+  svg.setAttribute("width",mx);
+  svg.setAttribute("height",my);
+}
+
+/* ================= RENDER ================= */
+async function render(){
+  document.querySelectorAll(".node").forEach(n=>n.remove());
+  svg.innerHTML="";
+  computeH(currentMap);
+  layout(currentMap,80,currentMap._h/2+40);
+  resize(currentMap);
+  draw(currentMap);
+  await saveMap(activeId,currentMap.text,currentMap);
+}
+
+function draw(n){
+  const el=document.createElement("div");
+  el.className="node";
+  el.style.left=n._x+"px";
+  el.style.top=(n._y-NODE_H/2)+"px";
+
+  const header=document.createElement("div");
+  header.className="node-header";
+
+  const title=document.createElement("span");
+  title.textContent=n.text;
+
+  const btn=document.createElement("button");
+  btn.className="menu-btn";
+  btn.textContent="⋮";
+
+  const menu=document.createElement("div");
+  menu.className="menu";
+  menu.innerHTML=`
+    <button onclick="addChild('${n.id}')">➕ Add</button>
+    <button onclick="editNode('${n.id}')">✏️ Edit</button>
+    <button onclick="toggleNode('${n.id}')">
+      ${n.collapsed ? "▶ Expand" : "▼ Collapse"}
+    </button>
+    <button onclick="deleteNode('${n.id}')">🗑 Delete</button>
+  `;
+
+  btn.onclick=e=>{
+    e.stopPropagation();
+    closeMenus();
+    menu.style.display="block";
+  };
+
+  el.onclick=e=>{
+    e.stopPropagation();
+    closeMenus();
+  };
+
+  header.append(title,btn);
+  el.append(header,menu);
+  canvas.appendChild(el);
+
+  if(n.collapsed) return;
+  n.children.forEach(c=>{
+    drawLine(n._x+el.offsetWidth,n._y,c._x,c._y);
+    draw(c);
+  });
+}
+
+/* ================= SVG ================= */
+function drawLine(x1,y1,x2,y2){
+  const p=document.createElementNS("http://www.w3.org/2000/svg","path");
+  p.setAttribute("d",
+    `M ${x1} ${y1} C ${x1+60} ${y1}, ${x2-60} ${y2}, ${x2} ${y2}`);
+  p.setAttribute("stroke","#40916c");
+  p.setAttribute("fill","none");
+  svg.appendChild(p);
+}
+
+/* ================= EXPORT ================= */
+function exportJSON(){
+  const name=safeName(currentMap.text);
+  const b=new Blob([JSON.stringify(currentMap,null,2)],{type:"application/json"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(b);
+  a.download=`${name}.json`;
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+}
+
+function importJSON(e){
+  const f=e.target.files[0]; if(!f) return;
+  const r=new FileReader();
+  r.onload=async()=>{
+    const data=JSON.parse(r.result);
+    const id=uid();
+    activeId=id;
+    currentMap={...data,id};
+    await saveMap(id,data.text||"Imported Map",currentMap);
+    refreshSelector(); render();
+  };
+  r.readAsText(f);
+}
+
+function exportPNG(){
+  const name=safeName(currentMap.text);
+  html2canvas(canvas,{backgroundColor:"#0b0f0e",scale:2}).then(c=>{
+    const a=document.createElement("a");
+    a.href=c.toDataURL();
+    a.download=`${name}.png`;
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  });
+}
+
+function exportPDF(){
+  const name=safeName(currentMap.text);
+  html2canvas(canvas,{backgroundColor:"#0b0f0e",scale:2}).then(c=>{
+    const {jsPDF}=window.jspdf;
+    const pdf=new jsPDF("l","px",[c.width,c.height]);
+    pdf.addImage(c.toDataURL(),"PNG",0,0);
+    pdf.save(`${name}.pdf`);
+  });
+}
+
+function closeMenus(){
+  document.querySelectorAll(".menu").forEach(m=>m.style.display="none");
+}
+document.body.onclick=closeMenus;
+</script>
+
+</body>
+</html>
