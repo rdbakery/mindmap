@@ -52,6 +52,29 @@ svg {
   pointer-events:none;
 }
 
+.connector-toggle {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #8faadc;
+  color: #3b5bdb;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.connector-toggle:hover {
+  background: #edf2ff;
+}
+
 /* ===== Nodes ===== */
 .node {
   position:absolute;
@@ -474,20 +497,18 @@ function resize(n){
 
 /* ================= RENDER ================= */
 async function render(){
-  document.querySelectorAll(".node").forEach(n=>n.remove());
+  document.querySelectorAll(".node, .connector-toggle").forEach(el => el.remove());
   svg.innerHTML="";
 
-  // First render (unknown sizes)
   computeH(currentMap);
   layout(currentMap,80,currentMap._h/2+40);
   draw(currentMap,0);
 
-  // Measure actual DOM sizes
   measureNodes();
 
-  // Second layout using real sizes
-  document.querySelectorAll(".node").forEach(n=>n.remove());
+  document.querySelectorAll(".node, .connector-toggle").forEach(el => el.remove());
   svg.innerHTML="";
+
   computeH(currentMap);
   layout(currentMap,80,currentMap._h/2+40);
   resize(currentMap);
@@ -495,6 +516,7 @@ async function render(){
 
   await saveMap(activeId,currentMap.text,currentMap);
 }
+
 
 
 function draw(n, depth){
@@ -519,7 +541,6 @@ h.innerHTML = `
   m.innerHTML=`
     <button onclick="addChild('${n.id}')">➕ Add</button>
     <button onclick="editNode('${n.id}')">✏️ Edit</button>
-    <button onclick="toggleNode('${n.id}')">${n.collapsed?"▶ Expand":"▼ Collapse"}</button>
     <button onclick="deleteNode('${n.id}')">🗑 Delete</button>
   `;
 
@@ -531,11 +552,41 @@ h.innerHTML = `
   el.append(h,m);
   canvas.appendChild(el);
 
-  if(n.collapsed) return;
-  n.children.forEach(c=>{
-    drawLine(n._x + n._realW, n._y, c._x, c._y);
-    draw(c, depth+1);
-  });
+// Draw children + connector toggle
+if(n.children.length && n._realW){
+
+  // Draw collapse / expand button ON CONNECTOR
+  const toggle = document.createElement("div");
+  toggle.className = "connector-toggle";
+  toggle.textContent = n.collapsed ? ">" : "<";
+
+  const btnX = n._x + n._realW + 8;
+  const btnY = n._y;
+
+  toggle.style.left = btnX + "px";
+  toggle.style.top = (btnY - 11) + "px";
+
+  toggle.onclick = (e) => {
+    e.stopPropagation();
+    toggleNode(n.id);
+  };
+
+  canvas.appendChild(toggle);
+}
+
+// Draw children if expanded
+if(n.collapsed) return;
+
+n.children.forEach(c=>{
+  drawLine(
+    n._x + n._realW,
+    n._y,
+    c._x,
+    c._y
+  );
+  draw(c, depth+1);
+});
+
 }
 
 /* ================= SVG ================= */
