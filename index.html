@@ -15,6 +15,62 @@ body {
   color:#1b1b1b;
 }
 
+/* ===== Expand / Collapse All Icon ===== */
+.expand-collapse-btn {
+  width: 36px;
+  height: 36px;
+  background: #ffffff;
+  border: 1px solid #a3b5aa;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.expand-collapse-btn::before,
+.expand-collapse-btn::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #4b5563;
+}
+
+/* COLLAPSE STATE (default – inward corners) */
+.expand-collapse-btn::before {
+  top: 8px;
+  left: 8px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.expand-collapse-btn::after {
+  bottom: 8px;
+  right: 8px;
+  border-left: none;
+  border-top: none;
+}
+
+/* EXPAND STATE (outward corners – FIXED & VISIBLE) */
+.expand-collapse-btn.expand::before {
+  top: 6px;
+  left: 6px;
+  border-bottom: none;
+  border-right: none;
+}
+
+.expand-collapse-btn.expand::after {
+  bottom: 6px;
+  right: 6px;
+  border-top: none;
+  border-left: none;
+}
+
+
+.expand-collapse-btn:hover {
+  background: #eef4f1;
+}
+
+
 /* ===== Toolbar ===== */
 .toolbar {
   position:sticky;
@@ -202,6 +258,12 @@ svg {
   📥 Import Mind Map
   <input type="file" accept=".json" onchange="importJSON(event)" hidden>
 </label>
+  <button
+    id="toggleAllBtn"
+    class="expand-collapse-btn"
+    title="Collapse All"
+    onclick="toggleAllNodes()">
+  </button>
 
 </div>
 
@@ -318,12 +380,38 @@ async function refreshSelector(){
   });
 }
 
-mapSelector.onchange=async e=>{
-  activeId=e.target.value;
-  currentMap=await loadMap(activeId);
-  undoStack=[]; redoStack=[];
+let allCollapsed = false;
+
+/* Collapse / Expand ALL nodes */
+function toggleAllNodes() {
+  pushHistory();
+
+  allCollapsed = !allCollapsed;
+  toggleRecursive(currentMap, allCollapsed);
+
+  render();
+}
+
+
+/* Recursively apply collapsed state */
+function toggleRecursive(node, collapse) {
+  if (node !== currentMap) {
+    node.collapsed = collapse;
+  }
+  node.children.forEach(c => toggleRecursive(c, collapse));
+}
+
+
+
+mapSelector.onchange = async e => {
+  activeId = e.target.value;
+  currentMap = await loadMap(activeId);
+  undoStack = [];
+  redoStack = [];
+  allCollapsed = false; // ✅ reset icon state
   render();
 };
+
 
 async function createMap(){
   const n=prompt("Map name"); if(!n) return;
@@ -526,6 +614,11 @@ async function render(){
   draw(currentMap,0);
 
   await saveMap(activeId,currentMap.text,currentMap);
+
+    const btn = document.getElementById("toggleAllBtn");
+  if (btn) {
+    btn.classList.toggle("expand", allCollapsed);
+  }
 }
 
 
