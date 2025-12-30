@@ -10,9 +10,9 @@
 <style>
 body {
   margin:0;
-  background:#0b0f0e;
+  background:#ffffff;
   font-family:Segoe UI;
-  color:#e6f4ea;
+  color:#1b1b1b;
 }
 
 /* ===== Toolbar ===== */
@@ -20,19 +20,19 @@ body {
   position:sticky;
   top:0;
   z-index:1000;
-  background:#081c15;
+  background:#f1f5f3;
   padding:8px;
   display:flex;
   gap:8px;
   flex-wrap:wrap;
-  border-bottom:1px solid #2d6a4f;
+  border-bottom:1px solid #c7d2cc;
 }
 
 .toolbar button,
 .toolbar select {
-  background:#1f3d2b;
-  color:#e6f4ea;
-  border:1px solid #2d6a4f;
+  background:#ffffff;
+  color:#1b1b1b;
+  border:1px solid #a3b5aa;
   padding:6px 10px;
   border-radius:6px;
   cursor:pointer;
@@ -42,25 +42,26 @@ body {
 #canvas {
   position:relative;
   min-height:100vh;
+  background:#ffffff;
 }
 
 svg {
   position:absolute;
   top:0;
   left:0;
-  pointer-events:none; /* 🔥 CRITICAL FIX */
+  pointer-events:none;
 }
 
 /* ===== Nodes ===== */
 .node {
   position:absolute;
-  background:#1f3d2b;
   padding:8px 12px;
   border-radius:8px;
   font-size:13px;
   white-space:nowrap;
-  box-shadow:0 0 0 1px #2d6a4f;
+  box-shadow:0 0 0 1px #b7c6be;
 }
+
 
 .node-header {
   display:flex;
@@ -71,42 +72,39 @@ svg {
 .menu-btn {
   background:none;
   border:none;
-  color:#95d5b2;
+  color:#3b7d5a;
   font-size:16px;
   cursor:pointer;
 }
 
-/* ===== Menu (FIXED) ===== */
+/* ===== Menu ===== */
 .menu {
-  position: absolute;
-  top: 30px;
-  right: 0;
-  background: #081c15;
-  border: 1px solid #2d6a4f;
-  border-radius: 6px;
-  width: max-content;      /* 🔥 shrink to content */
-  min-width: 90px;        /* controlled minimum */
-  max-width: 180px;        /* prevent too wide */
-  display: none;
-  z-index: 2000;
-  pointer-events: auto;
+  position:absolute;
+  top:30px;
+  right:0;
+  background:#ffffff;
+  border:1px solid #b7c6be;
+  border-radius:6px;
+  width:max-content;
+  min-width:90px;
+  max-width:180px;
+  display:none;
+  z-index:2000;
 }
-
 
 .menu button {
-  all: unset;
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 8px 12px;       /* ⬅ reduced padding */
-  cursor: pointer;
-  color: #e6f4ea;
-  white-space: nowrap;     /* ⬅ keep text on one line */
+  all:unset;
+  display:block;
+  width:100%;
+  box-sizing:border-box;
+  padding:8px 12px;
+  cursor:pointer;
+  white-space:nowrap;
+  color:#1b1b1b;
 }
 
-
 .menu button:hover {
-  background:#1b4332;
+  background:#e8f0ec;
 }
 </style>
 </head>
@@ -135,6 +133,15 @@ svg {
 const uid = () => Math.random().toString(36).slice(2);
 const clone = o => JSON.parse(JSON.stringify(o));
 const safeName = n => (n||"mindmap").replace(/[<>:"/\\|?*]+/g,"").replace(/\s+/g,"_");
+
+/* ===== Node Color by Level ===== */
+function nodeColor(depth){
+  const baseLight = 72;   // 🔥 darker root
+  const step = 5;        // smooth lightening per level
+  const light = Math.min(baseLight + depth * step, 92);
+  return `hsl(150, 30%, ${light}%)`;
+}
+
 
 /* ================= INDEXED DB ================= */
 const DB_NAME="mindmapDB", STORE="files";
@@ -268,7 +275,6 @@ function find(n,id){
   if(n.id===id) return n;
   for(const c of n.children){ const f=find(c,id); if(f) return f; }
 }
-
 function removeNode(p,id){
   p.children=p.children.filter(c=>c.id!==id);
   p.children.forEach(c=>removeNode(c,id));
@@ -276,25 +282,17 @@ function removeNode(p,id){
 
 function addChild(id){
   pushHistory();
-  find(currentMap,id).children.push({
-    id:uid(), text:"New Node", collapsed:false, children:[]
-  });
+  find(currentMap,id).children.push({id:uid(),text:"New Node",collapsed:false,children:[]});
   render();
 }
-
 function editNode(id){
   const n=find(currentMap,id);
   const t=prompt("Edit",n.text); if(!t) return;
   pushHistory(); n.text=t; render();
 }
-
 function toggleNode(id){
-  pushHistory();
-  const n=find(currentMap,id);
-  n.collapsed=!n.collapsed;
-  render();
+  pushHistory(); find(currentMap,id).collapsed^=true; render();
 }
-
 function deleteNode(id){
   if(id===currentMap.id) return alert("Root cannot be deleted");
   if(!confirm("Delete node?")) return;
@@ -305,9 +303,7 @@ function deleteNode(id){
 const NODE_H=36, GAP_X=220, GAP_Y=24;
 
 function computeH(n){
-  if(n.collapsed||!n.children.length){
-    n._h=NODE_H; return n._h;
-  }
+  if(n.collapsed||!n.children.length){ n._h=NODE_H; return n._h; }
   let h=0;
   n.children.forEach(c=>h+=computeH(c)+GAP_Y);
   n._h=Math.max(h-GAP_Y,NODE_H);
@@ -344,110 +340,88 @@ async function render(){
   computeH(currentMap);
   layout(currentMap,80,currentMap._h/2+40);
   resize(currentMap);
-  draw(currentMap);
+  draw(currentMap,0);
   await saveMap(activeId,currentMap.text,currentMap);
 }
 
-function draw(n){
+function draw(n, depth){
   const el=document.createElement("div");
   el.className="node";
   el.style.left=n._x+"px";
   el.style.top=(n._y-NODE_H/2)+"px";
+  el.style.background=nodeColor(depth);
 
-  const header=document.createElement("div");
-  header.className="node-header";
+  const h=document.createElement("div");
+  h.className="node-header";
+  h.innerHTML=`<span>${n.text}</span><button class="menu-btn">⋮</button>`;
 
-  const title=document.createElement("span");
-  title.textContent=n.text;
-
-  const btn=document.createElement("button");
-  btn.className="menu-btn";
-  btn.textContent="⋮";
-
-  const menu=document.createElement("div");
-  menu.className="menu";
-  menu.innerHTML=`
+  const m=document.createElement("div");
+  m.className="menu";
+  m.innerHTML=`
     <button onclick="addChild('${n.id}')">➕ Add</button>
     <button onclick="editNode('${n.id}')">✏️ Edit</button>
-    <button onclick="toggleNode('${n.id}')">
-      ${n.collapsed ? "▶ Expand" : "▼ Collapse"}
-    </button>
+    <button onclick="toggleNode('${n.id}')">${n.collapsed?"▶ Expand":"▼ Collapse"}</button>
     <button onclick="deleteNode('${n.id}')">🗑 Delete</button>
   `;
 
-  btn.onclick=e=>{
-    e.stopPropagation();
-    closeMenus();
-    menu.style.display="block";
+  h.querySelector("button").onclick=e=>{
+    e.stopPropagation(); closeMenus(); m.style.display="block";
   };
+  el.onclick=e=>{ e.stopPropagation(); closeMenus(); };
 
-  el.onclick=e=>{
-    e.stopPropagation();
-    closeMenus();
-  };
-
-  header.append(title,btn);
-  el.append(header,menu);
+  el.append(h,m);
   canvas.appendChild(el);
 
   if(n.collapsed) return;
   n.children.forEach(c=>{
     drawLine(n._x+el.offsetWidth,n._y,c._x,c._y);
-    draw(c);
+    draw(c, depth+1);
   });
 }
 
 /* ================= SVG ================= */
 function drawLine(x1,y1,x2,y2){
   const p=document.createElementNS("http://www.w3.org/2000/svg","path");
-  p.setAttribute("d",
-    `M ${x1} ${y1} C ${x1+60} ${y1}, ${x2-60} ${y2}, ${x2} ${y2}`);
-  p.setAttribute("stroke","#40916c");
+  p.setAttribute("d",`M${x1} ${y1} C ${x1+60} ${y1}, ${x2-60} ${y2}, ${x2} ${y2}`);
+  p.setAttribute("stroke","#3b7d5a");
   p.setAttribute("fill","none");
   svg.appendChild(p);
 }
 
 /* ================= EXPORT ================= */
 function exportJSON(){
-  const name=safeName(currentMap.text);
   const b=new Blob([JSON.stringify(currentMap,null,2)],{type:"application/json"});
   const a=document.createElement("a");
   a.href=URL.createObjectURL(b);
-  a.download=`${name}.json`;
-  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  a.download=`${safeName(currentMap.text)}.json`;
+  a.click();
 }
-
 function importJSON(e){
   const f=e.target.files[0]; if(!f) return;
   const r=new FileReader();
   r.onload=async()=>{
     const data=JSON.parse(r.result);
-    const id=uid();
-    activeId=id;
-    currentMap={...data,id};
-    await saveMap(id,data.text||"Imported Map",currentMap);
+    activeId=uid();
+    currentMap={...data,id:activeId};
+    await saveMap(activeId,currentMap.text||"Imported Map",currentMap);
     refreshSelector(); render();
   };
   r.readAsText(f);
 }
-
 function exportPNG(){
-  const name=safeName(currentMap.text);
-  html2canvas(canvas,{backgroundColor:"#0b0f0e",scale:2}).then(c=>{
+  html2canvas(canvas,{backgroundColor:"#ffffff",scale:2}).then(c=>{
     const a=document.createElement("a");
     a.href=c.toDataURL();
-    a.download=`${name}.png`;
-    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    a.download=`${safeName(currentMap.text)}.png`;
+    a.click();
   });
 }
-
 function exportPDF(){
-  const name=safeName(currentMap.text);
-  html2canvas(canvas,{backgroundColor:"#0b0f0e",scale:2}).then(c=>{
+  html2canvas(canvas,{backgroundColor:"#ffffff",scale:2}).then(c=>{
     const {jsPDF}=window.jspdf;
     const pdf=new jsPDF("l","px",[c.width,c.height]);
     pdf.addImage(c.toDataURL(),"PNG",0,0);
-    pdf.save(`${name}.pdf`);
+    pdf.save(`${safeName(currentMap.text)}.pdf`);
   });
 }
 
