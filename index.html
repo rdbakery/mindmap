@@ -506,18 +506,50 @@ function exportJSON(){
   a.download=`${safeName(currentMap.text)}.json`;
   a.click();
 }
-function importJSON(e){
-  const f=e.target.files[0]; if(!f) return;
-  const r=new FileReader();
-  r.onload=async()=>{
-    const data=JSON.parse(r.result);
-    activeId=uid();
-    currentMap={...data,id:activeId};
-    await saveMap(activeId,currentMap.text||"Imported Map",currentMap);
-    refreshSelector(); render();
+async function importJSON(e){
+  const f = e.target.files[0];
+  if(!f) return;
+
+  const r = new FileReader();
+  r.onload = async () => {
+    const data = JSON.parse(r.result);
+
+    if(!data.text){
+      alert("Invalid mind map file.");
+      return;
+    }
+
+    const rootText = data.text.trim().toLowerCase();
+    const maps = await listMaps();
+
+    const exists = maps.some(m =>
+      m.name && m.name.trim().toLowerCase() === rootText
+    );
+
+    if(exists){
+      alert("Mind map already exists.");
+      e.target.value = "";
+      return;
+    }
+
+    // ✅ safe to import
+    activeId = uid();
+    currentMap = { ...data, id: activeId };
+
+    await saveMap(
+      activeId,
+      currentMap.text || "Imported Map",
+      currentMap
+    );
+
+    refreshSelector();
+    render();
+    e.target.value = "";
   };
+
   r.readAsText(f);
 }
+
 function exportPNG(){
   html2canvas(canvas,{backgroundColor:"#ffffff",scale:2}).then(c=>{
     const a=document.createElement("a");
