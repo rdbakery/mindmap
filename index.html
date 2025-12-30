@@ -97,6 +97,26 @@ svg {
   box-shadow: 0 0 0 2px rgba(106,168,79,0.6);
 }
 
+.import-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  color: #1b1b1b;
+  border: 1px dashed #a3b5aa;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.import-btn:hover {
+  background: #eef4f1;
+  border-color: #6aa84f;
+}
+
+
 
 
 
@@ -158,7 +178,11 @@ svg {
   <button onclick="exportJSON()">Export JSON</button>
   <button onclick="exportPNG()">Export PNG</button>
   <button onclick="exportPDF()">Export PDF</button>
-  <input type="file" accept=".json" onchange="importJSON(event)">
+  <label class="import-btn">
+  📥 Import Mind Map
+  <input type="file" accept=".json" onchange="importJSON(event)" hidden>
+</label>
+
 </div>
 
 <div id="canvas">
