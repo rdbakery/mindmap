@@ -130,6 +130,23 @@ svg {
 .connector-toggle:hover {
   background: #edf2ff;
 }
+.node.drop-child {
+  box-shadow: inset 0 0 0 3px #22c55e;
+}
+
+
+.node.drop-before {
+  box-shadow: inset 0 3px 0 #3b82f6;
+}
+
+.node.drop-after {
+  box-shadow: inset 0 -3px 0 #3b82f6;
+}
+
+.node.dragging {
+  opacity: 0.4;
+}
+
 
 .node {
   cursor: grab;
@@ -473,49 +490,26 @@ function removeNode(p,id){
 
 
 let dragNodeId = null;
-let dropTargetId = null;
 
+
+
+
+/* Find parent of a node */
 function findParent(root, childId, parent = null) {
   if (root.id === childId) return parent;
   for (const c of root.children) {
-    const p = findParent(c, childId, root);
-    if (p) return p;
+    const found = findParent(c, childId, root);
+    if (found) return found;
   }
   return null;
 }
 
+/* Prevent circular nesting */
 function isDescendant(node, targetId) {
   if (node.id === targetId) return true;
   return node.children.some(c => isDescendant(c, targetId));
 }
 
-function handleNodeDrop(targetId) {
-  if (!dragNodeId || dragNodeId === targetId) return;
-
-  const draggedNode = find(currentMap, dragNodeId);
-  const targetNode = find(currentMap, targetId);
-
-  if (!draggedNode || !targetNode) return;
-
-  // ❌ prevent circular parenting
-  if (isDescendant(draggedNode, targetId)) {
-    alert("Cannot move a node inside its own child.");
-    return;
-  }
-
-  pushHistory();
-
-  // Remove from old parent
-  const oldParent = findParent(currentMap, dragNodeId);
-  if (!oldParent) return;
-
-  oldParent.children = oldParent.children.filter(c => c.id !== dragNodeId);
-
-  // Attach to new parent
-  targetNode.children.push(draggedNode);
-
-  render();
-}
 
 
 function addChild(id){
@@ -688,8 +682,8 @@ function draw(n, depth){
   el.style.background = nodeColor(depth);
   el.dataset.id = n.id;
 
-  /* ================= DRAG SUPPORT ================= */
-  el.draggable = n.id !== currentMap.id; // root not draggable
+  /* ================= DRAG ================= */
+  el.draggable = n.id !== currentMap.id; // root locked
 
   el.ondragstart = e => {
     dragNodeId = n.id;
@@ -702,15 +696,32 @@ function draw(n, depth){
     el.classList.remove("dragging");
   };
 
-  el.ondragover = e => {
-    e.preventDefault(); // allow drop
+el.ondragover = e => {
+  e.preventDefault();
+  const rect = el.getBoundingClientRect();
+  const y = e.clientY - rect.top;
+
+  el.classList.remove("drop-before", "drop-after", "drop-child");
+
+  if (y < rect.height * 0.25) {
+    el.classList.add("drop-before");
+  } else if (y > rect.height * 0.75) {
+    el.classList.add("drop-after");
+  } else {
+    el.classList.add("drop-child");
+  }
+};
+
+  el.ondragleave = () => {
+    el.classList.remove("drop-before", "drop-after");
   };
 
   el.ondrop = e => {
     e.preventDefault();
-    handleNodeDrop(n.id);
+    el.classList.remove("drop-before", "drop-after");
+    handleDrop(n.id, e.clientY);
   };
-  /* ================================================= */
+  /* ======================================== */
 
   const h = document.createElement("div");
   h.className = "node-header";
@@ -742,7 +753,7 @@ function draw(n, depth){
   el.append(h, m);
   canvas.appendChild(el);
 
-  /* ===== Connector Toggle ===== */
+  /* ===== Toggle ===== */
   if (n.children.length && n._realW) {
     const toggle = document.createElement("div");
     toggle.className = "connector-toggle";
@@ -759,7 +770,6 @@ function draw(n, depth){
     canvas.appendChild(toggle);
   }
 
-  /* ===== Draw Children ===== */
   if (n.collapsed) return;
 
   n.children.forEach(c => {
@@ -771,6 +781,60 @@ function draw(n, depth){
     );
     draw(c, depth + 1);
   });
+}
+
+function handleDrop(targetId, mouseY) {
+  if (!dragNodeId || dragNodeId === targetId) return;
+
+  const dragged = find(currentMap, dragNodeId);
+  const target = find(currentMap, targetId);
+  if (!dragged || !target) return;
+
+  // ❌ Prevent circular nesting
+  if (isDescendant(dragged, targetId)) {
+    alert("Cannot move a node inside its own child.");
+    return;
+  }
+
+  pushHistory();
+
+  const sourceParent = findParent(currentMap, dragNodeId);
+  const targetParent = findParent(currentMap, targetId);
+
+  const sourceSiblings = sourceParent ? sourceParent.children : currentMap.children;
+  const targetSiblings = targetParent ? targetParent.children : currentMap.children;
+
+  // Remove dragged from old location
+  const fromIndex = sourceSiblings.findIndex(c => c.id === dragNodeId);
+  if (fromIndex === -1) return;
+  sourceSiblings.splice(fromIndex, 1);
+
+  const targetEl = document.querySelector(`[data-id="${targetId}"]`);
+  const rect = targetEl.getBoundingClientRect();
+
+  const relativeY = mouseY - rect.top;
+  const height = rect.height;
+
+  const isTop = relativeY < height * 0.25;
+  const isBottom = relativeY > height * 0.75;
+  const isMiddle = !isTop && !isBottom;
+
+  // 🎯 DROP AS CHILD (MIDDLE ZONE)
+  if (isMiddle) {
+    target.children.push(dragged);
+    target.collapsed = false; // auto-expand
+    render();
+    return;
+  }
+
+  // 🔁 REORDER (TOP / BOTTOM)
+  const targetIndex = targetSiblings.findIndex(c => c.id === targetId);
+  if (targetIndex === -1) return;
+
+  const insertIndex = isTop ? targetIndex : targetIndex + 1;
+  targetSiblings.splice(insertIndex, 0, dragged);
+
+  render();
 }
 
 /* ================= SVG ================= */
