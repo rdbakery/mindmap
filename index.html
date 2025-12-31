@@ -762,14 +762,40 @@ function exportPNG(){
     a.click();
   });
 }
-function exportPDF(){
-  html2canvas(canvas,{backgroundColor:"#ffffff",scale:2}).then(c=>{
-    const {jsPDF}=window.jspdf;
-    const pdf=new jsPDF("l","px",[c.width,c.height]);
-    pdf.addImage(c.toDataURL(),"PNG",0,0);
+function exportPDF() {
+  html2canvas(canvas, {
+    backgroundColor: "#ffffff",
+    scale: 2,
+    useCORS: true
+  }).then(canvasEl => {
+
+    const imgData = canvasEl.toDataURL("image/png");
+
+    const pdf = new jspdf.jsPDF("l", "pt", "a4");
+
+    const pageWidth = pdf.internal.pageSize.getWidth();
+    const pageHeight = pdf.internal.pageSize.getHeight();
+
+    const imgWidth = pageWidth;
+    const imgHeight = (canvasEl.height * imgWidth) / canvasEl.width;
+
+    let heightLeft = imgHeight;
+    let position = 0;
+
+    pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+    heightLeft -= pageHeight;
+
+    while (heightLeft > 0) {
+      position = heightLeft - imgHeight;
+      pdf.addPage();
+      pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+      heightLeft -= pageHeight;
+    }
+
     pdf.save(`${safeName(currentMap.text)}.pdf`);
   });
 }
+
 function measureNodes() {
   document.querySelectorAll(".node").forEach(el => {
     const id = el.dataset.id;
