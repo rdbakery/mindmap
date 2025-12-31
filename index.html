@@ -131,6 +131,17 @@ svg {
   background: #edf2ff;
 }
 
+.node {
+  cursor: grab;
+}
+
+.node.dragging {
+  opacity: 0.6;
+  cursor: grabbing;
+  z-index: 5000;
+}
+
+
 /* ===== Nodes ===== */
 .node {
   position:absolute;
@@ -460,6 +471,53 @@ function removeNode(p,id){
   p.children.forEach(c=>removeNode(c,id));
 }
 
+
+let dragNodeId = null;
+let dropTargetId = null;
+
+function findParent(root, childId, parent = null) {
+  if (root.id === childId) return parent;
+  for (const c of root.children) {
+    const p = findParent(c, childId, root);
+    if (p) return p;
+  }
+  return null;
+}
+
+function isDescendant(node, targetId) {
+  if (node.id === targetId) return true;
+  return node.children.some(c => isDescendant(c, targetId));
+}
+
+function handleNodeDrop(targetId) {
+  if (!dragNodeId || dragNodeId === targetId) return;
+
+  const draggedNode = find(currentMap, dragNodeId);
+  const targetNode = find(currentMap, targetId);
+
+  if (!draggedNode || !targetNode) return;
+
+  // ❌ prevent circular parenting
+  if (isDescendant(draggedNode, targetId)) {
+    alert("Cannot move a node inside its own child.");
+    return;
+  }
+
+  pushHistory();
+
+  // Remove from old parent
+  const oldParent = findParent(currentMap, dragNodeId);
+  if (!oldParent) return;
+
+  oldParent.children = oldParent.children.filter(c => c.id !== dragNodeId);
+
+  // Attach to new parent
+  targetNode.children.push(draggedNode);
+
+  render();
+}
+
+
 function addChild(id){
   pushHistory();
   find(currentMap,id).children.push({id:uid(),text:"New Node",collapsed:false,children:[]});
@@ -622,75 +680,97 @@ async function render(){
 }
 
 
-
 function draw(n, depth){
-  const el=document.createElement("div");
-  el.className="node";
-  el.style.left=n._x+"px";
-  el.style.top=(n._y-NODE_H/2)+"px";
-  el.style.background=nodeColor(depth);
-
-  const h=document.createElement("div");
-  h.className="node-header";
+  const el = document.createElement("div");
+  el.className = "node";
+  el.style.left = n._x + "px";
+  el.style.top = (n._y - NODE_H / 2) + "px";
+  el.style.background = nodeColor(depth);
   el.dataset.id = n.id;
 
-h.innerHTML = `
-  <span class="node-text">${n.text}</span>
-  <button class="menu-btn">⋮</button>
-`;
+  /* ================= DRAG SUPPORT ================= */
+  el.draggable = n.id !== currentMap.id; // root not draggable
 
+  el.ondragstart = e => {
+    dragNodeId = n.id;
+    el.classList.add("dragging");
+    e.dataTransfer.setData("text/plain", n.id);
+  };
 
-  const m=document.createElement("div");
-  m.className="menu";
-  m.innerHTML=`
+  el.ondragend = () => {
+    dragNodeId = null;
+    el.classList.remove("dragging");
+  };
+
+  el.ondragover = e => {
+    e.preventDefault(); // allow drop
+  };
+
+  el.ondrop = e => {
+    e.preventDefault();
+    handleNodeDrop(n.id);
+  };
+  /* ================================================= */
+
+  const h = document.createElement("div");
+  h.className = "node-header";
+
+  h.innerHTML = `
+    <span class="node-text">${n.text}</span>
+    <button class="menu-btn">⋮</button>
+  `;
+
+  const m = document.createElement("div");
+  m.className = "menu";
+  m.innerHTML = `
     <button onclick="addChild('${n.id}')">➕ Add</button>
     <button onclick="editNode('${n.id}')">✏️ Edit</button>
     <button onclick="deleteNode('${n.id}')">🗑 Delete</button>
   `;
 
-  h.querySelector("button").onclick=e=>{
-    e.stopPropagation(); closeMenus(); m.style.display="block";
+  h.querySelector("button").onclick = e => {
+    e.stopPropagation();
+    closeMenus();
+    m.style.display = "block";
   };
-  el.onclick=e=>{ e.stopPropagation(); closeMenus(); };
 
-  el.append(h,m);
+  el.onclick = e => {
+    e.stopPropagation();
+    closeMenus();
+  };
+
+  el.append(h, m);
   canvas.appendChild(el);
 
-// Draw children + connector toggle
-if(n.children.length && n._realW){
+  /* ===== Connector Toggle ===== */
+  if (n.children.length && n._realW) {
+    const toggle = document.createElement("div");
+    toggle.className = "connector-toggle";
+    toggle.textContent = n.collapsed ? ">" : "<";
 
-  // Draw collapse / expand button ON CONNECTOR
-  const toggle = document.createElement("div");
-  toggle.className = "connector-toggle";
-  toggle.textContent = n.collapsed ? ">" : "<";
+    toggle.style.left = (n._x + n._realW + 8) + "px";
+    toggle.style.top = (n._y - 11) + "px";
 
-  const btnX = n._x + n._realW + 8;
-  const btnY = n._y;
+    toggle.onclick = e => {
+      e.stopPropagation();
+      toggleNode(n.id);
+    };
 
-  toggle.style.left = btnX + "px";
-  toggle.style.top = (btnY - 11) + "px";
+    canvas.appendChild(toggle);
+  }
 
-  toggle.onclick = (e) => {
-    e.stopPropagation();
-    toggleNode(n.id);
-  };
+  /* ===== Draw Children ===== */
+  if (n.collapsed) return;
 
-  canvas.appendChild(toggle);
-}
-
-// Draw children if expanded
-if(n.collapsed) return;
-
-n.children.forEach(c=>{
-  drawLine(
-    n._x + n._realW,
-    n._y,
-    c._x,
-    c._y
-  );
-  draw(c, depth+1);
-});
-
+  n.children.forEach(c => {
+    drawLine(
+      n._x + n._realW,
+      n._y,
+      c._x,
+      c._y
+    );
+    draw(c, depth + 1);
+  });
 }
 
 /* ================= SVG ================= */
