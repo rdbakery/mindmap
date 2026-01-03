@@ -308,21 +308,21 @@ const safeName = n => (n||"mindmap").replace(/[<>:"/\\|?*]+/g,"").replace(/\s+/g
 /* ===== Node Color by Level ===== */
 function nodeColor(depth) {
   const palette = [
-    "#cfd2ff", // Root (soft violet)
-    "#cfe3f8", // Level 1 (light blue)
-    "#cfeee5", // Level 2 (mint)
-    "#e3f4ee", // Level 3 (lighter mint)
+    "#bfc5ff", // Level 0 – Violet (root)
+    "#bdd9f3", // Level 1 – Blue
+    "#bfe7dc", // Level 2 – Mint
+    "#dcefd0", // Level 3 – Olive green
+    "#cfeadd", // Level 4 – Green
+    "#d2dbff", // Level 5 – Indigo tint
+    "#cfe9f8", // Level 6 – Sky blue (distinct from indigo)
+    "#e0d4f6", // Level 7 – Lavender
+    "#f0d6ea", // Level 8 – Rose pink
+    "#f6e0c8", // Level 9 – Soft peach
   ];
 
-  if (depth < palette.length) {
-    return palette[depth];
-  }
-
-  // For deeper levels → auto lighten
-  const extra = depth - palette.length + 1;
-  const lightness = Math.min(92, 85 + extra * 2);
-  return `hsl(160, 35%, ${lightness}%)`;
+  return palette[Math.min(depth, palette.length - 1)];
 }
+
 
 
 /* ================= INDEXED DB ================= */
@@ -909,31 +909,56 @@ function exportPNG(){
 function exportPDF() {
   html2canvas(canvas, {
     backgroundColor: "#ffffff",
-    scale: 2,
+    scale: 1.5,        // keep reasonable
     useCORS: true
-  }).then(canvasEl => {
-
-    const imgData = canvasEl.toDataURL("image/png");
+  }).then(srcCanvas => {
 
     const pdf = new jspdf.jsPDF("l", "pt", "a4");
 
     const pageWidth = pdf.internal.pageSize.getWidth();
     const pageHeight = pdf.internal.pageSize.getHeight();
 
-    const imgWidth = pageWidth;
-    const imgHeight = (canvasEl.height * imgWidth) / canvasEl.width;
+    const margin = 20;
+    const printableWidth = pageWidth - margin * 2;
+    const printableHeight = pageHeight - margin * 2;
 
-    let heightLeft = imgHeight;
-    let position = 0;
+    const scale = printableWidth / srcCanvas.width;
+    const tileHeight = printableHeight / scale;
+    const tileWidth = srcCanvas.width; // FULL width per tile
 
-    pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
-    heightLeft -= pageHeight;
+    let y = 0;
+    let firstPage = true;
 
-    while (heightLeft > 0) {
-      position = heightLeft - imgHeight;
-      pdf.addPage();
-      pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
-      heightLeft -= pageHeight;
+    while (y < srcCanvas.height) {
+
+      const tileCanvas = document.createElement("canvas");
+      tileCanvas.width = tileWidth;
+      tileCanvas.height = Math.min(tileHeight, srcCanvas.height - y);
+
+      const ctx = tileCanvas.getContext("2d");
+      ctx.drawImage(
+        srcCanvas,
+        0, y,
+        tileWidth, tileCanvas.height,
+        0, 0,
+        tileWidth, tileCanvas.height
+      );
+
+      const imgData = tileCanvas.toDataURL("image/jpeg", 0.85); // ✅ JPEG = smaller
+
+      if (!firstPage) pdf.addPage();
+      firstPage = false;
+
+      pdf.addImage(
+        imgData,
+        "JPEG",
+        margin,
+        margin,
+        printableWidth,
+        tileCanvas.height * scale
+      );
+
+      y += tileHeight;
     }
 
     pdf.save(`${safeName(currentMap.text)}.pdf`);
