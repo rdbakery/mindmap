@@ -15,6 +15,23 @@ body {
   color:#1b1b1b;
 }
 
+/* ===== Important Node (Professional) ===== */
+/* ===== Important Node – Star Marker ===== */
+.node.important::after {
+  content: "★";
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  font-size: 12px;
+  color: #64748b; /* slate gray (professional) */
+  line-height: 1;
+}
+.node.important {
+  box-shadow: 0 0 0 2px rgba(100,116,139,0.2);
+}
+
+
+
 /* ===== Expand / Collapse All Icon ===== */
 .expand-collapse-btn {
   width: 36px;
@@ -386,7 +403,14 @@ let undoStack=[], redoStack=[];
   const maps=await listMaps();
   if(!maps.length){
     activeId=uid();
-    currentMap={id:activeId,text:"My First Mind Map",collapsed:false,children:[]};
+    currentMap={
+  id: activeId,
+  text: "Untitled Map",
+  collapsed: false,
+  important: false,
+  children: []
+};
+
     await saveMap(activeId,currentMap.text,currentMap);
   } else {
     activeId=maps[0].id;
@@ -510,11 +534,25 @@ function isDescendant(node, targetId) {
   return node.children.some(c => isDescendant(c, targetId));
 }
 
+function toggleImportant(id){
+  pushHistory();
+  const node = find(currentMap, id);
+  node.important = !node.important;
+  render();
+}
+
 
 
 function addChild(id){
   pushHistory();
-  find(currentMap,id).children.push({id:uid(),text:"New Node",collapsed:false,children:[]});
+  find(currentMap,id).children.push({
+  id: uid(),
+  text: "New Node",
+  collapsed: false,
+  important: false,
+  children: []
+});
+
   render();
 }
 function editNode(id){
@@ -675,8 +713,9 @@ async function render(){
 
 
 function draw(n, depth){
-  const el = document.createElement("div");
-  el.className = "node";
+const el = document.createElement("div");
+el.className = "node" + (n.important ? " important" : "");
+
   el.style.left = n._x + "px";
   el.style.top = (n._y - NODE_H / 2) + "px";
   el.style.background = nodeColor(depth);
@@ -736,6 +775,7 @@ el.ondragover = e => {
   m.innerHTML = `
     <button onclick="addChild('${n.id}')">➕ Add</button>
     <button onclick="editNode('${n.id}')">✏️ Edit</button>
+    <button onclick="toggleImportant('${n.id}')">${n.important ? "⭐ Remove Important" : "⭐ Mark Important"}</button>
     <button onclick="deleteNode('${n.id}')">🗑 Delete</button>
   `;
 
