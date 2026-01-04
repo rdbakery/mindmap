@@ -15,7 +15,60 @@ body {
   color:#1b1b1b;
 }
 
-/* ===== Important Node (Professional) ===== */
+
+/* ===== Note icon ===== */
+.note-icon {
+  position: absolute;
+  bottom: 4px;
+  right: 6px;
+  font-size: 12px;
+  cursor: default;
+  opacity: 0.7;
+}
+
+/* ===== Tooltip ===== */
+.node-note {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: #374151;
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.4;
+
+  width: max-content;        /* ✅ key */
+  max-width: 260px;          /* prevent very long lines */
+  white-space: normal;
+  word-break: break-word;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  z-index: 9999;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+
+/* ✅ ONLY icon hover triggers tooltip */
+.note-icon:hover .node-note {
+  opacity: 1;
+}
+
+
+/* ===== Search Match Highlight ===== */
+.node.search-hit {
+  background: #fde68a !important;   /* soft yellow */
+  box-shadow:
+    0 0 0 2px rgba(234,179,8,0.9),
+    0 0 12px rgba(234,179,8,0.4);
+}
+
+
 /* ===== Important Node – Star Marker ===== */
 .node.important::after {
   content: "★";
@@ -165,9 +218,6 @@ svg {
 }
 
 
-.node {
-  cursor: grab;
-}
 
 .node.dragging {
   opacity: 0.6;
@@ -178,13 +228,17 @@ svg {
 
 /* ===== Nodes ===== */
 .node {
-  position:absolute;
-  padding:8px 12px;
-  border-radius:8px;
-  font-size:14px;
-  white-space:nowrap;
-  box-shadow:0 0 0 1px #b7c6be;
+  position: absolute;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  white-space: nowrap;
+  box-shadow: 0 0 0 1px #b7c6be;
+  cursor: grab;
+
+  overflow: visible;   /* ✅ REQUIRED for tooltip */
 }
+
 /* ===== Inline Edit Polish ===== */
 .node-text {
   cursor: text;
@@ -296,6 +350,12 @@ svg {
   <button onclick="deleteMap()">🗑 Delete</button>
   <button onclick="undo()">Undo</button>
   <button onclick="redo()">Redo</button>
+    <input
+    type="search"
+    placeholder="Search node…"
+    oninput="searchNodes(this.value)"
+    style="padding:6px 10px;border-radius:6px;border:1px solid #a3b5aa;min-width:160px;"
+  />
   <button onclick="exportJSON()">Export JSON</button>
   <button onclick="exportPNG()">Export PNG</button>
   <button onclick="exportPDF()">Export PDF</button>
@@ -318,6 +378,10 @@ svg {
 
 <script>
 /* ================= UTIL ================= */
+let focusedNodeId = null;
+let searchQuery = "";
+
+
 const uid = () => Math.random().toString(36).slice(2);
 const clone = o => JSON.parse(JSON.stringify(o));
 const safeName = n => (n||"mindmap").replace(/[<>:"/\\|?*]+/g,"").replace(/\s+/g,"_");
@@ -339,6 +403,28 @@ function nodeColor(depth) {
 
   return palette[Math.min(depth, palette.length - 1)];
 }
+
+function searchNodes(q){
+  searchQuery = q.toLowerCase();
+  render();
+}
+
+function toggleFocus(id){
+  if (focusedNodeId === id) {
+    focusedNodeId = null;   // unfocus
+  } else {
+    focusedNodeId = id;     // focus
+  }
+  render();
+}
+
+
+function isInFocusedPath(node, focusId) {
+  if (!focusId) return true;
+  if (node.id === focusId) return true;
+  return node.children.some(c => isInFocusedPath(c, focusId));
+}
+
 
 
 
@@ -408,6 +494,7 @@ let undoStack=[], redoStack=[];
   text: "Untitled Map",
   collapsed: false,
   important: false,
+  note: "", 
   children: []
 };
 
@@ -451,6 +538,16 @@ function toggleRecursive(node, collapse) {
     node.collapsed = collapse;
   }
   node.children.forEach(c => toggleRecursive(c, collapse));
+}
+
+function editNote(id){
+  const node = find(currentMap, id);
+  const note = prompt("Node note / description:", node.note || "");
+  if (note !== null) {
+    pushHistory();
+    node.note = note.trim();
+    render();
+  }
 }
 
 
@@ -714,7 +811,19 @@ async function render(){
 
 function draw(n, depth){
 const el = document.createElement("div");
-el.className = "node" + (n.important ? " important" : "");
+if (focusedNodeId && !isInFocusedPath(n, focusedNodeId)) {
+  el.style.opacity = "0.25";
+}
+
+el.className =
+  "node" +
+  (n.important ? " important" : "") +
+  (n.note ? " has-note" : "") +
+  (searchQuery && n.text.toLowerCase().includes(searchQuery)
+    ? " search-hit"
+    : "");
+
+
 
   el.style.left = n._x + "px";
   el.style.top = (n._y - NODE_H / 2) + "px";
@@ -776,6 +885,8 @@ el.ondragover = e => {
     <button onclick="addChild('${n.id}')">➕ Add</button>
     <button onclick="editNode('${n.id}')">✏️ Edit</button>
     <button onclick="toggleImportant('${n.id}')">${n.important ? "⭐ Remove Important" : "⭐ Mark Important"}</button>
+    <button onclick="toggleFocus('${n.id}')">${focusedNodeId === n.id ? "Exit focus" : "Focus"}</button>
+    <button onclick="editNote('${n.id}')">Edit note</button>
     <button onclick="deleteNode('${n.id}')">🗑 Delete</button>
   `;
 
@@ -791,6 +902,21 @@ el.ondragover = e => {
   };
 
   el.append(h, m);
+
+if (n.note) {
+  const noteIcon = document.createElement("div");
+  noteIcon.className = "note-icon";
+  noteIcon.textContent = "📝";
+
+  const noteEl = document.createElement("div");
+  noteEl.className = "node-note";
+  noteEl.textContent = n.note;
+
+  noteIcon.appendChild(noteEl);
+  el.appendChild(noteIcon);
+}
+
+
   canvas.appendChild(el);
 
   /* ===== Toggle ===== */
