@@ -15,6 +15,116 @@ body {
   color:#1b1b1b;
 }
 
+/* Smooth fade effect */
+.node {
+  position: absolute;
+}
+
+/* Fade layer (NOT opacity) */
+.node.faded::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.65); /* fade strength */
+  border-radius: 8px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Node content stays below overlay */
+.node-header,
+.node-body,
+.node-text,
+.note-icon {
+  position: relative;
+  z-index: 0;
+}
+
+/* Menu button ABOVE fade */
+.menu-btn {
+  position: relative;
+  z-index: 3;
+}
+
+/* Menu popup ABOVE everything */
+.menu {
+  position: absolute;
+  z-index: 5;
+}
+
+
+
+/* ===== Note icon ===== */
+.note-icon {
+  position: absolute;
+  bottom: 4px;
+  right: 6px;
+  font-size: 12px;
+  cursor: default;
+  opacity: 0.7;
+}
+
+/* ===== Tooltip ===== */
+.node-note {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: #374151;
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.4;
+
+  width: max-content;        /* ✅ key */
+  max-width: 260px;          /* prevent very long lines */
+  white-space: normal;
+  word-break: break-word;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  z-index: 9999;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+
+/* ✅ ONLY icon hover triggers tooltip */
+.note-icon:hover .node-note {
+  opacity: 1;
+}
+
+
+/* ===== Search Match Highlight ===== */
+.node.search-hit {
+  background: #fde68a !important;   /* soft yellow */
+  box-shadow:
+    0 0 0 2px rgba(234,179,8,0.9),
+    0 0 12px rgba(234,179,8,0.4);
+}
+
+
+.node.important::before {
+  content: "★";
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  font-size: 12px;
+  color: #e80a0a;
+  z-index: 4; /* above fade */
+  pointer-events: none;
+}
+
+
+.node.important {
+  box-shadow: 0 0 0 2px rgba(100,116,139,0.2);
+}
+
+
+
 /* ===== Expand / Collapse All Icon ===== */
 .expand-collapse-btn {
   width: 36px;
@@ -148,9 +258,6 @@ svg {
 }
 
 
-.node {
-  cursor: grab;
-}
 
 .node.dragging {
   opacity: 0.6;
@@ -161,13 +268,17 @@ svg {
 
 /* ===== Nodes ===== */
 .node {
-  position:absolute;
-  padding:8px 12px;
-  border-radius:8px;
-  font-size:14px;
-  white-space:nowrap;
-  box-shadow:0 0 0 1px #b7c6be;
+  position: absolute;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  white-space: nowrap;
+  box-shadow: 0 0 0 1px #b7c6be;
+  cursor: grab;
+
+  overflow: visible;   /* ✅ REQUIRED for tooltip */
 }
+
 /* ===== Inline Edit Polish ===== */
 .node-text {
   cursor: text;
@@ -279,6 +390,7 @@ svg {
   <button onclick="deleteMap()">🗑 Delete</button>
   <button onclick="undo()">Undo</button>
   <button onclick="redo()">Redo</button>
+
   <button onclick="exportJSON()">Export JSON</button>
   <button onclick="exportPNG()">Export PNG</button>
   <button onclick="exportPDF()">Export PDF</button>
@@ -292,7 +404,12 @@ svg {
     title="Collapse All"
     onclick="toggleAllNodes()">
   </button>
-
+    <input
+    type="search"
+    placeholder="Search node…"
+    oninput="searchNodes(this.value)"
+    style="padding:6px 10px;border-radius:6px;border:1px solid #a3b5aa;min-width:160px;"
+  />
 </div>
 
 <div id="canvas">
@@ -301,6 +418,10 @@ svg {
 
 <script>
 /* ================= UTIL ================= */
+let focusedNodeId = null;
+let searchQuery = "";
+
+
 const uid = () => Math.random().toString(36).slice(2);
 const clone = o => JSON.parse(JSON.stringify(o));
 const safeName = n => (n||"mindmap").replace(/[<>:"/\\|?*]+/g,"").replace(/\s+/g,"_");
@@ -322,6 +443,28 @@ function nodeColor(depth) {
 
   return palette[Math.min(depth, palette.length - 1)];
 }
+
+function searchNodes(q){
+  searchQuery = q.toLowerCase();
+  render();
+}
+
+function toggleFocus(id){
+  if (focusedNodeId === id) {
+    focusedNodeId = null;   // unfocus
+  } else {
+    focusedNodeId = id;     // focus
+  }
+  render();
+}
+
+
+function isInFocusedPath(node, focusId) {
+  if (!focusId) return true;
+  if (node.id === focusId) return true;
+  return node.children.some(c => isInFocusedPath(c, focusId));
+}
+
 
 
 
@@ -386,7 +529,15 @@ let undoStack=[], redoStack=[];
   const maps=await listMaps();
   if(!maps.length){
     activeId=uid();
-    currentMap={id:activeId,text:"My First Mind Map",collapsed:false,children:[]};
+    currentMap={
+  id: activeId,
+  text: "Untitled Map",
+  collapsed: false,
+  important: false,
+  note: "", 
+  children: []
+};
+
     await saveMap(activeId,currentMap.text,currentMap);
   } else {
     activeId=maps[0].id;
@@ -427,6 +578,16 @@ function toggleRecursive(node, collapse) {
     node.collapsed = collapse;
   }
   node.children.forEach(c => toggleRecursive(c, collapse));
+}
+
+function editNote(id){
+  const node = find(currentMap, id);
+  const note = prompt("Node note / description:", node.note || "");
+  if (note !== null) {
+    pushHistory();
+    node.note = note.trim();
+    render();
+  }
 }
 
 
@@ -510,11 +671,25 @@ function isDescendant(node, targetId) {
   return node.children.some(c => isDescendant(c, targetId));
 }
 
+function toggleImportant(id){
+  pushHistory();
+  const node = find(currentMap, id);
+  node.important = !node.important;
+  render();
+}
+
 
 
 function addChild(id){
   pushHistory();
-  find(currentMap,id).children.push({id:uid(),text:"New Node",collapsed:false,children:[]});
+  find(currentMap,id).children.push({
+  id: uid(),
+  text: "New Node",
+  collapsed: false,
+  important: false,
+  children: []
+});
+
   render();
 }
 function editNode(id){
@@ -675,8 +850,25 @@ async function render(){
 
 
 function draw(n, depth){
-  const el = document.createElement("div");
-  el.className = "node";
+const el = document.createElement("div");
+
+
+
+
+el.className =
+  "node" +
+  (n.important ? " important" : "") +
+  (n.note ? " has-note" : "") +
+  (searchQuery && n.text.toLowerCase().includes(searchQuery)
+    ? " search-hit"
+    : "");
+
+if (focusedNodeId && !isInFocusedPath(n, focusedNodeId)) {
+  el.classList.add("faded");
+} else {
+  el.classList.remove("faded");
+}
+
   el.style.left = n._x + "px";
   el.style.top = (n._y - NODE_H / 2) + "px";
   el.style.background = nodeColor(depth);
@@ -726,16 +918,21 @@ el.ondragover = e => {
   const h = document.createElement("div");
   h.className = "node-header";
 
-  h.innerHTML = `
+h.innerHTML = `
+  <div class="node-body">
     <span class="node-text">${n.text}</span>
-    <button class="menu-btn">⋮</button>
-  `;
+  </div>
+  <button class="menu-btn">⋮</button>
+`;
 
   const m = document.createElement("div");
   m.className = "menu";
   m.innerHTML = `
     <button onclick="addChild('${n.id}')">➕ Add</button>
     <button onclick="editNode('${n.id}')">✏️ Edit</button>
+    <button onclick="toggleImportant('${n.id}')">${n.important ? "⭐ Remove Important" : "⭐ Mark Important"}</button>
+    <button onclick="toggleFocus('${n.id}')">${focusedNodeId === n.id ? "Exit focus" : "Focus"}</button>
+    <button onclick="editNote('${n.id}')">Edit note</button>
     <button onclick="deleteNode('${n.id}')">🗑 Delete</button>
   `;
 
@@ -751,6 +948,21 @@ el.ondragover = e => {
   };
 
   el.append(h, m);
+
+if (n.note) {
+  const noteIcon = document.createElement("div");
+  noteIcon.className = "note-icon";
+  noteIcon.textContent = "📝";
+
+  const noteEl = document.createElement("div");
+  noteEl.className = "node-note";
+  noteEl.textContent = n.note;
+
+  noteIcon.appendChild(noteEl);
+  el.appendChild(noteIcon);
+}
+
+
   canvas.appendChild(el);
 
   /* ===== Toggle ===== */
@@ -898,14 +1110,40 @@ async function importJSON(e){
   r.readAsText(f);
 }
 
-function exportPNG(){
-  html2canvas(canvas,{backgroundColor:"#ffffff",scale:2}).then(c=>{
-    const a=document.createElement("a");
-    a.href=c.toDataURL();
-    a.download=`${safeName(currentMap.text)}.png`;
+function exportPNG() {
+  const SCALE = 2;
+
+  const fullHeight = Math.max(
+    canvas.scrollHeight,
+    canvas.offsetHeight
+  );
+
+  const effectiveHeight = fullHeight * SCALE;
+
+  // 🚫 Browser GPU limit
+  if (effectiveHeight > 30000) {
+    alert(
+      "This mind map is too large for a single PNG.\n\n" +
+      "Please use Export PDF instead."
+    );
+    return;
+  }
+
+  html2canvas(canvas, {
+    backgroundColor: "#ffffff",
+    scale: SCALE,
+    scrollX: 0,
+    scrollY: 0
+  }).then(c => {
+    const a = document.createElement("a");
+    a.href = c.toDataURL("image/png");
+    a.download = `${safeName(currentMap.text)}.png`;
     a.click();
   });
 }
+
+
+
 function exportPDF() {
   html2canvas(canvas, {
     backgroundColor: "#ffffff",
