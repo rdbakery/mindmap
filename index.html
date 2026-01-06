@@ -284,29 +284,26 @@ svg {
   
 }
 
+.node-text {
+  display: inline-block; /* 🔑 REQUIRED */
+}
 .node-text[contenteditable="true"] {
-  background: rgba(255,255,255,0.7);
-  outline: 2px dashed #6aa84f;
-  outline-offset: 2px;
+  display: inline-block;     /* 🔑 critical */
+  background-color: #ffffff;
+  padding: 4px 8px;
 
-  /* remove browser default */
-  box-shadow: none;
-  caret-color: #2d6a4f;
+  border-radius: 6px;
+  box-shadow: 0 0 0 2px rgba(106,168,79,0.6);
 
-  /* better text feel */
+  outline: none;
   line-height: 1.4;
+
+  caret-color: red;          /* ✅ NOW WORKS */
 }
 
 /* prevent ugly resize handles / artifacts */
 .node-text[contenteditable="true"]:focus {
   border: none;
-}
-
-/* remove spellcheck underline (important) */
-.node-text[contenteditable="true"] {
-  background: #ffffff;
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(106,168,79,0.6);
 }
 
 .import-btn {
