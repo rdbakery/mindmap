@@ -423,9 +423,9 @@ const safeName = n => (n||"mindmap").replace(/[<>:"/\\|?*]+/g,"").replace(/\s+/g
 /* ===== Node Color by Level ===== */
 function nodeColor(depth) {
   const palette = [
+  "#afacd6", // lighter blue (slightly deeper)
   "#c4c0fe", // lighter violet
-  "#7ad6f8", // lighter blue
-  "#9fd6ee", // lighter sky-blue
+  "#b3e1f2", // lighter sky-blue (more airy)
   "#8aeac1", // lighter green
   "#b3e2a2", // lighter leaf green
   "#b7d6c6", // lighter sage
@@ -433,6 +433,7 @@ function nodeColor(depth) {
   "#86d9ee", // lighter cyan
   "#a6e9f7"  // lighter aqua
 ];
+
 
 
   return palette[Math.min(depth, palette.length - 1)];
