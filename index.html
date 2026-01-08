@@ -178,28 +178,46 @@ body {
 }
 
 
-/* ===== Toolbar ===== */
+/* ===== FIXED FULL SCREEN TOOLBAR ===== */
 .toolbar {
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:#f1f5f3;
-  padding:8px;
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-  border-bottom:1px solid #c7d2cc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 64px;
+  z-index: 9999;
+
+  background: linear-gradient(to right, #eef4f1, #f8faf9);
+  border-bottom: 1px solid #c7d2cc;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+
+  display: flex;
+  justify-content: center;   /* 🔑 CENTER CONTENT */
 }
 
-.toolbar button,
-.toolbar select {
-  background:#ffffff;
-  color:#1b1b1b;
-  border:1px solid #a3b5aa;
-  padding:6px 10px;
-  border-radius:6px;
-  cursor:pointer;
+/* ===== CENTERED, SCALABLE CONTENT ===== */
+.toolbar-inner {
+  width: 100%;
+  max-width: 1600px;         /* 🔑 FEELS LARGE */
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
+
+
+.toolbar button,
+.toolbar select,
+.toolbar input[type="search"] {
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #a3b5aa;
+}
+
 
 /* ===== Canvas ===== */
 #canvas {
@@ -207,6 +225,22 @@ body {
   min-height:100vh;
   background:#ffffff;
 }
+#canvas {
+  margin-top: 64px;
+  min-height: calc(100vh - 64px);
+}
+
+
+.toolbar button,
+.toolbar select,
+.toolbar input[type="search"] {
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #a3b5aa;
+}
+
 
 svg {
   position:absolute;
@@ -378,33 +412,27 @@ svg {
 <body>
 
 <div class="toolbar">
-  <select id="mapSelector"></select>
-  <button onclick="createMap()">➕ New</button>
-  <button onclick="renameMap()">✏️ Rename</button>
-  <button onclick="deleteMap()">🗑 Delete</button>
-  <button onclick="undo()">Undo</button>
-  <button onclick="redo()">Redo</button>
-
-  <button onclick="exportJSON()">Export JSON</button>
-  <button onclick="exportPNG()">Export PNG</button>
-  <button onclick="exportPDF()">Export PDF</button>
-  <label class="import-btn">
-  📥 Import Mind Map
-  <input type="file" accept=".json" onchange="importJSON(event)" hidden>
-</label>
-  <button
-    id="toggleAllBtn"
-    class="expand-collapse-btn"
-    title="Collapse All"
-    onclick="toggleAllNodes()">
-  </button>
-    <input
-    type="search"
-    placeholder="Search node…"
-    oninput="searchNodes(this.value)"
-    style="padding:6px 10px;border-radius:6px;border:1px solid #a3b5aa;min-width:160px;"
-  />
+  <div class="toolbar-inner">
+    <select id="mapSelector"></select>
+    <button onclick="createMap()">➕ New</button>
+    <button onclick="renameMap()">✏️ Rename</button>
+    <button onclick="deleteMap()">🗑 Delete</button>
+    <button onclick="undo()">Undo</button>
+    <button onclick="redo()">Redo</button>
+    <button onclick="exportJSON()">Export JSON</button>
+    <button onclick="exportPNG()">Export PNG</button>
+    <button onclick="exportPDF()">Export PDF</button>
+    <label class="import-btn">
+      📥 Import Mind Map
+      <input type="file" accept=".json" onchange="importJSON(event)" hidden>
+    </label>
+    <button id="toggleAllBtn" class="expand-collapse-btn"
+      title="Collapse All" onclick="toggleAllNodes()"></button>
+    <input type="search" placeholder="Search node…"
+      oninput="searchNodes(this.value)">
+  </div>
 </div>
+
 
 <div id="canvas">
   <svg id="svg"></svg>
