@@ -11,24 +11,33 @@ const safeName = n => (n||"mindmap").replace(/[<>:"/\\|?*]+/g,"").replace(/\s+/g
 /* ===== Node Color by Level ===== */
 function nodeColor(depth) {
   const palette = [
-  "#afacd6", // soft blue-violet
-  "#8bb3d9", // pastel blue
-  "#6fa1ac", // blue-teal
-  "#72b9b3", // pastel teal
-  "#8fbea6", // pastel green
+       "#d1cfee", // very light blue-violet
+  "#c9dbf0", // very light pastel blue
+  "#b8d6dd", // very light blue-teal
+  "#bfe5e1", // very light pastel teal
+  "#c7e3d6", // very light pastel green
 
-  "#a8e2d6", // mint-teal
-  "#b3e2a2",  // leaf green
-  "#b8e4cb", // airy mint
-  
-  
-  "#b3e1f2", // airy sky-blue
-  "#8aeac1", // fresh light green
+  "#d7f5ef", // very light mint-teal
+  "#dcf6cf", // very light leaf green
+  "#dff5ea", // very light airy mint
 
-  
-  
-  "#b7d6c6", // soft sage
-  "#ccd9b7", // sage pastel
+  "#dceff9", // very light sky-blue
+  "#c8f7e5", // very light fresh green
+
+  "#ddece4", // very light sage
+  "#edf2df"  // very light sage-pastel
+  // "#afacd6", // soft blue-violet
+  // "#8bb3d9", // pastel blue
+  // "#6fa1ac", // blue-teal
+  // "#72b9b3", // pastel teal
+  // "#8fbea6", // pastel green
+  // "#a8e2d6", // mint-teal
+  // "#b3e2a2",  // leaf green
+  // "#b8e4cb", // airy mint
+  // "#b3e1f2", // airy sky-blue
+  // "#8aeac1", // fresh light green
+  // "#b7d6c6", // soft sage
+  // "#ccd9b7", // sage pastel
 
 ];
 
