@@ -169,13 +169,12 @@ body {
 }
 
 
-/* ===== FIXED FULL SCREEN TOOLBAR ===== */
+/* ===== FIXED TOOLBAR ===== */
 .toolbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-
   height: 64px;
   z-index: 9999;
 
@@ -184,19 +183,25 @@ body {
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 
   display: flex;
-  justify-content: center;   /* 🔑 CENTER CONTENT */
+  align-items: center;
+  overflow: hidden;           /* 🔒 no scroll */
 }
 
-/* ===== CENTERED, SCALABLE CONTENT ===== */
+/* ===== SCALED CONTENT ===== */
 .toolbar-inner {
-  width: 100%;
-  max-width: 1600px;         /* 🔑 FEELS LARGE */
-  padding: 0 24px;
-
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 12px;
+
+  flex-wrap: nowrap;
+  white-space: nowrap;
+
+  width: 1400px;              /* 🔑 FIXED LOGICAL WIDTH */
+  padding: 0 24px;
+
+  transform-origin: left center;
 }
+
 
 
 .toolbar button,

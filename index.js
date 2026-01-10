@@ -812,3 +812,23 @@ function closeMenus(){
   document.querySelectorAll(".menu").forEach(m=>m.style.display="none");
 }
 document.body.onclick=closeMenus;
+
+
+
+function fitToolbar() {
+  const toolbar = document.querySelector('.toolbar');
+  const inner = document.querySelector('.toolbar-inner');
+  if (!toolbar || !inner) return;
+
+  const available = toolbar.clientWidth;
+  const DESIGN_WIDTH = 1400; // must match CSS
+
+  let scale = available / DESIGN_WIDTH;
+  scale = Math.min(scale, 1);     // no zoom-in
+  scale = Math.max(scale, 0.65);  // readable minimum
+
+  inner.style.transform = `scale(${scale})`;
+}
+
+window.addEventListener('load', fitToolbar);
+window.addEventListener('resize', fitToolbar);
