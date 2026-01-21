@@ -868,3 +868,59 @@ function fitToolbar() {
 
 window.addEventListener('load', fitToolbar);
 window.addEventListener('resize', fitToolbar);
+
+function editNode(id) {
+  const nodeEl = document.querySelector(`[data-id="${id}"]`);
+  if (!nodeEl) return;
+
+  const span = nodeEl.querySelector(".node-text");
+  const oldText = span.textContent;
+
+  pushHistory();
+
+  // Enable inline editing
+  span.contentEditable = "true";
+  span.focus();
+
+  // Place caret at end
+  const range = document.createRange();
+  range.selectNodeContents(span);
+  range.collapse(false);
+
+  const sel = window.getSelection();
+  sel.removeAllRanges();
+  sel.addRange(range);
+
+  function finish(save) {
+    span.contentEditable = "false";
+    span.removeEventListener("keydown", onKey);
+    span.removeEventListener("blur", onBlur);
+
+    if (save) {
+      const n = find(currentMap, id);
+      n.text = span.textContent.trim() || oldText;
+    } else {
+      span.textContent = oldText;
+    }
+
+    render();
+  }
+
+  function onKey(e) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      finish(true);
+    }
+
+    if (e.key === "Escape") {
+      finish(false);
+    }
+  }
+
+  function onBlur() {
+    finish(true);
+  }
+
+  span.addEventListener("keydown", onKey);
+  span.addEventListener("blur", onBlur);
+}
