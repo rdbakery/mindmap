@@ -297,48 +297,77 @@ function addChild(id){
 
   render();
 }
+
 function editNote(id){
   const node = find(currentMap, id);
+  const nodeEl = document.querySelector(`.node[data-id="${id}"]`);
+  if (!nodeEl) return;
 
-  const overlay = document.createElement("div");
-  overlay.className = "note-overlay";
+  closeNoteEditors(); // only one open
 
-  const box = document.createElement("div");
-  box.className = "note-box";
+  const rect = nodeEl.getBoundingClientRect();
 
-  box.innerHTML = `
-    <h3 class="note-title">Node note</h3>
+  const editor = document.createElement("div");
+  editor.className = "note-editor";
+  editor.dataset.id = id;
 
-    <textarea class="note-textarea"
-      id="noteInput"
+  editor.innerHTML = `
+    <div class="note-editor-header">Node note</div>
+    <textarea class="note-editor-textarea"
       placeholder="Write your note here..."
     >${node.note || ""}</textarea>
-
-    <div class="note-actions">
-      <button class="note-btn cancel">Cancel</button>
-      <button class="note-btn save">Save</button>
+    <div class="note-editor-actions">
+      <button class="cancel">Cancel</button>
+      <button class="save">Save</button>
     </div>
   `;
 
-  overlay.appendChild(box);
-  document.body.appendChild(overlay);
+  document.body.appendChild(editor);
 
-  const textarea = box.querySelector("#noteInput");
+  /* 📍 POSITION NEAR NODE */
+  let left = rect.right + 12;
+  let top = rect.top;
+
+  // prevent off-screen right
+  if (left + 320 > window.innerWidth) {
+    left = rect.left - 332;
+  }
+
+  // prevent off-screen bottom
+  if (top + 220 > window.innerHeight) {
+    top = window.innerHeight - 240;
+  }
+
+  editor.style.left = left + "px";
+  editor.style.top = top + "px";
+
+  const textarea = editor.querySelector("textarea");
   textarea.focus();
 
-  box.querySelector(".cancel").onclick = () => overlay.remove();
+  editor.querySelector(".cancel").onclick = () => editor.remove();
 
-  box.querySelector(".save").onclick = () => {
+  editor.querySelector(".save").onclick = () => {
     pushHistory();
     node.note = textarea.value.trim();
-    overlay.remove();
+    editor.remove();
     render();
   };
 
-  // ESC to close
-  overlay.addEventListener("keydown", e => {
-    if (e.key === "Escape") overlay.remove();
+  // close on outside click
+  setTimeout(() => {
+    document.addEventListener("mousedown", outsideClick);
   });
+
+  function outsideClick(e){
+    if (!editor.contains(e.target)) {
+      editor.remove();
+      document.removeEventListener("mousedown", outsideClick);
+    }
+  }
+}
+
+function closeNoteEditors(){
+  document.querySelectorAll(".note-editor").forEach(e => e.remove());
 }
 
 

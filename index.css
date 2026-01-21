@@ -402,72 +402,57 @@ svg {
 .menu button:hover {
   background:#e8f0ec;
 }
-/* ===== Note Modal Overlay ===== */
-.note-overlay {
+/* ===== Floating Note Editor ===== */
+.note-editor {
   position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.35);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10000;
-}
-
-/* ===== Modal Box ===== */
-.note-box {
+  width: 320px;
   background: #ffffff;
-  width: 360px;
-  max-width: 90vw;
-  padding: 18px;
-  border-radius: 12px;
-  box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  z-index: 10000;
   box-sizing: border-box;
 }
 
-/* ===== Title ===== */
-.note-title {
-  margin: 0 0 10px;
-  font-size: 16px;
+/* Header */
+.note-editor-header {
+  font-size: 14px;
   font-weight: 600;
+  margin-bottom: 8px;
   color: #1b1b1b;
 }
 
-/* ===== Textarea ===== */
-.note-textarea {
+/* Textarea */
+.note-editor-textarea {
   width: 100%;
-  min-height: 120px;
+  min-height: 90px;
   resize: vertical;
-
-  padding: 10px 12px;
-  box-sizing: border-box;
-
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #9fb5aa;
   font-family: Segoe UI, sans-serif;
   font-size: 14px;
   line-height: 1.45;
-
-  border-radius: 8px;
-  border: 1px solid #9fb5aa;
-  outline: none;
-
-  white-space: pre-wrap;   /* keeps line breaks */
+  box-sizing: border-box;
+  white-space: pre-wrap;
 }
 
-/* Focus */
-.note-textarea:focus {
+.note-editor-textarea:focus {
   border-color: #6aa84f;
   box-shadow: 0 0 0 2px rgba(106,168,79,0.35);
+  outline: none;
 }
 
-/* ===== Buttons ===== */
-.note-actions {
+/* Actions */
+.note-editor-actions {
   display: flex;
   justify-content: flex-end;
-  gap: 10px;
-  margin-top: 12px;
+  gap: 8px;
+  margin-top: 10px;
 }
 
-.note-btn {
-  padding: 6px 14px;
+.note-editor-actions button {
+  padding: 6px 12px;
   border-radius: 6px;
   border: 1px solid #a3b5aa;
   background: #ffffff;
@@ -475,10 +460,6 @@ svg {
   font-size: 13px;
 }
 
-.note-btn:hover {
+.note-editor-actions button:hover {
   background: #eef4f1;
-}
-
-.note-btn.save {
-  border-color: #6aa84f;
 }
