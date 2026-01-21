@@ -297,56 +297,51 @@ function addChild(id){
 
   render();
 }
-function editNode(id){
-  const nodeEl = document.querySelector(`[data-id="${id}"]`);
-  if(!nodeEl) return;
+function editNote(id){
+  const node = find(currentMap, id);
 
-  const span = nodeEl.querySelector(".node-text");
-  const oldText = span.textContent;
+  const overlay = document.createElement("div");
+  overlay.className = "note-overlay";
 
-  pushHistory();
+  const box = document.createElement("div");
+  box.className = "note-box";
 
-  span.contentEditable = "true";
-  span.focus();
+  box.innerHTML = `
+    <h3 class="note-title">Node note</h3>
 
-  const range = document.createRange();
-  range.selectNodeContents(span);
-  range.collapse(false);
-  const sel = window.getSelection();
-  sel.removeAllRanges();
-  sel.addRange(range);
+    <textarea class="note-textarea"
+      id="noteInput"
+      placeholder="Write your note here..."
+    >${node.note || ""}</textarea>
 
-  function finish(save){
-    span.contentEditable = "false";
-    span.removeEventListener("keydown", onKey);
-    span.removeEventListener("blur", onBlur);
+    <div class="note-actions">
+      <button class="note-btn cancel">Cancel</button>
+      <button class="note-btn save">Save</button>
+    </div>
+  `;
 
-    if(save){
-      const n = find(currentMap,id);
-      n.text = span.textContent.trim() || oldText;
-    } else {
-      span.textContent = oldText;
-    }
+  overlay.appendChild(box);
+  document.body.appendChild(overlay);
+
+  const textarea = box.querySelector("#noteInput");
+  textarea.focus();
+
+  box.querySelector(".cancel").onclick = () => overlay.remove();
+
+  box.querySelector(".save").onclick = () => {
+    pushHistory();
+    node.note = textarea.value.trim();
+    overlay.remove();
     render();
-  }
+  };
 
-  function onKey(e){
-    if(e.key === "Enter"){
-      e.preventDefault();
-      finish(true);
-    }
-    if(e.key === "Escape"){
-      finish(false);
-    }
-  }
-
-  function onBlur(){
-    finish(true);
-  }
-
-  span.addEventListener("keydown", onKey);
-  span.addEventListener("blur", onBlur);
+  // ESC to close
+  overlay.addEventListener("keydown", e => {
+    if (e.key === "Escape") overlay.remove();
+  });
 }
+
+
 
 function toggleNode(id){
   pushHistory();
