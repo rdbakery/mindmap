@@ -51,18 +51,28 @@ function nodeColor(depth) {
   return palette[Math.min(depth, palette.length - 1)];
 }
 
+function getTodayPassword() {
+  const d = new Date();
+
+  const day = String(d.getDate()).padStart(2, "0");
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  const year = d.getFullYear();
+
+  return `${day}${month}${year}@YT`; // 🔑 your pattern
+}
+
 function enableAdminMode() {
   const pass = prompt("Enter Admin Password:");
 
-  if (pass === "admin123") {   // 🔁 change this
+  if (pass === getTodayPassword()) {
     isAdmin = true;
+    localStorage.setItem("isAdmin", "true");
     alert("Admin mode enabled");
     render();
   } else {
     alert("Wrong password");
   }
 }
-
 function disableAdminMode() {
   isAdmin = false;
   alert("Admin mode disabled");
