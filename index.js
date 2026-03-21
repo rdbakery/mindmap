@@ -134,12 +134,13 @@ let undoStack=[], redoStack=[];
   const maps=await listMaps();
   if(!maps.length){
     activeId=uid();
-    currentMap={
+currentMap={
   id: activeId,
   text: "Untitled Map",
   collapsed: false,
   important: false,
-  note: "", 
+  note: "",
+  youtube: "",   // ✅ ADD
   children: []
 };
 
@@ -288,13 +289,14 @@ function toggleImportant(id){
 function addChild(id){
   pushHistory();
   find(currentMap,id).children.push({
-  id: uid(),
-  text: "New Node",
-  collapsed: false,
-  important: false,
-  children: []
-});
-
+    id: uid(),
+    text: "New Node",
+    collapsed: false,
+    important: false,
+    note: "",
+    youtube: "",   // ✅ ADD THIS
+    children: []
+  });
   render();
 }
 
@@ -368,6 +370,23 @@ function editNote(id){
 
 function closeNoteEditors(){
   document.querySelectorAll(".note-editor").forEach(e => e.remove());
+}
+
+function handleYoutube(id){
+  const node = find(currentMap, id);
+
+  if (node.youtube) {
+    // 🎬 Open video
+    window.open(node.youtube, "_blank");
+  } else {
+    // ➕ Ask for link
+    const link = prompt("Enter YouTube link:");
+    if (link) {
+      pushHistory();
+      node.youtube = link.trim();
+      render();
+    }
+  }
 }
 
 
@@ -556,14 +575,20 @@ h.innerHTML = `
 
   const m = document.createElement("div");
   m.className = "menu";
+
   m.innerHTML = `
-    <button onclick="addChild('${n.id}')">➕ Add</button>
-    <button onclick="editNode('${n.id}')">✏️ Edit</button>
-    <button onclick="toggleImportant('${n.id}')">${n.important ? "⭐ Remove Important" : "⭐ Mark Important"}</button>
-    <button onclick="toggleFocus('${n.id}')">${focusedNodeId === n.id ? "Exit focus" : "Focus"}</button>
-    <button onclick="editNote('${n.id}')">Add note</button>
-    <button onclick="deleteNode('${n.id}')">🗑 Delete</button>
-  `;
+  <button onclick="addChild('${n.id}')">➕ Add</button>
+  <button onclick="editNode('${n.id}')">✏️ Edit</button>
+  <button onclick="toggleImportant('${n.id}')">${n.important ? "⭐ Remove Important" : "⭐ Mark Important"}</button>
+  <button onclick="toggleFocus('${n.id}')">${focusedNodeId === n.id ? "Exit focus" : "Focus"}</button>
+  <button onclick="editNote('${n.id}')">Add note</button>
+
+  <button onclick="handleYoutube('${n.id}')">
+    ${n.youtube ? "▶ Watch on YouTube" : "➕ Add YouTube"}
+  </button>
+
+  <button onclick="deleteNode('${n.id}')">🗑 Delete</button>
+`;
 
   h.querySelector("button").onclick = e => {
     e.stopPropagation();
