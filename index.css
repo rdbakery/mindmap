@@ -463,3 +463,65 @@ svg {
 .note-editor-actions button:hover {
   background: #eef4f1;
 }
+
+.youtube-editor {
+  position: fixed;
+  width: 300px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  padding: 12px;
+  z-index: 9999;
+  font-family: sans-serif;
+}
+
+.youtube-editor-header {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.youtube-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.youtube-input:focus {
+  border-color: #3b7d5a;
+}
+
+.youtube-editor-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.youtube-editor-actions button {
+  flex: 1;
+  padding: 6px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.youtube-editor-actions .open {
+  background: #e53935;
+  color: white;
+}
+
+.youtube-editor-actions .save {
+  background: #3b7d5a;
+  color: white;
+}
+
+.youtube-editor-actions .remove {
+  background: #777;
+  color: white;
+}
+
+.youtube-editor-actions .cancel {
+  background: #ddd;
+}

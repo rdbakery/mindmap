@@ -389,6 +389,98 @@ function handleYoutube(id){
   }
 }
 
+function editYoutube(id){
+  const node = find(currentMap, id);
+  const nodeEl = document.querySelector(`.node[data-id="${id}"]`);
+  if (!nodeEl) return;
+
+  closeYoutubeEditors(); // only one open
+
+  const rect = nodeEl.getBoundingClientRect();
+
+  const editor = document.createElement("div");
+  editor.className = "youtube-editor";
+  editor.dataset.id = id;
+
+  editor.innerHTML = `
+    <div class="youtube-editor-header">YouTube Link</div>
+
+    <input type="text"
+      class="youtube-input"
+      placeholder="Paste YouTube link..."
+      value="${node.youtube || ""}"
+    />
+
+    <div class="youtube-editor-actions">
+      <button class="open">▶ Open</button>
+      <button class="remove">Remove</button>
+      <button class="cancel">Cancel</button>
+      <button class="save">Save</button>
+    </div>
+  `;
+
+  document.body.appendChild(editor);
+
+  /* 📍 POSITION */
+  let left = rect.right + 12;
+  let top = rect.top;
+
+  if (left + 320 > window.innerWidth) {
+    left = rect.left - 332;
+  }
+
+  if (top + 180 > window.innerHeight) {
+    top = window.innerHeight - 200;
+  }
+
+  editor.style.left = left + "px";
+  editor.style.top = top + "px";
+
+  const input = editor.querySelector(".youtube-input");
+  input.focus();
+
+  /* BUTTON ACTIONS */
+
+  editor.querySelector(".open").onclick = () => {
+    if (input.value.trim()) {
+      window.open(input.value.trim(), "_blank");
+    }
+  };
+
+  editor.querySelector(".remove").onclick = () => {
+    if (confirm("Remove YouTube link?")) {
+      pushHistory();
+      node.youtube = "";
+      editor.remove();
+      render();
+    }
+  };
+
+  editor.querySelector(".cancel").onclick = () => editor.remove();
+
+  editor.querySelector(".save").onclick = () => {
+    pushHistory();
+    node.youtube = input.value.trim();
+    editor.remove();
+    render();
+  };
+
+  /* OUTSIDE CLICK CLOSE */
+  setTimeout(() => {
+    document.addEventListener("mousedown", outsideClick);
+  });
+
+  function outsideClick(e){
+    if (!editor.contains(e.target)) {
+      editor.remove();
+      document.removeEventListener("mousedown", outsideClick);
+    }
+  }
+}
+
+function closeYoutubeEditors(){
+  document.querySelectorAll(".youtube-editor").forEach(e => e.remove());
+}
 
 
 function toggleNode(id){
@@ -583,10 +675,9 @@ h.innerHTML = `
   <button onclick="toggleFocus('${n.id}')">${focusedNodeId === n.id ? "Exit focus" : "Focus"}</button>
   <button onclick="editNote('${n.id}')">Add note</button>
 
-  <button onclick="handleYoutube('${n.id}')">
-    ${n.youtube ? "▶ Watch on YouTube" : "➕ Add YouTube"}
-  </button>
-
+<button onclick="editYoutube('${n.id}')">
+  ${n.youtube ? "🎬 YouTube" : "➕ YouTube"}
+</button>
   <button onclick="deleteNode('${n.id}')">🗑 Delete</button>
 `;
 
