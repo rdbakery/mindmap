@@ -3,6 +3,8 @@
 let focusedNodeId = null;
 let searchQuery = "";
 
+let isAdmin = false;
+
 
 const uid = () => Math.random().toString(36).slice(2);
 const clone = o => JSON.parse(JSON.stringify(o));
@@ -47,6 +49,24 @@ function nodeColor(depth) {
 
 
   return palette[Math.min(depth, palette.length - 1)];
+}
+
+function enableAdminMode() {
+  const pass = prompt("Enter Admin Password:");
+
+  if (pass === "admin123") {   // 🔁 change this
+    isAdmin = true;
+    alert("Admin mode enabled");
+    render();
+  } else {
+    alert("Wrong password");
+  }
+}
+
+function disableAdminMode() {
+  isAdmin = false;
+  alert("Admin mode disabled");
+  render();
 }
 
 function searchNodes(q){
@@ -675,8 +695,8 @@ h.innerHTML = `
   <button onclick="toggleFocus('${n.id}')">${focusedNodeId === n.id ? "Exit focus" : "Focus"}</button>
   <button onclick="editNote('${n.id}')">Add note</button>
 
-<button onclick="editYoutube('${n.id}')">
-  ${n.youtube ? "🎬 YouTube" : "➕ YouTube"}
+<button onclick="${isAdmin ? `editYoutube('${n.id}')` : `openYoutube('${n.id}')`}">
+  ${n.youtube ? "🎬 Watch" : (isAdmin ? "➕ Add Video" : "No Video")}
 </button>
   <button onclick="deleteNode('${n.id}')">🗑 Delete</button>
 `;
@@ -801,6 +821,15 @@ function drawLine(x1,y1,x2,y2){
   p.setAttribute("stroke","#3b7d5a");
   p.setAttribute("fill","none");
   svg.appendChild(p);
+}
+
+
+function openYoutube(id){
+  const node = find(currentMap, id);
+
+  if (node.youtube) {
+    window.open(node.youtube, "_blank");
+  }
 }
 
 /* ================= EXPORT ================= */

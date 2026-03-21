@@ -31,6 +31,9 @@
       title="Collapse All" onclick="toggleAllNodes()"></button>
     <input type="search" placeholder="Search node…"
       oninput="searchNodes(this.value)">
+      <button onclick="isAdmin ? disableAdminMode() : enableAdminMode()">
+  🔐 Admin
+</button>
   </div>
 </div>
 
