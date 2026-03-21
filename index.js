@@ -385,10 +385,7 @@ function editNote(id){
     render();
   };
 
-  // close on outside click
-  setTimeout(() => {
-    document.addEventListener("mousedown", outsideClick);
-  });
+
 
   function outsideClick(e){
     if (!editor.contains(e.target)) {
@@ -495,10 +492,7 @@ function editYoutube(id){
     render();
   };
 
-  /* OUTSIDE CLICK CLOSE */
-  setTimeout(() => {
-    document.addEventListener("mousedown", outsideClick);
-  });
+
 
   function outsideClick(e){
     if (!editor.contains(e.target)) {
@@ -729,12 +723,61 @@ if (n.note) {
   noteIcon.className = "note-icon";
   noteIcon.textContent = "📝";
 
-  const noteEl = document.createElement("div");
-  noteEl.className = "node-note";
-  noteEl.textContent = n.note;
+  noteIcon.onclick = (e) => {
+    e.stopPropagation();
+    openNoteViewer(n.id);
+  };
 
-  noteIcon.appendChild(noteEl);
   el.appendChild(noteIcon);
+}
+
+
+function openNoteViewer(id){
+  const node = find(currentMap, id);
+  const nodeEl = document.querySelector(`.node[data-id="${id}"]`);
+  if (!nodeEl) return;
+
+  closeNoteViewers(); // only one open
+
+  const rect = nodeEl.getBoundingClientRect();
+
+  const viewer = document.createElement("div");
+  viewer.className = "note-viewer";
+
+  viewer.innerHTML = `
+    <div class="note-viewer-header">
+      <span>Note</span>
+      <button class="close">✖</button>
+    </div>
+    <div class="note-viewer-body">
+      ${node.note || "No note"}
+    </div>
+  `;
+
+  document.body.appendChild(viewer);
+
+  /* 📍 POSITION NEAR NODE (same as editor) */
+  let left = rect.right + 12;
+  let top = rect.top;
+
+  if (left + 320 > window.innerWidth) {
+    left = rect.left - 332;
+  }
+
+  if (top + 200 > window.innerHeight) {
+    top = window.innerHeight - 220;
+  }
+
+  viewer.style.left = left + "px";
+  viewer.style.top = top + "px";
+
+  /* ❌ ONLY CLOSE ON CROSS */
+  viewer.querySelector(".close").onclick = () => {
+    viewer.remove();
+  };
+}
+function closeNoteViewers(){
+  document.querySelectorAll(".note-viewer").forEach(e => e.remove());
 }
 
 
