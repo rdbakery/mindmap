@@ -700,7 +700,7 @@ h.innerHTML = `
   <button onclick="editNote('${n.id}')">Add note</button>
 
 <button onclick="${isAdmin ? `editYoutube('${n.id}')` : `openYoutube('${n.id}')`}">
-  ${n.youtube ? "🎬 Watch" : (isAdmin ? "➕ Add Video" : "No Video")}
+  ${n.youtube ? "🎬 View Explanation" : (isAdmin ? "➕ Add Video" : "No Video")}
 </button>
   <button onclick="deleteNode('${n.id}')">🗑 Delete</button>
 `;
