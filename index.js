@@ -744,15 +744,13 @@ function openNoteViewer(id){
   const viewer = document.createElement("div");
   viewer.className = "note-viewer";
 
-  viewer.innerHTML = `
-    <div class="note-viewer-header">
-      <span>Note</span>
-      <button class="close">✖</button>
-    </div>
-    <div class="note-viewer-body">
-      ${node.note || "No note"}
-    </div>
-  `;
+viewer.innerHTML = `
+  <div class="note-viewer-header">
+    <span>Note</span>
+    <button class="close">✖</button>
+  </div>
+  <div class="note-viewer-body">${node.note || "No note"}</div>
+`;
 
   document.body.appendChild(viewer);
 
