@@ -405,7 +405,7 @@ svg {
 /* ===== Floating Note Editor ===== */
 .note-editor {
   position: fixed;
-  width: 420px;
+  width: 520px;
 
   background: #ffffff;
   border-radius: 12px;
@@ -425,7 +425,7 @@ svg {
 /* Textarea */
 .note-editor-textarea {
   width: 100%;
-  min-height: 160px;
+  min-height: 240px;
   resize: vertical;
   padding: 8px 10px;
   border-radius: 8px;
