@@ -344,7 +344,7 @@ function editNote(id){
   editor.dataset.id = id;
 
   editor.innerHTML = `
-    <div class="note-editor-header">Node note</div>
+    <div class="note-editor-header"><span>${node.text}</span></div>
     <textarea class="note-editor-textarea"
       placeholder="Write your note here..."
     >${node.note || ""}</textarea>
@@ -746,7 +746,7 @@ function openNoteViewer(id){
 
 viewer.innerHTML = `
   <div class="note-viewer-header">
-    <span>Note</span>
+    <span>${node.text}</span>
     <button class="close">✖</button>
   </div>
   <div class="note-viewer-body">${node.note || "No note"}</div>
