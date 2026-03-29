@@ -555,7 +555,7 @@ svg {
 .note-viewer {
   position: fixed;
 
-  width: 420px;              /* 🔥 increased width */
+  width: 520px;              /* 🔥 increased width */
   max-height: 400px;         /* 🔥 fixed height like notepad */
 
   background: #ffffff;
