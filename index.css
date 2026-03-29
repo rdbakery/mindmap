@@ -405,13 +405,13 @@ svg {
 /* ===== Floating Note Editor ===== */
 .note-editor {
   position: fixed;
-  width: 320px;
+  width: 420px;
+
   background: #ffffff;
-  border-radius: 10px;
-  padding: 12px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-  z-index: 10000;
-  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 16px;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
 }
 
 /* Header */
@@ -425,7 +425,7 @@ svg {
 /* Textarea */
 .note-editor-textarea {
   width: 100%;
-  min-height: 90px;
+  min-height: 160px;
   resize: vertical;
   padding: 8px 10px;
   border-radius: 8px;
@@ -527,11 +527,22 @@ svg {
 }
 
 
+
 .note-viewer-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+
+  border-bottom: 1px solid #e5e7eb; /* 🔥 divider */
+}
+
+.note-viewer-header span {
+  font-size: 15px;
   font-weight: 600;
-  margin-bottom: 8px;
+  color: #111827;
 }
 
 .note-viewer-header button {
@@ -543,24 +554,26 @@ svg {
 /* ===== NOTE VIEWER (PROFESSIONAL UI) ===== */
 .note-viewer {
   position: fixed;
-  width: 300px;
 
-  /* 🎨 premium soft background */
-  background: #f9fafb;
+  width: 420px;              /* 🔥 increased width */
+  max-height: 400px;         /* 🔥 fixed height like notepad */
 
+  background: #ffffff;
   border-radius: 12px;
-  padding: 14px;
+  padding: 16px;
 
-  border: 1px solid #e5e7eb;
+  border: 1px solid #d1d5db;
 
   box-shadow:
-    0 10px 25px rgba(0,0,0,0.12),
-    0 2px 6px rgba(0,0,0,0.06);
+    0 15px 40px rgba(0,0,0,0.18),
+    0 4px 10px rgba(0,0,0,0.08);
 
   z-index: 10000;
   font-family: "Segoe UI", sans-serif;
-}
 
+  display: flex;
+  flex-direction: column;
+}
 /* ===== HEADER ===== */
 .note-viewer-header {
   display: flex;
@@ -569,13 +582,6 @@ svg {
   margin-bottom: 10px;
 }
 
-.note-viewer-header span {
-  font-size: 14px;
-  font-weight: 600;
-
-  /* 🎯 strong heading color */
-  color: #111827;
-}
 
 /* ===== CLOSE BUTTON ===== */
 .note-viewer-header button {
@@ -598,16 +604,15 @@ svg {
 
 /* ===== BODY ===== */
 .note-viewer-body {
-  font-size: 14px;
+  flex: 1;                      /* fill space */
+  overflow-y: auto;             /* 🔥 scroll */
 
-  /* 🎯 professional readable text */
-  color: #374151;
+  font-size: 15px;              /* bigger text */
+  color: #1f2937;
 
-  line-height: 1.6;
-
+  line-height: 1.7;
   white-space: pre-wrap;
   word-break: break-word;
 
-  margin: 0;
-  padding: 0;
+  padding-right: 6px;
 }
