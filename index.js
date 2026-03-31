@@ -5,6 +5,9 @@ let searchQuery = "";
 
 let isAdmin = false;
 
+let searchResults = [];
+let searchIndex = -1;
+
 
 const uid = () => Math.random().toString(36).slice(2);
 const clone = o => JSON.parse(JSON.stringify(o));
@@ -81,7 +84,31 @@ function disableAdminMode() {
 
 function searchNodes(q){
   searchQuery = q.toLowerCase();
-  render();
+
+  searchResults = [];
+  collectSearchResults(currentMap);
+
+  searchIndex = searchResults.length ? 0 : -1;
+
+  if (searchIndex !== -1) {
+    expandPathToNode(currentMap, searchResults[0]);
+  }
+
+  render().then(() => {
+    if (searchIndex !== -1) {
+      focusNode(searchResults[searchIndex]);
+    }
+    updateSearchIndicator();
+  });
+}
+
+function collectSearchResults(node){
+  if (!searchQuery) return;   // ✅ FIX
+
+  if (node.text.toLowerCase().includes(searchQuery)) {
+    searchResults.push(node.id);
+  }
+  node.children.forEach(collectSearchResults);
 }
 
 function toggleFocus(id){
@@ -617,15 +644,15 @@ function draw(n, depth){
 const el = document.createElement("div");
 
 
-
-
 el.className =
   "node" +
   (n.important ? " important" : "") +
   (n.note ? " has-note" : "") +
   (searchQuery && n.text.toLowerCase().includes(searchQuery)
     ? " search-hit"
-    : "");
+    : "") +
+  (searchResults[searchIndex] === n.id ? " active-hit" : "");
+
 
 if (focusedNodeId && !isInFocusedPath(n, focusedNodeId)) {
   el.classList.add("faded");
@@ -1117,4 +1144,56 @@ function editNode(id) {
 
   span.addEventListener("keydown", onKey);
   span.addEventListener("blur", onBlur);
+}
+
+document.querySelector('input[type="search"]')
+  .addEventListener("keydown", function(e){
+
+    if (e.key === "Enter") {
+      e.preventDefault();
+
+      if (!searchResults.length) return;
+
+      searchIndex = (searchIndex + 1) % searchResults.length;
+
+      const id = searchResults[searchIndex];
+
+     expandPathToNode(currentMap, id);
+
+render().then(() => {
+  focusNode(id);
+  updateSearchIndicator();
+});
+    }
+});
+
+function updateSearchIndicator() {
+  let indicator = document.getElementById("searchIndicator");
+
+  if (!indicator) {
+    indicator = document.createElement("div");
+    indicator.id = "searchIndicator";
+    indicator.className = "search-indicator";
+    document.body.appendChild(indicator);
+  }
+
+  if (!searchQuery || searchResults.length === 0) {
+    indicator.style.display = "none";
+    return;
+  }
+
+  indicator.style.display = "block";
+  indicator.textContent = `${searchIndex + 1} / ${searchResults.length}`;
+}
+
+function expandPathToNode(node, targetId){
+  if (node.id === targetId) return true;
+
+  for (const child of node.children) {
+    if (expandPathToNode(child, targetId)) {
+      node.collapsed = false;
+      return true;
+    }
+  }
+  return false;
 }
