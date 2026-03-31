@@ -665,3 +665,41 @@ svg {
     top: 80px !important;
   }
 }
+
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  background: #f3f4f6;
+  border-radius: 20px;
+  padding: 4px 8px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  width: 120px;
+}
+
+#searchCount {
+  font-size: 13px;
+  color: #374151;
+  min-width: 40px;
+  text-align: center;
+}
+
+.search-box button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px 4px;
+}
+
+.search-box button:hover {
+  color: #111827;
+}

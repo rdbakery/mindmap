@@ -1168,22 +1168,53 @@ render().then(() => {
 });
 
 function updateSearchIndicator() {
-  let indicator = document.getElementById("searchIndicator");
-
-  if (!indicator) {
-    indicator = document.createElement("div");
-    indicator.id = "searchIndicator";
-    indicator.className = "search-indicator";
-    document.body.appendChild(indicator);
-  }
+  const countEl = document.getElementById("searchCount");
 
   if (!searchQuery || searchResults.length === 0) {
-    indicator.style.display = "none";
+    countEl.textContent = "0/0";
     return;
   }
 
-  indicator.style.display = "block";
-  indicator.textContent = `${searchIndex + 1} / ${searchResults.length}`;
+  countEl.textContent =
+    `${searchIndex >= 0 ? searchIndex + 1 : 0}/${searchResults.length}`;
+}
+
+function nextSearch() {
+  if (!searchResults.length) return;
+
+  searchIndex = (searchIndex + 1) % searchResults.length;
+  jumpToSearch();
+}
+
+function prevSearch() {
+  if (!searchResults.length) return;
+
+  searchIndex =
+    (searchIndex - 1 + searchResults.length) % searchResults.length;
+
+  jumpToSearch();
+}
+
+function jumpToSearch() {
+  const id = searchResults[searchIndex];
+
+  expandPathToNode(currentMap, id);
+
+  render().then(() => {
+    focusNode(id);
+    updateSearchIndicator();
+  });
+}
+
+function clearSearch() {
+  searchQuery = "";
+  searchResults = [];
+  searchIndex = -1;
+
+  document.getElementById("searchInput").value = "";
+
+  render();
+  updateSearchIndicator();
 }
 
 function expandPathToNode(node, targetId){

@@ -33,6 +33,18 @@
       title="Collapse All" onclick="toggleAllNodes()"></button>
     <input type="search" placeholder="Search node…"
       oninput="searchNodes(this.value)">
+
+      <div class="search-box">
+  <input type="search" placeholder="Search node…" 
+    oninput="searchNodes(this.value)" id="searchInput">
+
+  <span id="searchCount">0/0</span>
+
+  <button onclick="prevSearch()">▲</button>
+  <button onclick="nextSearch()">▼</button>
+  <button onclick="clearSearch()">✖</button>
+</div>
+
       <button onclick="isAdmin ? disableAdminMode() : enableAdminMode()">
   🔐 Admin
 </button>
