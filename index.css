@@ -96,19 +96,12 @@ body {
 }
 
 
-.node.important::before {
-  content: "★";
-  position: absolute;
-  top: 2px;
-  right: 2px;
-  font-size: 14px;
-  color: #e80a0a;
-
-}
-
-
 .node.important {
-  box-shadow: 0 0 0 2px rgba(100,116,139,0.2);
+  box-shadow:
+    0 0 0 2px #ef4444,
+    0 6px 16px rgba(239,68,68,0.25);
+
+  border-radius: 8px;
 }
 
 

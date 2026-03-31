@@ -695,7 +695,7 @@ h.innerHTML = `
   m.innerHTML = `
   <button onclick="addChild('${n.id}')">➕ Add</button>
   <button onclick="editNode('${n.id}')">✏️ Edit</button>
-  <button onclick="toggleImportant('${n.id}')">${n.important ? "⭐ Remove Important" : "⭐ Mark Important"}</button>
+  <button onclick="toggleImportant('${n.id}')">${n.important ? "Remove Important" : "Mark Important"}</button>
   <button onclick="toggleFocus('${n.id}')">${focusedNodeId === n.id ? "Exit focus" : "Focus"}</button>
   <button onclick="editNote('${n.id}')">Add note</button>
 
