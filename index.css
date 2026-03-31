@@ -86,6 +86,10 @@ body {
   opacity: 1;
 }
 
+#canvas {
+  position: relative;
+}
+
 
 /* ===== Search Match Highlight ===== */
 .node.search-hit {
@@ -606,16 +610,18 @@ svg {
 }
 
 .node.active-hit {
-  background: #fb923c !important;   /* 🟠 orange */
-
   box-shadow:
     0 0 0 3px #f97316,
-    0 0 20px rgba(249,115,22,0.7);
+    0 0 18px rgba(249,115,22,0.6);
 
-  transform: scale(1.08);
+  transform: scale(1.05);
   z-index: 999;
 }
 
+.node.active-hit .node-text {
+  background-color: orange;   /* 🟠 orange text */
+  font-weight: 600;
+}
 
 
 @keyframes flashNode {

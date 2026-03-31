@@ -243,15 +243,6 @@ function toggleRecursive(node, collapse) {
   node.children.forEach(c => toggleRecursive(c, collapse));
 }
 
-function editNote(id){
-  const node = find(currentMap, id);
-  const note = prompt("Node note / description:", node.note || "");
-  if (note !== null) {
-    pushHistory();
-    node.note = note.trim();
-    render();
-  }
-}
 
 
 
@@ -313,11 +304,6 @@ function removeNode(p,id){
 }
 
 
-let dragNodeId = null;
-
-
-
-
 /* Find parent of a node */
 function findParent(root, childId, parent = null) {
   if (root.id === childId) return parent;
@@ -362,9 +348,7 @@ function editNote(id){
   const nodeEl = document.querySelector(`.node[data-id="${id}"]`);
   if (!nodeEl) return;
 
-  closeNoteEditors(); // only one open
-
-  const rect = nodeEl.getBoundingClientRect();
+  closeNoteEditors();
 
   const editor = document.createElement("div");
   editor.className = "note-editor";
@@ -372,29 +356,21 @@ function editNote(id){
 
   editor.innerHTML = `
     <div class="note-editor-header"><span>${node.text}</span></div>
-    <textarea class="note-editor-textarea"
-      placeholder="Write your note here..."
-    >${node.note || ""}</textarea>
+    <textarea class="note-editor-textarea">${node.note || ""}</textarea>
     <div class="note-editor-actions">
       <button class="cancel">Cancel</button>
       <button class="save">Save</button>
     </div>
   `;
 
-  canvas.appendChild(editor); 
+  canvas.appendChild(editor);
 
-const canvasRect = canvas.getBoundingClientRect();
+  // ✅ NEW POSITION (THIS IS THE FIX)
+  let left = node._x + (node._realW || 200) + 12;
+  let top = node._y - 20;
 
-let left = rect.right - canvasRect.left + 12;
-let top = rect.top - canvasRect.top;
-  // prevent off-screen right
-  if (left + 320 > window.innerWidth) {
-    left = rect.left - 332;
-  }
-
-  // prevent off-screen bottom
-  if (top + 220 > window.innerHeight) {
-    top = window.innerHeight - 240;
+  if (left + 420 > canvas.scrollWidth) {
+    left = node._x - 430;
   }
 
   editor.style.left = left + "px";
@@ -411,37 +387,12 @@ let top = rect.top - canvasRect.top;
     editor.remove();
     render();
   };
-
-
-
-  function outsideClick(e){
-    if (!editor.contains(e.target)) {
-      editor.remove();
-      document.removeEventListener("mousedown", outsideClick);
-    }
-  }
 }
 
 function closeNoteEditors(){
   document.querySelectorAll(".note-editor").forEach(e => e.remove());
 }
 
-function handleYoutube(id){
-  const node = find(currentMap, id);
-
-  if (node.youtube) {
-    // 🎬 Open video
-    window.open(node.youtube, "_blank");
-  } else {
-    // ➕ Ask for link
-    const link = prompt("Enter YouTube link:");
-    if (link) {
-      pushHistory();
-      node.youtube = link.trim();
-      render();
-    }
-  }
-}
 
 function editYoutube(id){
   const node = find(currentMap, id);
@@ -519,14 +470,6 @@ function editYoutube(id){
     render();
   };
 
-
-
-  function outsideClick(e){
-    if (!editor.contains(e.target)) {
-      editor.remove();
-      document.removeEventListener("mousedown", outsideClick);
-    }
-  }
 }
 
 function closeYoutubeEditors(){
@@ -615,30 +558,26 @@ function resize(n){
 /* ================= RENDER ================= */
 async function render(){
   document.querySelectorAll(".node, .connector-toggle").forEach(el => el.remove());
-  svg.innerHTML="";
+  svg.innerHTML = "";
 
   computeH(currentMap);
   layout(currentMap,80,currentMap._h/2+40);
+
   draw(currentMap,0);
 
   measureNodes();
 
-  document.querySelectorAll(".node, .connector-toggle").forEach(el => el.remove());
-  svg.innerHTML="";
-
-  computeH(currentMap);
-  layout(currentMap,80,currentMap._h/2+40);
   resize(currentMap);
-  draw(currentMap,0);
 
   await saveMap(activeId,currentMap.text,currentMap);
 
-    const btn = document.getElementById("toggleAllBtn");
+  const btn = document.getElementById("toggleAllBtn");
   if (btn) {
     btn.classList.toggle("expand", allCollapsed);
   }
-}
 
+  updateSearchIndicator(); // ✅ add here
+}
 
 function draw(n, depth){
 const el = document.createElement("div");
@@ -782,11 +721,12 @@ function openNoteViewer(id){
   canvas.appendChild(viewer);
 
   /* ✅ CORRECT POSITION */
-  let left = rect.right - canvasRect.left + 12;
-  let top = rect.top - canvasRect.top;
+// ✅ include scroll offset (IMPORTANT)
+let left = rect.right - canvasRect.left + canvas.scrollLeft + 12;
+let top = rect.top - canvasRect.top + canvas.scrollTop;
 
   // smart flip (optional)
-  if (left + 320 > canvas.offsetWidth) {
+  if (left + 320 > canvas.scrollWidth){
     left = rect.left - canvasRect.left - 332;
   }
 
