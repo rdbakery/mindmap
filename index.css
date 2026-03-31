@@ -2,7 +2,7 @@
 body {
   margin:0;
   background:#ffffff;
-  font-family:Segoe UI;
+  font-family: 'Poppins', sans-serif;
   color:#1b1b1b;
 }
 
@@ -404,7 +404,7 @@ svg {
 }
 /* ===== Floating Note Editor ===== */
 .note-editor {
-  position: fixed;
+  position: absolute;
   width: 420px;
   background: #ffffff;
   border-radius: 10px;
@@ -542,7 +542,7 @@ svg {
 
 /* ===== NOTE VIEWER (PROFESSIONAL UI) ===== */
 .note-viewer {
-  position: fixed;
+  position: absolute;
   width: 420px;
 
   /* 🎨 premium soft background */
@@ -611,3 +611,4 @@ svg {
   margin: 0;
   padding: 0;
 }
+

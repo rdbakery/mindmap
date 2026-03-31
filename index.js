@@ -354,12 +354,12 @@ function editNote(id){
     </div>
   `;
 
-  document.body.appendChild(editor);
+  canvas.appendChild(editor); 
 
-  /* 📍 POSITION NEAR NODE */
-  let left = rect.right + 12;
-  let top = rect.top;
+const canvasRect = canvas.getBoundingClientRect();
 
+let left = rect.right - canvasRect.left + 12;
+let top = rect.top - canvasRect.top;
   // prevent off-screen right
   if (left + 320 > window.innerWidth) {
     left = rect.left - 332;
@@ -731,49 +731,47 @@ if (n.note) {
   el.appendChild(noteIcon);
 }
 
-
 function openNoteViewer(id){
   const node = find(currentMap, id);
   const nodeEl = document.querySelector(`.node[data-id="${id}"]`);
   if (!nodeEl) return;
 
-  closeNoteViewers(); // only one open
+  closeNoteViewers();
 
+  const canvasRect = canvas.getBoundingClientRect();
   const rect = nodeEl.getBoundingClientRect();
 
   const viewer = document.createElement("div");
   viewer.className = "note-viewer";
 
-viewer.innerHTML = `
-  <div class="note-viewer-header">
-    <span>${node.text}</span>
-    <button class="close">✖</button>
-  </div>
-  <div class="note-viewer-body">${node.note || "No note"}</div>
-`;
+  viewer.innerHTML = `
+    <div class="note-viewer-header">
+      <span>${node.text}</span>
+      <button class="close">✖</button>
+    </div>
+    <div class="note-viewer-body">${node.note || "No note"}</div>
+  `;
 
-  document.body.appendChild(viewer);
+  canvas.appendChild(viewer);
 
-  /* 📍 POSITION NEAR NODE (same as editor) */
-  let left = rect.right + 12;
-  let top = rect.top;
+  /* ✅ CORRECT POSITION */
+  let left = rect.right - canvasRect.left + 12;
+  let top = rect.top - canvasRect.top;
 
-  if (left + 320 > window.innerWidth) {
-    left = rect.left - 332;
-  }
-
-  if (top + 200 > window.innerHeight) {
-    top = window.innerHeight - 220;
+  // smart flip (optional)
+  if (left + 320 > canvas.offsetWidth) {
+    left = rect.left - canvasRect.left - 332;
   }
 
   viewer.style.left = left + "px";
   viewer.style.top = top + "px";
 
-  /* ❌ ONLY CLOSE ON CROSS */
   viewer.querySelector(".close").onclick = () => {
     viewer.remove();
   };
 }
+
+
 function closeNoteViewers(){
   document.querySelectorAll(".note-viewer").forEach(e => e.remove());
 }
