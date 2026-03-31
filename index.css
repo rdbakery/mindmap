@@ -709,3 +709,8 @@ svg {
 .search-box button:hover {
   color: #111827;
 }
+
+.toolbar-inner {
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
