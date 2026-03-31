@@ -188,6 +188,7 @@ let undoStack=[], redoStack=[];
 
 /* ================= INIT ================= */
 (async()=>{
+  await document.fonts.ready;
   const maps=await listMaps();
   if(!maps.length){
     activeId=uid();
@@ -566,7 +567,7 @@ async function render(){
   draw(currentMap,0);
 
   measureNodes();
-
+positionToggles();
   resize(currentMap);
 
   await saveMap(activeId,currentMap.text,currentMap);
@@ -753,7 +754,9 @@ function closeNoteViewers(){
     toggle.textContent = n.collapsed ? ">" : "<";
 
     toggle.style.left = (n._x + n._realW + 8) + "px";
+    toggle.dataset.id = n.id;
     toggle.style.top = (n._y - 11) + "px";
+
 
     toggle.onclick = e => {
       e.stopPropagation();
@@ -773,6 +776,22 @@ function closeNoteViewers(){
       c._y
     );
     draw(c, depth + 1);
+  });
+}
+
+function positionToggles() {
+  document.querySelectorAll(".connector-toggle").forEach(toggle => {
+    const id = toggle.dataset.id;
+    const node = find(currentMap, id);
+    if (!node) return;
+
+    const GAP = 16;
+
+    toggle.style.left =
+      (node._x + (node._realW || 120) + GAP) + "px";
+
+    toggle.style.top =
+      (node._y - 11) + "px";
   });
 }
 
