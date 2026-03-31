@@ -1046,8 +1046,6 @@ function fitToolbar() {
   inner.style.transform = `scale(${scale})`;
 }
 
-window.addEventListener('load', fitToolbar);
-window.addEventListener('resize', fitToolbar);
 
 function editNode(id) {
   const nodeEl = document.querySelector(`[data-id="${id}"]`);

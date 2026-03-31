@@ -192,8 +192,6 @@ body {
 
   flex-wrap: nowrap;
   white-space: nowrap;
-
-  width: 1400px;              /* 🔑 FIXED LOGICAL WIDTH */
   padding: 0 24px;
 
   transform-origin: left center;
@@ -711,6 +709,6 @@ svg {
 }
 
 .toolbar-inner {
-  overflow-x: auto;
+  overflow-x: auto; 
   flex-wrap: nowrap;
 }
