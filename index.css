@@ -94,9 +94,6 @@ body {
 /* ===== Search Match Highlight ===== */
 .node.search-hit {
   background: #fde68a !important;  /* soft yellow */
-  box-shadow:
-    0 0 0 2px rgba(234,179,8,0.9),
-    0 0 12px rgba(234,179,8,0.4);
 }
 
 
@@ -608,10 +605,6 @@ svg {
 }
 
 .node.active-hit {
-  box-shadow:
-    0 0 0 3px #f97316,
-    0 0 18px rgba(249,115,22,0.6);
-
   transform: scale(1.05);
   z-index: 999;
 }
