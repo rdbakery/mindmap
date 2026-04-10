@@ -309,6 +309,17 @@ svg {
 .node-text {
   display: inline-block; /* 🔑 REQUIRED */
 }
+
+.node.quiz-hidden {
+  border-style: dashed;
+}
+
+.node.quiz-hidden .node-text {
+  min-width: 28px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
 .node-text[contenteditable="true"] {
   display: inline-block;     /* 🔑 critical */
   background-color: #ffffff;
@@ -363,6 +374,11 @@ svg {
   color:#3b7d5a;
   font-size:16px;
   cursor:pointer;
+}
+
+.menu-btn.quiz-disabled {
+  visibility: hidden;
+  pointer-events: none;
 }
 
 /* ===== Menu ===== */
@@ -699,6 +715,11 @@ svg {
 
 .search-box button:hover {
   color: #111827;
+}
+
+#quizModeBtn.active {
+  background: #dff5ea;
+  border-color: #6aa84f;
 }
 
 .toolbar-inner {

@@ -7,11 +7,22 @@ let isAdmin = false;
 
 let searchResults = [];
 let searchIndex = -1;
+let quizMode = false;
+let quizRevealed = new Set();
 
 
 const uid = () => Math.random().toString(36).slice(2);
 const clone = o => JSON.parse(JSON.stringify(o));
 const safeName = n => (n||"mindmap").replace(/[<>:"/\\|?*]+/g,"").replace(/\s+/g,"_");
+
+function resetQuizState() {
+  quizMode = false;
+  quizRevealed = new Set();
+}
+
+function isNodeHiddenInQuiz(node) {
+  return quizMode && node.id !== currentMap.id && !quizRevealed.has(node.id);
+}
 
 /* ===== Node Color by Level ===== */
 function nodeColor(depth) {
@@ -262,6 +273,7 @@ mapSelector.onchange = async e => {
   undoStack = [];
   redoStack = [];
   allCollapsed = false; // ✅ reset icon state
+  resetQuizState();
   render();
 };
 
@@ -271,6 +283,7 @@ async function createMap(){
   activeId=uid();
   currentMap={id:activeId,text:n,collapsed:false,children:[]};
   undoStack=[]; redoStack=[];
+  resetQuizState();
   await saveMap(activeId,n,currentMap);
   refreshSelector(); render();
 }
@@ -289,6 +302,7 @@ async function deleteMap(){
   if(!maps.length) location.reload();
   activeId=maps[0].id;
   currentMap=await loadMap(activeId);
+  resetQuizState();
   refreshSelector(); render();
 }
 
@@ -495,6 +509,32 @@ function toggleNode(id){
   });
 }
 
+function toggleQuizMode() {
+  quizMode = !quizMode;
+  quizRevealed = quizMode ? new Set([currentMap.id]) : new Set();
+  render();
+}
+
+function revealQuizNode(id) {
+  if (!quizMode || quizRevealed.has(id)) return;
+
+  quizRevealed.add(id);
+  render().then(() => {
+    focusNode(id);
+  });
+}
+
+function revealAllQuizAnswers() {
+  if (!quizMode) return;
+
+  (function reveal(node) {
+    quizRevealed.add(node.id);
+    node.children.forEach(reveal);
+  })(currentMap);
+
+  render();
+}
+
 function expandBranch(node) {
   node.collapsed = false;
   node.children.forEach(expandBranch);
@@ -583,17 +623,21 @@ function resize(n){
 }
 
 /* ================= RENDER ================= */
-async function render(){
+function renderTree() {
   document.querySelectorAll(".node, .connector-toggle").forEach(el => el.remove());
   svg.innerHTML = "";
 
   computeH(currentMap);
   layout(currentMap,80,currentMap._h/2+40);
-
   draw(currentMap,0);
-
   measureNodes();
-positionToggles();
+}
+
+async function render(){
+  renderTree();
+  renderTree();
+
+  positionToggles();
   resize(currentMap);
 
   await saveMap(activeId,currentMap.text,currentMap);
@@ -603,17 +647,31 @@ positionToggles();
     btn.classList.toggle("expand", allCollapsed);
   }
 
+  const quizBtn = document.getElementById("quizModeBtn");
+  if (quizBtn) {
+    quizBtn.textContent = quizMode ? "Exit Quiz" : "Quiz Mode";
+    quizBtn.classList.toggle("active", quizMode);
+  }
+
+  const revealBtn = document.getElementById("revealQuizBtn");
+  if (revealBtn) {
+    revealBtn.hidden = !quizMode;
+  }
+
   updateSearchIndicator(); // ✅ add here
 }
 
 function draw(n, depth){
 const el = document.createElement("div");
+const hiddenInQuiz = isNodeHiddenInQuiz(n);
+const nodeLabel = hiddenInQuiz ? "?" : n.text;
 
 
 el.className =
   "node" +
   (n.important ? " important" : "") +
   (n.note ? " has-note" : "") +
+  (hiddenInQuiz ? " quiz-hidden" : "") +
   (nodeMatchesSearch(n)
     ? " search-hit"
     : "") +
@@ -677,9 +735,9 @@ el.ondragover = e => {
 
 h.innerHTML = `
   <div class="node-body">
-    <span class="node-text">${n.text}</span>
+    <span class="node-text">${nodeLabel}</span>
   </div>
-  <button class="menu-btn">⋮</button>
+  <button class="menu-btn${quizMode ? " quiz-disabled" : ""}">⋮</button>
 `;
 
   const m = document.createElement("div");
@@ -699,20 +757,30 @@ h.innerHTML = `
   <button onclick="deleteNode('${n.id}')">🗑 Delete</button>
 `;
 
-  h.querySelector("button").onclick = e => {
-    e.stopPropagation();
-    closeMenus();
-    m.style.display = "block";
-  };
+  const menuBtn = h.querySelector("button");
+  if (quizMode) {
+    menuBtn.disabled = true;
+    m.remove();
+  } else {
+    menuBtn.onclick = e => {
+      e.stopPropagation();
+      closeMenus();
+      m.style.display = "block";
+    };
+  }
 
   el.onclick = e => {
     e.stopPropagation();
+    if (hiddenInQuiz) {
+      revealQuizNode(n.id);
+      return;
+    }
     closeMenus();
   };
 
   el.append(h, m);
 
-if (n.note) {
+if (n.note && !hiddenInQuiz) {
   const noteIcon = document.createElement("div");
   noteIcon.className = "note-icon";
   noteIcon.textContent = "📝";
