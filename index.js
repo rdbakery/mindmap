@@ -485,6 +485,23 @@ function toggleNode(id){
     focusNode(id);
   });
 }
+
+function expandBranch(node) {
+  node.collapsed = false;
+  node.children.forEach(expandBranch);
+}
+
+function expandAllChildren(id) {
+  const node = find(currentMap, id);
+  if (!node || !node.children.length) return;
+
+  pushHistory();
+  expandBranch(node);
+  render().then(() => {
+    focusNode(id);
+  });
+}
+
 function focusNode(id){
   const el = document.querySelector(`.node[data-id="${id}"]`);
   if(!el) return;
@@ -662,6 +679,7 @@ h.innerHTML = `
   m.innerHTML = `
   <button onclick="addChild('${n.id}')">➕ Add</button>
   <button onclick="editNode('${n.id}')">✏️ Edit</button>
+  <button onclick="expandAllChildren('${n.id}')">Expand branch</button>
   <button onclick="toggleImportant('${n.id}')">${n.important ? "Remove Important" : "Mark Important"}</button>
   <button onclick="toggleFocus('${n.id}')">${focusedNodeId === n.id ? "Exit focus" : "Focus"}</button>
   <button onclick="editNote('${n.id}')">Add note</button>
