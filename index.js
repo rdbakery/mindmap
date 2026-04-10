@@ -102,10 +102,19 @@ function searchNodes(q){
   });
 }
 
+function nodeMatchesSearch(node) {
+  if (!searchQuery) return false;
+
+  const textMatch = node.text.toLowerCase().includes(searchQuery);
+  const noteMatch = (node.note || "").toLowerCase().includes(searchQuery);
+
+  return textMatch || noteMatch;
+}
+
 function collectSearchResults(node){
   if (!searchQuery) return;   // ✅ FIX
 
-  if (node.text.toLowerCase().includes(searchQuery)) {
+  if (nodeMatchesSearch(node)) {
     searchResults.push(node.id);
   }
   node.children.forEach(collectSearchResults);
@@ -605,7 +614,7 @@ el.className =
   "node" +
   (n.important ? " important" : "") +
   (n.note ? " has-note" : "") +
-  (searchQuery && n.text.toLowerCase().includes(searchQuery)
+  (nodeMatchesSearch(n)
     ? " search-hit"
     : "") +
   (searchResults[searchIndex] === n.id ? " active-hit" : "");
