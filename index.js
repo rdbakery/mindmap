@@ -122,6 +122,41 @@ function nodeMatchesSearch(node) {
   return textMatch || noteMatch;
 }
 
+function escapeHtml(text) {
+  return String(text)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function highlightSearchMatch(text, query) {
+  const raw = String(text || "");
+  if (!query) return escapeHtml(raw);
+
+  const source = raw.toLowerCase();
+  const needle = query.toLowerCase();
+  if (!needle) return escapeHtml(raw);
+
+  let out = "";
+  let start = 0;
+
+  while (true) {
+    const idx = source.indexOf(needle, start);
+    if (idx === -1) {
+      out += escapeHtml(raw.slice(start));
+      break;
+    }
+
+    out += escapeHtml(raw.slice(start, idx));
+    out += `<span class="search-match">${escapeHtml(raw.slice(idx, idx + needle.length))}</span>`;
+    start = idx + needle.length;
+  }
+
+  return out;
+}
+
 function collectSearchResults(node){
   if (!searchQuery) return;   // ✅ FIX
 
@@ -806,12 +841,16 @@ function openNoteViewer(id){
   const viewer = document.createElement("div");
   viewer.className = "note-viewer";
 
+  const noteText = node.note || "No note";
+  const highlightedNote = highlightSearchMatch(noteText, searchQuery);
+  const safeTitle = escapeHtml(node.text || "");
+
   viewer.innerHTML = `
     <div class="note-viewer-header">
-      <span>${node.text}</span>
+      <span>${safeTitle}</span>
       <button class="close">✖</button>
     </div>
-    <div class="note-viewer-body">${node.note || "No note"}</div>
+    <div class="note-viewer-body">${highlightedNote}</div>
   `;
 
   canvas.appendChild(viewer);
@@ -1264,6 +1303,7 @@ function clearSearch() {
   searchIndex = -1;
 
   document.getElementById("searchInput").value = "";
+  document.querySelectorAll(".note-viewer").forEach(e => e.remove());
 
   render();
   updateSearchIndicator();

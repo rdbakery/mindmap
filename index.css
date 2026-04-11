@@ -620,6 +620,12 @@ svg {
   padding: 0;
 }
 
+.note-viewer-body .search-match {
+  background-color: orange;
+  border-radius: 4px;
+  padding: 0 2px;
+}
+
 .node.active-hit {
   transform: scale(1.05);
   z-index: 999;
