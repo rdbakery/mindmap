@@ -228,26 +228,8 @@ body {
   background: #ffffff;
   border: 1px solid #a3b5aa;
 }
-.draw-mode .node {
-  pointer-events: none;
-}
 
-.draw-mode .connector-toggle {
-  pointer-events: none;
-}
-#drawCanvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-    z-index: 9998;   /* 🔥 VERY IMPORTANT */
 
-  pointer-events: none; /* disabled by default */
-}
-
-.draw-mode #drawCanvas {
-  pointer-events: auto;
-  cursor: crosshair;
-}
 svg {
   position:absolute;
   top:0;

@@ -1,12 +1,8 @@
 
 /* ================= UTIL ================= */
-let drawMode = false;
-let isDrawing = false;
-let drawCtx = null;
 let focusedNodeId = null;
 let searchQuery = "";
-let lastX = 0;
-let lastY = 0;
+
 let isAdmin = false;
 
 let searchResults = [];
@@ -133,92 +129,6 @@ function collectSearchResults(node){
     searchResults.push(node.id);
   }
   node.children.forEach(collectSearchResults);
-}
-
-
-
-function enableDrawMode() {
-  drawMode = true;
-  document.body.classList.add("draw-mode");
-
-  const canvasEl = document.getElementById("drawCanvas");
-    canvasEl.style.background = "rgba(255,0,0,0.1)";
-
-
-const rect = canvas.getBoundingClientRect();
-
-canvasEl.width = rect.width;
-canvasEl.height = rect.height;
-
-canvasEl.style.width = rect.width + "px";
-canvasEl.style.height = rect.height + "px";
-
-  drawCtx = canvasEl.getContext("2d");
-
-  drawCtx.lineWidth = 4;
-  drawCtx.lineCap = "round";
-  drawCtx.strokeStyle = "red"; // 🔴 visible test color
-
-canvasEl.onmousedown = (e) => {
-  console.log("DRAW START");
-
-  isDrawing = true;
-
-  drawCtx.beginPath();
-  drawCtx.moveTo(e.offsetX, e.offsetY);
-  drawCtx.stroke(); // ✅ important
-};
-
-canvasEl.onmousemove = (e) => {
-  if (!isDrawing) return;
-
-  drawCtx.lineTo(e.offsetX, e.offsetY);
-  drawCtx.stroke();
-};
-
-canvasEl.onmouseup = () => {
-  isDrawing = false;
-  drawCtx.closePath();
-};
-
-  canvasEl.onmousemove = (e) => {
-    if (!isDrawing) return;
-
-    drawCtx.lineTo(e.offsetX, e.offsetY);
-    drawCtx.stroke(); // ✅ IMPORTANT
-  };
-
-  canvasEl.onmouseup = () => {
-    isDrawing = false;
-    drawCtx.closePath(); // ✅ IMPORTANT
-  };
-
-  canvasEl.onmouseleave = () => {
-    isDrawing = false;
-    drawCtx.closePath();
-  };
-}
-function disableDrawMode() {
-  drawMode = false;
-  isDrawing = false;
-
-  document.body.classList.remove("draw-mode");
-
-  const canvasEl = document.getElementById("drawCanvas");
-
-  canvasEl.onmousedown = null;
-  canvasEl.onmousemove = null;
-  canvasEl.onmouseup = null;
-}
-
-
-
-function clearDrawing() {
-  const canvasEl = document.getElementById("drawCanvas");
-  if (!canvasEl) return;
-
-  const ctx = canvasEl.getContext("2d");
-  ctx.clearRect(0, 0, canvasEl.width, canvasEl.height);
 }
 
 function toggleFocus(id){
