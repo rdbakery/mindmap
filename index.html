@@ -22,6 +22,10 @@
     <button onclick="deleteMap()">🗑 Delete</button>
     <button onclick="undo()">Undo</button>
     <button onclick="redo()">Redo</button>
+<button onclick="enableDrawMode()">✏️ Draw</button>
+<button onclick="clearDrawing()">🧹 Clear</button>
+<button onclick="disableDrawMode()">❌ Exit Draw</button>
+
     <button onclick="exportJSON()">Export JSON</button>
     <button onclick="exportPNG()">Export PNG</button>
     <button onclick="exportPDF()">Export PDF</button>
@@ -53,6 +57,7 @@
 
 <div id="canvas">
   <svg id="svg"></svg>
+  <canvas id="drawCanvas"></canvas>
 </div>
 <script src="index.js"></script>
 <script src="prevent.js"></script>
