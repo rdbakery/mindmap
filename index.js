@@ -900,14 +900,26 @@ h.innerHTML = `
   <button onclick="toggleImportant('${n.id}')">${n.important ? "Remove Important" : "Mark Important"}</button>
   <button onclick="toggleFocus('${n.id}')">${focusedNodeId === n.id ? "Exit focus" : "Focus"}</button>
   <button onclick="editNote('${n.id}')">Add note</button>
-<button onclick="${isAdmin 
-  ? `editExamHistory('${n.id}')` 
-  : `viewExamHistory('${n.id}')`}">
-  📚 PYQ
+${isAdmin ? `
+<button onclick="editExamHistory('${n.id}')">
+  📚 Manage PYQ
 </button>
-<button onclick="${isAdmin ? `editYoutube('${n.id}')` : `openYoutube('${n.id}')`}">
-  ${n.youtube ? "🎬 View Explanation" : (isAdmin ? "➕ Add Video" : "No Video")}
-</button>
+` : ""}
+${isAdmin 
+  ? `
+    <button onclick="editYoutube('${n.id}')">
+      ${n.youtube ? "🎬 Edit Video" : "➕ Add Video"}
+    </button>
+  `
+  : (n.youtube 
+      ? `
+        <button onclick="openYoutube('${n.id}')">
+          🎬 Watch Video
+        </button>
+      `
+      : ""
+    )
+}
   <button onclick="deleteNode('${n.id}')">🗑 Delete</button>
 `;
 
