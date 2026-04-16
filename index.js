@@ -783,25 +783,31 @@ function renderExamBadge(node) {
 
   const exams = node.examHistory;
 
-  // ✅ 1 or 2 → show all
+  const format = (e) => {
+    return e.year ? `${e.exam} ${e.year}` : e.exam;
+  };
+
+  // ✅ ALWAYS clickable for everyone
+  const clickHandler = `onclick="event.stopPropagation(); viewExamHistory('${node.id}')"`;
+
+
+  // ✅ 1 or 2 → comma
   if (exams.length <= 2) {
+    const text = exams.map(format).join(", ");
+
     return `
       <div class="exam-badge-group">
-        ${exams.map(e => `
-          <div class="exam-badge"
-               onclick="viewExamHistory('${node.id}')">
-            ${e.exam} ${e.year}
-          </div>
-        `).join("")}
+        <div class="exam-badge" ${clickHandler}>
+          ${text}
+        </div>
       </div>
     `;
   }
 
-  // ✅ more than 2 → show count
+  // ✅ >2 → count
   return `
     <div class="exam-badge-group">
-      <div class="exam-badge count-badge"
-           onclick="viewExamHistory('${node.id}')">
+      <div class="exam-badge count-badge" ${clickHandler}>
         ${exams.length} PYQ
       </div>
     </div>
@@ -908,13 +914,13 @@ ${isAdmin ? `
 ${isAdmin 
   ? `
     <button onclick="editYoutube('${n.id}')">
-      ${n.youtube ? "🎬 Edit Video" : "➕ Add Video"}
+      ${n.youtube ? "🎬 Edit Explanation" : "➕ Add Explanation"}
     </button>
   `
   : (n.youtube 
       ? `
         <button onclick="openYoutube('${n.id}')">
-          🎬 Watch Video
+          🎬 View Explanation
         </button>
       `
       : ""

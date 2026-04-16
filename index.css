@@ -808,3 +808,12 @@ svg {
   line-height: 1.5;
 }
 
+.exam-badge {
+  pointer-events: auto;   /* ✅ IMPORTANT */
+  z-index: 10;            /* ✅ above node */
+}
+
+.node-body {
+  position: relative;
+  z-index: 1;
+}
