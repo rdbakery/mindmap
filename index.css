@@ -732,3 +732,79 @@ svg {
   overflow-x: auto; 
   flex-wrap: nowrap;
 }
+
+/* ===== NODE BODY ===== */
+.node-body {
+  position: relative;
+  display: inline-block;
+}
+
+/* ===== BADGE (LIKE YOUR IMAGE) ===== */
+.exam-badge {
+  position: absolute;
+  
+  right: -10px;
+
+  background: #38bdf8;
+  color: white;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  padding: 2px 6px;
+  border-radius: 10px;
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.exam-badge-group {
+  position: absolute;
+  top: -18px;   /* 🔼 moved higher */
+  right: -8px;
+
+  display: flex;
+  gap: 4px;
+}
+
+
+/* special count badge */
+.count-badge {
+  background: #6366f1; /* purple */
+}
+
+.exam-popup {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 12px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  z-index: 9999;
+
+  width: 220px;
+}
+
+.exam-popup-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.exam-popup-header button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.exam-popup-body {
+  font-size: 13px;
+  line-height: 1.5;
+}
+

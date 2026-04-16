@@ -391,15 +391,97 @@ function toggleImportant(id){
 function addChild(id){
   pushHistory();
   find(currentMap,id).children.push({
-    id: uid(),
-    text: "New Node",
-    collapsed: false,
-    important: false,
-    note: "",
-    youtube: "",   // ✅ ADD THIS
-    children: []
-  });
+  id: uid(),
+  text: "New Node",
+  collapsed: false,
+  important: false,
+  note: "",
+  youtube: "",
+  examHistory: [],   // ✅ NEW
+  children: []
+});
   render();
+}
+
+/* ================= PYQ FEATURE ================= */
+
+// 🔐 ADMIN EDIT
+function editExamHistory(id) {
+  if (!isAdmin) return;
+
+  const node = find(currentMap, id);
+
+  const input = prompt(
+    "Enter exam data:\nFormat → SSC-2022, UPSC-2021",
+    (node.examHistory || [])
+      .map(e => `${e.exam}-${e.year}`)
+      .join(", ")
+  );
+
+  if (!input) return;
+
+  pushHistory();
+
+  node.examHistory = input.split(",").map(x => {
+    const [exam, year] = x.trim().split("-");
+    return {
+      exam: exam?.trim(),
+      year: year?.trim()
+    };
+  });
+
+  render();
+}
+
+
+// 👁 USER VIEW
+function viewExamHistory(id){
+  const node = find(currentMap, id);
+  const nodeEl = document.querySelector(`.node[data-id="${id}"]`);
+  if (!nodeEl || !node.examHistory?.length) return;
+
+  // ❌ remove old popups
+  document.querySelectorAll(".exam-popup").forEach(p => p.remove());
+
+  const list = node.examHistory
+    .map(e => `• ${e.exam}${e.year ? " " + e.year : ""}`)
+    .join("<br>");
+
+  const popup = document.createElement("div");
+  popup.className = "exam-popup";
+
+  popup.innerHTML = `
+    <div class="exam-popup-header">
+      <span>📚 PYQ</span>
+      <button onclick="this.closest('.exam-popup').remove()">✖</button>
+    </div>
+    <div class="exam-popup-body">${list}</div>
+  `;
+
+  // ✅ IMPORTANT: append inside canvas
+  const canvasEl = document.getElementById("canvas");
+  canvasEl.appendChild(popup);
+
+  // ✅ POSITION FIX (KEY PART)
+  const rect = nodeEl.getBoundingClientRect();
+  const canvasRect = canvasEl.getBoundingClientRect();
+
+  let left = rect.right - canvasRect.left;
+  let top = rect.top - canvasRect.top;
+
+  // adjust with scroll
+  left += canvasEl.scrollLeft;
+  top += canvasEl.scrollTop;
+
+  // ✅ keep popup near node (not far right)
+  const POPUP_WIDTH = 240;
+
+  if (left + POPUP_WIDTH > canvasEl.scrollWidth) {
+    left = rect.left - canvasRect.left - POPUP_WIDTH;
+  }
+
+  popup.style.left = left + "px";
+  popup.style.top = top + "px";
 }
 
 function editNote(id){
@@ -696,6 +778,36 @@ async function render(){
   updateSearchIndicator(); // ✅ add here
 }
 
+function renderExamBadge(node) {
+  if (!node.examHistory?.length) return "";
+
+  const exams = node.examHistory;
+
+  // ✅ 1 or 2 → show all
+  if (exams.length <= 2) {
+    return `
+      <div class="exam-badge-group">
+        ${exams.map(e => `
+          <div class="exam-badge"
+               onclick="viewExamHistory('${node.id}')">
+            ${e.exam} ${e.year}
+          </div>
+        `).join("")}
+      </div>
+    `;
+  }
+
+  // ✅ more than 2 → show count
+  return `
+    <div class="exam-badge-group">
+      <div class="exam-badge count-badge"
+           onclick="viewExamHistory('${node.id}')">
+        ${exams.length} PYQ
+      </div>
+    </div>
+  `;
+}
+
 function draw(n, depth){
 const el = document.createElement("div");
 const hiddenInQuiz = isNodeHiddenInQuiz(n);
@@ -770,7 +882,10 @@ el.ondragover = e => {
 
 h.innerHTML = `
   <div class="node-body">
-    <span class="node-text">${nodeLabel}</span>
+    <div class="node-body">
+  <span class="node-text">${nodeLabel}</span>
+  ${renderExamBadge(n)}
+</div>
   </div>
   <button class="menu-btn${quizMode ? " quiz-disabled" : ""}">⋮</button>
 `;
@@ -785,7 +900,11 @@ h.innerHTML = `
   <button onclick="toggleImportant('${n.id}')">${n.important ? "Remove Important" : "Mark Important"}</button>
   <button onclick="toggleFocus('${n.id}')">${focusedNodeId === n.id ? "Exit focus" : "Focus"}</button>
   <button onclick="editNote('${n.id}')">Add note</button>
-
+<button onclick="${isAdmin 
+  ? `editExamHistory('${n.id}')` 
+  : `viewExamHistory('${n.id}')`}">
+  📚 PYQ
+</button>
 <button onclick="${isAdmin ? `editYoutube('${n.id}')` : `openYoutube('${n.id}')`}">
   ${n.youtube ? "🎬 View Explanation" : (isAdmin ? "➕ Add Video" : "No Video")}
 </button>
