@@ -412,23 +412,30 @@ function editExamHistory(id) {
   const node = find(currentMap, id);
 
   const input = prompt(
-    "Enter exam data:\nFormat → SSC-2022, UPSC-2021",
+    "Enter exam data (leave empty to remove):",
     (node.examHistory || [])
       .map(e => `${e.exam}-${e.year}`)
       .join(", ")
   );
 
-  if (!input) return;
+  if (input === null) return; // cancel
 
   pushHistory();
 
-  node.examHistory = input.split(",").map(x => {
+  // ✅ CLEAN PARSE
+  const parsed = input.split(",").map(x => {
     const [exam, year] = x.trim().split("-");
     return {
-      exam: exam?.trim(),
-      year: year?.trim()
+      exam: exam?.trim() || "",
+      year: year?.trim() || ""
     };
-  });
+  }).filter(e => e.exam);  // 🔥 REMOVE EMPTY
+
+  // ✅ FINAL DECISION
+  node.examHistory = parsed.length ? parsed : [];
+
+  // ✅ REMOVE OPEN POPUP
+  document.querySelectorAll(".exam-popup").forEach(p => p.remove());
 
   render();
 }
@@ -779,8 +786,7 @@ async function render(){
 }
 
 function renderExamBadge(node) {
-  if (!node.examHistory?.length) return "";
-
+if (!node.examHistory?.some(e => e.exam)) return "";
   const exams = node.examHistory;
 
   const format = (e) => {
