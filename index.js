@@ -413,12 +413,12 @@ function editExamHistory(id) {
 
   const node = find(activeRenderTree, id);
 
-  const input = prompt(
-    "Enter exam data (leave empty to remove):",
-    (node.examHistory || [])
-      .map(e => `${e.exam}-${e.year}`)
-      .join(", ")
-  );
+const input = prompt(
+"Enter PYQ (e.g., SSC-2022, UPSC-2021).\nLeave empty to remove.",
+(node.examHistory || [])
+  .map(e => `${e.exam}-${e.year}`)
+  .join(", ")
+);
 
   if (input === null) return; // cancel
 
@@ -923,8 +923,7 @@ h.innerHTML = `
   <button onclick="editNote('${n.id}')">Add note</button>
 ${isAdmin ? `
 <button onclick="editExamHistory('${n.id}')">
-  📚 Manage PYQ
-</button>
+📚 Add PYQ</button>
 ` : ""}
 ${isAdmin 
   ? `
