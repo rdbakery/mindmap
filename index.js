@@ -1603,3 +1603,45 @@ function filterTree(node) {
 
   return null; // ❌ remove node
 }
+
+function toggleFilterDropdown(e){
+  e.stopPropagation();
+
+  const btn = document.getElementById("filterBtn");
+  const box = document.getElementById("pyqFilterBox");
+
+  const rect = btn.getBoundingClientRect();
+
+  box.style.left = rect.left + "px";
+  box.style.top = (rect.bottom + 6) + "px";
+
+  box.classList.toggle("hidden");
+}
+
+document.addEventListener("click", function(e){
+  const dropdown = document.querySelector(".filter-dropdown");
+  if (!dropdown) return;
+
+  if (!dropdown.contains(e.target)) {
+    document.getElementById("pyqFilterBox").classList.add("hidden");
+  }
+});
+
+/* 🔥 ADD THIS RIGHT AFTER */
+document.addEventListener("DOMContentLoaded", function () {
+  const box = document.getElementById("pyqFilterBox");
+  if (!box) return;
+
+  box.addEventListener("click", function(e){
+    e.stopPropagation();   // ✅ prevent closing when clicking inside
+  });
+});
+
+document.addEventListener("click", function(e){
+  const box = document.getElementById("pyqFilterBox");
+  const btn = document.getElementById("filterBtn");
+
+  if (!box.contains(e.target) && !btn.contains(e.target)) {
+    box.classList.add("hidden");
+  }
+});
