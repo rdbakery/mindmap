@@ -635,10 +635,17 @@ function toggleNode(id){
   });
 }
 
-function toggleQuizMode() {
+function toggleQuizMode(){
   quizMode = !quizMode;
-  quizRevealed = quizMode ? new Set([currentMap.id]) : new Set();
-  render();
+
+  document.getElementById("quizModeBtn")
+    .classList.toggle("active", quizMode);
+
+  document.getElementById("revealQuizBtn")
+    .hidden = !quizMode;
+
+  // 🔥 IMPORTANT FIX
+  render();   // full redraw (nodes + connectors)
 }
 
 function revealQuizNode(id) {
@@ -650,15 +657,13 @@ function revealQuizNode(id) {
   });
 }
 
-function revealAllQuizAnswers() {
-  if (!quizMode) return;
+function revealAllQuizAnswers(){
+  quizMode = false;
 
-  (function reveal(node) {
-    quizRevealed.add(node.id);
-    node.children.forEach(reveal);
-  })(currentMap);
+  document.getElementById("quizModeBtn").classList.remove("active");
+  document.getElementById("revealQuizBtn").hidden = true;
 
-  render();
+  render();   // 🔥 redraw again
 }
 
 function expandBranch(node) {
@@ -760,10 +765,21 @@ function renderTree() {
 
   if (!activeRenderTree) return;
 
+  // 🔥 STEP 1: TEMP DRAW (for measuring)
   computeH(activeRenderTree);
   layout(activeRenderTree, 80, activeRenderTree._h / 2 + 40);
   draw(activeRenderTree, 0);
+
+  // 🔥 STEP 2: MEASURE REAL SIZE
   measureNodes();
+
+  // 🔥 STEP 3: CLEAR & REDRAW CORRECTLY
+  document.querySelectorAll(".node, .connector-toggle").forEach(el => el.remove());
+  svg.innerHTML = "";
+
+  computeH(activeRenderTree);
+  layout(activeRenderTree, 80, activeRenderTree._h / 2 + 40);
+  draw(activeRenderTree, 0);
 }
 
 async function render(){
