@@ -3,7 +3,8 @@
 let focusedNodeId = null;
 let searchQuery = "";
 
-let isAdmin = false;
+let isAdmin = true;
+let pyqFilter = "ALL";
 
 let searchResults = [];
 let searchIndex = -1;
@@ -751,15 +752,22 @@ function renderTree() {
   document.querySelectorAll(".node, .connector-toggle").forEach(el => el.remove());
   svg.innerHTML = "";
 
-  computeH(currentMap);
-  layout(currentMap,80,currentMap._h/2+40);
-  draw(currentMap,0);
+  // 🔥 APPLY FILTER
+  const treeToRender =
+    pyqFilter === "ALL"
+      ? currentMap
+      : filterTree(currentMap);
+
+  if (!treeToRender) return;
+
+  computeH(treeToRender);
+  layout(treeToRender, 80, treeToRender._h / 2 + 40);
+  draw(treeToRender, 0);
   measureNodes();
 }
-
 async function render(){
   renderTree();
-  renderTree();
+  renderDynamicFilters();
 
   positionToggles();
   resize(currentMap);
@@ -826,15 +834,20 @@ const hiddenInQuiz = isNodeHiddenInQuiz(n);
 const nodeLabel = hiddenInQuiz ? "?" : n.text;
 
 
+const isFilteredOut =
+  pyqFilter !== "ALL" &&
+  !hasMatchingPYQ(n) &&
+  n.id !== currentMap.id;
+
 el.className =
   "node" +
   (n.important ? " important" : "") +
   (n.note ? " has-note" : "") +
   (hiddenInQuiz ? " quiz-hidden" : "") +
-  (nodeMatchesSearch(n)
-    ? " search-hit"
-    : "") +
+  (nodeMatchesSearch(n) ? " search-hit" : "") +
   (searchResults[searchIndex] === n.id ? " active-hit" : "");
+
+// 🔥 ADD AFTER className
 
 
 if (focusedNodeId && !isInFocusedPath(n, focusedNodeId)) {
@@ -1462,4 +1475,115 @@ function expandPathToNode(node, targetId){
     }
   }
   return false;
+}
+
+
+function extractFiltersFromPYQ() {
+  const exams = new Set();
+  const years = new Set();
+
+  function traverse(node) {
+    (node.examHistory || []).forEach(e => {
+      if (e.exam) {
+        exams.add(e.exam.trim().toUpperCase());
+      }
+      if (e.year && !isNaN(e.year)) {
+        years.add(e.year);
+      }
+    });
+    node.children.forEach(traverse);
+  }
+
+  traverse(currentMap);
+
+  return {
+    exams: Array.from(exams).sort(),
+    years: Array.from(years).sort((a, b) => b - a)
+  };
+}
+
+function renderDynamicFilters() {
+  const select = document.getElementById("pyqFilter");
+  if (!select) return;
+
+  const { exams, years } = extractFiltersFromPYQ();
+
+  let html = `<option value="ALL">All</option>`;
+
+  // Exam
+  if (exams.length) {
+    html += `<optgroup label="Exam">`;
+    exams.forEach(e => {
+      html += `<option value="EXAM:${e}">${e}</option>`;
+    });
+    html += `</optgroup>`;
+  }
+
+  // Year
+  if (years.length) {
+    html += `<optgroup label="Year">`;
+    years.forEach(y => {
+      html += `<option value="YEAR:${y}">${y}</option>`;
+    });
+    html += `</optgroup>`;
+  }
+
+  // 🔥 THIS LINE WAS MISSING
+  select.innerHTML = html;
+
+  // keep selected value
+  select.value = pyqFilter;
+}
+
+
+function hasMatchingPYQ(node){
+  if (pyqFilter === "ALL") return true;
+
+  const [type, value] = pyqFilter.split(":");
+
+  return node.examHistory?.some(e => {
+    if (type === "EXAM") {
+      return e.exam?.toUpperCase().includes(value);
+    }
+    if (type === "YEAR") {
+      return e.year == value;
+    }
+    return false;
+  });
+}
+
+function applyPyqFilter(value){
+  pyqFilter = value;
+  render();
+}
+
+function filterTree(node) {
+  // root always stays
+  if (node.id === currentMap.id) {
+    return {
+      ...node,
+      children: node.children
+        .map(filterTree)
+        .filter(Boolean)
+    };
+  }
+
+  const match = hasMatchingPYQ(node);
+
+  // filter children
+  const filteredChildren = node.children
+    .map(filterTree)
+    .filter(Boolean);
+
+  // ✅ KEEP node if:
+  // 1. it matches OR
+  // 2. any child matches (important for structure)
+  if (match || filteredChildren.length) {
+    return {
+      ...node,
+      children: filteredChildren
+    };
+  }
+
+  return null; // ❌ remove node
 }

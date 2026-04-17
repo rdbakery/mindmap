@@ -25,6 +25,9 @@
     <button onclick="exportJSON()">Export JSON</button>
     <button onclick="exportPNG()">Export PNG</button>
     <button onclick="exportPDF()">Export PDF</button>
+    <select id="pyqFilter" onchange="applyPyqFilter(this.value)">
+  <option value="ALL">All</option>
+</select>
     <label class="import-btn">
       📥 Import Mind Map
       <input type="file" accept=".json" onchange="importJSON(event)" hidden>
