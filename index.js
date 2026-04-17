@@ -5,6 +5,7 @@ let searchQuery = "";
 
 let isAdmin = true;
 let pyqFilter = "ALL";
+let activeRenderTree = null; // 🔥 global
 
 let searchResults = [];
 let searchIndex = -1;
@@ -382,7 +383,7 @@ function isDescendant(node, targetId) {
 
 function toggleImportant(id){
   pushHistory();
-  const node = find(currentMap, id);
+  const node = find(activeRenderTree, id);
   node.important = !node.important;
   render();
 }
@@ -410,7 +411,7 @@ function addChild(id){
 function editExamHistory(id) {
   if (!isAdmin) return;
 
-  const node = find(currentMap, id);
+  const node = find(activeRenderTree, id);
 
   const input = prompt(
     "Enter exam data (leave empty to remove):",
@@ -444,7 +445,7 @@ function editExamHistory(id) {
 
 // 👁 USER VIEW
 function viewExamHistory(id){
-  const node = find(currentMap, id);
+  const node = find(activeRenderTree, id);
   const nodeEl = document.querySelector(`.node[data-id="${id}"]`);
   if (!nodeEl || !node.examHistory?.length) return;
 
@@ -493,7 +494,7 @@ function viewExamHistory(id){
 }
 
 function editNote(id){
-  const node = find(currentMap, id);
+  const node = find(activeRenderTree, id);
   const nodeEl = document.querySelector(`.node[data-id="${id}"]`);
   if (!nodeEl) return;
 
@@ -544,7 +545,7 @@ function closeNoteEditors(){
 
 
 function editYoutube(id){
-  const node = find(currentMap, id);
+  const node = find(activeRenderTree, id);
   const nodeEl = document.querySelector(`.node[data-id="${id}"]`);
   if (!nodeEl) return;
 
@@ -666,7 +667,7 @@ function expandBranch(node) {
 }
 
 function expandAllChildren(id) {
-  const node = find(currentMap, id);
+  const node = find(activeRenderTree, id);
   if (!node || !node.children.length) return;
 
   pushHistory();
@@ -752,19 +753,19 @@ function renderTree() {
   document.querySelectorAll(".node, .connector-toggle").forEach(el => el.remove());
   svg.innerHTML = "";
 
-  // 🔥 APPLY FILTER
-  const treeToRender =
+  activeRenderTree =
     pyqFilter === "ALL"
       ? currentMap
       : filterTree(currentMap);
 
-  if (!treeToRender) return;
+  if (!activeRenderTree) return;
 
-  computeH(treeToRender);
-  layout(treeToRender, 80, treeToRender._h / 2 + 40);
-  draw(treeToRender, 0);
+  computeH(activeRenderTree);
+  layout(activeRenderTree, 80, activeRenderTree._h / 2 + 40);
+  draw(activeRenderTree, 0);
   measureNodes();
 }
+
 async function render(){
   renderTree();
   renderDynamicFilters();
@@ -985,7 +986,7 @@ if (n.note && !hiddenInQuiz) {
 }
 
 function openNoteViewer(id){
-  const node = find(currentMap, id);
+  const node = find(activeRenderTree, id);
   const nodeEl = document.querySelector(`.node[data-id="${id}"]`);
   if (!nodeEl) return;
 
@@ -1072,7 +1073,8 @@ function closeNoteViewers(){
 function positionToggles() {
   document.querySelectorAll(".connector-toggle").forEach(toggle => {
     const id = toggle.dataset.id;
-    const node = find(currentMap, id);
+    const node = find(activeRenderTree, id); // 🔥 FIX
+
     if (!node) return;
 
     const GAP = 16;
@@ -1150,7 +1152,7 @@ function drawLine(x1,y1,x2,y2){
 
 
 function openYoutube(id){
-  const node = find(currentMap, id);
+  const node = find(activeRenderTree, id);
 
   if (node.youtube) {
     window.open(node.youtube, "_blank");
@@ -1305,7 +1307,7 @@ function exportPDF() {
 function measureNodes() {
   document.querySelectorAll(".node").forEach(el => {
     const id = el.dataset.id;
-    const node = find(currentMap, id);
+    const node = find(activeRenderTree, id);
     if (node) {
       node._realH = el.offsetHeight;
       node._realW = el.offsetWidth;
