@@ -4,7 +4,7 @@ let focusedNodeId = null;
 let searchQuery = "";
 
 let isAdmin = true;
-let pyqFilter = "ALL";
+let pyqFilters = new Set(); // 🔥 multi-select
 let activeRenderTree = null; // 🔥 global
 
 let searchResults = [];
@@ -754,7 +754,7 @@ function renderTree() {
   svg.innerHTML = "";
 
   activeRenderTree =
-    pyqFilter === "ALL"
+    pyqFilters.size === 0
       ? currentMap
       : filterTree(currentMap);
 
@@ -834,11 +834,6 @@ const el = document.createElement("div");
 const hiddenInQuiz = isNodeHiddenInQuiz(n);
 const nodeLabel = hiddenInQuiz ? "?" : n.text;
 
-
-const isFilteredOut =
-  pyqFilter !== "ALL" &&
-  !hasMatchingPYQ(n) &&
-  n.id !== currentMap.id;
 
 el.className =
   "node" +
@@ -1505,59 +1500,78 @@ function extractFiltersFromPYQ() {
 }
 
 function renderDynamicFilters() {
-  const select = document.getElementById("pyqFilter");
-  if (!select) return;
+  const box = document.getElementById("pyqFilterBox");
+  if (!box) return;
 
   const { exams, years } = extractFiltersFromPYQ();
 
-  let html = `<option value="ALL">All</option>`;
+  let html = `<div class="filter-title">Filter PYQ</div>`;
 
-  // Exam
+  // Exams
   if (exams.length) {
-    html += `<optgroup label="Exam">`;
+    html += `<div class="filter-group"><b>Exam</b>`;
     exams.forEach(e => {
-      html += `<option value="EXAM:${e}">${e}</option>`;
+      const checked = pyqFilters.has(`EXAM:${e}`) ? "checked" : "";
+      html += `
+        <label>
+          <input type="checkbox" value="EXAM:${e}" ${checked}
+            onchange="toggleFilter(this.value)">
+          ${e}
+        </label>
+      `;
     });
-    html += `</optgroup>`;
+    html += `</div>`;
   }
 
-  // Year
+  // Years
   if (years.length) {
-    html += `<optgroup label="Year">`;
+    html += `<div class="filter-group"><b>Year</b>`;
     years.forEach(y => {
-      html += `<option value="YEAR:${y}">${y}</option>`;
+      const checked = pyqFilters.has(`YEAR:${y}`) ? "checked" : "";
+      html += `
+        <label>
+          <input type="checkbox" value="YEAR:${y}" ${checked}
+            onchange="toggleFilter(this.value)">
+          ${y}
+        </label>
+      `;
     });
-    html += `</optgroup>`;
+    html += `</div>`;
   }
 
-  // 🔥 THIS LINE WAS MISSING
-  select.innerHTML = html;
+  box.innerHTML = html;
+}
 
-  // keep selected value
-  select.value = pyqFilter;
+function toggleFilter(value){
+  if (pyqFilters.has(value)) {
+    pyqFilters.delete(value);
+  } else {
+    pyqFilters.add(value);
+  }
+
+  render();
 }
 
 
 function hasMatchingPYQ(node){
-  if (pyqFilter === "ALL") return true;
-
-  const [type, value] = pyqFilter.split(":");
+  if (pyqFilters.size === 0) return true;
 
   return node.examHistory?.some(e => {
-    if (type === "EXAM") {
-      return e.exam?.toUpperCase().includes(value);
-    }
-    if (type === "YEAR") {
-      return e.year == value;
+    for (let filter of pyqFilters) {
+      const [type, value] = filter.split(":");
+
+      if (type === "EXAM" && e.exam?.toUpperCase().includes(value)) {
+        return true;
+      }
+
+      if (type === "YEAR" && e.year == value) {
+        return true;
+      }
     }
     return false;
   });
-}
+} 
 
-function applyPyqFilter(value){
-  pyqFilter = value;
-  render();
-}
 
 function filterTree(node) {
   // root always stays
