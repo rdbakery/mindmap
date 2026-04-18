@@ -517,19 +517,37 @@ function editNote(id){
   canvasEl.appendChild(editor);
 
   // ✅ 🔥 USE DOM POSITION (CORRECT WAY)
-  const rect = nodeEl.getBoundingClientRect();
-  const canvasRect = canvasEl.getBoundingClientRect();
+const rect = nodeEl.getBoundingClientRect();
+const canvasRect = canvasEl.getBoundingClientRect();
 
-  let left = rect.right - canvasRect.left + canvasEl.scrollLeft + 10;
-  let top = rect.top - canvasRect.top + canvasEl.scrollTop;
+let left = rect.right - canvasRect.left + canvasEl.scrollLeft + 10;
+let top = rect.top - canvasRect.top + canvasEl.scrollTop;
 
-  // smart flip
-  if (left + 400 > canvasEl.scrollWidth) {
-    left = rect.left - canvasRect.left - 410;
-  }
+const boxWidth = 400;
+const boxHeight = 260;
 
-  editor.style.left = left + "px";
-  editor.style.top = top + "px";
+// 👉 RIGHT overflow → move left side
+if (left + boxWidth > canvasEl.scrollWidth) {
+  left = rect.left - canvasRect.left - boxWidth - 10;
+}
+
+// 👉 LEFT overflow → clamp
+if (left < 10) {
+  left = 10;
+}
+
+// 👉 BOTTOM overflow → move up
+if (top + boxHeight > canvasEl.scrollHeight) {
+  top = canvasEl.scrollHeight - boxHeight - 10;
+}
+
+// 👉 TOP overflow → clamp
+if (top < 10) {
+  top = 10;
+}
+
+editor.style.left = left + "px";
+editor.style.top = top + "px";
 
   const textarea = editor.querySelector("textarea");
   textarea.focus();
