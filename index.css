@@ -879,3 +879,12 @@ position: absolute;  top: 80px;
 .filter-group label:hover {
   background: #f3f4f6;
 }
+
+/* hide toolbar horizontal scrollbar */
+.toolbar-inner::-webkit-scrollbar {
+  height: 0px;
+}
+
+.toolbar-inner {
+  scrollbar-width: none;   /* Firefox */
+}
