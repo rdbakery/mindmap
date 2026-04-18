@@ -383,7 +383,7 @@ function isDescendant(node, targetId) {
 
 function toggleImportant(id){
   pushHistory();
-  const node = find(activeRenderTree, id);
+  const node = find(currentMap, id);  // ✅ FIX
   node.important = !node.important;
   render();
 }
@@ -411,7 +411,7 @@ function addChild(id){
 function editExamHistory(id) {
   if (!isAdmin) return;
 
-  const node = find(activeRenderTree, id);
+  const node = find(currentMap, id);
 
 const input = prompt(
 "Enter PYQ (e.g., SSC-2022, UPSC-2021).\nLeave empty to remove.",
@@ -445,7 +445,7 @@ const input = prompt(
 
 // 👁 USER VIEW
 function viewExamHistory(id){
-  const node = find(activeRenderTree, id);
+  const node = find(currentMap, id);
   const nodeEl = document.querySelector(`.node[data-id="${id}"]`);
   if (!nodeEl || !node.examHistory?.length) return;
 
@@ -494,7 +494,7 @@ function viewExamHistory(id){
 }
 
 function editNote(id){
-  const node = find(activeRenderTree, id);
+  const node = find(currentMap, id); // ✅ FIX DATA SOURCE
   const nodeEl = document.querySelector(`.node[data-id="${id}"]`);
   if (!nodeEl) return;
 
@@ -513,14 +513,19 @@ function editNote(id){
     </div>
   `;
 
-  canvas.appendChild(editor);
+  const canvasEl = document.getElementById("canvas");
+  canvasEl.appendChild(editor);
 
-  // ✅ NEW POSITION (THIS IS THE FIX)
-  let left = node._x + (node._realW || 200) + 12;
-  let top = node._y - 20;
+  // ✅ 🔥 USE DOM POSITION (CORRECT WAY)
+  const rect = nodeEl.getBoundingClientRect();
+  const canvasRect = canvasEl.getBoundingClientRect();
 
-  if (left + 420 > canvas.scrollWidth) {
-    left = node._x - 430;
+  let left = rect.right - canvasRect.left + canvasEl.scrollLeft + 10;
+  let top = rect.top - canvasRect.top + canvasEl.scrollTop;
+
+  // smart flip
+  if (left + 400 > canvasEl.scrollWidth) {
+    left = rect.left - canvasRect.left - 410;
   }
 
   editor.style.left = left + "px";
@@ -545,7 +550,7 @@ function closeNoteEditors(){
 
 
 function editYoutube(id){
-  const node = find(activeRenderTree, id);
+  const node = find(currentMap, id);
   const nodeEl = document.querySelector(`.node[data-id="${id}"]`);
   if (!nodeEl) return;
 
@@ -672,7 +677,7 @@ function expandBranch(node) {
 }
 
 function expandAllChildren(id) {
-  const node = find(activeRenderTree, id);
+  const node = find(currentMap, id);
   if (!node || !node.children.length) return;
 
   pushHistory();
