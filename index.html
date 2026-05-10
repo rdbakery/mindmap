@@ -23,15 +23,7 @@
     <button onclick="undo()">↶ Undo</button>
     <button onclick="redo()">↷ Redo</button>
     <button onclick="exportJSON()">📄 Export JSON</button>
-    <button onclick="exportPNG()">🖼 Export PNG</button>
-    <button onclick="exportPDF()">📕 Export PDF</button>
-
-  <!-- 🔥 ADD HERE -->
-
-<button onclick="toggleFilterDropdown(event)" id="filterBtn">
-  🔍 Filter
-</button>
-
+    <button onclick="toggleFilterDropdown(event)" id="filterBtn">🔍 Filter</button>
 
     <label class="import-btn">
       📥 Import Mind Map
@@ -50,6 +42,8 @@
   <button onclick="prevSearch()">▲</button>
   <button onclick="nextSearch()">▼</button>
   <button onclick="clearSearch()">✖</button>
+      <button onclick="exportPNG()">🖼 Export PNG</button>
+    <button onclick="exportPDF()">📕 Export PDF</button>
 </div>
 
       <button onclick="isAdmin ? disableAdminMode() : enableAdminMode()">
