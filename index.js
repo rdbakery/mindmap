@@ -3,7 +3,7 @@
 let focusedNodeId = null;
 let searchQuery = "";
 
-let isAdmin = true;
+let isAdmin = false;
 let pyqFilters = new Set(); // 🔥 multi-select
 let activeRenderTree = null; // 🔥 global
 
