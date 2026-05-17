@@ -523,17 +523,20 @@ const canvasRect = canvasEl.getBoundingClientRect();
 let left = rect.right - canvasRect.left + canvasEl.scrollLeft + 10;
 let top = rect.top - canvasRect.top + canvasEl.scrollTop;
 
-const boxWidth = 400;
+const boxWidth = 420;
 const boxHeight = 260;
+let arrowClass = "arrow-left";
 
 // 👉 RIGHT overflow → move left side
 if (left + boxWidth > canvasEl.scrollWidth) {
-  left = rect.left - canvasRect.left - boxWidth - 10;
+  left = rect.left - canvasRect.left + canvasEl.scrollLeft - boxWidth - 10;
+  arrowClass = "arrow-right";
 }
 
 // 👉 LEFT overflow → clamp
 if (left < 10) {
   left = 10;
+  arrowClass = "arrow-left"; // Fallback to point back at the node
 }
 
 // 👉 BOTTOM overflow → move up
@@ -546,6 +549,7 @@ if (top < 10) {
   top = 10;
 }
 
+editor.classList.add(arrowClass);
 editor.style.left = left + "px";
 editor.style.top = top + "px";
 
@@ -1050,10 +1054,15 @@ function openNoteViewer(id){
 let left = rect.right - canvasRect.left + canvas.scrollLeft + 12;
 let top = rect.top - canvasRect.top + canvas.scrollTop;
 
-  // smart flip (optional)
-  if (left + 320 > canvas.scrollWidth){
-    left = rect.left - canvasRect.left - 332;
+  let arrowClass = "arrow-left";
+
+  // smart flip (note-viewer width is 420px)
+  if (left + 420 > canvas.scrollWidth){
+    left = rect.left - canvasRect.left + canvas.scrollLeft - 420 - 12;
+    arrowClass = "arrow-right";
   }
+
+  viewer.classList.add(arrowClass);
 
   viewer.style.left = left + "px";
   viewer.style.top = top + "px";

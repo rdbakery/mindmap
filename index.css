@@ -472,6 +472,25 @@ svg {
   background: #eef4f1;
 }
 
+/* ===== POINTER ARROW FOR NOTE EDITOR ===== */
+.note-editor::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  border-style: solid;
+  display: block;
+}
+.note-editor.arrow-left::after {
+  left: -8px;
+  border-width: 8px 8px 8px 0;
+  border-color: transparent #ffffff transparent transparent;
+}
+.note-editor.arrow-right::after {
+  right: -8px;
+  border-width: 8px 0 8px 8px;
+  border-color: transparent transparent transparent #ffffff;
+}
+
 .youtube-editor {
   position: fixed;
   width: 300px;
@@ -575,6 +594,40 @@ svg {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+}
+
+/* ===== POINTER ARROW FOR NOTE VIEWER ===== */
+.note-viewer::before,
+.note-viewer::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  border-style: solid;
+  display: block;
+}
+/* Default (box on the right, pointing left) */
+.note-viewer.arrow-left::before {
+  left: -9px;
+  border-width: 9px 9px 9px 0;
+  border-color: transparent #e5e7eb transparent transparent; 
+}
+.note-viewer.arrow-left::after {
+  left: -8px;
+  border-width: 8px 8px 8px 0;
+  border-color: transparent #f9fafb transparent transparent;
+  margin-top: 1px;
+}
+/* Flipped (box on the left, pointing right) */
+.note-viewer.arrow-right::before {
+  right: -9px;
+  border-width: 9px 0 9px 9px;
+  border-color: transparent transparent transparent #e5e7eb;
+}
+.note-viewer.arrow-right::after {
+  right: -8px;
+  border-width: 8px 0 8px 8px;
+  border-color: transparent transparent transparent #f9fafb;
+  margin-top: 1px;
 }
 
 .note-viewer-header span {
