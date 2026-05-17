@@ -1094,7 +1094,10 @@ function openNoteViewer(id){
   viewer.innerHTML = `
     <div class="note-viewer-header">
       <span>${safeTitle}</span>
-      <button class="close">✖</button>
+      <div class="note-viewer-actions">
+        <button class="copy" title="Copy note">📋</button>
+        <button class="close" title="Close">✖</button>
+      </div>
     </div>
     <div class="note-viewer-body">${highlightedNote}</div>
   `;
@@ -1118,6 +1121,14 @@ let top = rect.top - canvasRect.top + canvas.scrollTop;
 
   viewer.style.left = left + "px";
   viewer.style.top = top + "px";
+
+  viewer.querySelector(".copy").onclick = (e) => {
+    navigator.clipboard.writeText(node.note || "").then(() => {
+      const btn = e.target;
+      btn.textContent = "✅";
+      setTimeout(() => btn.textContent = "📋", 2000);
+    });
+  };
 
   viewer.querySelector(".close").onclick = () => {
     viewer.remove();

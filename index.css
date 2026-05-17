@@ -641,7 +641,12 @@ svg {
   color: #111827;
 }
 
-/* ===== CLOSE BUTTON ===== */
+.note-viewer-actions {
+  display: flex;
+  gap: 4px;
+}
+
+/* ===== HEADER BUTTONS ===== */
 .note-viewer-header button {
   border: none;
   background: transparent;
