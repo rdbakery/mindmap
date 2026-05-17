@@ -286,7 +286,7 @@ currentMap={
       darkModeBtn.id = 'darkModeBtn';
       darkModeBtn.textContent = '🌙 Dark Mode';
       darkModeBtn.onclick = toggleDarkMode;
-      toolbarInner.appendChild(darkModeBtn);
+      toolbarInner.prepend(darkModeBtn);
     }
 
     // Restore preference
