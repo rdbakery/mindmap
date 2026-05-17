@@ -8,7 +8,8 @@ const APP_CONFIG = {
     quizMode: true,
     focusMode: true,
     importantMarker: true,
-    search: true
+    search: true,
+    darkMode: true
   }
 };
 
@@ -277,11 +278,39 @@ currentMap={
     activeId=maps[0].id;
     currentMap=await loadMap(activeId);
   }
+
+  if (APP_CONFIG.features.darkMode) {
+    const toolbarInner = document.querySelector('.toolbar-inner');
+    if (toolbarInner && !document.getElementById('darkModeBtn')) {
+      const darkModeBtn = document.createElement('button');
+      darkModeBtn.id = 'darkModeBtn';
+      darkModeBtn.textContent = '🌙 Dark Mode';
+      darkModeBtn.onclick = toggleDarkMode;
+      toolbarInner.appendChild(darkModeBtn);
+    }
+
+    // Restore preference
+    if (localStorage.getItem('darkMode') === 'true') {
+      document.body.classList.add('dark-mode');
+      const btn = document.getElementById('darkModeBtn');
+      if (btn) btn.textContent = '☀️ Light Mode';
+    }
+  }
+
   refreshSelector();
   render();
 })();
 
 /* ================= MAP MGMT ================= */
+function toggleDarkMode() {
+  const isDark = document.body.classList.toggle('dark-mode');
+  localStorage.setItem('darkMode', isDark);
+  const btn = document.getElementById('darkModeBtn');
+  if (btn) {
+    btn.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+  }
+}
+
 async function refreshSelector(){
   mapSelector.innerHTML="";
   const maps=await listMaps();

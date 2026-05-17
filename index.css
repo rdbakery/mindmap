@@ -944,3 +944,186 @@ position: absolute;  top: 80px;
 .toolbar-inner {
   scrollbar-width: none;   /* Firefox */
 }
+
+/* ================= DARK MODE ================= */
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode #canvas {
+  background: #121212;
+}
+
+body.dark-mode .toolbar {
+  background: linear-gradient(to right, #1e1e1e, #2a2a2a);
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode .toolbar button,
+body.dark-mode .toolbar select,
+body.dark-mode .toolbar input[type="search"] {
+  background: #2a2a2a;
+  border: 1px solid #444;
+  color: #e0e0e0;
+}
+
+body.dark-mode .toolbar button:hover {
+  background: #333;
+}
+
+body.dark-mode .node {
+  box-shadow: 0 0 0 1px #444;
+}
+
+body.dark-mode .node-text,
+body.dark-mode .menu-btn,
+body.dark-mode .note-icon {
+  color: #1b1b1b;
+}
+
+body.dark-mode .node-text[contenteditable="true"] {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark-mode .node.faded::after {
+  background: rgba(18, 18, 18, 0.65);
+}
+
+body.dark-mode .menu {
+  background: #1e1e1e;
+  border-color: #333;
+}
+
+body.dark-mode .menu button {
+  color: #e0e0e0;
+}
+
+body.dark-mode .menu button:hover {
+  background: #333;
+}
+
+body.dark-mode .note-viewer, 
+body.dark-mode .note-editor, 
+body.dark-mode .youtube-editor,
+body.dark-mode .exam-popup,
+body.dark-mode .filter-dropdown-menu {
+  background: #1e1e1e;
+  border-color: #333;
+  color: #e0e0e0;
+}
+
+body.dark-mode .note-viewer-header span,
+body.dark-mode .note-editor-header,
+body.dark-mode .youtube-editor-header,
+body.dark-mode .exam-popup-header,
+body.dark-mode .filter-title {
+  color: #ffffff;
+}
+
+body.dark-mode .note-viewer-body,
+body.dark-mode .exam-popup-body {
+  color: #cccccc;
+}
+
+body.dark-mode .note-editor-textarea {
+  background: #2a2a2a;
+  color: #e0e0e0;
+  border-color: #444;
+}
+
+body.dark-mode .note-editor-actions button,
+body.dark-mode .youtube-editor-actions button.cancel,
+body.dark-mode .note-viewer-header button,
+body.dark-mode .exam-popup-header button {
+  background: #2a2a2a;
+  color: #e0e0e0;
+  border-color: #444;
+}
+
+body.dark-mode .note-editor-actions button:hover,
+body.dark-mode .youtube-editor-actions button.cancel:hover,
+body.dark-mode .note-viewer-header button:hover,
+body.dark-mode .exam-popup-header button:hover {
+  background: #333;
+  color: #fff;
+}
+
+body.dark-mode .search-box {
+  background: #2a2a2a;
+}
+
+body.dark-mode .search-box input {
+  color: #e0e0e0;
+}
+
+body.dark-mode #searchCount {
+  color: #aaa;
+}
+
+body.dark-mode .search-box button {
+  color: #e0e0e0;
+}
+
+body.dark-mode .connector-toggle {
+  background: #1e1e1e;
+  border-color: #555;
+  color: #8faadc;
+}
+
+body.dark-mode .connector-toggle:hover {
+  background: #2a2a2a;
+}
+
+body.dark-mode svg path {
+  stroke: #6aa84f;
+}
+
+body.dark-mode .note-viewer.arrow-left::before {
+  border-color: transparent #333 transparent transparent; 
+}
+body.dark-mode .note-viewer.arrow-left::after {
+  border-color: transparent #1e1e1e transparent transparent;
+}
+body.dark-mode .note-viewer.arrow-right::before {
+  border-color: transparent transparent transparent #333;
+}
+body.dark-mode .note-viewer.arrow-right::after {
+  border-color: transparent transparent transparent #1e1e1e;
+}
+
+body.dark-mode .note-editor.arrow-left::after {
+  border-color: transparent #1e1e1e transparent transparent;
+}
+body.dark-mode .note-editor.arrow-right::after {
+  border-color: transparent transparent transparent #1e1e1e;
+}
+
+body.dark-mode .youtube-input {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+body.dark-mode .expand-collapse-btn {
+  background: #2a2a2a;
+  border-color: #444;
+}
+body.dark-mode .expand-collapse-btn::before,
+body.dark-mode .expand-collapse-btn::after {
+  border-color: #ccc;
+}
+body.dark-mode .expand-collapse-btn:hover {
+  background: #333;
+}
+
+body.dark-mode .import-btn {
+  background: #2a2a2a;
+  color: #e0e0e0;
+  border-color: #444;
+}
+body.dark-mode .import-btn:hover {
+  background: #333;
+  border-color: #6aa84f;
+}
