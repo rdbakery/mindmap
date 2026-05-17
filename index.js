@@ -1,4 +1,17 @@
 
+/* ================= CONFIG ================= */
+const APP_CONFIG = {
+  features: {
+    notes: true,
+    youtube: true,
+    pyq: true,
+    quizMode: true,
+    focusMode: true,
+    importantMarker: true,
+    search: true
+  }
+};
+
 /* ================= UTIL ================= */
 let focusedNodeId = null;
 let searchQuery = "";
@@ -825,20 +838,31 @@ async function render(){
 
   const quizBtn = document.getElementById("quizModeBtn");
   if (quizBtn) {
+    quizBtn.style.display = APP_CONFIG.features.quizMode ? "" : "none";
     quizBtn.textContent = quizMode ? "🧠 Exit Quiz" : "🧠 Quiz Mode";
     quizBtn.classList.toggle("active", quizMode);
   }
 
   const revealBtn = document.getElementById("revealQuizBtn");
   if (revealBtn) {
-    revealBtn.hidden = !quizMode;
+    revealBtn.hidden = !quizMode || !APP_CONFIG.features.quizMode;
+  }
+
+  const searchBox = document.querySelector(".search-box");
+  if (searchBox) {
+    searchBox.style.display = APP_CONFIG.features.search ? "flex" : "none";
+  }
+
+  const filterBtn = document.getElementById("filterBtn");
+  if (filterBtn) {
+    filterBtn.style.display = APP_CONFIG.features.pyq ? "" : "none";
   }
 
   updateSearchIndicator(); // ✅ add here
 }
 
 function renderExamBadge(node) {
-if (!node.examHistory?.some(e => e.exam)) return "";
+if (!APP_CONFIG.features.pyq || !node.examHistory?.some(e => e.exam)) return "";
   const exams = node.examHistory;
 
   const format = (e) => {
@@ -961,14 +985,14 @@ h.innerHTML = `
   <button onclick="addChild('${n.id}')">➕ Add</button>
   <button onclick="editNode('${n.id}')">✏️ Edit</button>
   <button onclick="expandAllChildren('${n.id}')">🌿 Expand branch</button>
-  <button onclick="toggleImportant('${n.id}')">${n.important ? "⭐ Remove Important" : "⭐ Mark Important"}</button>
-  <button onclick="toggleFocus('${n.id}')">${focusedNodeId === n.id ? "🎯 Exit focus" : "🎯 Focus"}</button>
-  <button onclick="editNote('${n.id}')">📝 Add note</button>
-${isAdmin ? `
+  ${APP_CONFIG.features.importantMarker ? `<button onclick="toggleImportant('${n.id}')">${n.important ? "⭐ Remove Important" : "⭐ Mark Important"}</button>` : ""}
+  ${APP_CONFIG.features.focusMode ? `<button onclick="toggleFocus('${n.id}')">${focusedNodeId === n.id ? "🎯 Exit focus" : "🎯 Focus"}</button>` : ""}
+  ${APP_CONFIG.features.notes ? `<button onclick="editNote('${n.id}')">📝 Add note</button>` : ""}
+${(isAdmin && APP_CONFIG.features.pyq) ? `
 <button onclick="editExamHistory('${n.id}')">
 📚 Add PYQ</button>
 ` : ""}
-${isAdmin 
+${APP_CONFIG.features.youtube ? (isAdmin 
   ? `
     <button onclick="editYoutube('${n.id}')">
       ${n.youtube ? "🎬 Edit Explanation" : "➕ Add Explanation"}
@@ -981,8 +1005,7 @@ ${isAdmin
         </button>
       `
       : ""
-    )
-}
+    )) : ""}
   <button onclick="deleteNode('${n.id}')">🗑 Delete</button>
 `;
 
@@ -1009,7 +1032,7 @@ ${isAdmin
 
   el.append(h, m);
 
-if (n.note && !hiddenInQuiz) {
+if (APP_CONFIG.features.notes && n.note && !hiddenInQuiz) {
   const noteIcon = document.createElement("div");
   noteIcon.className = "note-icon";
   noteIcon.textContent = "📝";
