@@ -1126,7 +1126,7 @@ let top = rect.top - canvasRect.top + canvas.scrollTop;
     navigator.clipboard.writeText(node.note || "").then(() => {
       const btn = e.target;
       btn.textContent = "✅";
-      setTimeout(() => btn.textContent = "📋", 2000);
+      setTimeout(() => btn.textContent = "❏", 2000);
     });
   };
 
