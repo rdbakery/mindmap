@@ -1095,7 +1095,7 @@ function openNoteViewer(id){
     <div class="note-viewer-header">
       <span>${safeTitle}</span>
       <div class="note-viewer-actions">
-        <button class="copy" title="Copy note">📋</button>
+        <button class="copy" title="Copy note">❏</button>
         <button class="close" title="Close">✖</button>
       </div>
     </div>
