@@ -5,11 +5,15 @@ const APP_CONFIG = {
     notes: true,
     youtube: true,
     pyq: true,
-    quizMode: true,
+    quizMode: false,
     focusMode: true,
     importantMarker: true,
     search: true,
     darkMode: true
+  },
+  dev: {
+    mockAIQuizResponse: true, // Set to true to return mock quiz data
+    alwaysPromptApiKey: true  // Set to true to always ask for API key
   }
 };
 
@@ -1831,7 +1835,7 @@ function promptForApiKey() {
         const modal = document.createElement('div');
         modal.id = 'apiKeyModal';
         modal.className = "note-editor"; // Reuse styles for consistency
-        modal.style.cssText = "position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;max-width:450px;padding:20px;z-index:99999;cursor:default;";
+        modal.style.cssText = "position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;max-width:450px;padding:20px;z-index:99999;max-height:90vh;overflow-y:auto;box-sizing:border-box;cursor:default;";
 
         modal.innerHTML = `
             <div>
@@ -1896,8 +1900,10 @@ function promptForApiKey() {
 }
 
 async function getApiKey() {
-  let apiKey = localStorage.getItem('googleApiKey');
-  if (apiKey) return apiKey;
+  if (!APP_CONFIG.dev || !APP_CONFIG.dev.alwaysPromptApiKey) {
+    let apiKey = localStorage.getItem('googleApiKey');
+    if (apiKey) return apiKey;
+  }
 
   const newApiKey = await promptForApiKey();
   return newApiKey;
@@ -1907,6 +1913,27 @@ async function fetchQuizFromAI(content) {
   const apiKey = await getApiKey();
   if (!apiKey) {
     return null;
+  }
+
+  if (APP_CONFIG.dev && APP_CONFIG.dev.mockAIQuizResponse) {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve([
+          {
+            question: "This is a mock question 1 generated for testing.",
+            options: ["Mock Option A", "Mock Option B", "Mock Option C", "Mock Option D"],
+            answer: 0,
+            explanation: "This is a mock explanation for question 1."
+          },
+          {
+            question: "This is a mock question 2 with a different answer.",
+            options: ["Mock A", "Mock B", "Mock C", "Mock D"],
+            answer: 2,
+            explanation: "Option C is correct in this mock scenario."
+          }
+        ]);
+      }, 1500); // 1.5s delay to simulate network request
+    });
   }
 
   const promptText = `Generate a 25-question multiple choice quiz based on the following mind map structure, detailed notes, and previous year question (PYQ) tags. Prioritize generating questions for topics that have PYQ tags.
@@ -2020,7 +2047,7 @@ function showAIQuizModal(quizData, isRetake = false) {
   const modal = document.createElement('div');
   modal.id = 'aiQuizModal';
   modal.className = "note-editor"; 
-  modal.style.cssText = "position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;max-width:500px;padding:20px;z-index:99999;max-height:80vh;overflow-y:auto;cursor:default;";
+  modal.style.cssText = "position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;max-width:500px;padding:20px;z-index:99999;max-height:85vh;overflow-y:auto;box-sizing:border-box;cursor:default;";
 
   let html = `<div class="note-editor-header" style="font-size:18px; margin-bottom:16px; display:flex; justify-content:space-between; align-items:center;">
     <span>🤖 AI Generated Quiz</span>
@@ -2031,8 +2058,8 @@ function showAIQuizModal(quizData, isRetake = false) {
     html += `<div style="margin-bottom:20px;">
       <p style="margin-top:0; margin-bottom:8px; font-weight:600;">Q${i+1}: ${escapeHtml(q.question)}</p>
       ${q.options.map((opt, j) => `
-        <label style="display:flex; align-items:center; gap:8px; margin-bottom:6px; cursor:pointer;">
-          <input type="radio" name="q${i}" value="${j}"> <span style="font-size:14px;">${escapeHtml(opt)}</span>
+        <label style="display:flex; align-items:flex-start; gap:8px; margin-bottom:6px; cursor:pointer;">
+          <input type="radio" name="q${i}" value="${j}" style="margin-top:2px;"> <span style="font-size:14px; line-height:1.4;">${escapeHtml(opt)}</span>
         </label>
       `).join('')}
       <div class="feedback" id="feedback-q${i}" style="display:none; font-size:13px; font-weight:bold; margin-top:8px;"></div>
