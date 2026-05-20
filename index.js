@@ -1804,8 +1804,23 @@ function extractTextForQuiz(node) {
   return content.trim();
 }
 
+async function getApiKey() {
+  let apiKey = localStorage.getItem('googleApiKey');
+  if (!apiKey) {
+    apiKey = prompt("Please enter your Google AI API Key for the quiz feature. Your key will be stored locally in your browser.");
+    if (apiKey) {
+      localStorage.setItem('googleApiKey', apiKey);
+    }
+  }
+  return apiKey;
+}
+
 async function fetchQuizFromAI(content) {
-  const apiKey = "AIzaSyAOJq57k61ZaI7eqfjoQkYYuJVUVkxmzZw";
+  const apiKey = await getApiKey();
+  if (!apiKey) {
+    alert("A Google AI API Key is required to generate quizzes.");
+    return null;
+  }
 
   const promptText = `Generate a 3-question multiple choice quiz based on the following text. 
 Return ONLY a valid JSON array of objects with this exact structure: 
@@ -1828,7 +1843,11 @@ ${content}`;
 
     if (!response.ok) {
       if (response.status === 400 || response.status === 403 || response.status === 404) {
-        throw new Error(`API Error (${response.status}): Check your API key or model name.`);
+        localStorage.removeItem('googleApiKey');
+        throw new Error(`API Error (${response.status}): The API key is invalid or expired. It has been cleared. Please provide a new one.`);
+      }
+      if (response.status === 429) {
+        throw new Error(`API Error (${response.status}): API quota exceeded. Please check your Google AI account.`);
       }
       throw new Error("API request failed with status: " + response.status);
     }
