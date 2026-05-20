@@ -1302,6 +1302,7 @@ function openYoutube(id){
 
 /* ================= EXPORT ================= */
 function exportJSON(){
+  showFlashMessage("⬇️ Exporting JSON...");
   const b=new Blob([JSON.stringify(currentMap,null,2)],{type:"application/json"});
   const a=document.createElement("a");
   a.href=URL.createObjectURL(b);
