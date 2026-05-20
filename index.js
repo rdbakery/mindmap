@@ -1874,7 +1874,23 @@ async function generateQuizForNode(id) {
 
   showFlashMessage("🤖 Generating Quiz from AI...");
   
+  const loadingOverlay = document.createElement('div');
+  loadingOverlay.id = 'aiQuizLoadingOverlay';
+  loadingOverlay.style.cssText = "position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:99999;display:flex;flex-direction:column;justify-content:center;align-items:center;color:white;";
+  loadingOverlay.innerHTML = `
+    <style>
+      @keyframes aiQuizSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+    <div style="width:50px;height:50px;border:5px solid rgba(255,255,255,0.3);border-top:5px solid #ffffff;border-radius:50%;animation:aiQuizSpin 1s linear infinite;margin-bottom:16px;"></div>
+    <div style="font-size:18px;font-weight:bold;">Generating Quiz...</div>
+    <div style="font-size:14px;margin-top:8px;opacity:0.8;">Please wait while AI analyzes your notes.</div>
+  `;
+  document.body.appendChild(loadingOverlay);
+
   const quizData = await fetchQuizFromAI(content);
+  
+  if (loadingOverlay) loadingOverlay.remove();
+  
   if (quizData && Array.isArray(quizData)) {
     showAIQuizModal(quizData);
   }
@@ -1950,6 +1966,13 @@ function showAIQuizModal(quizData) {
       const feedback = document.getElementById(`feedback-q${i}`);
       feedback.style.display = 'block';
       
+      // Highlight the correct option in green
+      const correctRadio = document.querySelector(`input[name="q${i}"][value="${q.answer}"]`);
+      if (correctRadio && correctRadio.parentElement) {
+        correctRadio.parentElement.style.color = '#10b981';
+        correctRadio.parentElement.style.fontWeight = 'bold';
+      }
+
       if (!selected) {
         feedback.textContent = `⚠️ Please select an answer. (Correct: ${q.options[q.answer]})`;
         feedback.style.color = '#f59e0b'; // orange
@@ -1960,10 +1983,14 @@ function showAIQuizModal(quizData) {
       } else {
         feedback.textContent = `❌ Incorrect. Correct answer: ${q.options[q.answer]}`;
         feedback.style.color = '#ef4444'; // red
+        
+        // Strike through the incorrect selection in red
+        selected.parentElement.style.color = '#ef4444';
+        selected.parentElement.style.textDecoration = 'line-through';
       }
     });
     
     const header = modal.querySelector('.note-editor-header');
-    header.textContent = `🤖 AI Generated Quiz (Score: ${score}/${quizData.length})`;
+    header.textContent = `Quiz Based on NCERT and PYQs (Score: ${score}/${quizData.length})`;
   };
 }
