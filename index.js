@@ -276,6 +276,13 @@ async function loadQuiz(id){
   });
 }
 
+async function deleteQuizDB(id){
+  const db=await openDB();
+  db.transaction(STORE,"readwrite")
+    .objectStore(STORE)
+    .delete(`quizzes/${id}.json`);
+}
+
 async function listQuizzes(){
   const db=await openDB();
   return new Promise(res=>{
@@ -379,7 +386,7 @@ async function refreshQuizSelector() {
       const quizId = e.target.value;
       const quizData = await loadQuiz(quizId);
       if (quizData && quizData.questions) {
-        showAIQuizModal(JSON.parse(JSON.stringify(quizData.questions)), true);
+        showAIQuizModal(JSON.parse(JSON.stringify(quizData.questions)), true, quizId);
       }
       e.target.value = ""; 
     };
@@ -2104,7 +2111,7 @@ async function generateQuizForNode(id) {
   }
 }
 
-function showAIQuizModal(quizData, isRetake = false) {
+function showAIQuizModal(quizData, isRetake = false, savedQuizId = null) {
   const existing = document.getElementById('aiQuizModal');
   const existingOverlay = document.getElementById('aiQuizOverlay');
   if (existing) existing.remove();
@@ -2159,6 +2166,7 @@ function showAIQuizModal(quizData, isRetake = false) {
   });
 
   html += `<div class="note-editor-actions" style="margin-top:24px;">
+    ${savedQuizId ? `<button class="cancel" id="deleteAiQuizBtn" style="margin-right:auto; background:#fee2e2; color:#ef4444; border-color:#fca5a5;">🗑️ Delete Quiz</button>` : ''}
     <button class="cancel" id="closeAiQuizBtn">Close</button>
     <button class="save" id="submitAiQuizBtn">Submit Answers</button>
   </div>
@@ -2187,6 +2195,19 @@ function showAIQuizModal(quizData, isRetake = false) {
     modal.remove();
     overlay.remove();
   };
+
+  if (savedQuizId) {
+    document.getElementById('deleteAiQuizBtn').onclick = async () => {
+      if (confirm("Are you sure you want to delete this saved quiz?")) {
+        await deleteQuizDB(savedQuizId);
+        clearInterval(timerInterval);
+        modal.remove();
+        overlay.remove();
+        refreshQuizSelector();
+        showFlashMessage("🗑️ Quiz deleted successfully!");
+      }
+    };
+  }
   
   document.getElementById('submitAiQuizBtn').onclick = () => {
     clearInterval(timerInterval);
@@ -2235,10 +2256,23 @@ function showAIQuizModal(quizData, isRetake = false) {
     
     const actionsDiv = modal.querySelector('.note-editor-actions');
     actionsDiv.innerHTML = `
+      ${savedQuizId ? `<button class="cancel" id="deleteAiQuizBtn" style="margin-right:auto; background:#fee2e2; color:#ef4444; border-color:#fca5a5;">🗑️ Delete Quiz</button>` : ''}
       <button class="cancel" id="closeAiQuizBtn">Close</button>
       <button class="save" id="saveAiQuizBtn">💾 Save Quiz</button>
       <button class="save" id="retakeAiQuizBtn">🔄 Retake Quiz</button>
     `;
+
+    if (savedQuizId) {
+      document.getElementById('deleteAiQuizBtn').onclick = async () => {
+        if (confirm("Are you sure you want to delete this saved quiz?")) {
+          await deleteQuizDB(savedQuizId);
+          modal.remove();
+          overlay.remove();
+          refreshQuizSelector();
+          showFlashMessage("🗑️ Quiz deleted successfully!");
+        }
+      };
+    }
 
     document.getElementById('closeAiQuizBtn').onclick = () => {
       modal.remove();
@@ -2247,11 +2281,18 @@ function showAIQuizModal(quizData, isRetake = false) {
     document.getElementById('retakeAiQuizBtn').onclick = () => {
       modal.remove();
       overlay.remove();
-      showAIQuizModal(JSON.parse(JSON.stringify(quizData)), true);
+      showAIQuizModal(JSON.parse(JSON.stringify(quizData)), true, savedQuizId);
     };
     document.getElementById('saveAiQuizBtn').onclick = async () => {
-      const quizName = prompt("Enter Quiz Name:", `${currentMap.text} - Quiz`);
+      let quizName = prompt("Enter Quiz Name:", `${currentMap.text} - Quiz`);
       if (!quizName) return;
+
+      const existingQuizzes = await listQuizzes();
+      while (existingQuizzes.some(q => q.name.trim().toLowerCase() === quizName.trim().toLowerCase())) {
+        quizName = prompt("A quiz with this name already exists. Please enter a different name:", quizName);
+        if (!quizName) return;
+      }
+
       showFlashMessage("💾 Saving Quiz Locally...");
       const quizExport = {
         mapName: currentMap.text,
