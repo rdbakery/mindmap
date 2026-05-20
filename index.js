@@ -1918,20 +1918,16 @@ async function fetchQuizFromAI(content) {
   if (APP_CONFIG.dev && APP_CONFIG.dev.mockAIQuizResponse) {
     return new Promise(resolve => {
       setTimeout(() => {
-        resolve([
-          {
-            question: "This is a mock question 1 generated for testing.",
-            options: ["Mock Option A", "Mock Option B", "Mock Option C", "Mock Option D"],
-            answer: 0,
-            explanation: "This is a mock explanation for question 1."
-          },
-          {
-            question: "This is a mock question 2 with a different answer.",
-            options: ["Mock A", "Mock B", "Mock C", "Mock D"],
-            answer: 2,
-            explanation: "Option C is correct in this mock scenario."
-          }
-        ]);
+        const mockQuestions = [];
+        for (let i = 1; i <= 25; i++) {
+          mockQuestions.push({
+            question: `This is mock question ${i} generated for testing.`,
+            options: [`Option A for Q${i}`, `Option B for Q${i}`, `Option C for Q${i}`, `Option D for Q${i}`],
+            answer: i % 4,
+            explanation: `This is a mock explanation for question ${i}. Option ${String.fromCharCode(65 + (i % 4))} is the correct answer.`
+          });
+        }
+        resolve(mockQuestions);
       }, 1500); // 1.5s delay to simulate network request
     });
   }
@@ -2062,12 +2058,13 @@ function showAIQuizModal(quizData, isRetake = false) {
   const modal = document.createElement('div');
   modal.id = 'aiQuizModal';
   modal.className = "note-editor"; 
-  modal.style.cssText = "position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;max-width:500px;padding:20px;z-index:99999;max-height:85vh;overflow-y:auto;box-sizing:border-box;cursor:default;";
+  modal.style.cssText = "position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;max-width:500px;z-index:99999;max-height:85vh;display:flex;flex-direction:column;padding:0;box-sizing:border-box;cursor:default;overflow:hidden;";
 
-  let html = `<div class="note-editor-header" style="font-size:18px; margin-bottom:16px; display:flex; justify-content:space-between; align-items:center;">
+  let html = `<div class="note-editor-header" style="padding:20px; border-bottom:1px solid rgba(128,128,128,0.2); font-size:18px; display:flex; justify-content:space-between; align-items:center; flex-shrink:0;">
     <span>🤖 AI Generated Quiz</span>
     <span id="aiQuizTimer" style="color:#ef4444; font-weight:bold; font-size:16px;">10:00</span>
-  </div>`;
+  </div>
+  <div style="padding:20px; overflow-y:auto; flex:1;">`;
 
   quizData.forEach((q, i) => {
     html += `<div style="margin-bottom:20px;">
@@ -2085,6 +2082,7 @@ function showAIQuizModal(quizData, isRetake = false) {
   html += `<div class="note-editor-actions" style="margin-top:24px;">
     <button class="cancel" id="closeAiQuizBtn">Close</button>
     <button class="save" id="submitAiQuizBtn">Submit Answers</button>
+  </div>
   </div>`;
 
   modal.innerHTML = html;
