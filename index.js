@@ -387,13 +387,49 @@ async function deleteMap(){
 
 /* ================= UNDO / REDO ================= */
 function pushHistory(){ undoStack.push(clone(currentMap)); redoStack=[]; }
+
+function showFlashMessage(msg) {
+  let flashMsg = document.getElementById('flashMsg');
+  if (!flashMsg) {
+    flashMsg = document.createElement('div');
+    flashMsg.id = 'flashMsg';
+    flashMsg.style.cssText = "position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.8);color:#fff;padding:8px 16px;border-radius:20px;font-size:14px;z-index:99999;opacity:0;transition:opacity 0.2s ease;pointer-events:none;";
+    document.body.appendChild(flashMsg);
+  }
+  flashMsg.textContent = msg;
+  flashMsg.style.opacity = "1";
+  
+  clearTimeout(flashMsg.hideTimeout);
+  flashMsg.hideTimeout = setTimeout(() => {
+    flashMsg.style.opacity = "0";
+  }, 1500);
+}
+
+function flashButton(id) {
+  const btn = document.getElementById(id);
+  if (!btn) return;
+  
+  btn.style.transition = "all 0.1s ease-in-out";
+  btn.style.transform = "scale(0.85)"; // Shrink slightly to simulate a click
+  btn.style.opacity = "0.7";
+  
+  setTimeout(() => {
+    btn.style.transform = "scale(1)";
+    btn.style.opacity = "1";
+  }, 150); // Restore after 150ms
+}
+
 function undo(){ if(!undoStack.length) return;
   redoStack.push(clone(currentMap));
   currentMap=undoStack.pop(); render();
+  flashButton('undoBtn');
+  showFlashMessage("↩️ Undo successful");
 }
 function redo(){ if(!redoStack.length) return;
   undoStack.push(clone(currentMap));
   currentMap=redoStack.pop(); render();
+  flashButton('redoBtn');
+  showFlashMessage("↪️ Redo successful");
 }
 
 /* ================= TREE ================= */
