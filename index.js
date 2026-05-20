@@ -1822,7 +1822,7 @@ async function fetchQuizFromAI(content) {
     return null;
   }
 
-  const promptText = `Generate a 3-question multiple choice quiz based on the following text. 
+  const promptText = `Generate a 25-question multiple choice quiz based on the following text. 
 Return ONLY a valid JSON array of objects with this exact structure: 
 [{"question": "...", "options": ["...", "...", "...", "..."], "answer": 0}] // answer is the 0-based index of the correct option. Do NOT wrap in markdown code blocks.
 
@@ -1896,7 +1896,10 @@ function showAIQuizModal(quizData) {
   modal.className = "note-editor"; 
   modal.style.cssText = "position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;max-width:500px;padding:20px;z-index:99999;max-height:80vh;overflow-y:auto;cursor:default;";
 
-  let html = `<div class="note-editor-header" style="font-size:18px; margin-bottom:16px;">🤖 AI Generated Quiz</div>`;
+  let html = `<div class="note-editor-header" style="font-size:18px; margin-bottom:16px; display:flex; justify-content:space-between; align-items:center;">
+    <span>🤖 AI Generated Quiz</span>
+    <span id="aiQuizTimer" style="color:#ef4444; font-weight:bold; font-size:16px;">10:00</span>
+  </div>`;
 
   quizData.forEach((q, i) => {
     html += `<div style="margin-bottom:20px;">
@@ -1918,12 +1921,29 @@ function showAIQuizModal(quizData) {
   modal.innerHTML = html;
   document.body.appendChild(modal);
 
+  let timeLeft = 600; // 10 minutes in seconds
+  const timerInterval = setInterval(() => {
+    timeLeft--;
+    const m = Math.floor(timeLeft / 60).toString().padStart(2, '0');
+    const s = (timeLeft % 60).toString().padStart(2, '0');
+    const timerEl = document.getElementById('aiQuizTimer');
+    if (timerEl) timerEl.textContent = `${m}:${s}`;
+    
+    if (timeLeft <= 0) {
+      clearInterval(timerInterval);
+      document.getElementById('submitAiQuizBtn').click();
+      alert("Time is up! Your answers have been automatically submitted.");
+    }
+  }, 1000);
+
   document.getElementById('closeAiQuizBtn').onclick = () => {
+    clearInterval(timerInterval);
     modal.remove();
     overlay.remove();
   };
   
   document.getElementById('submitAiQuizBtn').onclick = () => {
+    clearInterval(timerInterval);
     let score = 0;
     quizData.forEach((q, i) => {
       const selected = document.querySelector(`input[name="q${i}"]:checked`);
