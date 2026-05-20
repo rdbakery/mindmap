@@ -1804,27 +1804,173 @@ function extractTextForQuiz(node) {
   return content.trim();
 }
 
+function promptForApiKey() {
+    return new Promise((resolve) => {
+        // Ensure no other modals are open
+        const existingModal = document.getElementById('apiKeyModal');
+        if (existingModal) existingModal.remove();
+        const existingOverlay = document.getElementById('apiKeyOverlay');
+        if (existingOverlay) existingOverlay.remove();
+
+        const overlay = document.createElement('div');
+        overlay.id = 'apiKeyOverlay';
+        overlay.style.cssText = "position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:99998;";
+        document.body.appendChild(overlay);
+
+        const modal = document.createElement('div');
+        modal.id = 'apiKeyModal';
+        modal.className = "note-editor"; // Reuse styles for consistency
+        modal.style.cssText = "position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;max-width:450px;padding:20px;z-index:99999;cursor:default;";
+
+modal.innerHTML = `
+<div style="padding:28px;box-sizing:border-box;width:100%;">
+
+    <div style="text-align:center;">
+        <button
+            id="getApiKeyBtn"
+            style="
+                background:#25D366;
+                color:white;
+                border:none;
+                padding:14px 24px;
+                border-radius:10px;
+                cursor:pointer;
+                font-size:16px;
+                font-weight:600;
+                display:inline-flex;
+                align-items:center;
+                justify-content:center;
+                gap:10px;
+            "
+        >
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965c4.368 0 7.926-3.558 7.93-7.93a7.898 7.898 0 0 0-2.323-5.607z"/>
+            </svg>
+            Join WhatsApp Channel for Free Key
+        </button>
+    </div>
+
+    <div style="display:flex;align-items:center;margin:30px 0;">
+        <div style="flex:1;height:1px;background:#ddd;"></div>
+
+        <span style="padding:0 18px;color:#666;font-size:16px;font-weight:600;">
+            OR
+        </span>
+
+        <div style="flex:1;height:1px;background:#ddd;"></div>
+    </div>
+
+    <div>
+        <label
+            for="apiKeyInput"
+            style="
+                display:block;
+                margin-bottom:12px;
+                font-size:18px;
+                font-weight:600;
+            "
+        >
+            Paste your API Key:
+        </label>
+
+        <input
+            type="text"
+            id="apiKeyInput"
+            placeholder="Enter key here..."
+            style="
+                width:100%;
+                padding:16px;
+                border:1px solid #d1d5db;
+                border-radius:10px;
+                font-size:16px;
+                box-sizing:border-box;
+                outline:none;
+            "
+        />
+    </div>
+
+    <div
+        style="
+            margin-top:28px;
+            display:flex;
+            justify-content:flex-end;
+            gap:12px;
+        "
+    >
+        <button
+            id="cancelApiKeyBtn"
+            style="
+                padding:12px 24px;
+                border:1px solid #d1d5db;
+                background:white;
+                color:#333;
+                border-radius:8px;
+                cursor:pointer;
+                font-size:15px;
+            "
+        >
+            Cancel
+        </button>
+
+        <button
+            id="saveApiKeyBtn"
+            style="
+                padding:12px 24px;
+                border:none;
+                background:#2563EB;
+                color:white;
+                border-radius:8px;
+                cursor:pointer;
+                font-size:15px;
+                font-weight:600;
+            "
+        >
+            Save Key
+        </button>
+    </div>
+
+</div>
+`;
+
+        document.body.appendChild(modal);
+
+        document.getElementById('getApiKeyBtn').onclick = () => {
+            window.open('https://whatsapp.com/channel/0029VbBxWdc5kg77DRKNYJ0L', '_blank');
+        };
+
+        const closeModal = () => { modal.remove(); overlay.remove(); };
+        document.getElementById('cancelApiKeyBtn').onclick = () => { closeModal(); resolve(null); };
+        document.getElementById('saveApiKeyBtn').onclick = () => {
+            const newApiKey = document.getElementById('apiKeyInput').value.trim();
+            if (newApiKey) {
+                localStorage.setItem('googleApiKey', newApiKey);
+                showFlashMessage("✅ API Key saved successfully!");
+                closeModal();
+                resolve(newApiKey);
+            } else {
+                alert("Please enter an API key before saving.");
+            }
+        };
+    });
+}
+
 async function getApiKey() {
   let apiKey = localStorage.getItem('googleApiKey');
-  if (!apiKey) {
-    apiKey = prompt("Please enter your Google AI API Key for the quiz feature. Your key will be stored locally in your browser.");
-    if (apiKey) {
-      localStorage.setItem('googleApiKey', apiKey);
-    }
-  }
-  return apiKey;
+  if (apiKey) return apiKey;
+
+  const newApiKey = await promptForApiKey();
+  return newApiKey;
 }
 
 async function fetchQuizFromAI(content) {
   const apiKey = await getApiKey();
   if (!apiKey) {
-    alert("A Google AI API Key is required to generate quizzes.");
     return null;
   }
 
   const promptText = `Generate a 25-question multiple choice quiz based on the following text. 
-Return ONLY a valid JSON array of objects with this exact structure: 
-[{"question": "...", "options": ["...", "...", "...", "..."], "answer": 0}] // answer is the 0-based index of the correct option. Do NOT wrap in markdown code blocks.
+Return ONLY a valid JSON array of objects with this exact structure:
+[{"question": "...", "options": ["...", "...", "...", "..."], "answer": 0, "explanation": "A brief explanation of why this is the correct answer."}] // answer is the 0-based index of the correct option. Do NOT wrap in markdown code blocks.
 
 Text:
 ${content}`;
@@ -1842,12 +1988,16 @@ ${content}`;
     });
 
     if (!response.ok) {
-      if (response.status === 400 || response.status === 403 || response.status === 404) {
+      if (response.status === 400 || response.status === 403 || response.status === 404 || response.status === 429) {
         localStorage.removeItem('googleApiKey');
-        throw new Error(`API Error (${response.status}): The API key is invalid or expired. It has been cleared. Please provide a new one.`);
-      }
-      if (response.status === 429) {
-        throw new Error(`API Error (${response.status}): API quota exceeded. Please check your Google AI account.`);
+        let errorMessage = `API Error (${response.status}): `;
+        if (response.status === 429) {
+          errorMessage += 'API quota exceeded. ';
+        } else {
+          errorMessage += 'The API key is invalid or expired. ';
+        }
+        errorMessage += 'The key has been cleared. Please provide a new one.';
+        throw new Error(errorMessage);
       }
       throw new Error("API request failed with status: " + response.status);
     }
@@ -1896,11 +2046,30 @@ async function generateQuizForNode(id) {
   }
 }
 
-function showAIQuizModal(quizData) {
+function showAIQuizModal(quizData, isRetake = false) {
   const existing = document.getElementById('aiQuizModal');
   const existingOverlay = document.getElementById('aiQuizOverlay');
   if (existing) existing.remove();
   if (existingOverlay) existingOverlay.remove();
+
+  // Shuffle for retakes
+  if (isRetake) {
+    showFlashMessage("🔄 Shuffling questions for a new attempt!");
+    // Shuffle questions
+    for (let i = quizData.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [quizData[i], quizData[j]] = [quizData[j], quizData[i]];
+    }
+    // Shuffle options
+    quizData.forEach(q => {
+        const correctAnswerText = q.options[q.answer];
+        for (let i = q.options.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [q.options[i], q.options[j]] = [q.options[j], q.options[i]];
+        }
+        q.answer = q.options.findIndex(opt => opt === correctAnswerText);
+    });
+  }
 
   const overlay = document.createElement('div');
   overlay.id = 'aiQuizOverlay';
@@ -1925,7 +2094,8 @@ function showAIQuizModal(quizData) {
           <input type="radio" name="q${i}" value="${j}"> <span style="font-size:14px;">${escapeHtml(opt)}</span>
         </label>
       `).join('')}
-      <div class="feedback" id="feedback-q${i}" style="display:none; font-size:13px; font-weight:bold; margin-top:6px;"></div>
+      <div class="feedback" id="feedback-q${i}" style="display:none; font-size:13px; font-weight:bold; margin-top:8px;"></div>
+      <div class="explanation" id="explanation-q${i}" style="display:none; font-size:13px; margin-top:8px; padding: 8px; background: #f0fdf4; border-left: 3px solid #22c55e; color: #15803d; border-radius: 4px;"></div>
     </div>`;
   });
 
@@ -1964,6 +2134,7 @@ function showAIQuizModal(quizData) {
     quizData.forEach((q, i) => {
       const selected = document.querySelector(`input[name="q${i}"]:checked`);
       const feedback = document.getElementById(`feedback-q${i}`);
+      const explanationDiv = document.getElementById(`explanation-q${i}`);
       feedback.style.display = 'block';
       
       // Highlight the correct option in green
@@ -1988,9 +2159,32 @@ function showAIQuizModal(quizData) {
         selected.parentElement.style.color = '#ef4444';
         selected.parentElement.style.textDecoration = 'line-through';
       }
+
+      // Show explanation
+      if (q.explanation) {
+        explanationDiv.innerHTML = `💡 <strong>Explanation:</strong> ${escapeHtml(q.explanation)}`;
+        explanationDiv.style.display = 'block';
+      }
     });
     
     const header = modal.querySelector('.note-editor-header');
-    header.textContent = `Quiz Based on NCERT and PYQs (Score: ${score}/${quizData.length})`;
+    header.innerHTML = `<span>Quiz Results (Score: ${score}/${quizData.length})</span>
+      <span id="aiQuizTimer" style="color:#6b7280; font-weight:normal; font-size:16px;">Finished</span>`;
+    
+    const actionsDiv = modal.querySelector('.note-editor-actions');
+    actionsDiv.innerHTML = `
+      <button class="cancel" id="closeAiQuizBtn">Close</button>
+      <button class="save" id="retakeAiQuizBtn">🔄 Retake Quiz</button>
+    `;
+
+    document.getElementById('closeAiQuizBtn').onclick = () => {
+      modal.remove();
+      overlay.remove();
+    };
+    document.getElementById('retakeAiQuizBtn').onclick = () => {
+      modal.remove();
+      overlay.remove();
+      showAIQuizModal(JSON.parse(JSON.stringify(quizData)), true);
+    };
   };
 }
