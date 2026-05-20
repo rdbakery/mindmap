@@ -12,8 +12,8 @@ const APP_CONFIG = {
     darkMode: true
   },
   dev: {
-    mockAIQuizResponse: true, // Set to true to return mock quiz data
-    alwaysPromptApiKey: true  // Set to true to always ask for API key
+    mockAIQuizResponse: false, // Set to true to return mock quiz data
+    alwaysPromptApiKey: false  // Set to true to always ask for API key
   }
 };
 
@@ -1956,16 +1956,8 @@ ${content}`;
     });
 
     if (!response.ok) {
-      if (response.status === 400 || response.status === 403 || response.status === 404 || response.status === 429) {
-        localStorage.removeItem('googleApiKey');
-        let errorMessage = `API Error (${response.status}): `;
-        if (response.status === 429) {
-          errorMessage += 'API quota exceeded. ';
-        } else {
-          errorMessage += 'The API key is invalid or expired. ';
-        }
-        errorMessage += 'The key has been cleared. Please provide a new one.';
-        throw new Error(errorMessage);
+      if (response.status >= 400 && response.status < 500) {
+        throw new Error("INVALID_KEY_" + response.status);
       }
       throw new Error("API request failed with status: " + response.status);
     }
@@ -1975,6 +1967,29 @@ ${content}`;
     contentStr = contentStr.replace(/```json/g, '').replace(/```/g, '').trim(); // Prevent LLM formatting issues
     return JSON.parse(contentStr);
   } catch (err) {
+    if (err.message.startsWith("INVALID_KEY_")) {
+      const status = err.message.split("_")[2];
+      localStorage.removeItem('googleApiKey');
+      const loadingOverlay = document.getElementById('aiQuizLoadingOverlay');
+      if (loadingOverlay) loadingOverlay.style.display = 'none';
+
+      let errorMessage = `API Error (${status}): `;
+      if (status === '429') {
+        errorMessage += 'API quota exceeded. ';
+      } else {
+        errorMessage += 'The API key is invalid or expired. ';
+      }
+      errorMessage += 'Please provide a new API key.';
+      alert(errorMessage);
+
+      const newKey = await promptForApiKey();
+      if (loadingOverlay && newKey) loadingOverlay.style.display = 'flex';
+      
+      if (newKey) {
+        return await fetchQuizFromAI(content);
+      }
+      return null;
+    }
     alert("Error generating quiz: " + err.message);
     return null;
   }
