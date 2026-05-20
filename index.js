@@ -244,7 +244,9 @@ async function listMaps(){
       .openCursor().onsuccess=e=>{
         const c=e.target.result;
         if(!c) return res(out);
-        out.push({id:c.value.id,name:c.value.name});
+        if (!c.value.key || c.value.key.startsWith("mindmaps/")) {
+          out.push({id:c.value.id,name:c.value.name});
+        }
         c.continue();
       };
   });
@@ -255,6 +257,40 @@ async function deleteMapDB(id){
   db.transaction(STORE,"readwrite")
     .objectStore(STORE)
     .delete(`mindmaps/${id}.json`);
+}
+
+async function saveQuiz(id, name, data){
+  const db=await openDB();
+  db.transaction(STORE,"readwrite")
+    .objectStore(STORE)
+    .put({key:`quizzes/${id}.json`, id, name, json: data});
+}
+
+async function loadQuiz(id){
+  const db=await openDB();
+  return new Promise(res=>{
+    db.transaction(STORE)
+      .objectStore(STORE)
+      .get(`quizzes/${id}.json`)
+      .onsuccess=e=>res(e.target.result?.json);
+  });
+}
+
+async function listQuizzes(){
+  const db=await openDB();
+  return new Promise(res=>{
+    const out=[];
+    db.transaction(STORE)
+      .objectStore(STORE)
+      .openCursor().onsuccess=e=>{
+        const c=e.target.result;
+        if(!c) return res(out);
+        if (c.value.key && c.value.key.startsWith("quizzes/")) {
+          out.push({id:c.value.id,name:c.value.name});
+        }
+        c.continue();
+      };
+  });
 }
 
 /* ================= STATE ================= */
@@ -302,6 +338,7 @@ currentMap={
   }
 
   refreshSelector();
+  refreshQuizSelector();
   render();
 })();
 
@@ -324,6 +361,48 @@ async function refreshSelector(){
     if(m.id===activeId) o.selected=true;
     mapSelector.appendChild(o);
   });
+}
+
+async function refreshQuizSelector() {
+  let quizSelector = document.getElementById('quizSelector');
+  if (!quizSelector) {
+    quizSelector = document.createElement('select');
+    quizSelector.id = 'quizSelector';
+    
+    const defaultOption = document.createElement('option');
+    defaultOption.value = "";
+    defaultOption.textContent = "🧠 Start Saved Quiz...";
+    quizSelector.appendChild(defaultOption);
+    
+    quizSelector.onchange = async e => {
+      if (!e.target.value) return;
+      const quizId = e.target.value;
+      const quizData = await loadQuiz(quizId);
+      if (quizData && quizData.questions) {
+        showAIQuizModal(JSON.parse(JSON.stringify(quizData.questions)), true);
+      }
+      e.target.value = ""; 
+    };
+    
+    const toolbarInner = document.querySelector('.toolbar-inner');
+    if (toolbarInner) {
+      toolbarInner.appendChild(quizSelector);
+    }
+  }
+  
+  const defaultOpt = quizSelector.options[0];
+  quizSelector.innerHTML = "";
+  quizSelector.appendChild(defaultOpt);
+  
+  const quizzes = await listQuizzes();
+  quizzes.forEach(q => {
+    const o = document.createElement("option");
+    o.value = q.id;
+    o.textContent = q.name;
+    quizSelector.appendChild(o);
+  });
+  
+  quizSelector.style.display = quizzes.length > 0 ? "inline-block" : "none";
 }
 
 let allCollapsed = false;
@@ -2118,6 +2197,8 @@ function showAIQuizModal(quizData, isRetake = false) {
       const explanationDiv = document.getElementById(`explanation-q${i}`);
       feedback.style.display = 'block';
       
+      q.userAnswer = selected ? parseInt(selected.value) : null;
+
       // Highlight the correct option in green
       const correctRadio = document.querySelector(`input[name="q${i}"][value="${q.answer}"]`);
       if (correctRadio && correctRadio.parentElement) {
@@ -2155,6 +2236,7 @@ function showAIQuizModal(quizData, isRetake = false) {
     const actionsDiv = modal.querySelector('.note-editor-actions');
     actionsDiv.innerHTML = `
       <button class="cancel" id="closeAiQuizBtn">Close</button>
+      <button class="save" id="saveAiQuizBtn">💾 Save Quiz</button>
       <button class="save" id="retakeAiQuizBtn">🔄 Retake Quiz</button>
     `;
 
@@ -2166,6 +2248,19 @@ function showAIQuizModal(quizData, isRetake = false) {
       modal.remove();
       overlay.remove();
       showAIQuizModal(JSON.parse(JSON.stringify(quizData)), true);
+    };
+    document.getElementById('saveAiQuizBtn').onclick = async () => {
+      const quizName = prompt("Enter Quiz Name:", `${currentMap.text} - Quiz`);
+      if (!quizName) return;
+      showFlashMessage("💾 Saving Quiz Locally...");
+      const quizExport = {
+        mapName: currentMap.text,
+        score: `${score}/${quizData.length}`,
+        questions: quizData
+      };
+      await saveQuiz(uid(), quizName, quizExport);
+      showFlashMessage("✅ Quiz saved successfully!");
+      refreshQuizSelector();
     };
   };
 }
