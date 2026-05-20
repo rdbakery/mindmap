@@ -1071,6 +1071,7 @@ ${APP_CONFIG.features.youtube ? (isAdmin
       `
       : ""
     )) : ""}
+  <button onclick="generateQuizForNode('${n.id}')">🤖 Generate AI Quiz</button>
   <button onclick="deleteNode('${n.id}')">🗑 Delete</button>
 `;
 
@@ -1792,3 +1793,138 @@ document.addEventListener("click", function(e){
     box.classList.add("hidden");
   }
 });
+
+/* ================= AI QUIZ ================= */
+function extractTextForQuiz(node) {
+  let content = node.text;
+  if (node.note) content += " - " + node.note;
+  node.children.forEach(c => {
+    content += "\n" + extractTextForQuiz(c);
+  });
+  return content.trim();
+}
+
+async function fetchQuizFromAI(content) {
+  const apiKey = "AIzaSyAOJq57k61ZaI7eqfjoQkYYuJVUVkxmzZw";
+
+  const promptText = `Generate a 3-question multiple choice quiz based on the following text. 
+Return ONLY a valid JSON array of objects with this exact structure: 
+[{"question": "...", "options": ["...", "...", "...", "..."], "answer": 0}] // answer is the 0-based index of the correct option. Do NOT wrap in markdown code blocks.
+
+Text:
+${content}`;
+
+  try {
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${apiKey}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        contents: [{ parts: [{ text: promptText }] }],
+        generationConfig: { temperature: 0.7 }
+      })
+    });
+
+    if (!response.ok) {
+      if (response.status === 400 || response.status === 403 || response.status === 404) {
+        throw new Error(`API Error (${response.status}): Check your API key or model name.`);
+      }
+      throw new Error("API request failed with status: " + response.status);
+    }
+    
+    const data = await response.json();
+    let contentStr = data.candidates[0].content.parts[0].text;
+    contentStr = contentStr.replace(/```json/g, '').replace(/```/g, '').trim(); // Prevent LLM formatting issues
+    return JSON.parse(contentStr);
+  } catch (err) {
+    alert("Error generating quiz: " + err.message);
+    return null;
+  }
+}
+
+async function generateQuizForNode(id) {
+  const node = find(currentMap, id);
+  if (!node) return;
+
+  const content = extractTextForQuiz(node);
+  if (!content || content.length < 10) {
+    alert("Not enough text content in this branch to generate a quiz.");
+    return;
+  }
+
+  showFlashMessage("🤖 Generating Quiz from AI...");
+  
+  const quizData = await fetchQuizFromAI(content);
+  if (quizData && Array.isArray(quizData)) {
+    showAIQuizModal(quizData);
+  }
+}
+
+function showAIQuizModal(quizData) {
+  const existing = document.getElementById('aiQuizModal');
+  const existingOverlay = document.getElementById('aiQuizOverlay');
+  if (existing) existing.remove();
+  if (existingOverlay) existingOverlay.remove();
+
+  const overlay = document.createElement('div');
+  overlay.id = 'aiQuizOverlay';
+  overlay.style.cssText = "position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:99998;";
+  document.body.appendChild(overlay);
+
+  const modal = document.createElement('div');
+  modal.id = 'aiQuizModal';
+  modal.className = "note-editor"; 
+  modal.style.cssText = "position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;max-width:500px;padding:20px;z-index:99999;max-height:80vh;overflow-y:auto;cursor:default;";
+
+  let html = `<div class="note-editor-header" style="font-size:18px; margin-bottom:16px;">🤖 AI Generated Quiz</div>`;
+
+  quizData.forEach((q, i) => {
+    html += `<div style="margin-bottom:20px;">
+      <p style="margin-top:0; margin-bottom:8px; font-weight:600;">Q${i+1}: ${escapeHtml(q.question)}</p>
+      ${q.options.map((opt, j) => `
+        <label style="display:flex; align-items:center; gap:8px; margin-bottom:6px; cursor:pointer;">
+          <input type="radio" name="q${i}" value="${j}"> <span style="font-size:14px;">${escapeHtml(opt)}</span>
+        </label>
+      `).join('')}
+      <div class="feedback" id="feedback-q${i}" style="display:none; font-size:13px; font-weight:bold; margin-top:6px;"></div>
+    </div>`;
+  });
+
+  html += `<div class="note-editor-actions" style="margin-top:24px;">
+    <button class="cancel" id="closeAiQuizBtn">Close</button>
+    <button class="save" id="submitAiQuizBtn">Submit Answers</button>
+  </div>`;
+
+  modal.innerHTML = html;
+  document.body.appendChild(modal);
+
+  document.getElementById('closeAiQuizBtn').onclick = () => {
+    modal.remove();
+    overlay.remove();
+  };
+  
+  document.getElementById('submitAiQuizBtn').onclick = () => {
+    let score = 0;
+    quizData.forEach((q, i) => {
+      const selected = document.querySelector(`input[name="q${i}"]:checked`);
+      const feedback = document.getElementById(`feedback-q${i}`);
+      feedback.style.display = 'block';
+      
+      if (!selected) {
+        feedback.textContent = `⚠️ Please select an answer. (Correct: ${q.options[q.answer]})`;
+        feedback.style.color = '#f59e0b'; // orange
+      } else if (parseInt(selected.value) === q.answer) {
+        feedback.textContent = "✅ Correct!";
+        feedback.style.color = '#10b981'; // green
+        score++;
+      } else {
+        feedback.textContent = `❌ Incorrect. Correct answer: ${q.options[q.answer]}`;
+        feedback.style.color = '#ef4444'; // red
+      }
+    });
+    
+    const header = modal.querySelector('.note-editor-header');
+    header.textContent = `🤖 AI Generated Quiz (Score: ${score}/${quizData.length})`;
+  };
+}
