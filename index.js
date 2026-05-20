@@ -1795,13 +1795,24 @@ document.addEventListener("click", function(e){
 });
 
 /* ================= AI QUIZ ================= */
-function extractTextForQuiz(node) {
-  let content = node.text;
-  if (node.note) content += " - " + node.note;
+function extractTextForQuiz(node, depth = 0) {
+  let indent = "  ".repeat(depth);
+  let content = indent + "• " + node.text;
+  
+  if (node.note) {
+    content += "\n" + indent + "  Note: " + node.note.replace(/\n/g, "\n" + indent + "  ");
+  }
+  
+  // Also include PYQ (Previous Year Questions) context for the AI
+  if (node.examHistory && node.examHistory.length > 0) {
+    const exams = node.examHistory.map(e => `${e.exam} ${e.year || ''}`.trim()).join(", ");
+    content += "\n" + indent + "  PYQ: " + exams;
+  }
+
   node.children.forEach(c => {
-    content += "\n" + extractTextForQuiz(c);
+    content += "\n" + extractTextForQuiz(c, depth + 1);
   });
-  return content.trim();
+  return depth === 0 ? content.trim() : content;
 }
 
 function promptForApiKey() {
@@ -1898,11 +1909,11 @@ async function fetchQuizFromAI(content) {
     return null;
   }
 
-  const promptText = `Generate a 25-question multiple choice quiz based on the following text. 
+  const promptText = `Generate a 25-question multiple choice quiz based on the following mind map structure, detailed notes, and previous year question (PYQ) tags. Prioritize generating questions for topics that have PYQ tags.
 Return ONLY a valid JSON array of objects with this exact structure:
 [{"question": "...", "options": ["...", "...", "...", "..."], "answer": 0, "explanation": "A brief explanation of why this is the correct answer."}] // answer is the 0-based index of the correct option. Do NOT wrap in markdown code blocks.
 
-Text:
+Mind Map Content:
 ${content}`;
 
   try {
