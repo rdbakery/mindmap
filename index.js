@@ -2276,10 +2276,10 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
       ${timerSeconds > 0 ? Math.floor(timerSeconds/60).toString().padStart(2,'0') + ':' + (timerSeconds%60).toString().padStart(2,'0') : 'Untimed'}
     </span>
   </div>
-  <div style="padding:12px 20px; border-bottom:1px solid rgba(128,128,128,0.15); display:flex; flex-wrap:wrap; gap:6px; max-height:120px; overflow-y:auto;" id="quizNavGrid">
+  <div style="padding:12px 20px; border-bottom:1px solid rgba(128,128,128,0.15); display:flex; flex-wrap:wrap; gap:6px; max-height:120px; overflow-y:auto; flex-shrink:0;" id="quizNavGrid">
     ${quizData.map((_, i) => `<button class="quiz-nav-btn ${i === 0 ? 'active' : ''}" data-index="${i}">${i + 1}</button>`).join('')}
   </div>
-  <div style="padding:20px; overflow-y:auto; flex:1;">`;
+  <div style="padding:20px; overflow-y:auto; flex:1; min-height:0;">`;
 
   quizData.forEach((q, i) => {
     const pyqSuffix = q.pyq ? ` <span class="quiz-pyq-tag">(${escapeHtml(q.pyq)})</span>` : '';
@@ -2296,12 +2296,12 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
   });
 
   html += `</div>
-  <div class="note-editor-actions" style="margin-top:0; padding:16px 20px; border-top:1px solid rgba(128,128,128,0.2); display:flex; justify-content:space-between; align-items:center;">
+  <div class="note-editor-actions" style="margin-top:0; padding:16px 20px; border-top:1px solid rgba(128,128,128,0.2); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; flex-shrink:0;">
     <div style="display:flex; gap:8px;">
       <button class="cancel" id="prevQuizBtn" disabled>◀ Prev</button>
       <button class="cancel" id="nextQuizBtn" ${quizData.length <= 1 ? 'disabled' : ''}>Next ▶</button>
     </div>
-    <div id="quizActionButtons" style="display:flex; gap:8px;">
+    <div id="quizActionButtons" style="display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end;">
       ${savedQuizId ? `<button class="cancel" id="deleteAiQuizBtn" style="background:#fee2e2; color:#ef4444; border-color:#fca5a5;">🗑️ Delete</button>` : ''}
       <button class="cancel" id="closeAiQuizBtn">Close</button>
       <button class="save" id="submitAiQuizBtn">Submit</button>
@@ -2319,8 +2319,8 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
     let top = rect.top;
     let arrowClass = "arrow-left";
 
-    const boxWidth = modal.offsetWidth || 550;
-    const boxHeight = modal.offsetHeight || 500;
+    const boxWidth = 550;
+    const minRequiredHeight = 450; // Minimum desired height for the quiz to look good
 
     if (left + boxWidth > window.innerWidth) {
       left = rect.left - boxWidth - 12;
@@ -2328,18 +2328,20 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
     }
     if (left < 10) { left = 10; arrowClass = "arrow-left"; }
     
-    if (top + boxHeight > window.innerHeight) {
-      top = window.innerHeight - boxHeight - 10;
+    if (top + minRequiredHeight > window.innerHeight) {
+      top = window.innerHeight - minRequiredHeight - 10;
     }
     if (top < 10) { top = 10; }
 
     modal.classList.add(arrowClass);
     modal.style.left = left + "px";
     modal.style.top = top + "px";
+    modal.style.maxHeight = `calc(100vh - ${top}px - 10px)`; // Enforces boundary
   } else {
     modal.style.top = "50%";
     modal.style.left = "50%";
     modal.style.transform = "translate(-50%, -50%)";
+    modal.style.maxHeight = "85vh";
   }
 
   // Pagination Update Logic
