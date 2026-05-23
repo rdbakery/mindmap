@@ -2238,7 +2238,30 @@ async function generateQuizForNode(id, content, settings = { qsCount: 25, qsDiff
   
   if (quizData && Array.isArray(quizData)) {
     const defaultLang = settings.qsLang === "Hindi" ? "hi" : "en";
-    showAIQuizModal(quizData, false, null, settings.qsTimer, id, defaultLang);
+    
+    // Auto-save generated quiz
+    const node = find(currentMap, id);
+    const baseName = `${currentMap.text} - ${node ? node.text : 'Quiz'}`;
+    let quizName = baseName;
+    const existingQuizzes = await listQuizzes();
+    let counter = 1;
+    while (existingQuizzes.some(q => q.name.trim().toLowerCase() === quizName.trim().toLowerCase())) {
+      quizName = `${baseName} (${counter})`;
+      counter++;
+    }
+
+    const newQuizId = uid();
+    const quizExport = {
+      mapName: currentMap.text,
+      score: `0/${quizData.length}`,
+      timerSeconds: settings.qsTimer,
+      questions: quizData
+    };
+    await saveQuiz(newQuizId, quizName, quizExport);
+    showFlashMessage("✅ Quiz automatically saved!");
+    refreshQuizSelector();
+
+    showAIQuizModal(quizData, false, newQuizId, settings.qsTimer, id, defaultLang);
   }
 }
 
@@ -2569,7 +2592,7 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
     actionsDiv.innerHTML = `
       ${savedQuizId ? `<button class="cancel" id="deleteAiQuizBtn" style="background:#fee2e2; color:#ef4444; border-color:#fca5a5;">🗑️ Delete</button>` : ''}
       <button class="cancel" id="closeAiQuizBtn">Close</button>
-      <button class="save" id="saveAiQuizBtn" style="background:#0ea5e9; border-color:#0284c7;">💾 Save</button>
+      ${!savedQuizId ? `<button class="save" id="saveAiQuizBtn" style="background:#0ea5e9; border-color:#0284c7;">💾 Save</button>` : ''}
       <button class="save" id="retakeAiQuizBtn">🔄 Retake</button>
     `;
 
@@ -2595,27 +2618,42 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
       overlay.remove();
       showAIQuizModal(JSON.parse(JSON.stringify(quizData)), true, savedQuizId, timerSeconds, nodeId, currentLang);
     };
-    document.getElementById('saveAiQuizBtn').onclick = async () => {
-      let quizName = prompt("Enter Quiz Name:", `${currentMap.text} - Quiz`);
-      if (!quizName) return;
 
-      const existingQuizzes = await listQuizzes();
-      while (existingQuizzes.some(q => q.name.trim().toLowerCase() === quizName.trim().toLowerCase())) {
-        quizName = prompt("A quiz with this name already exists. Please enter a different name:", quizName);
-        if (!quizName) return;
-      }
+    const saveBtn = document.getElementById('saveAiQuizBtn');
+    if (saveBtn) {
+      saveBtn.onclick = async () => {
+        let quizName;
+        let targetQuizId;
 
-      showFlashMessage("💾 Saving Quiz Locally...");
-      const quizExport = {
-        mapName: currentMap.text,
-        score: `${score}/${quizData.length}`,
-        timerSeconds: timerSeconds,
-        questions: quizData
+        if (savedQuizId) {
+          targetQuizId = savedQuizId;
+          const existingQuizzes = await listQuizzes();
+          const existing = existingQuizzes.find(q => q.id === savedQuizId);
+          quizName = existing ? existing.name : `${currentMap.text} - Quiz`;
+        } else {
+          quizName = prompt("Enter Quiz Name:", `${currentMap.text} - Quiz`);
+          if (!quizName) return;
+
+          const existingQuizzes = await listQuizzes();
+          while (existingQuizzes.some(q => q.name.trim().toLowerCase() === quizName.trim().toLowerCase())) {
+            quizName = prompt("A quiz with this name already exists. Please enter a different name:", quizName);
+            if (!quizName) return;
+          }
+          targetQuizId = uid();
+        }
+
+        showFlashMessage("💾 Saving Quiz Locally...");
+        const quizExport = {
+          mapName: currentMap.text,
+          score: `${score}/${quizData.length}`,
+          timerSeconds: timerSeconds,
+          questions: quizData
+        };
+        await saveQuiz(targetQuizId, quizName, quizExport);
+        showFlashMessage("✅ Quiz saved successfully!");
+        refreshQuizSelector();
       };
-      await saveQuiz(uid(), quizName, quizExport);
-      showFlashMessage("✅ Quiz saved successfully!");
-      refreshQuizSelector();
-    };
+    }
   };
 }
 
