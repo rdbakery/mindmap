@@ -2132,10 +2132,10 @@ async function fetchQuizFromAI(content, settings = { qsCount: 25, qsDiff: "Mediu
         const mockQuestions = [];
         for (let i = 1; i <= settings.qsCount; i++) {
           mockQuestions.push({
-            question: `This is mock question ${i} generated for testing.`,
-            options: [`Option A for Q${i}`, `Option B for Q${i}`, `Option C for Q${i}`, `Option D for Q${i}`],
+            question: { en: `This is mock question ${i} generated for testing.`, hi: `यह परीक्षण के लिए उत्पन्न मॉक प्रश्न ${i} है।` },
+            options: { en: [`Option A for Q${i}`, `Option B for Q${i}`, `Option C for Q${i}`, `Option D for Q${i}`], hi: [`प्रश्न ${i} के लिए विकल्प ए`, `प्रश्न ${i} के लिए विकल्प बी`, `प्रश्न ${i} के लिए विकल्प सी`, `प्रश्न ${i} के लिए विकल्प डी`] },
             answer: i % 4,
-            explanation: `This is a mock explanation for question ${i}. Option ${String.fromCharCode(65 + (i % 4))} is the correct answer.`,
+            explanation: { en: `This is a mock explanation for question ${i}. Option ${String.fromCharCode(65 + (i % 4))} is the correct answer.`, hi: `यह प्रश्न ${i} का स्पष्टीकरण है। विकल्प ${String.fromCharCode(65 + (i % 4))} सही उत्तर है।` },
             pyq: i % 3 === 0 ? `SSC-202${i % 10}` : ""
           });
         }
@@ -2144,14 +2144,12 @@ async function fetchQuizFromAI(content, settings = { qsCount: 25, qsDiff: "Mediu
     });
   }
 
-  const langPrompt = settings.qsLang === "Hindi" ? "The quiz (questions, options, and explanations) must be entirely in Hindi language (हिंदी)." : "The quiz must be in English language.";
-
   const promptText = `Generate a ${settings.qsCount}-question multiple choice quiz based on the following mind map structure, detailed notes, and previous year question (PYQ) tags. Prioritize generating questions for topics that have PYQ tags.
 The difficulty level should be ${settings.qsDiff}.
-${langPrompt}
+You must provide the quiz (questions, options, and explanations) in BOTH English and Hindi.
 If a question is based on a PYQ of an Indian govt exam (or any exam mentioned in the tags), include the exam name and year in the "pyq" field.
 Return ONLY a valid JSON array of objects with this exact structure:
-[{"question": "...", "options": ["...", "...", "...", "..."], "answer": 0, "explanation": "A brief explanation of why this is the correct answer.", "pyq": "Exam name and year if applicable, else empty string"}] // answer is the 0-based index of the correct option. Do NOT wrap in markdown code blocks.
+[{"question": {"en": "...", "hi": "..."}, "options": {"en": ["...", "...", "...", "..."], "hi": ["...", "...", "...", "..."]}, "answer": 0, "explanation": {"en": "...", "hi": "..."}, "pyq": "Exam name and year if applicable, else empty string"}] // answer is the 0-based index of the correct option. Do NOT wrap in markdown code blocks.
 
 Mind Map Content:
 ${content}`;
@@ -2239,11 +2237,12 @@ async function generateQuizForNode(id, content, settings = { qsCount: 25, qsDiff
   if (loadingOverlay) loadingOverlay.remove();
   
   if (quizData && Array.isArray(quizData)) {
-    showAIQuizModal(quizData, false, null, settings.qsTimer, id);
+    const defaultLang = settings.qsLang === "Hindi" ? "hi" : "en";
+    showAIQuizModal(quizData, false, null, settings.qsTimer, id, defaultLang);
   }
 }
 
-function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSeconds = 600, nodeId = null) {
+function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSeconds = 600, nodeId = null, defaultLang = 'en') {
   const existing = document.getElementById('aiQuizModal');
   const existingOverlay = document.getElementById('aiQuizOverlay');
   if (existing) existing.remove();
@@ -2259,12 +2258,22 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
     }
     // Shuffle options
     quizData.forEach(q => {
-        const correctAnswerText = q.options[q.answer];
-        for (let i = q.options.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [q.options[i], q.options[j]] = [q.options[j], q.options[i]];
+        if (Array.isArray(q.options)) {
+            const correctAnswerText = q.options[q.answer];
+            for (let i = q.options.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [q.options[i], q.options[j]] = [q.options[j], q.options[i]];
+            }
+            q.answer = q.options.findIndex(opt => opt === correctAnswerText);
+        } else if (q.options && q.options.en && q.options.hi) {
+            const correctAnswerText = q.options.en[q.answer];
+            for (let i = q.options.en.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [q.options.en[i], q.options.en[j]] = [q.options.en[j], q.options.en[i]];
+                [q.options.hi[i], q.options.hi[j]] = [q.options.hi[j], q.options.hi[i]];
+            }
+            q.answer = q.options.en.findIndex(opt => opt === correctAnswerText);
         }
-        q.answer = q.options.findIndex(opt => opt === correctAnswerText);
     });
   }
 
@@ -2275,14 +2284,50 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
 
   const modal = document.createElement('div');
   modal.id = 'aiQuizModal';
-  modal.className = "note-editor"; 
+  modal.className = "note-editor ai-quiz-wrapper"; 
+  modal.setAttribute("data-lang", defaultLang);
   modal.style.cssText = "position:fixed;width:90%;max-width:550px;z-index:99999;max-height:85vh;display:flex;flex-direction:column;padding:0;box-sizing:border-box;cursor:default;overflow:hidden;";
 
   let currentQuestionIndex = 0;
   let isSubmitted = false;
 
-  let html = `<div class="note-editor-header" style="padding:20px; border-bottom:1px solid rgba(128,128,128,0.2); font-size:18px; display:flex; justify-content:space-between; align-items:center; flex-shrink:0;">
-    <span>🤖 AI Generated Quiz</span>
+  const renderDualLang = (obj, field) => {
+    if (typeof obj[field] === 'string' || Array.isArray(obj[field])) {
+      return `<span class="lang-en">${escapeHtml(obj[field])}</span><span class="lang-hi">${escapeHtml(obj[field])}</span>`;
+    }
+    if (obj[field] && typeof obj[field] === 'object') {
+      return `<span class="lang-en">${escapeHtml(obj[field].en || '')}</span><span class="lang-hi">${escapeHtml(obj[field].hi || '')}</span>`;
+    }
+    return '';
+  };
+
+  const renderDualLangOpt = (q, j) => {
+    if (Array.isArray(q.options)) {
+      return `<span class="lang-en">${escapeHtml(q.options[j])}</span><span class="lang-hi">${escapeHtml(q.options[j])}</span>`;
+    }
+    if (q.options && q.options.en && q.options.hi) {
+      return `<span class="lang-en">${escapeHtml(q.options.en[j] || '')}</span><span class="lang-hi">${escapeHtml(q.options.hi[j] || '')}</span>`;
+    }
+    return '';
+  };
+
+  const getCorrectOptHtml = (q) => {
+    if (Array.isArray(q.options)) return escapeHtml(q.options[q.answer]);
+    return `<span class="lang-en">${escapeHtml(q.options.en[q.answer])}</span><span class="lang-hi">${escapeHtml(q.options.hi[q.answer])}</span>`;
+  };
+
+  let html = `
+  <style>
+    .ai-quiz-wrapper[data-lang="en"] .lang-hi { display: none !important; }
+    .ai-quiz-wrapper[data-lang="hi"] .lang-en { display: none !important; }
+  </style>
+  <div class="note-editor-header" style="padding:20px; border-bottom:1px solid rgba(128,128,128,0.2); font-size:18px; display:flex; justify-content:space-between; align-items:center; flex-shrink:0;">
+    <div style="display:flex; align-items:center; gap:12px;">
+      <span>🤖 AI Generated Quiz</span>
+      <button id="toggleQuizLangBtn" style="background:transparent; border:1px solid #d1d5db; border-radius:4px; padding:4px 8px; font-size:12px; cursor:pointer; color:inherit;">
+        🌐 Translate
+      </button>
+    </div>
     <span id="aiQuizTimer" style="color:#ef4444; font-weight:bold; font-size:16px;">
       ${timerSeconds > 0 ? Math.floor(timerSeconds/60).toString().padStart(2,'0') + ':' + (timerSeconds%60).toString().padStart(2,'0') : 'Untimed'}
     </span>
@@ -2294,11 +2339,12 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
 
   quizData.forEach((q, i) => {
     const pyqSuffix = q.pyq ? ` <span class="quiz-pyq-tag">(${escapeHtml(q.pyq)})</span>` : '';
+    const numOptions = Array.isArray(q.options) ? q.options.length : (q.options?.en?.length || 4);
     html += `<div class="quiz-question-container" id="quiz-q-container-${i}" style="display: ${i === 0 ? 'block' : 'none'}; margin-bottom:10px;">
-      <p style="margin-top:0; margin-bottom:14px; font-weight:600; font-size:15px; line-height:1.5;">Q${i+1}: ${escapeHtml(q.question)}${pyqSuffix}</p>
-      ${q.options.map((opt, j) => `
+      <p style="margin-top:0; margin-bottom:14px; font-weight:600; font-size:15px; line-height:1.5;">Q${i+1}: ${renderDualLang(q, 'question')}${pyqSuffix}</p>
+      ${Array.from({ length: numOptions }).map((_, j) => `
         <label style="display:flex; align-items:flex-start; gap:8px; margin-bottom:10px; cursor:pointer; padding:6px; border-radius:6px; transition:background 0.2s;" class="quiz-opt-label">
-          <input type="radio" name="q${i}" value="${j}" style="margin-top:2px;"> <span style="font-size:14px; line-height:1.4;">${escapeHtml(opt)}</span>
+          <input type="radio" name="q${i}" value="${j}" style="margin-top:2px;"> <span style="font-size:14px; line-height:1.4;">${renderDualLangOpt(q, j)}</span>
         </label>
       `).join('')}
       <div class="feedback" id="feedback-q${i}" style="display:none; font-size:13px; font-weight:bold; margin-top:8px;"></div>
@@ -2322,6 +2368,14 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
 
   modal.innerHTML = html;
   document.body.appendChild(modal);
+  
+  const toggleQuizLangBtn = document.getElementById('toggleQuizLangBtn');
+  if (toggleQuizLangBtn) {
+    toggleQuizLangBtn.onclick = () => {
+      const current = modal.getAttribute("data-lang");
+      modal.setAttribute("data-lang", current === "en" ? "hi" : "en");
+    };
+  }
 
   const nodeEl = nodeId ? document.querySelector(`.node[data-id="${nodeId}"]`) : null;
   if (nodeEl) {
@@ -2463,16 +2517,16 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
       }
 
       if (!selected) {
-        feedback.textContent = `⚠️ Please select an answer. (Correct: ${q.options[q.answer]})`;
+        feedback.innerHTML = `⚠️ <span class="lang-en">Please select an answer.</span><span class="lang-hi">कृपया एक उत्तर चुनें।</span> (Correct: ${getCorrectOptHtml(q)})`;
         feedback.style.color = '#f59e0b'; // orange
         navBtn.classList.add('wrong'); // counts as wrong
       } else if (parseInt(selected.value) === q.answer) {
-        feedback.textContent = "✅ Correct!";
+        feedback.innerHTML = `<span class="lang-en">✅ Correct!</span><span class="lang-hi">✅ सही!</span>`;
         feedback.style.color = '#10b981'; // green
         score++;
         navBtn.classList.add('correct');
       } else {
-        feedback.textContent = `❌ Incorrect. Correct answer: ${q.options[q.answer]}`;
+        feedback.innerHTML = `<span class="lang-en">❌ Incorrect. Correct answer:</span><span class="lang-hi">❌ गलत। सही उत्तर:</span> ${getCorrectOptHtml(q)}`;
         feedback.style.color = '#ef4444'; // red
         
         // Strike through the incorrect selection in red
@@ -2483,8 +2537,11 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
 
       // Show explanation
       if (q.explanation) {
-        explanationDiv.innerHTML = `💡 <strong>Explanation:</strong> ${escapeHtml(q.explanation)}`;
-        explanationDiv.style.display = 'block';
+        const explanationText = renderDualLang(q, 'explanation');
+        if (explanationText) {
+          explanationDiv.innerHTML = `💡 <strong><span class="lang-en">Explanation</span><span class="lang-hi">व्याख्या</span>:</strong> ${explanationText}`;
+          explanationDiv.style.display = 'block';
+        }
       }
       
       // Disable radios
@@ -2492,9 +2549,19 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
     });
     
     const header = modal.querySelector('.note-editor-header');
-    header.innerHTML = `<span>Quiz Results (Score: ${score}/${quizData.length})</span>
-      <span id="aiQuizTimer" style="color:#6b7280; font-weight:normal; font-size:16px;">Finished</span>`;
+    header.innerHTML = `<div style="display:flex; align-items:center; gap:12px;">
+      <span>Quiz Results (Score: ${score}/${quizData.length})</span>
+      <button id="toggleQuizLangBtn" style="background:transparent; border:1px solid #d1d5db; border-radius:4px; padding:4px 8px; font-size:12px; cursor:pointer; color:inherit;">
+        🌐 Translate
+      </button>
+    </div>
+    <span id="aiQuizTimer" style="color:#6b7280; font-weight:normal; font-size:16px;">Finished</span>`;
     
+    document.getElementById('toggleQuizLangBtn').onclick = () => {
+      const current = modal.getAttribute("data-lang");
+      modal.setAttribute("data-lang", current === "en" ? "hi" : "en");
+    };
+
     // Jump to the first incorrectly answered question or back to start
     currentQuestionIndex = 0;
     updateQuizView();
@@ -2524,9 +2591,10 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
       overlay.remove();
     };
     document.getElementById('retakeAiQuizBtn').onclick = () => {
+      const currentLang = modal.getAttribute("data-lang") || 'en';
       modal.remove();
       overlay.remove();
-      showAIQuizModal(JSON.parse(JSON.stringify(quizData)), true, savedQuizId, timerSeconds, nodeId);
+      showAIQuizModal(JSON.parse(JSON.stringify(quizData)), true, savedQuizId, timerSeconds, nodeId, currentLang);
     };
     document.getElementById('saveAiQuizBtn').onclick = async () => {
       let quizName = prompt("Enter Quiz Name:", `${currentMap.text} - Quiz`);
