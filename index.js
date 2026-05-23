@@ -12,7 +12,7 @@ const APP_CONFIG = {
     darkMode: true
   },
   dev: {
-    mockAIQuizResponse: true, // Set to true to return mock quiz data
+    mockAIQuizResponse: false, // Set to true to return mock quiz data
     alwaysPromptApiKey: false  // Set to true to always ask for API key
   }
 };
