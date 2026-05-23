@@ -2027,6 +2027,13 @@ function openQuizSettingsModal(id) {
     </div>
     <div style="padding:20px;">
       <div style="margin-bottom:16px;">
+        <label style="display:block; margin-bottom:6px; font-weight:600; font-size:14px;">Language</label>
+        <select id="qsLang" style="width:100%; padding:8px; border-radius:6px; border:1px solid #d1d5db; font-size:14px; background:transparent; color:inherit;">
+          <option value="English" selected>English</option>
+          <option value="Hindi">Hindi (हिंदी)</option>
+        </select>
+      </div>
+      <div style="margin-bottom:16px;">
         <label style="display:block; margin-bottom:6px; font-weight:600; font-size:14px;">Number of Questions</label>
         <select id="qsCount" style="width:100%; padding:8px; border-radius:6px; border:1px solid #d1d5db; font-size:14px; background:transparent; color:inherit;">
           <option value="10">10 Questions</option>
@@ -2104,15 +2111,16 @@ function openQuizSettingsModal(id) {
     const qsCount = parseInt(document.getElementById('qsCount').value);
     const qsDiff = document.getElementById('qsDiff').value;
     const qsTimer = parseInt(document.getElementById('qsTimer').value);
+    const qsLang = document.getElementById('qsLang').value;
     
     modal.remove();
     overlay.remove();
     
-    generateQuizForNode(id, content, { qsCount, qsDiff, qsTimer });
+    generateQuizForNode(id, content, { qsCount, qsDiff, qsTimer, qsLang });
   };
 }
 
-async function fetchQuizFromAI(content, settings = { qsCount: 25, qsDiff: "Medium" }) {
+async function fetchQuizFromAI(content, settings = { qsCount: 25, qsDiff: "Medium", qsLang: "English" }) {
   const apiKey = await getApiKey();
   if (!apiKey) {
     return null;
@@ -2136,8 +2144,11 @@ async function fetchQuizFromAI(content, settings = { qsCount: 25, qsDiff: "Mediu
     });
   }
 
+  const langPrompt = settings.qsLang === "Hindi" ? "The quiz (questions, options, and explanations) must be entirely in Hindi language (हिंदी)." : "The quiz must be in English language.";
+
   const promptText = `Generate a ${settings.qsCount}-question multiple choice quiz based on the following mind map structure, detailed notes, and previous year question (PYQ) tags. Prioritize generating questions for topics that have PYQ tags.
 The difficulty level should be ${settings.qsDiff}.
+${langPrompt}
 If a question is based on a PYQ of an Indian govt exam (or any exam mentioned in the tags), include the exam name and year in the "pyq" field.
 Return ONLY a valid JSON array of objects with this exact structure:
 [{"question": "...", "options": ["...", "...", "...", "..."], "answer": 0, "explanation": "A brief explanation of why this is the correct answer.", "pyq": "Exam name and year if applicable, else empty string"}] // answer is the 0-based index of the correct option. Do NOT wrap in markdown code blocks.
@@ -2197,7 +2208,7 @@ ${content}`;
   }
 }
 
-async function generateQuizForNode(id, content, settings = { qsCount: 25, qsDiff: "Medium", qsTimer: 600 }) {
+async function generateQuizForNode(id, content, settings = { qsCount: 25, qsDiff: "Medium", qsTimer: 600, qsLang: "English" }) {
   if (!content) {
     const node = find(currentMap, id);
     if (!node) return;
