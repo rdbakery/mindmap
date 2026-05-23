@@ -2010,7 +2010,8 @@ async function fetchQuizFromAI(content) {
             question: `This is mock question ${i} generated for testing.`,
             options: [`Option A for Q${i}`, `Option B for Q${i}`, `Option C for Q${i}`, `Option D for Q${i}`],
             answer: i % 4,
-            explanation: `This is a mock explanation for question ${i}. Option ${String.fromCharCode(65 + (i % 4))} is the correct answer.`
+            explanation: `This is a mock explanation for question ${i}. Option ${String.fromCharCode(65 + (i % 4))} is the correct answer.`,
+            pyq: i % 3 === 0 ? `SSC-202${i % 10}` : ""
           });
         }
         resolve(mockQuestions);
@@ -2019,8 +2020,9 @@ async function fetchQuizFromAI(content) {
   }
 
   const promptText = `Generate a 25-question multiple choice quiz based on the following mind map structure, detailed notes, and previous year question (PYQ) tags. Prioritize generating questions for topics that have PYQ tags.
+If a question is based on a PYQ of an Indian govt exam (or any exam mentioned in the tags), include the exam name and year in the "pyq" field.
 Return ONLY a valid JSON array of objects with this exact structure:
-[{"question": "...", "options": ["...", "...", "...", "..."], "answer": 0, "explanation": "A brief explanation of why this is the correct answer."}] // answer is the 0-based index of the correct option. Do NOT wrap in markdown code blocks.
+[{"question": "...", "options": ["...", "...", "...", "..."], "answer": 0, "explanation": "A brief explanation of why this is the correct answer.", "pyq": "Exam name and year if applicable, else empty string"}] // answer is the 0-based index of the correct option. Do NOT wrap in markdown code blocks.
 
 Mind Map Content:
 ${content}`;
@@ -2153,7 +2155,9 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null) {
   <div style="padding:20px; overflow-y:auto; flex:1;">`;
 
   quizData.forEach((q, i) => {
+    const pyqBadge = q.pyq ? `<div style="display:inline-block; background:#fef08a; color:#b45309; padding:2px 8px; border-radius:12px; font-size:12px; font-weight:bold; margin-bottom:6px;">📚 PYQ: ${escapeHtml(q.pyq)}</div>` : '';
     html += `<div style="margin-bottom:20px;">
+      ${pyqBadge}
       <p style="margin-top:0; margin-bottom:8px; font-weight:600;">Q${i+1}: ${escapeHtml(q.question)}</p>
       ${q.options.map((opt, j) => `
         <label style="display:flex; align-items:flex-start; gap:8px; margin-bottom:6px; cursor:pointer;">
