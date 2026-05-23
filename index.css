@@ -1195,10 +1195,11 @@ body.dark-mode .quiz-pyq-tag {
 .quiz-nav-btn:hover {
   background: #f3f4f6;
 }
-.quiz-nav-btn.answered {
-  background: #d1fae5;
-  border-color: #34d399;
-  color: #065f46;
+.quiz-nav-btn.answered,
+.quiz-nav-btn.visited {
+  background: #ede9fe;
+  border-color: #a78bfa;
+  color: #3730a3;
 }
 .quiz-nav-btn.active {
   border-color: #3b82f6;
@@ -1225,10 +1226,11 @@ body.dark-mode .quiz-nav-btn {
 body.dark-mode .quiz-nav-btn:hover {
   background: #333;
 }
-body.dark-mode .quiz-nav-btn.answered {
-  background: #064e3b;
-  border-color: #059669;
-  color: #d1fae5;
+body.dark-mode .quiz-nav-btn.answered,
+body.dark-mode .quiz-nav-btn.visited {
+  background: #312e81;
+  border-color: #4338ca;
+  color: #e0e7ff;
 }
 body.dark-mode .quiz-nav-btn.active {
   border-color: #3b82f6;

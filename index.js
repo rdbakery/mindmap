@@ -2333,7 +2333,7 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
     </span>
   </div>
   <div style="padding:12px 20px; border-bottom:1px solid rgba(128,128,128,0.15); display:flex; flex-wrap:wrap; gap:6px; max-height:120px; overflow-y:auto; flex-shrink:0;" id="quizNavGrid">
-    ${quizData.map((_, i) => `<button class="quiz-nav-btn ${i === 0 ? 'active' : ''}" data-index="${i}">${i + 1}</button>`).join('')}
+    ${quizData.map((_, i) => `<button class="quiz-nav-btn ${i === 0 ? 'active visited' : ''}" data-index="${i}">${i + 1}</button>`).join('')}
   </div>
   <div style="padding:20px; overflow-y:auto; flex:1; min-height:0;">`;
 
@@ -2417,6 +2417,7 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
     modal.querySelectorAll('.quiz-nav-btn').forEach((btn, i) => {
       if (i === currentQuestionIndex) {
         btn.classList.add('active');
+        btn.classList.add('visited');
         btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
       } else {
         btn.classList.remove('active');
@@ -2519,7 +2520,7 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
       if (!selected) {
         feedback.innerHTML = `⚠️ <span class="lang-en">Please select an answer.</span><span class="lang-hi">कृपया एक उत्तर चुनें।</span> (Correct: ${getCorrectOptHtml(q)})`;
         feedback.style.color = '#f59e0b'; // orange
-        navBtn.classList.add('wrong'); // counts as wrong
+        navBtn.classList.add('unattempted'); // counts as wrong but visualizes as unattempted
       } else if (parseInt(selected.value) === q.answer) {
         feedback.innerHTML = `<span class="lang-en">✅ Correct!</span><span class="lang-hi">✅ सही!</span>`;
         feedback.style.color = '#10b981'; // green
