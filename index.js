@@ -386,7 +386,7 @@ async function refreshQuizSelector() {
       const quizId = e.target.value;
       const quizData = await loadQuiz(quizId);
       if (quizData && quizData.questions) {
-        showAIQuizModal(JSON.parse(JSON.stringify(quizData.questions)), true, quizId);
+        showAIQuizModal(JSON.parse(JSON.stringify(quizData.questions)), true, quizId, quizData.timerSeconds !== undefined ? quizData.timerSeconds : 600);
       }
       e.target.value = ""; 
     };
@@ -1161,7 +1161,7 @@ ${APP_CONFIG.features.youtube ? (isAdmin
       `
       : ""
     )) : ""}
-  <button onclick="generateQuizForNode('${n.id}')">🤖 Generate AI Quiz</button>
+  <button onclick="openQuizSettingsModal('${n.id}')">🤖 Generate AI Quiz</button>
   <button onclick="deleteNode('${n.id}')">🗑 Delete</button>
 `;
 
@@ -1995,7 +1995,124 @@ async function getApiKey() {
   return newApiKey;
 }
 
-async function fetchQuizFromAI(content) {
+function openQuizSettingsModal(id) {
+  const node = find(currentMap, id);
+  if (!node) return;
+
+  const content = extractTextForQuiz(node);
+  if (!content || content.length < 10) {
+    alert("Not enough text content in this branch to generate a quiz.");
+    return;
+  }
+
+  const existing = document.getElementById('quizSettingsModal');
+  const existingOverlay = document.getElementById('quizSettingsOverlay');
+  if (existing) existing.remove();
+  if (existingOverlay) existingOverlay.remove();
+
+  const overlay = document.createElement('div');
+  overlay.id = 'quizSettingsOverlay';
+  overlay.style.cssText = "position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:99998;";
+  document.body.appendChild(overlay);
+
+  const modal = document.createElement('div');
+  modal.id = 'quizSettingsModal';
+  modal.className = "note-editor"; 
+  modal.style.cssText = "position:fixed;width:90%;max-width:400px;z-index:99999;padding:0;box-sizing:border-box;cursor:default;";
+
+  modal.innerHTML = `
+    <div class="note-editor-header" style="padding:20px; border-bottom:1px solid rgba(128,128,128,0.2); font-size:18px; display:flex; justify-content:space-between; align-items:center;">
+      <span>⚙️ Quiz Settings</span>
+      <button class="close" id="closeQuizSettingsBtn" style="background:transparent;border:none;font-size:18px;cursor:pointer;color:inherit;">✖</button>
+    </div>
+    <div style="padding:20px;">
+      <div style="margin-bottom:16px;">
+        <label style="display:block; margin-bottom:6px; font-weight:600; font-size:14px;">Number of Questions</label>
+        <select id="qsCount" style="width:100%; padding:8px; border-radius:6px; border:1px solid #d1d5db; font-size:14px; background:transparent; color:inherit;">
+          <option value="10">10 Questions</option>
+          <option value="25" selected>25 Questions</option>
+          <option value="50">50 Questions</option>
+        </select>
+      </div>
+      <div style="margin-bottom:16px;">
+        <label style="display:block; margin-bottom:6px; font-weight:600; font-size:14px;">Difficulty Level</label>
+        <select id="qsDiff" style="width:100%; padding:8px; border-radius:6px; border:1px solid #d1d5db; font-size:14px; background:transparent; color:inherit;">
+          <option value="Easy">Easy</option>
+          <option value="Medium" selected>Medium</option>
+          <option value="Hard">Hard</option>
+        </select>
+      </div>
+      <div style="margin-bottom:24px;">
+        <label style="display:block; margin-bottom:6px; font-weight:600; font-size:14px;">Timer Settings</label>
+        <select id="qsTimer" style="width:100%; padding:8px; border-radius:6px; border:1px solid #d1d5db; font-size:14px; background:transparent; color:inherit;">
+          <option value="300">5 Minutes</option>
+          <option value="600" selected>10 Minutes</option>
+          <option value="900">15 Minutes</option>
+          <option value="0">Untimed Practice Mode</option>
+        </select>
+      </div>
+      <div class="note-editor-actions" style="margin-top:0; justify-content:flex-end; display:flex;">
+        <button class="save" id="startQuizBtn" style="background:#3b82f6; border-color:#2563eb; color:white; font-weight:bold; width:100%; padding:10px;">🚀 Generate & Start</button>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  const nodeEl = document.querySelector(`.node[data-id="${id}"]`);
+  if (nodeEl) {
+    const rect = nodeEl.getBoundingClientRect();
+    let left = rect.right + 12;
+    let top = rect.top;
+    let arrowClass = "arrow-left";
+
+    const boxWidth = modal.offsetWidth || 400;
+    const boxHeight = modal.offsetHeight || 300;
+
+    if (left + boxWidth > window.innerWidth) {
+      left = rect.left - boxWidth - 12;
+      arrowClass = "arrow-right";
+    }
+    if (left < 10) { left = 10; arrowClass = "arrow-left"; }
+    
+    if (top + boxHeight > window.innerHeight) {
+      top = window.innerHeight - boxHeight - 10;
+    }
+    if (top < 10) { top = 10; }
+
+    modal.classList.add(arrowClass);
+    modal.style.left = left + "px";
+    modal.style.top = top + "px";
+  } else {
+    modal.style.top = "50%";
+    modal.style.left = "50%";
+    modal.style.transform = "translate(-50%, -50%)";
+  }
+
+  if (document.body.classList.contains('dark-mode')) {
+    modal.querySelectorAll('select').forEach(sel => {
+      sel.style.backgroundColor = '#2a2a2a';
+      sel.style.color = '#e0e0e0';
+      sel.style.borderColor = '#444';
+    });
+  }
+
+  document.getElementById('closeQuizSettingsBtn').onclick = () => { modal.remove(); overlay.remove(); };
+  overlay.onclick = () => { modal.remove(); overlay.remove(); };
+  
+  document.getElementById('startQuizBtn').onclick = () => {
+    const qsCount = parseInt(document.getElementById('qsCount').value);
+    const qsDiff = document.getElementById('qsDiff').value;
+    const qsTimer = parseInt(document.getElementById('qsTimer').value);
+    
+    modal.remove();
+    overlay.remove();
+    
+    generateQuizForNode(id, content, { qsCount, qsDiff, qsTimer });
+  };
+}
+
+async function fetchQuizFromAI(content, settings = { qsCount: 25, qsDiff: "Medium" }) {
   const apiKey = await getApiKey();
   if (!apiKey) {
     return null;
@@ -2005,7 +2122,7 @@ async function fetchQuizFromAI(content) {
     return new Promise(resolve => {
       setTimeout(() => {
         const mockQuestions = [];
-        for (let i = 1; i <= 25; i++) {
+        for (let i = 1; i <= settings.qsCount; i++) {
           mockQuestions.push({
             question: `This is mock question ${i} generated for testing.`,
             options: [`Option A for Q${i}`, `Option B for Q${i}`, `Option C for Q${i}`, `Option D for Q${i}`],
@@ -2019,7 +2136,8 @@ async function fetchQuizFromAI(content) {
     });
   }
 
-  const promptText = `Generate a 25-question multiple choice quiz based on the following mind map structure, detailed notes, and previous year question (PYQ) tags. Prioritize generating questions for topics that have PYQ tags.
+  const promptText = `Generate a ${settings.qsCount}-question multiple choice quiz based on the following mind map structure, detailed notes, and previous year question (PYQ) tags. Prioritize generating questions for topics that have PYQ tags.
+The difficulty level should be ${settings.qsDiff}.
 If a question is based on a PYQ of an Indian govt exam (or any exam mentioned in the tags), include the exam name and year in the "pyq" field.
 Return ONLY a valid JSON array of objects with this exact structure:
 [{"question": "...", "options": ["...", "...", "...", "..."], "answer": 0, "explanation": "A brief explanation of why this is the correct answer.", "pyq": "Exam name and year if applicable, else empty string"}] // answer is the 0-based index of the correct option. Do NOT wrap in markdown code blocks.
@@ -2070,7 +2188,7 @@ ${content}`;
       if (loadingOverlay && newKey) loadingOverlay.style.display = 'flex';
       
       if (newKey) {
-        return await fetchQuizFromAI(content);
+        return await fetchQuizFromAI(content, settings);
       }
       return null;
     }
@@ -2079,14 +2197,15 @@ ${content}`;
   }
 }
 
-async function generateQuizForNode(id) {
-  const node = find(currentMap, id);
-  if (!node) return;
-
-  const content = extractTextForQuiz(node);
-  if (!content || content.length < 10) {
-    alert("Not enough text content in this branch to generate a quiz.");
-    return;
+async function generateQuizForNode(id, content, settings = { qsCount: 25, qsDiff: "Medium", qsTimer: 600 }) {
+  if (!content) {
+    const node = find(currentMap, id);
+    if (!node) return;
+    content = extractTextForQuiz(node);
+    if (!content || content.length < 10) {
+      alert("Not enough text content in this branch to generate a quiz.");
+      return;
+    }
   }
 
   showFlashMessage("🤖 Generating Quiz from AI...");
@@ -2104,16 +2223,16 @@ async function generateQuizForNode(id) {
   `;
   document.body.appendChild(loadingOverlay);
 
-  const quizData = await fetchQuizFromAI(content);
+  const quizData = await fetchQuizFromAI(content, settings);
   
   if (loadingOverlay) loadingOverlay.remove();
   
   if (quizData && Array.isArray(quizData)) {
-    showAIQuizModal(quizData);
+    showAIQuizModal(quizData, false, null, settings.qsTimer, id);
   }
 }
 
-function showAIQuizModal(quizData, isRetake = false, savedQuizId = null) {
+function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSeconds = 600, nodeId = null) {
   const existing = document.getElementById('aiQuizModal');
   const existingOverlay = document.getElementById('aiQuizOverlay');
   if (existing) existing.remove();
@@ -2146,14 +2265,16 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null) {
   const modal = document.createElement('div');
   modal.id = 'aiQuizModal';
   modal.className = "note-editor"; 
-  modal.style.cssText = "position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;max-width:550px;z-index:99999;max-height:85vh;display:flex;flex-direction:column;padding:0;box-sizing:border-box;cursor:default;overflow:hidden;";
+  modal.style.cssText = "position:fixed;width:90%;max-width:550px;z-index:99999;max-height:85vh;display:flex;flex-direction:column;padding:0;box-sizing:border-box;cursor:default;overflow:hidden;";
 
   let currentQuestionIndex = 0;
   let isSubmitted = false;
 
   let html = `<div class="note-editor-header" style="padding:20px; border-bottom:1px solid rgba(128,128,128,0.2); font-size:18px; display:flex; justify-content:space-between; align-items:center; flex-shrink:0;">
     <span>🤖 AI Generated Quiz</span>
-    <span id="aiQuizTimer" style="color:#ef4444; font-weight:bold; font-size:16px;">10:00</span>
+    <span id="aiQuizTimer" style="color:#ef4444; font-weight:bold; font-size:16px;">
+      ${timerSeconds > 0 ? Math.floor(timerSeconds/60).toString().padStart(2,'0') + ':' + (timerSeconds%60).toString().padStart(2,'0') : 'Untimed'}
+    </span>
   </div>
   <div style="padding:12px 20px; border-bottom:1px solid rgba(128,128,128,0.15); display:flex; flex-wrap:wrap; gap:6px; max-height:120px; overflow-y:auto;" id="quizNavGrid">
     ${quizData.map((_, i) => `<button class="quiz-nav-btn ${i === 0 ? 'active' : ''}" data-index="${i}">${i + 1}</button>`).join('')}
@@ -2190,6 +2311,36 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null) {
 
   modal.innerHTML = html;
   document.body.appendChild(modal);
+
+  const nodeEl = nodeId ? document.querySelector(`.node[data-id="${nodeId}"]`) : null;
+  if (nodeEl) {
+    const rect = nodeEl.getBoundingClientRect();
+    let left = rect.right + 12;
+    let top = rect.top;
+    let arrowClass = "arrow-left";
+
+    const boxWidth = modal.offsetWidth || 550;
+    const boxHeight = modal.offsetHeight || 500;
+
+    if (left + boxWidth > window.innerWidth) {
+      left = rect.left - boxWidth - 12;
+      arrowClass = "arrow-right";
+    }
+    if (left < 10) { left = 10; arrowClass = "arrow-left"; }
+    
+    if (top + boxHeight > window.innerHeight) {
+      top = window.innerHeight - boxHeight - 10;
+    }
+    if (top < 10) { top = 10; }
+
+    modal.classList.add(arrowClass);
+    modal.style.left = left + "px";
+    modal.style.top = top + "px";
+  } else {
+    modal.style.top = "50%";
+    modal.style.left = "50%";
+    modal.style.transform = "translate(-50%, -50%)";
+  }
 
   // Pagination Update Logic
   function updateQuizView() {
@@ -2232,23 +2383,27 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null) {
     });
   });
 
-  let timeLeft = 600; // 10 minutes in seconds
-  const timerInterval = setInterval(() => {
-    timeLeft--;
-    const m = Math.floor(timeLeft / 60).toString().padStart(2, '0');
-    const s = (timeLeft % 60).toString().padStart(2, '0');
-    const timerEl = document.getElementById('aiQuizTimer');
-    if (timerEl) timerEl.textContent = `${m}:${s}`;
-    
-    if (timeLeft <= 0) {
-      clearInterval(timerInterval);
-      document.getElementById('submitAiQuizBtn').click();
-      alert("Time is up! Your answers have been automatically submitted.");
-    }
-  }, 1000);
+  let timeLeft = timerSeconds;
+  let timerInterval = null;
+  
+  if (timeLeft > 0) {
+    timerInterval = setInterval(() => {
+      timeLeft--;
+      const m = Math.floor(timeLeft / 60).toString().padStart(2, '0');
+      const s = (timeLeft % 60).toString().padStart(2, '0');
+      const timerEl = document.getElementById('aiQuizTimer');
+      if (timerEl) timerEl.textContent = `${m}:${s}`;
+      
+      if (timeLeft <= 0) {
+        clearInterval(timerInterval);
+        document.getElementById('submitAiQuizBtn').click();
+        alert("Time is up! Your answers have been automatically submitted.");
+      }
+    }, 1000);
+  }
 
   document.getElementById('closeAiQuizBtn').onclick = () => {
-    clearInterval(timerInterval);
+    if (timerInterval) clearInterval(timerInterval);
     modal.remove();
     overlay.remove();
   };
@@ -2257,7 +2412,7 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null) {
     document.getElementById('deleteAiQuizBtn').onclick = async () => {
       if (confirm("Are you sure you want to delete this saved quiz?")) {
         await deleteQuizDB(savedQuizId);
-        clearInterval(timerInterval);
+        if (timerInterval) clearInterval(timerInterval);
         modal.remove();
         overlay.remove();
         refreshQuizSelector();
@@ -2269,7 +2424,7 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null) {
   document.getElementById('submitAiQuizBtn').onclick = () => {
     if (!confirm("Are you sure you want to submit your answers?")) return;
     
-    clearInterval(timerInterval);
+    if (timerInterval) clearInterval(timerInterval);
     isSubmitted = true;
     let score = 0;
     
@@ -2356,7 +2511,7 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null) {
     document.getElementById('retakeAiQuizBtn').onclick = () => {
       modal.remove();
       overlay.remove();
-      showAIQuizModal(JSON.parse(JSON.stringify(quizData)), true, savedQuizId);
+      showAIQuizModal(JSON.parse(JSON.stringify(quizData)), true, savedQuizId, timerSeconds, nodeId);
     };
     document.getElementById('saveAiQuizBtn').onclick = async () => {
       let quizName = prompt("Enter Quiz Name:", `${currentMap.text} - Quiz`);
@@ -2372,6 +2527,7 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null) {
       const quizExport = {
         mapName: currentMap.text,
         score: `${score}/${quizData.length}`,
+        timerSeconds: timerSeconds,
         questions: quizData
       };
       await saveQuiz(uid(), quizName, quizExport);
