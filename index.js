@@ -12,7 +12,7 @@ const APP_CONFIG = {
     darkMode: true
   },
   dev: {
-    mockAIQuizResponse: false, // Set to true to return mock quiz data
+    mockAIQuizResponse: true, // Set to true to return mock quiz data
     alwaysPromptApiKey: false  // Set to true to always ask for API key
   }
 };
@@ -2146,37 +2146,91 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null) {
   const modal = document.createElement('div');
   modal.id = 'aiQuizModal';
   modal.className = "note-editor"; 
-  modal.style.cssText = "position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;max-width:500px;z-index:99999;max-height:85vh;display:flex;flex-direction:column;padding:0;box-sizing:border-box;cursor:default;overflow:hidden;";
+  modal.style.cssText = "position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;max-width:550px;z-index:99999;max-height:85vh;display:flex;flex-direction:column;padding:0;box-sizing:border-box;cursor:default;overflow:hidden;";
+
+  let currentQuestionIndex = 0;
+  let isSubmitted = false;
 
   let html = `<div class="note-editor-header" style="padding:20px; border-bottom:1px solid rgba(128,128,128,0.2); font-size:18px; display:flex; justify-content:space-between; align-items:center; flex-shrink:0;">
     <span>🤖 AI Generated Quiz</span>
     <span id="aiQuizTimer" style="color:#ef4444; font-weight:bold; font-size:16px;">10:00</span>
   </div>
+  <div style="padding:12px 20px; border-bottom:1px solid rgba(128,128,128,0.15); display:flex; flex-wrap:wrap; gap:6px; max-height:120px; overflow-y:auto;" id="quizNavGrid">
+    ${quizData.map((_, i) => `<button class="quiz-nav-btn ${i === 0 ? 'active' : ''}" data-index="${i}">${i + 1}</button>`).join('')}
+  </div>
   <div style="padding:20px; overflow-y:auto; flex:1;">`;
 
   quizData.forEach((q, i) => {
-    const pyqSuffix = q.pyq ? `<span class="quiz-pyq-tag">(${escapeHtml(q.pyq)})</span>` : '';
-    html += `<div style="margin-bottom:20px;">
-      <p style="margin-top:0; margin-bottom:8px; font-weight:600; line-height:1.5;">Q${i+1}: ${escapeHtml(q.question)}${pyqSuffix}</p>
+    const pyqSuffix = q.pyq ? ` <span class="quiz-pyq-tag">(${escapeHtml(q.pyq)})</span>` : '';
+    html += `<div class="quiz-question-container" id="quiz-q-container-${i}" style="display: ${i === 0 ? 'block' : 'none'}; margin-bottom:10px;">
+      <p style="margin-top:0; margin-bottom:14px; font-weight:600; font-size:15px; line-height:1.5;">Q${i+1}: ${escapeHtml(q.question)}${pyqSuffix}</p>
       ${q.options.map((opt, j) => `
-        <label style="display:flex; align-items:flex-start; gap:8px; margin-bottom:6px; cursor:pointer;">
+        <label style="display:flex; align-items:flex-start; gap:8px; margin-bottom:10px; cursor:pointer; padding:6px; border-radius:6px; transition:background 0.2s;" class="quiz-opt-label">
           <input type="radio" name="q${i}" value="${j}" style="margin-top:2px;"> <span style="font-size:14px; line-height:1.4;">${escapeHtml(opt)}</span>
         </label>
       `).join('')}
       <div class="feedback" id="feedback-q${i}" style="display:none; font-size:13px; font-weight:bold; margin-top:8px;"></div>
-      <div class="explanation" id="explanation-q${i}" style="display:none; font-size:13px; margin-top:8px; padding: 8px; background: #f0fdf4; border-left: 3px solid #22c55e; color: #15803d; border-radius: 4px;"></div>
+      <div class="explanation" id="explanation-q${i}" style="display:none; font-size:13px; margin-top:8px; padding: 10px; background: #f0fdf4; border-left: 4px solid #22c55e; color: #15803d; border-radius: 4px; line-height:1.5;"></div>
     </div>`;
   });
 
-  html += `<div class="note-editor-actions" style="margin-top:24px;">
-    ${savedQuizId ? `<button class="cancel" id="deleteAiQuizBtn" style="margin-right:auto; background:#fee2e2; color:#ef4444; border-color:#fca5a5;">🗑️ Delete Quiz</button>` : ''}
-    <button class="cancel" id="closeAiQuizBtn">Close</button>
-    <button class="save" id="submitAiQuizBtn">Submit Answers</button>
+  html += `</div>
+  <div class="note-editor-actions" style="margin-top:0; padding:16px 20px; border-top:1px solid rgba(128,128,128,0.2); display:flex; justify-content:space-between; align-items:center;">
+    <div style="display:flex; gap:8px;">
+      <button class="cancel" id="prevQuizBtn" disabled>◀ Prev</button>
+      <button class="cancel" id="nextQuizBtn" ${quizData.length <= 1 ? 'disabled' : ''}>Next ▶</button>
+    </div>
+    <div id="quizActionButtons" style="display:flex; gap:8px;">
+      ${savedQuizId ? `<button class="cancel" id="deleteAiQuizBtn" style="background:#fee2e2; color:#ef4444; border-color:#fca5a5;">🗑️ Delete</button>` : ''}
+      <button class="cancel" id="closeAiQuizBtn">Close</button>
+      <button class="save" id="submitAiQuizBtn">Submit</button>
+    </div>
   </div>
-  </div>`;
+  `;
 
   modal.innerHTML = html;
   document.body.appendChild(modal);
+
+  // Pagination Update Logic
+  function updateQuizView() {
+    modal.querySelectorAll('.quiz-question-container').forEach((el, i) => {
+      el.style.display = i === currentQuestionIndex ? 'block' : 'none';
+    });
+    modal.querySelectorAll('.quiz-nav-btn').forEach((btn, i) => {
+      if (i === currentQuestionIndex) {
+        btn.classList.add('active');
+        btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+    document.getElementById('prevQuizBtn').disabled = currentQuestionIndex === 0;
+    document.getElementById('nextQuizBtn').disabled = currentQuestionIndex === quizData.length - 1;
+  }
+
+  // Bind Navigation Events
+  document.getElementById('prevQuizBtn').onclick = () => {
+    if (currentQuestionIndex > 0) { currentQuestionIndex--; updateQuizView(); }
+  };
+  document.getElementById('nextQuizBtn').onclick = () => {
+    if (currentQuestionIndex < quizData.length - 1) { currentQuestionIndex++; updateQuizView(); }
+  };
+  modal.querySelectorAll('.quiz-nav-btn').forEach(btn => {
+    btn.onclick = () => {
+      currentQuestionIndex = parseInt(btn.dataset.index);
+      updateQuizView();
+    };
+  });
+
+  // Mark as Answered on Click
+  modal.querySelectorAll('input[type="radio"]').forEach(radio => {
+    radio.addEventListener('change', (e) => {
+      if (isSubmitted) return;
+      const qIndex = parseInt(e.target.name.substring(1));
+      const btn = modal.querySelector(`.quiz-nav-btn[data-index="${qIndex}"]`);
+      if (btn && !btn.classList.contains('answered')) btn.classList.add('answered');
+    });
+  });
 
   let timeLeft = 600; // 10 minutes in seconds
   const timerInterval = setInterval(() => {
@@ -2213,30 +2267,40 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null) {
   }
   
   document.getElementById('submitAiQuizBtn').onclick = () => {
+    if (!confirm("Are you sure you want to submit your answers?")) return;
+    
     clearInterval(timerInterval);
+    isSubmitted = true;
     let score = 0;
+    
     quizData.forEach((q, i) => {
       const selected = document.querySelector(`input[name="q${i}"]:checked`);
       const feedback = document.getElementById(`feedback-q${i}`);
       const explanationDiv = document.getElementById(`explanation-q${i}`);
+      const navBtn = modal.querySelector(`.quiz-nav-btn[data-index="${i}"]`);
+      
       feedback.style.display = 'block';
+      navBtn.classList.remove('answered');
       
       q.userAnswer = selected ? parseInt(selected.value) : null;
 
       // Highlight the correct option in green
       const correctRadio = document.querySelector(`input[name="q${i}"][value="${q.answer}"]`);
       if (correctRadio && correctRadio.parentElement) {
-        correctRadio.parentElement.style.color = '#10b981';
+        correctRadio.parentElement.style.background = '#d1fae5'; // green background
+        correctRadio.parentElement.style.color = '#065f46';
         correctRadio.parentElement.style.fontWeight = 'bold';
       }
 
       if (!selected) {
         feedback.textContent = `⚠️ Please select an answer. (Correct: ${q.options[q.answer]})`;
         feedback.style.color = '#f59e0b'; // orange
+        navBtn.classList.add('wrong'); // counts as wrong
       } else if (parseInt(selected.value) === q.answer) {
         feedback.textContent = "✅ Correct!";
         feedback.style.color = '#10b981'; // green
         score++;
+        navBtn.classList.add('correct');
       } else {
         feedback.textContent = `❌ Incorrect. Correct answer: ${q.options[q.answer]}`;
         feedback.style.color = '#ef4444'; // red
@@ -2244,6 +2308,7 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null) {
         // Strike through the incorrect selection in red
         selected.parentElement.style.color = '#ef4444';
         selected.parentElement.style.textDecoration = 'line-through';
+        navBtn.classList.add('wrong');
       }
 
       // Show explanation
@@ -2251,18 +2316,25 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null) {
         explanationDiv.innerHTML = `💡 <strong>Explanation:</strong> ${escapeHtml(q.explanation)}`;
         explanationDiv.style.display = 'block';
       }
+      
+      // Disable radios
+      modal.querySelectorAll(`input[name="q${i}"]`).forEach(r => r.disabled = true);
     });
     
     const header = modal.querySelector('.note-editor-header');
     header.innerHTML = `<span>Quiz Results (Score: ${score}/${quizData.length})</span>
       <span id="aiQuizTimer" style="color:#6b7280; font-weight:normal; font-size:16px;">Finished</span>`;
     
-    const actionsDiv = modal.querySelector('.note-editor-actions');
+    // Jump to the first incorrectly answered question or back to start
+    currentQuestionIndex = 0;
+    updateQuizView();
+
+    const actionsDiv = document.getElementById('quizActionButtons');
     actionsDiv.innerHTML = `
-      ${savedQuizId ? `<button class="cancel" id="deleteAiQuizBtn" style="margin-right:auto; background:#fee2e2; color:#ef4444; border-color:#fca5a5;">🗑️ Delete Quiz</button>` : ''}
+      ${savedQuizId ? `<button class="cancel" id="deleteAiQuizBtn" style="background:#fee2e2; color:#ef4444; border-color:#fca5a5;">🗑️ Delete</button>` : ''}
       <button class="cancel" id="closeAiQuizBtn">Close</button>
-      <button class="save" id="saveAiQuizBtn">💾 Save Quiz</button>
-      <button class="save" id="retakeAiQuizBtn">🔄 Retake Quiz</button>
+      <button class="save" id="saveAiQuizBtn" style="background:#0ea5e9; border-color:#0284c7;">💾 Save</button>
+      <button class="save" id="retakeAiQuizBtn">🔄 Retake</button>
     `;
 
     if (savedQuizId) {

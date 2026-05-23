@@ -472,6 +472,11 @@ svg {
   background: #eef4f1;
 }
 
+.note-editor-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 /* ===== POINTER ARROW FOR NOTE EDITOR ===== */
 .note-editor::after {
   content: "";
@@ -1151,4 +1156,74 @@ body.dark-mode .quiz-pyq-tag {
   background: #451a03;
   color: #fde68a;
   border-color: #78350f;
+}
+
+/* ===== QUIZ PAGINATION GRID ===== */
+.quiz-nav-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.quiz-nav-btn:hover {
+  background: #f3f4f6;
+}
+.quiz-nav-btn.answered {
+  background: #d1fae5;
+  border-color: #34d399;
+  color: #065f46;
+}
+.quiz-nav-btn.active {
+  border-color: #3b82f6;
+  background: #eff6ff;
+  color: #1d4ed8;
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.3);
+}
+.quiz-nav-btn.correct {
+  background: #22c55e;
+  border-color: #16a34a;
+  color: white;
+}
+.quiz-nav-btn.wrong {
+  background: #ef4444;
+  border-color: #dc2626;
+  color: white;
+}
+
+body.dark-mode .quiz-nav-btn {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #e0e0e0;
+}
+body.dark-mode .quiz-nav-btn:hover {
+  background: #333;
+}
+body.dark-mode .quiz-nav-btn.answered {
+  background: #064e3b;
+  border-color: #059669;
+  color: #d1fae5;
+}
+body.dark-mode .quiz-nav-btn.active {
+  border-color: #3b82f6;
+  background: #1e3a8a;
+  color: #bfdbfe;
+}
+body.dark-mode .quiz-nav-btn.correct {
+  background: #15803d;
+  border-color: #166534;
+  color: white;
+}
+body.dark-mode .quiz-nav-btn.wrong {
+  background: #b91c1c;
+  border-color: #991b1b;
+  color: white;
 }
