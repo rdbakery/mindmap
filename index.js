@@ -2155,10 +2155,9 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null) {
   <div style="padding:20px; overflow-y:auto; flex:1;">`;
 
   quizData.forEach((q, i) => {
-    const pyqBadge = q.pyq ? `<div style="display:inline-block; background:#fef08a; color:#b45309; padding:2px 8px; border-radius:12px; font-size:12px; font-weight:bold; margin-bottom:6px;">📚 PYQ: ${escapeHtml(q.pyq)}</div>` : '';
+    const pyqSuffix = q.pyq ? `<span class="quiz-pyq-tag">(${escapeHtml(q.pyq)})</span>` : '';
     html += `<div style="margin-bottom:20px;">
-      ${pyqBadge}
-      <p style="margin-top:0; margin-bottom:8px; font-weight:600;">Q${i+1}: ${escapeHtml(q.question)}</p>
+      <p style="margin-top:0; margin-bottom:8px; font-weight:600; line-height:1.5;">Q${i+1}: ${escapeHtml(q.question)}${pyqSuffix}</p>
       ${q.options.map((opt, j) => `
         <label style="display:flex; align-items:flex-start; gap:8px; margin-bottom:6px; cursor:pointer;">
           <input type="radio" name="q${i}" value="${j}" style="margin-top:2px;"> <span style="font-size:14px; line-height:1.4;">${escapeHtml(opt)}</span>

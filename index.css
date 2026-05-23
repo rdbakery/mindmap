@@ -1132,3 +1132,23 @@ body.dark-mode .import-btn:hover {
   background: #333;
   border-color: #6aa84f;
 }
+
+/* ===== QUIZ PYQ TAG ===== */
+.quiz-pyq-tag {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 1px 8px;
+  background: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  vertical-align: baseline;
+}
+body.dark-mode .quiz-pyq-tag {
+  background: #451a03;
+  color: #fde68a;
+  border-color: #78350f;
+}
