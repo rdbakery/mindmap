@@ -362,6 +362,7 @@ function toggleDarkMode() {
 async function refreshSelector(){
   mapSelector.innerHTML="";
   const maps=await listMaps();
+  maps.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
   maps.forEach(m=>{
     const o=document.createElement("option");
     o.value=m.id; o.textContent=m.name;
@@ -402,6 +403,7 @@ async function refreshQuizSelector() {
   quizSelector.appendChild(defaultOpt);
   
   const quizzes = await listQuizzes();
+  quizzes.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
   quizzes.forEach(q => {
     const o = document.createElement("option");
     o.value = q.id;
