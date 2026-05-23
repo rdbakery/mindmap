@@ -2504,7 +2504,6 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
       const explanationDiv = document.getElementById(`explanation-q${i}`);
       const navBtn = modal.querySelector(`.quiz-nav-btn[data-index="${i}"]`);
       
-      feedback.style.display = 'block';
       navBtn.classList.remove('answered');
       
       q.userAnswer = selected ? parseInt(selected.value) : null;
@@ -2518,17 +2517,16 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
       }
 
       if (!selected) {
+        feedback.style.display = 'block';
         feedback.innerHTML = `⚠️ <span class="lang-en">Please select an answer.</span><span class="lang-hi">कृपया एक उत्तर चुनें।</span> (Correct: ${getCorrectOptHtml(q)})`;
         feedback.style.color = '#f59e0b'; // orange
         navBtn.classList.add('unattempted'); // counts as wrong but visualizes as unattempted
       } else if (parseInt(selected.value) === q.answer) {
-        feedback.innerHTML = `<span class="lang-en">✅ Correct!</span><span class="lang-hi">✅ सही!</span>`;
-        feedback.style.color = '#10b981'; // green
+        feedback.style.display = 'none';
         score++;
         navBtn.classList.add('correct');
       } else {
-        feedback.innerHTML = `<span class="lang-en">❌ Incorrect. Correct answer:</span><span class="lang-hi">❌ गलत। सही उत्तर:</span> ${getCorrectOptHtml(q)}`;
-        feedback.style.color = '#ef4444'; // red
+        feedback.style.display = 'none';
         
         // Strike through the incorrect selection in red
         selected.parentElement.style.color = '#ef4444';
