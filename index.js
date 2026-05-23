@@ -2387,6 +2387,7 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
 
   let timeLeft = timerSeconds;
   let timerInterval = null;
+  let isTimeUp = false;
   
   if (timeLeft > 0) {
     timerInterval = setInterval(() => {
@@ -2398,6 +2399,7 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
       
       if (timeLeft <= 0) {
         clearInterval(timerInterval);
+        isTimeUp = true;
         document.getElementById('submitAiQuizBtn').click();
         alert("Time is up! Your answers have been automatically submitted.");
       }
@@ -2424,7 +2426,7 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
   }
   
   document.getElementById('submitAiQuizBtn').onclick = () => {
-    if (!confirm("Are you sure you want to submit your answers?")) return;
+    if (!isTimeUp && !confirm("Are you sure you want to submit your answers?")) return;
     
     if (timerInterval) clearInterval(timerInterval);
     isSubmitted = true;
@@ -2538,3 +2540,11 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
     };
   };
 }
+
+/* ================= PREVENT ACCIDENTAL REFRESH ================= */
+window.addEventListener('beforeunload', function (e) {
+  if (document.getElementById('aiQuizModal')) {
+    e.preventDefault();
+    e.returnValue = '';
+  }
+});
