@@ -9,7 +9,9 @@ const APP_CONFIG = {
     focusMode: true,
     importantMarker: true,
     search: true,
-    darkMode: true
+    darkMode: true,
+    exportImage: false,
+    exportPDF: false
   },
   dev: {
     mockAIQuizResponse: false, // Set to true to return mock quiz data
@@ -1043,6 +1045,16 @@ async function render(){
   const filterBtn = document.getElementById("filterBtn");
   if (filterBtn) {
     filterBtn.style.display = APP_CONFIG.features.pyq ? "" : "none";
+  }
+
+  const exportPngBtn = document.getElementById("exportPngBtn");
+  if (exportPngBtn) {
+    exportPngBtn.style.display = APP_CONFIG.features.exportImage ? "" : "none";
+  }
+
+  const exportPdfBtn = document.getElementById("exportPdfBtn");
+  if (exportPdfBtn) {
+    exportPdfBtn.style.display = APP_CONFIG.features.exportPDF ? "" : "none";
   }
 
   updateSearchIndicator(); // ✅ add here
