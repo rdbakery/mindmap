@@ -1,0 +1,126 @@
+{
+  "id": "hkox0e5oy0r",
+  "text": "3. English",
+  "collapsed": false,
+  "children": [
+    {
+      "id": "l1j2xu96z5",
+      "text": "Grammar",
+      "collapsed": true,
+      "important": false,
+      "note": "",
+      "youtube": "",
+      "children": [
+        {
+          "id": "ulwmpas29fn",
+          "text": "Active ⬌ Passive Voice",
+          "collapsed": true,
+          "important": false,
+          "note": "ACTIVE ↔ PASSIVE VOICE\n│\n├── PRESENT\n│   │\n│   ├── Simple\n│   │   Active   → Sub + V1(s/es) + Obj\n│   │              👉 She writes a letter\n│   │   Passive  → Obj + is/am/are + V3 + by + Sub\n│   │              👉 A letter is written by her\n│   │\n│   ├── Continuous\n│   │   Active   → Sub + is/am/are + V1+ing + Obj\n│   │              👉 He is playing cricket\n│   │   Passive  → Obj + is/am/are + being + V3 + by + Sub\n│   │              👉 Cricket is being played by him\n│   │\n│   ├── Perfect\n│   │   Active   → Sub + has/have + V3 + Obj\n│   │              👉 They have completed the work\n│   │   Passive  → Obj + has/have + been + V3 + by + Sub\n│   │              👉 The work has been completed by them\n│   │\n│   └── Perfect Continuous ❌\n│       👉 She has been studying for 2 hours\n│       👉 (No Passive possible)\n│\n├── PAST\n│   │\n│   ├── Simple\n│   │   Active   → Sub + V2 + Obj\n│   │              👉 He wrote a letter\n│   │   Passive  → Obj + was/were + V3 + by + Sub\n│   │              👉 A letter was written by him\n│   │\n│   ├── Continuous\n│   │   Active   → Sub + was/were + V1+ing + Obj\n│   │              👉 She was reading a book\n│   │   Passive  → Obj + was/were + being + V3 + by + Sub\n│   │              👉 A book was being read by her\n│   │\n│   ├── Perfect\n│   │   Active   → Sub + had + V3 + Obj\n│   │              👉 They had finished the task\n│   │   Passive  → Obj + had + been + V3 + by + Sub\n│   │              👉 The task had been finished by them\n│   │\n│   └── Perfect Continuous ❌\n│       👉 He had been working for 2 hours\n│       👉 (No Passive possible)\n│\n├── FUTURE\n│   │\n│   ├── Simple\n│   │   Active   → Sub + will/shall + V1 + Obj\n│   │              👉 They will visit the museum\n│   │   Passive  → Obj + will/shall + be + V3 + by + Sub\n│   │              👉 The museum will be visited by them\n│   │\n│   ├── Continuous ❌\n│   │   👉 She will be cooking dinner\n│   │   👉 (No Passive possible)\n│   │\n│   ├── Perfect\n│   │   Active   → Sub + will/shall + have + V3 + Obj\n│   │              👉 He will have completed the work\n│   │   Passive  → Obj + will/shall + have + been + V3 + by + Sub\n│   │              👉 The work will have been completed by him\n│   │\n│   └── Perfect Continuous ❌\n│       👉 They will have been traveling\n│       👉 (No Passive possible)\n│\n└── RULE\n    ├── Object → Subject\n    ├── Use V3 (Past Participle)\n    ├── Add helping verb (is/am/are/was/were/been)\n    └── by + subject (optional sometimes)",
+          "youtube": "",
+          "children": [],
+          "_h": 41,
+          "_x": 565,
+          "_y": 60.5,
+          "_realH": 41,
+          "_realW": 216
+        },
+        {
+          "id": "h5whyw2ojhm",
+          "text": "Direct → Indirect",
+          "collapsed": true,
+          "important": false,
+          "note": "NARRATION (DIRECT → INDIRECT)\n│\n├── 1. STRUCTURE\n│   ├── Reporting Verb → He said\n│   ├── Quoted Speech → \"I am fine\"\n│   └── Indirect → He said that he was fine\n│\n├── 2. TENSE CHANGE (Only if Reporting Verb is Past)\n│   │\n│   ├── Present → Past\n│   │   👉 \"I am happy\" → was happy\n│   │\n│   ├── Present Continuous → Past Continuous\n│   │   👉 \"I am playing\" → was playing\n│   │\n│   ├── Present Perfect → Past Perfect\n│   │   👉 \"I have done\" → had done\n│   │\n│   ├── Simple Past → Past Perfect\n│   │   👉 \"I went\" → had gone\n│   │\n│   ├── Past Perfect → No Change\n│   │   👉 \"I had finished\" → had finished\n│   │\n│   └── Future (will) → would\n│       👉 \"I will go\" → would go\n│\n├── 3. PRONOUN CHANGE\n│   │\n│   ├── I → He/She\n│   ├── You → I/He/She/They\n│   ├── We → They\n│   ├── My → His/Her\n│   └── Our → Their\n│\n│   👉 \"I love my dog\"\n│   → He said that he loved his dog\n│\n├── 4. TIME / PLACE CHANGE\n│   │\n│   ├── Today → That day\n│   ├── Tomorrow → The next day\n│   ├── Yesterday → The previous day\n│   ├── Now → Then\n│   ├── Here → There\n│   └── This → That\n│\n│   👉 \"I will go tomorrow\"\n│   → He said that he would go the next day\n│\n├── 5. SENTENCE TYPES (MOST IMPORTANT)\n│   │\n│   ├── (A) ASSERTIVE (STATEMENTS)\n│   │   ├── said → said that\n│   │   └── Example:\n│   │       \"I am happy\"\n│   │       → He said that he was happy\n│   │\n│   ├── (B) NEGATIVE STATEMENTS\n│   │   ├── Keep \"not\"\n│   │   └── Example:\n│   │       \"I do not like tea\"\n│   │       → She said that she did not like tea\n│   │\n│   ├── (C) INTERROGATIVE (QUESTIONS)\n│   │   │\n│   │   ├── YES/NO\n│   │   │   ├── Use if / whether\n│   │   │   └── Remove question format\n│   │   │\n│   │   │   👉 \"Do you play?\"\n│   │   │   → He asked if I played\n│   │   │\n│   │   ├── WH- QUESTIONS\n│   │   │   ├── Keep WH word\n│   │   │   └── Statement form\n│   │   │\n│   │   │   👉 \"Where are you going?\"\n│   │   │   → He asked where I was going\n│   │\n│   ├── (D) IMPERATIVE (ORDER / REQUEST / ADVICE)\n│   │   │\n│   │   ├── said to → told / requested / advised / ordered\n│   │   ├── Use → to + V1\n│   │   └── Negative → not to + V1\n│   │\n│   │   ├── Examples:\n│   │   │   \"Sit down\"\n│   │   │   → He told me to sit down\n│   │   │\n│   │   │   \"Please help me\"\n│   │   │   → She requested me to help her\n│   │   │\n│   │   │   \"Take rest\"\n│   │   │   → Doctor advised me to take rest\n│   │\n│   │   ├── NEGATIVE IMPERATIVE 🔥\n│   │   │   \"Don't + V1\" → not to + V1\n│   │   │\n│   │   │   👉 \"Don't wear this watch\"\n│   │   │   → He told me not to wear that watch\n│   │   │\n│   │   │   ❌ to not wear\n│   │   │   ❌ that not to\n│   │   │   ✔ not to wear\n│   │\n│   ├── (E) EXCLAMATORY (EMOTION)\n│   │   │\n│   │   ├── Remove \"!\"\n│   │   ├── Use → exclaimed with joy/sorrow/surprise\n│   │   └── Use \"that\"\n│   │\n│   │   ├── Examples:\n│   │   │   \"What a beautiful place!\"\n│   │   │   → He exclaimed that it was a very beautiful place\n│   │   │\n│   │   │   \"Hurrah! We won\"\n│   │   │   → She exclaimed with joy that they had won\n│   │\n│   ├── (F) OPTATIVE (WISH / PRAYER)\n│   │   │\n│   │   ├── Use → wished / prayed\n│   │   └── Use \"that\"\n│   │\n│   │   ├── Examples:\n│   │   │   \"May you succeed\"\n│   │   │   → He wished that I might succeed\n│   │   │\n│   │   │   \"God bless you\"\n│   │   │   → She prayed that God might bless me\n│\n├── 6. PRONOUN CASE\n│   │\n│   ├── 1st → I, We → me, us\n│   ├── 2nd → You → you\n│   └── 3rd → He/She/They → him/her/them\n│\n└── 7. COMMON RULES\n    ├── Remove quotes (\" \")\n    ├── Use connectors → that / if / WH\n    ├── Change pronoun\n    ├── Change tense (if needed)\n    └── Change time/place words",
+          "youtube": "",
+          "children": [],
+          "_h": 41,
+          "_x": 565,
+          "_y": 125.5,
+          "_realH": 41,
+          "_realW": 171
+        },
+        {
+          "id": "1hofxd18ydy",
+          "text": "Gerund vs Infinitive vs Causative",
+          "collapsed": true,
+          "important": false,
+          "note": "GERUND vs INFINITIVE vs CAUSATIVE\n│\n├── GERUND (V + ing)\n│   │\n│   ├── Use:\n│   │   ├── Habit\n│   │   ├── Enjoyment\n│   │   ├── Real/Past Action\n│   │   ├── After Preposition ⭐\n│   │\n│   ├── Structure → V + ing\n│   │\n│   ├── Rule:\n│   │   👉 After preposition → always V+ing\n│   │\n│   ├── Examples:\n│   │   👉 She is fond of reading\n│   │   👉 He is good at playing\n│   │\n│   ├── Verbs:\n│   │   enjoy, avoid, finish, suggest, keep\n│   │\n│   └── Example:\n│       👉 I enjoy playing cricket\n│\n├── INFINITIVE (to + V1)\n│   │\n│   ├── Use:\n│   │   ├── Purpose\n│   │   ├── Decision\n│   │   ├── Future Plan\n│   │   ├── After adjectives ⭐\n│   │\n│   ├── Structure → to + V1\n│   │\n│   ├── Examples:\n│   │   👉 I am happy to see you\n│   │   👉 He went to market to buy fruits\n│   │\n│   ├── Verbs:\n│   │   want, decide, plan, hope, promise\n│   │\n│   └── Example:\n│       👉 I want to go home\n│\n├── CAUSATIVE VERBS\n│   │\n│   ├── Meaning:\n│   │   👉 Make someone do something\n│   │\n│   ├── (A) Bare Infinitive\n│   │   ├── Verbs → make, let\n│   │   ├── help → V1 / to V1 ⭐\n│   │   ├── Structure → Sub + V + Obj + V1\n│   │   └── Example:\n│   │       👉 He made me do it\n│   │       👉 She helped me (to) complete the work\n│   │\n│   └── (B) To-Infinitive\n│       ├── Verbs → tell, ask, allow, force\n│       ├── Structure → Sub + V + Obj + to + V1\n│       └── Example:\n│           👉 He told me to go\n│\n└── QUICK DIFFERENCE\n    ├── Gerund → real / experience / after preposition\n    ├── Infinitive → purpose / future / decision\n    └── Causative → force / request action",
+          "youtube": "",
+          "children": [],
+          "_h": 41,
+          "_x": 565,
+          "_y": 190.5,
+          "_realH": 41,
+          "_realW": 283
+        },
+        {
+          "id": "fz1qdzcorz",
+          "text": "If cluase",
+          "collapsed": true,
+          "important": false,
+          "note": "CONDITIONAL SENTENCES (IF-CLAUSES)\n│\n├── 1. TYPES OF CONDITIONALS\n│   │\n│   ├── (A) ZERO CONDITIONAL (Universal Truth)\n│   │   ├── If + Present → Present\n│   │   └── 👉 If you heat water, it boils\n│   │\n│   ├── (B) FIRST CONDITIONAL (Real Future)\n│   │   ├── If + Present → will/shall + V1\n│   │   └── 👉 If it rains, I will stay home\n│   │\n│   ├── (C) SECOND CONDITIONAL (Unreal / Imaginary)\n│   │   ├── If + Past → would/could + V1\n│   │   └── 👉 If I won the lottery, I would buy a car\n│   │\n│   ├── (D) THIRD CONDITIONAL (Past Unreal)\n│   │   ├── If + Past Perfect → would/could + have + V3\n│   │   └── 👉 If I had studied, I would have passed\n│\n├── 2. IMPORTANT RULE\n│   ├── ❌ Never use \"will\" in IF-clause\n│   └── ✔ Use Present instead\n│\n│   👉 ❌ If it will rain, I will go\n│   👉 ✔ If it rains, I will go\n│\n├── 3. OTHER CONDITION WORDS\n│   ├── unless = if not\n│   │   👉 Unless you work hard, you will fail\n│   │\n│   ├── when, before, after\n│   ├── as soon as\n│   ├── until / till\n│   ├── while\n│   └── as long as\n│\n├── 4. SEQUENCE OF TENSE\n│   │\n│   ├── Past → Past\n│   │   👉 He said he was tired\n│   │\n│   ├── Past → Present (Universal Truth)\n│   │   👉 He said that the sun rises in the east\n│   │\n│   └── Present → Any tense\n│       👉 He says he will come / came / comes\n│\n├── 5. TIME CLAUSES\n│   │\n│   ├── Rule:\n│   │   ❌ No future in clause\n│   │   ✔ Present in clause + Future in main\n│   │\n│   ├── Examples:\n│   │   👉 I will call you when he comes\n│   │   👉 I will eat after he arrives\n│   │\n│   ├── COMMON ERROR\n│   │   ❌ When he will come, I will go\n│   │   ✔ When he comes, I will go\n│\n├── 6. COMMON STRUCTURE\n│   │\n│   ├── If + Present → will + V1\n│   ├── If + Past → would + V1\n│   └── If + Past Perfect → would have + V3\n│\n└── 7. SSC EXAM FOCUS\n    │\n    ├── MOST ASKED\n    │   ├── First Conditional\n    │   ├── Third Conditional\n    │   ├── Time Clause (when, after, before)\n    │   └── unless\n    │\n    ├── COMMON ERROR TYPES\n    │   ├── will in IF-clause ❌\n    │   ├── wrong tense in time clause ❌\n    │   ├── If I would… ❌\n    │\n    ├── IDENTIFICATION TRICK\n    │   ├── Real → First\n    │   ├── Imaginary → Second\n    │   ├── Past regret → Third\n    │\n    └── 1-LINE RULE\n        👉 If-clause NEVER takes future tense",
+          "youtube": "",
+          "children": [],
+          "_h": 41,
+          "_x": 565,
+          "_y": 255.5,
+          "_realH": 41,
+          "_realW": 114
+        },
+        {
+          "id": "kiwy7s1qx4n",
+          "text": "Not use ing",
+          "collapsed": true,
+          "important": false,
+          "note": "VERBS USED IN SIMPLE PRESENT (NOT CONTINUOUS)\n│\n├── 1. RULE\n│   └── Some verbs are NOT used in continuous tense\n│       → Use Simple Present instead\n│\n├── 2. TYPES OF VERBS\n│\n│   ├── (A) Verbs of Perception\n│   │   ├── see\n│   │   ├── hear\n│   │   ├── smell\n│   │   ├── taste\n│   │   └── feel\n│\n│   ├── (B) Verbs of Thinking / Knowledge\n│   │   ├── think (opinion)\n│   │   ├── know\n│   │   ├── understand\n│   │   ├── believe\n│   │   └── remember\n│\n│   ├── (C) Possession Verbs\n│   │   ├── have / has\n│   │   ├── own\n│   │   ├── possess\n│   │   └── belong\n│\n│   ├── (D) Emotion / Feeling Verbs\n│   │   ├── like\n│   │   ├── love\n│   │   ├── hate\n│   │   ├── want\n│   │   └── desire\n│\n│   └── (E) Other Verbs\n│       ├── seem\n│       ├── appear\n│       └── imagine\n│\n├── 3. EXAMPLES\n│\n│   ├── ❌ My brother is owning a car.\n│   └── ✅ My brother owns a car.\n│\n│   ├── ❌ I am knowing the answer.\n│   └── ✅ I know the answer.\n│\n│   ├── ❌ She is liking ice cream.\n│   └── ✅ She likes ice cream.\n│\n│   ├── ❌ I am understanding this topic.\n│   └── ✅ I understand this topic.\n│\n│   ├── ❌ He is having a car.\n│   └── ✅ He has a car.\n│\n├── 4. EXAM TRICK ⭐\n│   ├── If verb shows:\n│   │   → feeling\n│   │   → possession\n│   │   → knowledge\n│   │\n│   └── 👉 Use SIMPLE PRESENT (never continuous)\n│\n└── 5. EXCEPTION ⭐\n    ├── Some verbs CAN be continuous with different meaning:\n    │\n    ├── have\n    │   ├── I have a car (possession)\n    │   └── I am having lunch (action) ✅\n    │\n    ├── think\n    │   ├── I think he is right (opinion)\n    │   └── I am thinking about it (process) ✅\n    │\n    └── see\n        ├── I see the bird (perception)\n        └── I am seeing a doctor (meeting) ✅",
+          "youtube": "",
+          "children": [],
+          "_h": 41,
+          "_x": 565,
+          "_y": 320.5,
+          "_realH": 41,
+          "_realW": 134
+        }
+      ],
+      "_h": 41,
+      "_x": 320,
+      "_y": 60.5,
+      "_realH": 41,
+      "_realW": 125
+    },
+    {
+      "id": "n7x7yyrrga",
+      "text": "One word substitution",
+      "collapsed": true,
+      "important": false,
+      "note": "",
+      "youtube": "",
+      "children": [
+        {
+          "id": "soec36dry2s",
+          "text": "15.04.2026",
+          "collapsed": true,
+          "important": false,
+          "note": "Malster\nMeaning: Makes/deals in malt\nHindi: माल्ट बनाने/बेचने वाला\n\nMalingerer\nMeaning: Fakes illness to avoid duty\nHindi: बीमारी का बहाना करने वाला\n\nMud-slinger\nMeaning: Damages others’ reputation by accusations\nHindi: बदनामी करने वाला\n\nDiffident\nMeaning: Lacking confidence; shy and hesitant Hindi: आत्मविश्वास की कमी वाला / संकोची",
+          "youtube": "",
+          "children": [],
+          "_h": 41,
+          "_x": 641,
+          "_y": 125.5,
+          "_realH": 41,
+          "_realW": 127
+        }
+      ],
+      "_h": 41,
+      "_x": 320,
+      "_y": 125.5,
+      "_realH": 41,
+      "_realW": 210
+    }
+  ],
+  "_h": 106,
+  "_x": 80,
+  "_y": 93,
+  "_realH": 41,
+  "_realW": 120
+}

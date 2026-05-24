@@ -14,7 +14,18 @@ const APP_CONFIG = {
   dev: {
     mockAIQuizResponse: false, // Set to true to return mock quiz data
     alwaysPromptApiKey: false  // Set to true to always ask for API key
-  }
+  },
+  preImportedMaps: [
+    { label: "1. Maths", file: "maths.json" },
+    { label: "2. Reasoning", file: "Reasoning.json" },
+    { label: "3. English", file: "English.json" },
+    { label: "4. Polity", file: "Polity.json" },
+    { label: "5. Static Gk", file: "Static_Gk.json" },
+    { label: "6. History", file: "History.json" },
+    { label: "7. Economy", file: "Economy.json" },
+    { label: "8. Battles", file: "Battles.json" },
+    { label: "TRE4 Computer Science", file: "TRE4_Computer_Science.json" }
+  ]
 };
 
 /* ================= UTIL ================= */
@@ -363,12 +374,26 @@ async function refreshSelector(){
   mapSelector.innerHTML="";
   const maps=await listMaps();
   maps.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
+
+  const savedGroup = document.createElement("optgroup");
+  savedGroup.label = "Saved Mind Maps";
   maps.forEach(m=>{
     const o=document.createElement("option");
     o.value=m.id; o.textContent=m.name;
     if(m.id===activeId) o.selected=true;
-    mapSelector.appendChild(o);
+    savedGroup.appendChild(o);
   });
+  mapSelector.appendChild(savedGroup);
+
+  const preImportedGroup = document.createElement("optgroup");
+  preImportedGroup.label = "Pre Imported";
+  APP_CONFIG.preImportedMaps.forEach(map=>{
+    const option = document.createElement("option");
+    option.value = `preimport:${map.file}`;
+    option.textContent = map.label;
+    preImportedGroup.appendChild(option);
+  });
+  mapSelector.appendChild(preImportedGroup);
 }
 
 async function refreshQuizSelector() {
@@ -439,6 +464,11 @@ function toggleRecursive(node, collapse) {
 
 
 mapSelector.onchange = async e => {
+  if (e.target.value.startsWith("preimport:")) {
+    await importPreImportedMap(e.target.value.replace("preimport:", ""));
+    return;
+  }
+
   activeId = e.target.value;
   currentMap = await loadMap(activeId);
   undoStack = [];
@@ -1408,42 +1438,69 @@ async function importJSON(e){
 
   const r = new FileReader();
   r.onload = async () => {
-    const data = JSON.parse(r.result);
-
-    if(!data.text){
-      alert("Invalid mind map file.");
-      return;
-    }
-
-    const rootText = data.text.trim().toLowerCase();
-    const maps = await listMaps();
-
-    const exists = maps.some(m =>
-      m.name && m.name.trim().toLowerCase() === rootText
-    );
-
-    if(exists){
-      alert("Mind map already exists.");
+    try {
+      const data = JSON.parse(r.result);
+      await importMindMapData(data);
+    } catch (err) {
+      alert(err.message || "Invalid mind map file.");
+    } finally {
       e.target.value = "";
-      return;
     }
-
-    // ✅ safe to import
-    activeId = uid();
-    currentMap = { ...data, id: activeId };
-
-    await saveMap(
-      activeId,
-      currentMap.text || "Imported Map",
-      currentMap
-    );
-
-    refreshSelector();
-    render();
-    e.target.value = "";
   };
 
   r.readAsText(f);
+}
+
+async function importPreImportedMap(fileName){
+  if (!fileName) return;
+
+  try {
+    const response = await fetch(`notes/${fileName}`);
+    if (!response.ok) {
+      throw new Error("Unable to load pre imported mind map.");
+    }
+
+    const data = await response.json();
+    await importMindMapData(data);
+  } catch (err) {
+    alert(err.message || "Unable to import pre imported mind map.");
+  } finally {
+    await refreshSelector();
+  }
+}
+
+async function importMindMapData(data){
+  if(!data || !data.text){
+    throw new Error("Invalid mind map file.");
+  }
+
+  const rootText = data.text.trim().toLowerCase();
+  const maps = await listMaps();
+
+  const exists = maps.some(m =>
+    m.name && m.name.trim().toLowerCase() === rootText
+  );
+
+  if(exists){
+    throw new Error("Mind map already exists.");
+  }
+
+  activeId = uid();
+  currentMap = { ...data, id: activeId };
+  undoStack = [];
+  redoStack = [];
+  allCollapsed = false;
+  resetQuizState();
+
+  await saveMap(
+    activeId,
+    currentMap.text || "Imported Map",
+    currentMap
+  );
+
+  await refreshSelector();
+  render();
+  showFlashMessage("✅ Mind map imported");
 }
 
 function exportPNG() {
