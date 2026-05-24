@@ -366,7 +366,50 @@ currentMap={
   refreshSelector();
   refreshQuizSelector();
   render();
+  showBackupWarningPopup();
 })();
+
+function showBackupWarningPopup() {
+  const existingOverlay = document.getElementById('backupWarningOverlay');
+  const existingModal = document.getElementById('backupWarningModal');
+  if (existingOverlay) existingOverlay.remove();
+  if (existingModal) existingModal.remove();
+
+  const overlay = document.createElement('div');
+  overlay.id = 'backupWarningOverlay';
+  overlay.style.cssText = "position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:99998;";
+  document.body.appendChild(overlay);
+
+  const modal = document.createElement('div');
+  modal.id = 'backupWarningModal';
+  modal.className = "note-editor";
+  modal.style.cssText = "position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;max-width:400px;padding:24px;z-index:99999;box-sizing:border-box;cursor:default;text-align:center;";
+
+  modal.innerHTML = `
+    <div style="margin-bottom: 20px;">
+      <div style="font-size: 40px; margin-bottom: 10px;">⚠️</div>
+      <h3 style="margin: 0 0 10px 0; font-size: 20px;">Important Notice</h3>
+      <p style="margin: 0; font-size: 15px; line-height: 1.5; color: inherit; opacity: 0.9;">
+        Mindmaps and quizzes are stored locally on your device. 
+        <br><br>
+        <strong>Before clearing your browser cache, make sure to export and back up your mindmaps to avoid losing your data.</strong>
+      </p>
+    </div>
+    <div class="note-editor-actions" style="justify-content: center; margin-top: 0;">
+      <button id="closeBackupWarningBtn" class="save" style="width: 100%; padding: 12px; font-weight: bold;">I Understand</button>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  const closeModal = () => {
+    modal.remove();
+    overlay.remove();
+  };
+
+  document.getElementById('closeBackupWarningBtn').onclick = closeModal;
+  overlay.onclick = closeModal;
+}
 
 /* ================= MAP MGMT ================= */
 function toggleDarkMode() {
