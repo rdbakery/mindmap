@@ -27,6 +27,9 @@ const APP_CONFIG = {
     { label: "7. Economy", file: "Economy.json" },
     { label: "8. Battles", file: "Battles.json" },
     { label: "TRE4 Computer Science", file: "TRE4_Computer_Science.json" }
+  ],
+  preImportedQuizzes: [
+    { label: "History Quiz", file: "History_Quiz.json" }
   ]
 };
 
@@ -411,6 +414,13 @@ async function refreshQuizSelector() {
     
     quizSelector.onchange = async e => {
       if (!e.target.value) return;
+
+      if (e.target.value.startsWith("preimport:")) {
+        await importPreImportedQuiz(e.target.value.replace("preimport:", ""));
+        e.target.value = "";
+        return;
+      }
+
       const quizId = e.target.value;
       const quizData = await loadQuiz(quizId);
       if (quizData && quizData.questions) {
@@ -431,14 +441,32 @@ async function refreshQuizSelector() {
   
   const quizzes = await listQuizzes();
   quizzes.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
-  quizzes.forEach(q => {
-    const o = document.createElement("option");
-    o.value = q.id;
-    o.textContent = q.name;
-    quizSelector.appendChild(o);
-  });
   
-  quizSelector.style.display = quizzes.length > 0 ? "inline-block" : "none";
+  if (quizzes.length > 0) {
+    const savedGroup = document.createElement("optgroup");
+    savedGroup.label = "Saved Quizzes";
+    quizzes.forEach(q => {
+      const o = document.createElement("option");
+      o.value = q.id;
+      o.textContent = q.name;
+      savedGroup.appendChild(o);
+    });
+    quizSelector.appendChild(savedGroup);
+  }
+
+  if (APP_CONFIG.preImportedQuizzes && APP_CONFIG.preImportedQuizzes.length > 0) {
+    const preImportedGroup = document.createElement("optgroup");
+    preImportedGroup.label = "Pre Imported";
+    APP_CONFIG.preImportedQuizzes.forEach(quiz => {
+      const option = document.createElement("option");
+      option.value = `preimport:${quiz.file}`;
+      option.textContent = quiz.label;
+      preImportedGroup.appendChild(option);
+    });
+    quizSelector.appendChild(preImportedGroup);
+  }
+  
+  quizSelector.style.display = (quizzes.length > 0 || (APP_CONFIG.preImportedQuizzes && APP_CONFIG.preImportedQuizzes.length > 0)) ? "inline-block" : "none";
 }
 
 let allCollapsed = false;
@@ -1545,6 +1573,49 @@ async function importMindMapData(data){
   await refreshSelector();
   render();
   showFlashMessage("✅ Mind map imported");
+}
+
+async function importPreImportedQuiz(fileName){
+  if (!fileName) return;
+
+  try {
+    const response = await fetch(`quiz/${fileName}`);
+    if (!response.ok) {
+      throw new Error("Unable to load pre imported quiz.");
+    }
+
+    const data = await response.json();
+    await importQuizData(data, fileName);
+  } catch (err) {
+    alert(err.message || "Unable to import pre imported quiz.");
+  } finally {
+    await refreshQuizSelector();
+  }
+}
+
+async function importQuizData(data, fileName = ""){
+  if(!data || !data.questions){
+    throw new Error("Invalid quiz file.");
+  }
+
+  let quizName = data.mapName ? `${data.mapName} - Quiz` : (fileName.replace('.json', '') || "Imported Quiz");
+  const quizzes = await listQuizzes();
+
+  let counter = 1;
+  let originalName = quizName;
+  while (quizzes.some(q => q.name && q.name.trim().toLowerCase() === quizName.trim().toLowerCase())) {
+    quizName = `${originalName} (${counter})`;
+    counter++;
+  }
+
+  const newQuizId = uid();
+  await saveQuiz(newQuizId, quizName, data);
+
+  await refreshQuizSelector();
+  showFlashMessage("✅ Quiz imported successfully");
+
+  // Automatically start the imported quiz
+  showAIQuizModal(JSON.parse(JSON.stringify(data.questions)), true, newQuizId, data.timerSeconds !== undefined ? data.timerSeconds : 600);
 }
 
 function exportPNG() {
