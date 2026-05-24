@@ -691,6 +691,17 @@ function viewExamHistory(id){
     left = rect.left - canvasRect.left - POPUP_WIDTH;
   }
 
+  if (left < 10) {
+    left = 10;
+  }
+  const popupHeight = popup.offsetHeight;
+  if (top + popupHeight > canvasEl.scrollHeight) {
+    top = canvasEl.scrollHeight - popupHeight - 10;
+  }
+  if (top < 10) {
+    top = 10;
+  }
+
   popup.style.left = left + "px";
   popup.style.top = top + "px";
 }
@@ -816,6 +827,9 @@ function editYoutube(id){
   if (top + 180 > window.innerHeight) {
     top = window.innerHeight - 200;
   }
+
+  if (left < 10) left = 10;
+  if (top < 10) top = 10;
 
   editor.style.left = left + "px";
   editor.style.top = top + "px";
@@ -976,6 +990,10 @@ function resize(n){
     my=Math.max(my,n._y+160);
     n.children.forEach(w);
   })(n);
+
+  mx = Math.max(mx, window.innerWidth);
+  my = Math.max(my, window.innerHeight - 64);
+
   canvas.style.width=mx+"px";
   canvas.style.height=my+"px";
   svg.setAttribute("width",mx);
@@ -1286,6 +1304,20 @@ let top = rect.top - canvasRect.top + canvas.scrollTop;
   if (left + 420 > canvas.scrollWidth){
     left = rect.left - canvasRect.left + canvas.scrollLeft - 420 - 12;
     arrowClass = "arrow-right";
+  }
+
+  if (left < 10) {
+    left = 10;
+    arrowClass = "arrow-left";
+  }
+
+  const boxHeight = viewer.offsetHeight;
+  if (top + boxHeight > canvas.scrollHeight) {
+    top = canvas.scrollHeight - boxHeight - 10;
+  }
+
+  if (top < 10) {
+    top = 10;
   }
 
   viewer.classList.add(arrowClass);
