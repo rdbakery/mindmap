@@ -1605,9 +1605,14 @@ async function importQuizData(data, fileName = ""){
   let quizName = data.quizName || (data.mapName ? `${data.mapName} - Quiz` : (fileName.replace('.json', '') || "Imported Quiz"));
   const quizzes = await listQuizzes();
 
-  const exists = quizzes.some(q => q.name && q.name.trim().toLowerCase() === quizName.trim().toLowerCase());
-  if (exists) {
-    throw new Error("Quiz already exists.");
+  const existingQuiz = quizzes.find(q => q.name && q.name.trim().toLowerCase() === quizName.trim().toLowerCase());
+  if (existingQuiz) {
+    const quizData = await loadQuiz(existingQuiz.id);
+    if (quizData && quizData.questions) {
+      showFlashMessage("✅ Using existing quiz");
+      showAIQuizModal(JSON.parse(JSON.stringify(quizData.questions)), true, existingQuiz.id, quizData.timerSeconds !== undefined ? quizData.timerSeconds : 600);
+    }
+    return;
   }
 
   const newQuizId = uid();
