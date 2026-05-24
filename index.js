@@ -30,7 +30,6 @@ const APP_CONFIG = {
   ],
   preImportedQuizzes: [
     
-    { label: "English Quiz", file: "english_quiz.json" },
     { label: "IVC Quiz", file: "ivc_quiz.json" },
     { label: "FYP Quiz", file: "fyp_quiz.json" },
     { label: "FM Right Quiz", file: "fm_quiz.json" }
