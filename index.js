@@ -2002,7 +2002,7 @@ function promptForApiKey() {
                         <path d="M12 12l-2-2"/>
                         <path d="m8.5 15.5 2.5-2.5"/>
                     </svg>
-                    <h2 style="margin: 0 0 4px 0; font-size: 20px; font-weight: 600;">AI Feature Key</h2>
+                    <!-- <h2 style="margin: 0 0 4px 0; font-size: 20px; font-weight: 600;">AI Feature Key</h2> -->
                     <p style="margin: 0; color: #6b7280; font-size: 14px;">A key is needed for AI quiz generation.</p>
                 </div>
 
@@ -2013,8 +2013,10 @@ function promptForApiKey() {
                     </button>
                 </div>
 
+                <div style="text-align: center; margin-bottom: 20px; font-weight: 600; color: #6b7280; font-size: 14px;">— OR —</div>
+
                 <div style="margin-bottom: 24px;">
-                    <label for="apiKeyInput" style="display:block; margin-bottom: 8px; font-weight: 500; font-size: 14px;">Paste your API Key:</label>
+                    <label for="apiKeyInput" style="display:block; text-align: center; margin-bottom: 8px; font-weight: 500; font-size: 14px;">Already have Key:</label>
                     <input type="text" id="apiKeyInput" placeholder="Enter key here..." style="width: 100%; box-sizing: border-box; padding: 10px; font-size: 14px; border-radius: 8px; border: 1px solid #d1d5db;">
                 </div>
 

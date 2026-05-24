@@ -497,14 +497,16 @@ svg {
   position: absolute;
   top: 12px;
   border-style: solid;
-  display: block;
+  display: none;
 }
 .note-editor.arrow-left::after {
+  display: block;
   left: -8px;
   border-width: 8px 8px 8px 0;
   border-color: transparent #ffffff transparent transparent;
 }
 .note-editor.arrow-right::after {
+  display: block;
   right: -8px;
   border-width: 8px 0 8px 8px;
   border-color: transparent transparent transparent #ffffff;
@@ -1255,3 +1257,4 @@ body.dark-mode .quiz-nav-btn.wrong {
   border-color: #991b1b;
   color: white;
 }
+
