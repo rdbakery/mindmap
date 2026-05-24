@@ -2488,6 +2488,7 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
     </div>
     <div id="quizActionButtons" style="display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end;">
       ${savedQuizId ? `<button class="cancel" id="deleteAiQuizBtn" style="background:#fee2e2; color:#ef4444; border-color:#fca5a5;">🗑️ Delete</button>` : ''}
+      <button class="cancel" id="exportAiQuizBtn" style="background:#10b981; border-color:#059669; color:white;">⬇️ Export</button>
       <button class="cancel" id="closeAiQuizBtn">Close</button>
       <button class="save" id="submitAiQuizBtn">Submit</button>
     </div>
@@ -2580,6 +2581,28 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
       if (btn && !btn.classList.contains('answered')) btn.classList.add('answered');
     });
   });
+
+  const bindExport = (scoreText) => {
+    const exportBtn = document.getElementById('exportAiQuizBtn');
+    if (exportBtn) {
+      exportBtn.onclick = () => {
+        showFlashMessage("⬇️ Exporting Quiz JSON...");
+        const quizExport = {
+          mapName: currentMap.text,
+          score: scoreText,
+          timerSeconds: timerSeconds,
+          questions: quizData
+        };
+        const b = new Blob([JSON.stringify(quizExport, null, 2)], {type: "application/json"});
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(b);
+        let safeQuizName = currentMap.text ? safeName(currentMap.text) : "Quiz";
+        a.download = `${safeQuizName}_Quiz.json`;
+        a.click();
+      };
+    }
+  };
+  bindExport("Not submitted");
 
   let timeLeft = timerSeconds;
   let timerInterval = null;
@@ -2698,10 +2721,13 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
     const actionsDiv = document.getElementById('quizActionButtons');
     actionsDiv.innerHTML = `
       ${savedQuizId ? `<button class="cancel" id="deleteAiQuizBtn" style="background:#fee2e2; color:#ef4444; border-color:#fca5a5;">🗑️ Delete</button>` : ''}
+      <button class="cancel" id="exportAiQuizBtn" style="background:#10b981; border-color:#059669; color:white;">⬇️ Export</button>
       <button class="cancel" id="closeAiQuizBtn">Close</button>
       ${!savedQuizId ? `<button class="save" id="saveAiQuizBtn" style="background:#0ea5e9; border-color:#0284c7;">💾 Save</button>` : ''}
       <button class="save" id="retakeAiQuizBtn">🔄 Retake</button>
     `;
+
+    bindExport(`${score}/${quizData.length}`);
 
     if (savedQuizId) {
       document.getElementById('deleteAiQuizBtn').onclick = async () => {
