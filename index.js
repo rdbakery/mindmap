@@ -1605,11 +1605,9 @@ async function importQuizData(data, fileName = ""){
   let quizName = data.quizName || (data.mapName ? `${data.mapName} - Quiz` : (fileName.replace('.json', '') || "Imported Quiz"));
   const quizzes = await listQuizzes();
 
-  let counter = 1;
-  let originalName = quizName;
-  while (quizzes.some(q => q.name && q.name.trim().toLowerCase() === quizName.trim().toLowerCase())) {
-    quizName = `${originalName} (${counter})`;
-    counter++;
+  const exists = quizzes.some(q => q.name && q.name.trim().toLowerCase() === quizName.trim().toLowerCase());
+  if (exists) {
+    throw new Error("Quiz already exists.");
   }
 
   const newQuizId = uid();
