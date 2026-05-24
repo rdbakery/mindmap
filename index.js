@@ -390,7 +390,7 @@ function showBackupWarningPopup() {
       <div style="font-size: 40px; margin-bottom: 10px;">⚠️</div>
       <h3 style="margin: 0 0 10px 0; font-size: 20px;">Important Notice</h3>
       <p style="margin: 0; font-size: 15px; line-height: 1.5; color: inherit; opacity: 0.9;">
-        Mindmaps and quizzes are stored locally on your device. 
+        Your mindmaps and quizzes are stored locally on your device. 
         <br><br>
         <strong>Before clearing your browser cache, make sure to export and back up your mindmaps to avoid losing your data.</strong>
       </p>
@@ -408,7 +408,6 @@ function showBackupWarningPopup() {
   };
 
   document.getElementById('closeBackupWarningBtn').onclick = closeModal;
-  overlay.onclick = closeModal;
 }
 
 /* ================= MAP MGMT ================= */
