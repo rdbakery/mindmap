@@ -1598,7 +1598,7 @@ async function importQuizData(data, fileName = ""){
     throw new Error("Invalid quiz file.");
   }
 
-  let quizName = data.mapName ? `${data.mapName} - Quiz` : (fileName.replace('.json', '') || "Imported Quiz");
+  let quizName = data.quizName || (data.mapName ? `${data.mapName} - Quiz` : (fileName.replace('.json', '') || "Imported Quiz"));
   const quizzes = await listQuizzes();
 
   let counter = 1;
@@ -2428,6 +2428,7 @@ async function generateQuizForNode(id, content, settings = { qsCount: 25, qsDiff
 
     const newQuizId = uid();
     const quizExport = {
+      quizName: quizName,
       mapName: currentMap.text,
       score: `0/${quizData.length}`,
       timerSeconds: settings.qsTimer,
@@ -2656,9 +2657,23 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
   const bindExport = (scoreText) => {
     const exportBtn = document.getElementById('exportAiQuizBtn');
     if (exportBtn) {
-      exportBtn.onclick = () => {
+      exportBtn.onclick = async () => {
         showFlashMessage("⬇️ Exporting Quiz JSON...");
+        
+        let exportName = currentMap.text ? safeName(currentMap.text) + "_Quiz" : "Quiz";
+        let actualQuizName = currentMap.text ? `${currentMap.text} - Quiz` : "Quiz";
+        
+        if (savedQuizId) {
+          const existingQuizzes = await listQuizzes();
+          const existing = existingQuizzes.find(q => q.id === savedQuizId);
+          if (existing && existing.name) {
+            exportName = safeName(existing.name);
+            actualQuizName = existing.name;
+          }
+        }
+
         const quizExport = {
+          quizName: actualQuizName,
           mapName: currentMap.text,
           score: scoreText,
           timerSeconds: timerSeconds,
@@ -2667,8 +2682,7 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
         const b = new Blob([JSON.stringify(quizExport, null, 2)], {type: "application/json"});
         const a = document.createElement("a");
         a.href = URL.createObjectURL(b);
-        let safeQuizName = currentMap.text ? safeName(currentMap.text) : "Quiz";
-        a.download = `${safeQuizName}_Quiz.json`;
+        a.download = `${exportName}.json`;
         a.click();
       };
     }
@@ -2844,10 +2858,12 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
             if (!quizName) return;
           }
           targetQuizId = uid();
+          savedQuizId = targetQuizId;
         }
 
         showFlashMessage("💾 Saving Quiz Locally...");
         const quizExport = {
+          quizName: quizName,
           mapName: currentMap.text,
           score: `${score}/${quizData.length}`,
           timerSeconds: timerSeconds,
