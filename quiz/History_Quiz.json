@@ -1,0 +1,307 @@
+{
+  "mapName": "6. History",
+  "score": "Not submitted",
+  "timerSeconds": 600,
+  "questions": [
+    {
+      "question": "Identify the correct passive voice of the sentence: 'He is playing cricket.'",
+      "options": [
+        "Cricket was being played by him.",
+        "Cricket is played by him.",
+        "Cricket is being played by him.",
+        "Cricket has been played by him."
+      ],
+      "answer": 2,
+      "explanation": "For Present Continuous tense, the passive structure is 'Obj + is/am/are + being + V3 + by + Sub'.",
+      "userAnswer": null
+    },
+    {
+      "question": "Fill in the blank: 'I am happy _______ you.'",
+      "options": [
+        "seeing",
+        "see",
+        "to seeing",
+        "to see"
+      ],
+      "answer": 3,
+      "explanation": "We use the to-infinitive (to + V1) structure after adjectives (like 'happy').",
+      "userAnswer": null
+    },
+    {
+      "question": "Identify the sentence where 'think' is used correctly in both its static and dynamic contexts:",
+      "options": [
+        "Both B and C are correct.",
+        "I think he is right.",
+        "I am thinking about this problem.",
+        "I am thinking he is right."
+      ],
+      "answer": 0,
+      "explanation": "'Think' is non-continuous when expressing an opinion ('I think he is right'), but it can be used in the continuous tense when it refers to the mental process of considering something ('I am thinking about this problem').",
+      "userAnswer": 3
+    },
+    {
+      "question": "Fill in the blank with the correct verb form: 'If it rains, I _______ home.'",
+      "options": [
+        "would stay",
+        "will stay",
+        "will be stayed",
+        "stayed"
+      ],
+      "answer": 1,
+      "explanation": "This is a First Conditional sentence (real future scenario). The pattern is: If + Present Simple, will/shall + V1.",
+      "userAnswer": null
+    },
+    {
+      "question": "What is the correct indirect speech of: He said, 'I went.'",
+      "options": [
+        "He said that he went.",
+        "He said that he would go.",
+        "He said that he had gone.",
+        "He said that he has gone."
+      ],
+      "answer": 2,
+      "explanation": "Simple Past in direct speech changes to Past Perfect ('had gone') in indirect speech when the reporting verb is in the past tense.",
+      "userAnswer": null
+    },
+    {
+      "question": "Convert the following sentence to indirect speech: He said, 'Do you play?'",
+      "options": [
+        "He asked that did I play.",
+        "He asked if I played.",
+        "He asked if I do play.",
+        "He asked whether did I play."
+      ],
+      "answer": 1,
+      "explanation": "For Yes/No interrogative questions, we use 'if' or 'whether' as the connector and change the question format into an assertive statement (Simple Present becomes Simple Past).",
+      "userAnswer": null
+    },
+    {
+      "question": "Fill in the blank with the correct form: 'She is fond of _______.'",
+      "options": [
+        "reading",
+        "read",
+        "to reading",
+        "to read"
+      ],
+      "answer": 0,
+      "explanation": "After a preposition (like 'of'), we must always use a gerund (V + ing).",
+      "userAnswer": null
+    },
+    {
+      "question": "In which of the following is 'have' used correctly in the continuous form as an action/experience?",
+      "options": [
+        "I am having two brothers.",
+        "I am having lunch right now.",
+        "I am having a big house.",
+        "I am having a luxury car."
+      ],
+      "answer": 1,
+      "explanation": "'Have' cannot be used in the continuous form to show possession, but it can be used in continuous tenses to show action or consumption (like 'having lunch').",
+      "userAnswer": null
+    },
+    {
+      "question": "Which of the following sentences cannot be changed into passive voice?",
+      "options": [
+        "She will have cooked dinner.",
+        "She will cook dinner.",
+        "She cooks dinner.",
+        "She will be cooking dinner."
+      ],
+      "answer": 3,
+      "explanation": "Future Continuous tense ('will be + V1+ing') has no passive voice form.",
+      "userAnswer": null
+    },
+    {
+      "question": "Convert the following sentence to indirect speech: She said, 'Hurrah! We won.'",
+      "options": [
+        "She exclaimed with joy that they had won.",
+        "She exclaimed that they win.",
+        "She said with joy that we won.",
+        "She told that they had won."
+      ],
+      "answer": 0,
+      "explanation": "Exclamatory sentences expressing joy use 'exclaimed with joy that' and change the simple past 'won' to past perfect 'had won'.",
+      "userAnswer": null
+    },
+    {
+      "question": "Identify the correct sentence from the options below:",
+      "options": [
+        "I enjoy play cricket.",
+        "I enjoy to play cricket.",
+        "I enjoy for playing cricket.",
+        "I enjoy playing cricket."
+      ],
+      "answer": 3,
+      "explanation": "The verb 'enjoy' is always followed directly by a gerund (V + ing).",
+      "userAnswer": null
+    },
+    {
+      "question": "Choose the correct sentence regarding verbs of thinking/knowledge:",
+      "options": [
+        "I have knowing the answer.",
+        "I am knowing the answer.",
+        "I know the answer.",
+        "I am known the answer."
+      ],
+      "answer": 2,
+      "explanation": "The verb 'know' represents state/knowledge and is not used in the continuous tense.",
+      "userAnswer": null
+    },
+    {
+      "question": "Choose the correct sentence using 'unless':",
+      "options": [
+        "Unless you work hard, you will not fail.",
+        "Unless you will work hard, you will fail.",
+        "Unless you do not work hard, you will fail.",
+        "Unless you work hard, you will fail."
+      ],
+      "answer": 3,
+      "explanation": "'Unless' means 'if not' and already carries a negative meaning, so we do not use 'not' in the unless-clause. Also, future tense 'will' is not used in conditional clauses.",
+      "userAnswer": null
+    },
+    {
+      "question": "Complete the causative sentence: 'He made me _______ it.'",
+      "options": [
+        "to do",
+        "done",
+        "do",
+        "doing"
+      ],
+      "answer": 2,
+      "explanation": "Causative verbs like 'make' and 'let' take a bare infinitive (V1 without 'to') in active voice structures.",
+      "userAnswer": null
+    },
+    {
+      "question": "Choose the grammatically correct causative sentence:",
+      "options": [
+        "He forced me go there.",
+        "He forced me going there.",
+        "He forced me to go there.",
+        "He forced me to going there."
+      ],
+      "answer": 2,
+      "explanation": "Causative verbs like tell, ask, allow, and force follow the structure: Sub + V + Obj + to + V1.",
+      "userAnswer": null
+    },
+    {
+      "question": "Complete the Third Conditional sentence: 'If I had studied, I _______.'",
+      "options": [
+        "would pass",
+        "had passed",
+        "would have passed",
+        "will pass"
+      ],
+      "answer": 2,
+      "explanation": "The Third Conditional (past unreal regret) structure is: If + Past Perfect, would/could + have + V3.",
+      "userAnswer": null
+    },
+    {
+      "question": "Identify the correct sentence containing a time clause:",
+      "options": [
+        "When he comes, I would go.",
+        "When he comes, I will go.",
+        "When he will come, I will go.",
+        "When he came, I will go."
+      ],
+      "answer": 1,
+      "explanation": "Time clauses (introduced by when, after, before, as soon as) do not take future tense ('will'). We use the simple present instead.",
+      "userAnswer": null
+    },
+    {
+      "question": "Which of the following options is grammatically correct regarding the causative verb 'help'?",
+      "options": [
+        "She helped me to complete the work.",
+        "Both A and B are correct.",
+        "She helped me in complete the work.",
+        "She helped me complete the work."
+      ],
+      "answer": 1,
+      "explanation": "The causative verb 'help' is unique because it can take either a bare infinitive (V1) or a to-infinitive (to + V1).",
+      "userAnswer": null
+    },
+    {
+      "question": "Convert the following sentence to indirect speech: He asked, 'Where are you going?'",
+      "options": [
+        "He asked where am I going.",
+        "He asked that where I was going.",
+        "He asked where was I going.",
+        "He asked where I was going."
+      ],
+      "answer": 3,
+      "explanation": "In Wh- questions, we keep the WH-word as a connector and change the question structure into statement form ('are you going' becomes 'I was going').",
+      "userAnswer": null
+    },
+    {
+      "question": "Choose the correct indirect speech: He said, 'I will go tomorrow.'",
+      "options": [
+        "He said that he should go that day.",
+        "He said that he would go yesterday.",
+        "He said that he would go the next day.",
+        "He said that he will go tomorrow."
+      ],
+      "answer": 2,
+      "explanation": "In indirect speech, 'will' changes to 'would' and the time word 'tomorrow' changes to 'the next day'.",
+      "userAnswer": null
+    },
+    {
+      "question": "Identify the grammatically correct sentence showing possession:",
+      "options": [
+        "My brother has owned a car.",
+        "My brother is owning a car.",
+        "My brother is having owned a car.",
+        "My brother owns a car."
+      ],
+      "answer": 3,
+      "explanation": "Verbs of possession like 'own' are non-continuous state verbs and must be used in the Simple Present tense rather than Present Continuous.",
+      "userAnswer": null
+    },
+    {
+      "question": "Convert the following sentence into passive voice: 'They had finished the task.'",
+      "options": [
+        "The task was finished by them.",
+        "The task had been finished by them.",
+        "The task had finished by them.",
+        "The task has been finished by them."
+      ],
+      "answer": 1,
+      "explanation": "The passive form of Past Perfect tense is 'Obj + had + been + V3 + by + Sub'.",
+      "userAnswer": null
+    },
+    {
+      "question": "What is the correct indirect representation of: He said to me, 'Don't wear this watch.'",
+      "options": [
+        "He told me to not wear this watch.",
+        "He told me not to wear that watch.",
+        "He told me not to wear this watch.",
+        "He told me that not to wear that watch."
+      ],
+      "answer": 1,
+      "explanation": "For negative imperative sentences, 'Don't + V1' changes to 'not to + V1' and 'this' changes to 'that'.",
+      "userAnswer": null
+    },
+    {
+      "question": "Choose the correct indirect speech for: He said, 'May you succeed.'",
+      "options": [
+        "He prayed that you might succeed.",
+        "He said that I might succeed.",
+        "He wished that I may succeed.",
+        "He wished that I might succeed."
+      ],
+      "answer": 3,
+      "explanation": "Optative sentences expressing a wish use 'wished' and 'may' is changed into 'might'.",
+      "userAnswer": null
+    },
+    {
+      "question": "Which of the following options corrects the error in: 'If it will rain, I will stay home.'?",
+      "options": [
+        "If it rained, I will stay home.",
+        "If it would rain, I will stay home.",
+        "If it will rain, I stay home.",
+        "If it rains, I will stay home."
+      ],
+      "answer": 3,
+      "explanation": "According to conditional rules, we never use the future auxiliary 'will' in the If-clause.",
+      "userAnswer": null
+    }
+  ]
+}
