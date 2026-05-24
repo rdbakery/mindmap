@@ -1,0 +1,2114 @@
+{
+  "quizName": "6. History - Indus Valley (2500-1600 BCE)",
+  "mapName": "9. CA",
+  "score": "Not submitted",
+  "timerSeconds": 900,
+  "questions": [
+    {
+      "question": {
+        "en": "During the construction of which railway line in 1856 did the Brunton brothers accidentally discover and use high-quality baked bricks from Harappan mounds?",
+        "hi": "1856 में किस रेलवे लाइन के निर्माण के दौरान ब्रंटन बंधुओं ने अनजाने में हड़प्पा के टीलों से उच्च गुणवत्ता वाली पकी हुई ईंटों की खोज की और उनका उपयोग किया?"
+      },
+      "options": {
+        "en": [
+          "Calcutta to Delhi",
+          "Madras to Bangalore",
+          "Bombay to Thane",
+          "Karachi to Lahore"
+        ],
+        "hi": [
+          "कलकत्ता से दिल्ली",
+          "मद्रास से बैंगलोर",
+          "बॉम्बे से ठाणे",
+          "कराची से लाहौर"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "In 1856, during the laying of the Karachi to Lahore railway line, the Brunton brothers (John and William) utilized baked bricks from Harappan ruins as ballast, unaware of their antiquity.",
+        "hi": "1856 में, कराची से लाहौर रेलवे लाइन बिछाने के दौरान, ब्रंटन बंधुओं (जॉन और विलियम) ने हड़प्पा के खंडहरों से पकी हुई ईंटों का उपयोग रोड़ी के रूप में किया, जो उनकी प्राचीनता से अनजान थे।"
+      },
+      "pyq": "RRB JE 2019"
+    },
+    {
+      "question": {
+        "en": "Which two cities were described as the 'twin capitals' of a vast empire by the archaeologist Stuart Piggot?",
+        "hi": "पुरातत्वविद् स्टुअर्ट पिगट द्वारा किन दो शहरों को एक विशाल साम्राज्य की 'जुड़वां राजधानियाँ' बताया गया था?"
+      },
+      "options": {
+        "en": [
+          "Kalibangan and Banwali",
+          "Harappa and Mohenjo-daro",
+          "Harappa and Lothal",
+          "Lothal and Dholavira"
+        ],
+        "hi": [
+          "कालीबंगन और बनावली",
+          "हड़प्पा और मोहनजोदड़ो",
+          "हड़प्पा और लोथल",
+          "लोथल और धोलावीरा"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Stuart Piggot famously referred to Harappa and Mohenjo-daro as the 'twin capitals' of the Indus Valley Civilization due to their immense size and similar planning.",
+        "hi": "स्टुअर्ट पिगट ने हड़प्पा और मोहनजोदड़ो को उनके विशाल आकार और समान नगर नियोजन के कारण सिंधु घाटी सभ्यता की 'जुड़वां राजधानियाँ' कहा था।"
+      },
+      "pyq": "Rajasthan PSC 2015"
+    },
+    {
+      "question": {
+        "en": "Which of the following statements is true regarding religious structures in the Indus Valley Civilization?",
+        "hi": "सिंधु घाटी सभ्यता में धार्मिक संरचनाओं के संबंध में निम्नलिखित में से कौन सा कथन सत्य है?"
+      },
+      "options": {
+        "en": [
+          "They worshipped only Greek gods.",
+          "No temples or monumental religious structures have been found.",
+          "Only Buddhist stupas were discovered.",
+          "Large temples were built in every city."
+        ],
+        "hi": [
+          "वे केवल ग्रीक देवताओं की पूजा करते थे।",
+          "कोई मंदिर या विशाल धार्मिक संरचनाएं नहीं पाई गई हैं।",
+          "केवल बौद्ध स्तूपों की खोज की गई थी।",
+          "हर शहर में बड़े मंदिरों का निर्माण किया गया था।"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Unlike Mesopotamia or Egypt, no temples or monumental religious structures have been discovered at any Harappan site. Worship was personal and nature-centric.",
+        "hi": "मेसोपोटामिया या मिस्र के विपरीत, किसी भी हड़प्पा स्थल पर कोई मंदिर या विशाल धार्मिक संरचनाएं नहीं खोजी गई हैं। पूजा व्यक्तिगत और प्रकृति-केंद्रित थी।"
+      },
+      "pyq": "UPSC CSE 2013"
+    },
+    {
+      "question": {
+        "en": "In which year was the Archaeological Survey of India (ASI) established under the British administration?",
+        "hi": "ब्रिटिश प्रशासन के तहत भारतीय पुरातत्व सर्वेक्षण (ASI) की स्थापना किस वर्ष की गई थी?"
+      },
+      "options": {
+        "en": [
+          "1861",
+          "1921",
+          "1856",
+          "1904"
+        ],
+        "hi": [
+          "1861",
+          "1921",
+          "1856",
+          "1904"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The Archaeological Survey of India (ASI) was founded in 1861 by Alexander Cunningham, who also became its first Director-General.",
+        "hi": "भारतीय पुरातत्व सर्वेक्षण (ASI) की स्थापना 1861 में अलेक्जेंडर कनिंघम द्वारा की गई थी, जो इसके पहले महानिदेशक भी बने थे।"
+      },
+      "pyq": "UPSC CAPF 2017"
+    },
+    {
+      "question": {
+        "en": "At which Harappan site was a double/couple burial (containing a male and a female buried together) discovered?",
+        "hi": "किस हड़प्पा स्थल पर एक दोहरी/युगल समाधि (जिसमें एक पुरुष और एक महिला को एक साथ दफनाया गया था) खोजी गई थी?"
+      },
+      "options": {
+        "en": [
+          "Kalibangan",
+          "Harappa",
+          "Mohenjo-daro",
+          "Lothal"
+        ],
+        "hi": [
+          "कालीबंगन",
+          "हड़प्पा",
+          "मोहनजोदड़ो",
+          "लोथल"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Lothal has yielded evidence of joint burials of male and female skeletons in a single grave, which some historians associate with early couple burials.",
+        "hi": "लोथल से एक ही कब्र में पुरुष और महिला के कंकालों के संयुक्त दफन के साक्ष्य मिले हैं, जिसे कुछ इतिहासकार प्रारंभिक युगल दफन से जोड़ते हैं।"
+      },
+      "pyq": "UPPCS Prelims 2016"
+    },
+    {
+      "question": {
+        "en": "Which of the following was the easternmost boundary site of the Indus Valley Civilization?",
+        "hi": "निम्नलिखित में से कौन सा सिंधु घाटी सभ्यता का सबसे पूर्वी सीमा स्थल था?"
+      },
+      "options": {
+        "en": [
+          "Alamgirpur",
+          "Daimabad",
+          "Manda",
+          "Sutkangedor"
+        ],
+        "hi": [
+          "आलमगीरपुर",
+          "दैमाबाद",
+          "मांडा",
+          "सुत्कागेंडोर"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Alamgirpur on the banks of the Hindon River in Meerut, Uttar Pradesh, represents the easternmost boundary of the civilization.",
+        "hi": "उत्तर प्रदेश के मेरठ में हिंडन नदी के तट पर स्थित आलमगीरपुर इस सभ्यता की सबसे पूर्वी सीमा का प्रतिनिधित्व करता है।"
+      },
+      "pyq": "UPPCS Prelims 2019"
+    },
+    {
+      "question": {
+        "en": "The ancient port city of Lothal is situated on the banks of which tributary of the Sabarmati River?",
+        "hi": "लोथल का प्राचीन बंदरगाह शहर साबरमती नदी की किस सहायक नदी के तट पर स्थित है?"
+      },
+      "options": {
+        "en": [
+          "Bhogwa River",
+          "Ravi River",
+          "Ghaggar River",
+          "Luni River"
+        ],
+        "hi": [
+          "भोगवा नदी",
+          "रावी नदी",
+          "घग्गर नदी",
+          "लूनी नदी"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Lothal is situated along the Bhogwa River, a tributary of the Sabarmati River in Ahmedabad district, Gujarat.",
+        "hi": "लोथल गुजरात के अहमदाबाद जिले में साबरमती नदी की सहायक नदी भोगवा के तट पर स्थित है।"
+      },
+      "pyq": "Gujarat PSC 2018"
+    },
+    {
+      "question": {
+        "en": "The town planning of the Indus Valley Civilization is highly distinguished from other contemporary civilizations due to its:",
+        "hi": "सिंधु घाटी सभ्यता का नगर नियोजन अन्य समकालीन सभ्यताओं से किस कारण अत्यधिक भिन्न और विशिष्ट है?"
+      },
+      "options": {
+        "en": [
+          "Underground covered drainage system",
+          "Use of stone for all houses",
+          "Lack of streets",
+          "Huge pyramids"
+        ],
+        "hi": [
+          "भूमिगत ढकी हुई जल निकासी प्रणाली",
+          "सभी घरों के लिए पत्थरों का उपयोग",
+          "सड़कों का अभाव",
+          "विशाल पिरामिड"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The most unique and advanced feature of Harappan urban planning was its covered underground drainage system with manholes for cleaning.",
+        "hi": "हड़प्पा नगर नियोजन की सबसे अनूठी और उन्नत विशेषता इसकी ढकी हुई भूमिगत जल निकासी प्रणाली थी जिसमें सफाई के लिए मैनहोल थे।"
+      },
+      "pyq": "SSC CGL 2018"
+    },
+    {
+      "question": {
+        "en": "What was the direction of writing in the Indus Valley Civilization script?",
+        "hi": "सिंधु घाटी सभ्यता की लिपि में लिखने की दिशा क्या थी?"
+      },
+      "options": {
+        "en": [
+          "Alternate lines from Right to Left and Left to Right (Boustrophedon)",
+          "Right to Left only",
+          "Left to Right only",
+          "Top to Bottom"
+        ],
+        "hi": [
+          "वैकल्पिक पंक्तियों में दाएं से बाएं और बाएं से दाएं (बोस्ट्रोफेडन)",
+          "केवल दाएं से बाएं",
+          "केवल बाएं से दाएं",
+          "ऊपर से नीचे"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The Harappan script was written in a Boustrophedon style, where the first line is written from right to left, and the second line from left to right.",
+        "hi": "हड़प्पा लिपि बोस्ट्रोफेडन शैली में लिखी गई थी, जहाँ पहली पंक्ति दाएं से बाएं और दूसरी पंक्ति बाएं से दाएं लिखी जाती थी।"
+      },
+      "pyq": "UPPCS Prelims 2019"
+    },
+    {
+      "question": {
+        "en": "What was the backbone of the Indus Valley Civilization's economy?",
+        "hi": "सिंधु घाटी सभ्यता की अर्थव्यवस्था की रीढ़ क्या थी?"
+      },
+      "options": {
+        "en": [
+          "Pastoralism",
+          "Fishing",
+          "Hunting and Gathering",
+          "Agriculture and Trade"
+        ],
+        "hi": [
+          "पशुपालन",
+          "मछली पकड़ना",
+          "शिकार और संग्रहण",
+          "कृषि और व्यापार"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The Harappan economy relied heavily on highly organized agriculture (wheat, barley) and extensive internal and foreign trade.",
+        "hi": "हड़प्पा की अर्थव्यवस्था अत्यधिक संगठित कृषि (गेहूं, जौ) और व्यापक आंतरिक तथा विदेशी व्यापार पर बहुत अधिक निर्भर थी।"
+      },
+      "pyq": "SSC CHSL 2019"
+    },
+    {
+      "question": {
+        "en": "Which of the following sites has yielded evidence of fire altars (Yajna Kundas), suggesting the practice of fire worship?",
+        "hi": "निम्नलिखित में से किस स्थल से अग्नि वेदियाँ (यज्ञ कुंड) के साक्ष्य मिले हैं, जो अग्नि पूजा की प्रथा का सुझाव देते हैं?"
+      },
+      "options": {
+        "en": [
+          "Harappa and Mohenjo-daro",
+          "Lothal and Kalibangan",
+          "Ropar and Dholavira",
+          "Chanhudaro and Banwali"
+        ],
+        "hi": [
+          "हड़प्पा और मोहनजोदड़ो",
+          "लोथल और कालीबंगन",
+          "रोपड़ और धोलावीरा",
+          "चन्हूदड़ो और बनावली"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Lothal and Kalibangan have yielded raised clay platforms containing fire altars, which indicates the practice of ritualistic fire worship.",
+        "hi": "लोथल और कालीबंगन से मिट्टी के ऊंचे चबूतरे मिले हैं जिनमें अग्नि वेदियाँ थीं, जो अनुष्ठानिक अग्नि पूजा की प्रथा को दर्शाती हैं।"
+      },
+      "pyq": "UPPCS Prelims 2014"
+    },
+    {
+      "question": {
+        "en": "Which female deity was most widely worshipped in the Indus Valley Civilization, as evidenced by numerous terracotta figurines?",
+        "hi": "सिंधु घाटी सभ्यता में किस महिला देवी की सबसे व्यापक रूप से पूजा की जाती थी, जैसा कि कई मिट्टी की मूर्तियों से प्रमाणित होता है?"
+      },
+      "options": {
+        "en": [
+          "Goddess Lakshmi",
+          "Goddess Saraswati",
+          "Goddess Durga",
+          "Mother Goddess (Matridevi)"
+        ],
+        "hi": [
+          "देवी लक्ष्मी",
+          "देवी सरस्वती",
+          "देवी दुर्गा",
+          "मातृदेवी (मातृशक्ति)"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The discovery of numerous terracotta female figurines suggests the widespread worship of the Mother Goddess, symbolizing fertility.",
+        "hi": "मिट्टी की कई महिला मूर्तियों की खोज से मातृदेवी की व्यापक पूजा का पता चलता है, जो उर्वरता का प्रतीक थीं।"
+      },
+      "pyq": "SSC CGL 2014"
+    },
+    {
+      "question": {
+        "en": "Which archaeological site in Gujarat serves as another port town with a single fortified wall like Lothal?",
+        "hi": "गुजरात का कौन सा पुरातात्विक स्थल लोथल की तरह एक ही किलेबंदी की दीवार वाला दूसरा बंदरगाह शहर है?"
+      },
+      "options": {
+        "en": [
+          "Surkotada",
+          "Amri",
+          "Kalibangan",
+          "Ropar"
+        ],
+        "hi": [
+          "सुरकोटड़ा",
+          "अमरी",
+          "कालीबंगन",
+          "रोपड़"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Surkotada in Gujarat features a single continuous fortification wall around both the citadel and lower town, similar to Lothal.",
+        "hi": "गुजरात के सुरकोटड़ा में लोथल की तरह ही दुर्ग और निचले नगर दोनों के चारों ओर एक ही निरंतर किलेबंदी की दीवार है।"
+      },
+      "pyq": "State PSC 2015"
+    },
+    {
+      "question": {
+        "en": "Which of the following is an early Pre-Harappan phase site (dating 3300-2500 BC)?",
+        "hi": "निम्नलिखित में से कौन सा एक प्रारंभिक प्राक-हड़प्पा चरण का स्थल है (3300-2500 ई.पू.)?"
+      },
+      "options": {
+        "en": [
+          "Kot Diji / Amri",
+          "Dholavira",
+          "Lothal",
+          "Mohenjo-daro"
+        ],
+        "hi": [
+          "कोट दीजी / अमरी",
+          "धोलावीरा",
+          "लोथल",
+          "मोहनजोदड़ो"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Sites like Kot Diji and Amri represent the Pre-Harappan phase, showing early village settlements before full urbanization.",
+        "hi": "कोट दीजी और अमरी जैसे स्थल प्राक-हड़प्पा चरण का प्रतिनिधित्व करते हैं, जो पूर्ण शहरीकरण से पहले शुरुआती ग्रामीण बस्तियों को दर्शाते हैं।"
+      },
+      "pyq": "UPPCS Prelims 2016"
+    },
+    {
+      "question": {
+        "en": "Who was the first European traveler to visit and record the ruins of Harappa in 1826?",
+        "hi": "1826 में हड़प्पा के खंडहरों का दौरा करने और उन्हें रिकॉर्ड करने वाले पहले यूरोपीय यात्री कौन थे?"
+      },
+      "options": {
+        "en": [
+          "Charles Masson",
+          "Alexander Cunningham",
+          "William Jones",
+          "Alexander Burnes"
+        ],
+        "hi": [
+          "चार्ल्स मैसन",
+          "अलेक्जेंडर कनिंघम",
+          "विलियम जोन्स",
+          "अलेक्जेंडर बर्न्स"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Charles Masson was the first explorer to visit the ruins of Harappa in 1826 and write about its massive brick mounds in his later narrative book.",
+        "hi": "चार्ल्स मैसन 1826 में हड़प्पा के खंडहरों का दौरा करने वाले और अपनी बाद की पुस्तक में इसके विशाल ईंट के टीलों के बारे में लिखने वाले पहले खोजकर्ता थे।"
+      },
+      "pyq": "UPPCS Prelims 2018"
+    },
+    {
+      "question": {
+        "en": "What was the primary material used by the Harappans to manufacture their standardized weights and seals?",
+        "hi": "हड़प्पावासियों द्वारा अपने मानकीकृत बाटों और मुहरों के निर्माण के लिए उपयोग की जाने वाली प्राथमिक सामग्री क्या थी?"
+      },
+      "options": {
+        "en": [
+          "Iron",
+          "Wood",
+          "Steatite (Soapstone)",
+          "Gold"
+        ],
+        "hi": [
+          "लोहा",
+          "लकड़ी",
+          "स्टीटाइट (सेलखड़ी)",
+          "सोना"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Most Harappan seals and weights were made of Steatite (soapstone), a soft stone that was easy to carve.",
+        "hi": "अधिकांश हड़प्पा मुहरें और बाट स्टीटाइट (सेलखड़ी) से बने थे, जो एक नरम पत्थर था जिस पर नक्काशी करना आसान था।"
+      },
+      "pyq": "UPSC CSE 2011"
+    },
+    {
+      "question": {
+        "en": "Which of the following was the southernmost known site of the Indus Valley Civilization?",
+        "hi": "निम्नलिखित में से कौन सा सिंधु घाटी सभ्यता का सबसे दक्षिणी ज्ञात स्थल था?"
+      },
+      "options": {
+        "en": [
+          "Manda",
+          "Sutkangedor",
+          "Alamgirpur",
+          "Daimabad"
+        ],
+        "hi": [
+          "मांडा",
+          "सुत्कागेंडोर",
+          "आलमगीरपुर",
+          "दैमाबाद"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Daimabad in Maharashtra is recognized as the southernmost boundary/site of the Indus Valley Civilization.",
+        "hi": "महाराष्ट्र में स्थित दैमाबाद को सिंधु घाटी सभ्यता की सबसे दक्षिणी सीमा/स्थल के रूप में मान्यता प्राप्त है।"
+      },
+      "pyq": "UPPCS Prelims 2019"
+    },
+    {
+      "question": {
+        "en": "The social structure of the Indus Valley Civilization can be best described as:",
+        "hi": "सिंधु घाटी सभ्यता की सामाजिक संरचना को सबसे अच्छी तरह से किस रूप में वर्णित किया जा सकता है?"
+      },
+      "options": {
+        "en": [
+          "Nomadic and tribal",
+          "Highly egalitarian and trade-oriented",
+          "Feudal and militaristic",
+          "Rigidly caste-based"
+        ],
+        "hi": [
+          "खानाबदोश और आदिवासी",
+          "अत्यधिक समतावादी और व्यापार-उन्मुख",
+          "सामंती और सैन्यवादी",
+          "कठोर जाति-आधारित"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Harappan society was largely peaceful, egalitarian, and dominated by merchants and craftsmen rather than a warrior class.",
+        "hi": "हड़प्पा समाज मुख्य रूप से शांतिपूर्ण, समतावादी और योद्धा वर्ग के बजाय व्यापारियों और शिल्पकारों के प्रभुत्व वाला था।"
+      },
+      "pyq": "SSC CGL 2014"
+    },
+    {
+      "question": {
+        "en": "At which Indus Valley site was evidence of a ploughed field and wooden plow discovered?",
+        "hi": "सिंधु घाटी के किस स्थल पर जोते गए खेत और लकड़ी के हल के साक्ष्य मिले थे?"
+      },
+      "options": {
+        "en": [
+          "Banwali",
+          "Ropar",
+          "Harappa",
+          "Kalibangan"
+        ],
+        "hi": [
+          "बनावली",
+          "रोपड़",
+          "हड़प्पा",
+          "कालीबंगन"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Kalibangan in Rajasthan provides the earliest archaeological evidence of a ploughed agricultural field.",
+        "hi": "राजस्थान के कालीबंगन से कृषि योग्य जोते गए खेत के सबसे पहले पुरातात्विक साक्ष्य मिलते हैं।"
+      },
+      "pyq": "UPPCS Prelims 2011"
+    },
+    {
+      "question": {
+        "en": "The famous 'Pashupati Seal' found at Mohenjo-daro depicts a three-faced deity surrounded by which of the following animals?",
+        "hi": "मोहनजोदड़ो में पाई गई प्रसिद्ध 'पशुपति मुहर' में एक त्रि-मुखी देवता को निम्नलिखित में से किन जानवरों से घिरा हुआ दिखाया गया है?"
+      },
+      "options": {
+        "en": [
+          "Elephant, Tiger, Rhinoceros, Buffalo, and Deer",
+          "Lion, Tiger, Horse, Cow",
+          "Elephant, Lion, Peacock, Snake",
+          "Bull, Sheep, Goat, Dog"
+        ],
+        "hi": [
+          "हाथी, बाघ, गेंडा, भैंसा और हिरण",
+          "शेर, बाघ, घोड़ा, गाय",
+          "हाथी, शेर, मोर, सांप",
+          "बैल, भेड़, बकरी, कुत्ता"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The Pashupati Mahadev seal depicts a deity sitting in a yogic posture, surrounded by an elephant, a tiger, a rhinoceros, and a buffalo, with two deer at his feet.",
+        "hi": "पशुपति महादेव मुहर में एक देवता को योग मुद्रा में बैठे हुए दिखाया गया है, जो एक हाथी, एक बाघ, एक गेंडे और एक भैंसे से घिरे हुए हैं, और उनके पैरों के पास दो हिरण हैं।"
+      },
+      "pyq": "UPSC CSE 2020"
+    },
+    {
+      "question": {
+        "en": "Which of the following was the westernmost trading port of the Indus Valley Civilization?",
+        "hi": "निम्नलिखित में से कौन सा सिंधु घाटी सभ्यता का सबसे पश्चिमी व्यापारिक बंदरगाह था?"
+      },
+      "options": {
+        "en": [
+          "Lothal",
+          "Nageshwar",
+          "Sutkangedor",
+          "Balakot"
+        ],
+        "hi": [
+          "लोथल",
+          "नागेश्वर",
+          "सुत्कागेंडोर",
+          "बालाकोट"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Sutkangedor, located near the Pakistan-Iran border on the Makran coast, was the westernmost port-town of the Harappan civilization.",
+        "hi": "मकरान तट पर पाकिस्तान-ईरान सीमा के पास स्थित सुत्कागेंडोर, हड़प्पा सभ्यता का सबसे पश्चिमी बंदरगाह शहर था।"
+      },
+      "pyq": "UPSC CSE 2013"
+    },
+    {
+      "question": {
+        "en": "What is the literal meaning of 'Mohenjo-daro' in the local language?",
+        "hi": "स्थानीय भाषा में 'मोहनजोदड़ो' का शाब्दिक अर्थ क्या है?"
+      },
+      "options": {
+        "en": [
+          "Black Bangles",
+          "Gateway to Sea",
+          "City of Bricks",
+          "Mound of the Dead"
+        ],
+        "hi": [
+          "काली चूड़ियाँ",
+          "समुद्र का प्रवेश द्वार",
+          "ईंटों का शहर",
+          "मृतकों का टीला"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Mohenjo-daro in Sindhi translates literally to the 'Mound of the Dead'.",
+        "hi": "सिंधी भाषा में मोहनजोदड़ो का शाब्दिक अनुवाद 'मृतकों का टीला' होता है।"
+      },
+      "pyq": "SSC CHSL 2017"
+    },
+    {
+      "question": {
+        "en": "Which ancient contemporary civilization was the primary maritime trade partner of the Indus Valley people?",
+        "hi": "कौन सी प्राचीन समकालीन सभ्यता सिंधु घाटी के लोगों की प्राथमिक समुद्री व्यापारिक भागीदार थी?"
+      },
+      "options": {
+        "en": [
+          "Greek Civilization",
+          "Chinese Civilization",
+          "Mesopotamian Civilization",
+          "Egyptian Civilization"
+        ],
+        "hi": [
+          "यूनानी सभ्यता",
+          "चीनी सभ्यता",
+          "मेसोपोटामिया की सभ्यता",
+          "मिस्र की सभ्यता"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Harappans had extensive trade relations with Mesopotamia (modern Iraq), where Harappan seals were found, and Mesopotamian texts refer to trade with 'Meluhha' (Indus region).",
+        "hi": "हड़प्पावासियों के मेसोपोटामिया (आधुनिक इराक) के साथ व्यापक व्यापारिक संबंध थे, जहाँ हड़प्पा की मुहरें पाई गई थीं, और मेसोपोटामिया के ग्रंथों में 'मेलुहा' (सिंधु क्षेत्र) के साथ व्यापार का उल्लेख है।"
+      },
+      "pyq": "UPSC CSE 1997"
+    },
+    {
+      "question": {
+        "en": "At which Indus Valley site was a unique signboard containing ten large-sized symbols of the Harappan script discovered?",
+        "hi": "सिंधु घाटी के किस स्थल पर हड़प्पा लिपि के दस बड़े आकार के प्रतीकों वाला एक अनोखा साइनबोर्ड (नामपट्ट) खोजा गया था?"
+      },
+      "options": {
+        "en": [
+          "Dholavira",
+          "Harappa",
+          "Lothal",
+          "Mohenjo-daro"
+        ],
+        "hi": [
+          "धोलावीरा",
+          "हड़प्पा",
+          "लोथल",
+          "मोहनजोदड़ो"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "A unique large inscription, often called the Dholavira Signboard, containing ten large-sized Indus symbols, was discovered at Dholavira.",
+        "hi": "धोलावीरा में एक अनोखा बड़ा शिलालेख खोजा गया था, जिसे अक्सर 'धोलावीरा साइनबोर्ड' कहा जाता है, जिसमें दस बड़े आकार के सिंधु प्रतीक शामिल हैं।"
+      },
+      "pyq": "UPSC CSE 2010"
+    },
+    {
+      "question": {
+        "en": "At which Indus Valley site was the evidence of rice husk/bran discovered, proving the cultivation of rice?",
+        "hi": "सिंधु घाटी के किस स्थल पर धान की भूसी (चावल के अवशेष) के साक्ष्य मिले थे, जो चावल की खेती को साबित करते हैं?"
+      },
+      "options": {
+        "en": [
+          "Lothal",
+          "Harappa",
+          "Mohenjo-daro",
+          "Kalibangan"
+        ],
+        "hi": [
+          "लोथल",
+          "हड़प्पा",
+          "मोहनजोदड़ो",
+          "कालीबंगन"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Lothal in Gujarat has yielded remains of rice husk, indicating that the inhabitants cultivated and consumed rice.",
+        "hi": "गुजरात के लोथल से धान की भूसी के अवशेष मिले हैं, जो दर्शाते हैं कि वहाँ के निवासी चावल की खेती करते थे और उसका सेवन करते थे।"
+      },
+      "pyq": "UPPCS Prelims 2012"
+    },
+    {
+      "question": {
+        "en": "On the banks of which river is the ancient site of Harappa situated?",
+        "hi": "हड़प्पा का प्राचीन स्थल किस नदी के तट पर स्थित है?"
+      },
+      "options": {
+        "en": [
+          "Bhogwa River",
+          "Indus River",
+          "Ghaggar River",
+          "Ravi River"
+        ],
+        "hi": [
+          "भोगवा नदी",
+          "सिंधु नदी",
+          "घग्गर नदी",
+          "रावी नदी"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Harappa is located on the banks of the Ravi River in Punjab, Pakistan.",
+        "hi": "हड़प्पा पाकिस्तान के पंजाब में रावी नदी के तट पर स्थित है।"
+      },
+      "pyq": "RRB NTPC 2019"
+    },
+    {
+      "question": {
+        "en": "At which Indus Valley site was a high-quality clay model of a plow (toy plow) discovered?",
+        "hi": "सिंधु घाटी के किस स्थल पर हल का एक उच्च गुणवत्ता वाला मिट्टी का मॉडल (खिलौना हल) खोजा गया था?"
+      },
+      "options": {
+        "en": [
+          "Lothal",
+          "Ropar",
+          "Banwali",
+          "Kalibangan"
+        ],
+        "hi": [
+          "लोथल",
+          "रोपड़",
+          "बनावली",
+          "कालीबंगन"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Banwali in Haryana yielded a terracotta/clay model of a plow, confirming their knowledge of plowing technology.",
+        "hi": "हरियाणा के बनावली से मिट्टी/टेराकोटा का एक खिलौना हल मिला था, जो उनकी जुताई तकनीक के ज्ञान की पुष्टि करता है।"
+      },
+      "pyq": "UPPCS Prelims 2015"
+    },
+    {
+      "question": {
+        "en": "In which state of India is the famous archaeological site of Dholavira located?",
+        "hi": "भारत के किस राज्य में धोलावीरा का प्रसिद्ध पुरातात्विक स्थल स्थित है?"
+      },
+      "options": {
+        "en": [
+          "Punjab",
+          "Haryana",
+          "Rajasthan",
+          "Gujarat"
+        ],
+        "hi": [
+          "पंजाब",
+          "हरियाणा",
+          "राजस्थान",
+          "गुजरात"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Dholavira is located on Khadir Bet in the Great Rann of Kutch, Gujarat.",
+        "hi": "धोलावीरा गुजरात के कच्छ के रण में खादिर बेट पर स्थित है।"
+      },
+      "pyq": "UPSC CSE 2021"
+    },
+    {
+      "question": {
+        "en": "At which site was a brick found with the footprint of a dog chasing a cat?",
+        "hi": "किस स्थल पर बिल्ली का पीछा करते हुए कुत्ते के पैरों के निशान वाली ईंट मिली थी?"
+      },
+      "options": {
+        "en": [
+          "Chanhudaro",
+          "Banwali",
+          "Kalibangan",
+          "Harappa"
+        ],
+        "hi": [
+          "चन्हूदड़ो",
+          "बनावली",
+          "कालीबंगन",
+          "हड़प्पा"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Excavation at Chanhudaro revealed a brick that carries the footprints of a dog chasing a cat, indicating a moment frozen in time.",
+        "hi": "चन्हूदड़ो में उत्खनन से एक ऐसी ईंट का पता चला जिस पर बिल्ली का पीछा करते हुए कुत्ते के पैरों के निशान हैं।"
+      },
+      "pyq": "State PSC 2014"
+    },
+    {
+      "question": {
+        "en": "Which of the following sites features a single fortification wall enclosing both the Citadel and the Lower Town together?",
+        "hi": "निम्नलिखित में से किस स्थल पर दुर्ग और निचले नगर दोनों को एक साथ घेरने वाली एक ही सुरक्षा दीवार (fortification wall) है?"
+      },
+      "options": {
+        "en": [
+          "Mohenjo-daro",
+          "Chanhudaro",
+          "Harappa",
+          "Lothal"
+        ],
+        "hi": [
+          "मोहनजोदड़ो",
+          "चन्हूदड़ो",
+          "हड़प्पा",
+          "लोथल"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Unlike Harappa and Mohenjo-daro which had separate walls for Citadel and Lower Town, Lothal and Surkotada had a single fortification wall enclosing the entire city.",
+        "hi": "हड़प्पा और मोहनजोदड़ो के विपरीत, जहाँ दुर्ग और निचले नगर के लिए अलग-अलग दीवारें थीं, लोथल और सुरकोटड़ा में पूरे शहर को घेरने वाली एक ही सुरक्षा दीवार थी।"
+      },
+      "pyq": "UPPCS 2014"
+    },
+    {
+      "question": {
+        "en": "The urban planning of Harappan cities was based on which pattern, where main roads intersected at 90-degree angles?",
+        "hi": "हड़प्पा के शहरों का नगर नियोजन किस पैटर्न पर आधारित था, जहाँ मुख्य सड़कें 90 डिग्री के कोण पर आपस में कटती थीं?"
+      },
+      "options": {
+        "en": [
+          "Circular Pattern",
+          "Linear Pattern",
+          "Radial Pattern",
+          "Grid System (Chessboard)"
+        ],
+        "hi": [
+          "गोलाकार पैटर्न (Circular Pattern)",
+          "रैखिक पैटर्न (Linear Pattern)",
+          "त्रिज्यीय पैटर्न (Radial Pattern)",
+          "ग्रिड प्रणाली (चेसबोर्ड)"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Harappan towns were planned on a Grid System (or Chessboard Pattern), where streets cut each other at right angles (90 degrees).",
+        "hi": "हड़प्पा के कस्बों की योजना ग्रिड प्रणाली (या शतरंज के बिसात पैटर्न) पर बनाई गई थी, जहाँ सड़कें एक-दूसरे को समकोण (90 डिग्री) पर काटती थीं।"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "Which of the following trees was widely worshipped by the Indus Valley people, as depicted on their seals?",
+        "hi": "निम्नलिखित में से किस पेड़ की सिंधु घाटी के लोगों द्वारा व्यापक रूप से पूजा की जाती थी, जैसा कि उनकी मुहरों पर दिखाया गया है?"
+      },
+      "options": {
+        "en": [
+          "Mango Tree",
+          "Banyan Tree",
+          "Peepal Tree (Sacred Fig)",
+          "Neem Tree"
+        ],
+        "hi": [
+          "आम का पेड़",
+          "बरगद का पेड़",
+          "पीपल का पेड़ (पवित्र अंजीर)",
+          "नीम का पेड़"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Peepal tree was highly revered, and seals often depict deities standing between its branches, indicating nature worship.",
+        "hi": "पीपल के पेड़ को अत्यधिक पूजनीय माना जाता था, और मुहरों पर अक्सर देवताओं को इसकी शाखाओं के बीच खड़ा दिखाया गया है, जो प्रकृति पूजा को दर्शाता है।"
+      },
+      "pyq": "UPSC CSE 2020"
+    },
+    {
+      "question": {
+        "en": "In which year did the explorer Alexander Burnes visit the Indus valley sites to survey the ruins?",
+        "hi": "खोजकर्ता अलेक्जेंडर बर्न्स ने खंडहरों का सर्वेक्षण करने के लिए किस वर्ष सिंधु घाटी के स्थलों का दौरा किया था?"
+      },
+      "options": {
+        "en": [
+          "1826",
+          "1861",
+          "1831",
+          "1856"
+        ],
+        "hi": [
+          "1826",
+          "1861",
+          "1831",
+          "1856"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Alexander Burnes visited the Indus region and surveyed the ruins of Harappa in 1831, shortly after Charles Masson's initial visit.",
+        "hi": "अलेक्जेंडर बर्न्स ने चार्ल्स मैसन की प्रारंभिक यात्रा के कुछ समय बाद, 1831 में सिंधु क्षेत्र का दौरा किया और हड़प्पा के खंडहरों का सर्वेक्षण किया।"
+      },
+      "pyq": "State PSC 2015"
+    },
+    {
+      "question": {
+        "en": "Which Harappan site located in Sindh, Pakistan, provides archaeological evidence of a buck (antelope)?",
+        "hi": "पाकिस्तान के सिंध में स्थित कौन सा हड़प्पा स्थल हिरण (मृग) के पुरातात्विक साक्ष्य प्रदान करता है?"
+      },
+      "options": {
+        "en": [
+          "Amri",
+          "Chanhudaro",
+          "Mohenjo-daro",
+          "Kot Diji"
+        ],
+        "hi": [
+          "अमरी",
+          "चन्हूदड़ो",
+          "मोहनजोदड़ो",
+          "कोट दीजी"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Amri, located on the west bank of the Indus, is famous for providing early evidence of a buck (antelope/gazelle).",
+        "hi": "सिंधु नदी के पश्चिमी तट पर स्थित अमरी, हिरण (मृग) के प्रारंभिक साक्ष्य प्रदान करने के लिए प्रसिद्ध है।"
+      },
+      "pyq": "UPSC CSE 2012"
+    },
+    {
+      "question": {
+        "en": "Which is the only Indus Valley Civilization city that does not have a Citadel (fortified upper town)?",
+        "hi": "सिंधु घाटी सभ्यता का एकमात्र ऐसा शहर कौन सा है जिसमें कोई दुर्ग (किला क्षेत्र) नहीं है?"
+      },
+      "options": {
+        "en": [
+          "Chanhudaro",
+          "Kalibangan",
+          "Dholavira",
+          "Lothal"
+        ],
+        "hi": [
+          "चन्हूदड़ो",
+          "कालीबंगन",
+          "धोलावीरा",
+          "लोथल"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Chanhudaro is the only Harappan city without a citadel. It was a major center for crafts and bead-making.",
+        "hi": "चन्हूदड़ो एकमात्र ऐसा हड़प्पा शहर है जिसमें कोई दुर्ग नहीं है। यह शिल्प और मनके बनाने का एक प्रमुख केंद्र था।"
+      },
+      "pyq": "UPSC CSE 2015"
+    },
+    {
+      "question": {
+        "en": "Which Indus Valley Civilization site was located on the banks of the ancient Saraswati River in Haryana?",
+        "hi": "हरियाणा में प्राचीन सरस्वती नदी के तट पर सिंधु घाटी सभ्यता का कौन सा स्थल स्थित था?"
+      },
+      "options": {
+        "en": [
+          "Banwali",
+          "Lothal",
+          "Ropar",
+          "Kalibangan"
+        ],
+        "hi": [
+          "बनावली",
+          "लोथल",
+          "रोपड़",
+          "कालीबंगन"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Banwali in Fatehabad district of Haryana was located on the banks of the ancient Saraswati River.",
+        "hi": "हरियाणा के फतेहाबाद जिले में स्थित बनावली प्राचीन सरस्वती नदी के तट पर स्थित था।"
+      },
+      "pyq": "Haryana PSC 2018"
+    },
+    {
+      "question": {
+        "en": "On the banks of which river was the ancient site of Kalibangan located?",
+        "hi": "कालीबंगन का प्राचीन स्थल किस नदी के तट पर स्थित था?"
+      },
+      "options": {
+        "en": [
+          "Bhogwa River",
+          "Luni River",
+          "Saraswati River",
+          "Ghaggar River"
+        ],
+        "hi": [
+          "भोगवा नदी",
+          "लूनी नदी",
+          "सरस्वती नदी",
+          "घग्गर नदी"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Kalibangan in Rajasthan was situated on the banks of the Ghaggar River (ancient Saraswati river bed).",
+        "hi": "राजस्थान में कालीबंगन घग्गर नदी (प्राचीन सरस्वती नदी के मार्ग) के तट पर स्थित था।"
+      },
+      "pyq": "Rajasthan PSC 2018"
+    },
+    {
+      "question": {
+        "en": "Which of the following was the northernmost known site of the Indus Valley Civilization?",
+        "hi": "निम्नलिखित में से कौन सा सिंधु घाटी सभ्यता का सबसे उत्तरी ज्ञात स्थल था?"
+      },
+      "options": {
+        "en": [
+          "Alamgirpur",
+          "Sutkangedor",
+          "Manda",
+          "Daimabad"
+        ],
+        "hi": [
+          "आलमगीरपुर",
+          "सुत्कागेंडोर",
+          "मांडा",
+          "दैमाबाद"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Manda on the banks of the Chenab River in Jammu and Kashmir is the northernmost site of the civilization.",
+        "hi": "जम्मू और कश्मीर में चिनाब नदी के तट पर स्थित मांडा इस सभ्यता का सबसे उत्तरी स्थल है।"
+      },
+      "pyq": "UPPCS Prelims 2019"
+    },
+    {
+      "question": {
+        "en": "The famous bronze statue of the 'Dancing Girl' found at Mohenjo-daro was cast using which of the following techniques?",
+        "hi": "मोहनजोदड़ो में पाई गई 'नृत्य करती लड़की' (Dancing Girl) की प्रसिद्ध कांस्य मूर्ति को निम्नलिखित में से किस तकनीक का उपयोग करके ढाला गया था?"
+      },
+      "options": {
+        "en": [
+          "Clay Molding",
+          "Lost-wax Casting (Cire Perdue)",
+          "Stone Carving",
+          "Sand Casting"
+        ],
+        "hi": [
+          "मिट्टी की ढलाई",
+          "लुप्त-मोम ढलाई (Lost-wax Casting / Cire Perdue)",
+          "पत्थर की नक्काशी",
+          "रेत ढलाई (Sand Casting)"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The bronze Dancing Girl of Mohenjo-daro was made using the lost-wax casting technique, showing the advanced metallurgical skills of the Harappans.",
+        "hi": "मोहनजोदड़ो की कांस्य 'नृत्य करती लड़की' की मूर्ति लुप्त-मोम ढलाई (lost-wax casting) तकनीक का उपयोग करके बनाई गई थी, जो हड़प्पावासियों के उन्नत धातु विज्ञान कौशल को दर्शाती है।"
+      },
+      "pyq": "UPSC CSE 2016"
+    },
+    {
+      "question": {
+        "en": "Which of the following Indus Valley Civilization sites is located in Afghanistan?",
+        "hi": "निम्नलिखित में से कौन सा सिंधु घाटी सभ्यता का स्थल अफगानिस्तान में स्थित है?"
+      },
+      "options": {
+        "en": [
+          "Ropar",
+          "Shortughai",
+          "Sutkangedor",
+          "Amri"
+        ],
+        "hi": [
+          "रोपड़",
+          "शॉर्टुगाई",
+          "सुत्कागेंडोर",
+          "अमरी"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Out of 1500 known sites, only two sites (Shortughai and Mundigak) are located in Afghanistan, which served as trading outposts.",
+        "hi": "ज्ञात 1500 स्थलों में से केवल दो स्थल (शॉर्टुगाई और मुंडीगाक) अफगानिस्तान में स्थित हैं, जो व्यापारिक चौकियों के रूप में कार्य करते थे।"
+      },
+      "pyq": "UPSC CSE 2010"
+    },
+    {
+      "question": {
+        "en": "Who was the Director-General of the Archaeological Survey of India (ASI) who officially declared the discovery of the Indus Valley Civilization to the world in 1924?",
+        "hi": "भारतीय पुरातत्व सर्वेक्षण (ASI) के महानिदेशक कौन थे जिन्होंने 1924 में दुनिया के सामने आधिकारिक तौर पर सिंधु घाटी सभ्यता की खोज की घोषणा की थी?"
+      },
+      "options": {
+        "en": [
+          "Charles Masson",
+          "Alexander Cunningham",
+          "John Marshall",
+          "Mortimer Wheeler"
+        ],
+        "hi": [
+          "चार्ल्स मैसन",
+          "अलेक्जेंडर कनिंघम",
+          "जॉन मार्शल",
+          "मोर्टिमर व्हीलर"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Sir John Marshall, appointed as the ASI Director-General in 1904, made the official global announcement of the discovery of a new civilization in the Indus Valley in 1924.",
+        "hi": "1904 में ASI महानिदेशक के रूप में नियुक्त सर जॉन मार्शल ने 1924 में सिंधु घाटी में एक नई सभ्यता की खोज की आधिकारिक वैश्विक घोषणा की थी।"
+      },
+      "pyq": "UPSC EPFO 2021"
+    },
+    {
+      "question": {
+        "en": "At which Harappan site was a human burial discovered with a dog buried alongside?",
+        "hi": "किस हड़प्पा स्थल पर एक मानव समाधि के साथ एक कुत्ता भी दफनाया हुआ पाया गया था?"
+      },
+      "options": {
+        "en": [
+          "Sutkangedor",
+          "Ropar",
+          "Rakhi Garhi",
+          "Banwali"
+        ],
+        "hi": [
+          "सुत्कागेंडोर",
+          "रोपड़",
+          "राखीगढ़ी",
+          "बनावली"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "At Ropar (Punjab, India), excavations revealed a unique burial practice where a dog was buried alongside its human master.",
+        "hi": "रोपड़ (पंजाब, भारत) में उत्खनन से एक अनोखी दफन प्रथा का पता चला जहाँ एक कुत्ते को उसके मानव मालिक के साथ दफनाया गया था।"
+      },
+      "pyq": "Punjab PSC 2018"
+    },
+    {
+      "question": {
+        "en": "What was the main style of residential housing in Harappan cities?",
+        "hi": "हड़प्पा के शहरों में आवासीय आवासों की मुख्य शैली क्या थी?"
+      },
+      "options": {
+        "en": [
+          "Multi-room, often double-storied brick houses built around a central courtyard",
+          "Wooden log cabins",
+          "Cave dwellings",
+          "Single-room mud huts"
+        ],
+        "hi": [
+          "केंद्रीय आंगन के चारों ओर बने बहु-कक्षीय, अक्सर दोमंजिला ईंटों के घर",
+          "लकड़ी के केबिन",
+          "गुफा आवास",
+          "एक कमरे की मिट्टी की झोपड़ियाँ"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Harappan residential houses were built of baked bricks, often double-storied, featuring multiple rooms built around a central courtyard with private wells and bathrooms.",
+        "hi": "हड़प्पा के आवासीय घर पकी हुई ईंटों से बने थे, जो अक्सर दोमंजिला होते थे, जिनमें एक केंद्रीय आंगन के चारों ओर कई कमरे होते थे और निजी कुएँ और स्नानघर होते थे।"
+      },
+      "pyq": "SSC CGL 2017"
+    },
+    {
+      "question": {
+        "en": "Which Indus Valley site has yielded the oldest evidence of camel bones?",
+        "hi": "सिंधु घाटी के किस स्थल से ऊँट की हड्डियों के सबसे पुराने साक्ष्य मिले हैं?"
+      },
+      "options": {
+        "en": [
+          "Kalibangan",
+          "Surkotada",
+          "Lothal",
+          "Harappa"
+        ],
+        "hi": [
+          "कालीबंगन",
+          "सुरकोटड़ा",
+          "लोथल",
+          "हड़प्पा"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Camel bones have been discovered at Kalibangan in Rajasthan, indicating that camels were used for transport and work in this dry region.",
+        "hi": "राजस्थान के कालीबंगन में ऊँट की हड्डियाँ खोजी गई हैं, जो दर्शाती हैं कि इस शुष्क क्षेत्र में परिवहन और काम के लिए ऊँटों का उपयोग किया जाता था।"
+      },
+      "pyq": "State PSC 2011"
+    },
+    {
+      "question": {
+        "en": "Which of the following was the primary unit of measurement/weights used by the Harappans for trade?",
+        "hi": "व्यापार के लिए हड़प्पावासियों द्वारा उपयोग की जाने वाली माप/बाट की प्राथमिक इकाई निम्नलिखित में से कौन सी थी?"
+      },
+      "options": {
+        "en": [
+          "Binary and decimal system, with weights in multiples of 16",
+          "British pound system",
+          "Metric system only",
+          "Based on the weight of a single grain of rice"
+        ],
+        "hi": [
+          "द्विआधारी (Binary) और दशमलव प्रणाली, जिसमें 16 के गुणकों में बाट होते थे",
+          "ब्रिटिश पाउंड प्रणाली",
+          "केवल मीट्रिक प्रणाली",
+          "चावल के एक दाने के वजन पर आधारित"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Harappan weights followed a standardized binary system in lower denominations (1, 2, 4, 8, 16, 32...) and decimal system in higher denominations, with 16 being the highly popular base unit.",
+        "hi": "हड़प्पा के बाट निचले मूल्यों में एक मानकीकृत द्विआधारी प्रणाली (1, 2, 4, 8, 16, 32...) और उच्च मूल्यों में दशमलव प्रणाली का पालन करते थे, जिसमें 16 अत्यधिक लोकप्रिय आधार इकाई थी।"
+      },
+      "pyq": "UPPCS Prelims 2017"
+    },
+    {
+      "question": {
+        "en": "Which of the following was a major item of import for the Harappan people to make bronze?",
+        "hi": "हड़प्पावासियों के लिए काँसा बनाने के लिए आयात की जाने वाली एक प्रमुख वस्तु निम्नलिखित में से कौन सी थी?"
+      },
+      "options": {
+        "en": [
+          "Coal",
+          "Iron",
+          "Marble",
+          "Tin"
+        ],
+        "hi": [
+          "कोयला",
+          "लोहा",
+          "संगमरमर",
+          "टीन"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Harappans imported tin (from Afghanistan and Iran) to alloy with copper to make bronze.",
+        "hi": "हड़प्पावासी काँसा बनाने के लिए ताँबे के साथ मिलाने के लिए टीन (अफगानिस्तान और ईरान से) का आयात करते थे।"
+      },
+      "pyq": "UPSC CSE 1999"
+    },
+    {
+      "question": {
+        "en": "The main streets in Harappan cities were very wide and designed to meet at intersections known as:",
+        "hi": "हड़प्पा के शहरों की मुख्य सड़कें बहुत चौड़ी थीं और उन्हें चौराहों पर मिलने के लिए डिज़ाइन किया गया था जिन्हें कहा जाता था:"
+      },
+      "options": {
+        "en": [
+          "Oxford Circles",
+          "Grid Nodes",
+          "Royal Squares",
+          "Bazaars"
+        ],
+        "hi": [
+          "ऑक्सफोर्ड सर्कल्स",
+          "ग्रिड नोड्स",
+          "रॉयल स्क्वायर्स",
+          "बाज़ार"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The intersections where the grid-pattern roads met at right angles in Harappan cities are often termed 'Oxford Circles'.",
+        "hi": "हड़प्पा के शहरों में जहाँ ग्रिड-पैटर्न की सड़कें समकोण पर मिलती थीं, उन चौराहों को अक्सर 'ऑक्सफोर्ड सर्कल्स' कहा जाता है।"
+      },
+      "pyq": "SSC CGL 2019"
+    },
+    {
+      "question": {
+        "en": "Which of the following materials was primarily used to make Harappan beads found in bead factories?",
+        "hi": "मनका कारखानों में पाए जाने वाले हड़प्पा मनकों को बनाने के लिए मुख्य रूप से किस सामग्री का उपयोग किया जाता था?"
+      },
+      "options": {
+        "en": [
+          "Coal",
+          "Iron",
+          "Granite",
+          "Carnelian (red stone)"
+        ],
+        "hi": [
+          "कोयला",
+          "लोहा",
+          "ग्रेनाइट",
+          "कार्निलियन (लाल पत्थर)"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Carnelian, a beautiful semi-precious red stone, was highly favored and widely used for making beads and ornaments in Harappan factories.",
+        "hi": "कार्निलियन, एक सुंदर अर्ध-कीमती लाल पत्थर, हड़प्पा के कारखानों में मनके और आभूषण बनाने के लिए अत्यधिक पसंद किया जाता था और व्यापक रूप से उपयोग किया जाता था।"
+      },
+      "pyq": "UPSC CSE 2017"
+    },
+    {
+      "question": {
+        "en": "Which site of the Indus Valley Civilization is located on the banks of the Luni River in Gujarat?",
+        "hi": "सिंधु घाटी सभ्यता का कौन सा स्थल गुजरात में लूनी नदी के तट पर स्थित है?"
+      },
+      "options": {
+        "en": [
+          "Dholavira",
+          "Surkotada",
+          "Lothal",
+          "Nageshwar"
+        ],
+        "hi": [
+          "धोलावीरा",
+          "सुरकोटड़ा",
+          "लोथल",
+          "नागेश्वर"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Dholavira is located near the Luni River basin in the Kutch district of Gujarat.",
+        "hi": "धोलावीरा गुजरात के कच्छ जिले में लूनी नदी बेसिन के पास स्थित है।"
+      },
+      "pyq": "UPSC CSE 2021"
+    },
+    {
+      "question": {
+        "en": "At which Indus Valley site was a unique copper mirror discovered?",
+        "hi": "सिंधु घाटी के किस स्थल पर एक अनोखा तांबे का दर्पण (शीशा) खोजा गया था?"
+      },
+      "options": {
+        "en": [
+          "Harappa",
+          "Kalibangan",
+          "Lothal",
+          "Mohenjo-daro"
+        ],
+        "hi": [
+          "हड़प्पा",
+          "कालीबंगन",
+          "लोथल",
+          "मोहनजोदड़ो"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "A highly polished copper mirror was discovered during excavations at Harappa, showcasing their metalworking skills.",
+        "hi": "हड़प्पा में उत्खनन के दौरान एक अत्यधिक पॉलिश किया हुआ तांबे का दर्पण खोजा गया था, जो उनके धातु कौशल को प्रदर्शित करता है।"
+      },
+      "pyq": "State PSC 2016"
+    },
+    {
+      "question": {
+        "en": "Terracotta models of chess pieces or chess-like gaming boards have been discovered at which port city of the IVC?",
+        "hi": "सिंधु घाटी सभ्यता के किस बंदरगाह शहर में शतरंज की गोटियों या शतरंज जैसे खेल के बोर्ड के टेराकोटा मॉडल खोजे गए हैं?"
+      },
+      "options": {
+        "en": [
+          "Balakot",
+          "Sutkangedor",
+          "Surkotada",
+          "Lothal"
+        ],
+        "hi": [
+          "बालाकोट",
+          "सुत्कागेंडोर",
+          "सुरकोटड़ा",
+          "लोथल"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Lothal has yielded various terracotta gaming objects, including pieces resembling modern chess, indicating that they played board games.",
+        "hi": "लोथल से विभिन्न टेराकोटा खेल की वस्तुएं मिली हैं, जिनमें आधुनिक शतरंज जैसी गोटियां शामिल हैं, जो दर्शाती हैं कि वे बोर्ड गेम खेलते थे।"
+      },
+      "pyq": "Gujarat PSC 2019"
+    },
+    {
+      "question": {
+        "en": "A stone sculpture of a 'Male Torso' (naked body) made of red sandstone was found at which site?",
+        "hi": "लाल बलुआ पत्थर से बनी एक 'पुरुष धड़' (Male Torso) की पत्थर की मूर्ति किस स्थल पर पाई गई थी?"
+      },
+      "options": {
+        "en": [
+          "Dholavira",
+          "Harappa",
+          "Mohenjo-daro",
+          "Lothal"
+        ],
+        "hi": [
+          "धोलावीरा",
+          "हड़प्पा",
+          "मोहनजोदड़ो",
+          "लोथल"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "A highly realistic red sandstone sculpture of a naked male torso was excavated at Harappa.",
+        "hi": "हड़प्पा में एक नग्न पुरुष धड़ की अत्यधिक यथार्थवादी लाल बलुआ पत्थर की मूर्ति उत्खनन में मिली थी।"
+      },
+      "pyq": "State PSC 2013"
+    },
+    {
+      "question": {
+        "en": "At which Indus Valley site were the actual bones of a horse discovered?",
+        "hi": "सिंधु घाटी के किस स्थल पर घोड़े की वास्तविक हड्डियाँ खोजी गई थीं?"
+      },
+      "options": {
+        "en": [
+          "Kalibangan",
+          "Surkotada",
+          "Amri",
+          "Lothal"
+        ],
+        "hi": [
+          "कालीबंगन",
+          "सुरकोटड़ा",
+          "अमरी",
+          "लोथल"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Surkotada in Gujarat is the only site where clear evidence of horse bones has been excavated.",
+        "hi": "गुजरात का सुरकोटड़ा एकमात्र ऐसा स्थल है जहाँ से घोड़े की हड्डियों के स्पष्ट साक्ष्य मिले हैं।"
+      },
+      "pyq": "UPSC CSE 1994"
+    },
+    {
+      "question": {
+        "en": "The late/post-Harappan phase (1750-1000 BC) is characterized by which of the following changes?",
+        "hi": "उत्तर-हड़प्पा चरण (1750-1000 ई.पू.) की विशेषता निम्नलिखित में से किस परिवर्तन से है?"
+      },
+      "options": {
+        "en": [
+          "Beginning of the Iron Age",
+          "Expansion of trade with Rome",
+          "Rise of giant new stone temples",
+          "Decline of urban planning and return to rural life"
+        ],
+        "hi": [
+          "लोह युग की शुरुआत",
+          "रोम के साथ व्यापार का विस्तार",
+          "विशाल नए पत्थर के मंदिरों का उदय",
+          "शहरी नियोजन का पतन और ग्रामीण जीवन की ओर वापसी"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The Late/Post-Harappan phase marks the decline of the great cities, loss of systematic drainage, and a transition back to rural, localized cultures.",
+        "hi": "उत्तर-हड़प्पा चरण बड़े शहरों के पतन, व्यवस्थित जल निकासी के नुकसान और ग्रामीण, स्थानीय संस्कृतियों में वापस संक्रमण का प्रतीक है।"
+      },
+      "pyq": "UPPCS 2015"
+    },
+    {
+      "question": {
+        "en": "Who is officially considered the 'Father of Indian Archaeology'?",
+        "hi": "आधिकारिक तौर पर किसे 'भारतीय पुरातत्व का जनक' माना जाता है?"
+      },
+      "options": {
+        "en": [
+          "Dayaram Sahni",
+          "John Marshall",
+          "Alexander Cunningham",
+          "R.D. Banerjee"
+        ],
+        "hi": [
+          "दयाराम साहनी",
+          "जॉन मार्शल",
+          "अलेक्जेंडर कनिंघम",
+          "आर.डी. बनर्जी"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Alexander Cunningham visited the sites between 1853-1857 and founded the Archaeological Survey of India (ASI) in 1861. He is known as the Father of Indian Archaeology.",
+        "hi": "अलेक्जेंडर कनिंघम ने 1853-1857 के बीच स्थलों का दौरा किया और 1861 में भारतीय पुरातत्व सर्वेक्षण (ASI) की स्थापना की। उन्हें भारतीय पुरातत्व का जनक कहा जाता है।"
+      },
+      "pyq": "UPSC CAPF 2018"
+    },
+    {
+      "question": {
+        "en": "Which major metal was completely unknown to the people of the Indus Valley Civilization?",
+        "hi": "सिंधु घाटी सभ्यता के लोगों को कौन सी प्रमुख धातु पूरी तरह से अज्ञात थी?"
+      },
+      "options": {
+        "en": [
+          "Copper",
+          "Gold",
+          "Iron",
+          "Bronze"
+        ],
+        "hi": [
+          "ताँबा",
+          "सोना",
+          "लोहा",
+          "काँसा"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Indus Valley Civilization was a Bronze Age civilization. Iron was discovered much later during the Vedic Period (around 1000 BC).",
+        "hi": "सिंधु घाटी सभ्यता एक कांस्य युग की सभ्यता थी। लोहे की खोज बहुत बाद में वैदिक काल (लगभग 1000 ईसा पूर्व) के दौरान हुई थी।"
+      },
+      "pyq": "UPSC CSE 2018"
+    },
+    {
+      "question": {
+        "en": "Which is the largest building/structure discovered at Mohenjo-daro?",
+        "hi": "मोहनजोदड़ो में खोजी गई सबसे बड़ी इमारत/संरचना कौन सी है?"
+      },
+      "options": {
+        "en": [
+          "The Great Granary",
+          "The Assembly Hall",
+          "The Great Bath",
+          "The Priest's House"
+        ],
+        "hi": [
+          "विशाल अन्नागार (The Great Granary)",
+          "सभा भवन (The Assembly Hall)",
+          "विशाल स्नानागार (The Great Bath)",
+          "पुजारी का घर (The Priest's House)"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The Great Granary (approx 45m x 22m) is the largest structure found at Mohenjo-daro, used for storing grain surplus.",
+        "hi": "विशाल अन्नागार (लगभग 45 मीटर x 22 मीटर) मोहनजोदड़ो में पाई गई सबसे बड़ी संरचना है, जिसका उपयोग अतिरिक्त अनाज के भंडारण के लिए किया जाता था।"
+      },
+      "pyq": "SSC CGL 2017"
+    },
+    {
+      "question": {
+        "en": "Who discovered the Harappan site of Chanhudaro in the year 1931?",
+        "hi": "वर्ष 1931 में चन्हूदड़ो के हड़प्पा स्थल की खोज किसने की थी?"
+      },
+      "options": {
+        "en": [
+          "R.D. Banerjee",
+          "N.G. Mazumdar",
+          "Dayaram Sahni",
+          "S.R. Rao"
+        ],
+        "hi": [
+          "आर.डी. बनर्जी",
+          "एन.जी. मजूमदार",
+          "दयाराम साहनी",
+          "एस.आर. राव"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Chanhudaro was first discovered and excavated by N.G. Mazumdar in 1931.",
+        "hi": "चन्हूदड़ो की खोज और उत्खनन सबसे पहले 1931 में एन.जी. मजूमदार द्वारा किया गया था।"
+      },
+      "pyq": "State PSC 2013"
+    },
+    {
+      "question": {
+        "en": "Who discovered the ancient ruins of Mohenjo-daro in the year 1922?",
+        "hi": "वर्ष 1922 में मोहनजोदड़ो के प्राचीन खंडहरों की खोज किसने की थी?"
+      },
+      "options": {
+        "en": [
+          "Dayaram Sahni",
+          "John Marshall",
+          "R.D. Banerjee (Rakhal Das Banerjee)",
+          "N.G. Mazumdar"
+        ],
+        "hi": [
+          "दयाराम साहनी",
+          "जॉन मार्शल",
+          "आर.डी. बनर्जी (राखाल दास बनर्जी)",
+          "एन.जी. मजूमदार"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "R.D. Banerjee discovered Mohenjo-daro in 1922, just one year after Harappa was excavated.",
+        "hi": "आर.डी. बनर्जी ने 1922 में मोहनजोदड़ो की खोज की थी, जो हड़प्पा के उत्खनन के ठीक एक साल बाद था।"
+      },
+      "pyq": "SSC CGL 2015"
+    },
+    {
+      "question": {
+        "en": "What was the main source of water for the elaborate drainage system in the residential areas of Mohenjo-daro?",
+        "hi": "मोहनजोदड़ो के आवासीय क्षेत्रों में विस्तृत जल निकासी प्रणाली के लिए पानी का मुख्य स्रोत क्या था?"
+      },
+      "options": {
+        "en": [
+          "Rainwater harvesting only",
+          "Private and public wells",
+          "River canals",
+          "Waterfalls"
+        ],
+        "hi": [
+          "केवल वर्षा जल संचयन",
+          "निजी और सार्वजनिक कुएँ",
+          "नदी की नहरें",
+          "जलप्रपात"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Mohenjo-daro had an extraordinary number of wells (estimated around 700), providing water to almost every house, which fed into the covered street drains.",
+        "hi": "मोहनजोदड़ो में असाधारण संख्या में कुएँ (लगभग 700 का अनुमान) थे, जो लगभग हर घर को पानी प्रदान करते थे, जो बाद में ढकी हुई नालियों में बहता था।"
+      },
+      "pyq": "UPSC CSE 2015"
+    },
+    {
+      "question": {
+        "en": "Which was the first Indus Valley Civilization site to be excavated in 1921?",
+        "hi": "1921 में उत्खनन किया जाने वाला सिंधु घाटी सभ्यता का पहला स्थल कौन सा था?"
+      },
+      "options": {
+        "en": [
+          "Harappa",
+          "Lothal",
+          "Kalibangan",
+          "Mohenjo-daro"
+        ],
+        "hi": [
+          "हड़प्पा",
+          "लोथल",
+          "कालीबंगन",
+          "मोहनजोदड़ो"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Harappa was the first site to be excavated in 1921 by Dayaram Sahni, which is why the civilization is also known as the Harappan Civilization.",
+        "hi": "हड़प्पा 1921 में दयाराम साहनी द्वारा उत्खनन किया जाने वाला पहला स्थल था, यही कारण है कि इस सभ्यता को हड़प्पा सभ्यता के नाम से भी जाना जाता है।"
+      },
+      "pyq": "SSC CGL 2016"
+    },
+    {
+      "question": {
+        "en": "The famous 'Great Bath', described as an engineering marvel of the ancient world, was discovered at which site?",
+        "hi": "प्राचीन विश्व का एक इंजीनियरिंग चमत्कार माना जाने वाला प्रसिद्ध 'विशाल स्नानागार' (Great Bath) किस स्थल पर खोजा गया था?"
+      },
+      "options": {
+        "en": [
+          "Lothal",
+          "Harappa",
+          "Mohenjo-daro",
+          "Dholavira"
+        ],
+        "hi": [
+          "लोथल",
+          "हड़प्पा",
+          "मोहनजोदड़ो",
+          "धोलावीरा"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Great Bath, a large paved public bath used for ritual bathing, was discovered in the citadel mound of Mohenjo-daro.",
+        "hi": "धार्मिक स्नान के लिए उपयोग किया जाने वाला एक बड़ा पक्का सार्वजनिक स्नानागार 'ग्रेट बाथ', मोहनजोदड़ो के दुर्ग टीले में खोजा गया था।"
+      },
+      "pyq": "SSC CGL 2018"
+    },
+    {
+      "question": {
+        "en": "Which Harappan site is famous for its sophisticated water harvesting system, including massive rock-cut water reservoirs?",
+        "hi": "कौन सा हड़प्पा स्थल अपनी परिष्कृत जल संचयन प्रणाली के लिए प्रसिद्ध है, जिसमें चट्टानों को काटकर बनाए गए विशाल जलाशय शामिल हैं?"
+      },
+      "options": {
+        "en": [
+          "Mohenjo-daro",
+          "Dholavira",
+          "Lothal",
+          "Banwali"
+        ],
+        "hi": [
+          "मोहनजोदड़ो",
+          "धोलावीरा",
+          "लोथल",
+          "बनावली"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Dholavira is renowned for its highly advanced water management system, featuring multiple large, stone-cut reservoirs to store rainwater.",
+        "hi": "धोलावीरा अपनी अत्यधिक उन्नत जल प्रबंधन प्रणाली के लिए प्रसिद्ध है, जिसमें वर्षा जल को संचित करने के लिए पत्थरों को काटकर बनाए गए कई बड़े जलाशय शामिल हैं।"
+      },
+      "pyq": "UPSC CSE 2010"
+    },
+    {
+      "question": {
+        "en": "At which of the following Harappan sites was an artificial brick dockyard (harbor) discovered?",
+        "hi": "निम्नलिखित में से किस हड़प्पा स्थल पर एक कृत्रिम ईंट गोदीवाड़ा (बंदरगाह) खोजा गया था?"
+      },
+      "options": {
+        "en": [
+          "Lothal",
+          "Sutkangedor",
+          "Balakot",
+          "Surkotada"
+        ],
+        "hi": [
+          "लोथल",
+          "सुत्कागेंडोर",
+          "बालाकोट",
+          "सुरकोटड़ा"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Lothal in Gujarat had a massive, well-designed man-made dockyard connected to the Bhogwa river, proving it was a major trading port.",
+        "hi": "गुजरात के लोथल में भोगवा नदी से जुड़ा एक विशाल, सुनियोजित मानव निर्मित गोदीवाड़ा (डॉकयार्ड) था, जो साबित करता है कि यह एक प्रमुख व्यापारिक बंदरगाह था।"
+      },
+      "pyq": "UPSC CSE 1999"
+    },
+    {
+      "question": {
+        "en": "The 'Swastik' symbol, widely used in Indian culture, has its earliest archaeological origin in which civilization?",
+        "hi": "भारतीय संस्कृति में व्यापक रूप से उपयोग किए जाने वाले 'स्वास्तिक' प्रतीक की सबसे प्रारंभिक पुरातात्विक उत्पत्ति किस सभ्यता में हुई है?"
+      },
+      "options": {
+        "en": [
+          "Vedic Civilization",
+          "Indus Valley Civilization",
+          "Mauryan Empire",
+          "Gupta Empire"
+        ],
+        "hi": [
+          "वैदिक सभ्यता",
+          "सिंधु घाटी सभ्यता",
+          "मौर्य साम्राज्य",
+          "गुप्त साम्राज्य"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The Swastika symbol was first discovered on the seals of the Indus Valley Civilization, representing sun worship or auspiciousness.",
+        "hi": "स्वास्तिक प्रतीक सबसे पहले सिंधु घाटी सभ्यता की मुहरों पर खोजा गया था, जो सूर्य पूजा या शुभता का प्रतिनिधित्व करता था।"
+      },
+      "pyq": "SSC CGL 2015"
+    },
+    {
+      "question": {
+        "en": "The beautiful steatite statue of the 'Priest King' wearing an embroidered shawl was excavated at which site?",
+        "hi": "कढ़ाईदार शॉल ओढ़े 'पुजारी राजा' (Priest King) की सुंदर स्टीटाइट मूर्ति किस स्थल पर उत्खनन में मिली थी?"
+      },
+      "options": {
+        "en": [
+          "Lothal",
+          "Harappa",
+          "Kalibangan",
+          "Mohenjo-daro"
+        ],
+        "hi": [
+          "लोथल",
+          "हड़प्पा",
+          "कालीबंगन",
+          "मोहनजोदड़ो"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The famous stone bust of the bearded 'Priest King' wearing a trefoil-patterned shawl was discovered at Mohenjo-daro.",
+        "hi": "तिपतिया पैटर्न वाली शॉल ओढ़े दाढ़ी वाले 'पुजारी राजा' की प्रसिद्ध पत्थर की अर्ध-मूर्ति मोहनजोदड़ो में खोजी गई थी।"
+      },
+      "pyq": "SSC CGL 2016"
+    },
+    {
+      "question": {
+        "en": "Which of the following animals was considered highly sacred and is most frequently depicted on the seals of the Indus Valley?",
+        "hi": "निम्नलिखित में से किस जानवर को अत्यधिक पवित्र माना जाता था और सिंधु घाटी की मुहरों पर सबसे अधिक बार चित्रित किया गया है?"
+      },
+      "options": {
+        "en": [
+          "Elephant",
+          "Horse",
+          "Lion",
+          "Humped Bull / Unicorn"
+        ],
+        "hi": [
+          "हाथी",
+          "घोड़ा",
+          "शेर",
+          "कूबड़ वाला बैल / एकशृंगी (Unicorn)"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The humped bull and the mythical unicorn are the most sacred and frequently depicted animals on Harappan seals.",
+        "hi": "कूबड़ वाला बैल और काल्पनिक एकशृंगी (यूनिकॉर्न) हड़प्पा की मुहरों पर सबसे पवित्र और अक्सर चित्रित किए जाने वाले जानवर हैं।"
+      },
+      "pyq": "SSC MTS 2020"
+    },
+    {
+      "question": {
+        "en": "Which site provides unique evidence of cosmetics, such as lipstick and eyeliner, used by the Indus people?",
+        "hi": "कौन सा स्थल सिंधु लोगों द्वारा उपयोग किए जाने वाले सौंदर्य प्रसाधनों, जैसे लिपस्टिक और आईलाइनर के अनोखे साक्ष्य प्रदान करता है?"
+      },
+      "options": {
+        "en": [
+          "Kalibangan",
+          "Chanhudaro",
+          "Mohenjo-daro",
+          "Harappa"
+        ],
+        "hi": [
+          "कालीबंगन",
+          "चन्हूदड़ो",
+          "मोहनजोदड़ो",
+          "हड़प्पा"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Chanhudaro was a center for manufacturing luxury items; excavations here revealed evidence of cosmetic items like lipsticks and eyeliner.",
+        "hi": "चन्हूदड़ो विलासिता की वस्तुओं के निर्माण का एक केंद्र था; यहाँ के उत्खनन से लिपस्टिक और आईलाइनर जैसी सौंदर्य प्रसाधन वस्तुओं के साक्ष्य मिले हैं।"
+      },
+      "pyq": "MPPSC Prelims 2016"
+    },
+    {
+      "question": {
+        "en": "The systematically arranged R-37 Cemetery was discovered at which of the following Harappan sites?",
+        "hi": "व्यवस्थित रूप से व्यवस्थित R-37 कब्रिस्तान निम्नलिखित में से किस हड़प्पा स्थल पर खोजा गया था?"
+      },
+      "options": {
+        "en": [
+          "Harappa",
+          "Mohenjo-daro",
+          "Lothal",
+          "Kalibangan"
+        ],
+        "hi": [
+          "हड़प्पा",
+          "मोहनजोदड़ो",
+          "लोथल",
+          "कालीबंगन"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "A major cemetery designated as 'Cemetery R-37' containing over 57 burials was discovered at Harappa.",
+        "hi": "हड़प्पा में 'कब्रिस्तान R-37' के रूप में नामित एक प्रमुख कब्रिस्तान खोजा गया था जिसमें 57 से अधिक समाधियाँ थीं।"
+      },
+      "pyq": "UPPCS Prelims 2013"
+    },
+    {
+      "question": {
+        "en": "Unlike most Harappan cities which were divided into two parts, which city was uniquely divided into three distinct parts?",
+        "hi": "अधिकांश हड़प्पा शहरों के विपरीत जो दो भागों में विभाजित थे, कौन सा शहर विशिष्ट रूप से तीन अलग-अलग भागों में विभाजित था?"
+      },
+      "options": {
+        "en": [
+          "Dholavira",
+          "Banwali",
+          "Chanhudaro",
+          "Mohenjo-daro"
+        ],
+        "hi": [
+          "धोलावीरा",
+          "बनावली",
+          "चन्हूदड़ो",
+          "मोहनजोदड़ो"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Dholavira in Gujarat is uniquely divided into three parts: the Citadel (Western), the Middle Town, and the Lower Town (Eastern).",
+        "hi": "गुजरात का धोलावीरा विशिष्ट रूप से तीन भागों में विभाजित है: दुर्ग (पश्चिमी), मध्यम नगर और निचला नगर (पूर्वी)।"
+      },
+      "pyq": "UPSC CSE 2021"
+    },
+    {
+      "question": {
+        "en": "At which Indus Valley site were uniquely shaped curved bricks discovered?",
+        "hi": "सिंधु घाटी के किस स्थल पर विशिष्ट आकार की वक्राकार (टेढ़ी-मेढ़ी) ईंटें खोजी गई थीं?"
+      },
+      "options": {
+        "en": [
+          "Kalibangan",
+          "Banwali",
+          "Chanhudaro",
+          "Harappa"
+        ],
+        "hi": [
+          "कालीबंगन",
+          "बनावली",
+          "चन्हूदड़ो",
+          "हड़प्पा"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Curved bricks were discovered at Chanhudaro, which was a prominent industrial town specializing in bead-making and pottery.",
+        "hi": "चन्हूदड़ो में वक्राकार ईंटें खोजी गई थीं, जो मनके बनाने और मिट्टी के बर्तन बनाने में विशेषज्ञता रखने वाला एक प्रमुख औद्योगिक शहर था।"
+      },
+      "pyq": "MPPSC Prelims 2017"
+    },
+    {
+      "question": {
+        "en": "A well-equipped bead-making factory, along with finished beads and tools, was excavated at which of the following pairs of sites?",
+        "hi": "तैयार मनकों और उपकरणों के साथ एक सुसज्जित मनका बनाने का कारखाना निम्नलिखित में से किस स्थल युग्म पर उत्खनन में मिला था?"
+      },
+      "options": {
+        "en": [
+          "Kalibangan and Banwali",
+          "Harappa and Mohenjo-daro",
+          "Chanhudaro and Lothal",
+          "Ropar and Surkotada"
+        ],
+        "hi": [
+          "कालीबंगन और बनावली",
+          "हड़प्पा और मोहनजोदड़ो",
+          "चन्हूदड़ो और लोथल",
+          "रोपड़ और सुरकोटड़ा"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Bead-making factories, which produced carnelian and steatite beads, were discovered at Chanhudaro and Lothal.",
+        "hi": "मनका बनाने के कारखाने, जो कार्निलियन और स्टीटाइट के मनके बनाते थे, चन्हूदड़ो और लोथल में खोजे गए थे।"
+      },
+      "pyq": "UPSC CSE 2015"
+    },
+    {
+      "question": {
+        "en": "Which of the following statements is correct regarding the Indus Valley script?",
+        "hi": "सिंधु घाटी की लिपि के संबंध में निम्नलिखित में से कौन सा कथन सही है?"
+      },
+      "options": {
+        "en": [
+          "It was written from left to right only and has been fully deciphered.",
+          "It was closely related to the Brahmi script.",
+          "It was pictographic, written from right to left, and remains undeciphered.",
+          "It was alphabetic and written from right to left."
+        ],
+        "hi": [
+          "यह केवल बाएं से दाएं लिखी जाती थी और इसे पूरी तरह से पढ़ लिया गया है।",
+          "यह ब्राह्मी लिपि से निकटता से संबंधित थी।",
+          "यह चित्रात्मक थी, दाएं से बाएं लिखी जाती थी, और अभी तक पढ़ी नहीं जा सकी है।",
+          "यह वर्णमाला आधारित थी और दाएं से बाएं लिखी जाती थी।"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Indus script is pictographic/hieroglyphic, written generally from right to left, and despite numerous attempts, it remains undeciphered.",
+        "hi": "सिंधु लिपि चित्रात्मक है, जो आमतौर पर दाएं से बाएं लिखी जाती थी, और कई प्रयासों के बावजूद, इसे अभी तक पढ़ा नहीं जा सका है।"
+      },
+      "pyq": "SSC CGL 2013"
+    },
+    {
+      "question": {
+        "en": "What is the widely accepted time period of the Mature/Developed Harappan Phase?",
+        "hi": "परिपक्व/विकसित हड़प्पा चरण की व्यापक रूप से स्वीकृत समय अवधि क्या है?"
+      },
+      "options": {
+        "en": [
+          "3300 - 2500 BC",
+          "1750 - 1000 BC",
+          "2500 - 1750 BC",
+          "1500 - 600 BC"
+        ],
+        "hi": [
+          "3300 - 2500 ई.पू.",
+          "1750 - 1000 ई.पू.",
+          "2500 - 1750 ई.पू.",
+          "1500 - 600 ई.पू."
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Mature Harappan phase, characterized by urban planning, grid system, and standardized weights, lasted from roughly 2500 to 1750 BC.",
+        "hi": "नगर नियोजन, ग्रिड प्रणाली और मानकीकृत बाटों की विशेषता वाला परिपक्व हड़प्पा चरण लगभग 2500 से 1750 ईसा पूर्व तक चला था।"
+      },
+      "pyq": "UPPCS Prelims 2015"
+    },
+    {
+      "question": {
+        "en": "Which of the following crops was NOT known to have been cultivated by the Indus Valley people?",
+        "hi": "निम्नलिखित में से कौन सी फसल सिंधु घाटी के लोगों द्वारा उगाई जाने वाली फसल के रूप में नहीं जानी जाती है?"
+      },
+      "options": {
+        "en": [
+          "Barley",
+          "Mustard",
+          "Wheat",
+          "Sugarcane"
+        ],
+        "hi": [
+          "जौ",
+          "सरसों",
+          "गेहूँ",
+          "गन्ना"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "While wheat, barley, mustard, and cotton were widely cultivated, there is no evidence of sugarcane cultivation in the Indus Valley Civilization.",
+        "hi": "जबकि गेहूं, जौ, सरसों और कपास की व्यापक रूप से खेती की जाती थी, सिंधु घाटी सभ्यता में गन्ने की खेती का कोई साक्ष्य नहीं मिलता है।"
+      },
+      "pyq": "UPSC CSE 2012"
+    },
+    {
+      "question": {
+        "en": "Approximately how many total sites of the Indus Valley Civilization have been discovered across India, Pakistan, and Afghanistan?",
+        "hi": "भारत, पाकिस्तान और अफगानिस्तान में सिंधु घाटी सभ्यता के कुल कितने स्थलों की खोज की जा चुकी है?"
+      },
+      "options": {
+        "en": [
+          "Around 500",
+          "Around 1500",
+          "Around 3000",
+          "Around 1000"
+        ],
+        "hi": [
+          "लगभग 500",
+          "लगभग 1500",
+          "लगभग 3000",
+          "लगभग 1000"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "To date, approximately 1500 sites have been discovered, with about 1000 in India, 500 in Pakistan, and 2 in Afghanistan.",
+        "hi": "आज तक, लगभग 1500 स्थलों की खोज की जा चुकी है, जिनमें से लगभग 1000 भारत में, 500 पाकिस्तान में और 2 अफगानिस्तान में हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "The archaeological site of Kot Diji is located close to which major Indus Valley city?",
+        "hi": "कोट दीजी का पुरातात्विक स्थल सिंधु घाटी के किस प्रमुख शहर के करीब स्थित है?"
+      },
+      "options": {
+        "en": [
+          "Mohenjo-daro",
+          "Harappa",
+          "Kalibangan",
+          "Lothal"
+        ],
+        "hi": [
+          "मोहनजोदड़ो",
+          "हड़प्पा",
+          "कालीबंगन",
+          "लोथल"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Kot Diji is located in Sindh, Pakistan, very close to the major city of Mohenjo-daro.",
+        "hi": "कोट दीजी पाकिस्तान के सिंध में स्थित है, जो मोहनजोदड़ो के प्रमुख शहर के बहुत करीब है।"
+      },
+      "pyq": "UPSC CSE 2019"
+    },
+    {
+      "question": {
+        "en": "Which of the following was NOT a major port town of the Indus Valley Civilization?",
+        "hi": "निम्नलिखित में से कौन सा सिंधु घाटी सभ्यता का एक प्रमुख बंदरगाह शहर नहीं था?"
+      },
+      "options": {
+        "en": [
+          "Lothal",
+          "Kalibangan",
+          "Sutkangedor",
+          "Balakot"
+        ],
+        "hi": [
+          "लोथल",
+          "कालीबंगन",
+          "सुत्कागेंडोर",
+          "बालाकोट"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Kalibangan is an inland agricultural site in Rajasthan, whereas Balakot, Lothal, and Sutkangedor were famous coastal port towns.",
+        "hi": "कालीबंगन राजस्थान में एक अंतर्देशीय कृषि स्थल है, जबकि बालाकोट, लोथल और सुत्कागेंडोर प्रसिद्ध तटीय बंदरगाह शहर थे।"
+      },
+      "pyq": "UPSC CSE 2011"
+    },
+    {
+      "question": {
+        "en": "Based on the large number of terracotta Mother Goddess figurines, what kind of society did the Harappans likely have?",
+        "hi": "बड़ी संख्या में मिली मातृदेवी की मिट्टी की मूर्तियों के आधार पर, हड़प्पावासियों का समाज किस प्रकार का था?"
+      },
+      "options": {
+        "en": [
+          "Oligarchical",
+          "Monarchical",
+          "Patriarchal",
+          "Matriarchal"
+        ],
+        "hi": [
+          "अल्पतंत्रीय",
+          "राजशाही",
+          "पितृसत्तात्मक",
+          "मातृसत्तात्मक"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The predominance of female figurines and Mother Goddess worship suggests that Harappan society was likely matriarchal.",
+        "hi": "महिला मूर्तियों की प्रधानता और मातृदेवी की पूजा से पता चलता है कि हड़प्पा समाज संभवतः मातृसत्तात्मक था।"
+      },
+      "pyq": "SSC CGL 2012"
+    },
+    {
+      "question": {
+        "en": "Which of the following is currently recognized as the largest Indus Valley Civilization site in India?",
+        "hi": "वर्तमान में भारत में सिंधु घाटी सभ्यता का सबसे बड़ा स्थल किसे माना जाता है?"
+      },
+      "options": {
+        "en": [
+          "Dholavira",
+          "Kalibangan",
+          "Rakhi Garhi",
+          "Lothal"
+        ],
+        "hi": [
+          "धोलावीरा",
+          "कालीबंगन",
+          "राखीगढ़ी",
+          "लोथल"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Rakhi Garhi in Haryana is the largest Indus Valley Civilization site located within the borders of modern India.",
+        "hi": "हरियाणा में स्थित राखीगढ़ी आधुनिक भारत की सीमाओं के भीतर स्थित सिंधु घाटी सभ्यता का सबसे बड़ा स्थल है।"
+      },
+      "pyq": "Haryana PSC 2019"
+    },
+    {
+      "question": {
+        "en": "What were the standard ratios of the baked bricks used in Harappan construction (Length : Breadth : Thickness)?",
+        "hi": "हड़प्पा निर्माण में उपयोग की जाने वाली पकी हुई ईंटों का मानक अनुपात (लंबाई : चौड़ाई : मोटाई) क्या था?"
+      },
+      "options": {
+        "en": [
+          "5 : 3 : 2",
+          "4 : 2 : 1",
+          "2 : 2 : 1",
+          "3 : 2 : 1"
+        ],
+        "hi": [
+          "5 : 3 : 2",
+          "4 : 2 : 1",
+          "2 : 2 : 1",
+          "3 : 2 : 1"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The bricks used in Harappan cities followed a highly standardized ratio of 4:2:1 in terms of length, breadth, and thickness.",
+        "hi": "हड़प्पा के शहरों में इस्तेमाल की जाने वाली ईंटें लंबाई, चौड़ाई और मोटाई के मामले में 4:2:1 के अत्यधिक मानकीकृत अनुपात का पालन करती थीं।"
+      },
+      "pyq": "UPPCS Prelims 2018"
+    }
+  ]
+}

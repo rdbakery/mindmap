@@ -1,0 +1,1308 @@
+{
+  "quizName": "4. Polity - Articles 12-35→ Fundamental Rights",
+  "mapName": "9. CA",
+  "score": "Not submitted",
+  "timerSeconds": 900,
+  "questions": [
+    {
+      "question": {
+        "en": "The Indian Constitution recognizes which of the following types of minorities under Article 30?",
+        "hi": "भारतीय संविधान अनुच्छेद 30 के तहत निम्नलिखित में से किस प्रकार के अल्पसंख्यकों को मान्यता देता है?"
+      },
+      "options": {
+        "en": [
+          "Religious and Linguistic minorities",
+          "Religious and Racial minorities",
+          "Linguistic and Regional minorities",
+          "Religious, Linguistic, and Caste-based minorities"
+        ],
+        "hi": [
+          "धार्मिक और भाषाई अल्पसंख्यक",
+          "धार्मिक और नस्लीय अल्पसंख्यक",
+          "भाषाई और क्षेत्रीय अल्पसंख्यक",
+          "धार्मिक, भाषाई और जाति-आधारित अल्पसंख्यक"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Article 30 of the Constitution explicitly recognizes only two types of minorities: religious and linguistic minorities.",
+        "hi": "संविधान का अनुच्छेद 30 स्पष्ट रूप से केवल दो प्रकार के अल्पसंख्यकों को मान्यता देता है: धार्मिक और भाषाई अल्पसंख्यक।"
+      },
+      "pyq": "UPSC CSE 2018"
+    },
+    {
+      "question": {
+        "en": "Which of the following practices is prohibited under Article 23 of the Indian Constitution?",
+        "hi": "भारतीय संविधान के अनुच्छेद 23 के तहत निम्नलिखित में से किस प्रथा को प्रतिबंधित किया गया है?"
+      },
+      "options": {
+        "en": [
+          "Child labor in factories",
+          "Traffic in human beings and forced labour (begar)",
+          "Untouchability in public spaces",
+          "Religious instructions in government schools"
+        ],
+        "hi": [
+          "कारखानों में बाल श्रम",
+          "मानव तस्करी और जबरन श्रम (बेगार)",
+          "सार्वजनिक स्थानों पर अस्पृश्यता",
+          "सरकारी स्कूलों में धार्मिक शिक्षा"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Article 23 prohibits traffic in human beings, 'begar' (forced labor without payment), and other similar forms of forced labor.",
+        "hi": "अनुच्छेद 23 मानव तस्करी, 'बेगार' (बिना भुगतान के जबरन श्रम), और इसी तरह के अन्य जबरन श्रम के रूपों को प्रतिबंधित करता है।"
+      },
+      "pyq": "UPSC CSE 2017"
+    },
+    {
+      "question": {
+        "en": "The 'Doctrine of Severability' and 'Doctrine of Eclipse' are formulated under which of the following Articles?",
+        "hi": "'पृथक्करणीयता का सिद्धांत' (Doctrine of Severability) और 'आच्छादन का सिद्धांत' (Doctrine of Eclipse) निम्नलिखित में से किस अनुच्छेद के तहत प्रतिपादित किए गए हैं?"
+      },
+      "options": {
+        "en": [
+          "Article 19",
+          "Article 14",
+          "Article 12",
+          "Article 13"
+        ],
+        "hi": [
+          "अनुच्छेद 19",
+          "अनुच्छेद 14",
+          "अनुच्छेद 12",
+          "अनुच्छेद 13"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Both the Doctrine of Severability (separating valid parts of a law from invalid ones) and the Doctrine of Eclipse (pre-constitutional laws remaining dormant when violating FRs) are derived from Article 13.",
+        "hi": "'पृथक्करणीयता का सिद्धांत' (एक कानून के वैध हिस्सों को अवैध हिस्सों से अलग करना) और 'आच्छादन का सिद्धांत' (मौलिक अधिकारों का उल्लंघन करने पर संविधान-पूर्व कानूनों का निष्क्रिय हो जाना) दोनों अनुच्छेद 13 से प्राप्त हुए हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Why is the writ jurisdiction of the High Courts under Article 226 considered wider than that of the Supreme Court under Article 32?",
+        "hi": "अनुच्छेद 226 के तहत उच्च न्यायालयों के रिट अधिकार क्षेत्र को अनुच्छेद 32 के तहत सर्वोच्च न्यायालय के अधिकार क्षेत्र से व्यापक क्यों माना जाता है?"
+      },
+      "options": {
+        "en": [
+          "High Courts have more types of writs available than the Supreme Court.",
+          "High Courts can issue writs not only for the enforcement of Fundamental Rights but also for any other ordinary legal rights, whereas the Supreme Court can issue them only for Fundamental Rights.",
+          "High Courts can issue writs to any person in India, while the Supreme Court can only issue writs to Delhi residents.",
+          "The Supreme Court cannot issue writs against the government, but High Courts can."
+        ],
+        "hi": [
+          "उच्च न्यायालयों के पास सर्वोच्च न्यायालय की तुलना में अधिक प्रकार की रिट उपलब्ध हैं।",
+          "उच्च न्यायालय न केवल मौलिक अधिकारों के प्रवर्तन के लिए बल्कि किसी अन्य सामान्य कानूनी अधिकारों के लिए भी रिट जारी कर सकते हैं, जबकि सर्वोच्च न्यायालय केवल मौलिक अधिकारों के लिए ही इन्हें जारी कर सकता है।",
+          "उच्च न्यायालय भारत के किसी भी व्यक्ति को रिट जारी कर सकते हैं, जबकि सर्वोच्च न्यायालय केवल दिल्ली के निवासियों को रिट जारी कर सकता है।",
+          "सर्वोच्च न्यायालय सरकार के खिलाफ रिट जारी नहीं कर सकता, लेकिन उच्च न्यायालय कर सकते हैं।"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Under Article 32, the Supreme Court can issue writs ONLY for the enforcement of Fundamental Rights. Under Article 226, High Courts can issue writs for the enforcement of Fundamental Rights as well as for 'any other purpose' (i.e., ordinary legal rights).",
+        "hi": "अनुच्छेद 32 के तहत, सर्वोच्च न्यायालय केवल मौलिक अधिकारों के प्रवर्तन के लिए रिट जारी कर सकता है। अनुच्छेद 226 के तहत, उच्च न्यायालय मौलिक अधिकारों के प्रवर्तन के साथ-साथ 'किसी अन्य उद्देश्य' (यानी सामान्य कानूनी अधिकारों) के लिए भी रिट जारी कर सकते हैं।"
+      },
+      "pyq": "UPSC CSE 2016"
+    },
+    {
+      "question": {
+        "en": "In the context of Article 18, which of the following is correct regarding National Awards like Bharat Ratna and Padma Vibhushan?",
+        "hi": "अनुच्छेद 18 के संदर्भ में, भारत रत्न और पद्म विभूषण जैसे राष्ट्रीय पुरस्कारों के संबंध में निम्नलिखित में से कौन सा सही है?"
+      },
+      "options": {
+        "en": [
+          "They are valid state decorations but cannot be used as prefixes or suffixes to the names of the recipients.",
+          "They are 'titles' and violate Article 18.",
+          "They can be used by recipients as official titles on their business cards and letterheads.",
+          "They are completely banned under the 44th Constitutional Amendment."
+        ],
+        "hi": [
+          "वे वैध राज्य सम्मान हैं लेकिन प्राप्तकर्ताओं के नामों के आगे उपसर्ग या प्रत्यय के रूप में उपयोग नहीं किए जा सकते हैं।",
+          "वे 'उपाधियाँ' हैं और अनुच्छेद 18 का उल्लंघन करते हैं।",
+          "प्राप्तकर्ता अपने बिजनेस कार्ड और लेटरहेड पर आधिकारिक उपाधियों के रूप में उनका उपयोग कर सकते हैं।",
+          "44वें संवैधानिक संशोधन के तहत उन पर पूरी तरह प्रतिबंध लगा दिया गया है।"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "In the Balaji Raghavan case (1996), the Supreme Court upheld the validity of National Awards but ruled that they do not amount to 'titles' under Article 18 and cannot be used as prefixes or suffixes to the recipient's name.",
+        "hi": "बालाजी राघवन मामले (1996) में, सर्वोच्च न्यायालय ने राष्ट्रीय पुरस्कारों की वैधता को बरकरार रखा लेकिन फैसला सुनाया कि वे अनुच्छेद 18 के तहत 'उपाधि' के दायरे में नहीं आते हैं और प्राप्तकर्ता के नाम के आगे उपसर्ग या प्रत्यय के रूप में उपयोग नहीं किए जा सकते हैं।"
+      },
+      "pyq": "UPSC CSE 2021"
+    },
+    {
+      "question": {
+        "en": "Which Fundamental Rights cannot be suspended even during a National Emergency?",
+        "hi": "राष्ट्रीय आपातकाल के दौरान भी कौन से मौलिक अधिकार निलंबित नहीं किए जा सकते?"
+      },
+      "options": {
+        "en": [
+          "Articles 19 and 20",
+          "Articles 14 and 19",
+          "Articles 21 and 22",
+          "Articles 20 and 21"
+        ],
+        "hi": [
+          "अनुच्छेद 19 और 20",
+          "अनुच्छेद 14 और 19",
+          "अनुच्छेद 21 और 22",
+          "अनुच्छेद 20 और 21"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "According to Article 359, the rights guaranteed under Articles 20 (Protection in respect of conviction for offenses) and 21 (Protection of life and personal liberty) cannot be suspended even during a National Emergency.",
+        "hi": "अनुच्छेद 359 के अनुसार, अनुच्छेद 20 (अपराधों के लिए दोषसिद्धि के संबंध में संरक्षण) और 21 (प्राण और दैहिक स्वतंत्रता का संरक्षण) के तहत गारंटीकृत अधिकारों को राष्ट्रीय आपातकाल के दौरान भी निलंबित नहीं किया जा सकता है।"
+      },
+      "pyq": "UPSC CSE 2015"
+    },
+    {
+      "question": {
+        "en": "Under Article 18 (Abolition of Titles), which of the following titles are permitted to be conferred by the State?",
+        "hi": "अनुच्छेद 18 (उपाधियों का उन्मूलन) के तहत, राज्य द्वारा निम्नलिखित में से कौन सी उपाधियाँ प्रदान करने की अनुमति है?"
+      },
+      "options": {
+        "en": [
+          "Military and Academic distinctions",
+          "Hereditary titles of former rulers",
+          "Political leadership titles like 'Rashtrapati' given by local bodies",
+          "Noble titles like Rai Bahadur and Sir"
+        ],
+        "hi": [
+          "सैन्य और शैक्षणिक विशिष्टताएँ",
+          "पूर्व शासकों की वंशानुगत उपाधियाँ",
+          "स्थानीय निकायों द्वारा दी जाने वाली 'राष्ट्रपति' जैसी राजनीतिक नेतृत्व की उपाधियाँ",
+          "राय बहादुर और सर जैसी कुलीन उपाधियाँ"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Article 18(1) prohibits the State from conferring any title except those of military or academic distinction (e.g., Colonel, Doctor, Professor).",
+        "hi": "अनुच्छेद 18(1) राज्य को सैन्य या शैक्षणिक विशिष्टता (जैसे कर्नल, डॉक्टर, प्रोफेसर) को छोड़कर कोई भी उपाधि प्रदान करने से प्रतिबंधित करता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "In which landmark judgment did the Supreme Court of India declare the 'Right to Privacy' as an integral part of Right to Life and Personal Liberty under Article 21?",
+        "hi": "किस ऐतिहासिक फैसले में भारत के सर्वोच्च न्यायालय ने 'निजता के अधिकार' (Right to Privacy) को अनुच्छेद 21 के तहत जीवन और व्यक्तिगत स्वतंत्रता के अधिकार का एक अभिन्न अंग घोषित किया?"
+      },
+      "options": {
+        "en": [
+          "Indra Sawhney Case (1992)",
+          "K.S. Puttaswamy v. Union of India (2017)",
+          "Kesavananda Bharati Case (1973)",
+          "Maneka Gandhi Case (1978)"
+        ],
+        "hi": [
+          "इंद्रा साहनी मामला (1992)",
+          "के.एस. पुट्टास्वामी बनाम भारत संघ (2017)",
+          "केशवानंद भारती मामला (1973)",
+          "मेनका गांधी मामला (1978)"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "In K.S. Puttaswamy v. Union of India (2017), a 9-judge bench of the Supreme Court unanimously declared that the Right to Privacy is a Fundamental Right protected under Article 21 of the Constitution.",
+        "hi": "के.एस. पुट्टास्वामी बनाम भारत संघ (2017) मामले में, सर्वोच्च न्यायालय की 9-न्यायाधीशों की पीठ ने सर्वसम्मति से घोषणा की कि निजता का अधिकार संविधान के अनुच्छेद 21 के तहत संरक्षित एक मौलिक अधिकार है।"
+      },
+      "pyq": "UPSC CSE 2018"
+    },
+    {
+      "question": {
+        "en": "The Mandal Commission's recommendation of 27% reservation for Other Backward Classes (OBCs) in public employment is related to which constitutional provision?",
+        "hi": "सार्वजनिक रोजगार में अन्य पिछड़ा वर्ग (OBC) के लिए 27% आरक्षण की मंडल आयोग की सिफारिश किस संवैधानिक प्रावधान से संबंधित है?"
+      },
+      "options": {
+        "en": [
+          "Article 17",
+          "Article 15(3)",
+          "Article 18",
+          "Article 16(4)"
+        ],
+        "hi": [
+          "अनुच्छेद 17",
+          "अनुच्छेद 15(3)",
+          "अनुच्छेद 18",
+          "अनुच्छेद 16(4)"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Article 16(4) empowers the State to make provisions for reservation in appointments or posts in favor of any backward class of citizens which is not adequately represented in the services under the State.",
+        "hi": "अनुच्छेद 16(4) राज्य को नागरिकों के किसी भी पिछड़े वर्ग के पक्ष में नियुक्तियों या पदों में आरक्षण का प्रावधान करने की शक्ति देता है, जिसका राज्य के अधीन सेवाओं में पर्याप्त प्रतिनिधित्व नहीं है।"
+      },
+      "pyq": "BPSC 2015"
+    },
+    {
+      "question": {
+        "en": "The constitutional protection against 'self-incrimination' (Article 20(3)) means that:",
+        "hi": "'स्व-अपराधीकरण' (self-incrimination) के खिलाफ संवैधानिक संरक्षण (अनुच्छेद 20(3)) का अर्थ है कि:"
+      },
+      "options": {
+        "en": [
+          "An accused must confess his crime before the police",
+          "An accused can refuse to give his fingerprints under any circumstance",
+          "An accused cannot be compelled to be a witness against himself",
+          "An accused cannot hire a private lawyer"
+        ],
+        "hi": [
+          "एक आरोपी को पुलिस के सामने अपना अपराध कबूल करना होगा",
+          "एक आरोपी किसी भी परिस्थिति में अपने उंगलियों के निशान देने से इनकार कर सकता है",
+          "एक आरोपी को खुद के खिलाफ गवाह बनने के लिए मजबूर नहीं किया जा सकता",
+          "एक आरोपी निजी वकील नहीं रख सकता"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Article 20(3) states that 'No person accused of any offence shall be compelled to be a witness against himself.' It extends only to oral and documentary evidence, not physical evidence like fingerprints or blood samples.",
+        "hi": "अनुच्छेद 20(3) में कहा गया है कि 'किसी भी अपराध के आरोपी व्यक्ति को खुद के खिलाफ गवाह बनने के लिए मजबूर नहीं किया जाएगा।' यह केवल मौखिक और दस्तावेजी साक्ष्य पर लागू होता है, उंगलियों के निशान या रक्त के नमूने जैसे भौतिक साक्ष्य पर नहीं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "The famous 'Doctrine of Basic Structure' was propounded by the Supreme Court of India in which landmark case?",
+        "hi": "प्रसिद्ध 'बुनियादी ढांचे का सिद्धांत' (Doctrine of Basic Structure) भारत के सर्वोच्च न्यायालय द्वारा किस ऐतिहासिक मामले में प्रतिपादित किया गया था?"
+      },
+      "options": {
+        "en": [
+          "Minerva Mills Case (1980)",
+          "Kesavananda Bharati Case (1973)",
+          "Golaknath Case (1967)",
+          "Maneka Gandhi Case (1978)"
+        ],
+        "hi": [
+          "मिनर्वा मिल्स मामला (1980)",
+          "केशवानंद भारती मामला (1973)",
+          "गोलकनाथ मामला (1967)",
+          "मेनका गांधी मामला (1978)"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "In the landmark Kesavananda Bharati v. State of Kerala case (1973), a 13-judge bench of the Supreme Court introduced the 'Doctrine of Basic Structure', ruling that Parliament can amend any part of the Constitution, including Fundamental Rights, but cannot alter its basic structure.",
+        "hi": "ऐतिहासिक केशवानंद भारती बनाम केरल राज्य मामले (1973) में, सर्वोच्च न्यायालय की 13-न्यायाधीशों की पीठ ने 'बुनियादी ढांचे का सिद्धांत' पेश किया, जिसमें फैसला सुनाया गया कि संसद मौलिक अधिकारों सहित संविधान के किसी भी हिस्से में संशोधन कर सकती है, लेकिन इसके बुनियादी ढांचे को नहीं बदल सकती।"
+      },
+      "pyq": "UPSC CSE 2020"
+    },
+    {
+      "question": {
+        "en": "Article 29 of the Indian Constitution, which protects the interests of minorities, applies to:",
+        "hi": "भारतीय संविधान का अनुच्छेद 29, जो अल्पसंख्यकों के हितों की रक्षा करता है, किस पर लागू होता है?"
+      },
+      "options": {
+        "en": [
+          "Any section of citizens residing in India having a distinct language, script, or culture",
+          "Only foreign nationals residing in India",
+          "Only religious minorities",
+          "Only linguistic minorities"
+        ],
+        "hi": [
+          "भारत में रहने वाले नागरिकों के किसी भी वर्ग पर जिसकी अपनी विशिष्ट भाषा, लिपि या संस्कृति हो",
+          "केवल भारत में रहने वाले विदेशी नागरिकों पर",
+          "केवल धार्मिक अल्पसंख्यकों पर",
+          "केवल भाषाई अल्पसंख्यकों पर"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Article 29(1) states that 'any section of the citizens' residing in India having a distinct language, script, or culture has the right to conserve the same. Thus, its scope is not restricted to minorities only.",
+        "hi": "अनुच्छेद 29(1) में कहा गया है कि भारत में रहने वाले 'नागरिकों के किसी भी वर्ग' को, जिसकी अपनी विशिष्ट भाषा, लिपि या संस्कृति है, उसे बनाए रखने का अधिकार है। इस प्रकार, इसका दायरा केवल अल्पसंख्यकों तक सीमित नहीं है।"
+      },
+      "pyq": "UPSC CSE 2015"
+    },
+    {
+      "question": {
+        "en": "The right to form 'cooperative societies' was added as a fundamental freedom under Article 19(1)(c) by which Constitutional Amendment?",
+        "hi": "किस संवैधानिक संशोधन द्वारा अनुच्छेद 19(1)(c) के तहत 'सहकारी समितियां' बनाने के अधिकार को एक मौलिक स्वतंत्रता के रूप में जोड़ा गया था?"
+      },
+      "options": {
+        "en": [
+          "44th Amendment Act, 1978",
+          "86th Amendment Act, 2002",
+          "97th Amendment Act, 2011",
+          "42nd Amendment Act, 1976"
+        ],
+        "hi": [
+          "44वां संशोधन अधिनियम, 1978",
+          "86वां संशोधन अधिनियम, 2002",
+          "97वां संशोधन अधिनियम, 2011",
+          "42वां संशोधन अधिनियम, 1976"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The 97th Constitutional Amendment Act of 2011 added the right to form 'cooperative societies' to the existing right to form associations or unions under Article 19(1)(c).",
+        "hi": "2011 के 97वें संवैधानिक संशोधन अधिनियम ने अनुच्छेद 19(1)(c) के तहत संघ या यूनियन बनाने के मौजूदा अधिकार में 'सहकारी समितियां' बनाने का अधिकार जोड़ा।"
+      },
+      "pyq": "UPSC CSE 2016"
+    },
+    {
+      "question": {
+        "en": "Which Article of the Indian Constitution provides the constitutional basis for the doctrine of Judicial Review of legislative acts?",
+        "hi": "भारतीय संविधान का कौन सा अनुच्छेद विधायी अधिनियमों की न्यायिक समीक्षा (Judicial Review) के सिद्धांत को संवैधानिक आधार प्रदान करता है?"
+      },
+      "options": {
+        "en": [
+          "Article 12",
+          "Article 18",
+          "Article 14",
+          "Article 13"
+        ],
+        "hi": [
+          "अनुच्छेद 12",
+          "अनुच्छेद 18",
+          "अनुच्छेद 14",
+          "अनुच्छेद 13"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Article 13 declares that all laws that are inconsistent with or in derogation of any of the Fundamental Rights shall be void. This implicitly provides for the power of judicial review.",
+        "hi": "अनुच्छेद 13 घोषित करता है कि वे सभी कानून जो किसी भी मौलिक अधिकार के साथ असंगत हैं या उनका अल्पीकरण करते हैं, शून्य होंगे। यह अप्रत्यक्ष रूप से न्यायिक समीक्षा की शक्ति प्रदान करता है।"
+      },
+      "pyq": "UPPSC 2018"
+    },
+    {
+      "question": {
+        "en": "Who described Article 32 (Right to Constitutional Remedies) as the 'Heart and Soul' of the Indian Constitution?",
+        "hi": "किसने अनुच्छेद 32 (संवैधानिक उपचारों का अधिकार) को भारतीय संविधान का 'हृदय और आत्मा' बताया था?"
+      },
+      "options": {
+        "en": [
+          "Sardar Vallabhbhai Patel",
+          "Jawaharlal Nehru",
+          "Dr. B.R. Ambedkar",
+          "Dr. Rajendra Prasad"
+        ],
+        "hi": [
+          "सरदार वल्लभभाई पटेल",
+          "जवाहरलाल नेहरू",
+          "डॉ. बी.आर. अम्बेडकर",
+          "डॉ. राजेन्द्र प्रसाद"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Dr. B.R. Ambedkar stated that Article 32 is the most important article of the Constitution, without which the Constitution would be a nullity, calling it the very soul and heart of the Constitution.",
+        "hi": "डॉ. बी.आर. अम्बेडकर ने कहा था कि अनुच्छेद 32 संविधान का सबसे महत्वपूर्ण अनुच्छेद है, जिसके बिना संविधान शून्य हो जाएगा। उन्होंने इसे संविधान की आत्मा और हृदय कहा था।"
+      },
+      "pyq": "SSC CGL 2019"
+    },
+    {
+      "question": {
+        "en": "Which of the following is generally NOT considered 'State' under Article 12 unless heavily controlled or funded by the government?",
+        "hi": "अनुच्छेद 12 के तहत निम्नलिखित में से किसे आम तौर पर 'राज्य' नहीं माना जाता है, जब तक कि वह सरकार द्वारा भारी रूप से नियंत्रित या वित्त पोषित न हो?"
+      },
+      "options": {
+        "en": [
+          "A purely private cooperative society or company with no state control",
+          "Life Insurance Corporation of India (LIC)",
+          "The Delhi Development Authority",
+          "A Municipal Corporation"
+        ],
+        "hi": [
+          "बिना किसी राज्य नियंत्रण वाली विशुद्ध रूप से निजी सहकारी समिति या कंपनी",
+          "भारतीय जीवन बीमा निगम (LIC)",
+          "दिल्ली विकास प्राधिकरण",
+          "एक नगर निगम"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "A purely private entity, cooperative society, or company that has no government control, funding, or public duty delegation is not considered 'State' under Article 12.",
+        "hi": "एक विशुद्ध रूप से निजी इकाई, सहकारी समिति या कंपनी जिसमें कोई सरकारी नियंत्रण, वित्त पोषण या सार्वजनिक कर्तव्य का हस्तांतरण नहीं होता है, उसे अनुच्छेद 12 के तहत 'राज्य' नहीं माना जाता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "What is the primary difference in timing/stage between the writs of Prohibition and Certiorari?",
+        "hi": "प्रतिषेध (Prohibition) और उत्प्रेषण (Certiorari) रिट के बीच समय/चरण (timing/stage) में प्राथमिक अंतर क्या है?"
+      },
+      "options": {
+        "en": [
+          "Prohibition is issued after the final judgment is delivered, while Certiorari is issued while the case is still pending.",
+          "There is no difference; both are issued at the same stage.",
+          "Prohibition is issued while the proceedings are pending (preventive), while Certiorari is issued after the final order/judgment is passed (curative).",
+          "Prohibition is only against administrative bodies, while Certiorari is only against legislative bodies."
+        ],
+        "hi": [
+          "प्रतिषेध अंतिम निर्णय दिए जाने के बाद जारी किया जाता है, जबकि उत्प्रेषण तब जारी किया जाता है जब मामला अभी भी लंबित हो।",
+          "कोई अंतर नहीं है; दोनों एक ही चरण में जारी किए जाते हैं।",
+          "प्रतिषेध तब जारी किया जाता है जब कार्यवाही लंबित हो (निवारक), जबकि उत्प्रेषण अंतिम आदेश/निर्णय पारित होने के बाद जारी किया जाता है (उपचारात्मक)।",
+          "प्रतिषेध केवल प्रशासनिक निकायों के खिलाफ जारी किया जाता है, जबकि उत्प्रेषण केवल विधायी निकायों के खिलाफ जारी किया जाता है।"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Prohibition is preventive in nature and is issued while a case is pending to prevent a lower court from exceeding its jurisdiction. Certiorari is curative and is issued after a final decision has been made to quash the order of the lower court.",
+        "hi": "प्रतिषेध (Prohibition) प्रकृति में निवारक है और निचली अदालत को अपने अधिकार क्षेत्र से बाहर जाने से रोकने के लिए मामला लंबित रहने के दौरान जारी किया जाता है। उत्प्रेषण (Certiorari) उपचारात्मक है और निचली अदालत के आदेश को रद्द करने के लिए अंतिम निर्णय आने के बाद जारी किया जाता है।"
+      },
+      "pyq": "UPPSC 2018"
+    },
+    {
+      "question": {
+        "en": "Which of the following Fundamental Rights have horizontal application, meaning they are enforceable against private individuals as well as the State?",
+        "hi": "निम्नलिखित में से कौन से मौलिक अधिकार क्षैतिज रूप से लागू होते हैं (horizontal application), जिसका अर्थ है कि वे राज्य के साथ-साथ निजी व्यक्तियों के खिलाफ भी लागू करने योग्य हैं?"
+      },
+      "options": {
+        "en": [
+          "Articles 14 and 16",
+          "Articles 29 and 30 only",
+          "Articles 19 and 21 only",
+          "Articles 15(2), 17, and 23"
+        ],
+        "hi": [
+          "अनुच्छेद 14 और 16",
+          "केवल अनुच्छेद 29 और 30",
+          "केवल अनुच्छेद 19 और 21",
+          "अनुच्छेद 15(2), 17, और 23"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "While most Fundamental Rights are enforceable vertically (only against the State), Articles 15(2) (access to shops/public places), 17 (untouchability), and 23 (forced labor/traffic) are enforceable horizontally against private individuals as well.",
+        "hi": "जबकि अधिकांश मौलिक अधिकार लंबवत रूप से (केवल राज्य के खिलाफ) लागू होते हैं, अनुच्छेद 15(2) (दुकानों/सार्वजनिक स्थानों तक पहुंच), 17 (अस्पृश्यता), और 23 (जबरन श्रम/तस्करी) निजी व्यक्तियों के खिलाफ भी क्षैतिज रूप से लागू होते हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Are the Fundamental Rights guaranteed by the Indian Constitution absolute?",
+        "hi": "क्या भारतीय संविधान द्वारा गारंटीकृत मौलिक अधिकार निरपेक्ष (absolute) हैं?"
+      },
+      "options": {
+        "en": [
+          "No, they can be completely abolished by the President",
+          "Yes, they cannot be restricted under any circumstances",
+          "Yes, but only during peaceful times",
+          "No, they are subject to reasonable restrictions"
+        ],
+        "hi": [
+          "नहीं, इन्हें राष्ट्रपति द्वारा पूरी तरह से समाप्त किया जा सकता है",
+          "हाँ, इन्हें किसी भी परिस्थिति में सीमित नहीं किया जा सकता",
+          "हाँ, लेकिन केवल शांति काल के दौरान",
+          "नहीं, ये उचित प्रतिबंधों के अधीन हैं"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Fundamental Rights are not absolute but qualified. The State can impose reasonable restrictions on them on grounds such as national security, public order, morality, etc.",
+        "hi": "मौलिक अधिकार निरपेक्ष नहीं बल्कि सीमित हैं। राज्य राष्ट्रीय सुरक्षा, सार्वजनिक व्यवस्था, नैतिकता आदि के आधार पर उन पर उचित प्रतिबंध लगा सकता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which Article of the Constitution guarantees the 'Freedom of conscience and free profession, practice, and propagation of religion'?",
+        "hi": "संविधान का कौन सा अनुच्छेद 'अंतःकरण की और धर्म के अबाध रूप से मानने, आचरण और प्रचार करने की स्वतंत्रता' की गारंटी देता है?"
+      },
+      "options": {
+        "en": [
+          "Article 28",
+          "Article 27",
+          "Article 26",
+          "Article 25"
+        ],
+        "hi": [
+          "अनुच्छेद 28",
+          "अनुच्छेद 27",
+          "अनुच्छेद 26",
+          "अनुच्छेद 25"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Article 25 guarantees freedom of conscience and the right to freely profess, practice, and propagate religion to all persons, subject to public order, morality, and health.",
+        "hi": "अनुच्छेद 25 सार्वजनिक व्यवस्था, नैतिकता और स्वास्थ्य के अधीन रहते हुए सभी व्यक्तियों को अंतःकरण की स्वतंत्रता और धर्म को अबाध रूप से मानने, आचरण करने और प्रचार करने के अधिकार की गारंटी देता है।"
+      },
+      "pyq": "UPSC CSE 2019"
+    },
+    {
+      "question": {
+        "en": "Under Article 33 of the Constitution, who is empowered to restrict or modify the Fundamental Rights of the members of the armed forces, paramilitary forces, and police forces?",
+        "hi": "संविधान के अनुच्छेद 33 के तहत, सशस्त्र बलों, अर्धसैनिक बलों और पुलिस बलों के सदस्यों के मौलिक अधिकारों को सीमित या संशोधित करने के लिए कौन अधिकृत है?"
+      },
+      "options": {
+        "en": [
+          "The Chief of Defence Staff",
+          "The respective State Legislatures",
+          "The Parliament of India",
+          "The President of India"
+        ],
+        "hi": [
+          "चीफ ऑफ डिफेंस स्टाफ",
+          "संबंधित राज्य विधानमंडल",
+          "भारतीय संसद",
+          "भारत के राष्ट्रपति"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Article 33 empowers ONLY the Parliament of India to restrict or abrogate the Fundamental Rights of members of the armed forces, paramilitary forces, police, intelligence agencies, etc., to ensure proper discharge of duties and discipline.",
+        "hi": "अनुच्छेद 33 केवल भारतीय संसद को सशस्त्र बलों, अर्धसैनिक बलों, पुलिस, खुफिया एजेंसियों आदि के सदस्यों के मौलिक अधिकारों को सीमित या समाप्त करने की शक्ति देता है ताकि कर्तव्यों का उचित पालन और अनुशासन सुनिश्चित किया जा सके।"
+      },
+      "pyq": "CDS 2020"
+    },
+    {
+      "question": {
+        "en": "Under the Indian Constitution, the power of judicial review of laws violating Fundamental Rights is vested in:",
+        "hi": "भारतीय संविधान के तहत, मौलिक अधिकारों का उल्लंघन करने वाले कानूनों की न्यायिक समीक्षा की शक्ति किसमें निहित है?"
+      },
+      "options": {
+        "en": [
+          "Only the Supreme Court of India",
+          "The Parliament of India",
+          "Both the Supreme Court and High Courts",
+          "Only the High Courts"
+        ],
+        "hi": [
+          "केवल भारत के सर्वोच्च न्यायालय में",
+          "भारतीय संसद में",
+          "सर्वोच्च न्यायालय और उच्च न्यायालय दोनों में",
+          "केवल उच्च न्यायालयों में"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The power of judicial review is exercised by the Supreme Court under Article 32 and by the High Courts under Article 226, making both courts guardians of Fundamental Rights.",
+        "hi": "न्यायिक समीक्षा की शक्ति का प्रयोग सर्वोच्च न्यायालय द्वारा अनुच्छेद 32 के तहत और उच्च न्यायालयों द्वारा अनुच्छेद 226 के तहत किया जाता है, जिससे दोनों न्यायालय मौलिक अधिकारों के संरक्षक बन जाते हैं।"
+      },
+      "pyq": "SSC CGL 2019"
+    },
+    {
+      "question": {
+        "en": "How many fundamental freedoms are currently guaranteed under Article 19 of the Indian Constitution?",
+        "hi": "वर्तमान में भारतीय संविधान के अनुच्छेद 19 के तहत कितनी मौलिक स्वतंत्रताएं दी गई हैं?"
+      },
+      "options": {
+        "en": [
+          "Eight",
+          "Six",
+          "Seven",
+          "Five"
+        ],
+        "hi": [
+          "आठ",
+          "छह",
+          "सात",
+          "पाँच"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Originally, Article 19 guaranteed seven freedoms, but the Right to Property (Article 19(1)(f)) was deleted by the 44th Amendment in 1978, leaving six fundamental freedoms.",
+        "hi": "मूल रूप से, अनुच्छेद 19 सात स्वतंत्रताओं की गारंटी देता था, लेकिन 1978 में 44वें संशोधन द्वारा संपत्ति के अधिकार (अनुच्छेद 19(1)(f)) को हटा दिया गया, जिससे केवल छह मौलिक स्वतंत्रताएं बची हैं।"
+      },
+      "pyq": "SSC CGL 2018"
+    },
+    {
+      "question": {
+        "en": "What protection is guaranteed under the rule against 'Double Jeopardy' in Article 20(2) of the Indian Constitution?",
+        "hi": "भारतीय संविधान के अनुच्छेद 20(2) में 'दोहरे दंड' (Double Jeopardy) के खिलाफ नियम के तहत क्या सुरक्षा दी गई है?"
+      },
+      "options": {
+        "en": [
+          "No person shall be prosecuted and punished for the same offence more than once",
+          "An accused person has the right to be defended by two lawyers",
+          "No person can be prosecuted for more than one crime in their lifetime",
+          "A person cannot be punished by both state and central courts"
+        ],
+        "hi": [
+          "किसी भी व्यक्ति को एक ही अपराध के लिए एक से अधिक बार अभियोजित और दंडित नहीं किया जाएगा",
+          "एक आरोपी व्यक्ति को दो वकीलों द्वारा बचाव किए जाने का अधिकार है",
+          "किसी भी व्यक्ति को उसके जीवनकाल में एक से अधिक अपराधों के लिए मुकदमा नहीं चलाया जा सकता",
+          "किसी व्यक्ति को राज्य और केंद्र दोनों न्यायालयों द्वारा दंडित नहीं किया जा सकता है"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Article 20(2) contains the rule against Double Jeopardy, which states: 'No person shall be prosecuted and punished for the same offence more than once.'",
+        "hi": "अनुच्छेद 20(2) में दोहरे दंड के खिलाफ नियम शामिल है, जिसमें कहा गया है: 'किसी भी व्यक्ति को एक ही अपराध के लिए एक से अधिक बार अभियोजित और दंडित नहीं किया जाएगा।'"
+      },
+      "pyq": "NDA 2019"
+    },
+    {
+      "question": {
+        "en": "According to Article 35, the power to make laws to give effect to certain specified Fundamental Rights (such as prescribing punishment for untouchability under Article 17) vests in:",
+        "hi": "अनुच्छेद 35 के अनुसार, कुछ निर्दिष्ट मौलिक अधिकारों को प्रभावी बनाने के लिए कानून बनाने की शक्ति (जैसे अनुच्छेद 17 के तहत अस्पृश्यता के लिए सजा निर्धारित करना) किसमें निहित है?"
+      },
+      "options": {
+        "en": [
+          "Only the Parliament of India",
+          "Only the State Legislatures",
+          "The Supreme Court of India",
+          "Both Parliament and State Legislatures"
+        ],
+        "hi": [
+          "केवल भारतीय संसद में",
+          "केवल राज्य विधानमंडलों में",
+          "भारत के सर्वोच्च न्यायालय में",
+          "संसद और राज्य विधानमंडल दोनों में"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Article 35 lays down that the power to make laws to give effect to certain specified Fundamental Rights, and to prescribe punishment for their violation, shall vest only in Parliament and not in State Legislatures, to maintain uniformity throughout India.",
+        "hi": "अनुच्छेद 35 यह निर्धारित करता है कि कुछ निर्दिष्ट मौलिक अधिकारों को प्रभावी बनाने के लिए कानून बनाने और उनके उल्लंघन के लिए सजा निर्धारित करने की शक्ति केवल संसद में निहित होगी, न कि राज्य विधानमंडलों में, ताकि पूरे भारत में एकरूपता बनी रहे।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Under Article 20(1), protection against 'ex-post facto laws' means that a person cannot be punished under a law made after the commission of the act. This protection applies to:",
+        "hi": "अनुच्छेद 20(1) के तहत, 'पूर्वव्यापी कानूनों' (ex-post facto laws) के खिलाफ सुरक्षा का अर्थ है कि किसी व्यक्ति को कार्य करने के बाद बनाए गए कानून के तहत दंडित नहीं किया जा सकता है। यह सुरक्षा किस पर लागू होती है?"
+      },
+      "options": {
+        "en": [
+          "Only administrative and disciplinary actions",
+          "Both Criminal and Civil/Tax laws",
+          "Criminal laws only, not Civil or Tax laws",
+          "Civil and Tax laws only, not Criminal laws"
+        ],
+        "hi": [
+          "केवल प्रशासनिक और अनुशासनात्मक कार्रवाइयों पर",
+          "आपराधिक और नागरिक/कर कानूनों दोनों पर",
+          "केवल आपराधिक कानूनों पर, नागरिक या कर कानूनों पर नहीं",
+          "केवल नागरिक और कर कानूनों पर, आपराधिक कानूनों पर नहीं"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The protection against ex-post facto laws is applicable only to criminal laws and criminal liability. Civil liability or tax laws can be imposed retrospectively.",
+        "hi": "पूर्वव्यापी कानूनों के खिलाफ सुरक्षा केवल आपराधिक कानूनों और आपराधिक दायित्व पर लागू होती है। नागरिक दायित्व या कर कानूनों को पूर्वव्यापी रूप से लागू किया जा सकता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "According to Article 18, a citizen of India cannot accept any title from any foreign State without the consent of:",
+        "hi": "अनुच्छेद 18 के अनुसार, भारत का कोई भी नागरिक किसकी सहमति के बिना किसी विदेशी राज्य से कोई उपाधि स्वीकार नहीं कर सकता?"
+      },
+      "options": {
+        "en": [
+          "The Chief Justice of India",
+          "The Parliament of India",
+          "The President of India",
+          "The Prime Minister of India"
+        ],
+        "hi": [
+          "भारत के मुख्य न्यायाधीश",
+          "भारतीय संसद",
+          "भारत के राष्ट्रपति",
+          "भारत के प्रधान मंत्री"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Article 18(2) specifies that no citizen of India shall accept any title from any foreign State, and Article 18(3) and (4) require the President's consent for foreign honors/offices in specified cases.",
+        "hi": "अनुच्छेद 18(2) निर्दिष्ट करता है कि भारत का कोई भी नागरिक किसी विदेशी राज्य से कोई उपाधि स्वीकार नहीं करेगा, और अनुच्छेद 18(3) और (4) के तहत निर्दिष्ट मामलों में विदेशी सम्मान/पद के लिए राष्ट्रपति की सहमति आवश्यक है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following sets of Articles of Fundamental Rights are available ONLY to Indian citizens?",
+        "hi": "मौलिक अधिकारों के निम्नलिखित में से कौन से अनुच्छेद केवल भारतीय नागरिकों को ही प्राप्त हैं?"
+      },
+      "options": {
+        "en": [
+          "Articles 14, 15, 19, 20, 21",
+          "Articles 15, 16, 19, 29, 30",
+          "Articles 14, 16, 19, 25, 28",
+          "Articles 19, 21, 25, 29, 30"
+        ],
+        "hi": [
+          "अनुच्छेद 14, 15, 19, 20, 21",
+          "अनुच्छेद 15, 16, 19, 29, 30",
+          "अनुच्छेद 14, 16, 19, 25, 28",
+          "अनुच्छेद 19, 21, 25, 29, 30"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Fundamental Rights guaranteed by Articles 15, 16, 19, 29, and 30 are available only to citizens of India. Other rights are available to all persons, whether citizens or foreigners.",
+        "hi": "अनुच्छेद 15, 16, 19, 29 और 30 द्वारा गारंटीकृत मौलिक अधिकार केवल भारत के नागरिकों के लिए उपलब्ध हैं। अन्य अधिकार सभी व्यक्तियों के लिए उपलब्ध हैं, चाहे वे नागरिक हों या विदेशी।"
+      },
+      "pyq": "UPSC CSE 2019"
+    },
+    {
+      "question": {
+        "en": "Under Article 12 of the Constitution, which of the following are included in the definition of 'State'?",
+        "hi": "संविधान के अनुच्छेद 12 के तहत, निम्नलिखित में से किसे 'राज्य' की परिभाषा में शामिल किया गया है?"
+      },
+      "options": {
+        "en": [
+          "Government, Parliament, State Legislatures, Local Authorities, and Statutory/Non-Statutory bodies like LIC, ONGC",
+          "Only Municipalities and Panchayat bodies",
+          "Only Government and Parliament of India",
+          "Only State Governments and State Legislatures"
+        ],
+        "hi": [
+          "सरकार, संसद, राज्य विधानमंडल, स्थानीय अधिकारी और वैधानिक/गैर-वैधानिक निकाय जैसे LIC, ONGC",
+          "केवल नगरपालिकाएं और पंचायत निकाय",
+          "केवल भारत सरकार और संसद",
+          "केवल राज्य सरकारें और राज्य विधानमंडल"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Article 12 defines 'State' broadly to include the Government and Parliament of India, State Governments and Legislatures, all local authorities (municipalities, panchayats), and other statutory or non-statutory instrumentalities (like LIC, ONGC, SAIL).",
+        "hi": "अनुच्छेद 12 'राज्य' को व्यापक रूप से परिभाषित करता है जिसमें भारत सरकार और संसद, राज्य सरकारें और विधानमंडल, सभी स्थानीय अधिकारी (नगरपालिकाएं, पंचायतें), और अन्य वैधानिक या गैर-वैधानिक निकाय (जैसे LIC, ONGC, SAIL) शामिल हैं।"
+      },
+      "pyq": "UPSC CSE 2021"
+    },
+    {
+      "question": {
+        "en": "Under Article 28, religious instruction is completely prohibited in which of the following categories of educational institutions?",
+        "hi": "अनुच्छेद 28 के तहत, निम्नलिखित में से किस श्रेणी के शैक्षणिक संस्थानों में धार्मिक शिक्षा पूरी तरह से प्रतिबंधित है?"
+      },
+      "options": {
+        "en": [
+          "Institutions receiving aid out of State funds",
+          "Institutions administered by the State but established under a trust",
+          "Institutions wholly maintained by the State",
+          "Institutions recognized by the State"
+        ],
+        "hi": [
+          "राज्य निधि से सहायता प्राप्त करने वाले संस्थान",
+          "राज्य द्वारा प्रशासित लेकिन किसी ट्रस्ट के तहत स्थापित संस्थान",
+          "पूरी तरह से राज्य द्वारा संचालित/रखरखाव वाले संस्थान",
+          "राज्य द्वारा मान्यता प्राप्त संस्थान"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Article 28(1) states that no religious instruction shall be provided in any educational institution wholly maintained out of State funds.",
+        "hi": "अनुच्छेद 28(1) में कहा गया है कि पूरी तरह से राज्य निधि से संचालित/रखरखाव वाले किसी भी शैक्षणिक संस्थान में कोई धार्मिक शिक्षा प्रदान नहीं की जाएगी।"
+      },
+      "pyq": "CDS 2018"
+    },
+    {
+      "question": {
+        "en": "Which of the following statements is correct regarding Article 14 of the Indian Constitution?",
+        "hi": "भारतीय संविधान के अनुच्छेद 14 के संबंध में निम्नलिखित में से कौन सा कथन सही है?"
+      },
+      "options": {
+        "en": [
+          "Both concepts are of British origin and are positive in nature.",
+          "Both concepts are of American origin and are negative in nature.",
+          "'Equality before law' is a negative concept of British origin, while 'Equal protection of laws' is a positive concept of American origin.",
+          "'Equality before law' is a positive concept of American origin, while 'Equal protection of laws' is a negative concept of British origin."
+        ],
+        "hi": [
+          "दोनों अवधारणाएं ब्रिटिश मूल की हैं और प्रकृति में सकारात्मक हैं।",
+          "दोनों अवधारणाएं अमेरिकी मूल की हैं और प्रकृति में नकारात्मक हैं।",
+          "'कानून के समक्ष समानता' ब्रिटिश मूल की एक नकारात्मक अवधारणा है, जबकि 'कानूनों का समान संरक्षण' अमेरिकी मूल की एक सकारात्मक अवधारणा है।",
+          "'कानून के समक्ष समानता' अमेरिकी मूल की एक सकारात्मक अवधारणा है, जबकि 'कानूनों का समान संरक्षण' ब्रिटिश मूल की एक नकारात्मक अवधारणा है।"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "'Equality before law' (British origin) is a negative concept as it implies the absence of any special privileges. 'Equal protection of laws' (American origin) is a positive concept as it implies equal treatment under equal circumstances.",
+        "hi": "'कानून के समक्ष समानता' (ब्रिटिश मूल) एक नकारात्मक अवधारणा है क्योंकि यह किसी भी विशेष विशेषाधिकार की अनुपस्थिति को दर्शाती है। 'कानूनों का समान संरक्षण' (अमेरिकी मूल) एक सकारात्मक अवधारणा है क्योंकि यह समान परिस्थितियों में समान व्यवहार को दर्शाती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Article 15 of the Constitution prohibits discrimination on certain grounds. Which of the following is NOT an exception to this non-discrimination rule?",
+        "hi": "संविधान का अनुच्छेद 15 कुछ आधारों पर भेदभाव को प्रतिबंधित करता है। निम्नलिखित में से कौन सा इस गैर-भेदभाव नियम का अपवाद नहीं है?"
+      },
+      "options": {
+        "en": [
+          "Special provisions for women and children",
+          "Special provisions for socially and educationally backward classes",
+          "Special provisions for economically weaker sections",
+          "Special provisions for wealthy taxpayers in business licenses"
+        ],
+        "hi": [
+          "महिलाओं और बच्चों के लिए विशेष प्रावधान",
+          "सामाजिक और शैक्षणिक रूप से पिछड़े वर्गों के लिए विशेष प्रावधान",
+          "आर्थिक रूप से कमजोर वर्गों के लिए विशेष प्रावधान",
+          "व्यापार लाइसेंस में धनी करदाताओं के लिए विशेष प्रावधान"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Article 15 allows exceptions (reservations/special provisions) for women, children, SCs, STs, OBCs, and EWS. There is no exception or special provision allowed for wealthy taxpayers.",
+        "hi": "अनुच्छेद 15 महिलाओं, बच्चों, अनुसूचित जाति, अनुसूचित जनजाति, अन्य पिछड़ा वर्ग और आर्थिक रूप से कमजोर वर्ग (EWS) के लिए अपवादों (आरक्षण/विशेष प्रावधानों) की अनुमति देता है। धनी करदाताओं के लिए कोई अपवाद या विशेष प्रावधान की अनुमति नहीं है।"
+      },
+      "pyq": "UPSC CSE 2017"
+    },
+    {
+      "question": {
+        "en": "The 'Right to Property' was deleted from the list of Fundamental Rights by which Constitutional Amendment and is currently placed under which Article?",
+        "hi": "'संपत्ति के अधिकार' को किस संवैधानिक संशोधन द्वारा मौलिक अधिकारों की सूची से हटा दिया गया था और वर्तमान में इसे किस अनुच्छेद के तहत रखा गया है?"
+      },
+      "options": {
+        "en": [
+          "42nd Amendment, Article 300",
+          "44th Amendment, Article 31",
+          "44th Amendment, Article 300A",
+          "86th Amendment, Article 300A"
+        ],
+        "hi": [
+          "42वां संशोधन, अनुच्छेद 300",
+          "44वां संशोधन, अनुच्छेद 31",
+          "44वां संशोधन, अनुच्छेद 300A",
+          "86वां संशोधन, अनुच्छेद 300A"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The 44th Constitutional Amendment Act of 1978 abolished the Right to Property as a Fundamental Right (Article 31 and Article 19(1)(f)) and made it a legal/constitutional right under Article 300A in Part XII of the Constitution.",
+        "hi": "1978 के 44वें संवैधानिक संशोधन अधिनियम ने संपत्ति के अधिकार को एक मौलिक अधिकार (अनुच्छेद 31 और अनुच्छेद 19(1)(f)) के रूप में समाप्त कर दिया और इसे संविधान के भाग XII में अनुच्छेद 300A के तहत एक कानूनी/संवैधानिक अधिकार बना दिया।"
+      },
+      "pyq": "UPSC CSE 2017"
+    },
+    {
+      "question": {
+        "en": "Which of the following writs literally means 'To have the body of' and is used to secure the release of a person illegally detained?",
+        "hi": "निम्नलिखित में से किस रिट का शाब्दिक अर्थ 'शरीर प्रस्तुत करो' है और इसका उपयोग अवैध रूप से हिरासत में लिए गए व्यक्ति की रिहाई सुनिश्चित करने के लिए किया जाता है?"
+      },
+      "options": {
+        "en": [
+          "Habeas Corpus",
+          "Quo Warranto",
+          "Mandamus",
+          "Certiorari"
+        ],
+        "hi": [
+          "बंदी प्रत्यक्षीकरण (Habeas Corpus)",
+          "अधिकार पृच्छा (Quo Warranto)",
+          "परमादेश (Mandamus)",
+          "उत्प्रेषण (Certiorari)"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Habeas Corpus literally means 'to have the body of'. It is an order issued by the court to a person who has detained another, directing them to produce the body of the detainee before the court to check the legality of the detention.",
+        "hi": "बंदी प्रत्यक्षीकरण (Habeas Corpus) का शाब्दिक अर्थ 'शरीर प्रस्तुत करना' है। यह न्यायालय द्वारा उस व्यक्ति को जारी किया गया एक आदेश है जिसने किसी अन्य को हिरासत में लिया है, जिसमें उसे हिरासत में लिए गए व्यक्ति को न्यायालय के समक्ष पेश करने का निर्देश दिया जाता है ताकि हिरासत की वैधता की जांच की जा सके।"
+      },
+      "pyq": "SSC CGL 2018"
+    },
+    {
+      "question": {
+        "en": "Under Article 22, every person who is arrested and detained in custody must be produced before the nearest magistrate within a period of:",
+        "hi": "अनुच्छेद 22 के तहत, प्रत्येक व्यक्ति जिसे गिरफ्तार किया जाता है और हिरासत में लिया जाता है, उसे कितनी अवधि के भीतर निकटतम मजिस्ट्रेट के सामने पेश किया जाना चाहिए?"
+      },
+      "options": {
+        "en": [
+          "48 hours, including travel time",
+          "24 hours, excluding travel time",
+          "12 hours, including travel time",
+          "72 hours, excluding travel time"
+        ],
+        "hi": [
+          "48 घंटे, यात्रा के समय सहित",
+          "24 घंटे, यात्रा के समय को छोड़कर",
+          "12 घंटे, यात्रा के समय सहित",
+          "72 घंटे, यात्रा के समय को छोड़कर"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Article 22(2) states that every person arrested and detained must be produced before the nearest magistrate within 24 hours of such arrest, excluding the time necessary for the journey.",
+        "hi": "अनुच्छेद 22(2) में कहा गया है कि गिरफ्तार किए गए और हिरासत में लिए गए प्रत्येक व्यक्ति को ऐसी गिरफ्तारी के 24 घंटे के भीतर निकटतम मजिस्ट्रेट के सामने पेश किया जाना चाहिए, जिसमें यात्रा के लिए आवश्यक समय शामिल नहीं होगा।"
+      },
+      "pyq": "SSC CGL 2017"
+    },
+    {
+      "question": {
+        "en": "What is the maximum period for which a person can be detained under a preventive detention law without obtaining the opinion of an Advisory Board?",
+        "hi": "सलाहकार बोर्ड (Advisory Board) की राय प्राप्त किए बिना किसी व्यक्ति को निवारक निरोध (preventive detention) कानून के तहत अधिकतम कितनी अवधि के लिए हिरासत में रखा जा सकता है?"
+      },
+      "options": {
+        "en": [
+          "6 months",
+          "2 months",
+          "3 months",
+          "1 month"
+        ],
+        "hi": [
+          "6 महीने",
+          "2 महीने",
+          "3 महीने",
+          "1 महीना"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Under Article 22(4), no law providing for preventive detention shall authorize the detention of a person for a longer period than three months unless an Advisory Board has reported sufficient cause for such detention.",
+        "hi": "अनुच्छेद 22(4) के तहत, निवारक निरोध का प्रावधान करने वाला कोई भी कानून किसी व्यक्ति को तीन महीने से अधिक की अवधि के लिए हिरासत में रखने के लिए अधिकृत नहीं करेगा जब तक कि सलाहकार बोर्ड ने ऐसी हिरासत के लिए पर्याप्त कारण की रिपोर्ट न दी हो।"
+      },
+      "pyq": "UPSC CSE 2020"
+    },
+    {
+      "question": {
+        "en": "From which country's constitution did India borrow the concept of Fundamental Rights?",
+        "hi": "भारत ने मौलिक अधिकारों की अवधारणा किस देश के संविधान से ली है?"
+      },
+      "options": {
+        "en": [
+          "United Kingdom",
+          "USSR",
+          "USA",
+          "Ireland"
+        ],
+        "hi": [
+          "यूनाइटेड किंगडम",
+          "यूएसएसआर (USSR)",
+          "यूएसए (USA)",
+          "आयरलैंड"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The concept of Fundamental Rights in the Indian Constitution was inspired by the Bill of Rights of the United States of America (USA) Constitution.",
+        "hi": "भारतीय संविधान में मौलिक अधिकारों की अवधारणा संयुक्त राज्य अमेरिका (USA) के संविधान के 'बिल ऑफ राइट्स' से प्रेरित थी।"
+      },
+      "pyq": "SSC CGL 2016"
+    },
+    {
+      "question": {
+        "en": "The wearing and carrying of 'Kirpans' is deemed to be included in the profession of the Sikh religion under which Article?",
+        "hi": "किस अनुच्छेद के तहत 'कृपाण' धारण करना और लेकर चलना सिख धर्म को मानने का अंग माना जाता है?"
+      },
+      "options": {
+        "en": [
+          "Article 28",
+          "Article 25",
+          "Article 29",
+          "Article 26"
+        ],
+        "hi": [
+          "अनुच्छेद 28",
+          "अनुच्छेद 25",
+          "अनुच्छेद 29",
+          "अनुच्छेद 26"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Explanation 1 to Article 25 explicitly states that the wearing and carrying of 'kirpans' shall be deemed to be included in the profession of the Sikh religion.",
+        "hi": "अनुच्छेद 25 के स्पष्टीकरण 1 में स्पष्ट रूप से कहा गया है कि 'कृपाण' धारण करना और लेकर चलना सिख धर्म को मानने का अंग माना जाएगा।"
+      },
+      "pyq": "UPPSC 2015"
+    },
+    {
+      "question": {
+        "en": "Which Article of the Constitution provides freedom from payment of taxes for the promotion of any particular religion?",
+        "hi": "संविधान का कौन सा अनुच्छेद किसी विशिष्ट धर्म के प्रचार के लिए करों के भुगतान से स्वतंत्रता प्रदान करता है?"
+      },
+      "options": {
+        "en": [
+          "Article 26",
+          "Article 28",
+          "Article 25",
+          "Article 27"
+        ],
+        "hi": [
+          "अनुच्छेद 26",
+          "अनुच्छेद 28",
+          "अनुच्छेद 25",
+          "अनुच्छेद 27"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Article 27 states that no person shall be compelled to pay any taxes, the proceeds of which are specifically appropriated in payment of expenses for the promotion or maintenance of any particular religion.",
+        "hi": "अनुच्छेद 27 में कहा गया है कि किसी भी व्यक्ति को ऐसे करों का भुगतान करने के लिए मजबूर नहीं किया जाएगा, जिनकी आय विशेष रूप से किसी विशिष्ट धर्म के प्रचार या रखरखाव के खर्चों के भुगतान में उपयोग की जाती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which Part of the Indian Constitution deals with the Fundamental Rights?",
+        "hi": "भारतीय संविधान का कौन सा भाग मौलिक अधिकारों से संबंधित है?"
+      },
+      "options": {
+        "en": [
+          "Part V",
+          "Part IV",
+          "Part III",
+          "Part II"
+        ],
+        "hi": [
+          "भाग V",
+          "भाग IV",
+          "भाग III",
+          "भाग II"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Part III of the Indian Constitution (Articles 12 to 35) deals with the Fundamental Rights. It is often described as the Magna Carta of India.",
+        "hi": "भारतीय संविधान का भाग III (अनुच्छेद 12 से 35) मौलिक अधिकारों से संबंधित है। इसे अक्सर भारत का मैग्ना कार्टा भी कहा जाता है।"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "Article 21A of the Indian Constitution provides for free and compulsory education to all children of which age group?",
+        "hi": "भारतीय संविधान का अनुच्छेद 21A किस आयु वर्ग के सभी बच्चों के लिए मुफ्त और अनिवार्य शिक्षा का प्रावधान करता है?"
+      },
+      "options": {
+        "en": [
+          "5 to 15 years",
+          "6 to 14 years",
+          "3 to 14 years",
+          "6 to 18 years"
+        ],
+        "hi": [
+          "5 से 15 वर्ष",
+          "6 से 14 वर्ष",
+          "3 से 14 वर्ष",
+          "6 से 18 वर्ष"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Article 21A guarantees free and compulsory education specifically to children of the age group of six to fourteen (6-14) years.",
+        "hi": "अनुच्छेद 21A विशेष रूप से छह से चौदह (6-14) वर्ष के आयु वर्ग के बच्चों को मुफ्त और अनिवार्य शिक्षा की गारंटी देता है।"
+      },
+      "pyq": "UPPSC 2019"
+    },
+    {
+      "question": {
+        "en": "Which writ is issued to inquire into the legality of a person's claim to a public office, literally meaning 'By what authority or warrant'?",
+        "hi": "किसी सार्वजनिक पद पर किसी व्यक्ति के दावे की वैधता की जांच करने के लिए कौन सी रिट जारी की जाती है, जिसका शाब्दिक अर्थ 'किस अधिकार या वारंट से' है?"
+      },
+      "options": {
+        "en": [
+          "Certiorari",
+          "Quo Warranto",
+          "Mandamus",
+          "Prohibition"
+        ],
+        "hi": [
+          "उत्प्रेषण",
+          "अधिकार पृच्छा (Quo Warranto)",
+          "परमादेश",
+          "प्रतिषेध"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Quo-Warranto means 'by what authority or warrant'. It is issued by the court to prevent illegal usurpation of a public office by a person.",
+        "hi": "अधिकार पृच्छा (Quo-Warranto) का अर्थ 'किस अधिकार या वारंट से' है। यह न्यायालय द्वारा किसी व्यक्ति द्वारा सार्वजनिक पद को अवैध रूप से हड़पने से रोकने के लिए जारी किया जाता है।"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "By which Constitutional Amendment was Article 21A (Right to Education) inserted into the Constitution of India?",
+        "hi": "किस संवैधानिक संशोधन द्वारा भारत के संविधान में अनुच्छेद 21A (शिक्षा का अधिकार) जोड़ा गया था?"
+      },
+      "options": {
+        "en": [
+          "103rd Amendment Act, 2019",
+          "86th Amendment Act, 2002",
+          "44th Amendment Act, 1978",
+          "91st Amendment Act, 2003"
+        ],
+        "hi": [
+          "103वां संशोधन अधिनियम, 2019",
+          "86वां संशोधन अधिनियम, 2002",
+          "44वां संशोधन अधिनियम, 1978",
+          "91वां संशोधन अधिनियम, 2003"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The 86th Constitutional Amendment Act of 2002 inserted Article 21A, making free and compulsory education for children aged 6 to 14 years a Fundamental Right.",
+        "hi": "2002 के 86वें संवैधानिक संशोधन अधिनियम ने अनुच्छेद 21A को शामिल किया, जिसके तहत 6 से 14 वर्ष की आयु के बच्चों के लिए मुफ्त और अनिवार्य शिक्षा को एक मौलिक अधिकार बना दिया गया।"
+      },
+      "pyq": "UPSC CSE 2012"
+    },
+    {
+      "question": {
+        "en": "Which of the following Fundamental Rights is absolute in nature and cannot be restricted under any circumstances, and is also horizontally applicable against private individuals?",
+        "hi": "निम्नलिखित में से कौन सा मौलिक अधिकार प्रकृति में निरपेक्ष (absolute) है और इसे किसी भी परिस्थिति में सीमित नहीं किया जा सकता है, और यह निजी व्यक्तियों के खिलाफ भी क्षैतिज रूप से लागू होता है?"
+      },
+      "options": {
+        "en": [
+          "Freedom to manage religious affairs (Article 26)",
+          "Freedom of speech and expression (Article 19(1)(a))",
+          "Abolition of Untouchability (Article 17)",
+          "Right to equality in public employment (Article 16)"
+        ],
+        "hi": [
+          "धार्मिक मामलों के प्रबंधन की स्वतंत्रता (अनुच्छेद 26)",
+          "भाषण और अभिव्यक्ति की स्वतंत्रता (अनुच्छेद 19(1)(a))",
+          "अस्पृश्यता का उन्मूलन (अनुच्छेद 17)",
+          "सार्वजनिक रोजगार में समानता का अधिकार (अनुच्छेद 16)"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Article 17 (Abolition of Untouchability) is absolute. No exceptions or reasonable restrictions are permitted under it. It is also horizontally applicable, meaning citizens can enforce it against private individuals.",
+        "hi": "अनुच्छेद 17 (अस्पृश्यता का उन्मूलन) निरपेक्ष है। इसके तहत किसी भी अपवाद या उचित प्रतिबंध की अनुमति नहीं है। यह क्षैतिज रूप से भी लागू होता है, जिसका अर्थ है कि नागरिक इसे निजी व्यक्तियों के खिलाफ भी लागू कर सकते हैं।"
+      },
+      "pyq": "UPSC CSE 2020"
+    },
+    {
+      "question": {
+        "en": "Article 24 of the Constitution prohibits the employment of children below which age in any factory, mine, or other hazardous employment?",
+        "hi": "संविधान का अनुच्छेद 24 किस आयु से कम के बच्चों को किसी कारखाने, खदान या अन्य खतरनाक रोजगार में नियोजित करने से प्रतिबंधित करता है?"
+      },
+      "options": {
+        "en": [
+          "12 years",
+          "16 years",
+          "14 years",
+          "18 years"
+        ],
+        "hi": [
+          "12 वर्ष",
+          "16 वर्ष",
+          "14 वर्ष",
+          "18 वर्ष"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Article 24 prohibits the employment of children below the age of fourteen (14) years in any factory, mine, or other hazardous occupations.",
+        "hi": "अनुच्छेद 24 चौदह (14) वर्ष से कम आयु के बच्चों को किसी कारखाने, खदान या अन्य खतरनाक व्यवसायों में नियोजित करने से प्रतिबंधित करता है।"
+      },
+      "pyq": "SSC CGL 2015"
+    },
+    {
+      "question": {
+        "en": "Can an Indian citizen voluntarily waive or give up their Fundamental Rights?",
+        "hi": "क्या कोई भारतीय नागरिक स्वेच्छा से अपने मौलिक अधिकारों का त्याग या परित्याग (waive) कर सकता है?"
+      },
+      "options": {
+        "en": [
+          "No, the Doctrine of Waiver does not apply to Fundamental Rights in India.",
+          "Yes, but only with the prior permission of the Parliament.",
+          "Yes, under the Doctrine of Waiver.",
+          "Yes, but only in respect of Article 19 freedoms."
+        ],
+        "hi": [
+          "नहीं, भारत में मौलिक अधिकारों पर 'त्याग का सिद्धांत' लागू नहीं होता है।",
+          "हाँ, लेकिन केवल संसद की पूर्व अनुमति से।",
+          "हाँ, 'त्याग के सिद्धांत' (Doctrine of Waiver) के तहत।",
+          "हाँ, लेकिन केवल अनुच्छेद 19 की स्वतंत्रता के संबंध में।"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "In Behram Khurshid Pesikaka v. State of Bombay (and later in Basheshar Nath v. CIT), the Supreme Court ruled that a citizen cannot waive their Fundamental Rights because these rights are not just for individual benefit but are a matter of public policy.",
+        "hi": "बहराम खुर्शीद पेसिकाका बनाम बॉम्बे राज्य (और बाद में बशेशर नाथ बनाम सीआईटी) मामले में, सर्वोच्च न्यायालय ने फैसला सुनाया कि एक नागरिक अपने मौलिक अधिकारों का त्याग नहीं कर सकता क्योंकि ये अधिकार केवल व्यक्तिगत लाभ के लिए नहीं हैं बल्कि सार्वजनिक नीति का विषय हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which Article of the Constitution guarantees the right of minorities (whether based on religion or language) to establish and administer educational institutions of their choice?",
+        "hi": "संविधान का कौन सा अनुच्छेद अल्पसंख्यकों (चाहे धर्म या भाषा पर आधारित हो) को अपनी पसंद के शैक्षणिक संस्थानों की स्थापना और प्रशासन करने के अधिकार की गारंटी देता है?"
+      },
+      "options": {
+        "en": [
+          "Article 30",
+          "Article 32",
+          "Article 29",
+          "Article 31"
+        ],
+        "hi": [
+          "अनुच्छेद 30",
+          "अनुच्छेद 32",
+          "अनुच्छेद 29",
+          "अनुच्छेद 31"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Article 30(1) guarantees all minorities, whether based on religion or language, the right to establish and administer educational institutions of their choice.",
+        "hi": "अनुच्छेद 30(1) सभी अल्पसंख्यकों को, चाहे वे धर्म या भाषा पर आधारित हों, अपनी पसंद के शैक्षणिक संस्थानों की स्थापना और प्रशासन करने के अधिकार की गारंटी देता है।"
+      },
+      "pyq": "UPSC CSE 2020"
+    },
+    {
+      "question": {
+        "en": "What does the term 'justiciable' mean in the context of Fundamental Rights?",
+        "hi": "मौलिक अधिकारों के संदर्भ में 'वादयोग्य' (Justiciable) शब्द का क्या अर्थ है?"
+      },
+      "options": {
+        "en": [
+          "They are absolute in nature",
+          "They are only moral guidelines",
+          "They cannot be modified by the Parliament",
+          "They are enforceable by the courts of law"
+        ],
+        "hi": [
+          "ये प्रकृति में निरपेक्ष हैं",
+          "ये केवल नैतिक दिशानिर्देश हैं",
+          "इन्हें संसद द्वारा संशोधित नहीं किया जा सकता",
+          "इन्हें न्यायालयों द्वारा लागू कराया जा सकता है"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Justiciable means that if these rights are violated, a citizen can approach the courts (Supreme Court under Article 32 or High Courts under Article 226) for their enforcement.",
+        "hi": "वादयोग्य का अर्थ है कि यदि इन अधिकारों का उल्लंघन होता है, तो कोई भी नागरिक इनके प्रवर्तन के लिए न्यायालयों (अनुच्छेद 32 के तहत सर्वोच्च न्यायालय या अनुच्छेद 226 के तहत उच्च न्यायालय) का दरवाजा खटखटा सकता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which writ is issued by a higher court to command a public official or lower authority to perform a mandatory statutory duty which they have failed to perform?",
+        "hi": "उच्च न्यायालय द्वारा किसी सार्वजनिक अधिकारी या निचले प्राधिकरण को एक अनिवार्य वैधानिक कर्तव्य निभाने का आदेश देने के लिए कौन सी रिट जारी की जाती है जिसे वे निभाने में विफल रहे हैं?"
+      },
+      "options": {
+        "en": [
+          "Mandamus",
+          "Prohibition",
+          "Habeas Corpus",
+          "Quo Warranto"
+        ],
+        "hi": [
+          "परमादेश (Mandamus)",
+          "प्रतिषेध",
+          "बंदी प्रत्यक्षीकरण",
+          "अधिकार पृच्छा"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Mandamus literally means 'We command'. It is a command issued by the court to a public official, public body, lower court, tribunal, or government, asking them to perform a public duty that they have refused or failed to perform.",
+        "hi": "परमादेश (Mandamus) का शाब्दिक अर्थ 'हम आदेश देते हैं' है। यह न्यायालय द्वारा किसी सार्वजनिक अधिकारी, सार्वजनिक निकाय, निचली अदालत, न्यायाधिकरण या सरकार को जारी किया गया एक आदेश है, जिसमें उनसे उस सार्वजनिक कर्तव्य को निभाने के लिए कहा जाता है जिसे करने से उन्होंने इनकार कर दिया है या करने में विफल रहे हैं।"
+      },
+      "pyq": "UPSC CSE 2016"
+    },
+    {
+      "question": {
+        "en": "Under which specific clause of Article 19 is the 'Freedom of the Press' implicitly protected in India?",
+        "hi": "भारत में 'प्रेस की स्वतंत्रता' को अनुच्छेद 19 के किस विशिष्ट खंड के तहत अंतर्निहित रूप से संरक्षित किया गया है?"
+      },
+      "options": {
+        "en": [
+          "Article 19(1)(c) - Freedom of association",
+          "Article 19(1)(a) - Freedom of speech and expression",
+          "Article 19(1)(b) - Freedom of peaceful assembly",
+          "Article 19(1)(g) - Freedom of profession"
+        ],
+        "hi": [
+          "अनुच्छेद 19(1)(c) - संघ बनाने की स्वतंत्रता",
+          "अनुच्छेद 19(1)(a) - भाषण और अभिव्यक्ति की स्वतंत्रता",
+          "अनुच्छेद 19(1)(b) - शांतिपूर्ण सभा की स्वतंत्रता",
+          "अनुच्छेद 19(1)(g) - पेशे की स्वतंत्रता"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Freedom of the Press is not explicitly mentioned in the Constitution, but the Supreme Court has ruled in various cases that it is an implicit part of the Freedom of Speech and Expression under Article 19(1)(a).",
+        "hi": "संविधान में प्रेस की स्वतंत्रता का स्पष्ट रूप से उल्लेख नहीं है, लेकिन सर्वोच्च न्यायालय ने विभिन्न मामलों में फैसला सुनाया है कि यह अनुच्छेद 19(1)(a) के तहत भाषण और अभिव्यक्ति की स्वतंत्रता का एक अंतर्निहित हिस्सा है।"
+      },
+      "pyq": "UPSC CSE 2014"
+    }
+  ]
+}

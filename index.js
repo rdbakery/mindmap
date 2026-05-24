@@ -29,7 +29,11 @@ const APP_CONFIG = {
     { label: "TRE4 Computer Science", file: "TRE4_Computer_Science.json" }
   ],
   preImportedQuizzes: [
-    { label: "History Quiz", file: "History_Quiz.json" }
+    
+    { label: "English Quiz", file: "english_quiz.json" },
+    { label: "IVC Quiz", file: "ivc_quiz.json" },
+    { label: "FYP Quiz", file: "fyp_quiz.json" },
+    { label: "FM Right Quiz", file: "fm_quiz.json" }
   ]
 };
 
