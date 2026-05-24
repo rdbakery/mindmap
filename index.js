@@ -2442,7 +2442,9 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
     modal.querySelectorAll('.quiz-nav-btn').forEach((btn, i) => {
       if (i === currentQuestionIndex) {
         btn.classList.add('active');
-        btn.classList.add('visited');
+        if (!isSubmitted) {
+          btn.classList.add('visited');
+        }
         btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
       } else {
         btn.classList.remove('active');
