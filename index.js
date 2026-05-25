@@ -2534,7 +2534,7 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
   modal.id = 'aiQuizModal';
   modal.className = "note-editor ai-quiz-wrapper"; 
   modal.setAttribute("data-lang", defaultLang);
-  modal.style.cssText = "position:fixed;width:90%;max-width:550px;z-index:99999;max-height:85vh;display:flex;flex-direction:column;padding:0;box-sizing:border-box;cursor:default;overflow:hidden;";
+  modal.style.cssText = "position:fixed;width:90%;max-width:700px;z-index:99999;max-height:85vh;display:flex;flex-direction:column;padding:0;box-sizing:border-box;cursor:default;overflow:hidden;";
 
   let currentQuestionIndex = 0;
   let isSubmitted = false;
