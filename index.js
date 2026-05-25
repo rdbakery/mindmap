@@ -469,7 +469,7 @@ async function refreshQuizSelector() {
       const quizId = e.target.value;
       const quizData = await loadQuiz(quizId);
       if (quizData && quizData.questions) {
-        showAIQuizModal(JSON.parse(JSON.stringify(quizData.questions)), true, quizId, quizData.timerSeconds !== undefined ? quizData.timerSeconds : 600);
+        showAIQuizModal(JSON.parse(JSON.stringify(quizData.questions)), true, quizId, quizData.timerSeconds !== undefined ? quizData.timerSeconds : 600, null, undefined, (quizData.quizName || quizData.mapName || quizData.name));
       }
       e.target.value = ""; 
     };
@@ -1647,11 +1647,11 @@ async function importQuizData(data, fileName = ""){
   const quizzes = await listQuizzes();
 
   const existingQuiz = quizzes.find(q => q.name && q.name.trim().toLowerCase() === quizName.trim().toLowerCase());
-  if (existingQuiz) {
+    if (existingQuiz) {
     const quizData = await loadQuiz(existingQuiz.id);
     if (quizData && quizData.questions) {
       showFlashMessage("✅ Using existing quiz");
-      showAIQuizModal(JSON.parse(JSON.stringify(quizData.questions)), true, existingQuiz.id, quizData.timerSeconds !== undefined ? quizData.timerSeconds : 600);
+      showAIQuizModal(JSON.parse(JSON.stringify(quizData.questions)), true, existingQuiz.id, quizData.timerSeconds !== undefined ? quizData.timerSeconds : 600, null, undefined, (quizData.quizName || quizData.mapName || quizData.name));
     }
     return;
   }
@@ -1663,7 +1663,7 @@ async function importQuizData(data, fileName = ""){
   showFlashMessage("✅ Quiz imported successfully");
 
   // Automatically start the imported quiz
-  showAIQuizModal(JSON.parse(JSON.stringify(data.questions)), true, newQuizId, data.timerSeconds !== undefined ? data.timerSeconds : 600);
+  showAIQuizModal(JSON.parse(JSON.stringify(data.questions)), true, newQuizId, data.timerSeconds !== undefined ? data.timerSeconds : 600, null, undefined, quizName);
 }
 
 function exportPNG() {
@@ -2486,11 +2486,11 @@ async function generateQuizForNode(id, content, settings = { qsCount: 25, qsDiff
     showFlashMessage("✅ Quiz automatically saved!");
     refreshQuizSelector();
 
-    showAIQuizModal(quizData, false, newQuizId, settings.qsTimer, id, defaultLang);
+    showAIQuizModal(quizData, false, newQuizId, settings.qsTimer, id, defaultLang, quizName);
   }
 }
 
-function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSeconds = 600, nodeId = null, defaultLang = 'en') {
+async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSeconds = 600, nodeId = null, defaultLang = 'en', quizTitle = null) {
   const existing = document.getElementById('aiQuizModal');
   const existingOverlay = document.getElementById('aiQuizOverlay');
   if (existing) existing.remove();
@@ -2564,6 +2564,17 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
     return `<span class="lang-en">${escapeHtml(q.options.en[q.answer])}</span><span class="lang-hi">${escapeHtml(q.options.hi[q.answer])}</span>`;
   };
 
+  let displayTitle = quizTitle || (quizData && quizData.quizName) || '';
+  if (!displayTitle && savedQuizId) {
+    try {
+      const loaded = await loadQuiz(savedQuizId);
+      if (loaded) displayTitle = loaded.quizName || loaded.mapName || `${currentMap ? currentMap.text : 'Quiz'}`;
+    } catch (e) {
+      displayTitle = displayTitle || `${currentMap ? currentMap.text : 'Quiz'}`;
+    }
+  }
+  displayTitle = displayTitle || '🤖 AI Generated Quiz';
+
   let html = `
   <style>
     .ai-quiz-wrapper[data-lang="en"] .lang-hi { display: none !important; }
@@ -2571,7 +2582,7 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
   </style>
   <div class="note-editor-header" style="padding:20px; border-bottom:1px solid rgba(128,128,128,0.2); font-size:18px; display:flex; justify-content:space-between; align-items:center; flex-shrink:0;">
     <div style="display:flex; align-items:center; gap:12px;">
-      <span>🤖 AI Generated Quiz</span>
+      <span id="aiQuizTitle">${escapeHtml(displayTitle)}</span>
       <button id="toggleQuizLangBtn" style="background:transparent; border:1px solid #d1d5db; border-radius:4px; padding:4px 8px; font-size:12px; cursor:pointer; color:inherit;">
         🌐 Translate
       </button>
@@ -2878,11 +2889,20 @@ function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSe
       modal.remove();
       overlay.remove();
     };
-    document.getElementById('retakeAiQuizBtn').onclick = () => {
+    document.getElementById('retakeAiQuizBtn').onclick = async () => {
       const currentLang = modal.getAttribute("data-lang") || 'en';
       modal.remove();
       overlay.remove();
-      showAIQuizModal(JSON.parse(JSON.stringify(quizData)), true, savedQuizId, timerSeconds, nodeId, currentLang);
+      let title = null;
+      if (savedQuizId) {
+        try {
+          const existing = await loadQuiz(savedQuizId);
+          if (existing) title = existing.quizName || existing.mapName || (currentMap ? `${currentMap.text} - Quiz` : 'Quiz');
+        } catch (e) {
+          // ignore
+        }
+      }
+      showAIQuizModal(JSON.parse(JSON.stringify(quizData)), true, savedQuizId, timerSeconds, nodeId, currentLang, title);
     };
 
     const saveBtn = document.getElementById('saveAiQuizBtn');
