@@ -504,35 +504,32 @@ async function refreshQuizSelector() {
     quizSelector = document.createElement('select');
     quizSelector.id = 'quizSelector';
     
-    const defaultOption = document.createElement('option');
-    defaultOption.value = "";
-    defaultOption.textContent = "🧠 Start Saved Quiz...";
-    quizSelector.appendChild(defaultOption);
-    
-    quizSelector.onchange = async e => {
-      if (!e.target.value) return;
-
-      if (e.target.value.startsWith("preimport:")) {
-        await importPreImportedQuiz(e.target.value.replace("preimport:", ""));
-        e.target.value = "";
-        return;
-      }
-
-      const quizId = e.target.value;
-      const quizData = await loadQuiz(quizId);
-      if (quizData && quizData.questions) {
-        showAIQuizModal(JSON.parse(JSON.stringify(quizData.questions)), true, quizId, quizData.timerSeconds !== undefined ? quizData.timerSeconds : 600, null, undefined, (quizData.quizName || quizData.mapName || quizData.name));
-      }
-      e.target.value = ""; 
-    };
-    
     const toolbarInner = document.querySelector('.toolbar-inner');
     if (toolbarInner) {
       toolbarInner.appendChild(quizSelector);
     }
   }
+
+  quizSelector.onchange = async e => {
+    if (!e.target.value) return;
+
+    if (e.target.value.startsWith("preimport:")) {
+      await importPreImportedQuiz(e.target.value.replace("preimport:", ""));
+      e.target.value = "";
+      return;
+    }
+
+    const quizId = e.target.value;
+    const quizData = await loadQuiz(quizId);
+    if (quizData && quizData.questions) {
+      showAIQuizModal(JSON.parse(JSON.stringify(quizData.questions)), true, quizId, quizData.timerSeconds !== undefined ? quizData.timerSeconds : 600, null, undefined, (quizData.quizName || quizData.mapName || quizData.name));
+    }
+    e.target.value = ""; 
+  };
   
-  const defaultOpt = quizSelector.options[0];
+  const defaultOpt = document.createElement('option');
+  defaultOpt.value = "";
+  defaultOpt.textContent = "🧠 Start Saved Quiz...";
   quizSelector.innerHTML = "";
   quizSelector.appendChild(defaultOpt);
   
@@ -572,36 +569,36 @@ async function refreshTestSelector() {
     selector = document.createElement('select');
     selector.id = 'testSelector';
     
-    selector.onchange = async e => {
-      if (!e.target.value) return;
-
-      if (e.target.value.startsWith("preimport:")) {
-        await startSelectedTest(e.target.value.replace("preimport:", ""));
-        e.target.value = "";
-        return;
-      }
-
-      const testId = e.target.value;
-      const testData = await loadTest(testId);
-      if (testData) {
-        try {
-          const examJson = normalizeExamTestJSON(testData, testId);
-          validateExamTestJSON(examJson);
-          activeExamTest = examJson;
-          activeExamTest.savedTestId = testId;
-          openExamTestScreen(examJson);
-        } catch(err) {
-            alert(err.message || "Invalid test data");
-        }
-      }
-      e.target.value = ""; 
-    };
-    
     const toolbarInner = document.querySelector('.toolbar-inner');
     if (toolbarInner) {
       toolbarInner.appendChild(selector);
     }
   }
+
+  selector.onchange = async e => {
+    if (!e.target.value) return;
+
+    if (e.target.value.startsWith("preimport:")) {
+      await startSelectedTest(e.target.value.replace("preimport:", ""));
+      e.target.value = "";
+      return;
+    }
+
+    const testId = e.target.value;
+    const testData = await loadTest(testId);
+    if (testData) {
+      try {
+        const examJson = normalizeExamTestJSON(testData, testId);
+        validateExamTestJSON(examJson);
+        activeExamTest = examJson;
+        activeExamTest.savedTestId = testId;
+        openExamTestScreen(examJson);
+      } catch(err) {
+          alert(err.message || "Invalid test data");
+      }
+    }
+    e.target.value = ""; 
+  };
 
   const defaultOption = document.createElement('option');
   defaultOption.value = "";
