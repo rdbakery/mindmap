@@ -37,11 +37,11 @@ const APP_CONFIG = {
   preImportedTests: [
     {
       label: "SSC CGL 12-09-2025 Shift 1",
-      file: "test/ssc/cgl/ssc_cgl_12-9-2025_shift_1.json"
+      file: "ssc/cgl/ssc_cgl_12-9-2025_shift_1.json"
     },
     {
       label: "SSC CGL 12-09-2025 Shift 2",
-      file: "test/ssc/cgl/ssc_cgl_12-9-2025_shift_2.json"
+      file: "ssc/cgl/ssc_cgl_12-9-2025_shift_2.json"
     }
   ]
 };
