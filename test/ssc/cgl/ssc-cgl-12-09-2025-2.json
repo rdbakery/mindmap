@@ -1,0 +1,278 @@
+{
+  "exam": {
+    "id": "ssc-cgl-2025-shift-2",
+    "name": "SSC CGL 2025",
+    "heldOn": "2025-09-12",
+    "shift": 2,
+    "durationMinutes": 60,
+    "negativeMark": 0.5,
+    "totalQuestions": 5,
+    "languages": ["en", "hi"],
+
+    "sections": [
+      {
+        "id": "part_a",
+        "title": {
+          "en": "General Intelligence and Reasoning",
+          "hi": "सामान्य बुद्धिमत्ता एवं तर्कशक्ति"
+        },
+        "questionStart": 1,
+        "questionEnd": 5,
+        "sectionTimeMinutes": 15
+      }
+    ],
+
+    "questions": [
+      {
+        "id": 1,
+
+        "section": "part_a",
+
+        "questionType": "single",
+
+        "marks": 2,
+
+        "question": {
+          "en": "In the following question, select the related word from the given alternatives. Watt : Power :: Pascal : ?",
+
+          "hi": "निम्नलिखित प्रश्न में दिए गए विकल्पों में से संबंधित शब्द चुनिए। वाट : शक्ति :: पास्कल : ?"
+        },
+
+        "options": [
+          {
+            "id": "A",
+            "en": "Energy",
+            "hi": "ऊर्जा"
+          },
+          {
+            "id": "B",
+            "en": "Temperature",
+            "hi": "तापमान"
+          },
+          {
+            "id": "C",
+            "en": "Pressure",
+            "hi": "दाब"
+          },
+          {
+            "id": "D",
+            "en": "Force",
+            "hi": "बल"
+          }
+        ],
+
+        "answer": "C",
+
+        "explanation": {
+          "en": "Watt is unit of Power and Pascal is unit of Pressure.",
+          "hi": "वाट शक्ति की इकाई है तथा पास्कल दाब की इकाई है।"
+        },
+
+        "difficulty": "easy",
+
+        "topic": "Analogy",
+
+        "pyq": {
+          "exam": "SSC CGL",
+          "year": 2025,
+          "shift": 2
+        }
+      },
+
+      {
+        "id": 2,
+
+        "section": "part_a",
+
+        "questionType": "single",
+
+        "marks": 2,
+
+        "question": {
+          "en": "Find missing number: 2, 6, 12, 20, ?",
+
+          "hi": "लुप्त संख्या ज्ञात करें: 2, 6, 12, 20, ?"
+        },
+
+        "options": [
+          {
+            "id": "A",
+            "en": "28",
+            "hi": "28"
+          },
+          {
+            "id": "B",
+            "en": "30",
+            "hi": "30"
+          },
+          {
+            "id": "C",
+            "en": "32",
+            "hi": "32"
+          },
+          {
+            "id": "D",
+            "en": "34",
+            "hi": "34"
+          }
+        ],
+
+        "answer": "B",
+
+        "explanation": {
+          "en": "Pattern: +4, +6, +8, +10 → answer = 30",
+          "hi": "क्रम: +4, +6, +8, +10 → उत्तर = 30"
+        },
+
+        "difficulty": "medium",
+
+        "topic": "Number Series",
+
+        "pyq": {
+          "exam": "SSC CHSL",
+          "year": 2024
+        }
+      },
+
+      {
+        "id": 3,
+
+        "section": "part_a",
+
+        "questionType": "single",
+
+        "marks": 2,
+
+        "question": {
+          "en": "Which river is called Sorrow of Bihar?",
+
+          "hi": "किस नदी को बिहार का शोक कहा जाता है?"
+        },
+
+        "options": [
+          {
+            "id": "A",
+            "en": "Ganga",
+            "hi": "गंगा"
+          },
+          {
+            "id": "B",
+            "en": "Kosi",
+            "hi": "कोसी"
+          },
+          {
+            "id": "C",
+            "en": "Son",
+            "hi": "सोन"
+          },
+          {
+            "id": "D",
+            "en": "Gandak",
+            "hi": "गंडक"
+          }
+        ],
+
+        "answer": "B",
+
+        "explanation": {
+          "en": "Kosi River is called Sorrow of Bihar due to floods.",
+          "hi": "बार-बार बाढ़ आने के कारण कोसी को बिहार का शोक कहा जाता है।"
+        },
+
+        "difficulty": "easy",
+
+        "topic": "Geography"
+      },
+
+      {
+        "id": 4,
+
+        "section": "part_a",
+
+        "questionType": "single",
+
+        "marks": 2,
+
+        "question": {
+          "en": "Who gave the slogan 'Jai Jawan Jai Kisan'?",
+
+          "hi": "'जय जवान जय किसान' का नारा किसने दिया?"
+        },
+
+        "options": [
+          {
+            "id": "A",
+            "en": "Jawaharlal Nehru",
+            "hi": "जवाहरलाल नेहरू"
+          },
+          {
+            "id": "B",
+            "en": "Lal Bahadur Shastri",
+            "hi": "लाल बहादुर शास्त्री"
+          },
+          {
+            "id": "C",
+            "en": "Mahatma Gandhi",
+            "hi": "महात्मा गांधी"
+          },
+          {
+            "id": "D",
+            "en": "Sardar Patel",
+            "hi": "सरदार पटेल"
+          }
+        ],
+
+        "answer": "B",
+
+        "difficulty": "easy",
+
+        "topic": "History"
+      },
+
+      {
+        "id": 5,
+
+        "section": "part_a",
+
+        "questionType": "single",
+
+        "marks": 2,
+
+        "question": {
+          "en": "What is 25% of 800?",
+
+          "hi": "800 का 25% कितना होगा?"
+        },
+
+        "options": [
+          {
+            "id": "A",
+            "en": "100",
+            "hi": "100"
+          },
+          {
+            "id": "B",
+            "en": "150",
+            "hi": "150"
+          },
+          {
+            "id": "C",
+            "en": "200",
+            "hi": "200"
+          },
+          {
+            "id": "D",
+            "en": "250",
+            "hi": "250"
+          }
+        ],
+
+        "answer": "C",
+
+        "difficulty": "easy",
+
+        "topic": "Percentage"
+      }
+    ]
+  }
+}

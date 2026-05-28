@@ -33,6 +33,9 @@
     <button onclick="redo()">↷ Redo</button>
     <button onclick="exportJSON()">📄 Export JSON</button>
     <button onclick="toggleFilterDropdown(event)" id="filterBtn">🔍 Filter</button>
+    <select id="testSelector" onchange="startSelectedTest(this.value)">
+      <option value="">📝 Start Test...</option>
+    </select>
 
     <label class="import-btn">
       📥 Import Mind Map

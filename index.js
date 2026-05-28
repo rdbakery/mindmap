@@ -33,6 +33,16 @@ const APP_CONFIG = {
     { label: "IVC Quiz", file: "ivc_quiz.json" },
     { label: "FYP Quiz", file: "fyp_quiz.json" },
     { label: "FM Right Quiz", file: "fm_quiz.json" }
+  ],
+  preImportedTests: [
+    {
+      label: "SSC CGL 12-09-2025 Shift 1",
+      file: "ssc/cgl/ssc-cgl-12-09-2025-1.json"
+    },
+    {
+      label: "SSC CGL 12-09-2025 Shift 2",
+      file: "ssc/cgl/ssc-cgl-12-09-2025-2.json"
+    }
   ]
 };
 
@@ -365,6 +375,7 @@ currentMap={
 
   refreshSelector();
   refreshQuizSelector();
+  refreshTestSelector();
   render();
   showBackupWarningPopup();
 })();
@@ -512,6 +523,31 @@ async function refreshQuizSelector() {
   }
   
   quizSelector.style.display = (quizzes.length > 0 || (APP_CONFIG.preImportedQuizzes && APP_CONFIG.preImportedQuizzes.length > 0)) ? "inline-block" : "none";
+}
+
+function refreshTestSelector() {
+  const selector = document.getElementById("testSelector");
+  if (!selector) return;
+
+  selector.innerHTML = `<option value="">📝 Start Test...</option>`;
+
+  const tests = APP_CONFIG.preImportedTests || [];
+  if (!tests.length) {
+    selector.style.display = "none";
+    return;
+  }
+
+  const group = document.createElement("optgroup");
+  group.label = "Pre Imported Tests";
+  tests.forEach(test => {
+    const option = document.createElement("option");
+    option.value = test.file;
+    option.textContent = test.label;
+    group.appendChild(option);
+  });
+
+  selector.appendChild(group);
+  selector.style.display = "inline-block";
 }
 
 let allCollapsed = false;
@@ -2105,6 +2141,416 @@ document.addEventListener("click", function(e){
     box.classList.add("hidden");
   }
 });
+
+/* ================= TEST RUNNER ================= */
+let activeExamTest = null;
+
+async function startSelectedTest(filePath) {
+  const selector = document.getElementById("testSelector");
+  if (!filePath) return;
+
+  try {
+    showFlashMessage("📝 Loading test...");
+    const response = await fetch(`test/${filePath}`);
+    if (!response.ok) {
+      throw new Error("Unable to load test JSON.");
+    }
+
+    const data = await response.json();
+    const examJson = normalizeExamTestJSON(data, filePath);
+    validateExamTestJSON(examJson);
+    activeExamTest = examJson;
+    openExamTestScreen(examJson);
+  } catch (err) {
+    alert(err.message || "Unable to start test.");
+  } finally {
+    if (selector) selector.value = "";
+  }
+}
+
+function normalizeExamTestJSON(data, filePath = "") {
+  const sourceExam = data.exam || data;
+  if (!sourceExam || !Array.isArray(sourceExam.questions)) {
+    throw new Error("Invalid test JSON. Expected exam.questions.");
+  }
+
+  const questions = sourceExam.questions.map((q, index) => normalizeExamQuestion(q, index + 1, sourceExam));
+  const sections = normalizeExamSections(sourceExam.sections, questions);
+
+  return {
+    exam: {
+      id: sourceExam.id || safeName(filePath || sourceExam.name || "exam").toLowerCase(),
+      name: sourceExam.name || "Imported Test",
+      heldOn: sourceExam.heldOn || "",
+      shift: sourceExam.shift || "",
+      durationMinutes: Number(sourceExam.durationMinutes) || 60,
+      negativeMark: Number(sourceExam.negativeMark) || 0,
+      totalQuestions: questions.length,
+      languages: Array.isArray(sourceExam.languages) ? sourceExam.languages : ["en", "hi"],
+      sections,
+      questions
+    }
+  };
+}
+
+function normalizeExamQuestion(q, id, exam) {
+  const optionIds = ["A", "B", "C", "D"];
+  const rawOptions = Array.isArray(q.options) ? q.options : [];
+  const options = optionIds.map((letter, index) => {
+    const opt = rawOptions[index] || {};
+    return {
+      id: opt.id || letter,
+      en: typeof opt === "string" ? opt : (opt.en || ""),
+      hi: typeof opt === "string" ? opt : (opt.hi || opt.en || "")
+    };
+  });
+
+  const answer = typeof q.answer === "number"
+    ? optionIds[q.answer] || "A"
+    : String(q.answer || "A").toUpperCase();
+
+  return {
+    id: Number(q.id) || id,
+    section: q.section || "part_a",
+    questionType: q.questionType || "single",
+    marks: Number(q.marks) || 2,
+    question: {
+      en: typeof q.question === "string" ? q.question : (q.question?.en || ""),
+      hi: typeof q.question === "string" ? q.question : (q.question?.hi || q.question?.en || "")
+    },
+    options,
+    answer: optionIds.includes(answer) ? answer : "A",
+    explanation: {
+      en: typeof q.explanation === "string" ? q.explanation : (q.explanation?.en || ""),
+      hi: typeof q.explanation === "string" ? q.explanation : (q.explanation?.hi || q.explanation?.en || "")
+    },
+    difficulty: q.difficulty || "easy",
+    topic: q.topic || "",
+    pyq: {
+      exam: q.pyq?.exam || exam.name || "",
+      year: q.pyq?.year || (exam.heldOn ? String(exam.heldOn).slice(0, 4) : ""),
+      shift: q.pyq?.shift || exam.shift || ""
+    }
+  };
+}
+
+function normalizeExamSections(sections, questions) {
+  const byId = new Map();
+
+  if (Array.isArray(sections)) {
+    sections.forEach(section => {
+      const id = section.id || "part_a";
+      byId.set(id, {
+        id,
+        title: {
+          en: section.title?.en || section.name || id,
+          hi: section.title?.hi || section.title?.en || section.name || id
+        },
+        questionStart: Number(section.questionStart) || 0,
+        questionEnd: Number(section.questionEnd) || 0,
+        sectionTimeMinutes: Number(section.sectionTimeMinutes || section.durationMinutes) || 0
+      });
+    });
+  }
+
+  questions.forEach(q => {
+    if (!byId.has(q.section)) {
+      byId.set(q.section, {
+        id: q.section,
+        title: { en: q.section, hi: q.section },
+        questionStart: 0,
+        questionEnd: 0,
+        sectionTimeMinutes: 0
+      });
+    }
+  });
+
+  const normalized = Array.from(byId.values());
+  normalized.forEach(section => {
+    const sectionQuestions = questions.filter(q => q.section === section.id);
+    if (!section.questionStart && sectionQuestions.length) section.questionStart = sectionQuestions[0].id;
+    if (!section.questionEnd && sectionQuestions.length) section.questionEnd = sectionQuestions[sectionQuestions.length - 1].id;
+    if (!section.sectionTimeMinutes) section.sectionTimeMinutes = Math.max(1, Math.round(sectionQuestions.length * 1.2));
+  });
+
+  return normalized;
+}
+
+function validateExamTestJSON(examJson) {
+  const exam = examJson?.exam;
+  if (!exam || !Array.isArray(exam.sections) || !Array.isArray(exam.questions)) {
+    throw new Error("Invalid test JSON schema.");
+  }
+
+  exam.questions.forEach(q => {
+    if (!q.question?.en || !Array.isArray(q.options) || q.options.length !== 4 || !["A", "B", "C", "D"].includes(q.answer)) {
+      throw new Error(`Invalid question format at question ${q.id}.`);
+    }
+  });
+
+  return true;
+}
+
+function openExamTestScreen(examJson) {
+  const exam = examJson.exam;
+  const questions = exam.questions;
+
+  document.getElementById("examTestOverlay")?.remove();
+  document.getElementById("examTestModal")?.remove();
+
+  const overlay = document.createElement("div");
+  overlay.id = "examTestOverlay";
+  overlay.className = "test-overlay";
+  document.body.appendChild(overlay);
+
+  const modal = document.createElement("div");
+  modal.id = "examTestModal";
+  modal.className = "exam-test-modal";
+  modal.setAttribute("data-lang", "en");
+
+  let currentIndex = 0;
+  let submitted = false;
+  let remainingSeconds = Math.max(0, Number(exam.durationMinutes) || 0) * 60;
+  const answers = new Map();
+  const reviewFlags = new Set();
+  let timerInterval = null;
+
+  modal.innerHTML = `
+    <style>
+      .exam-test-modal[data-lang="en"] .lang-hi { display:none !important; }
+      .exam-test-modal[data-lang="hi"] .lang-en { display:none !important; }
+    </style>
+    <div class="exam-test-header">
+      <div>
+        <h2>${escapeHtml(exam.name)}</h2>
+        <div>${escapeHtml(exam.heldOn || "")}${exam.shift ? ` · Shift ${escapeHtml(exam.shift)}` : ""} · ${questions.length} Questions</div>
+      </div>
+      <div class="exam-test-header-actions">
+        <button id="examLangBtn">🌐 Translate</button>
+        <button id="examExportBtn">⬇ Export JSON</button>
+        <span id="examTimer">${formatExamTimer(remainingSeconds)}</span>
+      </div>
+    </div>
+    <div class="exam-section-tabs">
+      ${exam.sections.map((section, index) => `
+        <button class="exam-section-btn ${index === 0 ? "active" : ""}" data-section="${escapeHtml(section.id)}">
+          <span class="lang-en">${escapeHtml(section.title.en)}</span>
+          <span class="lang-hi">${escapeHtml(section.title.hi)}</span>
+        </button>
+      `).join("")}
+    </div>
+    <div class="exam-test-body">
+      <aside class="exam-question-palette">
+        ${questions.map((_, i) => `<button class="exam-question-chip ${i === 0 ? "active visited" : ""}" data-index="${i}">${i + 1}</button>`).join("")}
+      </aside>
+      <main class="exam-question-panel" id="examQuestionPanel"></main>
+    </div>
+    <div class="exam-test-footer">
+      <div>
+        <button id="examPrevBtn">◀ Prev</button>
+        <button id="examNextBtn">Next ▶</button>
+        <button id="examReviewBtn">Mark Review</button>
+      </div>
+      <div>
+        <button id="examCloseBtn">Close</button>
+        <button id="examSubmitBtn">Submit Test</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  function renderQuestion() {
+    const q = questions[currentIndex];
+    const panel = document.getElementById("examQuestionPanel");
+    const selected = answers.get(q.id);
+    const section = exam.sections.find(s => s.id === q.section);
+
+    panel.innerHTML = `
+      <div class="exam-question-meta">
+        <span>${escapeHtml(section?.title?.en || q.section)}</span>
+        <span>${escapeHtml(q.topic || "")}</span>
+        <span>${escapeHtml(q.difficulty || "")}</span>
+      </div>
+      <h3>
+        Q${currentIndex + 1}. 
+        <span class="lang-en">${escapeHtml(q.question.en)}</span>
+        <span class="lang-hi">${escapeHtml(q.question.hi)}</span>
+      </h3>
+      <div class="exam-options">
+        ${q.options.map(opt => `
+          <label class="exam-option" data-option="${opt.id}">
+            <input type="radio" name="examOption" value="${opt.id}" ${selected === opt.id ? "checked" : ""} ${submitted ? "disabled" : ""}>
+            <span><strong>${opt.id}.</strong> <span class="lang-en">${escapeHtml(opt.en)}</span><span class="lang-hi">${escapeHtml(opt.hi)}</span></span>
+          </label>
+        `).join("")}
+      </div>
+      <div class="exam-explanation" id="examExplanation"></div>
+    `;
+
+    panel.querySelectorAll("input[name='examOption']").forEach(input => {
+      input.onchange = () => {
+        if (submitted) return;
+        answers.set(q.id, input.value);
+        updatePalette();
+      };
+    });
+
+    if (submitted) {
+      panel.querySelectorAll(".exam-option").forEach(label => {
+        const opt = label.dataset.option;
+        if (opt === q.answer) label.classList.add("correct");
+        if (answers.get(q.id) === opt && opt !== q.answer) label.classList.add("wrong");
+      });
+
+      const explanation = document.getElementById("examExplanation");
+      explanation.style.display = "block";
+      explanation.innerHTML = `
+        <strong>Answer: ${escapeHtml(q.answer)}</strong><br>
+        <span class="lang-en">${escapeHtml(q.explanation.en || "No explanation available.")}</span>
+        <span class="lang-hi">${escapeHtml(q.explanation.hi || q.explanation.en || "व्याख्या उपलब्ध नहीं है।")}</span>
+      `;
+    }
+
+    document.getElementById("examPrevBtn").disabled = currentIndex === 0;
+    document.getElementById("examNextBtn").disabled = currentIndex === questions.length - 1;
+    document.getElementById("examReviewBtn").textContent = reviewFlags.has(q.id) ? "Unmark Review" : "Mark Review";
+    updatePalette();
+  }
+
+  function updatePalette() {
+    modal.querySelectorAll(".exam-question-chip").forEach((btn, i) => {
+      const q = questions[i];
+      btn.classList.toggle("active", i === currentIndex);
+      btn.classList.toggle("answered", answers.has(q.id));
+      btn.classList.toggle("review", reviewFlags.has(q.id));
+    });
+
+    modal.querySelectorAll(".exam-section-btn").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.section === questions[currentIndex].section);
+    });
+  }
+
+  function jumpToQuestion(index) {
+    currentIndex = Math.max(0, Math.min(index, questions.length - 1));
+    modal.querySelector(`.exam-question-chip[data-index="${currentIndex}"]`)?.classList.add("visited");
+    renderQuestion();
+  }
+
+  function submitExamTest(auto = false) {
+    if (submitted) return;
+    if (!auto && !confirm("Submit test?")) return;
+
+    submitted = true;
+    if (timerInterval) clearInterval(timerInterval);
+
+    let correct = 0;
+    let wrong = 0;
+    let unattempted = 0;
+
+    questions.forEach(q => {
+      const selected = answers.get(q.id);
+      if (!selected) unattempted++;
+      else if (selected === q.answer) correct++;
+      else wrong++;
+    });
+
+    const totalMarks = questions.reduce((sum, q) => sum + q.marks, 0);
+    const score = questions.reduce((sum, q) => {
+      const selected = answers.get(q.id);
+      if (!selected) return sum;
+      return selected === q.answer ? sum + q.marks : sum - (exam.negativeMark || 0);
+    }, 0);
+
+    exam.resultAnalytics = {
+      attempted: answers.size,
+      correct,
+      wrong,
+      unattempted,
+      score,
+      totalMarks,
+      reviewFlags: Array.from(reviewFlags),
+      submittedAt: new Date().toISOString()
+    };
+
+    document.getElementById("examSubmitBtn").disabled = true;
+    document.getElementById("examTimer").textContent = `Score ${score}/${totalMarks}`;
+    renderQuestion();
+    showFlashMessage(`✅ Score: ${score}/${totalMarks}`);
+  }
+
+  modal.querySelectorAll(".exam-question-chip").forEach(btn => {
+    btn.onclick = () => jumpToQuestion(parseInt(btn.dataset.index, 10));
+  });
+
+  modal.querySelectorAll(".exam-section-btn").forEach(btn => {
+    btn.onclick = () => {
+      const index = questions.findIndex(q => q.section === btn.dataset.section);
+      if (index >= 0) jumpToQuestion(index);
+    };
+  });
+
+  document.getElementById("examLangBtn").onclick = () => {
+    const lang = modal.getAttribute("data-lang");
+    modal.setAttribute("data-lang", lang === "en" ? "hi" : "en");
+  };
+
+  document.getElementById("examExportBtn").onclick = () => exportActiveExamTestJSON();
+  document.getElementById("examPrevBtn").onclick = () => jumpToQuestion(currentIndex - 1);
+  document.getElementById("examNextBtn").onclick = () => jumpToQuestion(currentIndex + 1);
+  document.getElementById("examReviewBtn").onclick = () => {
+    const id = questions[currentIndex].id;
+    if (reviewFlags.has(id)) reviewFlags.delete(id);
+    else reviewFlags.add(id);
+    updatePalette();
+    renderQuestion();
+  };
+  document.getElementById("examCloseBtn").onclick = () => {
+    if (!submitted && answers.size && !confirm("Close test without submitting?")) return;
+    if (timerInterval) clearInterval(timerInterval);
+    modal.remove();
+    overlay.remove();
+  };
+  overlay.onclick = () => {
+    if (!submitted && answers.size && !confirm("Close test without submitting?")) return;
+    if (timerInterval) clearInterval(timerInterval);
+    modal.remove();
+    overlay.remove();
+  };
+  document.getElementById("examSubmitBtn").onclick = () => submitExamTest(false);
+
+  if (remainingSeconds > 0) {
+    timerInterval = setInterval(() => {
+      remainingSeconds--;
+      document.getElementById("examTimer").textContent = formatExamTimer(remainingSeconds);
+      if (remainingSeconds <= 0) {
+        submitExamTest(true);
+        alert("Time is up. Your test has been submitted.");
+      }
+    }, 1000);
+  }
+
+  renderQuestion();
+}
+
+function formatExamTimer(seconds) {
+  if (!seconds) return "Untimed";
+  const mins = Math.floor(seconds / 60).toString().padStart(2, "0");
+  const secs = (seconds % 60).toString().padStart(2, "0");
+  return `${mins}:${secs}`;
+}
+
+function exportActiveExamTestJSON() {
+  if (!activeExamTest) {
+    alert("Start a test first.");
+    return;
+  }
+
+  const b = new Blob([JSON.stringify(activeExamTest, null, 2)], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(b);
+  a.download = `${safeName(activeExamTest.exam.name || "exam")}.json`;
+  a.click();
+}
 
 /* ================= AI QUIZ ================= */
 function extractTextForQuiz(node, depth = 0) {
