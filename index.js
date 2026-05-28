@@ -2631,7 +2631,7 @@ function normalizeExamSections(sections, questions) {
     const sectionQuestions = questions.filter(q => q.section === section.id);
     if (!section.questionStart && sectionQuestions.length) section.questionStart = sectionQuestions[0].id;
     if (!section.questionEnd && sectionQuestions.length) section.questionEnd = sectionQuestions[sectionQuestions.length - 1].id;
-    if (!section.sectionTimeMinutes) section.sectionTimeMinutes = Math.max(1, Math.round(sectionQuestions.length * 1.2));
+    if (!section.sectionTimeMinutes) section.sectionTimeMinutes = 15;
   });
 
   return normalized;
@@ -2654,7 +2654,18 @@ function validateExamTestJSON(examJson) {
 
 function openExamTestScreen(examJson) {
   const exam = examJson.exam;
-  const questions = exam.questions;
+  let questions = [];
+
+  // Shuffle questions within each section
+  exam.sections.forEach(sec => {
+    let secQs = exam.questions.filter(q => q.section === sec.id);
+    for (let i = secQs.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [secQs[i], secQs[j]] = [secQs[j], secQs[i]];
+    }
+    questions.push(...secQs);
+  });
+  exam.questions = questions; // Save the shuffled order back
 
   document.getElementById("examTestOverlay")?.remove();
   document.getElementById("examTestModal")?.remove();
@@ -2671,7 +2682,11 @@ function openExamTestScreen(examJson) {
 
   let currentIndex = 0;
   let submitted = false;
-  let remainingSeconds = Math.max(0, Number(exam.durationMinutes) || 0) * 60;
+  let currentSecIdx = 0;
+  const sectionTimers = exam.sections.map(s => (s.sectionTimeMinutes || 15) * 60);
+  let sectionRemainingSeconds = sectionTimers[currentSecIdx];
+  let remainingSeconds = sectionTimers.reduce((a, b) => a + b, 0);
+
   const answers = new Map();
   const reviewFlags = new Set();
   let timerInterval = null;
@@ -2690,7 +2705,8 @@ function openExamTestScreen(examJson) {
         <button id="examLangBtn">🌐 Translate</button>
         <button id="examSaveBtn">💾 Save Test</button>
         <button id="examExportBtn">⬇ Export JSON</button>
-        <span id="examTimer">${formatExamTimer(remainingSeconds)}</span>
+        <span id="examSectionTimer" style="color:#d97706; font-weight:bold; padding:4px 8px; border:1px solid #fcd34d; border-radius:6px; background:rgba(252,211,77,0.2);">Sec: ${formatExamTimer(sectionRemainingSeconds)}</span>
+        <span id="examTimer" style="padding:4px 8px; border:1px solid #cbd5e1; border-radius:6px;">Total: ${formatExamTimer(remainingSeconds)}</span>
       </div>
     </div>
     <div class="exam-section-tabs">
@@ -2734,6 +2750,12 @@ function openExamTestScreen(examJson) {
         <span>${escapeHtml(q.topic || "")}</span>
         <span>${escapeHtml(q.difficulty || "")}</span>
       </div>
+      
+      ${(() => {
+        const parts = [q.pyq?.exam, q.pyq?.year, q.pyq?.shift].filter(Boolean);
+        return parts.length > 0 ? `<div style="margin-bottom:8px;"><span class="quiz-pyq-tag" style="margin-left:0;">${escapeHtml(parts.join(" "))}</span></div>` : '';
+      })()}
+
       <h3>
         Q${currentIndex + 1}. 
         <span class="lang-en">${escapeHtml(q.question.en)}</span>
@@ -2774,28 +2796,63 @@ function openExamTestScreen(examJson) {
       `;
     }
 
-    document.getElementById("examPrevBtn").disabled = currentIndex === 0;
-    document.getElementById("examNextBtn").disabled = currentIndex === questions.length - 1;
+    const isFirstInSection = currentIndex === 0 || questions[currentIndex - 1].section !== q.section;
+    const isLastInSection = currentIndex === questions.length - 1 || questions[currentIndex + 1].section !== q.section;
+
+    if (submitted) {
+      document.getElementById("examPrevBtn").disabled = currentIndex === 0;
+      document.getElementById("examNextBtn").disabled = currentIndex === questions.length - 1;
+    } else {
+      document.getElementById("examPrevBtn").disabled = isFirstInSection;
+      document.getElementById("examNextBtn").disabled = isLastInSection;
+    }
+
     document.getElementById("examReviewBtn").textContent = reviewFlags.has(q.id) ? "Unmark Review" : "Mark Review";
+    document.getElementById("examReviewBtn").disabled = submitted;
     updatePalette();
   }
 
   function updatePalette() {
+    const activeSecId = exam.sections[currentSecIdx].id;
+
     modal.querySelectorAll(".exam-question-chip").forEach((btn, i) => {
       const q = questions[i];
       btn.classList.toggle("active", i === currentIndex);
-      btn.classList.toggle("answered", answers.has(q.id));
-      btn.classList.toggle("review", reviewFlags.has(q.id));
+      
+      if (!submitted && q.section !== activeSecId) {
+        btn.style.opacity = "0.3";
+        btn.style.pointerEvents = "none";
+      } else {
+        btn.style.opacity = "1";
+        btn.style.pointerEvents = "auto";
+      }
+
+      if (submitted) {
+        btn.classList.remove("answered", "review");
+        const selected = answers.get(q.id);
+        if (selected === q.answer) btn.classList.add("correct");
+        else if (selected) btn.classList.add("wrong");
+      } else {
+        btn.classList.toggle("answered", answers.has(q.id));
+        btn.classList.toggle("review", reviewFlags.has(q.id));
+      }
     });
 
-    modal.querySelectorAll(".exam-section-btn").forEach(btn => {
-      btn.classList.toggle("active", btn.dataset.section === questions[currentIndex].section);
+    modal.querySelectorAll(".exam-section-btn").forEach((btn, i) => {
+      btn.classList.toggle("active", i === currentSecIdx || (submitted && btn.dataset.section === questions[currentIndex].section));
+      if (!submitted && i !== currentSecIdx) {
+          btn.style.opacity = "0.6";
+      } else {
+          btn.style.opacity = "1";
+      }
     });
   }
 
   function jumpToQuestion(index) {
     currentIndex = Math.max(0, Math.min(index, questions.length - 1));
-    modal.querySelector(`.exam-question-chip[data-index="${currentIndex}"]`)?.classList.add("visited");
+    if (!submitted) {
+      modal.querySelector(`.exam-question-chip[data-index="${currentIndex}"]`)?.classList.add("visited");
+    }
     renderQuestion();
   }
 
@@ -2837,7 +2894,10 @@ function openExamTestScreen(examJson) {
 
     document.getElementById("examSubmitBtn").disabled = true;
     document.getElementById("examTimer").textContent = `Score ${score}/${totalMarks}`;
-    renderQuestion();
+    const secTimer = document.getElementById("examSectionTimer");
+    if (secTimer) secTimer.style.display = "none";
+    
+    jumpToQuestion(0);
     showFlashMessage(`✅ Score: ${score}/${totalMarks}`);
   }
 
@@ -2845,10 +2905,14 @@ function openExamTestScreen(examJson) {
     btn.onclick = () => jumpToQuestion(parseInt(btn.dataset.index, 10));
   });
 
-  modal.querySelectorAll(".exam-section-btn").forEach(btn => {
+  modal.querySelectorAll(".exam-section-btn").forEach((btn, i) => {
     btn.onclick = () => {
-      const index = questions.findIndex(q => q.section === btn.dataset.section);
-      if (index >= 0) jumpToQuestion(index);
+      if (submitted || i === currentSecIdx) {
+        const index = questions.findIndex(q => q.section === btn.dataset.section);
+        if (index >= 0) jumpToQuestion(index);
+      } else {
+        showFlashMessage("🔒 You must complete the current section first!");
+      }
     };
   });
 
@@ -2904,11 +2968,29 @@ function openExamTestScreen(examJson) {
 
   if (remainingSeconds > 0) {
     timerInterval = setInterval(() => {
+      if (submitted) {
+          clearInterval(timerInterval);
+          return;
+      }
+      
       remainingSeconds--;
-      document.getElementById("examTimer").textContent = formatExamTimer(remainingSeconds);
-      if (remainingSeconds <= 0) {
-        submitExamTest(true);
-        alert("Time is up. Your test has been submitted.");
+      sectionRemainingSeconds--;
+      
+      document.getElementById("examTimer").textContent = `Total: ` + formatExamTimer(remainingSeconds);
+      document.getElementById("examSectionTimer").textContent = `Sec: ` + formatExamTimer(sectionRemainingSeconds);
+      
+      if (sectionRemainingSeconds <= 0) {
+        currentSecIdx++;
+        if (currentSecIdx < exam.sections.length) {
+          sectionRemainingSeconds = sectionTimers[currentSecIdx];
+          const nextSecId = exam.sections[currentSecIdx].id;
+          const nextQIdx = questions.findIndex(q => q.section === nextSecId);
+          showFlashMessage(`⏱️ Time's up! Moving to ${exam.sections[currentSecIdx].title.en}`);
+          jumpToQuestion(nextQIdx);
+        } else {
+          submitExamTest(true);
+          alert("Time is up. Your test has been submitted.");
+        }
       }
     }, 1000);
   }
