@@ -281,6 +281,47 @@ async function listMaps(){
   });
 }
 
+async function saveTest(id, name, data){
+  const db=await openDB();
+  db.transaction(STORE,"readwrite")
+    .objectStore(STORE)
+    .put({key:`tests/${id}.json`, id, name, json: data});
+}
+
+async function loadTest(id){
+  const db=await openDB();
+  return new Promise(res=>{
+    db.transaction(STORE)
+      .objectStore(STORE)
+      .get(`tests/${id}.json`)
+      .onsuccess=e=>res(e.target.result?.json);
+  });
+}
+
+async function deleteTestDB(id){
+  const db=await openDB();
+  db.transaction(STORE,"readwrite")
+    .objectStore(STORE)
+    .delete(`tests/${id}.json`);
+}
+
+async function listTests(){
+  const db=await openDB();
+  return new Promise(res=>{
+    const out=[];
+    db.transaction(STORE)
+      .objectStore(STORE)
+      .openCursor().onsuccess=e=>{
+        const c=e.target.result;
+        if(!c) return res(out);
+        if (c.value.key && c.value.key.startsWith("tests/")) {
+          out.push({id:c.value.id,name:c.value.name});
+        }
+        c.continue();
+      };
+  });
+}
+
 async function deleteMapDB(id){
   const db=await openDB();
   db.transaction(STORE,"readwrite")
@@ -525,29 +566,90 @@ async function refreshQuizSelector() {
   quizSelector.style.display = (quizzes.length > 0 || (APP_CONFIG.preImportedQuizzes && APP_CONFIG.preImportedQuizzes.length > 0)) ? "inline-block" : "none";
 }
 
-function refreshTestSelector() {
-  const selector = document.getElementById("testSelector");
-  if (!selector) return;
+async function refreshTestSelector() {
+  let selector = document.getElementById("testSelector");
+  if (!selector) {
+    selector = document.createElement('select');
+    selector.id = 'testSelector';
+    
+    selector.onchange = async e => {
+      if (!e.target.value) return;
 
-  selector.innerHTML = `<option value="">📝 Start Test...</option>`;
+      if (e.target.value.startsWith("preimport:")) {
+        await startSelectedTest(e.target.value.replace("preimport:", ""));
+        e.target.value = "";
+        return;
+      }
 
-  const tests = APP_CONFIG.preImportedTests || [];
-  if (!tests.length) {
-    selector.style.display = "none";
-    return;
+      const testId = e.target.value;
+      const testData = await loadTest(testId);
+      if (testData) {
+        try {
+          const examJson = normalizeExamTestJSON(testData, testId);
+          validateExamTestJSON(examJson);
+          activeExamTest = examJson;
+          activeExamTest.savedTestId = testId;
+          openExamTestScreen(examJson);
+        } catch(err) {
+            alert(err.message || "Invalid test data");
+        }
+      }
+      e.target.value = ""; 
+    };
+    
+    const toolbarInner = document.querySelector('.toolbar-inner');
+    if (toolbarInner) {
+      toolbarInner.appendChild(selector);
+    }
   }
 
-  const group = document.createElement("optgroup");
-  group.label = "Pre Imported Tests";
-  tests.forEach(test => {
-    const option = document.createElement("option");
-    option.value = test.file;
-    option.textContent = test.label;
-    group.appendChild(option);
-  });
+  const defaultOption = document.createElement('option');
+  defaultOption.value = "";
+  defaultOption.textContent = "📝 Start Test...";
+  selector.innerHTML = "";
+  selector.appendChild(defaultOption);
 
-  selector.appendChild(group);
-  selector.style.display = "inline-block";
+  const savedTests = await listTests();
+  savedTests.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
+
+  if (savedTests.length > 0) {
+    const savedGroup = document.createElement("optgroup");
+    savedGroup.label = "Saved Tests";
+    savedTests.forEach(t => {
+      const o = document.createElement("option");
+      o.value = t.id;
+      o.textContent = t.name;
+      savedGroup.appendChild(o);
+    });
+    selector.appendChild(savedGroup);
+  }
+
+  const preImportedTests = APP_CONFIG.preImportedTests || [];
+  if (preImportedTests.length > 0) {
+    const group = document.createElement("optgroup");
+    group.label = "Pre Imported Tests";
+    preImportedTests.forEach(test => {
+      const option = document.createElement("option");
+      option.value = `preimport:${test.file}`;
+      option.textContent = test.label;
+      group.appendChild(option);
+    });
+    selector.appendChild(group);
+  }
+
+  selector.style.display = (savedTests.length > 0 || preImportedTests.length > 0) ? "inline-block" : "none";
+
+  let genAiTestBtn = document.getElementById("genAiTestBtn");
+  if (!genAiTestBtn) {
+    genAiTestBtn = document.createElement("button");
+    genAiTestBtn.id = "genAiTestBtn";
+    genAiTestBtn.textContent = "🤖 Generate AI Test";
+    genAiTestBtn.onclick = openTestSettingsModal;
+    
+    if (selector.parentNode) {
+      selector.parentNode.insertBefore(genAiTestBtn, selector.nextSibling);
+    }
+  }
 }
 
 let allCollapsed = false;
@@ -1702,6 +1804,54 @@ async function importQuizData(data, fileName = ""){
   showAIQuizModal(JSON.parse(JSON.stringify(data.questions)), true, newQuizId, data.timerSeconds !== undefined ? data.timerSeconds : 600, null, undefined, quizName);
 }
 
+async function importTestJSON(e){
+  const f = e.target.files[0];
+  if(!f) return;
+
+  const r = new FileReader();
+  r.onload = async () => {
+    try {
+      const data = JSON.parse(r.result);
+      await importTestData(data, f.name);
+    } catch (err) {
+      alert(err.message || "Invalid test file.");
+    } finally {
+      e.target.value = "";
+    }
+  };
+
+  r.readAsText(f);
+}
+
+async function importTestData(data, fileName = ""){
+  const examJson = normalizeExamTestJSON(data, fileName);
+  validateExamTestJSON(examJson);
+
+  const baseName = formatExamTestName(examJson.exam) || fileName.replace(/\.json$/i, "") || "Imported Test";
+  const tests = await listTests();
+  const existingTest = tests.find(t => t.name && t.name.trim().toLowerCase() === baseName.trim().toLowerCase());
+
+  if (existingTest) {
+    const testData = await loadTest(existingTest.id);
+    const existingExam = normalizeExamTestJSON(testData, existingTest.id);
+    validateExamTestJSON(existingExam);
+    activeExamTest = existingExam;
+    activeExamTest.savedTestId = existingTest.id;
+    showFlashMessage("✅ Using existing test");
+    openExamTestScreen(existingExam);
+    return;
+  }
+
+  const newTestId = uid();
+  await saveTest(newTestId, baseName, examJson);
+  await refreshTestSelector();
+
+  activeExamTest = examJson;
+  activeExamTest.savedTestId = newTestId;
+  showFlashMessage("✅ Test imported successfully");
+  openExamTestScreen(examJson);
+}
+
 function exportPNG() {
   const SCALE = 2;
 
@@ -2168,6 +2318,220 @@ async function startSelectedTest(filePath) {
   }
 }
 
+function openTestSettingsModal() {
+  const existing = document.getElementById('testSettingsModal');
+  const existingOverlay = document.getElementById('testSettingsOverlay');
+  if (existing) existing.remove();
+  if (existingOverlay) existingOverlay.remove();
+
+  const overlay = document.createElement('div');
+  overlay.id = 'testSettingsOverlay';
+  overlay.style.cssText = "position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:99998;";
+  document.body.appendChild(overlay);
+
+  const modal = document.createElement('div');
+  modal.id = 'testSettingsModal';
+  modal.className = "note-editor"; 
+  modal.style.cssText = "position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;max-width:400px;z-index:99999;padding:0;box-sizing:border-box;cursor:default;";
+
+  modal.innerHTML = `
+    <div class="note-editor-header" style="padding:20px; border-bottom:1px solid rgba(128,128,128,0.2); font-size:18px; display:flex; justify-content:space-between; align-items:center;">
+      <span>⚙️ Generate AI Test</span>
+      <button class="close" id="closeTestSettingsBtn" style="background:transparent;border:none;font-size:18px;cursor:pointer;color:inherit;">✖</button>
+    </div>
+    <div style="padding:20px;">
+      <div style="margin-bottom:16px;">
+        <label style="display:block; margin-bottom:6px; font-weight:600; font-size:14px;">Exam Name (e.g. SSC CGL)</label>
+        <input type="text" id="tsExamName" style="width:100%; padding:8px; border-radius:6px; border:1px solid #d1d5db; font-size:14px; background:transparent; color:inherit;" placeholder="SSC CGL">
+      </div>
+      <div style="margin-bottom:16px;">
+        <label style="display:block; margin-bottom:6px; font-weight:600; font-size:14px;">Date (e.g. 12-09-2025)</label>
+        <input type="text" id="tsDate" style="width:100%; padding:8px; border-radius:6px; border:1px solid #d1d5db; font-size:14px; background:transparent; color:inherit;" placeholder="12-09-2025">
+      </div>
+      <div style="margin-bottom:16px;">
+        <label style="display:block; margin-bottom:6px; font-weight:600; font-size:14px;">Shift (e.g. Shift 1)</label>
+        <input type="text" id="tsShift" style="width:100%; padding:8px; border-radius:6px; border:1px solid #d1d5db; font-size:14px; background:transparent; color:inherit;" placeholder="Shift 1">
+      </div>
+      <div class="note-editor-actions" style="margin-top:0; justify-content:flex-end; display:flex;">
+        <button class="save" id="startAITestBtn" style="background:#3b82f6; border-color:#2563eb; color:white; font-weight:bold; width:100%; padding:10px;">🚀 Generate & Start</button>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  if (document.body.classList.contains('dark-mode')) {
+    modal.querySelectorAll('input').forEach(sel => {
+      sel.style.backgroundColor = '#2a2a2a';
+      sel.style.color = '#e0e0e0';
+      sel.style.borderColor = '#444';
+    });
+  }
+
+  document.getElementById('closeTestSettingsBtn').onclick = () => { modal.remove(); overlay.remove(); };
+  overlay.onclick = () => { modal.remove(); overlay.remove(); };
+  
+  document.getElementById('startAITestBtn').onclick = () => {
+    const examName = document.getElementById('tsExamName').value.trim();
+    const examDate = document.getElementById('tsDate').value.trim();
+    const examShift = document.getElementById('tsShift').value.trim();
+    
+    if(!examName || !examDate || !examShift) {
+        alert("Please fill all fields");
+        return;
+    }
+
+    modal.remove();
+    overlay.remove();
+    
+    generateTestFromAI(examName, examDate, examShift);
+  };
+}
+
+async function generateTestFromAI(examName, examDate, examShift) {
+  const apiKey = await getApiKey();
+  if (!apiKey) return;
+
+  showFlashMessage("🤖 Generating Test from AI...");
+  
+  const loadingOverlay = document.createElement('div');
+  loadingOverlay.id = 'aiTestLoadingOverlay';
+  loadingOverlay.style.cssText = "position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:99999;display:flex;flex-direction:column;justify-content:center;align-items:center;color:white;";
+  loadingOverlay.innerHTML = `
+    <style>
+      @keyframes aiQuizSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+    <div style="width:50px;height:50px;border:5px solid rgba(255,255,255,0.3);border-top:5px solid #ffffff;border-radius:50%;animation:aiQuizSpin 1s linear infinite;margin-bottom:16px;"></div>
+    <div style="font-size:18px;font-weight:bold;">Generating Exam Test...</div>
+    <div style="font-size:14px;margin-top:8px;opacity:0.8;">Please wait while AI constructs the exact exam questions.</div>
+  `;
+  document.body.appendChild(loadingOverlay);
+
+  try {
+    const testData = await fetchExamTestFromAI(apiKey, examName, examDate, examShift);
+    const examJson = normalizeExamTestJSON(testData, `${examName}-${examDate}-${examShift}`);
+    validateExamTestJSON(examJson);
+
+    if (loadingOverlay) loadingOverlay.remove();
+    
+    const baseName = formatExamTestName(examJson.exam);
+    let testName = baseName || `${examName} ${examDate} ${examShift}`;
+    const existingTests = await listTests();
+    let counter = 1;
+    while (existingTests.some(t => t.name.trim().toLowerCase() === testName.trim().toLowerCase())) {
+      testName = `${baseName} (${counter})`;
+      counter++;
+    }
+
+    const newTestId = uid();
+    examJson.exam.name = testName;
+    await saveTest(newTestId, testName, examJson);
+    showFlashMessage("✅ Test automatically saved!");
+    
+    refreshTestSelector();
+    
+    activeExamTest = examJson;
+    activeExamTest.savedTestId = newTestId;
+    openExamTestScreen(examJson);
+
+  } catch (err) {
+    if (loadingOverlay) loadingOverlay.remove();
+    if (err.message.startsWith("API_AUTH_")) {
+      const status = err.message.split("_")[2];
+      localStorage.removeItem('googleApiKey');
+      alert(`API Error (${status}): The API key is invalid, expired, or quota-limited. Please provide a new API key.`);
+      return;
+    }
+    alert("Error generating test: " + err.message);
+  }
+}
+
+async function fetchExamTestFromAI(apiKey, examName, examDate, examShift) {
+  const promptText = `You are a test JSON generator for an exam practice app.
+
+Task:
+Return the exact question paper JSON for:
+- Exam name: ${examName}
+- Date: ${examDate}
+- Shift: ${examShift}
+
+Rules:
+- Return ONLY a valid JSON object. Do not use markdown fences.
+- Include the full paper, normally 100 questions for SSC CGL Tier-I, unless the real paper has a different count.
+- Preserve the exact sections, section order, question order, options, answer key, and bilingual English/Hindi text as closely as possible.
+- Every question must have exactly 4 options with ids A, B, C, D.
+- The answer must be A, B, C, or D.
+- Use this schema exactly:
+{
+  "exam": {
+    "id": "machine-readable-id",
+    "name": "${examName}",
+    "heldOn": "${examDate}",
+    "shift": "${examShift}",
+    "durationMinutes": 60,
+    "negativeMark": 0.5,
+    "totalQuestions": 100,
+    "languages": ["en", "hi"],
+    "sections": [
+      {
+        "id": "part_a",
+        "title": {"en": "Section Name", "hi": "सेक्शन का नाम"},
+        "questionStart": 1,
+        "questionEnd": 25,
+        "sectionTimeMinutes": 15
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "question": {"en": "Question text", "hi": "प्रश्न पाठ"},
+        "options": [
+          {"id": "A", "en": "Option A", "hi": "विकल्प A"},
+          {"id": "B", "en": "Option B", "hi": "विकल्प B"},
+          {"id": "C", "en": "Option C", "hi": "विकल्प C"},
+          {"id": "D", "en": "Option D", "hi": "विकल्प D"}
+        ],
+        "answer": "A",
+        "explanation": {"en": "Short explanation", "hi": "संक्षिप्त व्याख्या"},
+        "difficulty": "medium",
+        "topic": "Topic",
+        "pyq": {"exam": "${examName}", "year": "${String(examDate).slice(-4)}", "shift": "${examShift}"}
+      }
+    ]
+  }
+}`;
+
+  const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${apiKey}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      contents: [{ parts: [{ text: promptText }] }],
+      generationConfig: {
+        temperature: 0.1,
+        responseMimeType: "application/json"
+      }
+    })
+  });
+
+  if (!response.ok) {
+    if ([401, 403, 429].includes(response.status)) {
+      throw new Error("API_AUTH_" + response.status);
+    }
+    throw new Error("API request failed with status: " + response.status);
+  }
+
+  const data = await response.json();
+  const contentStr = data.candidates?.[0]?.content?.parts?.[0]?.text;
+  if (!contentStr) {
+    throw new Error("AI returned an empty response.");
+  }
+
+  return JSON.parse(contentStr.replace(/```json/g, "").replace(/```/g, "").trim());
+}
+
 function normalizeExamTestJSON(data, filePath = "") {
   const sourceExam = data.exam || data;
   if (!sourceExam || !Array.isArray(sourceExam.questions)) {
@@ -2327,6 +2691,7 @@ function openExamTestScreen(examJson) {
       </div>
       <div class="exam-test-header-actions">
         <button id="examLangBtn">🌐 Translate</button>
+        <button id="examSaveBtn">💾 Save Test</button>
         <button id="examExportBtn">⬇ Export JSON</button>
         <span id="examTimer">${formatExamTimer(remainingSeconds)}</span>
       </div>
@@ -2351,9 +2716,10 @@ function openExamTestScreen(examJson) {
         <button id="examNextBtn">Next ▶</button>
         <button id="examReviewBtn">Mark Review</button>
       </div>
-      <div>
-        <button id="examCloseBtn">Close</button>
-        <button id="examSubmitBtn">Submit Test</button>
+      <div style="display:flex; gap:8px;">
+        ${activeExamTest && activeExamTest.savedTestId ? `<button id="examDeleteBtn" class="cancel" style="background:#fee2e2; color:#ef4444; border-color:#fca5a5;">🗑️ Delete</button>` : ''}
+        <button id="examCloseBtn" class="cancel">Close</button>
+        <button id="examSubmitBtn" class="save">Submit Test</button>
       </div>
     </div>
   `;
@@ -2494,6 +2860,13 @@ function openExamTestScreen(examJson) {
     modal.setAttribute("data-lang", lang === "en" ? "hi" : "en");
   };
 
+  document.getElementById("examSaveBtn").onclick = async () => {
+    const savedId = await saveActiveExamTest();
+    if (savedId) {
+      activeExamTest.savedTestId = savedId;
+      showFlashMessage("✅ Test saved");
+    }
+  };
   document.getElementById("examExportBtn").onclick = () => exportActiveExamTestJSON();
   document.getElementById("examPrevBtn").onclick = () => jumpToQuestion(currentIndex - 1);
   document.getElementById("examNextBtn").onclick = () => jumpToQuestion(currentIndex + 1);
@@ -2503,6 +2876,20 @@ function openExamTestScreen(examJson) {
     else reviewFlags.add(id);
     updatePalette();
     renderQuestion();
+  };
+  
+  const deleteBtn = document.getElementById("examDeleteBtn");
+  if (deleteBtn) {
+    deleteBtn.onclick = async () => {
+      if (confirm("Are you sure you want to delete this saved test?")) {
+        await deleteTestDB(activeExamTest.savedTestId);
+        if (timerInterval) clearInterval(timerInterval);
+        modal.remove();
+        overlay.remove();
+        refreshTestSelector();
+        showFlashMessage("🗑️ Test deleted successfully!");
+      }
+    };
   };
   document.getElementById("examCloseBtn").onclick = () => {
     if (!submitted && answers.size && !confirm("Close test without submitting?")) return;
@@ -2539,16 +2926,75 @@ function formatExamTimer(seconds) {
   return `${mins}:${secs}`;
 }
 
+function formatExamTestName(exam) {
+  const name = exam?.name || "Exam Test";
+  const heldOn = exam?.heldOn || "";
+  const shiftLabel = exam?.shift ? `Shift ${String(exam.shift).replace(/^shift\s*/i, "").trim()}` : "";
+  const lowerName = name.toLowerCase();
+  const parts = [name];
+
+  if (heldOn && !lowerName.includes(String(heldOn).toLowerCase())) {
+    parts.push(heldOn);
+  }
+
+  if (shiftLabel && !lowerName.includes(shiftLabel.toLowerCase())) {
+    parts.push(shiftLabel);
+  }
+
+  return parts.join(" ").replace(/\s+/g, " ").trim();
+}
+
+async function saveActiveExamTest() {
+  if (!activeExamTest) {
+    alert("Start a test first.");
+    return null;
+  }
+
+  const examJson = normalizeExamTestJSON(activeExamTest, activeExamTest.exam?.id || "");
+  validateExamTestJSON(examJson);
+
+  if (activeExamTest.savedTestId) {
+    const name = formatExamTestName(examJson.exam);
+    examJson.exam.name = name;
+    await saveTest(activeExamTest.savedTestId, name, examJson);
+    await refreshTestSelector();
+    return activeExamTest.savedTestId;
+  }
+
+  const existingTests = await listTests();
+  const baseName = formatExamTestName(examJson.exam);
+  let testName = prompt("Enter Test Name:", baseName);
+  if (!testName) return null;
+
+  testName = testName.trim();
+  while (existingTests.some(t => t.name.trim().toLowerCase() === testName.toLowerCase())) {
+    testName = prompt("A test with this name already exists. Please enter a different name:", testName);
+    if (!testName) return null;
+    testName = testName.trim();
+  }
+
+  const newTestId = uid();
+  examJson.exam.name = testName;
+  await saveTest(newTestId, testName, examJson);
+  activeExamTest = examJson;
+  activeExamTest.savedTestId = newTestId;
+  await refreshTestSelector();
+  return newTestId;
+}
+
 function exportActiveExamTestJSON() {
   if (!activeExamTest) {
     alert("Start a test first.");
     return;
   }
 
-  const b = new Blob([JSON.stringify(activeExamTest, null, 2)], { type: "application/json" });
+  const examJson = normalizeExamTestJSON(activeExamTest, activeExamTest.exam?.id || "");
+  validateExamTestJSON(examJson);
+
+  const b = new Blob([JSON.stringify(examJson, null, 2)], { type: "application/json" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(b);
-  a.download = `${safeName(activeExamTest.exam.name || "exam")}.json`;
+  a.download = `${safeName(formatExamTestName(examJson.exam) || "exam")}.json`;
   a.click();
 }
 

@@ -36,6 +36,10 @@
     <select id="testSelector" onchange="startSelectedTest(this.value)">
       <option value="">📝 Start Test...</option>
     </select>
+    <label class="import-btn">
+      📥 Import Test
+      <input type="file" accept=".json" onchange="importTestJSON(event)" hidden>
+    </label>
 
     <label class="import-btn">
       📥 Import Mind Map
