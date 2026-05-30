@@ -15,7 +15,8 @@ const APP_CONFIG = {
   },
   dev: {
     mockAIQuizResponse: false, // Set to true to return mock quiz data
-    alwaysPromptApiKey: false  // Set to true to always ask for API key
+    alwaysPromptApiKey: false, // Set to true to always ask for API key
+    inspectMode: true          // Set to false to disable DevTools and right-click
   },
   preImportedMaps: [
     { label: "1. Maths", file: "maths.json" },
@@ -49,6 +50,30 @@ const APP_CONFIG = {
     }
   ]
 };
+
+if (!APP_CONFIG.dev.inspectMode) {
+  document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  });
+  document.addEventListener("keydown", function (e) {
+    if (
+      e.key === "F12" ||
+      (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) ||
+      (e.ctrlKey && e.key === "U")
+    ) {
+      e.preventDefault();
+    }
+  });
+  setInterval(function () {
+    const start = performance.now();
+    debugger;
+    const end = performance.now();
+    if (end - start > 100) {
+      alert("DevTools is open!");
+      window.location.reload();
+    }
+  }, 1000);
+}
 
 /* ================= UTIL ================= */
 let focusedNodeId = null;
