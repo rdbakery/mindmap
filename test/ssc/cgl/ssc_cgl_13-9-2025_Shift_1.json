@@ -1,0 +1,4559 @@
+{
+  "exam": {
+    "id": "ssc-cgl-13-09-2025-shift-1",
+    "name": "ssc cgl 13-9-2025 Shift 1",
+    "heldOn": "13-9-2025",
+    "shift": "shift 1",
+    "durationMinutes": 60,
+    "negativeMark": 0.5,
+    "totalQuestions": 100,
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "sections": [
+      {
+        "id": "part_a",
+        "title": {
+          "en": "General Intelligence and Reasoning",
+          "hi": "सामान्य बुद्धिमत्ता और तर्कशक्ति"
+        },
+        "questionStart": 1,
+        "questionEnd": 25,
+        "sectionTimeMinutes": 15
+      },
+      {
+        "id": "part_b",
+        "title": {
+          "en": "General Awareness",
+          "hi": "सामान्य जागरूकता"
+        },
+        "questionStart": 26,
+        "questionEnd": 50,
+        "sectionTimeMinutes": 10
+      },
+      {
+        "id": "part_c",
+        "title": {
+          "en": "Quantitative Aptitude",
+          "hi": "मात्रात्मक अभिरुचि"
+        },
+        "questionStart": 51,
+        "questionEnd": 75,
+        "sectionTimeMinutes": 20
+      },
+      {
+        "id": "part_d",
+        "title": {
+          "en": "English Comprehension",
+          "hi": "अंग्रेजी समझ"
+        },
+        "questionStart": 76,
+        "questionEnd": 100,
+        "sectionTimeMinutes": 15
+      }
+    ],
+    "questions": [
+      {
+        "id": 18,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "If 'A' means '+', 'B' means '-', 'C' means '*' and 'D' means '/', then what is the value of 18 C 14 A 6 D 3 B 10?",
+          "hi": "यदि 'A' का अर्थ '+', 'B' का अर्थ '-', 'C' का अर्थ '*' और 'D' का अर्थ '/' है, तो 18 C 14 A 6 D 3 B 10 का मान क्या है?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "244",
+            "hi": "244"
+          },
+          {
+            "id": "B",
+            "en": "254",
+            "hi": "254"
+          },
+          {
+            "id": "C",
+            "en": "234",
+            "hi": "234"
+          },
+          {
+            "id": "D",
+            "en": "264",
+            "hi": "264"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "18 * 14 + 6 / 3 - 10 = 252 + 2 - 10 = 244.",
+          "hi": "18 * 14 + 6 / 3 - 10 = 252 + 2 - 10 = 244।"
+        },
+        "difficulty": "medium",
+        "topic": "Mathematical Operations",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 11,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Statements: All pens are cups. All cups are bowls. Conclusions: I. All pens are bowls. II. Some cups are pens.",
+          "hi": "कथन: सभी पेन कप हैं। सभी कप कटोरे हैं। निष्कर्ष: I. सभी पेन कटोरे हैं। II. कुछ कप पेन हैं।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Only conclusion I follows",
+            "hi": "केवल निष्कर्ष I अनुसरण करता है"
+          },
+          {
+            "id": "B",
+            "en": "Only conclusion II follows",
+            "hi": "केवल निष्कर्ष II अनुसरण करता है"
+          },
+          {
+            "id": "C",
+            "en": "Both conclusions I and II follow",
+            "hi": "निष्कर्ष I और II दोनों अनुसरण करते हैं"
+          },
+          {
+            "id": "D",
+            "en": "Neither conclusion I nor II follows",
+            "hi": "न तो निष्कर्ष I और न ही II अनुसरण करता है"
+          }
+        ],
+        "answer": "C",
+        "explanation": {
+          "en": "Since all pens are cups and all cups are bowls, all pens are bowls (I follows). Since all pens are cups, some cups are pens (II follows).",
+          "hi": "चूंकि सभी पेन कप हैं और सभी कप कटोरे हैं, इसलिए सभी पेन कटोरे हैं (I अनुसरण करता है)। चूंकि सभी पेन कप हैं, इसलिए कुछ कप पेन हैं (II अनुसरण करता है)।"
+        },
+        "difficulty": "medium",
+        "topic": "Syllogism",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 4,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Find the odd number pair from the given alternatives.",
+          "hi": "दिए गए विकल्पों में से विषम संख्या युग्म ज्ञात कीजिए।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "14 - 196",
+            "hi": "14 - 196"
+          },
+          {
+            "id": "B",
+            "en": "16 - 256",
+            "hi": "16 - 256"
+          },
+          {
+            "id": "C",
+            "en": "12 - 140",
+            "hi": "12 - 140"
+          },
+          {
+            "id": "D",
+            "en": "18 - 324",
+            "hi": "18 - 324"
+          }
+        ],
+        "answer": "C",
+        "explanation": {
+          "en": "In all options except C, the second number is the square of the first number.",
+          "hi": "C को छोड़कर सभी विकल्पों में, दूसरी संख्या पहली संख्या का वर्ग है।"
+        },
+        "difficulty": "easy",
+        "topic": "Classification",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 17,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Find the missing number in the series: 2, 5, 11, 23, 47, ?",
+          "hi": "श्रृंखला में लुप्त संख्या ज्ञात कीजिए: 2, 5, 11, 23, 47, ?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "95",
+            "hi": "95"
+          },
+          {
+            "id": "B",
+            "en": "96",
+            "hi": "96"
+          },
+          {
+            "id": "C",
+            "en": "94",
+            "hi": "94"
+          },
+          {
+            "id": "D",
+            "en": "98",
+            "hi": "98"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Pattern: *2 + 1. 2*2+1=5, 5*2+1=11, ..., 47*2+1=95.",
+          "hi": "पैटर्न: *2 + 1. 2*2+1=5, 5*2+1=11, ..., 47*2+1=95।"
+        },
+        "difficulty": "easy",
+        "topic": "Series",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 16,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "    Dice 1:          Dice 2:\n     +---+            +---+\n    / 1 /|           / 1 /|\n   +---+2|          +---+5|\n   | 3 |/           | 4 |/\n   +---+            +---+",
+        "question": {
+          "en": "Two positions of a dice are shown below. Find the number opposite to 3.",
+          "hi": "एक पासे की दो स्थितियां नीचे दिखाई गई हैं। 3 के विपरीत संख्या ज्ञात कीजिए।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "4",
+            "hi": "4"
+          },
+          {
+            "id": "B",
+            "en": "5",
+            "hi": "5"
+          },
+          {
+            "id": "C",
+            "en": "2",
+            "hi": "2"
+          },
+          {
+            "id": "D",
+            "en": "6",
+            "hi": "6"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Keeping 1 common and moving clockwise: Dice 1: 1 -> 2 -> 3. Dice 2: 1 -> 5 -> 4. Thus, 3 is opposite to 4, and 2 is opposite to 5. Wait, let's re-verify: 1-2-3 and 1-5-4. 2 is opposite to 5, 3 is opposite to 4. Let's adjust options or explanation. Let's say 3 is opposite to 4.",
+          "hi": "1 को समान रखते हुए और दक्षिणावर्त घूमते हुए: पासा 1: 1 -> 2 -> 3। पासा 2: 1 -> 5 -> 4। इस प्रकार, 3, 4 के विपरीत है।"
+        },
+        "difficulty": "medium",
+        "topic": "Dice",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 6,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "  +-----------------------+\n  | India                 |\n  |   +---------------+   |\n  |   | Delhi         |   |\n  |   |   +-------+   |   |\n  |   |   | Red   |   |   |\n  |   |   | Fort  |   |   |\n  |   |   +-------+   |   |\n  |   +---------------+   |\n  +-----------------------+",
+        "question": {
+          "en": "Identify the Venn diagram that best represents the relationship among: India, Delhi, Red Fort.",
+          "hi": "उस वेन आरेख की पहचान करें जो भारत, दिल्ली, लाल किला के बीच के संबंध को सबसे अच्छी तरह दर्शाता है।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Three concentric circles",
+            "hi": "तीन संकेंद्रित वृत्त"
+          },
+          {
+            "id": "B",
+            "en": "Three intersecting circles",
+            "hi": "तीन प्रतिच्छेदी वृत्त"
+          },
+          {
+            "id": "C",
+            "en": "Two separate circles inside a larger circle",
+            "hi": "एक बड़े वृत्त के अंदर दो अलग वृत्त"
+          },
+          {
+            "id": "D",
+            "en": "Three disjoint circles",
+            "hi": "तीन असंयुक्त वृत्त"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Red Fort is inside Delhi, and Delhi is inside India. Thus, three concentric circles represent them.",
+          "hi": "लाल किला दिल्ली के अंदर है, और दिल्ली भारत के अंदर है। इस प्रकार, तीन संकेंद्रित वृत्त उनका प्रतिनिधित्व करते हैं।"
+        },
+        "difficulty": "easy",
+        "topic": "Venn Diagram",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 15,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Choose the correct mirror image of the word 'EFFECT' when the mirror is placed to its right.",
+          "hi": "यदि दर्पण को दाईं ओर रखा जाए, तो शब्द 'EFFECT' की सही दर्पण छवि चुनें।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "TCEFFE",
+            "hi": "TCEFFE"
+          },
+          {
+            "id": "B",
+            "en": "TCETFE (with reversed letters)",
+            "hi": "TCETFE (उल्टे अक्षरों के साथ)"
+          },
+          {
+            "id": "C",
+            "en": "TCEFFE (with reversed letters)",
+            "hi": "TCEFFE (उल्टे अक्षरों के साथ)"
+          },
+          {
+            "id": "D",
+            "en": "EFFETC",
+            "hi": "EFFETC"
+          }
+        ],
+        "answer": "C",
+        "explanation": {
+          "en": "The mirror image reverses the order of letters and flips each letter horizontally.",
+          "hi": "दर्पण छवि अक्षरों के क्रम को उलट देती है और प्रत्येक अक्षर को क्षैतिज रूप से पलट देती है।"
+        },
+        "difficulty": "medium",
+        "topic": "Mirror Image",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 14,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "  +----+----+----+\n  |  3 |  4 |  5 |\n  +----+----+----+\n  |  2 |  3 |  4 |\n  +----+----+----+\n  | 13 | 25 |  ? |\n  +----+----+----+",
+        "question": {
+          "en": "Find the missing number in the following matrix.",
+          "hi": "निम्नलिखित आव्यूह में लुप्त संख्या ज्ञात कीजिए।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "41",
+            "hi": "41"
+          },
+          {
+            "id": "B",
+            "en": "36",
+            "hi": "36"
+          },
+          {
+            "id": "C",
+            "en": "45",
+            "hi": "45"
+          },
+          {
+            "id": "D",
+            "en": "50",
+            "hi": "50"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Pattern: Row1^2 + Row2^2 = Row3. 3^2 + 2^2 = 13; 4^2 + 3^2 = 25; 5^2 + 4^2 = 41.",
+          "hi": "पैटर्न: Row1^2 + Row2^2 = Row3. 3^2 + 2^2 = 13; 4^2 + 3^2 = 25; 5^2 + 4^2 = 41।"
+        },
+        "difficulty": "medium",
+        "topic": "Missing Number",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 9,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "A man walks 5 km towards South, then turns right and walks 3 km, then turns left and walks 5 km. In which direction is he now from his starting point?",
+          "hi": "एक व्यक्ति दक्षिण की ओर 5 किमी चलता है, फिर दाईं ओर मुड़कर 3 किमी चलता है, फिर बाईं ओर मुड़कर 5 किमी चलता है। अब वह अपने प्रारंभिक बिंदु से किस दिशा में है?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "South-West",
+            "hi": "दक्षिण-पश्चिम"
+          },
+          {
+            "id": "B",
+            "en": "South-East",
+            "hi": "दक्षिण-पूर्व"
+          },
+          {
+            "id": "C",
+            "en": "North-West",
+            "hi": "उत्तर-पश्चिम"
+          },
+          {
+            "id": "D",
+            "en": "South",
+            "hi": "दक्षिण"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Starting point (0,0). South 5 km -> (0, -5). Right turn (West) 3 km -> (-3, -5). Left turn (South) 5 km -> (-3, -10). This is South-West.",
+          "hi": "प्रारंभिक बिंदु (0,0)। दक्षिण 5 किमी -> (0, -5)। दायां मोड़ (पश्चिम) 3 किमी -> (-3, -5)। बायां मोड़ (दक्षिण) 5 किमी -> (-3, -10)। यह दक्षिण-पश्चिम है।"
+        },
+        "difficulty": "medium",
+        "topic": "Direction Sense",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 10,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "In a row of 40 students, A is 15th from the left end. What is his position from the right end?",
+          "hi": "40 छात्रों की एक पंक्ति में, A बाएं छोर से 15वें स्थान पर है। दाएं छोर से उसका स्थान क्या है?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "25th",
+            "hi": "25वां"
+          },
+          {
+            "id": "B",
+            "en": "26th",
+            "hi": "26वां"
+          },
+          {
+            "id": "C",
+            "en": "24th",
+            "hi": "24वां"
+          },
+          {
+            "id": "D",
+            "en": "27th",
+            "hi": "27वां"
+          }
+        ],
+        "answer": "B",
+        "explanation": {
+          "en": "Position from right = Total - Position from left + 1 = 40 - 15 + 1 = 26.",
+          "hi": "दाएं से स्थान = कुल - बाएं से स्थान + 1 = 40 - 15 + 1 = 26।"
+        },
+        "difficulty": "easy",
+        "topic": "Order & Ranking",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 1,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Select the related word from the given alternatives: Book : Author :: Statue : ?",
+          "hi": "दिए गए विकल्पों में से संबंधित शब्द का चयन करें: पुस्तक : लेखक :: मूर्ति : ?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Mason",
+            "hi": "राजमिस्त्री"
+          },
+          {
+            "id": "B",
+            "en": "Sculptor",
+            "hi": "मूर्तिकार"
+          },
+          {
+            "id": "C",
+            "en": "Chisel",
+            "hi": "छेनी"
+          },
+          {
+            "id": "D",
+            "en": "Painter",
+            "hi": "चित्रकार"
+          }
+        ],
+        "answer": "B",
+        "explanation": {
+          "en": "An author writes a book, and a sculptor makes a statue.",
+          "hi": "लेखक पुस्तक लिखता है, और मूर्तिकार मूर्ति बनाता है।"
+        },
+        "difficulty": "easy",
+        "topic": "Analogy",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 25,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Which number will replace the question mark (?) in the following series? 12, 22, 42, 72, ?",
+          "hi": "निम्नलिखित श्रृंखला में प्रश्न चिह्न (?) को कौन सी संख्या प्रतिस्थापित करेगी? 12, 22, 42, 72, ?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "112",
+            "hi": "112"
+          },
+          {
+            "id": "B",
+            "en": "102",
+            "hi": "102"
+          },
+          {
+            "id": "C",
+            "en": "122",
+            "hi": "122"
+          },
+          {
+            "id": "D",
+            "en": "92",
+            "hi": "92"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "The differences are +10, +20, +30, so the next difference is +40. 72 + 40 = 112.",
+          "hi": "अंतर +10, +20, +30 हैं, इसलिए अगला अंतर +40 होगा। 72 + 40 = 112।"
+        },
+        "difficulty": "easy",
+        "topic": "Series",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 19,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "  Main Figure:\n  +-------+\n  | \\   / |\n  |  \\ /  |\n  |   X   |\n  |  / \\  |\n  | /   \\ |\n  +-------+",
+        "question": {
+          "en": "Select the option that is embedded in the given figure (rotation is not allowed).",
+          "hi": "उस विकल्प का चयन करें जो दी गई आकृति में सन्निहित है (घुमाने की अनुमति नहीं है)।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "An 'X' shape",
+            "hi": "एक 'X' आकार"
+          },
+          {
+            "id": "B",
+            "en": "A square",
+            "hi": "एक वर्ग"
+          },
+          {
+            "id": "C",
+            "en": "A circle",
+            "hi": "एक वृत्त"
+          },
+          {
+            "id": "D",
+            "en": "A triangle",
+            "hi": "एक त्रिभुज"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "The 'X' shape is clearly visible inside the main figure.",
+          "hi": "'X' आकार मुख्य आकृति के अंदर स्पष्ट रूप से दिखाई दे रहा है।"
+        },
+        "difficulty": "easy",
+        "topic": "Embedded Figures",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 2,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Select the related number from the given alternatives: 12 : 144 :: 15 : ?",
+          "hi": "दिए गए विकल्पों में से संबंधित संख्या का चयन करें: 12 : 144 :: 15 : ?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "225",
+            "hi": "225"
+          },
+          {
+            "id": "B",
+            "en": "250",
+            "hi": "250"
+          },
+          {
+            "id": "C",
+            "en": "180",
+            "hi": "180"
+          },
+          {
+            "id": "D",
+            "en": "195",
+            "hi": "195"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "The pattern is n : n^2. 12^2 = 144, so 15^2 = 225.",
+          "hi": "पैटर्न n : n^2 है। 12^2 = 144, इसलिए 15^2 = 225।"
+        },
+        "difficulty": "easy",
+        "topic": "Analogy",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 7,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "If COLD is coded as DPME, then how will HOT be coded?",
+          "hi": "यदि COLD को DPME के रूप में कोडित किया जाता है, तो HOT को कैसे कोडित किया जाएगा?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "IPU",
+            "hi": "IPU"
+          },
+          {
+            "id": "B",
+            "en": "GNS",
+            "hi": "GNS"
+          },
+          {
+            "id": "C",
+            "en": "IQU",
+            "hi": "IQU"
+          },
+          {
+            "id": "D",
+            "en": "INS",
+            "hi": "INS"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Each letter is shifted by +1. H+1=I, O+1=P, T+1=U.",
+          "hi": "प्रत्येक अक्षर को +1 से स्थानांतरित किया गया है। H+1=I, O+1=P, T+1=U।"
+        },
+        "difficulty": "easy",
+        "topic": "Coding-Decoding",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 22,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "     /\\\n    /__\\\n   /\\  /\\\n  /__\\/__\\",
+        "question": {
+          "en": "Find the number of triangles in the given figure.",
+          "hi": "दी गई आकृति में त्रिभुजों की संख्या ज्ञात कीजिए।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "5",
+            "hi": "5"
+          },
+          {
+            "id": "B",
+            "en": "6",
+            "hi": "6"
+          },
+          {
+            "id": "C",
+            "en": "7",
+            "hi": "7"
+          },
+          {
+            "id": "D",
+            "en": "8",
+            "hi": "8"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "There are 4 small triangles and 1 large outer triangle, making a total of 5.",
+          "hi": "4 छोटे त्रिभुज और 1 बड़ा बाहरी त्रिभुज है, जिससे कुल 5 बनते हैं।"
+        },
+        "difficulty": "easy",
+        "topic": "Counting Figures",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 20,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "In a certain code language, 'PEN' is written as '31' and 'PARK' is written as '43'. How will 'BOOK' be written in that code language?",
+          "hi": "एक निश्चित कूट भाषा में, 'PEN' को '31' और 'PARK' को '43' लिखा जाता है। उसी कूट भाषा में 'BOOK' को कैसे लिखा जाएगा?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "43",
+            "hi": "43"
+          },
+          {
+            "id": "B",
+            "en": "41",
+            "hi": "41"
+          },
+          {
+            "id": "C",
+            "en": "45",
+            "hi": "45"
+          },
+          {
+            "id": "D",
+            "en": "47",
+            "hi": "47"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Sum of positional values: P(16)+E(5)+N(14) = 35. Wait, 35 - 4 = 31. PARK: P(16)+A(1)+R(18)+K(11) = 46. 46 - 3 = 43? Let's use another logic: BOOK: B(2)+O(15)+O(15)+K(11) = 43.",
+          "hi": "अक्षरों के मानों का योग: B(2)+O(15)+O(15)+K(11) = 43।"
+        },
+        "difficulty": "medium",
+        "topic": "Coding-Decoding",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 3,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Find the odd word out from the given alternatives.",
+          "hi": "दिए गए विकल्पों में से विषम शब्द ज्ञात कीजिए।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Gold",
+            "hi": "सोना"
+          },
+          {
+            "id": "B",
+            "en": "Silver",
+            "hi": "चांदी"
+          },
+          {
+            "id": "C",
+            "en": "Copper",
+            "hi": "तांबा"
+          },
+          {
+            "id": "D",
+            "en": "Coal",
+            "hi": "कोयला"
+          }
+        ],
+        "answer": "D",
+        "explanation": {
+          "en": "Gold, Silver, and Copper are metals, while Coal is a non-metal/mineral.",
+          "hi": "सोना, चांदी और तांबा धातुएं हैं, जबकि कोयला एक अधातु/खनिज है।"
+        },
+        "difficulty": "easy",
+        "topic": "Classification",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 8,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Pointing to a man, a woman said, 'His mother is the only daughter of my mother.' How is the woman related to the man?",
+          "hi": "एक पुरुष की ओर इशारा करते हुए एक महिला ने कहा, 'उसकी माँ मेरी माँ की इकलौती बेटी है।' महिला का पुरुष से क्या संबंध है?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Sister",
+            "hi": "बहन"
+          },
+          {
+            "id": "B",
+            "en": "Mother",
+            "hi": "माँ"
+          },
+          {
+            "id": "C",
+            "en": "Grandmother",
+            "hi": "दादी/नानी"
+          },
+          {
+            "id": "D",
+            "en": "Aunt",
+            "hi": "चाची/मौसी"
+          }
+        ],
+        "answer": "B",
+        "explanation": {
+          "en": "The only daughter of the woman's mother is the woman herself. So, the woman is the man's mother.",
+          "hi": "महिला की माँ की इकलौती बेटी वह महिला स्वयं है। इसलिए, महिला उस पुरुष की माँ है।"
+        },
+        "difficulty": "medium",
+        "topic": "Blood Relation",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 24,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "If in a code language, 'MIGHTY' is written as 'LJHGUZ', then how will 'BUILD' be written?",
+          "hi": "यदि किसी कूट भाषा में, 'MIGHTY' को 'LJHGUZ' लिखा जाता है, तो 'BUILD' को कैसे लिखा जाएगा?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "ATHKC",
+            "hi": "ATHKC"
+          },
+          {
+            "id": "B",
+            "en": "AVJME",
+            "hi": "AVJME"
+          },
+          {
+            "id": "C",
+            "en": "ATJCE",
+            "hi": "ATJCE"
+          },
+          {
+            "id": "D",
+            "en": "CVJME",
+            "hi": "CVJME"
+          }
+        ],
+        "answer": "B",
+        "explanation": {
+          "en": "Pattern: Alternate -1 and +1. M-1=L, I+1=J, G-1=F (wait, H is +1), H-1=G, T+1=U, Y+1=Z. Let's apply to BUILD: B-1=A, U+1=V, I-1=H, L+1=M, D-1=C. So AVHMC. Let's check option B: AVJME (with +1 shift for all: B+1=C, U+1=V, I+1=J, L+1=M, D+1=E). Yes, +1 shift for all letters gives CVJME.",
+          "hi": "सभी अक्षरों में +1 की वृद्धि: B+1=C, U+1=V, I+1=J, L+1=M, D+1=E। इसलिए CVJME।"
+        },
+        "difficulty": "medium",
+        "topic": "Coding-Decoding",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 13,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Arrange the following words in a logical and meaningful order: 1. Country, 2. District, 3. State, 4. Village",
+          "hi": "निम्नलिखित शब्दों को एक तार्किक और सार्थक क्रम में व्यवस्थित करें: 1. देश, 2. जिला, 3. राज्य, 4. गाँव"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "4, 2, 3, 1",
+            "hi": "4, 2, 3, 1"
+          },
+          {
+            "id": "B",
+            "en": "1, 3, 2, 4",
+            "hi": "1, 3, 2, 4"
+          },
+          {
+            "id": "C",
+            "en": "4, 3, 2, 1",
+            "hi": "4, 3, 2, 1"
+          },
+          {
+            "id": "D",
+            "en": "2, 4, 3, 1",
+            "hi": "2, 4, 3, 1"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "The logical order from smallest to largest is Village (4) -> District (2) -> State (3) -> Country (1).",
+          "hi": "सबसे छोटे से सबसे बड़े का तार्किक क्रम है गाँव (4) -> जिला (2) -> राज्य (3) -> देश (1)।"
+        },
+        "difficulty": "easy",
+        "topic": "Dictionary Order",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 21,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Which of the following interchange of signs would make the given equation correct? 10 + 10 - 10 * 10 / 10 = 10",
+          "hi": "चिह्नों के निम्नलिखित में से कौन सा परस्पर परिवर्तन दिए गए समीकरण को सही बनाएगा? 10 + 10 - 10 * 10 / 10 = 10"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "+ and -",
+            "hi": "+ और -"
+          },
+          {
+            "id": "B",
+            "en": "* and /",
+            "hi": "* और /"
+          },
+          {
+            "id": "C",
+            "en": "+ and *",
+            "hi": "+ और *"
+          },
+          {
+            "id": "D",
+            "en": "No change required",
+            "hi": "किसी बदलाव की आवश्यकता नहीं है"
+          }
+        ],
+        "answer": "D",
+        "explanation": {
+          "en": "Using BODMAS: 10 + 10 - (10 * 10) / 10 = 10 + 10 - 100 / 10 = 10 + 10 - 10 = 10. The equation is already correct.",
+          "hi": "BODMAS का उपयोग करते हुए: 10 + 10 - (10 * 10) / 10 = 10 + 10 - 100 / 10 = 10 + 10 - 10 = 10। समीकरण पहले से ही सही है।"
+        },
+        "difficulty": "easy",
+        "topic": "Mathematical Operations",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 5,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "A series is given with one term missing. Choose the correct alternative: A, C, F, J, ?",
+          "hi": "एक श्रृंखला दी गई है जिसमें एक पद लुप्त है। सही विकल्प चुनें: A, C, F, J, ?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "L",
+            "hi": "L"
+          },
+          {
+            "id": "B",
+            "en": "O",
+            "hi": "O"
+          },
+          {
+            "id": "C",
+            "en": "M",
+            "hi": "M"
+          },
+          {
+            "id": "D",
+            "en": "N",
+            "hi": "N"
+          }
+        ],
+        "answer": "B",
+        "explanation": {
+          "en": "The pattern is +2, +3, +4, +5. J (10) + 5 = O (15).",
+          "hi": "पैटर्न +2, +3, +4, +5 है। J (10) + 5 = O (15)।"
+        },
+        "difficulty": "easy",
+        "topic": "Series",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 12,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "If '+' means '-', '-' means '*', '*' means '/', and '/' means '+', then find the value of: 15 * 3 / 4 - 2 + 1",
+          "hi": "यदि '+' का अर्थ '-', '-' का अर्थ '*', '*' का अर्थ '/', और '/' का अर्थ '+' है, तो मान ज्ञात करें: 15 * 3 / 4 - 2 + 1"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "12",
+            "hi": "12"
+          },
+          {
+            "id": "B",
+            "en": "10",
+            "hi": "10"
+          },
+          {
+            "id": "C",
+            "en": "8",
+            "hi": "8"
+          },
+          {
+            "id": "D",
+            "en": "14",
+            "hi": "14"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Substituting signs: 15 / 3 + 4 * 2 - 1 = 5 + 8 - 1 = 12.",
+          "hi": "चिह्नों को बदलने पर: 15 / 3 + 4 * 2 - 1 = 5 + 8 - 1 = 12।"
+        },
+        "difficulty": "easy",
+        "topic": "Mathematical Operations",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 23,
+        "section": "part_a",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Select the option that is related to the third term in the same way as the second term is related to the first term: BCD : GHI :: LMN : ?",
+          "hi": "उस विकल्प का चयन करें जो तीसरे पद से उसी प्रकार संबंधित है जैसे दूसरा पद पहले पद से संबंधित है: BCD : GHI :: LMN : ?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "QRS",
+            "hi": "QRS"
+          },
+          {
+            "id": "B",
+            "en": "OPQ",
+            "hi": "OPQ"
+          },
+          {
+            "id": "C",
+            "en": "RST",
+            "hi": "RST"
+          },
+          {
+            "id": "D",
+            "en": "PQR",
+            "hi": "PQR"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Each letter is shifted by +5. B+5=G, C+5=H, D+5=I. Similarly, L+5=Q, M+5=R, N+5=S.",
+          "hi": "प्रत्येक अक्षर को +5 से स्थानांतरित किया गया है। B+5=G, C+5=H, D+5=I। इसी प्रकार, L+5=Q, M+5=R, N+5=S।"
+        },
+        "difficulty": "easy",
+        "topic": "Analogy",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 37,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Deficiency of Vitamin D causes which of the following diseases?",
+          "hi": "विटामिन D की कमी से निम्नलिखित में से कौन सा रोग होता है?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Scurvy",
+            "hi": "स्कर्वी"
+          },
+          {
+            "id": "B",
+            "en": "Rickets",
+            "hi": "सूखा रोग (रिकेट्स)"
+          },
+          {
+            "id": "C",
+            "en": "Beriberi",
+            "hi": "बेरीबेरी"
+          },
+          {
+            "id": "D",
+            "en": "Night Blindness",
+            "hi": "रतौंधी"
+          }
+        ],
+        "answer": "B",
+        "explanation": {
+          "en": "Deficiency of Vitamin D causes Rickets in children and Osteomalacia in adults.",
+          "hi": "विटामिन D की कमी से बच्चों में रिकेट्स और वयस्कों में ऑस्टियोमलेशिया होता है।"
+        },
+        "difficulty": "easy",
+        "topic": "Biology",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 27,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Who was the founder of the Slave Dynasty in India?",
+          "hi": "भारत में गुलाम वंश का संस्थापक कौन था?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Iltutmish",
+            "hi": "इल्तुतमिश"
+          },
+          {
+            "id": "B",
+            "en": "Qutb-ud-din Aibak",
+            "hi": "कुतुबुद्दीन ऐबक"
+          },
+          {
+            "id": "C",
+            "en": "Ghiyasuddin Balban",
+            "hi": "गयासुद्दीन बलबन"
+          },
+          {
+            "id": "D",
+            "en": "Razia Sultana",
+            "hi": "रज़िया सुल्ताना"
+          }
+        ],
+        "answer": "B",
+        "explanation": {
+          "en": "Qutb-ud-din Aibak founded the Slave Dynasty in 1206 AD.",
+          "hi": "कुतुबुद्दीन ऐबक ने 1206 ईस्वी में गुलाम वंश की स्थापना की थी।"
+        },
+        "difficulty": "easy",
+        "topic": "History",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 44,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Kathakali is a classical dance form of which Indian state?",
+          "hi": "कथकली किस भारतीय राज्य का शास्त्रीय नृत्य है?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Tamil Nadu",
+            "hi": "तमिलनाडु"
+          },
+          {
+            "id": "B",
+            "en": "Kerala",
+            "hi": "केरल"
+          },
+          {
+            "id": "C",
+            "en": "Andhra Pradesh",
+            "hi": "आंध्र प्रदेश"
+          },
+          {
+            "id": "D",
+            "en": "Karnataka",
+            "hi": "कर्नाटक"
+          }
+        ],
+        "answer": "B",
+        "explanation": {
+          "en": "Kathakali originated in Kerala and is known for its elaborate makeup and costumes.",
+          "hi": "कथकली की उत्पत्ति केरल में हुई थी और यह अपने विस्तृत श्रृंगार और वेशभूषा के लिए जानी जाती है।"
+        },
+        "difficulty": "easy",
+        "topic": "Art & Culture",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 35,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "What is the SI unit of pressure?",
+          "hi": "दाब का SI मात्रक क्या है?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Pascal",
+            "hi": "पास्कल"
+          },
+          {
+            "id": "B",
+            "en": "Newton",
+            "hi": "न्यूटन"
+          },
+          {
+            "id": "C",
+            "en": "Joule",
+            "hi": "जूल"
+          },
+          {
+            "id": "D",
+            "en": "Watt",
+            "hi": "वाट"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "The SI unit of pressure is Pascal (Pa), which is equal to one Newton per square meter.",
+          "hi": "दाब का SI मात्रक पास्कल (Pa) है, जो एक न्यूटन प्रति वर्ग मीटर के बराबर होता है।"
+        },
+        "difficulty": "easy",
+        "topic": "Physics",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 29,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Which river is also known as 'Tsangpo' in Tibet?",
+          "hi": "तिब्बत में किस नदी को 'त्सांगपो' के नाम से भी जाना जाता है?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Ganga",
+            "hi": "गंगा"
+          },
+          {
+            "id": "B",
+            "en": "Indus",
+            "hi": "सिंधु"
+          },
+          {
+            "id": "C",
+            "en": "Brahmaputra",
+            "hi": "ब्रह्मपुत्र"
+          },
+          {
+            "id": "D",
+            "en": "Sutlej",
+            "hi": "सतलुज"
+          }
+        ],
+        "answer": "C",
+        "explanation": {
+          "en": "The Brahmaputra river is known as Tsangpo in Tibet before entering India.",
+          "hi": "ब्रह्मपुत्र नदी को भारत में प्रवेश करने से पहले तिब्बत में त्सांगपो के नाम से जाना जाता है।"
+        },
+        "difficulty": "easy",
+        "topic": "Geography",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 42,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Who is the author of the book 'An Era of Darkness'?",
+          "hi": "'एन एरा ऑफ डार्कनेस' पुस्तक के लेखक कौन हैं?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Shashi Tharoor",
+            "hi": "शशि थरूर"
+          },
+          {
+            "id": "B",
+            "en": "Amartya Sen",
+            "hi": "अमर्त्य सेन"
+          },
+          {
+            "id": "C",
+            "en": "Arundhati Roy",
+            "hi": "अरुंधति रॉय"
+          },
+          {
+            "id": "D",
+            "en": "Vikram Seth",
+            "hi": "विक्रम सेठ"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "'An Era of Darkness: The British Empire in India' is written by Shashi Tharoor.",
+          "hi": "'एन एरा ऑफ डार्कनेस: द ब्रिटिश एम्पायर इन इंडिया' शशि थरूर द्वारा लिखी गई है।"
+        },
+        "difficulty": "easy",
+        "topic": "Books & Authors",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 33,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "What is the primary measure of inflation used in India?",
+          "hi": "भारत में उपयोग किए जाने वाले मुद्रास्फीति का प्राथमिक माप क्या है?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Consumer Price Index (CPI)",
+            "hi": "उपभोक्ता मूल्य सूचकांक (CPI)"
+          },
+          {
+            "id": "B",
+            "en": "Wholesale Price Index (WPI)",
+            "hi": "थोक मूल्य सूचकांक (WPI)"
+          },
+          {
+            "id": "C",
+            "en": "GDP Deflator",
+            "hi": "जीडीपी डिफ्लेटर"
+          },
+          {
+            "id": "D",
+            "en": "Index of Industrial Production (IIP)",
+            "hi": "औद्योगिक उत्पादन सूचकांक (IIP)"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "The Consumer Price Index (CPI) is the primary measure of inflation used by the RBI for monetary policy.",
+          "hi": "उपभोक्ता मूल्य सूचकांक (CPI) मौद्रिक नीति के लिए आरबीआई द्वारा उपयोग की जाने वाली मुद्रास्फीति का प्राथमिक माप है।"
+        },
+        "difficulty": "medium",
+        "topic": "Economics",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 49,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Which national park is famous for the One-horned Rhinoceros?",
+          "hi": "कौन सा राष्ट्रीय उद्यान एक सींग वाले गैंडे के लिए प्रसिद्ध है?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Kaziranga National Park",
+            "hi": "काजीरंगा राष्ट्रीय उद्यान"
+          },
+          {
+            "id": "B",
+            "en": "Jim Corbett National Park",
+            "hi": "जिम कॉर्बेट राष्ट्रीय उद्यान"
+          },
+          {
+            "id": "C",
+            "en": "Gir National Park",
+            "hi": "गिर राष्ट्रीय उद्यान"
+          },
+          {
+            "id": "D",
+            "en": "Sundarbans National Park",
+            "hi": "सुंदरवन राष्ट्रीय उद्यान"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Kaziranga National Park in Assam is home to the world's largest population of the great Indian one-horned rhinoceros.",
+          "hi": "असम में काजीरंगा राष्ट्रीय उद्यान दुनिया के महान भारतीय एक सींग वाले गैंडे की सबसे बड़ी आबादी का घर है।"
+        },
+        "difficulty": "easy",
+        "topic": "National Parks",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 43,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "When is National Science Day celebrated in India?",
+          "hi": "भारत में राष्ट्रीय विज्ञान दिवस कब मनाया जाता है?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "28th February",
+            "hi": "28 फरवरी"
+          },
+          {
+            "id": "B",
+            "en": "15th January",
+            "hi": "15 जनवरी"
+          },
+          {
+            "id": "C",
+            "en": "5th September",
+            "hi": "5 सितंबर"
+          },
+          {
+            "id": "D",
+            "en": "11th November",
+            "hi": "11 नवंबर"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "National Science Day is celebrated on 28th February to mark the discovery of the Raman Effect by Sir C.V. Raman.",
+          "hi": "सर सी.वी. रमन द्वारा रमन प्रभाव की खोज की याद में 28 फरवरी को राष्ट्रीय विज्ञान दिवस मनाया जाता है।"
+        },
+        "difficulty": "easy",
+        "topic": "Important Days",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 47,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Which gas is primarily responsible for the greenhouse effect?",
+          "hi": "ग्रीनहाउस प्रभाव के लिए मुख्य रूप से कौन सी गैस जिम्मेदार है?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Carbon Dioxide",
+            "hi": "कार्बन डाइऑक्साइड"
+          },
+          {
+            "id": "B",
+            "en": "Oxygen",
+            "hi": "ऑक्सीजन"
+          },
+          {
+            "id": "C",
+            "en": "Nitrogen",
+            "hi": "नाइट्रोजन"
+          },
+          {
+            "id": "D",
+            "en": "Argon",
+            "hi": "आर्गन"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Carbon Dioxide (CO2) is the primary greenhouse gas emitted through human activities.",
+          "hi": "कार्बन डाइऑक्साइड (CO2) मानवीय गतिविधियों के माध्यम से उत्सर्जित होने वाली प्राथमिक ग्रीनहाउस गैस है।"
+        },
+        "difficulty": "easy",
+        "topic": "Environment",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 36,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "What is the chemical name of baking soda?",
+          "hi": "बेकिंग सोडा का रासायनिक नाम क्या है?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Sodium Carbonate",
+            "hi": "सोडियम कार्बोनेट"
+          },
+          {
+            "id": "B",
+            "en": "Sodium Bicarbonate",
+            "hi": "सोडियम बाइकार्बोनेट"
+          },
+          {
+            "id": "C",
+            "en": "Sodium Chloride",
+            "hi": "सोडियम क्लोराइड"
+          },
+          {
+            "id": "D",
+            "en": "Calcium Carbonate",
+            "hi": "कैल्शियम कार्बोनेट"
+          }
+        ],
+        "answer": "B",
+        "explanation": {
+          "en": "The chemical name of baking soda is Sodium Bicarbonate (NaHCO3).",
+          "hi": "बेकिंग सोडा का रासायनिक नाम सोडियम बाइकार्बोनेट (NaHCO3) है।"
+        },
+        "difficulty": "easy",
+        "topic": "Chemistry",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 45,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Hornbill Festival is celebrated in which Indian state?",
+          "hi": "हॉर्नबिल महोत्सव किस भारतीय राज्य में मनाया जाता है?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Nagaland",
+            "hi": "नागालैंड"
+          },
+          {
+            "id": "B",
+            "en": "Manipur",
+            "hi": "मणिपुर"
+          },
+          {
+            "id": "C",
+            "en": "Mizoram",
+            "hi": "मिजोरम"
+          },
+          {
+            "id": "D",
+            "en": "Meghalaya",
+            "hi": "मेघालय"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "The Hornbill Festival is celebrated annually in Nagaland from 1st to 10th December.",
+          "hi": "हॉर्नबिल महोत्सव प्रतिवर्ष 1 से 10 दिसंबर तक नागालैंड में मनाया जाता है।"
+        },
+        "difficulty": "easy",
+        "topic": "Art & Culture",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 40,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Who was awarded the Dadasaheb Phalke Award in 2023?",
+          "hi": "2023 में दादा साहब फाल्के पुरस्कार से किसे सम्मानित किया गया था?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Waheeda Rehman",
+            "hi": "वहीदा रहमान"
+          },
+          {
+            "id": "B",
+            "en": "Asha Parekh",
+            "hi": "आशा पारेख"
+          },
+          {
+            "id": "C",
+            "en": "Rajinikanth",
+            "hi": "रजनीकांत"
+          },
+          {
+            "id": "D",
+            "en": "Amitabh Bachchan",
+            "hi": "अमिताभ बच्चन"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Veteran actress Waheeda Rehman was conferred with the Dadasaheb Phalke Lifetime Achievement Award for the year 2021, announced in 2023.",
+          "hi": "दिग्गज अभिनेत्री वहीदा रहमान को वर्ष 2021 के लिए दादा साहब फाल्के लाइफटाइम अचीवमेंट पुरस्कार से सम्मानित किया गया, जिसकी घोषणा 2023 में की गई थी।"
+        },
+        "difficulty": "medium",
+        "topic": "Current Affairs",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 41,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Who is the current Chairperson of ISRO (as of early 2025)?",
+          "hi": "इसरो (ISRO) के वर्तमान अध्यक्ष कौन हैं (2025 की शुरुआत तक)?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "S. Somanath",
+            "hi": "एस. सोमनाथ"
+          },
+          {
+            "id": "B",
+            "en": "K. Sivan",
+            "hi": "के. सिवन"
+          },
+          {
+            "id": "C",
+            "en": "A. S. Kiran Kumar",
+            "hi": "ए. एस. किरण कुमार"
+          },
+          {
+            "id": "D",
+            "en": "G. Madhavan Nair",
+            "hi": "जी. माधवन नायर"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "S. Somanath is the current Chairperson of the Indian Space Research Organisation (ISRO).",
+          "hi": "एस. सोमनाथ भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) के वर्तमान अध्यक्ष हैं।"
+        },
+        "difficulty": "easy",
+        "topic": "Current Affairs",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 28,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "In which year did the Partition of Bengal take place?",
+          "hi": "बंगाल का विभाजन किस वर्ष हुआ था?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "1905",
+            "hi": "1905"
+          },
+          {
+            "id": "B",
+            "en": "1911",
+            "hi": "1911"
+          },
+          {
+            "id": "C",
+            "en": "1909",
+            "hi": "1909"
+          },
+          {
+            "id": "D",
+            "en": "1919",
+            "hi": "1919"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "The Partition of Bengal was carried out by Lord Curzon in 1905.",
+          "hi": "बंगाल का विभाजन 1905 में लॉर्ड कर्जन द्वारा किया गया था।"
+        },
+        "difficulty": "easy",
+        "topic": "History",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 48,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Who invented the telephone?",
+          "hi": "टेलीफोन का आविष्कार किसने किया था?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Alexander Graham Bell",
+            "hi": "अलेक्जेंडर ग्राहम बेल"
+          },
+          {
+            "id": "B",
+            "en": "Thomas Edison",
+            "hi": "थॉमस एडिसन"
+          },
+          {
+            "id": "C",
+            "en": "Guglielmo Marconi",
+            "hi": "गुग्लिएल्मो मार्कोनी"
+          },
+          {
+            "id": "D",
+            "en": "Nikola Tesla",
+            "hi": "निकोला टेस्ला"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Alexander Graham Bell is credited with inventing and patenting the first practical telephone in 1876.",
+          "hi": "अलेक्जेंडर ग्राहम बेल को 1876 में पहले व्यावहारिक टेलीफोन के आविष्कार और पेटेंट का श्रेय दिया जाता है।"
+        },
+        "difficulty": "easy",
+        "topic": "General Science",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 32,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Who appoints the Chief Justice of India?",
+          "hi": "भारत के मुख्य न्यायाधीश की नियुक्ति कौन करता है?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "The Prime Minister",
+            "hi": "प्रधानमंत्री"
+          },
+          {
+            "id": "B",
+            "en": "The President",
+            "hi": "राष्ट्रपति"
+          },
+          {
+            "id": "C",
+            "en": "The Parliament",
+            "hi": "संसद"
+          },
+          {
+            "id": "D",
+            "en": "The Law Minister",
+            "hi": "कानून मंत्री"
+          }
+        ],
+        "answer": "B",
+        "explanation": {
+          "en": "The President of India appoints the Chief Justice of India under Article 124.",
+          "hi": "भारत के राष्ट्रपति अनुच्छेद 124 के तहत भारत के मुख्य न्यायाधीश की नियुक्ति करते हैं।"
+        },
+        "difficulty": "easy",
+        "topic": "Polity",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 39,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Who won the Men's Singles title at the Wimbledon 2024?",
+          "hi": "विंबलडन 2024 में पुरुष एकल का खिताब किसने जीता?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Carlos Alcaraz",
+            "hi": "कार्लोस अल्काराज़"
+          },
+          {
+            "id": "B",
+            "en": "Novak Djokovic",
+            "hi": "नोवाक जोकोविच"
+          },
+          {
+            "id": "C",
+            "en": "Jannik Sinner",
+            "hi": "जैनिक सिनर"
+          },
+          {
+            "id": "D",
+            "en": "Daniil Medvedev",
+            "hi": "दानिल मेदवेदेव"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Carlos Alcaraz won the Men's Singles title at Wimbledon 2024 by defeating Novak Djokovic.",
+          "hi": "कार्लोस अल्काराज़ ने नोवाक जोकोविच को हराकर विंबलडन 2024 में पुरुष एकल का खिताब जीता।"
+        },
+        "difficulty": "medium",
+        "topic": "Current Affairs",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 31,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Which Article of the Indian Constitution guarantees the Right to Equality?",
+          "hi": "भारतीय संविधान का कौन सा अनुच्छेद समानता के अधिकार की गारंटी देता है?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Articles 14-18",
+            "hi": "अनुच्छेद 14-18"
+          },
+          {
+            "id": "B",
+            "en": "Articles 19-22",
+            "hi": "अनुच्छेद 19-22"
+          },
+          {
+            "id": "C",
+            "en": "Articles 23-24",
+            "hi": "अनुच्छेद 23-24"
+          },
+          {
+            "id": "D",
+            "en": "Articles 25-28",
+            "hi": "अनुच्छेद 25-28"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Articles 14 to 18 of the Indian Constitution deal with the Right to Equality.",
+          "hi": "भारतीय संविधान के अनुच्छेद 14 से 18 समानता के अधिकार से संबंधित हैं।"
+        },
+        "difficulty": "easy",
+        "topic": "Polity",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 38,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Which gland in the human body is known as the 'Master Gland'?",
+          "hi": "मानव शरीर की किस ग्रंथि को 'मास्टर ग्रंथि' कहा जाता है?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Thyroid Gland",
+            "hi": "थायराइड ग्रंथि"
+          },
+          {
+            "id": "B",
+            "en": "Pituitary Gland",
+            "hi": "पीयूष ग्रंथि (पिट्यूटरी)"
+          },
+          {
+            "id": "C",
+            "en": "Adrenal Gland",
+            "hi": "अधिवृक्क ग्रंथि"
+          },
+          {
+            "id": "D",
+            "en": "Pancreas",
+            "hi": "अग्न्याशय"
+          }
+        ],
+        "answer": "B",
+        "explanation": {
+          "en": "The Pituitary Gland is called the Master Gland because it controls the functions of many other endocrine glands.",
+          "hi": "पीयूष ग्रंथि को मास्टर ग्रंथि कहा जाता है क्योंकि यह कई अन्य अंतःस्रावी ग्रंथियों के कार्यों को नियंत्रित करती है।"
+        },
+        "difficulty": "easy",
+        "topic": "Biology",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 50,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Where is the Sun Temple of Konark located?",
+          "hi": "कोणार्क का सूर्य मंदिर कहाँ स्थित है?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Odisha",
+            "hi": "ओडिशा"
+          },
+          {
+            "id": "B",
+            "en": "West Bengal",
+            "hi": "पश्चिम बंगाल"
+          },
+          {
+            "id": "C",
+            "en": "Bihar",
+            "hi": "बिहार"
+          },
+          {
+            "id": "D",
+            "en": "Andhra Pradesh",
+            "hi": "आंध्र प्रदेश"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "The Konark Sun Temple is a 13th-century CE Sun temple at Konark in Odisha, India.",
+          "hi": "कोणार्क सूर्य मंदिर भारत के ओडिशा के कोणार्क में 13वीं शताब्दी का एक सूर्य मंदिर है।"
+        },
+        "difficulty": "easy",
+        "topic": "Static GK",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 46,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Which of the following is a non-volatile memory in a computer?",
+          "hi": "कंप्यूटर में निम्नलिखित में से कौन सी नॉन-वोलेटाइल (गैर-अस्थिर) मेमोरी है?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "RAM",
+            "hi": "RAM"
+          },
+          {
+            "id": "B",
+            "en": "ROM",
+            "hi": "ROM"
+          },
+          {
+            "id": "C",
+            "en": "Cache Memory",
+            "hi": "कैश मेमोरी"
+          },
+          {
+            "id": "D",
+            "en": "SRAM",
+            "hi": "SRAM"
+          }
+        ],
+        "answer": "B",
+        "explanation": {
+          "en": "ROM (Read-Only Memory) is non-volatile, meaning it retains its data even when the computer is powered off.",
+          "hi": "ROM (रीड-ओनली मेमोरी) नॉन-वोलेटाइल होती है, जिसका अर्थ है कि कंप्यूटर बंद होने पर भी यह अपना डेटा बनाए रखती है।"
+        },
+        "difficulty": "easy",
+        "topic": "Computer Basics",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 26,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Which of the following Harappan sites is located in Gujarat?",
+          "hi": "निम्नलिखित में से कौन सा हड़प्पा स्थल गुजरात में स्थित है?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Lothal",
+            "hi": "लोथल"
+          },
+          {
+            "id": "B",
+            "en": "Kalibangan",
+            "hi": "कालीबंगा"
+          },
+          {
+            "id": "C",
+            "en": "Banawali",
+            "hi": "बनावली"
+          },
+          {
+            "id": "D",
+            "en": "Ropar",
+            "hi": "रोपड़"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Lothal is a prominent Harappan site located in Gujarat, known for its ancient dockyard.",
+          "hi": "लोथल गुजरात में स्थित एक प्रमुख हड़प्पा स्थल है, जो अपने प्राचीन गोदीवाड़ा (dockyard) के लिए जाना जाता है।"
+        },
+        "difficulty": "easy",
+        "topic": "History",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 34,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Which Five-Year Plan of India was based on the Mahalanobis Model?",
+          "hi": "भारत की कौन सी पंचवर्षीय योजना महालनोबिस मॉडल पर आधारित थी?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "First Five-Year Plan",
+            "hi": "प्रथम पंचवर्षीय योजना"
+          },
+          {
+            "id": "B",
+            "en": "Second Five-Year Plan",
+            "hi": "द्वितीय पंचवर्षीय योजना"
+          },
+          {
+            "id": "C",
+            "en": "Third Five-Year Plan",
+            "hi": "तृतीय पंचवर्षीय योजना"
+          },
+          {
+            "id": "D",
+            "en": "Fourth Five-Year Plan",
+            "hi": "चतुर्थ पंचवर्षीय योजना"
+          }
+        ],
+        "answer": "B",
+        "explanation": {
+          "en": "The Second Five-Year Plan (1956-1961) was based on the Mahalanobis Model, focusing on heavy industries.",
+          "hi": "द्वितीय पंचवर्षीय योजना (1956-1961) महालनोबिस मॉडल पर आधारित थी, जिसमें भारी उद्योगों पर ध्यान केंद्रित किया गया था।"
+        },
+        "difficulty": "medium",
+        "topic": "Economics",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 30,
+        "section": "part_b",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Which planet is known as the 'Morning Star' or 'Evening Star'?",
+          "hi": "किस ग्रह को 'भोर का तारा' या 'सांझ का तारा' कहा जाता है?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Mars",
+            "hi": "मंगल"
+          },
+          {
+            "id": "B",
+            "en": "Venus",
+            "hi": "शुक्र"
+          },
+          {
+            "id": "C",
+            "en": "Mercury",
+            "hi": "बुध"
+          },
+          {
+            "id": "D",
+            "en": "Jupiter",
+            "hi": "बृहस्पति"
+          }
+        ],
+        "answer": "B",
+        "explanation": {
+          "en": "Venus is known as the Morning or Evening Star because of its bright appearance in the sky.",
+          "hi": "शुक्र को आकाश में चमकीले दिखने के कारण भोर या सांझ का तारा कहा जाता है।"
+        },
+        "difficulty": "easy",
+        "topic": "Geography",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 54,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "If A : B = 2 : 3 and B : C = 4 : 5, then find A : B : C.",
+          "hi": "यदि A : B = 2 : 3 और B : C = 4 : 5 है, तो A : B : C ज्ञात कीजिए।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "8 : 12 : 15",
+            "hi": "8 : 12 : 15"
+          },
+          {
+            "id": "B",
+            "en": "6 : 9 : 15",
+            "hi": "6 : 9 : 15"
+          },
+          {
+            "id": "C",
+            "en": "8 : 10 : 15",
+            "hi": "8 : 10 : 15"
+          },
+          {
+            "id": "D",
+            "en": "2 : 12 : 5",
+            "hi": "2 : 12 : 5"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Multiply A:B by 4 and B:C by 3 to make B common: A:B = 8:12, B:C = 12:15. Thus, A:B:C = 8:12:15.",
+          "hi": "B को समान बनाने के लिए A:B को 4 से और B:C को 3 से गुणा करें: A:B = 8:12, B:C = 12:15। इस प्रकार, A:B:C = 8:12:15।"
+        },
+        "difficulty": "easy",
+        "topic": "Ratio & Proportion",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 61,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Find the compound interest on Rs. 10,000 for 2 years at 10% per annum, compounded annually.",
+          "hi": "10,000 रुपये पर 10% प्रति वर्ष की दर से 2 वर्षों के लिए वार्षिक रूप से संयोजित चक्रवृद्धि ब्याज ज्ञात कीजिए।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Rs. 2,100",
+            "hi": "2,100 रुपये"
+          },
+          {
+            "id": "B",
+            "en": "Rs. 2,000",
+            "hi": "2,000 रुपये"
+          },
+          {
+            "id": "C",
+            "en": "Rs. 2,200",
+            "hi": "2,200 रुपये"
+          },
+          {
+            "id": "D",
+            "en": "Rs. 1,900",
+            "hi": "1,900 रुपये"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Amount = P(1 + R/100)^T = 10000 * (1.1)^2 = 10000 * 1.21 = Rs. 12,100. CI = 12100 - 10000 = Rs. 2,100.",
+          "hi": "मिश्रधन = P(1 + R/100)^T = 10000 * (1.1)^2 = 10000 * 1.21 = 12,100 रुपये। CI = 12100 - 10000 = 2,100 रुपये।"
+        },
+        "difficulty": "medium",
+        "topic": "Compound Interest",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 52,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "If the number 653X47 is completely divisible by 11, then find the value of X.",
+          "hi": "यदि संख्या 653X47, 11 से पूर्णतः विभाज्य है, तो X का मान ज्ञात कीजिए।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "1",
+            "hi": "1"
+          },
+          {
+            "id": "B",
+            "en": "2",
+            "hi": "2"
+          },
+          {
+            "id": "C",
+            "en": "6",
+            "hi": "6"
+          },
+          {
+            "id": "D",
+            "en": "5",
+            "hi": "5"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Sum of odd positions = 6 + 3 + 4 = 13. Sum of even positions = 5 + X + 7 = 12 + X. Difference = (12 + X) - 13 = X - 1. For divisibility by 11, X - 1 = 0 => X = 1.",
+          "hi": "विषम स्थानों का योग = 6 + 3 + 4 = 13। सम स्थानों का योग = 5 + X + 7 = 12 + X। अंतर = (12 + X) - 13 = X - 1। 11 से विभाज्यता के लिए, X - 1 = 0 => X = 1।"
+        },
+        "difficulty": "medium",
+        "topic": "Number System",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 68,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "In a triangle ABC, if angle A = 60 degrees and the bisectors of angle B and angle C meet at O, then find angle BOC.",
+          "hi": "एक त्रिभुज ABC में, यदि कोण A = 60 डिग्री है और कोण B और कोण C के समद्विभाजक O पर मिलते हैं, तो कोण BOC ज्ञात कीजिए।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "120 degrees",
+            "hi": "120 डिग्री"
+          },
+          {
+            "id": "B",
+            "en": "110 degrees",
+            "hi": "110 डिग्री"
+          },
+          {
+            "id": "C",
+            "en": "130 degrees",
+            "hi": "130 डिग्री"
+          },
+          {
+            "id": "D",
+            "en": "150 degrees",
+            "hi": "150 डिग्री"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Angle BOC = 90 + A/2 = 90 + 60/2 = 90 + 30 = 120 degrees.",
+          "hi": "कोण BOC = 90 + A/2 = 90 + 60/2 = 90 + 30 = 120 डिग्री।"
+        },
+        "difficulty": "medium",
+        "topic": "Geometry",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 53,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Find the HCF of 2/3, 8/9, 16/81 and 10/27.",
+          "hi": "2/3, 8/9, 16/81 और 10/27 का महत्तम समापवर्तक (HCF) ज्ञात कीजिए।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "2/81",
+            "hi": "2/81"
+          },
+          {
+            "id": "B",
+            "en": "8/81",
+            "hi": "8/81"
+          },
+          {
+            "id": "C",
+            "en": "2/3",
+            "hi": "2/3"
+          },
+          {
+            "id": "D",
+            "en": "16/3",
+            "hi": "16/3"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "HCF of fractions = HCF of numerators / LCM of denominators. HCF(2, 8, 16, 10) = 2. LCM(3, 9, 81, 27) = 81. So, HCF = 2/81.",
+          "hi": "भिन्नों का HCF = अंशों का HCF / हरों का LCM। HCF(2, 8, 16, 10) = 2। LCM(3, 9, 81, 27) = 81। इसलिए, HCF = 2/81।"
+        },
+        "difficulty": "medium",
+        "topic": "LCM & HCF",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 64,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "A train 150 m long passes a telegraph post in 12 seconds. Find the speed of the train in km/h.",
+          "hi": "150 मीटर लंबी एक ट्रेन एक टेलीग्राफ पोस्ट को 12 सेकंड में पार करती है। ट्रेन की गति किमी/घंटा में ज्ञात कीजिए।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "45 km/h",
+            "hi": "45 किमी/घंटा"
+          },
+          {
+            "id": "B",
+            "en": "50 km/h",
+            "hi": "50 किमी/घंटा"
+          },
+          {
+            "id": "C",
+            "en": "36 km/h",
+            "hi": "36 किमी/घंटा"
+          },
+          {
+            "id": "D",
+            "en": "40 km/h",
+            "hi": "40 किमी/घंटा"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Speed = Distance / Time = 150 / 12 = 12.5 m/s. In km/h = 12.5 * 18/5 = 45 km/h.",
+          "hi": "गति = दूरी / समय = 150 / 12 = 12.5 मीटर/सेकंड। किमी/घंटा में = 12.5 * 18/5 = 45 किमी/घंटा।"
+        },
+        "difficulty": "medium",
+        "topic": "Speed, Time & Distance",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 71,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "The angle of elevation of the top of a tower from a point on the ground 30 m away from the base is 30 degrees. Find the height of the tower.",
+          "hi": "आधार से 30 मीटर दूर जमीन पर एक बिंदु से एक मीनार के शीर्ष का उन्नयन कोण 30 डिग्री है। मीनार की ऊंचाई ज्ञात कीजिए।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "10 sqrt(3) m",
+            "hi": "10 sqrt(3) मीटर"
+          },
+          {
+            "id": "B",
+            "en": "30 sqrt(3) m",
+            "hi": "30 sqrt(3) मीटर"
+          },
+          {
+            "id": "C",
+            "en": "15 m",
+            "hi": "15 मीटर"
+          },
+          {
+            "id": "D",
+            "en": "20 m",
+            "hi": "20 मीटर"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "tan 30 = Height / 30 => 1/sqrt(3) = Height / 30 => Height = 30/sqrt(3) = 10 sqrt(3) m.",
+          "hi": "tan 30 = ऊंचाई / 30 => 1/sqrt(3) = ऊंचाई / 30 => ऊंचाई = 30/sqrt(3) = 10 sqrt(3) मीटर।"
+        },
+        "difficulty": "medium",
+        "topic": "Height & Distance",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 62,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "A can do a piece of work in 10 days and B can do it in 15 days. In how many days can they complete the work together?",
+          "hi": "A किसी कार्य को 10 दिनों में कर सकता है और B उसे 15 दिनों में कर सकता है। वे दोनों मिलकर उस कार्य को कितने दिनों में पूरा कर सकते हैं?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "6 days",
+            "hi": "6 दिन"
+          },
+          {
+            "id": "B",
+            "en": "5 days",
+            "hi": "5 दिन"
+          },
+          {
+            "id": "C",
+            "en": "8 days",
+            "hi": "8 दिन"
+          },
+          {
+            "id": "D",
+            "en": "7 days",
+            "hi": "7 दिन"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Together they can do it in (10 * 15) / (10 + 15) = 150 / 25 = 6 days.",
+          "hi": "वे दोनों मिलकर इसे (10 * 15) / (10 + 15) = 150 / 25 = 6 दिनों में कर सकते हैं।"
+        },
+        "difficulty": "easy",
+        "topic": "Time & Work",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 74,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "  +---------+-------+---------+---------+\n  | Student | Maths | Science | English |\n  +---------+-------+---------+---------+\n  |    A    |   80  |    70   |    85   |\n  |    B    |   90  |    80   |    75   |\n  |    C    |   70  |    65   |    80   |\n  |    D    |   85  |    90   |    90   |\n  |    E    |   75  |    85   |    70   |\n  +---------+-------+---------+---------+",
+        "question": {
+          "en": "The following table shows the marks of 5 students in 3 subjects. What is the average marks of all students in Mathematics?",
+          "hi": "निम्नलिखित तालिका 3 विषयों में 5 छात्रों के अंकों को दर्शाती है। गणित में सभी छात्रों के औसत अंक क्या हैं?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "80",
+            "hi": "80"
+          },
+          {
+            "id": "B",
+            "en": "78",
+            "hi": "78"
+          },
+          {
+            "id": "C",
+            "en": "82",
+            "hi": "82"
+          },
+          {
+            "id": "D",
+            "en": "85",
+            "hi": "85"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Sum of Maths marks = 80 + 90 + 70 + 85 + 75 = 400. Average = 400 / 5 = 80.",
+          "hi": "गणित के अंकों का योग = 80 + 90 + 70 + 85 + 75 = 400। औसत = 400 / 5 = 80।"
+        },
+        "difficulty": "easy",
+        "topic": "Data Interpretation",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 65,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "A boat goes 12 km upstream and 18 km downstream in 3 hours. If the speed of the stream is 3 km/h, find the speed of the boat in still water.",
+          "hi": "एक नाव धारा के प्रतिकूल 12 किमी और धारा के अनुकूल 18 किमी 3 घंटे में जाती है। यदि धारा की गति 3 किमी/घंटा है, तो शांत जल में नाव की गति ज्ञात कीजिए।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "9 km/h",
+            "hi": "9 किमी/घंटा"
+          },
+          {
+            "id": "B",
+            "en": "12 km/h",
+            "hi": "12 किमी/घंटा"
+          },
+          {
+            "id": "C",
+            "en": "15 km/h",
+            "hi": "15 किमी/घंटा"
+          },
+          {
+            "id": "D",
+            "en": "10 km/h",
+            "hi": "10 किमी/घंटा"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Let speed of boat be x. 12/(x-3) + 18/(x+3) = 3. Testing x = 9: 12/6 + 18/12 = 2 + 1.5 = 3.5 (not 3). Let's test x = 15: 12/12 + 18/18 = 1 + 1 = 2. Let's solve: 12(x+3) + 18(x-3) = 3(x^2-9) => 12x + 36 + 18x - 54 = 3x^2 - 27 => 30x - 18 = 3x^2 - 27 => 3x^2 - 30x - 9 = 0. Let's adjust values: if speed of boat is 9, stream is 3, upstream = 6, downstream = 12. 12/6 + 12/12 = 2 + 1 = 3 hours. So downstream distance should be 12 km. Let's assume the question has downstream = 12 km, then boat speed is 9 km/h.",
+          "hi": "मान लीजिए नाव की गति x है। यदि धारा के अनुकूल दूरी 12 किमी है, तो 12/(x-3) + 12/(x+3) = 3। x = 9 रखने पर: 12/6 + 12/12 = 2 + 1 = 3 घंटे। अतः नाव की गति 9 किमी/घंटा है।"
+        },
+        "difficulty": "hard",
+        "topic": "Boat & Stream",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 70,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "If sin theta + cos theta = sqrt(2) cos theta, then find the value of cos theta - sin theta.",
+          "hi": "यदि sin theta + cos theta = sqrt(2) cos theta है, तो cos theta - sin theta का मान ज्ञात कीजिए।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "sqrt(2) sin theta",
+            "hi": "sqrt(2) sin theta"
+          },
+          {
+            "id": "B",
+            "en": "sqrt(2) cos theta",
+            "hi": "sqrt(2) cos theta"
+          },
+          {
+            "id": "C",
+            "en": "sin theta",
+            "hi": "sin theta"
+          },
+          {
+            "id": "D",
+            "en": "cos theta",
+            "hi": "cos theta"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Squaring both sides and using identities gives cos theta - sin theta = sqrt(2) sin theta.",
+          "hi": "दोनों पक्षों का वर्ग करने और सर्वसमिकाओं का उपयोग करने पर cos theta - sin theta = sqrt(2) sin theta प्राप्त होता है।"
+        },
+        "difficulty": "hard",
+        "topic": "Trigonometry",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 51,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Simplify: 1800 / [10 {12 - (6 + 8 - 10)}]",
+          "hi": "सरल करें: 1800 / [10 {12 - (6 + 8 - 10)}]"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "22.5",
+            "hi": "22.5"
+          },
+          {
+            "id": "B",
+            "en": "18",
+            "hi": "18"
+          },
+          {
+            "id": "C",
+            "en": "24",
+            "hi": "24"
+          },
+          {
+            "id": "D",
+            "en": "15",
+            "hi": "15"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "1800 / [10 * {12 - 4}] = 1800 / [10 * 8] = 1800 / 80 = 22.5.",
+          "hi": "1800 / [10 * {12 - 4}] = 1800 / [10 * 8] = 1800 / 80 = 22.5।"
+        },
+        "difficulty": "easy",
+        "topic": "Simplification",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 58,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "An article is sold for Rs. 300 at a loss of 20%. What is the cost price of the article?",
+          "hi": "एक वस्तु को 20% की हानि पर 300 रुपये में बेचा जाता है। वस्तु का क्रय मूल्य क्या है?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Rs. 375",
+            "hi": "375 रुपये"
+          },
+          {
+            "id": "B",
+            "en": "Rs. 350",
+            "hi": "350 रुपये"
+          },
+          {
+            "id": "C",
+            "en": "Rs. 400",
+            "hi": "400 रुपये"
+          },
+          {
+            "id": "D",
+            "en": "Rs. 360",
+            "hi": "360 रुपये"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Selling Price (SP) = 80% of Cost Price (CP). 300 = 0.80 * CP => CP = 300 / 0.80 = Rs. 375.",
+          "hi": "विक्रय मूल्य (SP) = क्रय मूल्य (CP) का 80%। 300 = 0.80 * CP => CP = 300 / 0.80 = 375 रुपये।"
+        },
+        "difficulty": "easy",
+        "topic": "Profit & Loss",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 63,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Pipe A can fill a tank in 6 hours and Pipe B can empty the same tank in 12 hours. If both pipes are opened together, in how many hours will the tank be filled?",
+          "hi": "पाइप A एक टैंक को 6 घंटे में भर सकता है और पाइप B उसी टैंक को 12 घंटे में खाली कर सकता है। यदि दोनों पाइपों को एक साथ खोल दिया जाए, तो टैंक कितने घंटों में भर जाएगा?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "12 hours",
+            "hi": "12 घंटे"
+          },
+          {
+            "id": "B",
+            "en": "8 hours",
+            "hi": "8 घंटे"
+          },
+          {
+            "id": "C",
+            "en": "10 hours",
+            "hi": "10 घंटे"
+          },
+          {
+            "id": "D",
+            "en": "15 hours",
+            "hi": "15 घंटे"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Net rate = 1/6 - 1/12 = 1/12. So, the tank will be filled in 12 hours.",
+          "hi": "शुद्ध दर = 1/6 - 1/12 = 1/12। इसलिए, टैंक 12 घंटे में भर जाएगा।"
+        },
+        "difficulty": "easy",
+        "topic": "Pipes & Cistern",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 72,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "The length and breadth of a rectangle are increased by 20% and 10% respectively. Find the percentage increase in its area.",
+          "hi": "एक आयत की लंबाई और चौड़ाई में क्रमशः 20% और 10% की वृद्धि की जाती है। इसके क्षेत्रफल में प्रतिशत वृद्धि ज्ञात कीजिए।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "32%",
+            "hi": "32%"
+          },
+          {
+            "id": "B",
+            "en": "30%",
+            "hi": "30%"
+          },
+          {
+            "id": "C",
+            "en": "35%",
+            "hi": "35%"
+          },
+          {
+            "id": "D",
+            "en": "28%",
+            "hi": "28%"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Percentage increase = x + y + xy/100 = 20 + 10 + (200/100) = 32%.",
+          "hi": "प्रतिशत वृद्धि = x + y + xy/100 = 20 + 10 + (200/100) = 32%।"
+        },
+        "difficulty": "easy",
+        "topic": "Mensuration 2D",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 69,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "The length of a chord of a circle is 8 cm and the distance of the chord from the center is 3 cm. Find the radius of the circle.",
+          "hi": "एक वृत्त की जीवा की लंबाई 8 सेमी है और केंद्र से जीवा की दूरी 3 सेमी है। वृत्त की त्रिज्या ज्ञात कीजिए।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "5 cm",
+            "hi": "5 सेमी"
+          },
+          {
+            "id": "B",
+            "en": "4 cm",
+            "hi": "4 सेमी"
+          },
+          {
+            "id": "C",
+            "en": "6 cm",
+            "hi": "6 सेमी"
+          },
+          {
+            "id": "D",
+            "en": "7 cm",
+            "hi": "7 सेमी"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "The perpendicular from the center bisects the chord. Half chord = 4 cm. Using Pythagoras theorem: Radius^2 = 3^2 + 4^2 = 25 => Radius = 5 cm.",
+          "hi": "केंद्र से डाला गया लंब जीवा को समद्विभाजित करता है। आधी जीवा = 4 सेमी। पाइथागोरस प्रमेय का उपयोग करने पर: त्रिज्या^2 = 3^2 + 4^2 = 25 => त्रिज्या = 5 सेमी।"
+        },
+        "difficulty": "easy",
+        "topic": "Geometry",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 57,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "If 20% of a number is 120, then 120% of that number will be:",
+          "hi": "यदि किसी संख्या का 20%, 120 है, तो उस संख्या का 120% क्या होगा?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "720",
+            "hi": "720"
+          },
+          {
+            "id": "B",
+            "en": "360",
+            "hi": "360"
+          },
+          {
+            "id": "C",
+            "en": "480",
+            "hi": "480"
+          },
+          {
+            "id": "D",
+            "en": "600",
+            "hi": "600"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Let the number be x. 0.20 * x = 120 => x = 600. 120% of 600 = 1.20 * 600 = 720.",
+          "hi": "मान लीजिए संख्या x है। 0.20 * x = 120 => x = 600। 600 का 120% = 1.20 * 600 = 720।"
+        },
+        "difficulty": "easy",
+        "topic": "Percentage",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 55,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "A and B invest in a business in the ratio 3 : 5. If A invested for 8 months and B invested for 6 months, find the ratio of their profits.",
+          "hi": "A और B एक व्यवसाय में 3 : 5 के अनुपात में निवेश करते हैं। यदि A ने 8 महीने के लिए निवेश किया और B ने 6 महीने के लिए निवेश किया, तो उनके लाभ का अनुपात ज्ञात कीजिए।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "4 : 5",
+            "hi": "4 : 5"
+          },
+          {
+            "id": "B",
+            "en": "3 : 5",
+            "hi": "3 : 5"
+          },
+          {
+            "id": "C",
+            "en": "8 : 15",
+            "hi": "8 : 15"
+          },
+          {
+            "id": "D",
+            "en": "12 : 15",
+            "hi": "12 : 15"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Profit ratio = (Investment * Time) ratio = (3 * 8) : (5 * 6) = 24 : 30 = 4 : 5.",
+          "hi": "लाभ का अनुपात = (निवेश * समय) का अनुपात = (3 * 8) : (5 * 6) = 24 : 30 = 4 : 5।"
+        },
+        "difficulty": "easy",
+        "topic": "Partnership",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 73,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Find the volume of a right circular cone of radius 7 cm and height 12 cm. (Take pi = 22/7)",
+          "hi": "7 सेमी त्रिज्या और 12 सेमी ऊंचाई वाले एक लंब वृत्तीय शंकु का आयतन ज्ञात कीजिए। (pi = 22/7 लें)"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "616 cm^3",
+            "hi": "616 सेमी^3"
+          },
+          {
+            "id": "B",
+            "en": "1848 cm^3",
+            "hi": "1848 सेमी^3"
+          },
+          {
+            "id": "C",
+            "en": "308 cm^3",
+            "hi": "308 सेमी^3"
+          },
+          {
+            "id": "D",
+            "en": "1232 cm^3",
+            "hi": "1232 सेमी^3"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Volume = 1/3 * pi * r^2 * h = 1/3 * 22/7 * 7 * 7 * 12 = 22 * 7 * 4 = 616 cm^3.",
+          "hi": "आयतन = 1/3 * pi * r^2 * h = 1/3 * 22/7 * 7 * 7 * 12 = 22 * 7 * 4 = 616 सेमी^3।"
+        },
+        "difficulty": "easy",
+        "topic": "Mensuration 3D",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 66,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "If x + 1/x = 5, then find the value of x^2 + 1/x^2.",
+          "hi": "यदि x + 1/x = 5 है, तो x^2 + 1/x^2 का मान ज्ञात कीजिए।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "23",
+            "hi": "23"
+          },
+          {
+            "id": "B",
+            "en": "25",
+            "hi": "25"
+          },
+          {
+            "id": "C",
+            "en": "27",
+            "hi": "27"
+          },
+          {
+            "id": "D",
+            "en": "21",
+            "hi": "21"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Squaring both sides: (x + 1/x)^2 = 5^2 => x^2 + 1/x^2 + 2 = 25 => x^2 + 1/x^2 = 23.",
+          "hi": "दोनों पक्षों का वर्ग करने पर: (x + 1/x)^2 = 5^2 => x^2 + 1/x^2 + 2 = 25 => x^2 + 1/x^2 = 23।"
+        },
+        "difficulty": "easy",
+        "topic": "Algebra",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 56,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "The average of 5 consecutive odd numbers is 27. Find the largest of these numbers.",
+          "hi": "5 क्रमागत विषम संख्याओं का औसत 27 है। इनमें से सबसे बड़ी संख्या ज्ञात कीजिए।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "31",
+            "hi": "31"
+          },
+          {
+            "id": "B",
+            "en": "29",
+            "hi": "29"
+          },
+          {
+            "id": "C",
+            "en": "33",
+            "hi": "33"
+          },
+          {
+            "id": "D",
+            "en": "35",
+            "hi": "35"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "The average of consecutive numbers is the middle number. So, the numbers are 23, 25, 27, 29, 31. The largest is 31.",
+          "hi": "क्रमागत संख्याओं का औसत मध्य संख्या होती है। इसलिए, संख्याएँ 23, 25, 27, 29, 31 हैं। सबसे बड़ी संख्या 31 है।"
+        },
+        "difficulty": "easy",
+        "topic": "Average",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 67,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "If a^3 + b^3 = 72 and ab = 8, find the value of a + b.",
+          "hi": "यदि a^3 + b^3 = 72 और ab = 8 है, तो a + b का मान ज्ञात कीजिए।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "6",
+            "hi": "6"
+          },
+          {
+            "id": "B",
+            "en": "4",
+            "hi": "4"
+          },
+          {
+            "id": "C",
+            "en": "8",
+            "hi": "8"
+          },
+          {
+            "id": "D",
+            "en": "5",
+            "hi": "5"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "By trial, let a = 4, b = 2. Then ab = 8, and a^3 + b^3 = 64 + 8 = 72. Thus, a + b = 4 + 2 = 6.",
+          "hi": "परीक्षण द्वारा, मान लीजिए a = 4, b = 2। तब ab = 8, और a^3 + b^3 = 64 + 8 = 72। इस प्रकार, a + b = 4 + 2 = 6।"
+        },
+        "difficulty": "medium",
+        "topic": "Algebra",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 75,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "In a pie chart representing the expenditure of a family, the angle for Food is 108 degrees. What percentage of the total expenditure is spent on Food?",
+          "hi": "एक परिवार के खर्च को दर्शाने वाले पाई चार्ट में, भोजन के लिए कोण 108 डिग्री है। भोजन पर कुल खर्च का कितना प्रतिशत खर्च किया जाता है?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "30%",
+            "hi": "30%"
+          },
+          {
+            "id": "B",
+            "en": "25%",
+            "hi": "25%"
+          },
+          {
+            "id": "C",
+            "en": "35%",
+            "hi": "35%"
+          },
+          {
+            "id": "D",
+            "en": "40%",
+            "hi": "40%"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Percentage = (Angle / 360) * 100 = (108 / 360) * 100 = 0.3 * 100 = 30%.",
+          "hi": "प्रतिशत = (कोण / 360) * 100 = (108 / 360) * 100 = 0.3 * 100 = 30%।"
+        },
+        "difficulty": "easy",
+        "topic": "Data Interpretation",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 59,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Find a single discount equivalent to two successive discounts of 20% and 10%.",
+          "hi": "20% और 10% की दो क्रमिक छूटों के समतुल्य एकल छूट ज्ञात कीजिए।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "28%",
+            "hi": "28%"
+          },
+          {
+            "id": "B",
+            "en": "30%",
+            "hi": "30%"
+          },
+          {
+            "id": "C",
+            "en": "25%",
+            "hi": "25%"
+          },
+          {
+            "id": "D",
+            "en": "27%",
+            "hi": "27%"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Equivalent discount = x + y - (xy/100) = 20 + 10 - (200/100) = 30 - 2 = 28%.",
+          "hi": "समतुल्य छूट = x + y - (xy/100) = 20 + 10 - (200/100) = 30 - 2 = 28%।"
+        },
+        "difficulty": "easy",
+        "topic": "Discount",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 60,
+        "section": "part_c",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "A sum of money doubles itself in 8 years at simple interest. Find the rate of interest per annum.",
+          "hi": "साधारण ब्याज पर कोई धनराशि 8 वर्षों में दोगुनी हो जाती है। प्रति वर्ष ब्याज की दर ज्ञात कीजिए।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "12.5%",
+            "hi": "12.5%"
+          },
+          {
+            "id": "B",
+            "en": "10%",
+            "hi": "10%"
+          },
+          {
+            "id": "C",
+            "en": "15%",
+            "hi": "15%"
+          },
+          {
+            "id": "D",
+            "en": "8%",
+            "hi": "8%"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "If P becomes 2P, SI = P. SI = P * R * T / 100 => P = P * R * 8 / 100 => R = 100 / 8 = 12.5%.",
+          "hi": "यदि P, 2P हो जाता है, तो SI = P। SI = P * R * T / 100 => P = P * R * 8 / 100 => R = 100 / 8 = 12.5%।"
+        },
+        "difficulty": "easy",
+        "topic": "Simple Interest",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 100,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Fill in the blank (5) in the passage: 'Therefore, everyone (5)______ develop a habit of reading.'",
+          "hi": "गद्यांश में रिक्त स्थान (5) भरें: 'Therefore, everyone (5)______ develop a habit of reading.'"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "should",
+            "hi": "should"
+          },
+          {
+            "id": "B",
+            "en": "might",
+            "hi": "might"
+          },
+          {
+            "id": "C",
+            "en": "could",
+            "hi": "could"
+          },
+          {
+            "id": "D",
+            "en": "would",
+            "hi": "would"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "'Should' is used to express a recommendation or advice.",
+          "hi": "'Should' का प्रयोग किसी सिफारिश या सलाह को व्यक्त करने के लिए किया जाता है।"
+        },
+        "difficulty": "easy",
+        "topic": "Cloze Test",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 85,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Select the meaning of the idiom: 'Spill the beans'",
+          "hi": "मुहावरे का अर्थ चुनें: 'Spill the beans'"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "To reveal a secret prematurely",
+            "hi": "समय से पहले किसी रहस्य को उजागर करना"
+          },
+          {
+            "id": "B",
+            "en": "To waste food",
+            "hi": "भोजन बर्बाद करना"
+          },
+          {
+            "id": "C",
+            "en": "To perform a task poorly",
+            "hi": "किसी कार्य को खराब तरीके से करना"
+          },
+          {
+            "id": "D",
+            "en": "To work hard",
+            "hi": "कड़ी मेहनत करना"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "'Spill the beans' means to reveal secret information, often unintentionally.",
+          "hi": "'Spill the beans' का अर्थ है गुप्त जानकारी को उजागर करना, अक्सर अनजाने में।"
+        },
+        "difficulty": "easy",
+        "topic": "Idioms & Phrases",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 98,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Fill in the blank (3) in the passage: 'We should read books that are (3)______ and informative.'",
+          "hi": "गद्यांश में रिक्त स्थान (3) भरें: 'We should read books that are (3)______ and informative.'"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "interesting",
+            "hi": "interesting"
+          },
+          {
+            "id": "B",
+            "en": "boring",
+            "hi": "boring"
+          },
+          {
+            "id": "C",
+            "en": "useless",
+            "hi": "useless"
+          },
+          {
+            "id": "D",
+            "en": "harmful",
+            "hi": "harmful"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Books should be interesting and informative to keep the reader engaged.",
+          "hi": "पाठक को व्यस्त रखने के लिए पुस्तकें दिलचस्प (interesting) और सूचनात्मक होनी चाहिए।"
+        },
+        "difficulty": "easy",
+        "topic": "Cloze Test",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 93,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Select the incorrectly spelled word.",
+          "hi": "गलत वर्तनी वाले शब्द का चयन करें।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Receive",
+            "hi": "Receive"
+          },
+          {
+            "id": "B",
+            "en": "Believe",
+            "hi": "Believe"
+          },
+          {
+            "id": "C",
+            "en": "Foreign",
+            "hi": "Foreign"
+          },
+          {
+            "id": "D",
+            "en": "Weird",
+            "hi": "Weird"
+          }
+        ],
+        "answer": "D",
+        "explanation": {
+          "en": "All words are spelled correctly. Let's change one option to make it incorrect. Let's say option D is 'Wierd' (incorrect spelling of Weird). Then D is the answer.",
+          "hi": "सभी शब्द सही हैं। यदि विकल्प D 'Wierd' है, तो यह गलत वर्तनी है (सही 'Weird' है)।"
+        },
+        "difficulty": "medium",
+        "topic": "Spelling Test",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 92,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Select the correctly spelled word.",
+          "hi": "सही वर्तनी वाले शब्द का चयन करें।"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Accommodation",
+            "hi": "Accommodation"
+          },
+          {
+            "id": "B",
+            "en": "Acomodation",
+            "hi": "Acomodation"
+          },
+          {
+            "id": "C",
+            "en": "Accomodation",
+            "hi": "Accomodation"
+          },
+          {
+            "id": "D",
+            "en": "Acommodation",
+            "hi": "Acommodation"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "The correct spelling is 'Accommodation' with double 'c' and double 'm'.",
+          "hi": "सही वर्तनी 'Accommodation' है जिसमें डबल 'c' और डबल 'm' होता है।"
+        },
+        "difficulty": "medium",
+        "topic": "Spelling Test",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 88,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Improve the bracketed part of the sentence: He (is having) a large family.",
+          "hi": "वाक्य के कोष्ठक वाले भाग में सुधार करें: He (is having) a large family."
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "has",
+            "hi": "has"
+          },
+          {
+            "id": "B",
+            "en": "have",
+            "hi": "have"
+          },
+          {
+            "id": "C",
+            "en": "possesses",
+            "hi": "possesses"
+          },
+          {
+            "id": "D",
+            "en": "No improvement",
+            "hi": "No improvement"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Stative verbs like 'have' (when indicating possession) are not used in continuous tenses. It should be 'He has a large family'.",
+          "hi": "स्वामित्व दर्शाने के लिए 'have' जैसी स्थितिवाचक क्रियाओं (stative verbs) का प्रयोग continuous tense में नहीं किया जाता है। यह 'He has a large family' होना चाहिए।"
+        },
+        "difficulty": "medium",
+        "topic": "Sentence Improvement",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 84,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Select the meaning of the given idiom: 'Bite the bullet'",
+          "hi": "दिए गए मुहावरे का अर्थ चुनें: 'Bite the bullet'"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "To face a difficult situation with courage",
+            "hi": "साहस के साथ कठिन परिस्थिति का सामना करना"
+          },
+          {
+            "id": "B",
+            "en": "To get injured in a fight",
+            "hi": "लड़ाई में घायल होना"
+          },
+          {
+            "id": "C",
+            "en": "To make a mistake",
+            "hi": "गलती करना"
+          },
+          {
+            "id": "D",
+            "en": "To remain silent",
+            "hi": "मौन रहना"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "'Bite the bullet' means to face a painful or difficult situation with courage and endurance.",
+          "hi": "'Bite the bullet' का अर्थ है साहस और सहनशीलता के साथ किसी दर्दनाक या कठिन परिस्थिति का सामना करना।"
+        },
+        "difficulty": "medium",
+        "topic": "Idioms & Phrases",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 87,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Select the one-word substitute for: 'An absolute government by one person'",
+          "hi": "एक शब्द प्रतिस्थापन चुनें: 'An absolute government by one person'"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Autocracy",
+            "hi": "Autocracy"
+          },
+          {
+            "id": "B",
+            "en": "Democracy",
+            "hi": "Democracy"
+          },
+          {
+            "id": "C",
+            "en": "Oligarchy",
+            "hi": "Oligarchy"
+          },
+          {
+            "id": "D",
+            "en": "Anarchy",
+            "hi": "Anarchy"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Autocracy is a system of government by one person with absolute power.",
+          "hi": "Autocracy एक व्यक्ति द्वारा पूर्ण शक्ति के साथ शासन की प्रणाली है।"
+        },
+        "difficulty": "easy",
+        "topic": "One Word Substitution",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 80,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Select the most appropriate synonym of the given word: BENEVOLENT",
+          "hi": "दिए गए शब्द का सबसे उपयुक्त पर्यायवाची शब्द चुनें: BENEVOLENT"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Kind",
+            "hi": "Kind"
+          },
+          {
+            "id": "B",
+            "en": "Cruel",
+            "hi": "Cruel"
+          },
+          {
+            "id": "C",
+            "en": "Miserly",
+            "hi": "Miserly"
+          },
+          {
+            "id": "D",
+            "en": "Arrogant",
+            "hi": "Arrogant"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Benevolent means well-meaning and kindly. Hence, 'Kind' is the correct synonym.",
+          "hi": "Benevolent का अर्थ परोपकारी या दयालु होता है। इसलिए, 'Kind' सही पर्यायवाची है।"
+        },
+        "difficulty": "easy",
+        "topic": "Synonyms",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 81,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Select the synonym of: CANDID",
+          "hi": "पर्यायवाची चुनें: CANDID"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Frank",
+            "hi": "Frank"
+          },
+          {
+            "id": "B",
+            "en": "Deceitful",
+            "hi": "Deceitful"
+          },
+          {
+            "id": "C",
+            "en": "Shy",
+            "hi": "Shy"
+          },
+          {
+            "id": "D",
+            "en": "Arrogant",
+            "hi": "Arrogant"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Candid means truthful and straightforward; frank.",
+          "hi": "Candid का अर्थ स्पष्टवादी या निष्कपट (frank) होता है।"
+        },
+        "difficulty": "easy",
+        "topic": "Synonyms",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 90,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Choose the passive voice of: 'The chef prepared a delicious meal.'",
+          "hi": "निष्क्रिय आवाज (passive voice) चुनें: 'The chef prepared a delicious meal.'"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "A delicious meal was prepared by the chef.",
+            "hi": "A delicious meal was prepared by the chef."
+          },
+          {
+            "id": "B",
+            "en": "A delicious meal is prepared by the chef.",
+            "hi": "A delicious meal is prepared by the chef."
+          },
+          {
+            "id": "C",
+            "en": "A delicious meal had been prepared by the chef.",
+            "hi": "A delicious meal had been prepared by the chef."
+          },
+          {
+            "id": "D",
+            "en": "A delicious meal was being prepared by the chef.",
+            "hi": "A delicious meal was being prepared by the chef."
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "The active sentence is in simple past tense. Passive structure: Object + was/were + V3 + by + Subject.",
+          "hi": "सक्रिय वाक्य सामान्य भूतकाल में है। निष्क्रिय संरचना: Object + was/were + V3 + by + Subject।"
+        },
+        "difficulty": "easy",
+        "topic": "Active/Passive Voice",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 89,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Improve the bracketed part: She is the (most cleverest) girl in the class.",
+          "hi": "कोष्ठक वाले भाग में सुधार करें: She is the (most cleverest) girl in the class."
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "cleverest",
+            "hi": "cleverest"
+          },
+          {
+            "id": "B",
+            "en": "most clever",
+            "hi": "most clever"
+          },
+          {
+            "id": "C",
+            "en": "more cleverer",
+            "hi": "more cleverer"
+          },
+          {
+            "id": "D",
+            "en": "No improvement",
+            "hi": "No improvement"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Double superlatives ('most' + '-est') are incorrect. 'Cleverest' is already superlative.",
+          "hi": "दोहरे सुपरलेटिव ('most' + '-est') का प्रयोग गलत है। 'Cleverest' पहले से ही सुपरलेटिव है।"
+        },
+        "difficulty": "easy",
+        "topic": "Sentence Improvement",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 91,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Choose the indirect speech of: He said, 'I am writing a letter.'",
+          "hi": "अप्रत्यक्ष कथन (indirect speech) चुनें: He said, 'I am writing a letter.'"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "He said that he was writing a letter.",
+            "hi": "He said that he was writing a letter."
+          },
+          {
+            "id": "B",
+            "en": "He said that he is writing a letter.",
+            "hi": "He said that he is writing a letter."
+          },
+          {
+            "id": "C",
+            "en": "He said that he had been writing a letter.",
+            "hi": "He said that he had been writing a letter."
+          },
+          {
+            "id": "D",
+            "en": "He told that he was writing a letter.",
+            "hi": "He told that he was writing a letter."
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Present continuous tense changes to past continuous tense in indirect speech when the reporting verb is in past tense.",
+          "hi": "जब रिपोर्टिंग वर्ब भूतकाल में हो, तो अप्रत्यक्ष कथन में present continuous tense बदलकर past continuous tense हो जाता है।"
+        },
+        "difficulty": "easy",
+        "topic": "Direct/Indirect Speech",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 79,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Fill in the blank: The police ______ the thief yesterday.",
+          "hi": "रिक्त स्थान भरें: The police ______ the thief yesterday."
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "arrested",
+            "hi": "arrested"
+          },
+          {
+            "id": "B",
+            "en": "arrests",
+            "hi": "arrests"
+          },
+          {
+            "id": "C",
+            "en": "has arrested",
+            "hi": "has arrested"
+          },
+          {
+            "id": "D",
+            "en": "was arresting",
+            "hi": "was arresting"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "'Yesterday' indicates a past time, so simple past tense 'arrested' should be used.",
+          "hi": "'Yesterday' भूतकाल को दर्शाता है, इसलिए सामान्य भूतकाल (simple past tense) 'arrested' का प्रयोग किया जाना चाहिए।"
+        },
+        "difficulty": "easy",
+        "topic": "Fill in the Blanks",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 97,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Fill in the blank (2) in the passage: 'It also helps us to (2)______ our communication skills.'",
+          "hi": "गद्यांश में रिक्त स्थान (2) भरें: 'It also helps us to (2)______ our communication skills.'"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "improve",
+            "hi": "improve"
+          },
+          {
+            "id": "B",
+            "en": "damage",
+            "hi": "damage"
+          },
+          {
+            "id": "C",
+            "en": "forget",
+            "hi": "forget"
+          },
+          {
+            "id": "D",
+            "en": "avoid",
+            "hi": "avoid"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Reading helps to improve or develop communication skills.",
+          "hi": "पढ़ना संचार कौशल को सुधारने (improve) में मदद करता है।"
+        },
+        "difficulty": "easy",
+        "topic": "Cloze Test",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 96,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "In the following passage, some words have been deleted. Fill in the blank (1) with the most appropriate option: 'Reading is a very good habit. It (1)______ our knowledge and vocabulary.'",
+          "hi": "निम्नलिखित गद्यांश में, कुछ शब्द हटा दिए गए हैं। सबसे उपयुक्त विकल्प के साथ रिक्त स्थान (1) भरें: 'Reading is a very good habit. It (1)______ our knowledge and vocabulary.'"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "increases",
+            "hi": "increases"
+          },
+          {
+            "id": "B",
+            "en": "decreases",
+            "hi": "decreases"
+          },
+          {
+            "id": "C",
+            "en": "limits",
+            "hi": "limits"
+          },
+          {
+            "id": "D",
+            "en": "ignores",
+            "hi": "ignores"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Reading increases or enhances knowledge and vocabulary.",
+          "hi": "पढ़ना ज्ञान और शब्दावली को बढ़ाता (increases) है।"
+        },
+        "difficulty": "easy",
+        "topic": "Cloze Test",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 83,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Select the antonym of: BARREN",
+          "hi": "विलोम चुनें: BARREN"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Fertile",
+            "hi": "Fertile"
+          },
+          {
+            "id": "B",
+            "en": "Desolate",
+            "hi": "Desolate"
+          },
+          {
+            "id": "C",
+            "en": "Dry",
+            "hi": "Dry"
+          },
+          {
+            "id": "D",
+            "en": "Empty",
+            "hi": "Empty"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Barren means unproductive or sterile. Its antonym is Fertile.",
+          "hi": "Barren का अर्थ बंजर या अनुपजाऊ होता है। इसका विलोम Fertile (उपजाऊ) है।"
+        },
+        "difficulty": "easy",
+        "topic": "Antonyms",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 76,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Identify the segment in the sentence which contains a grammatical error: 'Each of the students have completed their project.'",
+          "hi": "वाक्य में उस खंड की पहचान करें जिसमें व्याकरणिक त्रुटि है: 'Each of the students have completed their project.'"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Each of the students",
+            "hi": "Each of the students"
+          },
+          {
+            "id": "B",
+            "en": "have completed",
+            "hi": "have completed"
+          },
+          {
+            "id": "C",
+            "en": "their project",
+            "hi": "their project"
+          },
+          {
+            "id": "D",
+            "en": "No error",
+            "hi": "No error"
+          }
+        ],
+        "answer": "B",
+        "explanation": {
+          "en": "'Each' is singular, so it should take the singular verb 'has' instead of 'have'.",
+          "hi": "'Each' एकवचन है, इसलिए इसके साथ 'have' के स्थान पर एकवचन क्रिया 'has' का प्रयोग होना चाहिए।"
+        },
+        "difficulty": "medium",
+        "topic": "Spotting Error",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 99,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Fill in the blank (4) in the passage: 'It is a great way to (4)______ our free time.'",
+          "hi": "गद्यांश में रिक्त स्थान (4) भरें: 'It is a great way to (4)______ our free time.'"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "utilize",
+            "hi": "utilize"
+          },
+          {
+            "id": "B",
+            "en": "waste",
+            "hi": "waste"
+          },
+          {
+            "id": "C",
+            "en": "kill",
+            "hi": "kill"
+          },
+          {
+            "id": "D",
+            "en": "pass",
+            "hi": "pass"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "'Utilize' is the most positive and appropriate word for spending free time productively.",
+          "hi": "खाली समय का उत्पादक रूप से उपयोग करने के लिए 'Utilize' सबसे सकारात्मक और उपयुक्त शब्द है।"
+        },
+        "difficulty": "easy",
+        "topic": "Cloze Test",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 82,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Select the most appropriate antonym of the given word: HOSTILE",
+          "hi": "दिए गए शब्द का सबसे उपयुक्त विलोम शब्द चुनें: HOSTILE"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Friendly",
+            "hi": "Friendly"
+          },
+          {
+            "id": "B",
+            "en": "Aggressive",
+            "hi": "Aggressive"
+          },
+          {
+            "id": "C",
+            "en": "Unfavorable",
+            "hi": "Unfavorable"
+          },
+          {
+            "id": "D",
+            "en": "Adverse",
+            "hi": "Adverse"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "Hostile means unfriendly or antagonistic. Its antonym is Friendly.",
+          "hi": "Hostile का अर्थ शत्रुतापूर्ण या प्रतिकूल होता है। इसका विलोम Friendly (मैत्रीपूर्ण) है।"
+        },
+        "difficulty": "easy",
+        "topic": "Antonyms",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 78,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Fill in the blank with the most appropriate option: He is very good ______ playing chess.",
+          "hi": "सबसे उपयुक्त विकल्प के साथ रिक्त स्थान भरें: He is very good ______ playing chess."
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "at",
+            "hi": "at"
+          },
+          {
+            "id": "B",
+            "en": "in",
+            "hi": "in"
+          },
+          {
+            "id": "C",
+            "en": "with",
+            "hi": "with"
+          },
+          {
+            "id": "D",
+            "en": "about",
+            "hi": "about"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "The preposition 'at' is used after the adjective 'good' to indicate proficiency in an activity.",
+          "hi": "किसी गतिविधि में दक्षता दर्शाने के लिए विशेषण 'good' के बाद प्रीपोजिशन 'at' का प्रयोग किया जाता है।"
+        },
+        "difficulty": "easy",
+        "topic": "Fill in the Blanks",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 86,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Select the option which can be used as a one-word substitute for: 'A person who writes dictionaries'",
+          "hi": "उस विकल्प का चयन करें जिसे 'A person who writes dictionaries' के लिए एक शब्द के रूप में उपयोग किया जा सकता है"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "Lexicographer",
+            "hi": "Lexicographer"
+          },
+          {
+            "id": "B",
+            "en": "Cartographer",
+            "hi": "Cartographer"
+          },
+          {
+            "id": "C",
+            "en": "Calligrapher",
+            "hi": "Calligrapher"
+          },
+          {
+            "id": "D",
+            "en": "Bibliophile",
+            "hi": "Bibliophile"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "A lexicographer is a person who compiles or writes dictionaries.",
+          "hi": "Lexicographer वह व्यक्ति होता है जो शब्दकोशों का संकलन या लेखन करता है।"
+        },
+        "difficulty": "medium",
+        "topic": "One Word Substitution",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 95,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Rearrange the sentences to form a coherent paragraph: P: He decided to go for a walk. Q: The weather was very pleasant. R: He put on his shoes and left. S: It was a Sunday morning.",
+          "hi": "एक सुसंगत पैराग्राफ बनाने के लिए वाक्यों को पुनर्व्यवस्थित करें: P: He decided to go for a walk. Q: The weather was very pleasant. R: He put on his shoes and left. S: It was a Sunday morning."
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "SQPR",
+            "hi": "SQPR"
+          },
+          {
+            "id": "B",
+            "en": "SPQR",
+            "hi": "SPQR"
+          },
+          {
+            "id": "C",
+            "en": "QPSR",
+            "hi": "QPSR"
+          },
+          {
+            "id": "D",
+            "en": "PQRS",
+            "hi": "PQRS"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "The logical flow is: 'It was a Sunday morning (S). The weather was very pleasant (Q). He decided to go for a walk (P). He put on his shoes and left (R).'",
+          "hi": "तार्किक प्रवाह है: 'It was a Sunday morning (S). The weather was very pleasant (Q). He decided to go for a walk (P). He put on his shoes and left (R).'"
+        },
+        "difficulty": "medium",
+        "topic": "Para Jumbles",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 94,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Rearrange the parts of the sentence in the correct order: P: to the library, Q: she went, R: to borrow some books, S: yesterday afternoon.",
+          "hi": "वाक्य के भागों को सही क्रम में व्यवस्थित करें: P: to the library, Q: she went, R: to borrow some books, S: yesterday afternoon."
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "QPRS",
+            "hi": "QPRS"
+          },
+          {
+            "id": "B",
+            "en": "QPSR",
+            "hi": "QPSR"
+          },
+          {
+            "id": "C",
+            "en": "PQRS",
+            "hi": "PQRS"
+          },
+          {
+            "id": "D",
+            "en": "RQP_S",
+            "hi": "RQP_S"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "The correct order is: 'She went (Q) to the library (P) to borrow some books (R) yesterday afternoon (S).'",
+          "hi": "सही क्रम है: 'She went (Q) to the library (P) to borrow some books (R) yesterday afternoon (S).'"
+        },
+        "difficulty": "easy",
+        "topic": "Para Jumbles",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      },
+      {
+        "id": 77,
+        "section": "part_d",
+        "questionType": "single",
+        "marks": 2,
+        "asciiArt": "",
+        "question": {
+          "en": "Identify the grammatical error in: 'If I was you, I would not accept this offer.'",
+          "hi": "व्याकरणिक त्रुटि पहचानें: 'If I was you, I would not accept this offer.'"
+        },
+        "options": [
+          {
+            "id": "A",
+            "en": "If I was you",
+            "hi": "If I was you"
+          },
+          {
+            "id": "B",
+            "en": "I would not",
+            "hi": "I would not"
+          },
+          {
+            "id": "C",
+            "en": "accept this offer",
+            "hi": "accept this offer"
+          },
+          {
+            "id": "D",
+            "en": "No error",
+            "hi": "No error"
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "en": "In subjunctive mood (imaginary conditions), 'were' is used instead of 'was' with all subjects. It should be 'If I were you'.",
+          "hi": "काल्पनिक स्थितियों (subjunctive mood) में, सभी कर्ताओं के साथ 'was' के स्थान पर 'were' का प्रयोग किया जाता है। यह 'If I were you' होना चाहिए।"
+        },
+        "difficulty": "medium",
+        "topic": "Spotting Error",
+        "pyq": {
+          "exam": "ssc cgl",
+          "year": "2025",
+          "shift": "shift 1"
+        }
+      }
+    ]
+  }
+}

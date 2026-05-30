@@ -42,6 +42,10 @@ const APP_CONFIG = {
     {
       label: "SSC CGL 12-09-2025 Shift 2",
       file: "ssc/cgl/ssc_cgl_12-9-2025_shift_2.json"
+    },
+    {
+      label: "SSC CGL 13-09-2025 Shift 1",
+      file: "ssc/cgl/ssc_cgl_13-9-2025_shift_1.json"
     }
   ]
 };
@@ -2458,6 +2462,7 @@ Rules:
 - Preserve the exact sections, section order, question order, options, answer key, and bilingual English/Hindi text as closely as possible.
 - Every question must have exactly 4 options with ids A, B, C, D.
 - The answer must be A, B, C, or D.
+- IMPORTANT: If a question requires a visual diagram (e.g., dice positions, embedded figures), you MUST provide a special character-based image (ASCII art) representing the diagram in the "asciiArt" field. Do not just say "as shown in the figure".
 - Use this schema exactly:
 {
   "exam": {
@@ -2485,6 +2490,7 @@ Rules:
         "questionType": "single",
         "marks": 2,
         "question": {"en": "Question text", "hi": "प्रश्न पाठ"},
+        "asciiArt": "ASCII art here if needed (use \\n for newlines), else empty string",
         "options": [
           {"id": "A", "en": "Option A", "hi": "विकल्प A"},
           {"id": "B", "en": "Option B", "hi": "विकल्प B"},
@@ -2575,6 +2581,7 @@ function normalizeExamQuestion(q, id, exam) {
     section: q.section || "part_a",
     questionType: q.questionType || "single",
     marks: Number(q.marks) || 2,
+    asciiArt: q.asciiArt || "",
     question: {
       en: typeof q.question === "string" ? q.question : (q.question?.en || ""),
       hi: typeof q.question === "string" ? q.question : (q.question?.hi || q.question?.en || "")
@@ -2761,6 +2768,7 @@ function openExamTestScreen(examJson) {
         <span class="lang-en">${escapeHtml(q.question.en)}</span>
         <span class="lang-hi">${escapeHtml(q.question.hi)}</span>
       </h3>
+      ${q.asciiArt ? `<pre style="font-family: monospace; background: rgba(128,128,128,0.1); padding: 12px; border-radius: 6px; overflow-x: auto; line-height: 1.2; margin-bottom: 14px; white-space: pre;">${escapeHtml(q.asciiArt)}</pre>` : ""}
       <div class="exam-options">
         ${q.options.map(opt => `
           <label class="exam-option" data-option="${opt.id}">
