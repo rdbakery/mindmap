@@ -124,6 +124,7 @@ function enableAdminMode() {
 }
 function disableAdminMode() {
   isAdmin = false;
+  localStorage.removeItem("isAdmin");
   alert("Admin mode disabled");
   render();
 }
@@ -362,6 +363,10 @@ let undoStack=[], redoStack=[];
 
 /* ================= INIT ================= */
 (async()=>{
+  if (localStorage.getItem("isAdmin") === "true") {
+    isAdmin = true;
+  }
+
   await document.fonts.ready;
   const maps=await listMaps();
   if(!maps.length){
@@ -633,6 +638,7 @@ async function refreshTestSelector() {
       selector.parentNode.insertBefore(genAiTestBtn, selector.nextSibling);
     }
   }
+  genAiTestBtn.style.display = isAdmin ? "inline-block" : "none";
 }
 
 let allCollapsed = false;
@@ -1269,6 +1275,11 @@ async function render(){
     exportPdfBtn.style.display = APP_CONFIG.features.exportPDF ? "" : "none";
   }
 
+  const genAiTestBtn = document.getElementById("genAiTestBtn");
+  if (genAiTestBtn) {
+    genAiTestBtn.style.display = isAdmin ? "inline-block" : "none";
+  }
+
   updateSearchIndicator(); // ✅ add here
 }
 
@@ -1417,7 +1428,7 @@ ${APP_CONFIG.features.youtube ? (isAdmin
       `
       : ""
     )) : ""}
-  <button onclick="openQuizSettingsModal('${n.id}')">🤖 Generate AI Quiz</button>
+  ${isAdmin ? `<button onclick="openQuizSettingsModal('${n.id}')">🤖 Generate AI Quiz</button>` : ""}
   <button onclick="deleteNode('${n.id}')">🗑 Delete</button>
 `;
 
@@ -2287,6 +2298,8 @@ async function startSelectedTest(filePath) {
 }
 
 function openTestSettingsModal() {
+  if (!isAdmin) return;
+
   const existing = document.getElementById('testSettingsModal');
   const existingOverlay = document.getElementById('testSettingsOverlay');
   if (existing) existing.remove();
@@ -3166,6 +3179,8 @@ async function getApiKey() {
 }
 
 function openQuizSettingsModal(id) {
+  if (!isAdmin) return;
+
   const node = find(currentMap, id);
   if (!node) return;
 
