@@ -1,0 +1,1308 @@
+{
+  "quizName": "3. English - Active ⬌ Passive Voice",
+  "mapName": "3. English",
+  "score": "Not submitted",
+  "timerSeconds": 900,
+  "questions": [
+    {
+      "question": {
+        "en": "Change the following sentence into Passive Voice: 'She writes a letter.'",
+        "hi": "निम्नलिखित वाक्य को Passive Voice में बदलें: 'She writes a letter.'"
+      },
+      "options": {
+        "en": [
+          "A letter is written by her.",
+          "A letter was written by her.",
+          "A letter is being written by her.",
+          "A letter has been written by her."
+        ],
+        "hi": [
+          "A letter is written by her.",
+          "A letter was written by her.",
+          "A letter is being written by her.",
+          "A letter has been written by her."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "For Present Simple tense, the passive structure is: Object + is/am/are + V3 + by + Subject. Here, 'a letter' is singular, so we use 'is' + 'written' (V3).",
+        "hi": "Present Simple tense के लिए, passive structure है: Object + is/am/are + V3 + by + Subject। यहाँ, 'a letter' एकवचन (singular) है, इसलिए हम 'is' + 'written' (V3) का उपयोग करते हैं।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Active Voice: 'The grass is cut by the gardener every week.'",
+        "hi": "निम्नलिखित वाक्य को Active Voice में बदलें: 'The grass is cut by the gardener every week.'"
+      },
+      "options": {
+        "en": [
+          "The gardener cuts the grass every week.",
+          "The gardener cut the grass every week.",
+          "The gardener is cutting the grass every week.",
+          "The gardener has cut the grass every week."
+        ],
+        "hi": [
+          "The gardener cuts the grass every week.",
+          "The gardener cut the grass every week.",
+          "The gardener is cutting the grass every week.",
+          "The gardener has cut the grass every week."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The passive sentence uses 'is + V3' (is cut), which indicates Present Simple tense. The active structure is: Subject + V1(s/es) + Object. 'The gardener' is singular, so we use 'cuts'.",
+        "hi": "Passive वाक्य में 'is + V3' (is cut) का उपयोग किया गया है, जो Present Simple tense को दर्शाता है। Active structure है: Subject + V1(s/es) + Object। 'The gardener' एकवचन है, इसलिए हम 'cuts' का उपयोग करते हैं।"
+      },
+      "pyq": "SSC CHSL 2020"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Passive Voice: 'He is playing cricket.'",
+        "hi": "निम्नलिखित वाक्य को Passive Voice में बदलें: 'He is playing cricket.'"
+      },
+      "options": {
+        "en": [
+          "Cricket is being played by him.",
+          "Cricket is played by him.",
+          "Cricket was being played by him.",
+          "Cricket has been played by him."
+        ],
+        "hi": [
+          "Cricket is being played by him.",
+          "Cricket is played by him.",
+          "Cricket was being played by him.",
+          "Cricket has been played by him."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "For Present Continuous tense, the passive structure is: Object + is/am/are + being + V3 + by + Subject. 'Cricket' is singular, so we use 'is being played'.",
+        "hi": "Present Continuous tense के लिए, passive structure है: Object + is/am/are + being + V3 + by + Subject। 'Cricket' एकवचन है, इसलिए हम 'is being played' का उपयोग करते हैं।"
+      },
+      "pyq": "SSC CGL 2022"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Active Voice: 'A new house is being built by them.'",
+        "hi": "निम्नलिखित वाक्य को Active Voice में बदलें: 'A new house is being built by them.'"
+      },
+      "options": {
+        "en": [
+          "They are building a new house.",
+          "They build a new house.",
+          "They were building a new house.",
+          "They have been building a new house."
+        ],
+        "hi": [
+          "They are building a new house.",
+          "They build a new house.",
+          "They were building a new house.",
+          "They have been building a new house."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The passive sentence uses 'is being built' (is/am/are + being + V3), which indicates Present Continuous tense. The active structure is: Subject + is/am/are + V1+ing + Object.",
+        "hi": "Passive वाक्य में 'is being built' (is/am/are + being + V3) का उपयोग किया गया है, जो Present Continuous tense को दर्शाता है। Active structure है: Subject + is/am/are + V1+ing + Object।"
+      },
+      "pyq": "SSC MTS 2021"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Passive Voice: 'They have completed the work.'",
+        "hi": "निम्नलिखित वाक्य को Passive Voice में बदलें: 'They have completed the work.'"
+      },
+      "options": {
+        "en": [
+          "The work has been completed by them.",
+          "The work have been completed by them.",
+          "The work was completed by them.",
+          "The work had been completed by them."
+        ],
+        "hi": [
+          "The work has been completed by them.",
+          "The work have been completed by them.",
+          "The work was completed by them.",
+          "The work had been completed by them."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "For Present Perfect tense, the passive structure is: Object + has/have + been + V3 + by + Subject. 'The work' is singular, so we use 'has been completed'.",
+        "hi": "Present Perfect tense के लिए, passive structure है: Object + has/have + been + V3 + by + Subject। 'The work' एकवचन है, इसलिए हम 'has been completed' का उपयोग करते हैं।"
+      },
+      "pyq": "SSC CGL 2019"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Active Voice: 'The book has been read by me.'",
+        "hi": "निम्नलिखित वाक्य को Active Voice में बदलें: 'The book has been read by me.'"
+      },
+      "options": {
+        "en": [
+          "I have read the book.",
+          "I read the book.",
+          "I am reading the book.",
+          "I had read the book."
+        ],
+        "hi": [
+          "I have read the book.",
+          "I read the book.",
+          "I am reading the book.",
+          "I had read the book."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The passive sentence uses 'has been read' (has/have + been + V3), indicating Present Perfect tense. The active structure is: Subject + has/have + V3 + Object. 'I' takes 'have'.",
+        "hi": "Passive वाक्य में 'has been read' (has/have + been + V3) का उपयोग किया गया है, जो Present Perfect tense को दर्शाता है। Active structure है: Subject + has/have + V3 + Object। 'I' के साथ 'have' का उपयोग होता है।"
+      },
+      "pyq": "NDA 2021"
+    },
+    {
+      "question": {
+        "en": "What is the Passive Voice of: 'She has been studying for two hours.'?",
+        "hi": "निम्नलिखित वाक्य का Passive Voice क्या होगा: 'She has been studying for two hours.'?"
+      },
+      "options": {
+        "en": [
+          "No passive voice possible.",
+          "She is being studied for two hours.",
+          "She has been being studied for two hours.",
+          "Two hours have been studied by her."
+        ],
+        "hi": [
+          "No passive voice possible.",
+          "She is being studied for two hours.",
+          "She has been being studied for two hours.",
+          "Two hours have been studied by her."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "According to the rules, Present Perfect Continuous tense does not have a passive voice form.",
+        "hi": "नियमों के अनुसार, Present Perfect Continuous tense का passive voice रूप नहीं होता है।"
+      },
+      "pyq": "CDS 2020"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Passive Voice: 'He wrote a letter.'",
+        "hi": "निम्नलिखित वाक्य को Passive Voice में बदलें: 'He wrote a letter.'"
+      },
+      "options": {
+        "en": [
+          "A letter was written by him.",
+          "A letter is written by him.",
+          "A letter had been written by him.",
+          "A letter was being written by him."
+        ],
+        "hi": [
+          "A letter was written by him.",
+          "A letter is written by him.",
+          "A letter had been written by him.",
+          "A letter was being written by him."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "For Past Simple tense (wrote), the passive structure is: Object + was/were + V3 + by + Subject. 'A letter' is singular, so we use 'was written'.",
+        "hi": "Past Simple tense (wrote) के लिए, passive structure है: Object + was/were + V3 + by + Subject। 'A letter' एकवचन है, इसलिए हम 'was written' का उपयोग करते हैं।"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Active Voice: 'The window was broken by the boy.'",
+        "hi": "निम्नलिखित वाक्य को Active Voice में बदलें: 'The window was broken by the boy.'"
+      },
+      "options": {
+        "en": [
+          "The boy broke the window.",
+          "The boy breaks the window.",
+          "The boy had broken the window.",
+          "The boy was breaking the window."
+        ],
+        "hi": [
+          "The boy broke the window.",
+          "The boy breaks the window.",
+          "The boy had broken the window.",
+          "The boy was breaking the window."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The passive sentence uses 'was broken' (was/were + V3), indicating Past Simple tense. The active structure is: Subject + V2 + Object. The V2 of 'break' is 'broke'.",
+        "hi": "Passive वाक्य में 'was broken' (was/were + V3) का उपयोग किया गया है, जो Past Simple tense को दर्शाता है। Active structure है: Subject + V2 + Object। 'break' का V2 रूप 'broke' है।"
+      },
+      "pyq": "SSC CHSL 2019"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Passive Voice: 'She was reading a book.'",
+        "hi": "निम्नलिखित वाक्य को Passive Voice में बदलें: 'She was reading a book.'"
+      },
+      "options": {
+        "en": [
+          "A book was being read by her.",
+          "A book was read by her.",
+          "A book is being read by her.",
+          "A book had been read by her."
+        ],
+        "hi": [
+          "A book was being read by her.",
+          "A book was read by her.",
+          "A book is being read by her.",
+          "A book had been read by her."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "For Past Continuous tense, the passive structure is: Object + was/were + being + V3 + by + Subject. 'A book' is singular, so we use 'was being read'.",
+        "hi": "Past Continuous tense के लिए, passive structure है: Object + was/were + being + V3 + by + Subject। 'A book' एकवचन है, इसलिए हम 'was being read' का उपयोग करते हैं।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Active Voice: 'The car was being repaired by the mechanic.'",
+        "hi": "निम्नलिखित वाक्य को Active Voice में बदलें: 'The car was being repaired by the mechanic.'"
+      },
+      "options": {
+        "en": [
+          "The mechanic was repairing the car.",
+          "The mechanic repaired the car.",
+          "The mechanic is repairing the car.",
+          "The mechanic had been repairing the car."
+        ],
+        "hi": [
+          "The mechanic was repairing the car.",
+          "The mechanic repaired the car.",
+          "The mechanic is repairing the car.",
+          "The mechanic had been repairing the car."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The passive sentence uses 'was being repaired' (was/were + being + V3), indicating Past Continuous tense. The active structure is: Subject + was/were + V1+ing + Object.",
+        "hi": "Passive वाक्य में 'was being repaired' (was/were + being + V3) का उपयोग किया गया है, जो Past Continuous tense को दर्शाता है। Active structure है: Subject + was/were + V1+ing + Object।"
+      },
+      "pyq": "SSC MTS 2020"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Passive Voice: 'They had finished the task.'",
+        "hi": "निम्नलिखित वाक्य को Passive Voice में बदलें: 'They had finished the task.'"
+      },
+      "options": {
+        "en": [
+          "The task had been finished by them.",
+          "The task was finished by them.",
+          "The task has been finished by them.",
+          "The task had finished by them."
+        ],
+        "hi": [
+          "The task had been finished by them.",
+          "The task was finished by them.",
+          "The task has been finished by them.",
+          "The task had finished by them."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "For Past Perfect tense, the passive structure is: Object + had + been + V3 + by + Subject.",
+        "hi": "Past Perfect tense के लिए, passive structure है: Object + had + been + V3 + by + Subject।"
+      },
+      "pyq": "SSC CGL 2022"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Active Voice: 'The match had been won by our team.'",
+        "hi": "निम्नलिखित वाक्य को Active Voice में बदलें: 'The match had been won by our team.'"
+      },
+      "options": {
+        "en": [
+          "Our team had won the match.",
+          "Our team won the match.",
+          "Our team has won the match.",
+          "Our team was winning the match."
+        ],
+        "hi": [
+          "Our team had won the match.",
+          "Our team won the match.",
+          "Our team has won the match.",
+          "Our team was winning the match."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The passive sentence uses 'had been won' (had + been + V3), indicating Past Perfect tense. The active structure is: Subject + had + V3 + Object.",
+        "hi": "Passive वाक्य में 'had been won' (had + been + V3) का उपयोग किया गया है, जो Past Perfect tense को दर्शाता है। Active structure है: Subject + had + V3 + Object।"
+      },
+      "pyq": "CDS 2019"
+    },
+    {
+      "question": {
+        "en": "What is the Passive Voice of: 'He had been working for two hours.'?",
+        "hi": "निम्नलिखित वाक्य का Passive Voice क्या होगा: 'He had been working for two hours.'?"
+      },
+      "options": {
+        "en": [
+          "No passive voice possible.",
+          "He was being worked for two hours.",
+          "He had been being worked for two hours.",
+          "Two hours had been worked by him."
+        ],
+        "hi": [
+          "No passive voice possible.",
+          "He was being worked for two hours.",
+          "He had been being worked for two hours.",
+          "Two hours had been worked by him."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "According to the rules, Past Perfect Continuous tense does not have a passive voice form.",
+        "hi": "नियमों के अनुसार, Past Perfect Continuous tense का passive voice रूप नहीं होता है।"
+      },
+      "pyq": "NDA 2022"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Passive Voice: 'They will visit the museum.'",
+        "hi": "निम्नलिखित वाक्य को Passive Voice में बदलें: 'They will visit the museum.'"
+      },
+      "options": {
+        "en": [
+          "The museum will be visited by them.",
+          "The museum will visit by them.",
+          "The museum would be visited by them.",
+          "The museum will have been visited by them."
+        ],
+        "hi": [
+          "The museum will be visited by them.",
+          "The museum will visit by them.",
+          "The museum would be visited by them.",
+          "The museum will have been visited by them."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "For Future Simple tense, the passive structure is: Object + will/shall + be + V3 + by + Subject.",
+        "hi": "Future Simple tense के लिए, passive structure है: Object + will/shall + be + V3 + by + Subject।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Active Voice: 'A song will be sung by her.'",
+        "hi": "निम्नलिखित वाक्य को Active Voice में बदलें: 'A song will be sung by her.'"
+      },
+      "options": {
+        "en": [
+          "She will sing a song.",
+          "She sings a song.",
+          "She will be singing a song.",
+          "She would sing a song."
+        ],
+        "hi": [
+          "She will sing a song.",
+          "She sings a song.",
+          "She will be singing a song.",
+          "She would sing a song."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The passive sentence uses 'will be sung' (will/shall + be + V3), indicating Future Simple tense. The active structure is: Subject + will/shall + V1 + Object.",
+        "hi": "Passive वाक्य में 'will be sung' (will/shall + be + V3) का उपयोग किया गया है, जो Future Simple tense को दर्शाता है। Active structure है: Subject + will/shall + V1 + Object।"
+      },
+      "pyq": "SSC CHSL 2021"
+    },
+    {
+      "question": {
+        "en": "What is the Passive Voice of: 'She will be cooking dinner.'?",
+        "hi": "निम्नलिखित वाक्य का Passive Voice क्या होगा: 'She will be cooking dinner.'?"
+      },
+      "options": {
+        "en": [
+          "No passive voice possible.",
+          "Dinner will be cooked by her.",
+          "Dinner will be being cooked by her.",
+          "Dinner would be cooked by her."
+        ],
+        "hi": [
+          "No passive voice possible.",
+          "Dinner will be cooked by her.",
+          "Dinner will be being cooked by her.",
+          "Dinner would be cooked by her."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "According to the rules, Future Continuous tense does not have a passive voice form.",
+        "hi": "नियमों के अनुसार, Future Continuous tense का passive voice रूप नहीं होता है।"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Passive Voice: 'He will have completed the work.'",
+        "hi": "निम्नलिखित वाक्य को Passive Voice में बदलें: 'He will have completed the work.'"
+      },
+      "options": {
+        "en": [
+          "The work will have been completed by him.",
+          "The work will be completed by him.",
+          "The work would have been completed by him.",
+          "The work will have completed by him."
+        ],
+        "hi": [
+          "The work will have been completed by him.",
+          "The work will be completed by him.",
+          "The work would have been completed by him.",
+          "The work will have completed by him."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "For Future Perfect tense, the passive structure is: Object + will/shall + have + been + V3 + by + Subject.",
+        "hi": "Future Perfect tense के लिए, passive structure है: Object + will/shall + have + been + V3 + by + Subject।"
+      },
+      "pyq": "SSC CGL 2022"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Active Voice: 'The project will have been submitted by them.'",
+        "hi": "निम्नलिखित वाक्य को Active Voice में बदलें: 'The project will have been submitted by them.'"
+      },
+      "options": {
+        "en": [
+          "They will have submitted the project.",
+          "They will submit the project.",
+          "They would have submitted the project.",
+          "They will have been submitting the project."
+        ],
+        "hi": [
+          "They will have submitted the project.",
+          "They will submit the project.",
+          "They would have submitted the project.",
+          "They will have been submitting the project."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The passive sentence uses 'will have been submitted' (will/shall + have + been + V3), indicating Future Perfect tense. The active structure is: Subject + will/shall + have + V3 + Object.",
+        "hi": "Passive वाक्य में 'will have been submitted' (will/shall + have + been + V3) का उपयोग किया गया है, जो Future Perfect tense को दर्शाता है। Active structure है: Subject + will/shall + have + V3 + Object।"
+      },
+      "pyq": "SSC CHSL 2022"
+    },
+    {
+      "question": {
+        "en": "What is the Passive Voice of: 'They will have been traveling for a week.'?",
+        "hi": "निम्नलिखित वाक्य का Passive Voice क्या होगा: 'They will have been traveling for a week.'?"
+      },
+      "options": {
+        "en": [
+          "No passive voice possible.",
+          "They will have been being traveled for a week.",
+          "A week will have been traveled by them.",
+          "They would have been traveling for a week."
+        ],
+        "hi": [
+          "No passive voice possible.",
+          "They will have been being traveled for a week.",
+          "A week will have been traveled by them.",
+          "They would have been traveling for a week."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "According to the rules, Future Perfect Continuous tense does not have a passive voice form.",
+        "hi": "नियमों के अनुसार, Future Perfect Continuous tense का passive voice रूप नहीं होता है।"
+      },
+      "pyq": "NDA 2020"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Passive Voice: 'My mother bakes delicious cakes.'",
+        "hi": "निम्नलिखित वाक्य को Passive Voice में बदलें: 'My mother bakes delicious cakes.'"
+      },
+      "options": {
+        "en": [
+          "Delicious cakes are baked by my mother.",
+          "Delicious cakes were baked by my mother.",
+          "Delicious cakes are being baked by my mother.",
+          "Delicious cakes have been baked by my mother."
+        ],
+        "hi": [
+          "Delicious cakes are baked by my mother.",
+          "Delicious cakes were baked by my mother.",
+          "Delicious cakes are being baked by my mother.",
+          "Delicious cakes have been baked by my mother."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Since 'bakes' is in Present Simple tense and 'delicious cakes' is plural, we use 'are' + V3 (baked).",
+        "hi": "चूंकि 'bakes' Present Simple tense में है और 'delicious cakes' बहुवचन (plural) है, इसलिए हम 'are' + V3 (baked) का उपयोग करते हैं।"
+      },
+      "pyq": "SSC MTS 2022"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Active Voice: 'The plants are watered by the gardener.'",
+        "hi": "निम्नलिखित वाक्य को Active Voice में बदलें: 'The plants are watered by the gardener.'"
+      },
+      "options": {
+        "en": [
+          "The gardener waters the plants.",
+          "The gardener is watering the plants.",
+          "The gardener watered the plants.",
+          "The gardener has watered the plants."
+        ],
+        "hi": [
+          "The gardener waters the plants.",
+          "The gardener is watering the plants.",
+          "The gardener watered the plants.",
+          "The gardener has watered the plants."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The passive sentence uses 'are watered' (Present Simple). The active subject 'the gardener' is singular, so we use 'waters' (V1+s).",
+        "hi": "Passive वाक्य में 'are watered' (Present Simple) का उपयोग किया गया है। Active subject 'the gardener' एकवचन है, इसलिए हम 'waters' (V1+s) का उपयोग करते हैं।"
+      },
+      "pyq": "SSC CGL 2018"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Passive Voice: 'The children are making a noise.'",
+        "hi": "निम्नलिखित वाक्य को Passive Voice में बदलें: 'The children are making a noise.'"
+      },
+      "options": {
+        "en": [
+          "A noise is being made by the children.",
+          "A noise was being made by the children.",
+          "A noise is made by the children.",
+          "A noise has been made by the children."
+        ],
+        "hi": [
+          "A noise is being made by the children.",
+          "A noise was being made by the children.",
+          "A noise is made by the children.",
+          "A noise has been made by the children."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'are making' is Present Continuous. 'a noise' is singular, so the passive form is 'is being made'.",
+        "hi": "'are making' Present Continuous है। 'a noise' एकवचन है, इसलिए passive रूप 'is being made' होगा।"
+      },
+      "pyq": "SSC CHSL 2018"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Active Voice: 'The wall is being painted by him.'",
+        "hi": "निम्नलिखित वाक्य को Active Voice में बदलें: 'The wall is being painted by him.'"
+      },
+      "options": {
+        "en": [
+          "He is painting the wall.",
+          "He paints the wall.",
+          "He was painting the wall.",
+          "He has painted the wall."
+        ],
+        "hi": [
+          "He is painting the wall.",
+          "He paints the wall.",
+          "He was painting the wall.",
+          "He has painted the wall."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'is being painted' indicates Present Continuous passive. The active structure uses 'is painting' with the subject 'He'.",
+        "hi": "'is being painted' Present Continuous passive को दर्शाता है। Active structure में subject 'He' के साथ 'is painting' का उपयोग होगा।"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Passive Voice: 'She has written three books.'",
+        "hi": "निम्नलिखित वाक्य को Passive Voice में बदलें: 'She has written three books.'"
+      },
+      "options": {
+        "en": [
+          "Three books have been written by her.",
+          "Three books has been written by her.",
+          "Three books were written by her.",
+          "Three books are written by her."
+        ],
+        "hi": [
+          "Three books have been written by her.",
+          "Three books has been written by her.",
+          "Three books were written by her.",
+          "Three books are written by her."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'has written' is Present Perfect. The new subject 'three books' is plural, so we use 'have been written'.",
+        "hi": "'has written' Present Perfect है। नया subject 'three books' बहुवचन है, इसलिए हम 'have been written' का उपयोग करते हैं।"
+      },
+      "pyq": "SSC MTS 2019"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Active Voice: 'The thief has been caught by the police.'",
+        "hi": "निम्नलिखित वाक्य को Active Voice में बदलें: 'The thief has been caught by the police.'"
+      },
+      "options": {
+        "en": [
+          "The police have caught the thief.",
+          "The police has caught the thief.",
+          "The police caught the thief.",
+          "The police are catching the thief."
+        ],
+        "hi": [
+          "The police have caught the thief.",
+          "The police has caught the thief.",
+          "The police caught the thief.",
+          "The police are catching the thief."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The noun 'police' is plural in usage, so it takes 'have' in the Present Perfect Active structure: Subject + have + V3 + Object.",
+        "hi": "संज्ञा (noun) 'police' का प्रयोग बहुवचन के रूप में होता है, इसलिए Present Perfect Active structure में इसके साथ 'have' का उपयोग होता है: Subject + have + V3 + Object।"
+      },
+      "pyq": "CDS 2021"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Passive Voice: 'The teacher punished the student.'",
+        "hi": "निम्नलिखित वाक्य को Passive Voice में बदलें: 'The teacher punished the student.'"
+      },
+      "options": {
+        "en": [
+          "The student was punished by the teacher.",
+          "The student is punished by the teacher.",
+          "The student had been punished by the teacher.",
+          "The student was being punished by the teacher."
+        ],
+        "hi": [
+          "The student was punished by the teacher.",
+          "The student is punished by the teacher.",
+          "The student had been punished by the teacher.",
+          "The student was being punished by the teacher."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'punished' is Past Simple. The singular object 'the student' becomes the subject and takes 'was punished'.",
+        "hi": "'punished' Past Simple है। एकवचन object 'the student' subject बन जाता है और इसके साथ 'was punished' का उपयोग होता है।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Active Voice: 'The novel was written by Charles Dickens.'",
+        "hi": "निम्नलिखित वाक्य को Active Voice में बदलें: 'The novel was written by Charles Dickens.'"
+      },
+      "options": {
+        "en": [
+          "Charles Dickens wrote the novel.",
+          "Charles Dickens writes the novel.",
+          "Charles Dickens had written the novel.",
+          "Charles Dickens was writing the novel."
+        ],
+        "hi": [
+          "Charles Dickens wrote the novel.",
+          "Charles Dickens writes the novel.",
+          "Charles Dickens had written the novel.",
+          "Charles Dickens was writing the novel."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'was written' indicates Past Simple passive. The active voice uses the V2 form 'wrote'.",
+        "hi": "'was written' Past Simple passive को दर्शाता है। Active voice में V2 रूप 'wrote' का उपयोग होता है।"
+      },
+      "pyq": "SSC CHSL 2021"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Passive Voice: 'They were playing football.'",
+        "hi": "निम्नलिखित वाक्य को Passive Voice में बदलें: 'They were playing football.'"
+      },
+      "options": {
+        "en": [
+          "Football was being played by them.",
+          "Football were being played by them.",
+          "Football was played by them.",
+          "Football had been played by them."
+        ],
+        "hi": [
+          "Football was being played by them.",
+          "Football were being played by them.",
+          "Football was played by them.",
+          "Football had been played by them."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'were playing' is Past Continuous. 'football' is singular, so it takes 'was being played' in the passive voice.",
+        "hi": "'were playing' Past Continuous है। 'football' एकवचन है, इसलिए passive voice में इसके साथ 'was being played' का उपयोग होता है।"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Active Voice: 'The house was being cleaned by Mary.'",
+        "hi": "निम्नलिखित वाक्य को Active Voice में बदलें: 'The house was being cleaned by Mary.'"
+      },
+      "options": {
+        "en": [
+          "Mary was cleaning the house.",
+          "Mary cleaned the house.",
+          "Mary is cleaning the house.",
+          "Mary had been cleaning the house."
+        ],
+        "hi": [
+          "Mary was cleaning the house.",
+          "Mary cleaned the house.",
+          "Mary is cleaning the house.",
+          "Mary had been cleaning the house."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'was being cleaned' is Past Continuous passive. The active structure is: Subject (Mary) + was/were + V1+ing (cleaning) + Object (the house).",
+        "hi": "'was being cleaned' Past Continuous passive है। Active structure है: Subject (Mary) + was/were + V1+ing (cleaning) + Object (the house)।"
+      },
+      "pyq": "NDA 2019"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Passive Voice: 'The storm had destroyed the crops.'",
+        "hi": "निम्नलिखित वाक्य को Passive Voice में बदलें: 'The storm had destroyed the crops.'"
+      },
+      "options": {
+        "en": [
+          "The crops had been destroyed by the storm.",
+          "The crops were destroyed by the storm.",
+          "The crops had destroyed by the storm.",
+          "The crops have been destroyed by the storm."
+        ],
+        "hi": [
+          "The crops had been destroyed by the storm.",
+          "The crops were destroyed by the storm.",
+          "The crops had destroyed by the storm.",
+          "The crops have been destroyed by the storm."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'had destroyed' is Past Perfect. The passive structure is: Object + had + been + V3 + by + Subject.",
+        "hi": "'had destroyed' Past Perfect है। Passive structure है: Object + had + been + V3 + by + Subject।"
+      },
+      "pyq": "SSC CHSL 2020"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Active Voice: 'The letter had been posted by John.'",
+        "hi": "निम्नलिखित वाक्य को Active Voice में बदलें: 'The letter had been posted by John.'"
+      },
+      "options": {
+        "en": [
+          "John had posted the letter.",
+          "John posted the letter.",
+          "John has posted the letter.",
+          "John was posting the letter."
+        ],
+        "hi": [
+          "John had posted the letter.",
+          "John posted the letter.",
+          "John has posted the letter.",
+          "John was posting the letter."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'had been posted' indicates Past Perfect passive. The active voice uses 'had + V3' (had posted).",
+        "hi": "'had been posted' Past Perfect passive को दर्शाता है। Active voice में 'had + V3' (had posted) का उपयोग होता है।"
+      },
+      "pyq": "SSC CGL 2019"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Passive Voice: 'I shall write a letter.'",
+        "hi": "निम्नलिखित वाक्य को Passive Voice में बदलें: 'I shall write a letter.'"
+      },
+      "options": {
+        "en": [
+          "A letter will be written by me.",
+          "A letter shall be written by me.",
+          "A letter would be written by me.",
+          "A letter will write by me."
+        ],
+        "hi": [
+          "A letter will be written by me.",
+          "A letter shall be written by me.",
+          "A letter would be written by me.",
+          "A letter will write by me."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "For third-person nouns like 'a letter', 'will be' is used in the passive form instead of 'shall be'. Structure: Object + will + be + V3 + by + Subject.",
+        "hi": "तीसरे पुरुष (third-person) की संज्ञाओं जैसे 'a letter' के लिए, passive रूप में 'shall be' के बजाय 'will be' का उपयोग किया जाता है। Structure: Object + will + be + V3 + by + Subject।"
+      },
+      "pyq": "SSC MTS 2021"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Active Voice: 'The meeting will be addressed by the President.'",
+        "hi": "निम्नलिखित वाक्य को Active Voice में बदलें: 'The meeting will be addressed by the President.'"
+      },
+      "options": {
+        "en": [
+          "The President will address the meeting.",
+          "The President addresses the meeting.",
+          "The President will be addressing the meeting.",
+          "The President would address the meeting."
+        ],
+        "hi": [
+          "The President will address the meeting.",
+          "The President addresses the meeting.",
+          "The President will be addressing the meeting.",
+          "The President would address the meeting."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'will be addressed' is Future Simple passive. The active voice uses 'will + V1' (will address).",
+        "hi": "'will be addressed' Future Simple passive है। Active voice में 'will + V1' (will address) का उपयोग होता है।"
+      },
+      "pyq": "CDS 2022"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Passive Voice: 'She will have finished the report.'",
+        "hi": "निम्नलिखित वाक्य को Passive Voice में बदलें: 'She will have finished the report.'"
+      },
+      "options": {
+        "en": [
+          "The report will have been finished by her.",
+          "The report will be finished by her.",
+          "The report would have been finished by her.",
+          "The report will have finished by her."
+        ],
+        "hi": [
+          "The report will have been finished by her.",
+          "The report will be finished by her.",
+          "The report would have been finished by her.",
+          "The report will have finished by her."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Future Perfect passive uses: Object + will/shall + have + been + V3 + by + Subject. Here, 'the report' + 'will have been finished'.",
+        "hi": "Future Perfect passive में उपयोग होता है: Object + will/shall + have + been + V3 + by + Subject। यहाँ, 'the report' + 'will have been finished' होगा।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Active Voice: 'The match will have been won by us.'",
+        "hi": "निम्नलिखित वाक्य को Active Voice में बदलें: 'The match will have been won by us.'"
+      },
+      "options": {
+        "en": [
+          "We will have won the match.",
+          "We will win the match.",
+          "We shall have won the match.",
+          "We would have won the match."
+        ],
+        "hi": [
+          "We will have won the match.",
+          "We will win the match.",
+          "We shall have won the match.",
+          "We would have won the match."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'will have been won' indicates Future Perfect passive. The active voice uses 'will/shall have + V3'. 'We' takes 'will/shall have won'. Option A is grammatically standard and correct.",
+        "hi": "'will have been won' Future Perfect passive को दर्शाता है। Active voice में 'will/shall have + V3' का उपयोग होता है। 'We' के साथ 'will/shall have won' का उपयोग होता है। Option A व्याकरण के अनुसार मानक और सही है।"
+      },
+      "pyq": "SSC CHSL 2021"
+    },
+    {
+      "question": {
+        "en": "What is the primary rule for changing active voice to passive voice regarding the subject and object?",
+        "hi": "सब्जेक्ट (subject) और ऑब्जेक्ट (object) के संबंध में एक्टिव वॉइस से पैसिव वॉइस में बदलने का प्राथमिक नियम क्या है?"
+      },
+      "options": {
+        "en": [
+          "The object of the active verb becomes the subject of the passive verb.",
+          "The subject remains the subject.",
+          "The object is completely removed.",
+          "The subject is changed to an adjective."
+        ],
+        "hi": [
+          "The object of the active verb becomes the subject of the passive verb.",
+          "The subject remains the subject.",
+          "The object is completely removed.",
+          "The subject is changed to an adjective."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The basic rule of active-to-passive conversion is to interchange the subject and the object (Object becomes the Subject).",
+        "hi": "एक्टिव से पैसिव रूपांतरण का मूल नियम सब्जेक्ट और ऑब्जेक्ट को आपस में बदलना है (ऑब्जेक्ट, सब्जेक्ट बन जाता है)।"
+      },
+      "pyq": "SSC MTS 2020"
+    },
+    {
+      "question": {
+        "en": "Which form of the main verb is always used in passive voice sentences?",
+        "hi": "पैसिव वॉइस (passive voice) के वाक्यों में मुख्य क्रिया (main verb) के किस रूप का हमेशा उपयोग किया जाता है?"
+      },
+      "options": {
+        "en": [
+          "Past Participle (V3)",
+          "Present Participle (V1+ing)",
+          "Simple Past (V2)",
+          "Base form (V1)"
+        ],
+        "hi": [
+          "Past Participle (V3)",
+          "Present Participle (V1+ing)",
+          "Simple Past (V2)",
+          "Base form (V1)"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "In passive voice, the main verb is always written in its Past Participle (V3) form, regardless of the tense.",
+        "hi": "पैसिव वॉइस में, काल (tense) चाहे जो भी हो, मुख्य क्रिया हमेशा अपने Past Participle (V3) रूप में लिखी जाती है।"
+      },
+      "pyq": "NDA 2021"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Passive Voice: 'People speak English all over the world.'",
+        "hi": "निम्नलिखित वाक्य को Passive Voice में बदलें: 'People speak English all over the world.'"
+      },
+      "options": {
+        "en": [
+          "English is spoken all over the world.",
+          "English was spoken all over the world.",
+          "English is being spoken all over the world.",
+          "English has been spoken all over the world."
+        ],
+        "hi": [
+          "English is spoken all over the world.",
+          "English was spoken all over the world.",
+          "English is being spoken all over the world.",
+          "English has been spoken all over the world."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'speak' is in Present Simple tense. The passive structure is: 'is/am/are + V3'. Since the agent 'by people' is obvious, it is omitted.",
+        "hi": "'speak' Present Simple tense में है। Passive structure 'is/am/are + V3' है। चूंकि कर्ता 'by people' स्पष्ट है, इसलिए इसे हटा दिया जाता है।"
+      },
+      "pyq": "SSC CGL 2022"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Passive Voice: 'Someone stole my pen yesterday.'",
+        "hi": "निम्नलिखित वाक्य को Passive Voice में बदलें: 'Someone stole my pen yesterday.'"
+      },
+      "options": {
+        "en": [
+          "My pen was stolen yesterday.",
+          "My pen is stolen yesterday.",
+          "My pen had been stolen yesterday.",
+          "My pen was being stolen yesterday."
+        ],
+        "hi": [
+          "My pen was stolen yesterday.",
+          "My pen is stolen yesterday.",
+          "My pen had been stolen yesterday.",
+          "My pen was being stolen yesterday."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'stole' is Past Simple tense. The passive structure is: 'was/were + V3'. Indefinite pronouns like 'someone' are omitted in the passive voice.",
+        "hi": "'stole' Past Simple tense में है। Passive structure 'was/were + V3' है। पैसिव वॉइस में 'someone' जैसे अनिश्चित सर्वनामों (indefinite pronouns) को हटा दिया जाता है।"
+      },
+      "pyq": "SSC CHSL 2022"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Passive Voice: 'She is taking a selfie.'",
+        "hi": "निम्नलिखित वाक्य को Passive Voice में बदलें: 'She is taking a selfie.'"
+      },
+      "options": {
+        "en": [
+          "A selfie is being taken by her.",
+          "A selfie is taken by her.",
+          "A selfie was being taken by her.",
+          "A selfie has been taken by her."
+        ],
+        "hi": [
+          "A selfie is being taken by her.",
+          "A selfie is taken by her.",
+          "A selfie was being taken by her.",
+          "A selfie has been taken by her."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'is taking' is Present Continuous. The passive voice uses 'is/am/are + being + V3'. 'A selfie' is singular, so we use 'is being taken'.",
+        "hi": "'is taking' Present Continuous है। Passive voice में 'is/am/are + being + V3' का उपयोग होता है। 'A selfie' एकवचन है, इसलिए 'is being taken' का उपयोग होगा।"
+      },
+      "pyq": "SSC MTS 2022"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Passive Voice: 'They were painting the doors.'",
+        "hi": "निम्नलिखित वाक्य को Passive Voice में बदलें: 'They were painting the doors.'"
+      },
+      "options": {
+        "en": [
+          "The doors were being painted by them.",
+          "The doors was being painted by them.",
+          "The doors were painted by them.",
+          "The doors had been painted by them."
+        ],
+        "hi": [
+          "The doors were being painted by them.",
+          "The doors was being painted by them.",
+          "The doors were painted by them.",
+          "The doors had been painted by them."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'were painting' is Past Continuous. 'the doors' is plural, so the passive form uses 'were being painted' (were + being + V3).",
+        "hi": "'were painting' Past Continuous है। 'the doors' बहुवचन है, इसलिए passive रूप में 'were being painted' (were + being + V3) का उपयोग होगा।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "Change the following interrogative sentence into Passive Voice: 'Has anyone answered your question?'",
+        "hi": "निम्नलिखित प्रश्नवाचक वाक्य को Passive Voice में बदलें: 'Has anyone answered your question?'"
+      },
+      "options": {
+        "en": [
+          "Has your question been answered?",
+          "Have your question been answered?",
+          "Was your question answered?",
+          "Had your question been answered?"
+        ],
+        "hi": [
+          "Has your question been answered?",
+          "Have your question been answered?",
+          "Was your question answered?",
+          "Had your question been answered?"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "For Present Perfect interrogative, the passive structure is: Has/Have + Object + been + V3? Since 'your question' is singular, we use 'Has'.",
+        "hi": "Present Perfect interrogative के लिए, passive structure है: Has/Have + Object + been + V3? चूंकि 'your question' एकवचन है, इसलिए हम 'Has' का उपयोग करते हैं।"
+      },
+      "pyq": "SSC CHSL 2020"
+    },
+    {
+      "question": {
+        "en": "Change the following interrogative sentence into Passive Voice: 'Had they completed the project before the deadline?'",
+        "hi": "निम्नलिखित प्रश्नवाचक वाक्य को Passive Voice में बदलें: 'Had they completed the project before the deadline?'"
+      },
+      "options": {
+        "en": [
+          "Had the project been completed before the deadline?",
+          "Was the project completed before the deadline?",
+          "Has the project been completed before the deadline?",
+          "Had the project completed before the deadline?"
+        ],
+        "hi": [
+          "Had the project been completed before the deadline?",
+          "Was the project completed before the deadline?",
+          "Has the project been completed before the deadline?",
+          "Had the project completed before the deadline?"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "For Past Perfect interrogative, the passive structure is: Had + Object + been + V3?",
+        "hi": "Past Perfect interrogative के लिए, passive structure है: Had + Object + been + V3?"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "Change the following sentence into Passive Voice: 'Who will pay the bill?'",
+        "hi": "निम्नलिखित वाक्य को Passive Voice में बदलें: 'Who will pay the bill?'"
+      },
+      "options": {
+        "en": [
+          "By whom will the bill be paid?",
+          "Who will be paid the bill?",
+          "By whom would the bill be paid?",
+          "By whom will the bill paid?"
+        ],
+        "hi": [
+          "By whom will the bill be paid?",
+          "Who will be paid the bill?",
+          "By whom would the bill be paid?",
+          "By whom will the bill paid?"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'Who' changes to 'By whom' in passive voice. The structure for Future Simple interrogative is: By whom + will/shall + Object + be + V3?",
+        "hi": "Passive voice में 'Who' बदलकर 'By whom' हो जाता है। Future Simple interrogative के लिए structure है: By whom + will/shall + Object + be + V3?"
+      },
+      "pyq": "SSC CHSL 2019"
+    },
+    {
+      "question": {
+        "en": "Change the following interrogative sentence into Passive Voice: 'Does he help the poor?'",
+        "hi": "निम्नलिखित प्रश्नवाचक वाक्य को Passive Voice में बदलें: 'Does he help the poor?'"
+      },
+      "options": {
+        "en": [
+          "Are the poor helped by him?",
+          "Is the poor helped by him?",
+          "Were the poor helped by him?",
+          "Are the poor being helped by him?"
+        ],
+        "hi": [
+          "Are the poor helped by him?",
+          "Is the poor helped by him?",
+          "Were the poor helped by him?",
+          "Are the poor being helped by him?"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'the poor' is a plural collective noun. For Present Simple interrogative, we use: Is/Am/Are + Object + V3 + by + Subject? Thus, 'Are the poor helped...' is correct.",
+        "hi": "'the poor' एक बहुवचन सामूहिक संज्ञा (plural collective noun) है। Present Simple interrogative के लिए, हम उपयोग करते हैं: Is/Am/Are + Object + V3 + by + Subject? इस प्रकार, 'Are the poor helped...' सही है।"
+      },
+      "pyq": "CDS 2020"
+    },
+    {
+      "question": {
+        "en": "Change the following interrogative sentence into Passive Voice: 'Did you write this letter?'",
+        "hi": "निम्नलिखित प्रश्नवाचक वाक्य को Passive Voice में बदलें: 'Did you write this letter?'"
+      },
+      "options": {
+        "en": [
+          "Was this letter written by you?",
+          "Is this letter written by you?",
+          "Had this letter been written by you?",
+          "Was this letter being written by you?"
+        ],
+        "hi": [
+          "Was this letter written by you?",
+          "Is this letter written by you?",
+          "Had this letter been written by you?",
+          "Was this letter being written by you?"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'Did' indicates Past Simple. The passive interrogative structure is: Was/Were + Object + V3 + by + Subject? 'this letter' is singular, so we use 'Was'.",
+        "hi": "'Did' Past Simple को दर्शाता है। Passive interrogative structure है: Was/Were + Object + V3 + by + Subject? 'this letter' एकवचन है, इसलिए हम 'Was' का उपयोग करते हैं।"
+      },
+      "pyq": "NDA 2021"
+    },
+    {
+      "question": {
+        "en": "Change the following interrogative sentence into Passive Voice: 'Will they have finished the task by tomorrow?'",
+        "hi": "निम्नलिखित प्रश्नवाचक वाक्य को Passive Voice में बदलें: 'Will they have finished the task by tomorrow?'"
+      },
+      "options": {
+        "en": [
+          "Will the task have been finished by tomorrow?",
+          "Will the task be finished by tomorrow?",
+          "Would the task have been finished by tomorrow?",
+          "Will the task have finished by tomorrow?"
+        ],
+        "hi": [
+          "Will the task have been finished by tomorrow?",
+          "Will the task be finished by tomorrow?",
+          "Would the task have been finished by tomorrow?",
+          "Will the task have finished by tomorrow?"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "For Future Perfect interrogative, the passive structure is: Will/Shall + Object + have been + V3 + by + Subject?",
+        "hi": "Future Perfect interrogative के लिए, passive structure है: Will/Shall + Object + have been + V3 + by + Subject?"
+      },
+      "pyq": "SSC CGL 2022"
+    },
+    {
+      "question": {
+        "en": "Identify the correct statement regarding the passive voice of: 'He has been teaching English for ten years.'",
+        "hi": "निम्नलिखित वाक्य के passive voice के संबंध में सही कथन की पहचान करें: 'He has been teaching English for ten years.'"
+      },
+      "options": {
+        "en": [
+          "No passive voice is possible for this sentence.",
+          "English has been being taught by him for ten years.",
+          "English is being taught by him for ten years.",
+          "Ten years have been taught English by him."
+        ],
+        "hi": [
+          "No passive voice is possible for this sentence.",
+          "English has been being taught by him for ten years.",
+          "English is being taught by him for ten years.",
+          "Ten years have been taught English by him."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The sentence is in the Present Perfect Continuous tense, which does not have a passive voice form.",
+        "hi": "यह वाक्य Present Perfect Continuous tense में है, जिसका passive voice रूप नहीं होता है।"
+      },
+      "pyq": "SSC MTS 2021"
+    },
+    {
+      "question": {
+        "en": "Which of the following tenses does NOT have a passive voice form?",
+        "hi": "निम्नलिखित में से किस काल (tense) का passive voice रूप नहीं होता है?"
+      },
+      "options": {
+        "en": [
+          "Future Continuous",
+          "Future Simple",
+          "Future Perfect",
+          "Past Continuous"
+        ],
+        "hi": [
+          "Future Continuous",
+          "Future Simple",
+          "Future Perfect",
+          "Past Continuous"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "According to English grammar rules, Future Continuous, Present Perfect Continuous, Past Perfect Continuous, and Future Perfect Continuous tenses do not have passive voice forms.",
+        "hi": "अंग्रेजी व्याकरण के नियमों के अनुसार, Future Continuous, Present Perfect Continuous, Past Perfect Continuous और Future Perfect Continuous tenses के passive voice रूप नहीं होते हैं।"
+      },
+      "pyq": "SSC CHSL 2022"
+    }
+  ]
+}

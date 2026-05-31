@@ -1,0 +1,2530 @@
+{
+  "quizName": "3. English - Direct → Indirect",
+  "mapName": "4. Polity",
+  "score": "Not submitted",
+  "timerSeconds": 900,
+  "questions": [
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'I had already left when you called.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'I had already left when you called.'"
+      },
+      "options": {
+        "en": [
+          "He said that he had already left when I had called.",
+          "He said that he had already left when I called.",
+          "He said that he already left when I called.",
+          "He said that he has already left when I called."
+        ],
+        "hi": [
+          "He said that he had already left when I had called.",
+          "He said that he had already left when I called.",
+          "He said that he already left when I called.",
+          "He said that he has already left when I called."
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The past perfect 'had already left' remains unchanged. The time clause 'when you called' can remain in simple past ('when I called') or change to past perfect; however, keeping simple past in time clauses is standard.",
+        "hi": "पास्ट परफेक्ट 'had already left' अपरिवर्तित रहता है। टाइम क्लॉज 'when you called' सिंपल पास्ट ('when I called') में रह सकता है या पास्ट परफेक्ट में बदल सकता है; हालाँकि, टाइम क्लॉज में सिंपल पास्ट रखना मानक माना जाता है।"
+      },
+      "pyq": "SSC CPO 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: The doctor said to the patient, 'Why did you skip your medicine?'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: The doctor said to the patient, 'Why did you skip your medicine?'"
+      },
+      "options": {
+        "en": [
+          "The doctor asked the patient why did he skip his medicine.",
+          "The doctor told the patient why he had skipped his medicine.",
+          "The doctor asked the patient why he skipped his medicine.",
+          "The doctor asked the patient why he had skipped his medicine."
+        ],
+        "hi": [
+          "The doctor asked the patient why did he skip his medicine.",
+          "The doctor told the patient why he had skipped his medicine.",
+          "The doctor asked the patient why he skipped his medicine.",
+          "The doctor asked the patient why he had skipped his medicine."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The simple past question ('did you skip') changes to past perfect assertive ('he had skipped'). 'Why' acts as the connector.",
+        "hi": "सिंपल पास्ट प्रश्न ('did you skip') पास्ट परफेक्ट साधारण वाक्य ('he had skipped') में बदल जाता है। 'Why' यहाँ कंजंक्शन का कार्य करता है।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She will say, 'I am busy.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She will say, 'I am busy.'"
+      },
+      "options": {
+        "en": [
+          "She will say that I am busy.",
+          "She will say that she was busy.",
+          "She will say that she is busy.",
+          "She would say that she is busy."
+        ],
+        "hi": [
+          "She will say that I am busy.",
+          "She will say that she was busy.",
+          "She will say that she is busy.",
+          "She would say that she is busy."
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "If the reporting verb is in the future tense ('will say'), the tense of the reported speech does not change. Only pronoun changes ('I' to 'she').",
+        "hi": "यदि रिपोर्टिंग वर्ब फ्यूचर टेंस ('will say') में हो, तो रिपोर्टेड स्पीच का टेंस नहीं बदलता है। केवल सर्वनाम बदलता है ('I' का 'she')।"
+      },
+      "pyq": "SSC CHSL 2019"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: My mother said to me, 'May you succeed in life.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: My mother said to me, 'May you succeed in life.'"
+      },
+      "options": {
+        "en": [
+          "My mother said that I might succeed in life.",
+          "My mother prayed that I may succeed in life.",
+          "My mother wished that I might succeed in life.",
+          "My mother wished that you might succeed in life."
+        ],
+        "hi": [
+          "My mother said that I might succeed in life.",
+          "My mother prayed that I may succeed in life.",
+          "My mother wished that I might succeed in life.",
+          "My mother wished that you might succeed in life."
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "This is an optative sentence (a wish). 'said to' changes to 'wished', and 'May you succeed' changes to 'I might succeed' (assertive form with 'might').",
+        "hi": "यह एक इच्छासूचक (optative) वाक्य है। 'said to' बदलकर 'wished' हो जाता है, और 'May you succeed' बदलकर 'I might succeed' (might के साथ साधारण वाक्य रूप) हो जाता है।"
+      },
+      "pyq": "SSC MTS 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'Hurrah! We won the match.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'Hurrah! We won the match.'"
+      },
+      "options": {
+        "en": [
+          "She exclaimed with joy that we had won the match.",
+          "She said with joy that they won the match.",
+          "She exclaimed that they win the match.",
+          "She exclaimed with joy that they had won the match."
+        ],
+        "hi": [
+          "She exclaimed with joy that we had won the match.",
+          "She said with joy that they won the match.",
+          "She exclaimed that they win the match.",
+          "She exclaimed with joy that they had won the match."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "'Hurrah!' expresses joy, so 'said' changes to 'exclaimed with joy'. 'We' changes to 'they', and the simple past 'won' changes to past perfect 'had won'.",
+        "hi": "'Hurrah!' खुशी को दर्शाता है, इसलिए 'said' बदलकर 'exclaimed with joy' हो जाता है। 'We' बदलकर 'they' हो जाता है, और सिंपल पास्ट 'won' बदलकर पास्ट परफेक्ट 'had won' हो जाता है।"
+      },
+      "pyq": "SSC CGL 2019"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said to him, 'Are you busy today?'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said to him, 'Are you busy today?'"
+      },
+      "options": {
+        "en": [
+          "She asked him if he was busy that day.",
+          "She asked him if he was busy today.",
+          "She told him if he was busy that day.",
+          "She asked him if he is busy that day."
+        ],
+        "hi": [
+          "She asked him if he was busy that day.",
+          "She asked him if he was busy today.",
+          "She told him if he was busy that day.",
+          "She asked him if he is busy that day."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The reporting verb changes to 'asked', 'Are you' changes to 'he was' (assertive past), and 'today' changes to 'that day'.",
+        "hi": "रिपोर्टिंग वर्ब बदलकर 'asked' हो जाती है, 'Are you' बदलकर 'he was' (साधारण पास्ट) हो जाता है, और 'today' बदलकर 'that day' हो जाता है।"
+      },
+      "pyq": "SSC CHSL 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'I had completed my task before they arrived.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'I had completed my task before they arrived.'"
+      },
+      "options": {
+        "en": [
+          "He said that he completed his task before they arrived.",
+          "He said that he had completed his task before they had arrived.",
+          "He said that he had completed his task before they arrived.",
+          "He said that he had completed my task before they arrived."
+        ],
+        "hi": [
+          "He said that he completed his task before they arrived.",
+          "He said that he had completed his task before they had arrived.",
+          "He said that he had completed his task before they arrived.",
+          "He said that he had completed my task before they arrived."
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Past perfect ('had completed') remains unchanged. The time clause 'before they arrived' also remains in simple past.",
+        "hi": "पास्ट परफेक्ट ('had completed') अपरिवर्तित रहता है। टाइम क्लॉज 'before they arrived' भी सिंपल पास्ट में ही रहता है।"
+      },
+      "pyq": "SSC CHSL 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'I shall go to London.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'I shall go to London.'"
+      },
+      "options": {
+        "en": [
+          "She said that she would go to London.",
+          "She said that she shall go to London.",
+          "She said that she should go to London.",
+          "She said that I would go to London."
+        ],
+        "hi": [
+          "She said that she would go to London.",
+          "She said that she shall go to London.",
+          "She said that she should go to London.",
+          "She said that I would go to London."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "When 'shall' is used to indicate future action with first person, it changes to 'would' in indirect speech because the pronoun changes to third person ('she').",
+        "hi": "जब फर्स्ट पर्सन के साथ भविष्य के कार्य को दर्शाने के लिए 'shall' का प्रयोग किया जाता है, तो इनडायरेक्ट स्पीच में यह 'would' में बदल जाता है क्योंकि सर्वनाम थर्ड पर्सन ('she') में बदल जाता है।"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'I shall be playing tennis at this time tomorrow.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'I shall be playing tennis at this time tomorrow.'"
+      },
+      "options": {
+        "en": [
+          "She said that she should be playing tennis at that time the next day.",
+          "She said that she would be playing tennis at this time tomorrow.",
+          "She said that she would be playing tennis at that time the next day.",
+          "She said that she shall be playing tennis at that time the next day."
+        ],
+        "hi": [
+          "She said that she should be playing tennis at that time the next day.",
+          "She said that she would be playing tennis at this time tomorrow.",
+          "She said that she would be playing tennis at that time the next day.",
+          "She said that she shall be playing tennis at that time the next day."
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "'shall be playing' changes to 'would be playing', 'this time' changes to 'that time', and 'tomorrow' changes to 'the next day'.",
+        "hi": "'shall be playing' बदलकर 'would be playing' हो जाता है, 'this time' बदलकर 'that time' हो जाता है, और 'tomorrow' बदलकर 'the next day' हो जाता है।"
+      },
+      "pyq": "SSC CGL 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'When I was in London, I met an old friend.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'When I was in London, I met an old friend.'"
+      },
+      "options": {
+        "en": [
+          "He said that when he was in London, he has met an old friend.",
+          "He said that when he was in London, he had met an old friend.",
+          "He said that when he was in London, he met an old friend.",
+          "He said that when he had been in London, he met an old friend."
+        ],
+        "hi": [
+          "He said that when he was in London, he has met an old friend.",
+          "He said that when he was in London, he had met an old friend.",
+          "He said that when he was in London, he met an old friend.",
+          "He said that when he had been in London, he met an old friend."
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "In complex sentences with a time clause ('When...'), the past continuous or simple past in the time clause remains unchanged, but the main clause's simple past ('met') changes to past perfect ('had met').",
+        "hi": "टाइम क्लॉज ('When...') वाले जटिल वाक्यों में, टाइम क्लॉज का सिंपल पास्ट अपरिवर्तित रहता है, लेकिन मुख्य वाक्य (main clause) का सिंपल पास्ट ('met') पास्ट परफेक्ट ('had met') में बदल जाता है।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said to me, 'What is your name?'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said to me, 'What is your name?'"
+      },
+      "options": {
+        "en": [
+          "She asked me what my name was.",
+          "She told me what my name was.",
+          "She asked me what was my name.",
+          "She asked me that what my name was."
+        ],
+        "hi": [
+          "She asked me what my name was.",
+          "She told me what my name was.",
+          "She asked me what was my name.",
+          "She asked me that what my name was."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'What is your name?' (present interrogative) changes to 'what my name was' (assertive past). No 'that' is used before 'what'.",
+        "hi": "'What is your name?' (प्रेजेंट प्रश्नवाचक) बदलकर 'what my name was' (साधारण पास्ट) हो जाता है। 'what' से पहले 'that' का प्रयोग नहीं किया जाता।"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'I bought this house last year.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'I bought this house last year.'"
+      },
+      "options": {
+        "en": [
+          "He said that he had bought that house last year.",
+          "He said that he had bought that house the previous year.",
+          "He said that he bought that house the previous year.",
+          "He said that he had bought this house last year."
+        ],
+        "hi": [
+          "He said that he had bought that house last year.",
+          "He said that he had bought that house the previous year.",
+          "He said that he bought that house the previous year.",
+          "He said that he had bought this house last year."
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Simple past 'bought' changes to past perfect 'had bought'. 'this' changes to 'that', and 'last year' changes to 'the previous year'.",
+        "hi": "सिंपल पास्ट 'bought' बदलकर पास्ट परफेक्ट 'had bought' हो जाता है। 'this' बदलकर 'that' हो जाता है, और 'last year' बदलकर 'the previous year' हो जाता है।"
+      },
+      "pyq": "SSC CPO 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: The mother said to her child, 'Don't touch the hot pan.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: The mother said to her child, 'Don't touch the hot pan.'"
+      },
+      "options": {
+        "en": [
+          "The mother warned her child not to touch the hot pan.",
+          "The mother warned her child to not touch the hot pan.",
+          "The mother forbade her child not to touch the hot pan.",
+          "The mother told her child that don't touch the hot pan."
+        ],
+        "hi": [
+          "The mother warned her child not to touch the hot pan.",
+          "The mother warned her child to not touch the hot pan.",
+          "The mother forbade her child not to touch the hot pan.",
+          "The mother told her child that don't touch the hot pan."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'said to' can be changed to 'warned' depending on the context. 'Don't' changes to 'not to'. 'to not touch' is split infinitive error.",
+        "hi": "संदर्भ के अनुसार 'said to' को 'warned' में बदला जा सकता है। 'Don't' बदलकर 'not to' हो जाता है। 'to not touch' व्याकरण की दृष्टि से अशुद्ध है।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: The guide said, 'This is the oldest temple here.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: The guide said, 'This is the oldest temple here.'"
+      },
+      "options": {
+        "en": [
+          "The guide said that that was the oldest temple there.",
+          "The guide said that that is the oldest temple there.",
+          "The guide said that this was the oldest temple here.",
+          "The guide said that this is the oldest temple there."
+        ],
+        "hi": [
+          "The guide said that that was the oldest temple there.",
+          "The guide said that that is the oldest temple there.",
+          "The guide said that this was the oldest temple here.",
+          "The guide said that this is the oldest temple there."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'This' changes to 'that', 'is' changes to 'was', and 'here' changes to 'there' in indirect speech.",
+        "hi": "इनडायरेक्ट स्पीच में 'This' बदलकर 'that', 'is' बदलकर 'was', और 'here' बदलकर 'there' हो जाता है।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'I do not like tea.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'I do not like tea.'"
+      },
+      "options": {
+        "en": [
+          "She said that she does not like tea.",
+          "She said that she had not liked tea.",
+          "She said that I did not like tea.",
+          "She said that she did not like tea."
+        ],
+        "hi": [
+          "She said that she does not like tea.",
+          "She said that she had not liked tea.",
+          "She said that I did not like tea.",
+          "She said that she did not like tea."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "In negative statements, 'do not' (simple present) changes to 'did not' (simple past) when the reporting verb is in the past tense.",
+        "hi": "नकारात्मक वाक्यों में, जब रिपोर्टिंग वर्ब पास्ट टेंस में हो, तो 'do not' (सिंपल प्रेजेंट) बदलकर 'did not' (सिंपल पास्ट) हो जाता है।"
+      },
+      "pyq": "SSC CHSL 2019"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'I have been working hard since morning.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'I have been working hard since morning.'"
+      },
+      "options": {
+        "en": [
+          "He said that he was working hard since morning.",
+          "He said that he had been working hard since morning.",
+          "He said that I had been working hard since morning.",
+          "He said that he has been working hard since morning."
+        ],
+        "hi": [
+          "He said that he was working hard since morning.",
+          "He said that he had been working hard since morning.",
+          "He said that I had been working hard since morning.",
+          "He said that he has been working hard since morning."
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Present Perfect Continuous ('have been working') changes to Past Perfect Continuous ('had been working') in indirect speech.",
+        "hi": "इनडायरेक्ट स्पीच में प्रेजेंट परफेक्ट कंटीन्यूअस ('have been working') बदलकर पास्ट परफेक्ट कंटीन्यूअस ('had been working') हो जाता है।"
+      },
+      "pyq": "SSC CPO 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'I am playing the piano.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'I am playing the piano.'"
+      },
+      "options": {
+        "en": [
+          "She said that she is playing the piano.",
+          "She said that she was playing the piano.",
+          "She said that she had played the piano.",
+          "She said that I was playing the piano."
+        ],
+        "hi": [
+          "She said that she is playing the piano.",
+          "She said that she was playing the piano.",
+          "She said that she had played the piano.",
+          "She said that I was playing the piano."
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Present Continuous tense ('am playing') changes to Past Continuous ('was playing') in indirect speech when the reporting verb is in the past tense.",
+        "hi": "जब रिपोर्टिंग वर्ब पास्ट टेंस में हो, तो इनडायरेक्ट स्पीच में प्रेजेंट कंटीन्यूअस टेंस ('am playing') पास्ट कंटीन्यूअस ('was playing') में बदल जाता है।"
+      },
+      "pyq": "SSC CHSL 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'Wow! What a great idea.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'Wow! What a great idea.'"
+      },
+      "options": {
+        "en": [
+          "She said with wonder that it is a very great idea.",
+          "She exclaimed that what a great idea it was.",
+          "She exclaimed with joy that it has been a great idea.",
+          "She exclaimed with surprise that it was a very great idea."
+        ],
+        "hi": [
+          "She said with wonder that it is a very great idea.",
+          "She exclaimed that what a great idea it was.",
+          "She exclaimed with joy that it has been a great idea.",
+          "She exclaimed with surprise that it was a very great idea."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "'Wow!' expresses surprise, so 'said' changes to 'exclaimed with surprise'. 'What a great idea' changes to the assertive past form 'it was a very great idea'.",
+        "hi": "'Wow!' आश्चर्य को दर्शाता है, इसलिए 'said' बदलकर 'exclaimed with surprise' हो जाता है। 'What a great idea' बदलकर साधारण पास्ट रूप 'it was a very great idea' हो जाता है।"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'Alas! I lost my gold ring yesterday.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'Alas! I lost my gold ring yesterday.'"
+      },
+      "options": {
+        "en": [
+          "She exclaimed with sorrow that she had lost my gold ring the previous day.",
+          "She exclaimed with sorrow that she lost her gold ring yesterday.",
+          "She said with sorrow that she had lost her gold ring yesterday.",
+          "She exclaimed with sorrow that she had lost her gold ring the previous day."
+        ],
+        "hi": [
+          "She exclaimed with sorrow that she had lost my gold ring the previous day.",
+          "She exclaimed with sorrow that she lost her gold ring yesterday.",
+          "She said with sorrow that she had lost her gold ring yesterday.",
+          "She exclaimed with sorrow that she had lost her gold ring the previous day."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "'Alas!' changes to 'exclaimed with sorrow'. Simple past 'lost' changes to past perfect 'had lost'. Pronoun 'my' changes to 'her', and 'yesterday' changes to 'the previous day'.",
+        "hi": "'Alas!' बदलकर 'exclaimed with sorrow' हो जाता है। सिंपल पास्ट 'lost' बदलकर पास्ट परफेक्ट 'had lost' हो जाता है। सर्वनाम 'my' बदलकर 'her' हो जाता है, और 'yesterday' बदलकर 'the previous day' हो जाता है।"
+      },
+      "pyq": "SSC CPO 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'I will do it tomorrow.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'I will do it tomorrow.'"
+      },
+      "options": {
+        "en": [
+          "He said that he would do it the next day.",
+          "He said that he would do it tomorrow.",
+          "He said that he will do it the next day.",
+          "He said that he will do it tomorrow."
+        ],
+        "hi": [
+          "He said that he would do it the next day.",
+          "He said that he would do it tomorrow.",
+          "He said that he will do it the next day.",
+          "He said that he will do it tomorrow."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'will' changes to 'would', and 'tomorrow' changes to 'the next day'.",
+        "hi": "'will' बदलकर 'would' हो जाता है, और 'tomorrow' बदलकर 'the next day' हो जाता है।"
+      },
+      "pyq": "SSC CGL 2019"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'I must have left my keys in the car.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'I must have left my keys in the car.'"
+      },
+      "options": {
+        "en": [
+          "She said that she must have left her keys in the car.",
+          "She said that she had to leave her keys in the car.",
+          "She said that she must leave her keys in the car.",
+          "She said that she had left her keys in the car."
+        ],
+        "hi": [
+          "She said that she must have left her keys in the car.",
+          "She said that she had to leave her keys in the car.",
+          "She said that she must leave her keys in the car.",
+          "She said that she had left her keys in the car."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'must have + V3' remains unchanged in indirect speech. Only the pronouns change ('I' to 'she', 'my' to 'her').",
+        "hi": "इनडायरेक्ट स्पीच में 'must have + V3' अपरिवर्तित रहता है। केवल सर्वनाम बदलते हैं ('I' का 'she', 'my' का 'her')।"
+      },
+      "pyq": "SSC CHSL 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'I didn't steal the money.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'I didn't steal the money.'"
+      },
+      "options": {
+        "en": [
+          "He said that he has not stolen the money.",
+          "He said that he didn't steal the money.",
+          "He said that he did not steal the money.",
+          "He said that he had not stolen the money."
+        ],
+        "hi": [
+          "He said that he has not stolen the money.",
+          "He said that he didn't steal the money.",
+          "He said that he did not steal the money.",
+          "He said that he had not stolen the money."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The negative simple past 'didn't steal' changes to past perfect negative 'had not stolen'.",
+        "hi": "नकारात्मक सिंपल पास्ट 'didn't steal' बदलकर पास्ट परफेक्ट नेगेटिव 'had not stolen' में परिवर्तित हो जाता है।"
+      },
+      "pyq": "SSC CPO 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: The father said to his son, 'Never tell a lie.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: The father said to his son, 'Never tell a lie.'"
+      },
+      "options": {
+        "en": [
+          "The father advised his son never to tell a lie.",
+          "The father advised his son that he should never tell a lie.",
+          "The father forbade his son never to tell a lie.",
+          "The father advised his son to never tell a lie."
+        ],
+        "hi": [
+          "The father advised his son never to tell a lie.",
+          "The father advised his son that he should never tell a lie.",
+          "The father forbade his son never to tell a lie.",
+          "The father advised his son to never tell a lie."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "For imperative sentences with 'never', the structure is 'never + to + V1' ('never to tell'). 'to never tell' is a split infinitive and is grammatically avoided.",
+        "hi": "'never' वाले इम्पैरेटिव वाक्यों के लिए, संरचना 'never + to + V1' ('never to tell') होती है। 'to never tell' को व्याकरण की दृष्टि से टाला जाता है।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said to his friends, 'Let's go for a walk.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said to his friends, 'Let's go for a walk.'"
+      },
+      "options": {
+        "en": [
+          "He suggested his friends that we should go for a walk.",
+          "He proposed to his friends to go for a walk.",
+          "He told his friends to go for a walk.",
+          "He suggested to his friends that they should go for a walk."
+        ],
+        "hi": [
+          "He suggested his friends that we should go for a walk.",
+          "He proposed to his friends to go for a walk.",
+          "He told his friends to go for a walk.",
+          "He suggested to his friends that they should go for a walk."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "For proposals starting with 'Let's', 'said to' changes to 'suggested to' or 'proposed to', and is followed by 'that they should + V1'.",
+        "hi": "'Let's' से शुरू होने वाले प्रस्तावों के लिए, 'said to' बदलकर 'suggested to' या 'proposed to' हो जाता है, और इसके बाद 'that they should + V1' का प्रयोग होता है।"
+      },
+      "pyq": "SSC CPO 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said to her, 'What are you doing?'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said to her, 'What are you doing?'"
+      },
+      "options": {
+        "en": [
+          "He asked her what she was doing.",
+          "He asked her that what she was doing.",
+          "He told her what she was doing.",
+          "He asked her what was she doing."
+        ],
+        "hi": [
+          "He asked her what she was doing.",
+          "He asked her that what she was doing.",
+          "He told her what she was doing.",
+          "He asked her what was she doing."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'said to' changes to 'asked'. The question 'What are you doing?' changes to the statement form 'what she was doing' in the past continuous tense.",
+        "hi": "'said to' बदलकर 'asked' हो जाता है। प्रश्न 'What are you doing?' पास्ट कंटीन्यूअस टेंस में साधारण वाक्य 'what she was doing' में बदल जाता है।"
+      },
+      "pyq": "SSC CHSL 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'I had a headache yesterday.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'I had a headache yesterday.'"
+      },
+      "options": {
+        "en": [
+          "She said that she has had a headache yesterday.",
+          "She said that she had a headache the previous day.",
+          "She said that she had had a headache the previous day.",
+          "She said that she had had a headache yesterday."
+        ],
+        "hi": [
+          "She said that she has had a headache yesterday.",
+          "She said that she had a headache the previous day.",
+          "She said that she had had a headache the previous day.",
+          "She said that she had had a headache yesterday."
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Simple past 'had' changes to past perfect 'had had', and 'yesterday' changes to 'the previous day'.",
+        "hi": "सिंपल पास्ट 'had' बदलकर पास्ट परफेक्ट 'had had' हो जाता है, और 'yesterday' बदलकर 'the previous day' हो जाता है।"
+      },
+      "pyq": "SSC CGL 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'I shall buy a book today.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'I shall buy a book today.'"
+      },
+      "options": {
+        "en": [
+          "He said that he would buy a book that day.",
+          "He said that he shall buy a book today.",
+          "He said that he should buy a book that day.",
+          "He said that he would buy a book today."
+        ],
+        "hi": [
+          "He said that he would buy a book that day.",
+          "He said that he shall buy a book today.",
+          "He said that he should buy a book that day.",
+          "He said that he would buy a book today."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'shall' changes to 'would' in indirect speech because the pronoun 'I' changes to 'he'. 'Today' changes to 'that day'.",
+        "hi": "इनडायरेक्ट स्पीच में 'shall' बदलकर 'would' हो जाता है क्योंकि सर्वनाम 'I' बदलकर 'he' हो जाता है। 'Today' बदलकर 'that day' हो जाता है।"
+      },
+      "pyq": "SSC CPO 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: The commander said to the soldiers, 'Attack the enemy.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: The commander said to the soldiers, 'Attack the enemy.'"
+      },
+      "options": {
+        "en": [
+          "The commander ordered the soldiers that they should attack the enemy.",
+          "The commander ordered the soldiers to attack the enemy.",
+          "The commander told the soldiers to attack the enemy.",
+          "The commander requested the soldiers to attack the enemy."
+        ],
+        "hi": [
+          "The commander ordered the soldiers that they should attack the enemy.",
+          "The commander ordered the soldiers to attack the enemy.",
+          "The commander told the soldiers to attack the enemy.",
+          "The commander requested the soldiers to attack the enemy."
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "A commander's instruction to soldiers is a command, so 'said to' changes to 'ordered' (or 'commanded'), followed by 'to + V1' ('to attack').",
+        "hi": "सैनिकों को कमांडर का निर्देश एक आदेश होता है, इसलिए 'said to' बदलकर 'ordered' (या 'commanded') हो जाता है, जिसके बाद 'to + V1' ('to attack') का प्रयोग होता है।"
+      },
+      "pyq": "SSC CPO 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She asked, 'Where are you going?'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She asked, 'Where are you going?'"
+      },
+      "options": {
+        "en": [
+          "She asked where was I going.",
+          "She asked where am I going.",
+          "She asked that where I was going.",
+          "She asked where I was going."
+        ],
+        "hi": [
+          "She asked where was I going.",
+          "She asked where am I going.",
+          "She asked that where I was going.",
+          "She asked where I was going."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "In WH- questions, we keep the WH-word ('where') as the connector and change the question format into an assertive statement ('are you going' -> 'I was going'). No 'that' is used.",
+        "hi": "WH- प्रश्नों में, हम WH-शब्द ('where') को ही कंजंक्शन के रूप में रखते हैं और प्रश्न प्रारूप को साधारण वाक्य में बदल देते हैं ('are you going' -> 'I was going')। 'that' का प्रयोग नहीं किया जाता।"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'I must go now.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'I must go now.'"
+      },
+      "options": {
+        "en": [
+          "She said that she must go then.",
+          "She said that she must go now.",
+          "She said that she had to go then.",
+          "She said that she had to go now."
+        ],
+        "hi": [
+          "She said that she must go then.",
+          "She said that she must go now.",
+          "She said that she had to go then.",
+          "She said that she had to go now."
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "'must' changes to 'had to' (to express obligation) and 'now' changes to 'then'.",
+        "hi": "'must' बदलकर 'had to' (दायित्व व्यक्त करने के लिए) हो जाता है और 'now' बदलकर 'then' हो जाता है।"
+      },
+      "pyq": "SSC MTS 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: The teacher said, 'The Earth revolves around the Sun.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: The teacher said, 'The Earth revolves around the Sun.'"
+      },
+      "options": {
+        "en": [
+          "The teacher said that the Earth revolves around the Sun.",
+          "The teacher says that the Earth revolves around the Sun.",
+          "The teacher told that the Earth revolves around the Sun.",
+          "The teacher said that the Earth revolved around the Sun."
+        ],
+        "hi": [
+          "The teacher said that the Earth revolves around the Sun.",
+          "The teacher says that the Earth revolves around the Sun.",
+          "The teacher told that the Earth revolves around the Sun.",
+          "The teacher said that the Earth revolved around the Sun."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "If the reported speech expresses a universal truth, scientific fact, or habitual action, its tense does not change, even if the reporting verb is in the past tense.",
+        "hi": "यदि रिपोर्टेड स्पीच कोई सार्वभौमिक सत्य (universal truth), वैज्ञानिक तथ्य या आदत को दर्शाती है, तो उसका टेंस नहीं बदलता है, भले ही रिपोर्टिंग वर्ब पास्ट टेंस में हो।"
+      },
+      "pyq": "SSC CGL 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'I bought this pen.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'I bought this pen.'"
+      },
+      "options": {
+        "en": [
+          "She said that she had bought this pen.",
+          "She said that she had bought that pen.",
+          "She said that she has bought that pen.",
+          "She said that she bought that pen."
+        ],
+        "hi": [
+          "She said that she had bought this pen.",
+          "She said that she had bought that pen.",
+          "She said that she has bought that pen.",
+          "She said that she bought that pen."
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Simple past 'bought' changes to past perfect 'had bought', and 'this' changes to 'that'.",
+        "hi": "सिंपल पास्ट 'bought' बदलकर पास्ट परफेक्ट 'had bought' हो जाता है, और 'this' बदलकर 'that' हो जाता है।"
+      },
+      "pyq": "SSC CGL 2019"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: The boy said, 'I had been playing for two hours.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: The boy said, 'I had been playing for two hours.'"
+      },
+      "options": {
+        "en": [
+          "The boy said that he had played for two hours.",
+          "The boy said that he was playing for two hours.",
+          "The boy said that he has been playing for two hours.",
+          "The boy said that he had been playing for two hours."
+        ],
+        "hi": [
+          "The boy said that he had played for two hours.",
+          "The boy said that he was playing for two hours.",
+          "The boy said that he has been playing for two hours.",
+          "The boy said that he had been playing for two hours."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Past Perfect Continuous ('had been playing') remains unchanged in indirect speech.",
+        "hi": "इनडायरेक्ट स्पीच में पास्ट परफेक्ट कंटीन्यूअस ('had been playing') अपरिवर्तित रहता है।"
+      },
+      "pyq": "SSC CHSL 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said to me, 'Don't touch my phone.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said to me, 'Don't touch my phone.'"
+      },
+      "options": {
+        "en": [
+          "He forbade me not to touch his phone.",
+          "He told me not to touch his phone.",
+          "He told me to not touch his phone.",
+          "He told me that don't touch his phone."
+        ],
+        "hi": [
+          "He forbade me not to touch his phone.",
+          "He told me not to touch his phone.",
+          "He told me to not touch his phone.",
+          "He told me that don't touch his phone."
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The negative imperative 'Don't touch' changes to 'not to touch'. 'My' changes to 'his'.",
+        "hi": "नकारात्मक इम्पैरेटिव 'Don't touch' बदलकर 'not to touch' हो जाता है। 'My' बदलकर 'his' हो जाता है।"
+      },
+      "pyq": "SSC CPO 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'How beautiful the rain is!'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'How beautiful the rain is!'"
+      },
+      "options": {
+        "en": [
+          "She exclaimed that how beautiful the rain was.",
+          "She exclaimed with joy that the rain is beautiful.",
+          "She said that the rain is very beautiful.",
+          "She exclaimed that the rain was very beautiful."
+        ],
+        "hi": [
+          "She exclaimed that how beautiful the rain was.",
+          "She exclaimed with joy that the rain is beautiful.",
+          "She said that the rain is very beautiful.",
+          "She exclaimed that the rain was very beautiful."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Exclamatory sentences starting with 'How...' change to assertive sentences using 'very'. 'How beautiful the rain is!' becomes 'the rain was very beautiful' in the past tense.",
+        "hi": "'How...' से शुरू होने वाले विस्मयादिबोधक वाक्यों को 'very' का उपयोग करके साधारण वाक्यों में बदल दिया जाता है। 'How beautiful the rain is!' पास्ट टेंस में 'the rain was very beautiful' बन जाता है।"
+      },
+      "pyq": "SSC MTS 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'Where has she gone?'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'Where has she gone?'"
+      },
+      "options": {
+        "en": [
+          "He asked where had she gone.",
+          "He asked that where she had gone.",
+          "He asked where she has gone.",
+          "He asked where she had gone."
+        ],
+        "hi": [
+          "He asked where had she gone.",
+          "He asked that where she had gone.",
+          "He asked where she has gone.",
+          "He asked where she had gone."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The present perfect question ('Where has she gone?') changes to past perfect assertive ('where she had gone'). No 'that' is used.",
+        "hi": "प्रेजेंट परफेक्ट प्रश्न ('Where has she gone?') बदलकर पास्ट परफेक्ट साधारण वाक्य ('where she had gone') हो जाता है। 'that' का प्रयोग नहीं किया जाता।"
+      },
+      "pyq": "SSC CHSL 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: They said, 'We have done our homework.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: They said, 'We have done our homework.'"
+      },
+      "options": {
+        "en": [
+          "They said that they have done their homework.",
+          "They said that we had done our homework.",
+          "They said that they did their homework.",
+          "They said that they had done their homework."
+        ],
+        "hi": [
+          "They said that they have done their homework.",
+          "They said that we had done our homework.",
+          "They said that they did their homework.",
+          "They said that they had done their homework."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Present Perfect ('have done') changes to Past Perfect ('had done'). The pronouns 'We' and 'our' change to 'they' and 'their' to match the subject of the reporting verb.",
+        "hi": "प्रेजेंट परफेक्ट ('have done') पास्ट परफेक्ट ('had done') में बदल जाता है। सर्वनाम 'We' और 'our' रिपोर्टिंग वर्ब के सब्जेक्ट के अनुसार बदलकर क्रमशः 'they' और 'their' हो जाते हैं।"
+      },
+      "pyq": "SSC CPO 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: The student said to the teacher, 'May I come in?'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: The student said to the teacher, 'May I come in?'"
+      },
+      "options": {
+        "en": [
+          "The student asked the teacher if he might come in.",
+          "The student asked the teacher if he may come in.",
+          "The student asked the teacher that if he might come in.",
+          "The student requested the teacher that he might come in."
+        ],
+        "hi": [
+          "The student asked the teacher if he might come in.",
+          "The student asked the teacher if he may come in.",
+          "The student asked the teacher that if he might come in.",
+          "The student requested the teacher that he might come in."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'said to' changes to 'asked' (or respectfully requested). 'May' changes to 'might' in indirect speech, and the question format changes to assertive.",
+        "hi": "'said to' बदलकर 'asked' हो जाता है। इनडायरेक्ट स्पीच में 'May' बदलकर 'might' हो जाता है, और प्रश्न प्रारूप साधारण वाक्य में बदल जाता है।"
+      },
+      "pyq": "SSC CHSL 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'I must leave immediately.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'I must leave immediately.'"
+      },
+      "options": {
+        "en": [
+          "He said that he must leave immediately.",
+          "He said that he has to leave immediately.",
+          "He said that he had to leave immediately.",
+          "He said that he would have to leave immediately."
+        ],
+        "hi": [
+          "He said that he must leave immediately.",
+          "He said that he has to leave immediately.",
+          "He said that he had to leave immediately.",
+          "He said that he would have to leave immediately."
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "When 'must' expresses immediate necessity or obligation in the present, it is changed into 'had to' in indirect speech.",
+        "hi": "जब 'must' वर्तमान में तत्काल आवश्यकता या अनिवार्यता को व्यक्त करता है, तो इनडायरेक्ट स्पीच में इसे 'had to' में बदल दिया जाता है।"
+      },
+      "pyq": "SSC CHSL 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: The teacher said to the students, 'Listen to me carefully.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: The teacher said to the students, 'Listen to me carefully.'"
+      },
+      "options": {
+        "en": [
+          "The teacher ordered the students to listen to her carefully.",
+          "The teacher told the students to listen to me carefully.",
+          "The teacher advised the students to listen to me carefully.",
+          "The teacher ordered the students that they should listen to her carefully."
+        ],
+        "hi": [
+          "The teacher ordered the students to listen to her carefully.",
+          "The teacher told the students to listen to me carefully.",
+          "The teacher advised the students to listen to me carefully.",
+          "The teacher ordered the students that they should listen to her carefully."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'said to' changes to 'ordered' (or 'told'). 'Listen to me' changes to 'to listen to her' (assuming the teacher is female, or 'him' if male; 'her' is the correct option here as 'me' must change).",
+        "hi": "'said to' बदलकर 'ordered' (या 'told') हो जाता है। 'Listen to me' बदलकर 'to listen to her' हो जाता है (यह मानते हुए कि शिक्षिका महिला हैं; चूँकि 'me' को बदलना आवश्यक है, इसलिए 'her' वाला विकल्प सही है)।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'I will have been working here for five years next month.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'I will have been working here for five years next month.'"
+      },
+      "options": {
+        "en": [
+          "He said that he would have been working there for five years the following month.",
+          "He said that he would have been working here for five years next month.",
+          "He said that he would be working there for five years the following month.",
+          "He said that he will have been working there for five years the following month."
+        ],
+        "hi": [
+          "He said that he would have been working there for five years the following month.",
+          "He said that he would have been working here for five years next month.",
+          "He said that he would be working there for five years the following month.",
+          "He said that he will have been working there for five years the following month."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'will have been working' changes to 'would have been working', 'here' changes to 'there', and 'next month' changes to 'the following month'.",
+        "hi": "'will have been working' बदलकर 'would have been working' हो जाता है, 'here' बदलकर 'there' हो जाता है, और 'next month' बदलकर 'the following month' हो जाता है।"
+      },
+      "pyq": "SSC CGL 2019"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He says, 'I am fine.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He says, 'I am fine.'"
+      },
+      "options": {
+        "en": [
+          "He says that he was fine.",
+          "He said that he is fine.",
+          "He says that I am fine.",
+          "He says that he is fine."
+        ],
+        "hi": [
+          "He says that he was fine.",
+          "He said that he is fine.",
+          "He says that I am fine.",
+          "He says that he is fine."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "If the reporting verb is in the present tense ('says'), the tense of the reported speech does not change. Only the pronoun changes ('I' to 'he').",
+        "hi": "यदि रिपोर्टिंग वर्ब प्रेजेंट टेंस ('says') में हो, तो रिपोर्टेड स्पीच का टेंस नहीं बदलता है। केवल सर्वनाम बदलता है ('I' का 'he' हो जाता है)।"
+      },
+      "pyq": "SSC MTS 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'I am learning French.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'I am learning French.'"
+      },
+      "options": {
+        "en": [
+          "She said that she had been learning French.",
+          "She said that she was learning French.",
+          "She said that she is learning French.",
+          "She said that I was learning French."
+        ],
+        "hi": [
+          "She said that she had been learning French.",
+          "She said that she was learning French.",
+          "She said that she is learning French.",
+          "She said that I was learning French."
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Present Continuous 'am learning' changes to Past Continuous 'was learning' when the reporting verb is in the past tense.",
+        "hi": "जब रिपोर्टिंग वर्ब पास्ट टेंस में हो, तो प्रेजेंट कंटीन्यूअस 'am learning' बदलकर पास्ट कंटीन्यूअस 'was learning' हो जाता है।"
+      },
+      "pyq": "SSC CGL 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said to me, 'Do you play cricket?'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said to me, 'Do you play cricket?'"
+      },
+      "options": {
+        "en": [
+          "He asked me if I played cricket.",
+          "He asked me that if I played cricket.",
+          "He told me if I played cricket.",
+          "He asked me did I play cricket."
+        ],
+        "hi": [
+          "He asked me if I played cricket.",
+          "He asked me that if I played cricket.",
+          "He told me if I played cricket.",
+          "He asked me did I play cricket."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "For Yes/No questions, the reporting verb changes to 'asked', the connector 'if' or 'whether' is used, and the question format is changed to assertive ('you play' -> 'I played'). 'That' is not used with 'if'.",
+        "hi": "Yes/No प्रश्नों के लिए, रिपोर्टिंग वर्ब 'asked' में बदल जाती है, 'if' या 'whether' कंजंक्शन का उपयोग किया जाता है, और प्रश्नवाचक वाक्य को साधारण वाक्य में बदल दिया जाता है ('you play' -> 'I played')। 'if' के साथ 'that' का प्रयोग नहीं किया जाता।"
+      },
+      "pyq": "SSC CGL 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'I have been to Paris twice.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'I have been to Paris twice.'"
+      },
+      "options": {
+        "en": [
+          "She said that she has been to Paris twice.",
+          "She said that I had been to Paris twice.",
+          "She said that she was in Paris twice.",
+          "She said that she had been to Paris twice."
+        ],
+        "hi": [
+          "She said that she has been to Paris twice.",
+          "She said that I had been to Paris twice.",
+          "She said that she was in Paris twice.",
+          "She said that she had been to Paris twice."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Present perfect 'have been' changes to past perfect 'had been' in indirect speech.",
+        "hi": "इनडायरेक्ट स्पीच में प्रेजेंट परफेक्ट 'have been' बदलकर पास्ट परफेक्ट 'had been' हो जाता है।"
+      },
+      "pyq": "SSC MTS 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'I must have been asleep.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'I must have been asleep.'"
+      },
+      "options": {
+        "en": [
+          "She said that she must be asleep.",
+          "She said that she had been asleep.",
+          "She said that she had to be asleep.",
+          "She said that she must have been asleep."
+        ],
+        "hi": [
+          "She said that she must be asleep.",
+          "She said that she had been asleep.",
+          "She said that she had to be asleep.",
+          "She said that she must have been asleep."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "'must have been' remains unchanged in indirect speech as it represents a past logical deduction.",
+        "hi": "इनडायरेक्ट स्पीच में 'must have been' अपरिवर्तित रहता है क्योंकि यह अतीत के तार्किक निष्कर्ष को दर्शाता है।"
+      },
+      "pyq": "SSC CGL 2019"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'I will meet you here tomorrow.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'I will meet you here tomorrow.'"
+      },
+      "options": {
+        "en": [
+          "He said that he would meet me there the next day.",
+          "He said that he would meet you there the next day.",
+          "He said that he will meet me there tomorrow.",
+          "He said that he would meet me here the next day."
+        ],
+        "hi": [
+          "He said that he would meet me there the next day.",
+          "He said that he would meet you there the next day.",
+          "He said that he will meet me there tomorrow.",
+          "He said that he would meet me here the next day."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'will' changes to 'would', 'here' changes to 'there', 'tomorrow' changes to 'the next day', and pronouns change accordingly.",
+        "hi": "'will' बदलकर 'would' हो जाता है, 'here' बदलकर 'there' हो जाता है, 'tomorrow' बदलकर 'the next day' हो जाता है, और सर्वनाम तदनुसार बदल जाते हैं।"
+      },
+      "pyq": "SSC CPO 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said to her, 'Can you swim?'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said to her, 'Can you swim?'"
+      },
+      "options": {
+        "en": [
+          "He asked her if she can swim.",
+          "He asked her if she could swim.",
+          "He asked her that if she could swim.",
+          "He told her if she could swim."
+        ],
+        "hi": [
+          "He asked her if she can swim.",
+          "He asked her if she could swim.",
+          "He asked her that if she could swim.",
+          "He told her if she could swim."
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "In Yes/No questions, 'said to' changes to 'asked', 'if' is used as a connector, and the modal 'can' changes to 'could'.",
+        "hi": "Yes/No प्रश्नों में, 'said to' बदलकर 'asked' हो जाता है, 'if' का उपयोग कंजंक्शन के रूप में किया जाता है, और मॉडल 'can' बदलकर 'could' हो जाता है।"
+      },
+      "pyq": "SSC CPO 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: The teacher said to the boys, 'Don't make a noise.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: The teacher said to the boys, 'Don't make a noise.'"
+      },
+      "options": {
+        "en": [
+          "The teacher told the boys that don't make a noise.",
+          "The teacher forbade the boys to make a noise.",
+          "The teacher forbade the boys not to make a noise.",
+          "The teacher ordered the boys to not make a noise."
+        ],
+        "hi": [
+          "The teacher told the boys that don't make a noise.",
+          "The teacher forbade the boys to make a noise.",
+          "The teacher forbade the boys not to make a noise.",
+          "The teacher ordered the boys to not make a noise."
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "When using 'forbade' (which means to order not to do something), we do not use 'not'. Thus, 'forbade... to make' is correct. 'forbade... not to make' is a double negative error.",
+        "hi": "जब 'forbade' (जिसका अर्थ है कुछ न करने का आदेश देना) का उपयोग किया जाता है, तो हम 'not' का उपयोग नहीं करते हैं। इसलिए, 'forbade... to make' सही है। 'forbade... not to make' डबल नेगेटिव की गलती है।"
+      },
+      "pyq": "SSC CPO 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said to me, 'Please help me with this box.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said to me, 'Please help me with this box.'"
+      },
+      "options": {
+        "en": [
+          "She requested me to help her with that box.",
+          "She requested me to help her with this box.",
+          "She told me to help her with that box.",
+          "She asked me to please help her with that box."
+        ],
+        "hi": [
+          "She requested me to help her with that box.",
+          "She requested me to help her with this box.",
+          "She told me to help her with that box.",
+          "She asked me to please help her with that box."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The word 'Please' indicates a request, so 'said to' changes to 'requested'. 'This' changes to 'that', and 'help me' becomes 'to help her'. 'Please' is omitted in indirect speech.",
+        "hi": "'Please' शब्द अनुरोध (request) को दर्शाता है, इसलिए 'said to' बदलकर 'requested' हो जाता है। 'This' बदलकर 'that' हो जाता है, और 'help me' बदलकर 'to help her' हो जाता है। इनडायरेक्ट स्पीच में 'Please' को हटा दिया जाता है।"
+      },
+      "pyq": "SSC CHSL 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: The priest said, 'God bless you.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: The priest said, 'God bless you.'"
+      },
+      "options": {
+        "en": [
+          "The priest prayed that God might bless me.",
+          "The priest said that God might bless you.",
+          "The priest wished that God blesses me.",
+          "The priest prayed that God blessed me."
+        ],
+        "hi": [
+          "The priest prayed that God might bless me.",
+          "The priest said that God might bless you.",
+          "The priest wished that God blesses me.",
+          "The priest prayed that God blessed me."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "For prayers, the reporting verb changes to 'prayed'. 'God bless you' is an optative sentence where 'might' is implied ('God might bless me').",
+        "hi": "प्रार्थना के लिए, रिपोर्टिंग वर्ब 'prayed' में बदल जाती है। 'God bless you' एक इच्छासूचक वाक्य है जहाँ 'might' छिपा होता है ('God might bless me')।"
+      },
+      "pyq": "SSC CGL 2018"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'I can solve this puzzle.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'I can solve this puzzle.'"
+      },
+      "options": {
+        "en": [
+          "She said that she can solve that puzzle.",
+          "She said that I could solve that puzzle.",
+          "She said that she could solve this puzzle.",
+          "She said that she could solve that puzzle."
+        ],
+        "hi": [
+          "She said that she can solve that puzzle.",
+          "She said that I could solve that puzzle.",
+          "She said that she could solve this puzzle.",
+          "She said that she could solve that puzzle."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "'can' changes to 'could', 'this' changes to 'that', and 'I' changes to 'she'.",
+        "hi": "'can' बदलकर 'could' हो जाता है, 'this' बदलकर 'that' हो जाता है, और 'I' बदलकर 'she' हो जाता है।"
+      },
+      "pyq": "SSC CHSL 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'I am going to the gym now.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'I am going to the gym now.'"
+      },
+      "options": {
+        "en": [
+          "She said that she was going to the gym then.",
+          "She said that she was going to the gym now.",
+          "She said that she is going to the gym then.",
+          "She said that I was going to the gym then."
+        ],
+        "hi": [
+          "She said that she was going to the gym then.",
+          "She said that she was going to the gym now.",
+          "She said that she is going to the gym then.",
+          "She said that I was going to the gym then."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'am going' (present continuous) changes to 'was going' (past continuous), and 'now' changes to 'then'.",
+        "hi": "'am going' (प्रेजेंट कंटीन्यूअस) बदलकर 'was going' (पास्ट कंटीन्यूअस) हो जाता है, और 'now' बदलकर 'then' हो जाता है।"
+      },
+      "pyq": "SSC CHSL 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: The teacher said, 'Students must respect their teachers.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: The teacher said, 'Students must respect their teachers.'"
+      },
+      "options": {
+        "en": [
+          "The teacher said that students had to respect their teachers.",
+          "The teacher said that students must respect their teachers.",
+          "The teacher said that students should have respected their teachers.",
+          "The teacher told that students must respect their teachers."
+        ],
+        "hi": [
+          "The teacher said that students had to respect their teachers.",
+          "The teacher said that students must respect their teachers.",
+          "The teacher said that students should have respected their teachers.",
+          "The teacher told that students must respect their teachers."
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "When 'must' is used to express permanent duty, moral obligation, or universal law, it does not change in indirect speech.",
+        "hi": "जब 'must' का प्रयोग स्थायी कर्तव्य, नैतिक दायित्व या सार्वभौमिक नियम को व्यक्त करने के लिए किया जाता है, तो इनडायरेक्ट स्पीच में इसमें कोई बदलाव नहीं होता है।"
+      },
+      "pyq": "SSC CGL 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'I have completed my graduation.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'I have completed my graduation.'"
+      },
+      "options": {
+        "en": [
+          "She said that she has completed her graduation.",
+          "She said that she completed her graduation.",
+          "She said that I had completed my graduation.",
+          "She said that she had completed her graduation."
+        ],
+        "hi": [
+          "She said that she has completed her graduation.",
+          "She said that she completed her graduation.",
+          "She said that I had completed my graduation.",
+          "She said that she had completed her graduation."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Present perfect 'have completed' changes to past perfect 'had completed'. Pronoun 'I' changes to 'she' and 'my' changes to 'her'.",
+        "hi": "प्रेजेंट परफेक्ट 'have completed' बदलकर पास्ट परफेक्ट 'had completed' हो जाता है। सर्वनाम 'I' बदलकर 'she' और 'my' बदलकर 'her' हो जाता है।"
+      },
+      "pyq": "SSC CHSL 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'I am happy today.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'I am happy today.'"
+      },
+      "options": {
+        "en": [
+          "He said that he was happy that day.",
+          "He said that I was happy that day.",
+          "He said that he was happy today.",
+          "He said that he is happy today."
+        ],
+        "hi": [
+          "He said that he was happy that day.",
+          "He said that I was happy that day.",
+          "He said that he was happy today.",
+          "He said that he is happy today."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "When the reporting verb is in the past tense ('said'), the simple present tense ('am') changes to simple past ('was'), the pronoun 'I' changes to 'he' (matching the subject), and the time word 'today' changes to 'that day'.",
+        "hi": "जब रिपोर्टिंग वर्ब पास्ट टेंस ('said') में होती है, तो सिंपल प्रेजेंट टेंस ('am') सिंपल पास्ट ('was') में बदल जाता है, सर्वनाम 'I' बदलकर 'he' हो जाता है, और 'today' बदलकर 'that day' हो जाता है।"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: They said, 'This is our house.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: They said, 'This is our house.'"
+      },
+      "options": {
+        "en": [
+          "They said that that is our house.",
+          "They said that this was our house.",
+          "They said that that was their house.",
+          "They said that this is their house."
+        ],
+        "hi": [
+          "They said that that is our house.",
+          "They said that this was our house.",
+          "They said that that was their house.",
+          "They said that this is their house."
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "'This' changes to 'that', 'is' changes to 'was', and 'our' changes to 'their' in indirect speech.",
+        "hi": "इनडायरेक्ट स्पीच में 'This' बदलकर 'that', 'is' बदलकर 'was', और 'our' बदलकर 'their' हो जाता है।"
+      },
+      "pyq": "SSC CGL 2019"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: Rahul said, 'I will go to Delhi tomorrow.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: Rahul said, 'I will go to Delhi tomorrow.'"
+      },
+      "options": {
+        "en": [
+          "Rahul said that he would go to Delhi the next day.",
+          "Rahul said that he would go to Delhi tomorrow.",
+          "Rahul said that he will go to Delhi tomorrow.",
+          "Rahul said that he will go to Delhi the next day."
+        ],
+        "hi": [
+          "Rahul said that he would go to Delhi the next day.",
+          "Rahul said that he would go to Delhi tomorrow.",
+          "Rahul said that he will go to Delhi tomorrow.",
+          "Rahul said that he will go to Delhi the next day."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "In indirect speech, 'will' changes to 'would' when the reporting verb is in the past. 'Tomorrow' changes to 'the next day' or 'the following day'.",
+        "hi": "इनडायरेक्ट स्पीच में, जब रिपोर्टिंग वर्ब पास्ट में हो तो 'will' बदलकर 'would' हो जाता है। 'Tomorrow' बदलकर 'the next day' या 'the following day' हो जाता है।"
+      },
+      "pyq": "SSC CHSL 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'I have been ill since last week.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'I have been ill since last week.'"
+      },
+      "options": {
+        "en": [
+          "He said that he had been ill since last week.",
+          "He said that he has been ill since the previous week.",
+          "He said that he was ill since last week.",
+          "He said that he had been ill since the previous week."
+        ],
+        "hi": [
+          "He said that he had been ill since last week.",
+          "He said that he has been ill since the previous week.",
+          "He said that he was ill since last week.",
+          "He said that he had been ill since the previous week."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Present perfect 'have been' changes to past perfect 'had been'. 'last week' changes to 'the previous week'.",
+        "hi": "प्रेजेंट परफेक्ट 'have been' बदलकर पास्ट परफेक्ट 'had been' हो जाता है। 'last week' बदलकर 'the previous week' हो जाता है।"
+      },
+      "pyq": "SSC CHSL 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: The man said, 'Alas! I am ruined.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: The man said, 'Alas! I am ruined.'"
+      },
+      "options": {
+        "en": [
+          "The man said sorrowfully that he is ruined.",
+          "The man exclaimed with sorrow that he was ruined.",
+          "The man exclaimed with sorrow that I am ruined.",
+          "The man exclaimed that he had ruined."
+        ],
+        "hi": [
+          "The man said sorrowfully that he is ruined.",
+          "The man exclaimed with sorrow that he was ruined.",
+          "The man exclaimed with sorrow that I am ruined.",
+          "The man exclaimed that he had ruined."
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "'Alas!' expresses sorrow, so the reporting verb becomes 'exclaimed with sorrow/grief'. 'I am ruined' changes to 'he was ruined'.",
+        "hi": "'Alas!' दुःख को दर्शाता है, इसलिए रिपोर्टिंग वर्ब 'exclaimed with sorrow/grief' बन जाती है। 'I am ruined' बदलकर 'he was ruined' हो जाता है।"
+      },
+      "pyq": "SSC CPO 2019"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'I have a meeting tomorrow.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'I have a meeting tomorrow.'"
+      },
+      "options": {
+        "en": [
+          "He said that he has a meeting the next day.",
+          "He said that I had a meeting the next day.",
+          "He said that he had a meeting the next day.",
+          "He said that he had a meeting tomorrow."
+        ],
+        "hi": [
+          "He said that he has a meeting the next day.",
+          "He said that I had a meeting the next day.",
+          "He said that he had a meeting the next day.",
+          "He said that he had a meeting tomorrow."
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Simple present 'have' changes to simple past 'had'. 'Tomorrow' changes to 'the next day'.",
+        "hi": "सिंपल प्रेजेंट 'have' बदलकर सिंपल पास्ट 'had' हो जाता है। 'Tomorrow' बदलकर 'the next day' हो जाता है।"
+      },
+      "pyq": "SSC CPO 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'I may buy a car.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'I may buy a car.'"
+      },
+      "options": {
+        "en": [
+          "He said that he may buy a car.",
+          "He said that I might buy a car.",
+          "He said that he would buy a car.",
+          "He said that he might buy a car."
+        ],
+        "hi": [
+          "He said that he may buy a car.",
+          "He said that I might buy a car.",
+          "He said that he would buy a car.",
+          "He said that he might buy a car."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "'may' changes to 'might' in indirect speech when the reporting verb is in the past tense.",
+        "hi": "जब रिपोर्टिंग वर्ब पास्ट टेंस में हो, तो इनडायरेक्ट स्पीच में 'may' बदलकर 'might' हो जाता है।"
+      },
+      "pyq": "SSC MTS 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'I will be reading a book.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'I will be reading a book.'"
+      },
+      "options": {
+        "en": [
+          "She said that she would read a book.",
+          "She said that she will be reading a book.",
+          "She said that she had been reading a book.",
+          "She said that she would be reading a book."
+        ],
+        "hi": [
+          "She said that she would read a book.",
+          "She said that she will be reading a book.",
+          "She said that she had been reading a book.",
+          "She said that she would be reading a book."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Future continuous 'will be reading' changes to 'would be reading' in indirect speech.",
+        "hi": "इनडायरेक्ट स्पीच में फ्यूचर कंटीन्यूअस 'will be reading' बदलकर 'would be reading' हो जाता है।"
+      },
+      "pyq": "SSC CPO 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: The teacher said to me, 'Work hard if you want to pass.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: The teacher said to me, 'Work hard if you want to pass.'"
+      },
+      "options": {
+        "en": [
+          "The teacher advised me that work hard if I wanted to pass.",
+          "The teacher advised me to work hard if I wanted to pass.",
+          "The teacher advised me to work hard if I want to pass.",
+          "The teacher told me to work hard if you wanted to pass."
+        ],
+        "hi": [
+          "The teacher advised me that work hard if I wanted to pass.",
+          "The teacher advised me to work hard if I wanted to pass.",
+          "The teacher advised me to work hard if I want to pass.",
+          "The teacher told me to work hard if you wanted to pass."
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The imperative part 'Work hard' changes to 'to work hard'. The conditional clause 'if you want to pass' changes to 'if I wanted to pass' (tense and pronoun change).",
+        "hi": "इम्पैरेटिव हिस्सा 'Work hard' बदलकर 'to work hard' हो जाता है। कंडीशनल क्लॉज 'if you want to pass' बदलकर 'if I wanted to pass' हो जाता है (टेंस और सर्वनाम में बदलाव)।"
+      },
+      "pyq": "SSC CPO 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said to me, 'Don't wear this watch.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said to me, 'Don't wear this watch.'"
+      },
+      "options": {
+        "en": [
+          "He told me not to wear that watch.",
+          "He told me that not to wear that watch.",
+          "He forbade me not to wear that watch.",
+          "He told me to not wear that watch."
+        ],
+        "hi": [
+          "He told me not to wear that watch.",
+          "He told me that not to wear that watch.",
+          "He forbade me not to wear that watch.",
+          "He told me to not wear that watch."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "For negative imperatives, 'Don't + V1' changes to 'not to + V1'. 'To not wear' and 'that not to' are incorrect structures. 'Forbade' itself is negative, so it cannot be followed by 'not'.",
+        "hi": "नकारात्मक इम्पैरेटिव वाक्यों में, 'Don't + V1' बदलकर 'not to + V1' हो जाता है। 'To not wear' और 'that not to' गलत संरचनाएं हैं। 'Forbade' स्वयं नकारात्मक है, इसलिए इसके बाद 'not' का प्रयोग नहीं किया जा सकता।"
+      },
+      "pyq": "SSC CGL 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'What a beautiful place!'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'What a beautiful place!'"
+      },
+      "options": {
+        "en": [
+          "He said that it is a very beautiful place.",
+          "He exclaimed with joy that the place is beautiful.",
+          "He exclaimed that what a beautiful place it was.",
+          "He exclaimed that it was a very beautiful place."
+        ],
+        "hi": [
+          "He said that it is a very beautiful place.",
+          "He exclaimed with joy that the place is beautiful.",
+          "He exclaimed that what a beautiful place it was.",
+          "He exclaimed that it was a very beautiful place."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Exclamatory sentences starting with 'What a...' are changed into assertive sentences using 'very' or 'great'. 'What a beautiful place!' becomes 'it was a very beautiful place' in the past tense.",
+        "hi": "'What a...' से शुरू होने वाले विस्मयादिबोधक वाक्यों को 'very' या 'great' का उपयोग करके साधारण वाक्यों में बदल दिया जाता है। 'What a beautiful place!' पास्ट टेंस में 'it was a very beautiful place' बन जाता है।"
+      },
+      "pyq": "SSC CHSL 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'I have bought a new dress.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'I have bought a new dress.'"
+      },
+      "options": {
+        "en": [
+          "She said that she bought a new dress.",
+          "She said that she had bought a new dress.",
+          "She said that I had bought a new dress.",
+          "She said that she has bought a new dress."
+        ],
+        "hi": [
+          "She said that she bought a new dress.",
+          "She said that she had bought a new dress.",
+          "She said that I had bought a new dress.",
+          "She said that she has bought a new dress."
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Present perfect 'have bought' changes to past perfect 'had bought'. Pronoun 'I' changes to 'she'.",
+        "hi": "प्रेजेंट परफेक्ट 'have bought' बदलकर पास्ट परफेक्ट 'had bought' हो जाता है। सर्वनाम 'I' बदलकर 'she' हो जाता है।"
+      },
+      "pyq": "SSC CHSL 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: The boss said to the employee, 'Submit the report immediately.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: The boss said to the employee, 'Submit the report immediately.'"
+      },
+      "options": {
+        "en": [
+          "The boss requested the employee to submit the report immediately.",
+          "The boss ordered the employee to submit the report immediately.",
+          "The boss said to the employee to submit the report immediately.",
+          "The boss ordered the employee that he should submit the report immediately."
+        ],
+        "hi": [
+          "The boss requested the employee to submit the report immediately.",
+          "The boss ordered the employee to submit the report immediately.",
+          "The boss said to the employee to submit the report immediately.",
+          "The boss ordered the employee that he should submit the report immediately."
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "For imperative sentences (commands), 'said to' changes to 'ordered', and the infinitive 'to + V1' ('to submit') is used as the connector.",
+        "hi": "इम्पैरेटिव वाक्यों (आदेश) के लिए, 'said to' बदलकर 'ordered' हो जाता है, और इन्फिनिटिव 'to + V1' ('to submit') का उपयोग कंजंक्शन के रूप में किया जाता है।"
+      },
+      "pyq": "SSC CPO 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'I will have finished the project by Monday.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'I will have finished the project by Monday.'"
+      },
+      "options": {
+        "en": [
+          "She said that she would finish the project by Monday.",
+          "She said that she will have finished the project by Monday.",
+          "She said that she would have finished the project by Monday.",
+          "She said that she had finished the project by Monday."
+        ],
+        "hi": [
+          "She said that she would finish the project by Monday.",
+          "She said that she will have finished the project by Monday.",
+          "She said that she would have finished the project by Monday.",
+          "She said that she had finished the project by Monday."
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Future Perfect 'will have finished' changes to 'would have finished' in indirect speech.",
+        "hi": "इनडायरेक्ट स्पीच में फ्यूचर परफेक्ट 'will have finished' बदलकर 'would have finished' हो जाता है।"
+      },
+      "pyq": "SSC CHSL 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'I am writing a letter now.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'I am writing a letter now.'"
+      },
+      "options": {
+        "en": [
+          "He said that he was writing a letter then.",
+          "He said that I was writing a letter then.",
+          "He said that he was writing a letter now.",
+          "He said that he is writing a letter then."
+        ],
+        "hi": [
+          "He said that he was writing a letter then.",
+          "He said that I was writing a letter then.",
+          "He said that he was writing a letter now.",
+          "He said that he is writing a letter then."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'Now' changes to 'then' in indirect speech, and the present continuous 'am writing' changes to the past continuous 'was writing'.",
+        "hi": "इनडायरेक्ट स्पीच में 'Now' बदलकर 'then' हो जाता है, और प्रेजेंट कंटीन्यूअस 'am writing' बदलकर पास्ट कंटीन्यूअस 'was writing' हो जाता है।"
+      },
+      "pyq": "SSC CPO 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: They said, 'We arrived yesterday.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: They said, 'We arrived yesterday.'"
+      },
+      "options": {
+        "en": [
+          "They said that they had arrived the previous day.",
+          "They said that they had arrived yesterday.",
+          "They said that they arrived the previous day.",
+          "They said that we had arrived yesterday."
+        ],
+        "hi": [
+          "They said that they had arrived the previous day.",
+          "They said that they had arrived yesterday.",
+          "They said that they arrived the previous day.",
+          "They said that we had arrived yesterday."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Simple past 'arrived' changes to past perfect 'had arrived', and 'yesterday' changes to 'the previous day'.",
+        "hi": "सिंपल पास्ट 'arrived' बदलकर पास्ट परफेक्ट 'had arrived' हो जाता है, और 'yesterday' बदलकर 'the previous day' हो जाता है।"
+      },
+      "pyq": "SSC CHSL 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'I had finished my work.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'I had finished my work.'"
+      },
+      "options": {
+        "en": [
+          "She said that she finished her work.",
+          "She said that she had been finishing her work.",
+          "She said that she has finished her work.",
+          "She said that she had finished her work."
+        ],
+        "hi": [
+          "She said that she finished her work.",
+          "She said that she had been finishing her work.",
+          "She said that she has finished her work.",
+          "She said that she had finished her work."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Past Perfect tense ('had finished') undergoes no change in tense when converted into indirect speech. Only the pronoun changes ('I' to 'she', 'my' to 'her').",
+        "hi": "इनडायरेक्ट स्पीच में बदलते समय पास्ट परफेक्ट टेंस ('had finished') के टेंस में कोई बदलाव नहीं होता है। केवल सर्वनाम बदलता है ('I' का 'she', 'my' का 'her')।"
+      },
+      "pyq": "SSC Stenographer 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'I didn't buy the book today.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'I didn't buy the book today.'"
+      },
+      "options": {
+        "en": [
+          "She said that she didn't buy the book that day.",
+          "She said that she has not bought the book today.",
+          "She said that she had not bought the book today.",
+          "She said that she had not bought the book that day."
+        ],
+        "hi": [
+          "She said that she didn't buy the book that day.",
+          "She said that she has not bought the book today.",
+          "She said that she had not bought the book today.",
+          "She said that she had not bought the book that day."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "'didn't buy' (simple past negative) changes to 'had not bought' (past perfect negative), and 'today' changes to 'that day'.",
+        "hi": "'didn't buy' (नकारात्मक सिंपल पास्ट) बदलकर 'had not bought' (नकारात्मक पास्ट परफेक्ट) हो जाता है, और 'today' बदलकर 'that day' हो जाता है।"
+      },
+      "pyq": "SSC CHSL 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said to him, 'You are late.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said to him, 'You are late.'"
+      },
+      "options": {
+        "en": [
+          "She told him that he is late.",
+          "She told him that he was late.",
+          "She said to him that he was late.",
+          "She told him that you were late."
+        ],
+        "hi": [
+          "She told him that he is late.",
+          "She told him that he was late.",
+          "She said to him that he was late.",
+          "She told him that you were late."
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The second-person pronoun 'You' changes according to the object of the reporting verb ('him'), so it becomes 'he'. 'said to' changes to 'told'.",
+        "hi": "सेकंड-पर्सन सर्वनाम 'You' रिपोर्टिंग वर्ब के ऑब्जेक्ट ('him') के अनुसार बदलता है, इसलिए यह 'he' हो जाता है। 'said to' बदलकर 'told' हो जाता है।"
+      },
+      "pyq": "SSC MTS 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'I have been reading this book.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'I have been reading this book.'"
+      },
+      "options": {
+        "en": [
+          "She said that she was reading that book.",
+          "She said that she had been reading this book.",
+          "She said that she had been reading that book.",
+          "She said that she has been reading that book."
+        ],
+        "hi": [
+          "She said that she was reading that book.",
+          "She said that she had been reading this book.",
+          "She said that she had been reading that book.",
+          "She said that she has been reading that book."
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Present perfect continuous 'have been reading' changes to 'had been reading' (past perfect continuous), and 'this' changes to 'that'.",
+        "hi": "प्रेजेंट परफेक्ट कंटीन्यूअस 'have been reading' बदलकर 'had been reading' (पास्ट परफेक्ट कंटीन्यूअस) हो जाता है, और 'this' बदलकर 'that' हो जाता है।"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'I love my cat.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'I love my cat.'"
+      },
+      "options": {
+        "en": [
+          "She said that she loved my cat.",
+          "She said that she loves her cat.",
+          "She said that I loved my cat.",
+          "She said that she loved her cat."
+        ],
+        "hi": [
+          "She said that she loved my cat.",
+          "She said that she loves her cat.",
+          "She said that I loved my cat.",
+          "She said that she loved her cat."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The pronoun 'I' changes to 'she' and 'my' changes to 'her' to agree with the subject 'She'. The verb 'love' (simple present) changes to 'loved' (simple past).",
+        "hi": "सर्वनाम 'I' बदलकर 'she' और 'my' बदलकर 'her' हो जाता है ताकि वे सब्जेक्ट 'She' से मेल खा सकें। वर्ब 'love' (सिंपल प्रेजेंट) बदलकर 'loved' (सिंपल पास्ट) हो जाती है।"
+      },
+      "pyq": "SSC MTS 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: Ram said to Shyam, 'I am your friend.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: Ram said to Shyam, 'I am your friend.'"
+      },
+      "options": {
+        "en": [
+          "Ram told Shyam that he was your friend.",
+          "Ram said to Shyam that he is his friend.",
+          "Ram told Shyam that I was his friend.",
+          "Ram told Shyam that he was his friend."
+        ],
+        "hi": [
+          "Ram told Shyam that he was your friend.",
+          "Ram said to Shyam that he is his friend.",
+          "Ram told Shyam that I was his friend.",
+          "Ram told Shyam that he was his friend."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "'said to' changes to 'told' when followed by an object. 'I' changes to 'he' (Ram) and 'your' changes to 'his' (Shyam's).",
+        "hi": "'said to' के बाद ऑब्जेक्ट होने पर वह 'told' में बदल जाता है। 'I' बदलकर 'he' (Ram) और 'your' बदलकर 'his' (Shyam) हो जाता है।"
+      },
+      "pyq": "SSC CGL 2018"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'I will wait for you here.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'I will wait for you here.'"
+      },
+      "options": {
+        "en": [
+          "She said that she will wait for me there.",
+          "She said that she would wait for you here.",
+          "She said that she will wait for me here.",
+          "She said that she would wait for me there."
+        ],
+        "hi": [
+          "She said that she will wait for me there.",
+          "She said that she would wait for you here.",
+          "She said that she will wait for me here.",
+          "She said that she would wait for me there."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "'Here' changes to 'there', 'will' changes to 'would', and the second person pronoun 'you' changes to 'me' (assuming the listener is first person).",
+        "hi": "इनडायरेक्ट स्पीच में 'Here' बदलकर 'there' हो जाता है, 'will' बदलकर 'would' हो जाता है, और सेकंड पर्सन सर्वनाम 'you' बदलकर 'me' हो जाता है।"
+      },
+      "pyq": "SSC CHSL 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'I shall be writing a letter.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'I shall be writing a letter.'"
+      },
+      "options": {
+        "en": [
+          "He said that he should be writing a letter.",
+          "He said that he shall be writing a letter.",
+          "He said that I would be writing a letter.",
+          "He said that he would be writing a letter."
+        ],
+        "hi": [
+          "He said that he should be writing a letter.",
+          "He said that he shall be writing a letter.",
+          "He said that I would be writing a letter.",
+          "He said that he would be writing a letter."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "'shall be writing' changes to 'would be writing' because the pronoun changes from first person ('I') to third person ('he').",
+        "hi": "'shall be writing' बदलकर 'would be writing' हो जाता है क्योंकि सर्वनाम फर्स्ट पर्सन ('I') से बदलकर थर्ड पर्सन ('he') हो जाता है।"
+      },
+      "pyq": "SSC MTS 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: The teacher said, 'Oil floats on water.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: The teacher said, 'Oil floats on water.'"
+      },
+      "options": {
+        "en": [
+          "The teacher told that oil floats on water.",
+          "The teacher says that oil floats on water.",
+          "The teacher said that oil floats on water.",
+          "The teacher said that oil floated on water."
+        ],
+        "hi": [
+          "The teacher told that oil floats on water.",
+          "The teacher says that oil floats on water.",
+          "The teacher said that oil floats on water.",
+          "The teacher said that oil floated on water."
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "This is a scientific fact, so its tense ('floats') does not change in indirect speech.",
+        "hi": "यह एक वैज्ञानिक तथ्य (scientific fact) है, इसलिए इनडायरेक्ट स्पीच में इसका टेंस ('floats') नहीं बदलता है।"
+      },
+      "pyq": "SSC CGL 2019"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'I had a great time yesterday.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'I had a great time yesterday.'"
+      },
+      "options": {
+        "en": [
+          "He said that he had a great time the previous day.",
+          "He said that he has had a great time yesterday.",
+          "He said that he had had a great time the previous day.",
+          "He said that he had had a great time yesterday."
+        ],
+        "hi": [
+          "He said that he had a great time the previous day.",
+          "He said that he has had a great time yesterday.",
+          "He said that he had had a great time the previous day.",
+          "He said that he had had a great time yesterday."
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Simple past 'had' changes to past perfect 'had had'. 'Yesterday' changes to 'the previous day'.",
+        "hi": "सिंपल पास्ट 'had' बदलकर पास्ट परफेक्ट 'had had' हो जाता है। 'Yesterday' बदलकर 'the previous day' हो जाता है।"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'I wake up early every morning.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'I wake up early every morning.'"
+      },
+      "options": {
+        "en": [
+          "He said that he had woken up early every morning.",
+          "He said that he wakes up early every morning.",
+          "He said that he woke up early every morning.",
+          "He says that he wakes up early every morning."
+        ],
+        "hi": [
+          "He said that he had woken up early every morning.",
+          "He said that he wakes up early every morning.",
+          "He said that he woke up early every morning.",
+          "He says that he wakes up early every morning."
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Habitual actions ('wake up early every morning') do not change their tense in indirect speech.",
+        "hi": "आदत वाले कार्यों ('wake up early every morning') का टेंस इनडायरेक्ट स्पीच में नहीं बदलता है।"
+      },
+      "pyq": "SSC CHSL 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'I can't help you today.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'I can't help you today.'"
+      },
+      "options": {
+        "en": [
+          "He said that he couldn't help me today.",
+          "He said that he couldn't help me that day.",
+          "He said that he can't help me that day.",
+          "He said that I couldn't help him that day."
+        ],
+        "hi": [
+          "He said that he couldn't help me today.",
+          "He said that he couldn't help me that day.",
+          "He said that he can't help me that day.",
+          "He said that I couldn't help him that day."
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "'can't' changes to 'couldn't', 'today' changes to 'that day', and pronouns change accordingly.",
+        "hi": "'can't' बदलकर 'couldn't' हो जाता है, 'today' बदलकर 'that day' हो जाता है, और सर्वनाम तदनुसार बदल जाते हैं।"
+      },
+      "pyq": "SSC CHSL 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'I was watching TV.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'I was watching TV.'"
+      },
+      "options": {
+        "en": [
+          "He said that he has been watching TV.",
+          "He said that he had been watching TV.",
+          "He said that he was watching TV.",
+          "He said that he watched TV."
+        ],
+        "hi": [
+          "He said that he has been watching TV.",
+          "He said that he had been watching TV.",
+          "He said that he was watching TV.",
+          "He said that he watched TV."
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Past Continuous tense ('was watching') changes to Past Perfect Continuous ('had been watching') in indirect speech.",
+        "hi": "इनडायरेक्ट स्पीच में पास्ट कंटीन्यूअस टेंस ('was watching') बदलकर पास्ट परफेक्ट कंटीन्यूअस ('had been watching') हो जाता है।"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said to me, 'Do you know him?'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said to me, 'Do you know him?'"
+      },
+      "options": {
+        "en": [
+          "She asked me that if I knew him.",
+          "She asked me if I know him.",
+          "She asked me if I knew him.",
+          "She told me if I knew him."
+        ],
+        "hi": [
+          "She asked me that if I knew him.",
+          "She asked me if I know him.",
+          "She asked me if I knew him.",
+          "She told me if I knew him."
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "'Do you know him?' (simple present question) changes to 'if I knew him' (assertive simple past).",
+        "hi": "'Do you know him?' (सिंपल प्रेजेंट प्रश्न) बदलकर 'if I knew him' (साधारण सिंपल पास्ट) हो जाता है।"
+      },
+      "pyq": "SSC CPO 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: The teacher said to the student, 'Have you completed your project?'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: The teacher said to the student, 'Have you completed your project?'"
+      },
+      "options": {
+        "en": [
+          "The teacher asked the student that if he had completed his project.",
+          "The teacher told the student if he had completed his project.",
+          "The teacher asked the student if he has completed his project.",
+          "The teacher asked the student if he had completed his project."
+        ],
+        "hi": [
+          "The teacher asked the student that if he had completed his project.",
+          "The teacher told the student if he had completed his project.",
+          "The teacher asked the student if he has completed his project.",
+          "The teacher asked the student if he had completed his project."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "'said to' changes to 'asked'. 'Have you completed' (present perfect interrogative) changes to 'he had completed' (past perfect assertive).",
+        "hi": "'said to' बदलकर 'asked' हो जाता है। 'Have you completed' (प्रेजेंट परफेक्ट प्रश्नवाचक) बदलकर 'he had completed' (पास्ट परफेक्ट साधारण) हो जाता है।"
+      },
+      "pyq": "SSC CPO 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said to me, 'Where do you live?'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said to me, 'Where do you live?'"
+      },
+      "options": {
+        "en": [
+          "He asked me that where I lived.",
+          "He asked me where did I live.",
+          "He asked me where I live.",
+          "He asked me where I lived."
+        ],
+        "hi": [
+          "He asked me that where I lived.",
+          "He asked me where did I live.",
+          "He asked me where I live.",
+          "He asked me where I lived."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "'Where do you live?' (simple present interrogative) changes to 'where I lived' (assertive simple past). No 'that' is used with WH-words.",
+        "hi": "'Where do you live?' (सिंपल प्रेजेंट प्रश्नवाचक) बदलकर 'where I lived' (साधारण सिंपल पास्ट) हो जाता है। WH-शब्दों के साथ 'that' का प्रयोग नहीं किया जाता।"
+      },
+      "pyq": "SSC CPO 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said to her, 'Why are you crying?'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said to her, 'Why are you crying?'"
+      },
+      "options": {
+        "en": [
+          "He asked her that why she was crying.",
+          "He asked her why was she crying.",
+          "He asked her why she was crying.",
+          "He told her why she was crying."
+        ],
+        "hi": [
+          "He asked her that why she was crying.",
+          "He asked her why was she crying.",
+          "He asked her why she was crying.",
+          "He told her why she was crying."
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "'Why are you crying?' (present continuous question) changes to the statement form 'why she was crying' (past continuous).",
+        "hi": "'Why are you crying?' (प्रेजेंट कंटीन्यूअस प्रश्न) साधारण वाक्य प्रारूप 'why she was crying' (पास्ट कंटीन्यूअस) में बदल जाता है।"
+      },
+      "pyq": "SSC CPO 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'I went to the market yesterday.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'I went to the market yesterday.'"
+      },
+      "options": {
+        "en": [
+          "He said that he went to the market yesterday.",
+          "He said that he had gone to the market yesterday.",
+          "He said that he had gone to the market the previous day.",
+          "He said that he went to the market the previous day."
+        ],
+        "hi": [
+          "He said that he went to the market yesterday.",
+          "He said that he had gone to the market yesterday.",
+          "He said that he had gone to the market the previous day.",
+          "He said that he went to the market the previous day."
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Simple Past ('went') changes to Past Perfect ('had gone'). The time word 'yesterday' changes to 'the previous day' or 'the day before'.",
+        "hi": "सिंपल पास्ट ('went') पास्ट परफेक्ट ('had gone') में बदल जाता है। समय दर्शाने वाला शब्द 'yesterday' बदलकर 'the previous day' या 'the day before' हो जाता है।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He has said, 'I will never lie.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He has said, 'I will never lie.'"
+      },
+      "options": {
+        "en": [
+          "He has said that he would never lie.",
+          "He has said that I will never lie.",
+          "He has said that he will never lie.",
+          "He said that he would never lie."
+        ],
+        "hi": [
+          "He has said that he would never lie.",
+          "He has said that I will never lie.",
+          "He has said that he will never lie.",
+          "He said that he would never lie."
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "If the reporting verb is in the present perfect tense ('has said'), the tense of the reported speech ('will') does not change.",
+        "hi": "यदि रिपोर्टिंग वर्ब प्रेजेंट परफेक्ट टेंस ('has said') में हो, तो रिपोर्टेड स्पीच का टेंस ('will') नहीं बदलता है।"
+      },
+      "pyq": "SSC CGL 2018"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'These mangoes are sweet.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'These mangoes are sweet.'"
+      },
+      "options": {
+        "en": [
+          "He said that those mangoes were sweet.",
+          "He said that those mangoes are sweet.",
+          "He said that these mangoes were sweet.",
+          "He said that these mangoes are sweet."
+        ],
+        "hi": [
+          "He said that those mangoes were sweet.",
+          "He said that those mangoes are sweet.",
+          "He said that these mangoes were sweet.",
+          "He said that these mangoes are sweet."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'These' changes to 'those' and 'are' changes to 'were' in indirect speech.",
+        "hi": "इनडायरेक्ट स्पीच में 'These' बदलकर 'those' और 'are' बदलकर 'were' हो जाता है।"
+      },
+      "pyq": "SSC CHSL 2018"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: The boy said to his mother, 'Please give me some food.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: The boy said to his mother, 'Please give me some food.'"
+      },
+      "options": {
+        "en": [
+          "The boy requested his mother please to give him some food.",
+          "The boy requested his mother to give me some food.",
+          "The boy ordered his mother to give him some food.",
+          "The boy requested his mother to give him some food."
+        ],
+        "hi": [
+          "The boy requested his mother please to give him some food.",
+          "The boy requested his mother to give me some food.",
+          "The boy ordered his mother to give him some food.",
+          "The boy requested his mother to give him some food."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "'said to' changes to 'requested' because of 'please'. 'Please' is removed in indirect speech, and 'to + V1' ('to give') is used. Pronoun 'me' changes to 'him'.",
+        "hi": "'please' के कारण 'said to' बदलकर 'requested' हो जाता है। इनडायरेक्ट स्पीच में 'Please' को हटा दिया जाता है, और 'to + V1' ('to give') का प्रयोग होता है। सर्वनाम 'me' बदलकर 'him' हो जाता है।"
+      },
+      "pyq": "SSC CHSL 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: The crowd said, 'Long live the King!'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: The crowd said, 'Long live the King!'"
+      },
+      "options": {
+        "en": [
+          "The crowd wished that the king should live long.",
+          "The crowd wished that the king might live long.",
+          "The crowd said that the king might live long.",
+          "The crowd prayed that the king lives long."
+        ],
+        "hi": [
+          "The crowd wished that the king should live long.",
+          "The crowd wished that the king might live long.",
+          "The crowd said that the king might live long.",
+          "The crowd prayed that the king lives long."
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "This is an optative sentence expressing a wish. 'said' changes to 'wished' and 'might' is introduced in the assertive clause ('that the king might live long').",
+        "hi": "यह एक इच्छासूचक वाक्य है। 'said' बदलकर 'wished' हो जाता है और साधारण वाक्य में 'might' का प्रयोग किया जाता है ('that the king might live long')।"
+      },
+      "pyq": "SSC MTS 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said, 'I am unwell today.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said, 'I am unwell today.'"
+      },
+      "options": {
+        "en": [
+          "He said that he was unwell that day.",
+          "He said that he was unwell today.",
+          "He said that I was unwell that day.",
+          "He said that he is unwell that day."
+        ],
+        "hi": [
+          "He said that he was unwell that day.",
+          "He said that he was unwell today.",
+          "He said that I was unwell that day.",
+          "He said that he is unwell that day."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Simple present 'am' changes to simple past 'was', 'I' changes to 'he', and 'today' changes to 'that day'.",
+        "hi": "सिंपल प्रेजेंट 'am' बदलकर सिंपल पास्ट 'was' हो जाता है, 'I' बदलकर 'he' हो जाता है, और 'today' बदलकर 'that day' हो जाता है।"
+      },
+      "pyq": "SSC MTS 2022"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: He said to her, 'Do not cry.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: He said to her, 'Do not cry.'"
+      },
+      "options": {
+        "en": [
+          "He forbade her not to cry.",
+          "He told her to not cry.",
+          "He forbade her to cry.",
+          "He asked her that she should not cry."
+        ],
+        "hi": [
+          "He forbade her not to cry.",
+          "He told her to not cry.",
+          "He forbade her to cry.",
+          "He asked her that she should not cry."
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Using 'forbade' is the most concise way to report 'do not'. 'forbade' is negative, so 'not' is not used after it. 'He forbade her to cry' is correct. Alternatively, 'He told her not to cry' would also be correct, but 'to not cry' is incorrect.",
+        "hi": "'do not' को रिपोर्ट करने के लिए 'forbade' का उपयोग करना सबसे सटीक तरीका है। 'forbade' स्वयं नकारात्मक है, इसलिए इसके बाद 'not' का प्रयोग नहीं होता। 'He forbade her to cry' सही है। वैकल्पिक रूप से, 'He told her not to cry' भी सही होता, लेकिन 'to not cry' गलत है।"
+      },
+      "pyq": "SSC CPO 2020"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: The doctor said to him, 'Take rest for two days.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: The doctor said to him, 'Take rest for two days.'"
+      },
+      "options": {
+        "en": [
+          "The doctor advised him to take rest for two days.",
+          "The doctor ordered him to take rest for two days.",
+          "The doctor said to him to take rest for two days.",
+          "The doctor suggested him that he should take rest for two days."
+        ],
+        "hi": [
+          "The doctor advised him to take rest for two days.",
+          "The doctor ordered him to take rest for two days.",
+          "The doctor said to him to take rest for two days.",
+          "The doctor suggested him that he should take rest for two days."
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "A doctor's recommendation is typically an advice, so 'said to' changes to 'advised', followed by 'to + V1' ('to take').",
+        "hi": "डॉक्टर की सलाह को आमतौर पर 'advice' माना जाता है, इसलिए 'said to' बदलकर 'advised' हो जाता है, जिसके बाद 'to + V1' ('to take') का प्रयोग होता है।"
+      },
+      "pyq": "SSC MTS 2021"
+    },
+    {
+      "question": {
+        "en": "Choose the correct indirect speech for: She said, 'I had completed the work before you came.'",
+        "hi": "सही इनडायरेक्ट स्पीच चुनें: She said, 'I had completed the work before you came.'"
+      },
+      "options": {
+        "en": [
+          "She said that she completed the work before I came.",
+          "She said that she had completed the work before I had come.",
+          "She said that she has completed the work before I came.",
+          "She said that she had completed the work before I came."
+        ],
+        "hi": [
+          "She said that she completed the work before I came.",
+          "She said that she had completed the work before I had come.",
+          "She said that she has completed the work before I came.",
+          "She said that she had completed the work before I came."
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Past Perfect ('had completed') remains unchanged. Simple past in the time clause ('came') typically remains simple past in indirect speech when describing a sequence of past events.",
+        "hi": "पास्ट परफेक्ट ('had completed') अपरिवर्तित रहता है। अतीत की घटनाओं के अनुक्रम का वर्णन करते समय टाइम क्लॉज में सिंपल पास्ट ('came') आमतौर पर इनडायरेक्ट स्पीच में भी सिंपल पास्ट ही रहता है।"
+      },
+      "pyq": "SSC CHSL 2021"
+    }
+  ]
+}
