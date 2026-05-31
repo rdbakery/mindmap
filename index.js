@@ -91,7 +91,10 @@ let quizRevealed = new Set();
 
 const uid = () => Math.random().toString(36).slice(2);
 const clone = o => JSON.parse(JSON.stringify(o));
-const safeName = n => (n||"mindmap").replace(/[<>:"/\\|?*]+/g,"").replace(/\s+/g,"_");
+const safeName = n => {
+  const cleaned = String(n || "mindmap").toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "");
+  return cleaned || "export";
+};
 
 function resetQuizState() {
   quizMode = false;
@@ -3708,7 +3711,7 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
       exportBtn.onclick = async () => {
         showFlashMessage("⬇️ Exporting Quiz JSON...");
         
-        let exportName = currentMap.text ? safeName(currentMap.text) + "_Quiz" : "Quiz";
+        let exportName = currentMap.text ? safeName(currentMap.text) + "_quiz" : "quiz";
         let actualQuizName = currentMap.text ? `${currentMap.text} - Quiz` : "Quiz";
         
         if (savedQuizId) {
