@@ -31,9 +31,9 @@ const APP_CONFIG = {
   ],
   preImportedQuizzes: [
     
-    { label: "IVC Quiz", file: "ivc_quiz.json" },
-    { label: "FYP Quiz", file: "fyp_quiz.json" },
-    { label: "FM Right Quiz", file: "fm_quiz.json" }
+    { label: "6. History - Indus Valley (2500-1600 BCE)", file: "ivc_quiz.json" },
+    { label: "7. Economy - FYP", file: "fyp_quiz.json" },
+    { label: "4. Polity - Articles 12-35→ Fundamental Rights", file: "fm_quiz.json" }
   ],
   preImportedTests: [
     {
@@ -1808,26 +1808,11 @@ async function importQuizData(data, fileName = ""){
   }
 
   let quizName = data.quizName || (data.mapName ? `${data.mapName} - Quiz` : (fileName.replace('.json', '') || "Imported Quiz"));
-  const quizzes = await listQuizzes();
 
-  const existingQuiz = quizzes.find(q => q.name && q.name.trim().toLowerCase() === quizName.trim().toLowerCase());
-    if (existingQuiz) {
-    const quizData = await loadQuiz(existingQuiz.id);
-    if (quizData && quizData.questions) {
-      showFlashMessage("✅ Using existing quiz");
-      showAIQuizModal(JSON.parse(JSON.stringify(quizData.questions)), true, existingQuiz.id, quizData.timerSeconds !== undefined ? quizData.timerSeconds : 600, null, undefined, (quizData.quizName || quizData.mapName || quizData.name));
-    }
-    return;
-  }
-
-  const newQuizId = uid();
-  await saveQuiz(newQuizId, quizName, data);
-
-  await refreshQuizSelector();
-  showFlashMessage("✅ Quiz imported successfully");
+  showFlashMessage("✅ Quiz loaded successfully");
 
   // Automatically start the imported quiz
-  showAIQuizModal(JSON.parse(JSON.stringify(data.questions)), true, newQuizId, data.timerSeconds !== undefined ? data.timerSeconds : 600, null, undefined, quizName);
+  showAIQuizModal(JSON.parse(JSON.stringify(data.questions)), true, null, data.timerSeconds !== undefined ? data.timerSeconds : 600, null, undefined, quizName);
 }
 
 async function importTestJSON(e){
@@ -3871,7 +3856,6 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
       ${savedQuizId ? `<button class="cancel" id="deleteAiQuizBtn" style="background:#fee2e2; color:#ef4444; border-color:#fca5a5;">🗑️ Delete</button>` : ''}
       <button class="cancel" id="exportAiQuizBtn" style="background:#10b981; border-color:#059669; color:white;">⬇️ Export</button>
       <button class="cancel" id="closeAiQuizBtn">Close</button>
-      ${!savedQuizId ? `<button class="save" id="saveAiQuizBtn" style="background:#0ea5e9; border-color:#0284c7;">💾 Save</button>` : ''}
       <button class="save" id="retakeAiQuizBtn">🔄 Retake</button>
     `;
 
@@ -3909,43 +3893,6 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
       showAIQuizModal(JSON.parse(JSON.stringify(quizData)), true, savedQuizId, timerSeconds, nodeId, currentLang, title);
     };
 
-    const saveBtn = document.getElementById('saveAiQuizBtn');
-    if (saveBtn) {
-      saveBtn.onclick = async () => {
-        let quizName;
-        let targetQuizId;
-
-        if (savedQuizId) {
-          targetQuizId = savedQuizId;
-          const existingQuizzes = await listQuizzes();
-          const existing = existingQuizzes.find(q => q.id === savedQuizId);
-          quizName = existing ? existing.name : `${currentMap.text} - Quiz`;
-        } else {
-          quizName = prompt("Enter Quiz Name:", `${currentMap.text} - Quiz`);
-          if (!quizName) return;
-
-          const existingQuizzes = await listQuizzes();
-          while (existingQuizzes.some(q => q.name.trim().toLowerCase() === quizName.trim().toLowerCase())) {
-            quizName = prompt("A quiz with this name already exists. Please enter a different name:", quizName);
-            if (!quizName) return;
-          }
-          targetQuizId = uid();
-          savedQuizId = targetQuizId;
-        }
-
-        showFlashMessage("💾 Saving Quiz Locally...");
-        const quizExport = {
-          quizName: quizName,
-          mapName: currentMap.text,
-          score: `${score}/${quizData.length}`,
-          timerSeconds: timerSeconds,
-          questions: quizData
-        };
-        await saveQuiz(targetQuizId, quizName, quizExport);
-        showFlashMessage("✅ Quiz saved successfully!");
-        refreshQuizSelector();
-      };
-    }
   };
 }
 
