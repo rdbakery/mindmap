@@ -33,7 +33,9 @@ const APP_CONFIG = {
     
     { label: "6. History - Indus Valley (2500-1600 BCE)", file: "ivc_quiz.json" },
     { label: "7. Economy - FYP", file: "fyp_quiz.json" },
-    { label: "4. Polity - Articles 12-35→ Fundamental Rights", file: "fm_quiz.json" }
+    { label: "4. Polity - Articles 12-35→ Fundamental Rights", file: "fm_quiz.json" },
+    { label: "3. English - Direct → Indirect", file: "3_english_direct_indirect.json" },
+    { label: "3. English - Active ⬌ Passive Voice", file: "3_english_active_passive_voice.json"}
   ],
   preImportedTests: [
     {
