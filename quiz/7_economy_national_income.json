@@ -1,0 +1,1594 @@
+{
+  "quizName": "7. Economy - National Income",
+  "mapName": "9. CA",
+  "score": "Not submitted",
+  "timerSeconds": 900,
+  "questions": [
+    {
+      "question": {
+        "en": "Real GDP is calculated using:",
+        "hi": "वास्तविक जीडीपी (Real GDP) की गणना किसका उपयोग करके की जाती है?"
+      },
+      "options": {
+        "en": [
+          "Current market prices",
+          "Wholesale Price Index directly",
+          "Expected future prices",
+          "Base year prices"
+        ],
+        "hi": [
+          "चालू बाजार कीमतें",
+          "थोक मूल्य सूचकांक सीधे",
+          "अपेक्षित भविष्य की कीमतें",
+          "आधार वर्ष की कीमतें"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Real GDP (Constant Price GDP) is the total value of final goods and services produced calculated using prices from a fixed base year. This removes the distorting effects of inflation.",
+        "hi": "वास्तविक जीडीपी (स्थिर मूल्य जीडीपी) उत्पादित अंतिम वस्तुओं और सेवाओं का कुल मूल्य है जिसकी गणना एक निश्चित आधार वर्ष की कीमतों का उपयोग करके की जाती है। यह मुद्रास्फीति के प्रभाव को दूर करता है।"
+      },
+      "pyq": "UPPSC 2015"
+    },
+    {
+      "question": {
+        "en": "How is 'Market Price' calculated from 'Basic Price'?",
+        "hi": "'बुनियादी मूल्य' (Basic Price) से 'बाजार मूल्य' (Market Price) की गणना कैसे की जाती है?"
+      },
+      "options": {
+        "en": [
+          "Market Price = Basic Price + Product Tax - Product Subsidy",
+          "Market Price = Basic Price - Depreciation",
+          "Market Price = Basic Price + Production Tax - Production Subsidy",
+          "Market Price = Basic Price + Net Factor Income from Abroad"
+        ],
+        "hi": [
+          "बाजार मूल्य = बुनियादी मूल्य + उत्पाद कर - उत्पाद सब्सिडी",
+          "बाजार मूल्य = बुनियादी मूल्य - मूल्यह्रास",
+          "बाजार मूल्य = बुनियादी मूल्य + उत्पादन कर - उत्पादन सब्सिडी",
+          "बाजार मूल्य = बुनियादी मूल्य + विदेशों से प्राप्त शुद्ध साधन आय"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Market Price is obtained by adding Product Taxes (like GST) to the Basic Price and subtracting Product Subsidies.",
+        "hi": "बाजार मूल्य बुनियादी मूल्य में उत्पाद करों (जैसे जीएसटी) को जोड़कर और उत्पाद सब्सिडी को घटाकर प्राप्त किया जाता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following is NOT one of the four traditional factors of production?",
+        "hi": "निम्नलिखित में से कौन सा चार पारंपरिक उत्पादन के कारकों में से एक नहीं है?"
+      },
+      "options": {
+        "en": [
+          "Labour",
+          "Technology",
+          "Entrepreneurship",
+          "Land"
+        ],
+        "hi": [
+          "श्रम",
+          "प्रौद्योगिकी",
+          "उद्यमिता",
+          "भूमि"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The four traditional factors of production are Land, Labour, Capital, and Entrepreneurship. Technology is not classified as a separate primary factor of production in classical frameworks.",
+        "hi": "उत्पादन के चार पारंपरिक कारक भूमि, श्रम, पूंजी और उद्यमिता हैं। शास्त्रीय अर्थशास्त्र में प्रौद्योगिकी को एक अलग प्राथमिक कारक के रूप में वर्गीकृत नहीं किया गया है।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "Personal Disposable Income is calculated as:",
+        "hi": "व्यक्तिगत प्रयोज्य आय (Personal Disposable Income) की गणना किस रूप में की जाती है?"
+      },
+      "options": {
+        "en": [
+          "Personal Income - Direct Taxes",
+          "Personal Savings + Depreciation",
+          "National Income + Transfer Payments",
+          "Personal Income - Indirect Taxes"
+        ],
+        "hi": [
+          "व्यक्तिगत आय - प्रत्यक्ष कर",
+          "व्यक्तिगत बचत + मूल्यह्रास",
+          "राष्ट्रीय आय + हस्तांतरण भुगतान",
+          "व्यक्तिगत आय - अप्रत्यक्ष कर"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Personal Disposable Income is the income actually available to households for spending and saving. It is calculated by subtracting direct taxes (like income tax) from Personal Income.",
+        "hi": "व्यक्तिगत प्रयोज्य आय वह आय है जो वास्तव में परिवारों के लिए खर्च करने और बचत करने के लिए उपलब्ध होती है। इसकी गणना व्यक्तिगत आय में से प्रत्यक्ष करों (जैसे आयकर) को घटाकर की जाती है।"
+      },
+      "pyq": "UPPSC 2021"
+    },
+    {
+      "question": {
+        "en": "If a Korean company produces electronic items in India, its value addition will be part of:",
+        "hi": "यदि कोई कोरियाई कंपनी भारत में इलेक्ट्रॉनिक वस्तुओं का उत्पादन करती है, तो उसका मूल्यवर्धन किसका हिस्सा होगा?"
+      },
+      "options": {
+        "en": [
+          "India's GDP and Korea's GNP",
+          "India's GNP and Korea's GNP",
+          "India's GNP and Korea's GDP",
+          "India's GDP and Korea's GDP"
+        ],
+        "hi": [
+          "भारत के GDP और कोरिया के GNP का",
+          "भारत के GNP और कोरिया के GNP का",
+          "भारत के GNP और कोरिया के GDP का",
+          "भारत के GDP और कोरिया के GDP का"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Since the production happens within India's borders, it is part of India's GDP. Since the company belongs to Korea, the value addition is part of Korea's GNP.",
+        "hi": "चूंकि उत्पादन भारत की सीमाओं के भीतर होता है, इसलिए यह भारत के सकल घरेलू उत्पाद (GDP) का हिस्सा है। चूंकि कंपनी कोरिया की है, इसलिए मूल्यवर्धन कोरिया के जीएनपी का हिस्सा है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Under which condition will GDP be exactly equal to GNP?",
+        "hi": "किस स्थिति में GDP बिल्कुल GNP के बराबर होगी?"
+      },
+      "options": {
+        "en": [
+          "When depreciation is zero",
+          "When Net Factor Income from Abroad is zero",
+          "When indirect taxes are zero",
+          "When the balance of trade is in surplus"
+        ],
+        "hi": [
+          "जब मूल्यह्रास शून्य हो",
+          "जब विदेशों से प्राप्त शुद्ध साधन आय शून्य हो",
+          "जब अप्रत्यक्ष कर शून्य हों",
+          "जब व्यापार संतुलन अधिशेष में हो"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "GDP and GNP are equal when Net Factor Income from Abroad (NFIA) is zero, which typically happens in a closed economy with no international transactions.",
+        "hi": "जीडीपी और जीएनपी तब बराबर होते हैं जब विदेशों से प्राप्त शुद्ध साधन आय (NFIA) शून्य होती है, जो आमतौर पर बिना किसी अंतर्राष्ट्रीय लेनदेन वाली बंद अर्थव्यवस्था में होता है।"
+      },
+      "pyq": "UPSC CSE 2018"
+    },
+    {
+      "question": {
+        "en": "To convert NNP at Market Price to NNP at Factor Cost, what adjustment must be made?",
+        "hi": "बाजार मूल्य पर NNP को साधन लागत पर NNP में बदलने के लिए क्या समायोजन किया जाना चाहिए?"
+      },
+      "options": {
+        "en": [
+          "Add Net Indirect Taxes",
+          "Subtract Depreciation",
+          "Subtract Net Indirect Taxes (Indirect Taxes - Subsidies)",
+          "Add Net Factor Income from Abroad"
+        ],
+        "hi": [
+          "शुद्ध अप्रत्यक्ष करों को जोड़ें",
+          "मूल्यह्रास घटाएं",
+          "शुद्ध अप्रत्यक्ष करों (अप्रत्यक्ष कर - सब्सिडी) को घटाएं",
+          "विदेशों से प्राप्त शुद्ध साधन आय जोड़ें"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Factor Cost is obtained by subtracting Net Indirect Taxes (Indirect Taxes minus Subsidies) from the Market Price. Formula: NNP FC = NNP MP - Indirect Taxes + Subsidies.",
+        "hi": "बाजार मूल्य में से शुद्ध अप्रत्यक्ष करों (अप्रत्यक्ष कर घटाकर सब्सिडी) को घटाकर साधन लागत प्राप्त की जाती है। सूत्र: NNP FC = NNP MP - अप्रत्यक्ष कर + सब्सिडी।"
+      },
+      "pyq": "UPSC CSE 2016"
+    },
+    {
+      "question": {
+        "en": "If a country's population increases at a faster rate than its National Income, its Per Capita Income will:",
+        "hi": "यदि किसी देश की जनसंख्या उसकी राष्ट्रीय आय की तुलना में अधिक तीव्र दर से बढ़ती है, तो उसकी प्रति व्यक्ति आय:"
+      },
+      "options": {
+        "en": [
+          "Decrease",
+          "Become equal to GDP",
+          "Increase",
+          "Remain constant"
+        ],
+        "hi": [
+          "घटेगी",
+          "जीडीपी के बराबर हो जाएगी",
+          "बढ़ेगी",
+          "स्थिर रहेगी"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Per Capita Income = National Income / Total Population. If the denominator (population) grows faster than the numerator (income), the overall value (Per Capita Income) will decrease.",
+        "hi": "प्रति व्यक्ति आय = राष्ट्रीय आय / कुल जनसंख्या। यदि हर (जनसंख्या) अंश (आय) की तुलना में तेजी से बढ़ता है, तो कुल मूल्य (प्रति व्यक्ति आय) घट जाएगा।"
+      },
+      "pyq": "UPPSC 2015"
+    },
+    {
+      "question": {
+        "en": "Gross National Product (GNP) is calculated as:",
+        "hi": "सकल राष्ट्रीय उत्पाद (GNP) की गणना किस रूप में की जाती है?"
+      },
+      "options": {
+        "en": [
+          "GNP = GDP - Depreciation",
+          "GNP = GDP - Net Factor Income from Abroad (NFIA)",
+          "GNP = GDP + Net Factor Income from Abroad (NFIA)",
+          "GNP = NDP + Depreciation"
+        ],
+        "hi": [
+          "GNP = GDP - मूल्यह्रास",
+          "GNP = GDP - विदेशों से प्राप्त शुद्ध साधन आय (NFIA)",
+          "GNP = GDP + विदेशों से प्राप्त शुद्ध साधन आय (NFIA)",
+          "GNP = NDP + मूल्यह्रास"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "GNP is the total value of goods and services produced by citizens of a country. It is obtained by adding Net Factor Income from Abroad (NFIA) to GDP.",
+        "hi": "जीएनपी किसी देश के नागरिकों द्वारा उत्पादित वस्तुओं और सेवाओं का कुल मूल्य है। यह जीडीपी में विदेशों से प्राप्त शुद्ध साधन आय (NFIA) को जोड़कर प्राप्त किया जाता है।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "Which of the following matches of factor of production and its payment is INCORRECT?",
+        "hi": "उत्पादन के कारक और उसके भुगतान का निम्नलिखित में से कौन सा मिलान गलत है?"
+      },
+      "options": {
+        "en": [
+          "Entrepreneur - Profit",
+          "Land - Wages",
+          "Capital - Interest",
+          "Labour - Wages"
+        ],
+        "hi": [
+          "उद्यमी - लाभ",
+          "भूमि - मजदूरी",
+          "पूंजी - ब्याज",
+          "श्रम - मजदूरी"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The factor payment for Land is Rent, not Wages. Wages is the payment for Labour.",
+        "hi": "भूमि के लिए साधन भुगतान किराया है, मजदूरी नहीं। मजदूरी श्रम के लिए भुगतान है।"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "Transfer payments like old-age pensions and scholarships are excluded from National Income because:",
+        "hi": "वृद्धावस्था पेंशन और छात्रवृत्ति जैसे हस्तांतरण भुगतानों को राष्ट्रीय आय से बाहर रखा जाता है क्योंकि:"
+      },
+      "options": {
+        "en": [
+          "They do not correspond to any current production of goods or services",
+          "They are paid only to senior citizens and students",
+          "They are paid by the government",
+          "They are considered illegal income"
+        ],
+        "hi": [
+          "वे वस्तुओं या सेवाओं के किसी भी वर्तमान उत्पादन के अनुरूप नहीं होते हैं",
+          "उनका भुगतान केवल वरिष्ठ नागरिकों और छात्रों को किया जाता है",
+          "उनका भुगतान सरकार द्वारा किया जाता है",
+          "उन्हें अवैध आय माना जाता है"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Transfer payments are unilateral payments made without any corresponding production of goods or services in exchange, hence they are excluded from National Income.",
+        "hi": "हस्तांतरण भुगतान एकतरफा भुगतान होते हैं जो बदले में वस्तुओं या सेवाओं के किसी भी उत्पादन के बिना किए जाते हैं, इसलिए उन्हें राष्ट्रीय आय से बाहर रखा जाता है।"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "If the Factor Cost of producing a good is ₹500, the production tax is ₹50, and the production subsidy is ₹20, what is the Basic Price of the good?",
+        "hi": "यदि किसी वस्तु के उत्पादन की साधन लागत ₹500 है, उत्पादन कर ₹50 है, और उत्पादन सब्सिडी ₹20 है, तो उस वस्तु का बुनियादी मूल्य क्या है?"
+      },
+      "options": {
+        "en": [
+          "₹470",
+          "₹530",
+          "₹550",
+          "₹570"
+        ],
+        "hi": [
+          "₹470",
+          "₹530",
+          "₹550",
+          "₹570"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Basic Price = Factor Cost + Production Tax - Production Subsidy = ₹500 + ₹50 - ₹20 = ₹530.",
+        "hi": "बुनियादी मूल्य = साधन लागत + उत्पादन कर - उत्पादन सब्सिडी = ₹500 + ₹50 - ₹20 = ₹530."
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "In national income accounting, 'Depreciation' refers to:",
+        "hi": "राष्ट्रीय आय लेखांकन में, 'मूल्यह्रास' (Depreciation) का तात्पर्य है:"
+      },
+      "options": {
+        "en": [
+          "The fall in the value of domestic currency",
+          "The decrease in the price of consumer goods",
+          "The physical wear and tear of capital assets over time",
+          "The loss of foreign exchange reserves"
+        ],
+        "hi": [
+          "घरेलू मुद्रा के मूल्य में गिरावट",
+          "उपभोक्ता वस्तुओं की कीमत में कमी",
+          "समय के साथ पूंजीगत संपत्तियों का भौतिक टूट-फूट",
+          "विदेशी मुद्रा भंडार का नुकसान"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Depreciation represents the wear and tear, obsolescence, or consumption of fixed capital (machinery, buildings, equipment) during the production process over time.",
+        "hi": "मूल्यह्रास समय के साथ उत्पादन प्रक्रिया के दौरान अचल पूंजी (मशीनरी, भवन, उपकरण) के टूट-फूट, अप्रचलन या उपभोग का प्रतिनिधित्व करता है।"
+      },
+      "pyq": "UPSC CSE 2019"
+    },
+    {
+      "question": {
+        "en": "How is 'Per Capita Income' of a country calculated?",
+        "hi": "किसी देश की 'प्रति व्यक्ति आय' (Per Capita Income) की गणना कैसे की जाती है?"
+      },
+      "options": {
+        "en": [
+          "GDP / Working Population",
+          "GNP / Number of Households",
+          "Personal Income / Total Taxpayers",
+          "National Income / Total Population"
+        ],
+        "hi": [
+          "जीडीपी / कार्यशील जनसंख्या",
+          "जीएनपी / परिवारों की संख्या",
+          "व्यक्तिगत आय / कुल करदाता",
+          "राष्ट्रीय आय / कुल जनसंख्या"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Per Capita Income is the average income earned per person in a given area in a specified year. It is calculated by dividing the country's total National Income by its total population.",
+        "hi": "प्रति व्यक्ति आय एक निर्दिष्ट वर्ष में किसी दिए गए क्षेत्र में प्रति व्यक्ति अर्जित औसत आय है। इसकी गणना देश की कुल राष्ट्रीय आय को उसकी कुल जनसंख्या से विभाजित करके की जाती है।"
+      },
+      "pyq": "State PSC 2018"
+    },
+    {
+      "question": {
+        "en": "What is the factor payment associated with the factor of production 'Capital'?",
+        "hi": "उत्पादन के कारक 'पूंजी' से जुड़ा साधन भुगतान क्या है?"
+      },
+      "options": {
+        "en": [
+          "Wages",
+          "Interest",
+          "Rent",
+          "Profit"
+        ],
+        "hi": [
+          "मजदूरी",
+          "ब्याज",
+          "किराया",
+          "लाभ"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The reward or factor payment for Capital is Interest. The others are Rent (for Land), Wages (for Labour), and Profit (for Entrepreneur).",
+        "hi": "पूंजी के लिए प्रतिफल या साधन भुगतान ब्याज है। अन्य किराया (भूमि के लिए), मजदूरी (श्रम के लिए), और लाभ (उद्यमी के लिए) हैं।"
+      },
+      "pyq": "UPPSC 2016"
+    },
+    {
+      "question": {
+        "en": "Which of the following correctly describes 'Factor Cost'?",
+        "hi": "निम्नलिखित में से कौन 'साधन लागत' (Factor Cost) का सही वर्णन करता है?"
+      },
+      "options": {
+        "en": [
+          "The total cost of production including marketing and delivery charges",
+          "The retail price paid by the ultimate consumer",
+          "The market price of a product after adding indirect taxes",
+          "The total cost of productive inputs like land, labor, capital, and entrepreneurship"
+        ],
+        "hi": [
+          "विपणन और वितरण शुल्क सहित उत्पादन की कुल लागत",
+          "अंतिम उपभोक्ता द्वारा भुगतान की जाने वाली खुदरा कीमत",
+          "अप्रत्यक्ष करों को जोड़ने के बाद किसी उत्पाद का बाजार मूल्य",
+          "भूमि, श्रम, पूंजी और उद्यमिता जैसे उत्पादक इनपुट की कुल लागत"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Factor Cost refers to the total cost of all factors of production used to produce a good or service, which includes rent (for land), wages (for labor), interest (for capital), and profit (for entrepreneurship).",
+        "hi": "साधन लागत का तात्पर्य किसी वस्तु या सेवा के उत्पादन के लिए उपयोग किए जाने वाले उत्पादन के सभी साधनों की कुल लागत से है, जिसमें किराया (भूमि के लिए), मजदूरी (श्रम के लिए), ब्याज (पूंजी के लिए), और लाभ (उद्यमिता के लिए) शामिल हैं।"
+      },
+      "pyq": "BPSC 2019"
+    },
+    {
+      "question": {
+        "en": "Which of the following is the correct definition of National Income?",
+        "hi": "निम्नलिखित में से कौन सी राष्ट्रीय आय की सही परिभाषा है?"
+      },
+      "options": {
+        "en": [
+          "Total value of all intermediate and final goods produced in a country",
+          "Total value of final goods and services produced in a country during one financial year",
+          "Total value of goods exported from a country in one year",
+          "Total revenue earned by the government through taxes in one financial year"
+        ],
+        "hi": [
+          "देश में उत्पादित सभी मध्यवर्ती और अंतिम वस्तुओं का कुल मूल्य",
+          "एक वित्तीय वर्ष के दौरान देश में उत्पादित अंतिम वस्तुओं और सेवाओं का कुल मूल्य",
+          "एक वर्ष में देश से निर्यात की गई वस्तुओं का कुल मूल्य",
+          "एक वित्तीय वर्ष में करों के माध्यम से सरकार द्वारा अर्जित कुल राजस्व"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "National Income is defined as the total value of all final goods and services produced in a country during one financial year. Only final goods are included to avoid double counting.",
+        "hi": "राष्ट्रीय आय को एक वित्तीय वर्ष के दौरान देश में उत्पादित सभी अंतिम वस्तुओं और सेवाओं के कुल मूल्य के रूप में परिभाषित किया गया है। दोहरी गणना से बचने के लिए केवल अंतिम वस्तुओं को शामिल किया जाता है।"
+      },
+      "pyq": "SSC CGL 2018"
+    },
+    {
+      "question": {
+        "en": "Which of the following is NOT a method used to calculate National Income?",
+        "hi": "निम्नलिखित में से कौन सी राष्ट्रीय आय की गणना करने की विधि नहीं है?"
+      },
+      "options": {
+        "en": [
+          "Expenditure Method",
+          "Income Method",
+          "Investment Method",
+          "Product / Value Added Method"
+        ],
+        "hi": [
+          "व्यय विधि",
+          "आय विधि",
+          "निवेश विधि",
+          "उत्पाद / मूल्य वर्धित विधि"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The three standard methods of calculating National Income are the Income Method, Expenditure Method, and Product (or Value Added) Method. There is no 'Investment Method'.",
+        "hi": "राष्ट्रीय आय की गणना के तीन मानक तरीके आय विधि, व्यय विधि और उत्पाद (या मूल्य वर्धित) विधि हैं। कोई 'निवेश विधि' नहीं होती है।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "Nominal GDP is calculated using:",
+        "hi": "सांकेतिक जीडीपी (Nominal GDP) की गणना किसका उपयोग करके की जाती है?"
+      },
+      "options": {
+        "en": [
+          "Prices of the base year (2011-12)",
+          "Average prices of the last ten years",
+          "Prices of the current year",
+          "International dollar prices"
+        ],
+        "hi": [
+          "आधार वर्ष (2011-12) की कीमतें",
+          "पिछले दस वर्षों की औसत कीमतें",
+          "चालू वर्ष की कीमतें",
+          "अंतर्राष्ट्रीय डॉलर की कीमतें"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Nominal GDP (also known as Current Price GDP) is the value of final goods and services produced in a year, calculated at the prices of that same current year.",
+        "hi": "सांकेतिक जीडीपी (चालू मूल्य जीडीपी भी कहा जाता है) एक वर्ष में उत्पादित अंतिम वस्तुओं और सेवाओं का मूल्य है, जिसकी गणना उसी चालू वर्ष की कीमतों पर की जाती है।"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "If Net Factor Income from Abroad (NFIA) is negative, which of the following statements must be true?",
+        "hi": "यदि विदेशों से प्राप्त शुद्ध साधन आय (NFIA) नकारात्मक है, तो निम्नलिखित में से कौन सा कथन सत्य होना चाहिए?"
+      },
+      "options": {
+        "en": [
+          "GNP is greater than GDP",
+          "NDP is greater than GDP",
+          "GDP is equal to GNP",
+          "GDP is greater than GNP"
+        ],
+        "hi": [
+          "GNP, GDP से अधिक है",
+          "NDP, GDP से अधिक है",
+          "GDP, GNP के बराबर है",
+          "GDP, GNP से अधिक है"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Since GNP = GDP + NFIA, if NFIA is a negative value, then GNP will be less than GDP, meaning GDP is greater than GNP.",
+        "hi": "चूंकि GNP = GDP + NFIA, यदि NFIA एक नकारात्मक मूल्य है, तो GNP, GDP से कम होगा, जिसका अर्थ है कि GDP, GNP से अधिक है।"
+      },
+      "pyq": "SSC CGL 2022"
+    },
+    {
+      "question": {
+        "en": "Which of the following is considered a better measure of actual economic growth of a country?",
+        "hi": "निम्नलिखित में से किसे किसी देश के वास्तविक आर्थिक विकास का बेहतर माप माना जाता है?"
+      },
+      "options": {
+        "en": [
+          "Personal Income",
+          "Gross Output",
+          "Nominal GDP",
+          "Real GDP"
+        ],
+        "hi": [
+          "व्यक्तिगत आय",
+          "सकल उत्पादन",
+          "सांकेतिक जीडीपी",
+          "वास्तविक जीडीपी"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Real GDP is a better measure of economic growth because it filters out price changes (inflation) and shows the actual increase in physical production volume.",
+        "hi": "वास्तविक जीडीपी आर्थिक विकास का एक बेहतर उपाय है क्योंकि यह मूल्य परिवर्तन (मुद्रास्फीति) को फ़िल्टर करता है और भौतिक उत्पादन मात्रा में वास्तविक वृद्धि को दर्शाता है।"
+      },
+      "pyq": "SSC CGL 2019"
+    },
+    {
+      "question": {
+        "en": "A GDP Deflator value of 150 implies that:",
+        "hi": "जीडीपी डिफ्लेटर का मान 150 होने का तात्पर्य है कि:"
+      },
+      "options": {
+        "en": [
+          "Inflation is exactly 150%",
+          "Prices have decreased by 50%",
+          "Production has increased by 150%",
+          "Prices have increased by 50% compared to the base year"
+        ],
+        "hi": [
+          "मुद्रास्फीति ठीक 150% है",
+          "कीमतों में 50% की कमी आई है",
+          "उत्पादन में 150% की वृद्धि हुई है",
+          "आधार वर्ष की तुलना में कीमतों में 50% की वृद्धि हुई है"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "A deflator of 150 means prices are 1.5 times the base year prices, indicating a 50% increase in the general price level (inflation) since the base year.",
+        "hi": "150 के डिफ्लेटर का मतलब है कि कीमतें आधार वर्ष की कीमतों की 1.5 गुना हैं, जो आधार वर्ष से सामान्य मूल्य स्तर (मुद्रास्फीति) में 50% की वृद्धि का संकेत देती हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "What is the main conceptual difference between GDP and GNP?",
+        "hi": "GDP और GNP के बीच मुख्य वैचारिक अंतर क्या है?"
+      },
+      "options": {
+        "en": [
+          "GDP includes depreciation, while GNP excludes depreciation",
+          "GDP is based on geographical boundary, while GNP is based on nationality of producers",
+          "GDP is calculated at current prices, while GNP is at constant prices",
+          "GDP is calculated by NSO, while GNP is calculated by RBI"
+        ],
+        "hi": [
+          "GDP में मूल्यह्रास शामिल है, जबकि GNP में मूल्यह्रास शामिल नहीं है",
+          "GDP भौगोलिक सीमा पर आधारित है, जबकि GNP उत्पादकों की राष्ट्रीयता पर आधारित है",
+          "GDP की गणना चालू कीमतों पर की जाती है, जबकि GNP स्थिर कीमतों पर होती है",
+          "GDP की गणना NSO द्वारा की जाती है, जबकि GNP की गणना RBI द्वारा की जाती है"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "GDP focuses on location (production inside the domestic territory), whereas GNP focuses on nationality (production by citizens anywhere in the world).",
+        "hi": "जीडीपी स्थान पर ध्यान केंद्रित करता है (घरेलू क्षेत्र के भीतर उत्पादन), जबकि जीएनपी राष्ट्रीयता पर ध्यान केंद्रित करता है (दुनिया में कहीं भी नागरिकों द्वारा उत्पादन)।"
+      },
+      "pyq": "UPSC CSE 2017"
+    },
+    {
+      "question": {
+        "en": "What is the duration of the Financial Year in India?",
+        "hi": "भारत में वित्तीय वर्ष की अवधि क्या है?"
+      },
+      "options": {
+        "en": [
+          "1 January to 31 December",
+          "1 October to 30 September",
+          "1 July to 30 June",
+          "1 April to 31 March"
+        ],
+        "hi": [
+          "1 जनवरी से 31 दिसंबर",
+          "1 अक्टूबर से 30 सितंबर",
+          "1 जुलाई से 30 जून",
+          "1 अप्रैल से 31 मार्च"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The financial year (fiscal year) in India runs from 1 April of a year to 31 March of the subsequent year.",
+        "hi": "भारत में वित्तीय वर्ष (राजकोषीय वर्ष) एक वर्ष के 1 अप्रैल से शुरू होकर अगले वर्ष के 31 मार्च तक चलता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "In the context of National Income, sugarcane used by a sugar mill to produce sugar is classified as:",
+        "hi": "राष्ट्रीय आय के संदर्भ में, चीनी मिल द्वारा चीनी बनाने के लिए उपयोग किए जाने वाले गन्ने को किस रूप में वर्गीकृत किया गया है?"
+      },
+      "options": {
+        "en": [
+          "Final good",
+          "Capital good",
+          "Consumer durable",
+          "Intermediate good"
+        ],
+        "hi": [
+          "अंतिम वस्तु",
+          "पूंजीगत वस्तु",
+          "उपभोक्ता टिकाऊ वस्तु",
+          "मध्यवर्ती वस्तु"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Sugarcane is used as a raw material in the production of sugar, so it is an intermediate good. Its value will be merged into the value of the final good (sugar).",
+        "hi": "गन्ने का उपयोग चीनी के उत्पादन में कच्चे माल के रूप में किया जाता है, इसलिए यह एक मध्यवर्ती वस्तु है। इसका मूल्य अंतिम वस्तु (चीनी) के मूल्य में विलीन हो जाएगा।"
+      },
+      "pyq": "SSC CGL 2019"
+    },
+    {
+      "question": {
+        "en": "The salary of an Indian citizen working in the Indian Embassy in Washington D.C. is part of:",
+        "hi": "वाशिंगटन डी.सी. में भारतीय दूतावास में काम करने वाले एक भारतीय नागरिक का वेतन किसका हिस्सा है?"
+      },
+      "options": {
+        "en": [
+          "USA's GDP and India's GDP",
+          "USA's GNP only",
+          "India's GNP and India's GDP",
+          "India's GNP but not USA's GDP"
+        ],
+        "hi": [
+          "USA के GDP और भारत के GDP का",
+          "केवल USA के GNP का",
+          "भारत के GNP और भारत के GDP का",
+          "भारत के GNP का लेकिन USA के GDP का नहीं"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Embassies are considered part of the economic territory of the home country. Therefore, the production/service value is part of India's GDP. Since the person is an Indian citizen, it is also part of India's GNP.",
+        "hi": "दूतावासों को गृह देश के आर्थिक क्षेत्र का हिस्सा माना जाता है। इसलिए, उत्पादन/सेवा मूल्य भारत के सकल घरेलू उत्पाद (GDP) का हिस्सा है। चूंकि वह व्यक्ति भारतीय नागरिक है, इसलिए यह भारत के जीएनपी का भी हिस्सा है।"
+      },
+      "pyq": "UPSC CSE 2014"
+    },
+    {
+      "question": {
+        "en": "The income earned by a foreign citizen working inside the domestic territory of India is included in:",
+        "hi": "भारत के घरेलू क्षेत्र के भीतर काम करने वाले एक विदेशी नागरिक द्वारा अर्जित आय को किसमें शामिल किया जाता है?"
+      },
+      "options": {
+        "en": [
+          "India's GDP but not India's GNP",
+          "India's GNP but not India's GDP",
+          "Both India's GDP and GNP",
+          "Neither India's GDP nor GNP"
+        ],
+        "hi": [
+          "भारत के GDP में लेकिन भारत के GNP में नहीं",
+          "भारत के GNP में लेकिन भारत के GDP में नहीं",
+          "भारत के GDP और GNP दोनों में",
+          "न तो भारत के GDP में और न ही GNP में"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "GDP includes all production within the domestic boundary (by both citizens and foreigners). GNP only includes production by citizens. Hence, a foreigner's domestic earnings are part of GDP, not GNP.",
+        "hi": "जीडीपी में घरेलू सीमा के भीतर सभी उत्पादन (नागरिकों और विदेशियों दोनों द्वारा) शामिल हैं। जीएनपी में केवल नागरिकों द्वारा किया गया उत्पादन शामिल होता है। इसलिए, एक विदेशी की घरेलू कमाई जीडीपी का हिस्सा है, जीएनपी का नहीं।"
+      },
+      "pyq": "UPPSC 2018"
+    },
+    {
+      "question": {
+        "en": "Which of the following organizations was responsible for calculating India's National Income before the formation of NSO?",
+        "hi": "NSO के गठन से पहले भारत की राष्ट्रीय आय की गणना के लिए निम्नलिखित में से कौन सा संगठन जिम्मेदार था?"
+      },
+      "options": {
+        "en": [
+          "Planning Commission",
+          "Central Statistics Office (CSO)",
+          "National Sample Survey Office (NSSO)",
+          "Reserve Bank of India"
+        ],
+        "hi": [
+          "योजना आयोग",
+          "केंद्रीय सांख्यिकी कार्यालय (CSO)",
+          "राष्ट्रीय नमूना सर्वेक्षण कार्यालय (NSSO)",
+          "भारतीय रिजर्व बैंक"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Before the merger into NSO, the Central Statistics Office (CSO) was the primary body responsible for compiling and publishing National Income data in India.",
+        "hi": "NSO में विलय से पहले, केंद्रीय सांख्यिकी कार्यालय (CSO) भारत में राष्ट्रीय आय के आंकड़ों को संकलित और प्रकाशित करने के लिए जिम्मेदार प्राथमिक निकाय था।"
+      },
+      "pyq": "SSC CGL 2017"
+    },
+    {
+      "question": {
+        "en": "Why can Nominal GDP increase even when there is no actual increase in physical production?",
+        "hi": "भौतिक उत्पादन में कोई वास्तविक वृद्धि न होने पर भी सांकेतिक जीडीपी (Nominal GDP) क्यों बढ़ सकती है?"
+      },
+      "options": {
+        "en": [
+          "Due to an increase in the general price level (inflation)",
+          "Due to an increase in population",
+          "Due to changes in the base year",
+          "Due to a reduction in tax rates"
+        ],
+        "hi": [
+          "सामान्य मूल्य स्तर में वृद्धि (मुद्रास्फीति) के कारण",
+          "जनसंख्या में वृद्धि के कारण",
+          "आधार वर्ष में परिवर्तन के कारण",
+          "कर दरों में कमी के कारण"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Since Nominal GDP uses current prices, any price rise (inflation) can inflate the GDP figure even if the actual quantity of goods and services produced remains unchanged.",
+        "hi": "चूंकि सांकेतिक जीडीपी चालू कीमतों का उपयोग करती है, इसलिए मूल्य में कोई भी वृद्धि (मुद्रास्फीति) जीडीपी के आंकड़े को बढ़ा सकती है, भले ही उत्पादित वस्तुओं और सेवाओं की वास्तविक मात्रा अपरिवर्तित रहे।"
+      },
+      "pyq": "UPSC CSE 2013"
+    },
+    {
+      "question": {
+        "en": "If the Nominal GDP of a country is ₹500 lakh and the Real GDP is ₹400 lakh, what is the GDP Deflator?",
+        "hi": "यदि किसी देश का सांकेतिक जीडीपी ₹500 लाख है और वास्तविक जीडीपी ₹400 लाख है, तो जीडीपी डिफ्लेटर क्या है?"
+      },
+      "options": {
+        "en": [
+          "80",
+          "125",
+          "100",
+          "150"
+        ],
+        "hi": [
+          "80",
+          "125",
+          "100",
+          "150"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "GDP Deflator = (Nominal GDP / Real GDP) * 100 = (500 / 400) * 100 = 1.25 * 100 = 125.",
+        "hi": "जीडीपी डिफ्लेटर = (सांकेतिक जीडीपी / वास्तविक जीडीपी) * 100 = (500 / 400) * 100 = 1.25 * 100 = 125."
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "A farmer sells wheat to a flour mill for ₹1000. The mill sells flour to a bakery for ₹1500. The bakery sells bread to consumers for ₹2500. What is the total contribution to National Income?",
+        "hi": "एक किसान ₹1000 में आटा मिल को गेहूं बेचता है। मिल ₹1500 में एक बेकरी को आटा बेचती है। बेकरी उपभोक्ताओं को ₹2500 में ब्रेड बेचती है। राष्ट्रीय आय में कुल योगदान कितना है?"
+      },
+      "options": {
+        "en": [
+          "₹5000",
+          "₹2500",
+          "₹1500",
+          "₹1000"
+        ],
+        "hi": [
+          "₹5000",
+          "₹2500",
+          "₹1500",
+          "₹1000"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Only the value of the final good (bread) sold to the consumer is included in National Income. Thus, the contribution is ₹2500.",
+        "hi": "उपभोक्ता को बेची गई केवल अंतिम वस्तु (ब्रेड) का मूल्य ही राष्ट्रीय आय में शामिल किया जाता है। अतः योगदान ₹2500 है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Under which Ministry does the National Statistical Office (NSO) function?",
+        "hi": "राष्ट्रीय सांख्यिकी कार्यालय (NSO) किस मंत्रालय के तहत कार्य करता है?"
+      },
+      "options": {
+        "en": [
+          "Ministry of Commerce and Industry",
+          "Ministry of Finance",
+          "Ministry of Statistics and Programme Implementation (MoSPI)",
+          "Ministry of Corporate Affairs"
+        ],
+        "hi": [
+          "वाणिज्य और उद्योग मंत्रालय",
+          "वित्त मंत्रालय",
+          "सांख्यिकी और कार्यक्रम कार्यान्वयन मंत्रालय (MoSPI)",
+          "कॉर्पोरेट मामलों का मंत्रालय"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The NSO is the statistical wing of the Ministry of Statistics and Programme Implementation (MoSPI), Government of India.",
+        "hi": "NSO भारत सरकार के सांख्यिकी और कार्यक्रम कार्यान्वयन मंत्रालय (MoSPI) का सांख्यिकीय विंग है।"
+      },
+      "pyq": "UPSC CSE 2020"
+    },
+    {
+      "question": {
+        "en": "What is the formula for calculating the GDP Deflator?",
+        "hi": "जीडीपी डिफ्लेटर (GDP Deflator) की गणना करने का सूत्र क्या है?"
+      },
+      "options": {
+        "en": [
+          "(Real GDP / Nominal GDP) × 100",
+          "(Nominal GDP / Real GDP) × 100",
+          "(GDP / GNP) × 100",
+          "Nominal GDP - Real GDP"
+        ],
+        "hi": [
+          "(वास्तविक जीडीपी / सांकेतिक जीडीपी) × 100",
+          "(सांकेतिक जीडीपी / वास्तविक जीडीपी) × 100",
+          "(जीडीपी / जीएनपी) × 100",
+          "सांकेतिक जीडीपी - वास्तविक जीडीपी"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The GDP Deflator is calculated as the ratio of Nominal GDP to Real GDP multiplied by 100. It measures the level of prices of all new, domestically produced, final goods and services in an economy.",
+        "hi": "जीडीपी डिफ्लेटर की गणना वास्तविक जीडीपी के अनुपात में सांकेतिक जीडीपी के रूप में की जाती है जिसे 100 से गुणा किया जाता है। यह एक अर्थव्यवस्था में सभी नई, घरेलू रूप से उत्पादित, अंतिम वस्तुओं और सेवाओं की कीमतों के स्तर को मापता है।"
+      },
+      "pyq": "UPPSC 2019"
+    },
+    {
+      "question": {
+        "en": "Why is the rent paid for land classified as a factor payment?",
+        "hi": "भूमि के लिए भुगतान किए गए किराए को साधन भुगतान (Factor Payment) के रूप में क्यों वर्गीकृत किया जाता है?"
+      },
+      "options": {
+        "en": [
+          "Because land value decreases due to depreciation",
+          "Because it is paid only for agricultural activities",
+          "Because rent is paid to the government as a tax",
+          "Because land is a primary factor of production"
+        ],
+        "hi": [
+          "क्योंकि मूल्यह्रास के कारण भूमि का मूल्य कम हो जाता है",
+          "क्योंकि इसका भुगतान केवल कृषि गतिविधियों के लिए किया जाता है",
+          "क्योंकि किराए का भुगतान सरकार को कर के रूप में किया जाता है",
+          "क्योंकि भूमि उत्पादन का एक प्राथमिक कारक है"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Land is one of the four primary factors of production. Any payment made for using the services of a factor of production is a factor payment; hence rent is a factor payment.",
+        "hi": "भूमि उत्पादन के चार प्राथमिक कारकों में से एक है। उत्पादन के किसी कारक की सेवाओं का उपयोग करने के लिए किया गया कोई भी भुगतान साधन भुगतान कहलाता है; इसलिए किराया एक साधन भुगतान है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Why are intermediate goods excluded from the calculation of National Income?",
+        "hi": "राष्ट्रीय आय की गणना से मध्यवर्ती वस्तुओं को क्यों बाहर रखा जाता है?"
+      },
+      "options": {
+        "en": [
+          "To reduce the burden on tax authorities",
+          "Because intermediate goods have no value",
+          "To avoid the problem of double counting",
+          "Because intermediate goods are not produced within the country"
+        ],
+        "hi": [
+          "कर अधिकारियों पर बोझ कम करने के लिए",
+          "क्योंकि मध्यवर्ती वस्तुओं का कोई मूल्य नहीं होता है",
+          "दोहरी गणना की समस्या से बचने के लिए",
+          "क्योंकि मध्यवर्ती वस्तुएं देश के भीतर उत्पादित नहीं होती हैं"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Intermediate goods are already included in the value of final goods. Including them separately would lead to double counting, which artificially inflates national income.",
+        "hi": "मध्यवर्ती वस्तुओं का मूल्य पहले से ही अंतिम वस्तुओं के मूल्य में शामिल होता है। उन्हें अलग से शामिल करने से दोहरी गणना होगी, जिससे राष्ट्रीय आय कृत्रिम रूप से बढ़ जाएगी।"
+      },
+      "pyq": "UPSC CSE 2015"
+    },
+    {
+      "question": {
+        "en": "Black money and illegal activities are excluded from National Income primarily due to:",
+        "hi": "काले धन और अवैध गतिविधियों को मुख्य रूप से किसके कारण राष्ट्रीय आय से बाहर रखा जाता है?"
+      },
+      "options": {
+        "en": [
+          "The fact that they do not generate any utility",
+          "Lack of official data and legal records",
+          "High rates of depreciation associated with them",
+          "Direct instructions from the World Bank"
+        ],
+        "hi": [
+          "तथ्य यह है कि वे कोई उपयोगिता उत्पन्न नहीं करते हैं",
+          "आधिकारिक डेटा और कानूनी रिकॉर्ड की कमी",
+          "उनसे जुड़ी मूल्यह्रास की उच्च दरें",
+          "विश्व बैंक से सीधे निर्देश"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Illegal activities (like smuggling) and black money transactions are unreported and untaxed, meaning there is no reliable official statistical data available to include them in National Income calculations.",
+        "hi": "अवैध गतिविधियां (जैसे तस्करी) और काले धन के लेनदेन अघोषित और कर-मुक्त होते हैं, जिसका अर्थ है कि उन्हें राष्ट्रीय आय की गणना में शामिल करने के लिए कोई विश्वसनीय आधिकारिक सांख्यिकीय डेटा उपलब्ध नहीं है।"
+      },
+      "pyq": "UPSC CSE 2012"
+    },
+    {
+      "question": {
+        "en": "Which of the following is the correct formula to convert Domestic product to National product?",
+        "hi": "घरेलू उत्पाद को राष्ट्रीय उत्पाद में बदलने का सही सूत्र निम्नलिखित में से कौन सा है?"
+      },
+      "options": {
+        "en": [
+          "Domestic Product + Net Factor Income from Abroad = National Product",
+          "Domestic Product - Net Factor Income from Abroad = National Product",
+          "Domestic Product - Depreciation = National Product",
+          "Domestic Product + Indirect Taxes = National Product"
+        ],
+        "hi": [
+          "घरेलू उत्पाद + विदेशों से प्राप्त शुद्ध साधन आय = राष्ट्रीय उत्पाद",
+          "घरेलू उत्पाद - विदेशों से प्राप्त शुद्ध साधन आय = राष्ट्रीय उत्पाद",
+          "घरेलू उत्पाद - मूल्यह्रास = राष्ट्रीय उत्पाद",
+          "घरेलू उत्पाद + अप्रत्यक्ष कर = राष्ट्रीय उत्पाद"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "To transition from a domestic concept to a national concept, Net Factor Income from Abroad (NFIA) must be added. Formula: National = Domestic + NFIA.",
+        "hi": "घरेलू अवधारणा से राष्ट्रीय अवधारणा में जाने के लिए, विदेशों से प्राप्त शुद्ध साधन आय (NFIA) को जोड़ा जाना चाहिए। सूत्र: राष्ट्रीय = घरेलू + NFIA।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following is an example of a 'Final Good' in the production of a Jalebi?",
+        "hi": "जलेबी के उत्पादन में निम्नलिखित में से कौन सा एक 'अंतिम वस्तु' का उदाहरण है?"
+      },
+      "options": {
+        "en": [
+          "The sugar purchased by the sweet maker",
+          "The flour used to make the batter",
+          "The coal or gas used to heat the stove",
+          "The Jalebi sold to a consumer"
+        ],
+        "hi": [
+          "हलवाई द्वारा खरीदी गई चीनी",
+          "घोल बनाने के लिए उपयोग किया जाने वाला मैदा",
+          "भट्टी को गर्म करने के लिए उपयोग किया जाने वाला कोयला या गैस",
+          "उपभोक्ता को बेची गई जलेबी"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The final Jalebi sold to the consumer is the final good. Sugar, flour, and fuel are intermediate goods or inputs used up in the production process.",
+        "hi": "उपभोक्ता को बेची जाने वाली अंतिम जलेबी अंतिम वस्तु है। चीनी, मैदा और ईंधन उत्पादन प्रक्रिया में उपयोग की जाने वाली मध्यवर्ती वस्तुएं या इनपुट हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "If the GDP Deflator of an economy is exactly 100, it indicates that:",
+        "hi": "यदि किसी अर्थव्यवस्था का जीडीपी डिफ्लेटर ठीक 100 है, तो यह दर्शाता है कि:"
+      },
+      "options": {
+        "en": [
+          "The economy is facing hyperinflation",
+          "Real GDP is zero",
+          "There has been no change in the price level compared to the base year",
+          "Prices have doubled compared to the base year"
+        ],
+        "hi": [
+          "अर्थव्यवस्था अति-मुद्रास्फीति का सामना कर रही है",
+          "वास्तविक जीडीपी शून्य है",
+          "आधार वर्ष की तुलना में मूल्य स्तर में कोई बदलाव नहीं हुआ है",
+          "आधार वर्ष की तुलना में कीमतें दोगुनी हो गई हैं"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "A GDP Deflator of 100 means Nominal GDP equals Real GDP, which means there has been no net change in the average price level compared to the base year.",
+        "hi": "100 के जीडीपी डिफ्लेटर का मतलब है कि सांकेतिक जीडीपी वास्तविक जीडीपी के बराबर है, जिसका अर्थ है कि आधार वर्ष की तुलना में औसत मूल्य स्तर में कोई शुद्ध परिवर्तन नहीं हुआ है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Why is the GDP Deflator considered a broader measure of inflation than CPI or WPI?",
+        "hi": "जीडीपी डिफ्लेटर को CPI या WPI की तुलना में मुद्रास्फीति का व्यापक माप क्यों माना जाता है?"
+      },
+      "options": {
+        "en": [
+          "It is updated daily by the central bank",
+          "It only measures the prices of imported goods",
+          "It excludes the service sector completely",
+          "It covers all final goods and services produced in the entire economy"
+        ],
+        "hi": [
+          "इसे केंद्रीय बैंक द्वारा दैनिक रूप से अपडेट किया जाता है",
+          "यह केवल आयातित वस्तुओं की कीमतों को मापता है",
+          "यह सेवा क्षेत्र को पूरी तरह से बाहर करता है",
+          "यह पूरी अर्थव्यवस्था में उत्पादित सभी अंतिम वस्तुओं और सेवाओं को कवर करता है"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Unlike CPI (which only covers a representative basket of consumer goods) and WPI (which only covers wholesale goods), the GDP Deflator reflects the prices of all domestically produced final goods and services in the economy.",
+        "hi": "सीपीआई (जो केवल उपभोक्ता वस्तुओं की एक प्रतिनिधि टोकरी को कवर करता है) और डब्ल्यूपीआई (जो केवल थोक वस्तुओं को कवर करता है) के विपरीत, जीडीपी डिफ्लेटर अर्थव्यवस्था में सभी घरेलू रूप से उत्पादित अंतिम वस्तुओं और सेवाओं की कीमतों को दर्शाता है।"
+      },
+      "pyq": "UPSC CSE 2016"
+    },
+    {
+      "question": {
+        "en": "If India's GDP is ₹1000 crore and the consumption of fixed capital (depreciation) is ₹100 crore, what is India's NDP?",
+        "hi": "यदि भारत का जीडीपी ₹1000 करोड़ है और अचल पूंजी का उपभोग (मूल्यह्रास) ₹100 करोड़ है, तो भारत का एनडीपी क्या है?"
+      },
+      "options": {
+        "en": [
+          "₹900 crore",
+          "₹800 crore",
+          "₹1000 crore",
+          "₹1100 crore"
+        ],
+        "hi": [
+          "₹900 करोड़",
+          "₹800 करोड़",
+          "₹1000 करोड़",
+          "₹1100 करोड़"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "NDP = GDP - Depreciation = ₹1000 crore - ₹100 crore = ₹900 crore.",
+        "hi": "NDP = GDP - मूल्यह्रास = ₹1000 करोड़ - ₹100 करोड़ = ₹900 करोड़।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Net Domestic Product (NDP) is obtained by:",
+        "hi": "शुद्ध घरेलू उत्पाद (NDP) कैसे प्राप्त किया जाता है?"
+      },
+      "options": {
+        "en": [
+          "Subtracting NFIA from GDP",
+          "Adding depreciation to GDP",
+          "Adding NFIA to GDP",
+          "Subtracting depreciation from GDP"
+        ],
+        "hi": [
+          "GDP में से NFIA घटाकर",
+          "GDP में मूल्यह्रास जोड़कर",
+          "GDP में NFIA जोड़कर",
+          "GDP में से मूल्यह्रास घटाकर"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Net Domestic Product (NDP) is calculated by deducting depreciation (consumption of fixed capital) from Gross Domestic Product (GDP). Formula: NDP = GDP - Depreciation.",
+        "hi": "सकल घरेलू उत्पाद (GDP) में से मूल्यह्रास (अचल पूंजी की खपत) को घटाकर शुद्ध घरेलू उत्पाद (NDP) की गणना की जाती है। सूत्र: NDP = GDP - मूल्यह्रास।"
+      },
+      "pyq": "SSC CGL 2019"
+    },
+    {
+      "question": {
+        "en": "Net National Product (NNP) is calculated by:",
+        "hi": "शुद्ध राष्ट्रीय उत्पाद (NNP) की गणना किसके द्वारा की जाती है?"
+      },
+      "options": {
+        "en": [
+          "Subtracting depreciation from GNP",
+          "Adding NFIA to GDP",
+          "Adding depreciation to GNP",
+          "Subtracting NFIA from NDP"
+        ],
+        "hi": [
+          "GNP में से मूल्यह्रास घटाकर",
+          "GDP में NFIA जोड़कर",
+          "GNP में मूल्यह्रास जोड़कर",
+          "NDP में से NFIA घटाकर"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Net National Product (NNP) is obtained by subtracting depreciation from Gross National Product (GNP). Formula: NNP = GNP - Depreciation.",
+        "hi": "सकल राष्ट्रीय उत्पाद (GNP) में से मूल्यह्रास को घटाकर शुद्ध राष्ट्रीय उत्पाद (NNP) प्राप्त किया जाता है। सूत्र: NNP = GNP - मूल्यह्रास।"
+      },
+      "pyq": "BPSC 2018"
+    },
+    {
+      "question": {
+        "en": "If an economy is a 'Closed Economy' with zero international trade and no migration, which of the following is true?",
+        "hi": "यदि कोई अर्थव्यवस्था शून्य अंतर्राष्ट्रीय व्यापार और बिना किसी प्रवास वाली 'बंद अर्थव्यवस्था' है, तो निम्नलिखित में से कौन सा सत्य है?"
+      },
+      "options": {
+        "en": [
+          "GDP < GNP",
+          "GDP > GNP",
+          "GDP = GNP",
+          "NDP = NNP + Depreciation"
+        ],
+        "hi": [
+          "GDP < GNP",
+          "GDP > GNP",
+          "GDP = GNP",
+          "NDP = NNP + मूल्यह्रास"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "In a closed economy, Net Factor Income from Abroad (NFIA) is zero. Since GNP = GDP + NFIA, GNP will be exactly equal to GDP.",
+        "hi": "एक बंद अर्थव्यवस्था में, विदेशों से प्राप्त शुद्ध साधन आय (NFIA) शून्य होती है। चूंकि GNP = GDP + NFIA, इसलिए GNP बिल्कुल GDP के बराबर होगा।"
+      },
+      "pyq": "UPSC CSE 2011"
+    },
+    {
+      "question": {
+        "en": "What is the correct formula to calculate 'Basic Price' as per Indian national accounting?",
+        "hi": "भारतीय राष्ट्रीय लेखांकन के अनुसार 'बुनियादी मूल्य' (Basic Price) की गणना करने का सही सूत्र क्या है?"
+      },
+      "options": {
+        "en": [
+          "Basic Price = Market Price - Indirect Taxes",
+          "Basic Price = Factor Cost + Depreciation",
+          "Basic Price = Factor Cost + Product Tax - Product Subsidy",
+          "Basic Price = Factor Cost + Production Tax - Production Subsidy"
+        ],
+        "hi": [
+          "बुनियादी मूल्य = बाजार मूल्य - अप्रत्यक्ष कर",
+          "बुनियादी मूल्य = साधन लागत + मूल्यह्रास",
+          "बुनियादी मूल्य = साधन लागत + उत्पाद कर - उत्पाद सब्सिडी",
+          "बुनियादी मूल्य = साधन लागत + उत्पादन कर - उत्पादन सब्सिडी"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Basic Price is the amount receivable by the producer from the purchaser. It is calculated as Factor Cost plus Production Tax minus Production Subsidy.",
+        "hi": "बुनियादी मूल्य वह राशि है जो उत्पादक को खरीदार से प्राप्त होती है। इसकी गणना साधन लागत प्लस उत्पादन कर माइनस उत्पादन सब्सिडी के रूप में की जाती है।"
+      },
+      "pyq": "UPSC CSE 2021"
+    },
+    {
+      "question": {
+        "en": "Which of the following is the correct relationship between Net Domestic Product (NDP) and Net National Product (NNP)?",
+        "hi": "निम्नलिखित में से कौन सा शुद्ध घरेलू उत्पाद (NDP) और शुद्ध राष्ट्रीय उत्पाद (NNP) के बीच सही संबंध है?"
+      },
+      "options": {
+        "en": [
+          "NNP = NDP - Depreciation",
+          "NNP = NDP + Depreciation",
+          "NNP = NDP + Net Factor Income from Abroad (NFIA)",
+          "NNP = NDP - Net Factor Income from Abroad (NFIA)"
+        ],
+        "hi": [
+          "NNP = NDP - मूल्यह्रास",
+          "NNP = NDP + मूल्यह्रास",
+          "NNP = NDP + विदेशों से प्राप्त शुद्ध साधन आय (NFIA)",
+          "NNP = NDP - विदेशों से प्राप्त शुद्ध साधन आय (NFIA)"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The relationship between 'Domestic' and 'National' remains the same even at 'Net' levels. Thus, Net National Product (NNP) equals Net Domestic Product (NDP) plus Net Factor Income from Abroad (NFIA).",
+        "hi": "'घरेलू' और 'राष्ट्रीय' के बीच का संबंध 'शुद्ध' (Net) स्तर पर भी वही रहता है। इस प्रकार, शुद्ध राष्ट्रीय उत्पाद (NNP) शुद्ध घरेलू उत्पाद (NDP) प्लस विदेशों से प्राप्त शुद्ध साधन आय (NFIA) के बराबर होता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which method of calculating National Income is officially preferred/used by the Government of India for overall output reporting?",
+        "hi": "समग्र आउटपुट रिपोर्टिंग के लिए भारत सरकार द्वारा आधिकारिक तौर पर राष्ट्रीय आय की गणना की किस विधि को प्राथमिकता दी जाती है/उपयोग किया जाता है?"
+      },
+      "options": {
+        "en": [
+          "Expenditure Method",
+          "Income Method",
+          "Barter Method",
+          "Product/Value Added Method"
+        ],
+        "hi": [
+          "व्यय विधि",
+          "आय विधि",
+          "वस्तु विनिमय विधि",
+          "उत्पाद/मूल्य वर्धित विधि"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The Government of India officially uses the Expenditure Method as a primary indicator of economic activity and overall output reporting.",
+        "hi": "भारत सरकार आधिकारिक तौर पर आर्थिक गतिविधि और समग्र आउटपुट रिपोर्टिंग के प्राथमिक संकेतक के रूप में व्यय विधि का उपयोग करती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "The National Statistical Office (NSO) was formed by merging which of the following organizations?",
+        "hi": "राष्ट्रीय सांख्यिकी कार्यालय (NSO) का गठन निम्नलिखित में से किस संगठन के विलय द्वारा किया गया था?"
+      },
+      "options": {
+        "en": [
+          "CSO and NSSO",
+          "RBI and SEBI",
+          "Planning Commission and NDC",
+          "MoSPI and Ministry of Finance"
+        ],
+        "hi": [
+          "CSO और NSSO",
+          "RBI और SEBI",
+          "योजना आयोग और NDC",
+          "MoSPI और वित्त मंत्रालय"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The Government of India merged the Central Statistics Office (CSO) and the National Sample Survey Office (NSSO) to form the National Statistical Office (NSO).",
+        "hi": "भारत सरकार ने राष्ट्रीय सांख्यिकी कार्यालय (NSO) बनाने के लिए केंद्रीय सांख्यिकी कार्यालय (CSO) और राष्ट्रीय नमूना सर्वेक्षण कार्यालय (NSSO) का विलय कर दिया।"
+      },
+      "pyq": "SSC CGL 2022"
+    },
+    {
+      "question": {
+        "en": "Gross Domestic Product (GDP) is defined as the total monetary value of all final goods and services produced within:",
+        "hi": "सकल घरेलू उत्पाद (GDP) को किसके भीतर उत्पादित सभी अंतिम वस्तुओं और सेवाओं के कुल मौद्रिक मूल्य के रूप में परिभाषित किया गया है:"
+      },
+      "options": {
+        "en": [
+          "The economic territory of a country during one year",
+          "The manufacturing sector of an economy only",
+          "The global operations of a country's citizens",
+          "The public sector enterprises of a country"
+        ],
+        "hi": [
+          "एक वर्ष के दौरान किसी देश के आर्थिक क्षेत्र के भीतर",
+          "केवल एक अर्थव्यवस्था के विनिर्माण क्षेत्र के भीतर",
+          "किसी देश के नागरिकों के वैश्विक संचालन के भीतर",
+          "किसी देश के सार्वजनिक क्षेत्र के उद्यमों के भीतर"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "GDP measures the total value of final goods and services produced within the economic/domestic territory of a country during one year, regardless of the producer's nationality.",
+        "hi": "जीडीपी एक वर्ष के दौरान किसी देश के आर्थिक/घरेलू क्षेत्र के भीतर उत्पादित अंतिम वस्तुओं और सेवाओं के कुल मूल्य को मापता है, चाहे उत्पादक की राष्ट्रीयता कुछ भी हो।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "Which of the following is the correct sequence of pricing from Factor Cost to Market Price?",
+        "hi": "साधन लागत से बाजार मूल्य तक मूल्य निर्धारण का सही क्रम निम्नलिखित में से कौन सा है?"
+      },
+      "options": {
+        "en": [
+          "Market Price → Factor Cost → Basic Price",
+          "Basic Price → Factor Cost → Market Price",
+          "Factor Cost → Market Price → Basic Price",
+          "Factor Cost → Basic Price → Market Price"
+        ],
+        "hi": [
+          "बाजार मूल्य → साधन लागत → बुनियादी मूल्य",
+          "बुनियादी मूल्य → साधन लागत → बाजार मूल्य",
+          "साधन लागत → बाजार मूल्य → बुनियादी मूल्य",
+          "साधन लागत → बुनियादी मूल्य → बाजार मूल्य"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The correct pricing sequence in Indian national accounting is: Factor Cost + Production Taxes - Production Subsidies = Basic Price. Basic Price + Product Taxes - Product Subsidies = Market Price.",
+        "hi": "भारतीय राष्ट्रीय लेखांकन में सही मूल्य निर्धारण क्रम है: साधन लागत + उत्पादन कर - उत्पादन सब्सिडी = बुनियादी मूल्य। बुनियादी मूल्य + उत्पाद कर - उत्पाद सब्सिडी = बाजार मूल्य।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following transaction types is excluded from National Income because it represents a mere paper claim?",
+        "hi": "निम्नलिखित में से कौन सा लेनदेन प्रकार राष्ट्रीय आय से बाहर रखा गया है क्योंकि यह केवल एक कागजी दावे का प्रतिनिधित्व करता है?"
+      },
+      "options": {
+        "en": [
+          "Purchase and sale of shares and bonds",
+          "Commission paid to a stockbroker",
+          "Payment of salary to government staff",
+          "Purchase of a new machinery by a firm"
+        ],
+        "hi": [
+          "शेयरों और बांडों की खरीद और बिक्री",
+          "स्टॉकब्रोकर को भुगतान किया गया कमीशन",
+          "सरकारी कर्मचारियों को वेतन का भुगतान",
+          "एक फर्म द्वारा नई मशीनरी की खरीद"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Transactions of shares and bonds are financial claims and do not represent any physical addition to the flow of goods and services, so they are excluded. However, the commission earned by brokers is included because it is a service payment.",
+        "hi": "शेयरों और बांडों के लेनदेन वित्तीय दावे हैं और वस्तुओं और सेवाओं के प्रवाह में किसी भी भौतिक वृद्धि का प्रतिनिधित्व नहीं करते हैं, इसलिए उन्हें बाहर रखा गया है। हालांकि, दलालों द्वारा अर्जित कमीशन को शामिल किया जाता है क्योंकि यह एक सेवा भुगतान है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following is NOT included in the calculation of National Income?",
+        "hi": "निम्नलिखित में से किसे राष्ट्रीय आय की गणना में शामिल नहीं किया जाता है?"
+      },
+      "options": {
+        "en": [
+          "A new mobile phone sold to a consumer",
+          "Salary paid to a school teacher",
+          "Consultation service provided by a doctor",
+          "Old second-hand car sold by an individual"
+        ],
+        "hi": [
+          "उपभोक्ता को बेचा गया एक नया मोबाइल फोन",
+          "स्कूल के शिक्षक को दिया जाने वाला वेतन",
+          "एक डॉक्टर द्वारा प्रदान की जाने वाली परामर्श सेवा",
+          "किसी व्यक्ति द्वारा बेची गई पुरानी सेकेंड-हैंड कार"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The sale of second-hand goods is excluded from National Income because their value was already counted in the year they were originally produced.",
+        "hi": "सेकेंड-हैंड वस्तुओं की बिक्री को राष्ट्रीय आय से बाहर रखा जाता है क्योंकि उनका मूल्य उस वर्ष पहले ही गिना जा चुका था जब वे मूल रूप से उत्पादित की गई थीं।"
+      },
+      "pyq": "UPPSC 2017"
+    },
+    {
+      "question": {
+        "en": "What is the current base year used by India for calculating Real GDP?",
+        "hi": "वास्तविक जीडीपी की गणना के लिए भारत द्वारा उपयोग किया जाने वाला वर्तमान आधार वर्ष क्या है?"
+      },
+      "options": {
+        "en": [
+          "2011-12",
+          "2004-05",
+          "2020-21",
+          "2015-16"
+        ],
+        "hi": [
+          "2011-12",
+          "2004-05",
+          "2020-21",
+          "2015-16"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The Central Statistics Office (CSO) revised the base year for national accounts from 2004-05 to 2011-12, which is currently in use.",
+        "hi": "केंद्रीय सांख्यिकी कार्यालय (CSO) ने राष्ट्रीय खातों के लिए आधार वर्ष को 2004-05 से संशोधित कर 2011-12 कर दिया, जो वर्तमान में उपयोग में है।"
+      },
+      "pyq": "UPSC CSE 2020"
+    },
+    {
+      "question": {
+        "en": "Net Factor Income from Abroad (NFIA) is defined as:",
+        "hi": "विदेशों से प्राप्त शुद्ध साधन आय (NFIA) को किस रूप में परिभाषित किया गया है?"
+      },
+      "options": {
+        "en": [
+          "Income earned by citizens abroad minus income earned by foreigners domestically",
+          "Total exports minus total imports of goods",
+          "Total foreign aid received by the government",
+          "Foreign direct investment minus foreign portfolio investment"
+        ],
+        "hi": [
+          "नागरिकों द्वारा विदेशों में अर्जित आय में से विदेशियों द्वारा घरेलू स्तर पर अर्जित आय को घटाकर",
+          "वस्तुओं का कुल निर्यात घटाकर कुल आयात",
+          "सरकार द्वारा प्राप्त कुल विदेशी सहायता",
+          "विदेशी प्रत्यक्ष निवेश घटाकर विदेशी पोर्टफोलियो निवेश"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "NFIA is the difference between factor income received by residents from the rest of the world and factor income paid to non-residents within the domestic territory.",
+        "hi": "एनफिया (NFIA) शेष विश्व से निवासियों द्वारा प्राप्त साधन आय और घरेलू क्षेत्र के भीतर गैर-निवासियों को भुगतान की जाने वाली साधन आय के बीच का अंतर है।"
+      },
+      "pyq": "UPPSC 2020"
+    },
+    {
+      "question": {
+        "en": "Which of the following is NOT included in India's Gross Domestic Product (GDP)?",
+        "hi": "निम्नलिखित में से किसे भारत के सकल घरेलू उत्पाद (GDP) में शामिल नहीं किया जाता है?"
+      },
+      "options": {
+        "en": [
+          "Services provided by a government hospital in Delhi",
+          "Income earned by an Indian software engineer working in the USA",
+          "Mobile phones assembled in Noida by a Chinese firm",
+          "A Japanese company manufacturing cars in Tamil Nadu"
+        ],
+        "hi": [
+          "दिल्ली में एक सरकारी अस्पताल द्वारा प्रदान की जाने वाली सेवाएं",
+          "संयुक्त राज्य अमेरिका में काम करने वाले एक भारतीय सॉफ्टवेयर इंजीनियर द्वारा अर्जित आय",
+          "एक चीनी फर्म द्वारा नोएडा में असेंबल किए गए मोबाइल फोन",
+          "तमिलनाडु में कारों का निर्माण करने वाली एक जापानी कंपनी"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Income earned by Indians abroad is excluded from India's GDP because the production activity takes place outside the economic territory of India. It is instead part of India's GNP.",
+        "hi": "विदेशों में भारतीयों द्वारा अर्जित आय को भारत के सकल घरेलू उत्पाद (GDP) से बाहर रखा गया है क्योंकि उत्पादन गतिविधि भारत के आर्थिक क्षेत्र से बाहर होती है। इसके बजाय यह भारत के जीएनपी का हिस्सा है।"
+      },
+      "pyq": "BPSC 2021"
+    },
+    {
+      "question": {
+        "en": "Which of the following is an example of a 'Production Tax' (as opposed to a 'Product Tax')?",
+        "hi": "निम्नलिखित में से कौन सा एक 'उत्पादन कर' (Production Tax) का उदाहरण है (न कि 'उत्पाद कर' का)?"
+      },
+      "options": {
+        "en": [
+          "Land revenue or stamp duty",
+          "Goods and Services Tax (GST)",
+          "Excise duty on petrol",
+          "Customs duty on imports"
+        ],
+        "hi": [
+          "भू-राजस्व या स्टाम्प शुल्क",
+          "वस्तु एवं सेवा कर (GST)",
+          "पेट्रोल पर उत्पाद शुल्क",
+          "आयात पर सीमा शुल्क"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Production taxes are paid in relation to production activity, independent of the volume of production (e.g., land revenue, stamp duty). Product taxes are paid per unit of product (e.g., GST, excise duty).",
+        "hi": "उत्पादन कर उत्पादन गतिविधि के संबंध में दिए जाते हैं, जो उत्पादन की मात्रा से स्वतंत्र होते हैं (जैसे, भू-राजस्व, स्टाम्प शुल्क)। उत्पाद कर प्रति इकाई उत्पाद पर दिए जाते हैं (जैसे, जीएसटी, उत्पाद शुल्क)।"
+      },
+      "pyq": "UPSC CSE 2022"
+    },
+    {
+      "question": {
+        "en": "What is 'Personal Income'?",
+        "hi": "'व्यक्तिगत आय' (Personal Income) क्या है?"
+      },
+      "options": {
+        "en": [
+          "The total income received by individuals before paying direct taxes",
+          "The total income left with individuals after paying direct taxes",
+          "The total savings of households in a year",
+          "The income earned only by self-employed people"
+        ],
+        "hi": [
+          "प्रत्यक्ष करों का भुगतान करने से पहले व्यक्तियों द्वारा प्राप्त कुल आय",
+          "प्रत्यक्ष करों का भुगतान करने के बाद व्यक्तियों के पास बची कुल आय",
+          "एक वर्ष में परिवारों की कुल बचत",
+          "केवल स्व-नियोजित लोगों द्वारा अर्जित आय"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Personal Income is the sum of all incomes actually received by all individuals or households during a given year, before paying personal direct taxes.",
+        "hi": "व्यक्तिगत आय किसी दिए गए वर्ष के दौरान सभी व्यक्तियों या परिवारों द्वारा वास्तव में प्राप्त सभी आय का योग है, व्यक्तिगत प्रत्यक्ष करों का भुगतान करने से पहले।"
+      },
+      "pyq": "UPPSC 2018"
+    },
+    {
+      "question": {
+        "en": "The circular flow of income represents:",
+        "hi": "आय का चक्रीय प्रवाह क्या दर्शाता है?"
+      },
+      "options": {
+        "en": [
+          "The flow of goods, services, and factors between households and firms",
+          "The trade balance between two nations",
+          "The flow of currency notes printed by the central bank",
+          "The accumulation of gold reserves in the country"
+        ],
+        "hi": [
+          "परिवारों और फर्मों के बीच वस्तुओं, सेवाओं और कारकों का प्रवाह",
+          "दो देशों के बीच व्यापार संतुलन",
+          "केंद्रीय बैंक द्वारा मुद्रित मुद्रा नोटों का प्रवाह",
+          "देश में सोने के भंडार का संचय"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The circular flow of income shows how money, resources, and final products move continuously between households (consumers and factor owners) and firms (producers).",
+        "hi": "आय का चक्रीय प्रवाह दर्शाता है कि कैसे धन, संसाधन और अंतिम उत्पाद परिवारों (उपभोक्ताओं और साधन मालिकों) और फर्मों (उत्पादकों) के बीच लगातार चलते रहते हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following is excluded from National Income calculations because it does not pass through the market?",
+        "hi": "निम्नलिखित में से किसे राष्ट्रीय आय की गणना से बाहर रखा गया है क्योंकि यह बाजार से होकर नहीं गुजरता है?"
+      },
+      "options": {
+        "en": [
+          "Profit of a public sector bank",
+          "Value of commercial agricultural produce",
+          "Services of a homemaker",
+          "Salary of a corporate employee"
+        ],
+        "hi": [
+          "सार्वजनिक क्षेत्र के बैंक का लाभ",
+          "व्यावसायिक कृषि उपज का मूल्य",
+          "एक गृहणी की सेवाएं",
+          "एक कॉर्पोरेट कर्मचारी का वेतन"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Services of a homemaker (household work) are excluded from National Income because they are non-market transactions and it is extremely difficult to estimate their correct monetary value.",
+        "hi": "एक गृहणी की सेवाओं (घरेलू काम) को राष्ट्रीय आय से बाहर रखा गया है क्योंकि वे गैर-बाजार लेनदेन हैं और उनके सही मौद्रिक मूल्य का अनुमान लगाना बेहद मुश्किल है।"
+      },
+      "pyq": "UPSC CSE 2015"
+    },
+    {
+      "question": {
+        "en": "The primary and most critical function of an entrepreneur in an economy is:",
+        "hi": "किसी अर्थव्यवस्था में एक उद्यमी का प्राथमिक और सबसे महत्वपूर्ण कार्य है:"
+      },
+      "options": {
+        "en": [
+          "Providing loans to capital markets",
+          "Managing daily labor attendance",
+          "Deciding tax rates",
+          "Risk-taking"
+        ],
+        "hi": [
+          "पूंजी बाजारों को ऋण प्रदान करना",
+          "दैनिक श्रम उपस्थिति का प्रबंधन करना",
+          "कर दरों का निर्धारण करना",
+          "जोखिम उठाना"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The most fundamental and defining function of an entrepreneur is risk-taking—organizing the other factors of production and bearing the uncertainty of business.",
+        "hi": "एक उद्यमी का सबसे मौलिक और परिभाषित कार्य जोखिम उठाना है—उत्पादन के अन्य कारकों को व्यवस्थित करना और व्यवसाय की अनिश्चितता को सहन करना।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following aggregates is officially considered as the 'National Income' of a country?",
+        "hi": "निम्नलिखित में से किस समुच्चय को आधिकारिक तौर पर किसी देश की 'राष्ट्रीय आय' माना जाता है?"
+      },
+      "options": {
+        "en": [
+          "Gross Domestic Product at Market Price (GDP MP)",
+          "Net National Product at Factor Cost (NNP FC)",
+          "Gross National Product at Market Price (GNP MP)",
+          "Net Domestic Product at Factor Cost (NDP FC)"
+        ],
+        "hi": [
+          "बाजार मूल्य पर सकल घरेलू उत्पाद (GDP MP)",
+          "साधन लागत पर शुद्ध राष्ट्रीय उत्पाद (NNP FC)",
+          "बाजार मूल्य पर सकल राष्ट्रीय उत्पाद (GNP MP)",
+          "साधन लागत पर शुद्ध घरेलू उत्पाद (NDP FC)"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "In economic theory and official reporting, Net National Product at Factor Cost (NNP FC) is designated and defined as National Income.",
+        "hi": "आर्थिक सिद्धांत और आधिकारिक रिपोर्टिंग में, साधन लागत पर शुद्ध राष्ट्रीय उत्पाद (NNP FC) को राष्ट्रीय आय के रूप में नामित और परिभाषित किया गया है।"
+      },
+      "pyq": "UPSC CSE 2018"
+    }
+  ]
+}

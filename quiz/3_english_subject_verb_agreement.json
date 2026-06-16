@@ -1,0 +1,1308 @@
+{
+  "quizName": "3. English - Subject-Verb Agreement",
+  "mapName": "9. CA",
+  "score": "Not submitted",
+  "timerSeconds": 900,
+  "questions": [
+    {
+      "question": {
+        "en": "She is one of those women who ________ never compromise on their principles.",
+        "hi": "वह उन महिलाओं में से एक हैं जो अपने सिद्धांतों से कभी समझौता नहीं ________ करती हैं।"
+      },
+      "options": {
+        "en": [
+          "compromising",
+          "compromise",
+          "compromises",
+          "has compromised"
+        ],
+        "hi": [
+          "compromising",
+          "compromise",
+          "compromises",
+          "has compromised"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "In 'one of those + plural noun + relative pronoun (who)', the verb agrees with the antecedent of the relative pronoun ('women', which is plural). Thus, 'compromise' is correct.",
+        "hi": "'one of those + plural noun + relative pronoun (who)' संरचना में, verb relative pronoun के antecedent ('women', जो plural है) के अनुसार होती है। अतः 'compromise' सही है।"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "The committee ________ decided to postpone the annual meeting.",
+        "hi": "समिति ने वार्षिक बैठक स्थगित करने का निर्णय ________ लिया है।"
+      },
+      "options": {
+        "en": [
+          "were",
+          "has",
+          "have",
+          "are"
+        ],
+        "hi": [
+          "were",
+          "has",
+          "have",
+          "are"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "When a collective noun ('committee') acts as a single, undivided unit, it takes a singular verb ('has').",
+        "hi": "जब कोई collective noun ('committee') एक एकल, अविभाजित इकाई के रूप में कार्य करता है, तो इसके साथ singular verb ('has') का प्रयोग होता है।"
+      },
+      "pyq": "IBPS Clerk 2019"
+    },
+    {
+      "question": {
+        "en": "The council ________ divided on the issue of tax reforms.",
+        "hi": "कर सुधारों के मुद्दे पर परिषद के सदस्य आपस में बंटे ________ हैं।"
+      },
+      "options": {
+        "en": [
+          "is",
+          "are",
+          "has been",
+          "was"
+        ],
+        "hi": [
+          "is",
+          "are",
+          "has been",
+          "was"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "When a collective noun ('council') acts as individuals with divided opinions, it takes a plural verb ('are').",
+        "hi": "जब कोई collective noun ('council') विभाजित विचारों वाले व्यक्तियों के रूप में कार्य करता है, तो इसके साथ plural verb ('are') का प्रयोग होता है।"
+      },
+      "pyq": "IBPS PO 2019"
+    },
+    {
+      "question": {
+        "en": "Neither of the two routes ________ safe during the rainy season.",
+        "hi": "बरसात के मौसम में दोनों में से कोई भी रास्ता सुरक्षित ________ है।"
+      },
+      "options": {
+        "en": [
+          "were",
+          "are",
+          "is",
+          "have been"
+        ],
+        "hi": [
+          "were",
+          "are",
+          "is",
+          "have been"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "When 'Neither' is used as a pronoun, it is singular and takes a singular verb. Thus, 'is' is the correct answer.",
+        "hi": "जब 'Neither' का प्रयोग pronoun के रूप में किया जाता है, तो यह singular होता है और इसके साथ singular verb का प्रयोग होता है। अतः 'is' सही उत्तर है।"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "Some of the milk ________ spilled on the kitchen counter.",
+        "hi": "रसोई के काउंटर पर कुछ दूध ________ गया है।"
+      },
+      "options": {
+        "en": [
+          "were",
+          "have been",
+          "has been",
+          "are"
+        ],
+        "hi": [
+          "were",
+          "have been",
+          "has been",
+          "are"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "'Some of' followed by an uncountable noun ('milk') takes a singular verb. Thus, 'has been' is correct.",
+        "hi": "'Some of' के बाद जब uncountable noun ('milk') आता है, तो singular verb का प्रयोग होता है। अतः 'has been' सही है।"
+      },
+      "pyq": "SSC CPO 2019"
+    },
+    {
+      "question": {
+        "en": "Fifty thousand rupees ________ a huge amount for a student.",
+        "hi": "एक छात्र के लिए पचास हजार रुपये एक बड़ी रकम ________ है।"
+      },
+      "options": {
+        "en": [
+          "have been",
+          "is",
+          "were",
+          "are"
+        ],
+        "hi": [
+          "have been",
+          "is",
+          "were",
+          "are"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "When a specific sum of money is thought of as a single collective unit, it takes a singular verb ('is').",
+        "hi": "जब किसी निश्चित धनराशि को एक एकल सामूहिक इकाई के रूप में माना जाता है, तो इसके साथ singular verb ('is') का प्रयोग होता है।"
+      },
+      "pyq": "CDS 2019"
+    },
+    {
+      "question": {
+        "en": "One-third of the candidates ________ passed the written examination.",
+        "hi": "एक-तिहाई उम्मीदवारों ने लिखित परीक्षा उत्तीर्ण ________ ली है।"
+      },
+      "options": {
+        "en": [
+          "is",
+          "was",
+          "has",
+          "have"
+        ],
+        "hi": [
+          "is",
+          "was",
+          "has",
+          "have"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "For fractions like 'One-third of', the verb depends on the noun that follows 'of'. Since 'candidates' is plural, the verb must be plural ('have').",
+        "hi": "'One-third of' जैसे भिन्नों (fractions) के लिए, verb 'of' के बाद आने वाले noun पर निर्भर करती है। चूँकि 'candidates' plural है, इसलिए verb भी plural ('have') होगी।"
+      },
+      "pyq": "SSC CGL 2018"
+    },
+    {
+      "question": {
+        "en": "Ten miles ________ a long distance to cover on foot.",
+        "hi": "पैदल तय करने के लिए दस मील एक लंबी दूरी ________ है।"
+      },
+      "options": {
+        "en": [
+          "were",
+          "are",
+          "is",
+          "have been"
+        ],
+        "hi": [
+          "were",
+          "are",
+          "is",
+          "have been"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "When a plural noun denotes a specific quantity, distance, time, or amount as a single unit, it takes a singular verb ('is').",
+        "hi": "जब कोई plural noun किसी निश्चित मात्रा, दूरी, समय या राशि को एक एकल इकाई (single unit) के रूप में दर्शाता है, तो इसके साथ singular verb ('is') का प्रयोग होता है।"
+      },
+      "pyq": "SSC CGL 2018"
+    },
+    {
+      "question": {
+        "en": "Bread and butter ________ his only source of livelihood.",
+        "hi": "रोजी-रोटी (Bread and butter) ही उनकी आजीविका का एकमात्र साधन ________ है।"
+      },
+      "options": {
+        "en": [
+          "were",
+          "is",
+          "are",
+          "have been"
+        ],
+        "hi": [
+          "were",
+          "is",
+          "are",
+          "have been"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "When two nouns are joined by 'and' but refer to a single collective idea or object (like livelihood), they take a singular verb ('is').",
+        "hi": "जब दो nouns 'and' से जुड़े हों लेकिन वे एक ही सामूहिक विचार या वस्तु (जैसे आजीविका) को दर्शाते हैं, तो उनके साथ singular verb ('is') का प्रयोग होता है।"
+      },
+      "pyq": "CDS 2018"
+    },
+    {
+      "question": {
+        "en": "One-third of the land ________ been acquired for the highway project.",
+        "hi": "राजमार्ग परियोजना के लिए एक-तिहाई भूमि का अधिग्रहण ________ कर लिया गया है।"
+      },
+      "options": {
+        "en": [
+          "were",
+          "have",
+          "are",
+          "has"
+        ],
+        "hi": [
+          "were",
+          "have",
+          "are",
+          "has"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Since 'land' is an uncountable noun, 'One-third of the land' takes a singular verb. Hence, 'has' is correct.",
+        "hi": "चूँकि 'land' एक uncountable noun है, इसलिए 'One-third of the land' के साथ singular verb का प्रयोग होगा। अतः 'has' सही है।"
+      },
+      "pyq": "CDS 2021"
+    },
+    {
+      "question": {
+        "en": "All the equipment ________ been delivered to the construction site.",
+        "hi": "सभी उपकरण (equipment) निर्माण स्थल पर ________ दिए गए हैं।"
+      },
+      "options": {
+        "en": [
+          "are",
+          "were",
+          "have",
+          "has"
+        ],
+        "hi": [
+          "are",
+          "were",
+          "have",
+          "has"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "According to the rule, 'All + uncountable noun' takes a singular verb. 'Equipment' is an uncountable noun, so it takes the singular verb 'has'.",
+        "hi": "नियम के अनुसार, 'All + uncountable noun' (अगणनीय संज्ञा) के साथ singular verb (एकवचन क्रिया) का प्रयोग होता है। 'Equipment' एक अगणनीय संज्ञा है, इसलिए यहाँ singular verb 'has' का प्रयोग होगा।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "More books than one ________ recommended by the professor.",
+        "hi": "प्रोफेसर द्वारा एक से अधिक पुस्तकों की सिफारिश की ________ गई थी।"
+      },
+      "options": {
+        "en": [
+          "has been",
+          "is",
+          "was",
+          "were"
+        ],
+        "hi": [
+          "has been",
+          "is",
+          "was",
+          "were"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The structure 'More + plural noun + than one' takes a plural verb. Since 'books' is plural, 'were' is correct.",
+        "hi": "'More + plural noun + than one' संरचना में plural verb का प्रयोग होता है। चूँकि 'books' plural है, इसलिए 'were' सही है।"
+      },
+      "pyq": "SSC CPO 2018"
+    },
+    {
+      "question": {
+        "en": "Not only the captain but also the team members ________ praised for their performance.",
+        "hi": "न केवल कप्तान बल्कि टीम के सदस्यों की भी उनके प्रदर्शन के लिए सराहना की ________ गई।"
+      },
+      "options": {
+        "en": [
+          "is",
+          "has been",
+          "was",
+          "were"
+        ],
+        "hi": [
+          "is",
+          "has been",
+          "was",
+          "were"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "When subjects are joined by 'Not only...but also', the verb agrees with the nearest subject ('team members', which is plural). Hence, 'were' is correct.",
+        "hi": "जब subjects को 'Not only...but also' से जोड़ा जाता है, तो verb सबसे पास वाले subject ('team members', जो plural है) के अनुसार होती है। इसलिए 'were' सही है।"
+      },
+      "pyq": "SSC CHSL 2022"
+    },
+    {
+      "question": {
+        "en": "Some of them ________ already completed their tasks.",
+        "hi": "उनमें से कुछ ने अपना काम पहले ही पूरा ________ कर लिया है।"
+      },
+      "options": {
+        "en": [
+          "has",
+          "have",
+          "is",
+          "was"
+        ],
+        "hi": [
+          "has",
+          "have",
+          "is",
+          "was"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "'Some of' followed by a plural pronoun ('them') takes a plural verb. Hence, 'have' is correct.",
+        "hi": "'Some of' के बाद जब plural pronoun ('them') आता है, तो plural verb का प्रयोग होता है। अतः 'have' सही है।"
+      },
+      "pyq": "IBPS PO 2020"
+    },
+    {
+      "question": {
+        "en": "All the information provided by him ________ found to be correct.",
+        "hi": "उनके द्वारा दी गई सभी जानकारी सही पाई ________ गई।"
+      },
+      "options": {
+        "en": [
+          "was",
+          "were",
+          "have been",
+          "are"
+        ],
+        "hi": [
+          "was",
+          "were",
+          "have been",
+          "are"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'Information' is an uncountable noun. 'All + uncountable noun' takes a singular verb, so 'was' is the correct choice.",
+        "hi": "'Information' एक uncountable noun है। 'All + uncountable noun' के साथ singular verb का प्रयोग होता है, इसलिए 'was' सही विकल्प है।"
+      },
+      "pyq": "SSC CGL 2022"
+    },
+    {
+      "question": {
+        "en": "The Prime Minister, accompanied by his cabinet ministers, ________ arriving today.",
+        "hi": "प्रधानमंत्री, अपने कैबिनेट मंत्रियों के साथ, आज आ ________ रहे हैं।"
+      },
+      "options": {
+        "en": [
+          "were",
+          "is",
+          "have been",
+          "are"
+        ],
+        "hi": [
+          "were",
+          "is",
+          "have been",
+          "are"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "When a singular subject ('The Prime Minister') is followed by parenthetical expressions like 'accompanied by', the verb remains singular ('is').",
+        "hi": "जब किसी singular subject ('The Prime Minister') के बाद 'accompanied by' जैसे भाव आते हैं, तो verb singular ('is') ही रहती है।"
+      },
+      "pyq": "NDA 2022"
+    },
+    {
+      "question": {
+        "en": "Politics ________ a dirty game, according to some people.",
+        "hi": "कुछ लोगों के अनुसार राजनीति एक गंदा खेल ________ है।"
+      },
+      "options": {
+        "en": [
+          "are",
+          "is",
+          "have been",
+          "were"
+        ],
+        "hi": [
+          "are",
+          "is",
+          "have been",
+          "were"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Subject names ending in '-ics' (like Politics, Physics, Mathematics) are singular in meaning and take a singular verb ('is').",
+        "hi": "'-ics' पर समाप्त होने वाले विषयों के नाम (जैसे Politics, Physics, Mathematics) अर्थ में singular होते हैं और इनके साथ singular verb ('is') का प्रयोग होता है।"
+      },
+      "pyq": "SSC MTS 2019"
+    },
+    {
+      "question": {
+        "en": "No other student in the class ________ as hardworking as Rahul.",
+        "hi": "कक्षा में कोई अन्य छात्र राहुल जितना परिश्रमी ________ है।"
+      },
+      "options": {
+        "en": [
+          "is",
+          "have been",
+          "are",
+          "were"
+        ],
+        "hi": [
+          "is",
+          "have been",
+          "are",
+          "were"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'No other' followed by a singular noun ('student') takes a singular verb. Thus, 'is' is the correct answer.",
+        "hi": "'No other' के बाद singular noun ('student') आता है और singular verb का प्रयोग होता है। अतः 'is' सही उत्तर है।"
+      },
+      "pyq": "SSC CHSL 2017"
+    },
+    {
+      "question": {
+        "en": "One of the most common causes of stress ________ overthinking.",
+        "hi": "तनाव के सबसे आम कारणों में से एक अत्यधिक सोचना (overthinking) ________ है।"
+      },
+      "options": {
+        "en": [
+          "is",
+          "have been",
+          "were",
+          "are"
+        ],
+        "hi": [
+          "is",
+          "have been",
+          "were",
+          "are"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "In the structure 'One of + plural noun', the real subject is 'One', which is singular. Thus, 'is' is the correct verb.",
+        "hi": "'One of + plural noun' संरचना में, वास्तविक subject 'One' होता है, जो singular है। अतः 'is' सही क्रिया है।"
+      },
+      "pyq": "SSC CGL 2022"
+    },
+    {
+      "question": {
+        "en": "All the students ________ requested to submit their assignments by tomorrow.",
+        "hi": "सभी छात्रों से अनुरोध किया गया ________ कि वे कल तक अपने असाइनमेंट जमा कर दें।"
+      },
+      "options": {
+        "en": [
+          "are",
+          "was",
+          "has",
+          "is"
+        ],
+        "hi": [
+          "are",
+          "was",
+          "has",
+          "is"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "When 'All' is followed by a plural countable noun ('students'), it takes a plural verb. Therefore, 'are' is the correct choice.",
+        "hi": "जब 'All' के बाद plural countable noun ('students') आता है, तो इसके साथ plural verb (बहुवचन क्रिया) का प्रयोग होता है। इसलिए 'are' सही विकल्प है।"
+      },
+      "pyq": "SSC CHSL 2020"
+    },
+    {
+      "question": {
+        "en": "Rice and curry ________ my favorite dish for lunch.",
+        "hi": "दोपहर के भोजन के लिए चावल और कढ़ी मेरी पसंदीदा डिश ________ है।"
+      },
+      "options": {
+        "en": [
+          "have been",
+          "are",
+          "were",
+          "is"
+        ],
+        "hi": [
+          "have been",
+          "are",
+          "were",
+          "is"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "When two nouns (like Rice and curry) refer to a single food item or concept, they take a singular verb ('is').",
+        "hi": "जब दो nouns (जैसे Rice and curry) किसी एक ही खाद्य पदार्थ या अवधारणा को दर्शाते हैं, तो उनके साथ singular verb ('is') का प्रयोग होता है।"
+      },
+      "pyq": "SSC CGL 2016"
+    },
+    {
+      "question": {
+        "en": "Each day and each hour ________ its own importance in our lives.",
+        "hi": "हमारे जीवन में हर दिन और हर घंटे का अपना महत्व ________ है।"
+      },
+      "options": {
+        "en": [
+          "are",
+          "has",
+          "were",
+          "have"
+        ],
+        "hi": [
+          "are",
+          "has",
+          "were",
+          "have"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "When two singular nouns are joined by 'and' but preceded by 'each' or 'every', the verb must be singular ('has').",
+        "hi": "जब दो singular nouns 'and' से जुड़े हों लेकिन उनके पहले 'each' या 'every' का प्रयोग हुआ हो, तो verb हमेशा singular ('has') होती है।"
+      },
+      "pyq": "SSC CHSL 2020"
+    },
+    {
+      "question": {
+        "en": "The house, in addition to the furniture, ________ sold yesterday.",
+        "hi": "घर, फर्नीचर के अलावा, कल बेच ________ दिया गया था।"
+      },
+      "options": {
+        "en": [
+          "are",
+          "was",
+          "have been",
+          "were"
+        ],
+        "hi": [
+          "are",
+          "was",
+          "have been",
+          "were"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The phrase 'in addition to' does not make the subject plural. The real subject is 'The house' (singular), so the verb is 'was'.",
+        "hi": "वाक्यांश 'in addition to' subject को plural नहीं बनाता है। वास्तविक subject 'The house' (singular) है, इसलिए verb 'was' होगी।"
+      },
+      "pyq": "IBPS PO 2017"
+    },
+    {
+      "question": {
+        "en": "It is I who ________ to blame for this delay.",
+        "hi": "यह मैं हूँ जो इस देरी के लिए दोषी ________ हूँ।"
+      },
+      "options": {
+        "en": [
+          "be",
+          "are",
+          "is",
+          "am"
+        ],
+        "hi": [
+          "be",
+          "are",
+          "is",
+          "am"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The relative pronoun 'who' refers to its antecedent 'I'. The verb must agree with 'I', which takes 'am' in the present tense.",
+        "hi": "Relative pronoun 'who' अपने antecedent 'I' को संदर्भित करता है। Verb 'I' के अनुसार होनी चाहिए, जिसके साथ 'am' का प्रयोग होता है।"
+      },
+      "pyq": "SSC CGL 2018"
+    },
+    {
+      "question": {
+        "en": "One-third of the books ________ been sold since yesterday.",
+        "hi": "कल से अब तक एक-तिहाई किताबें बिक ________ चुकी हैं।"
+      },
+      "options": {
+        "en": [
+          "was",
+          "have",
+          "has",
+          "is"
+        ],
+        "hi": [
+          "was",
+          "have",
+          "has",
+          "is"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The fraction 'One-third of' takes a plural verb when followed by a plural countable noun ('books'). Therefore, 'have' is correct.",
+        "hi": "भिन्न 'One-third of' के बाद जब plural countable noun ('books') आता है, तो plural verb का प्रयोग होता है। इसलिए 'have' सही है।"
+      },
+      "pyq": "SSC MTS 2021"
+    },
+    {
+      "question": {
+        "en": "The jury ________ divided in their opinions about the verdict.",
+        "hi": "फैसले को लेकर जूरी के सदस्यों की राय आपस में बंटी ________ थी।"
+      },
+      "options": {
+        "en": [
+          "was",
+          "were",
+          "has been",
+          "is"
+        ],
+        "hi": [
+          "was",
+          "were",
+          "has been",
+          "is"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "When members of a collective noun ('jury') act individually or are divided in opinion, the noun takes a plural verb ('were').",
+        "hi": "जब किसी collective noun ('jury') के सदस्य व्यक्तिगत रूप से कार्य करते हैं या उनकी राय विभाजित होती है, तो इसके साथ plural verb ('were') का प्रयोग होता है।"
+      },
+      "pyq": "SSC CGL 2015"
+    },
+    {
+      "question": {
+        "en": "Everyone in the department ________ agreed to the new proposal.",
+        "hi": "विभाग में हर कोई नए प्रस्ताव पर सहमत ________ हो गया है।"
+      },
+      "options": {
+        "en": [
+          "are",
+          "has",
+          "were",
+          "have"
+        ],
+        "hi": [
+          "are",
+          "has",
+          "were",
+          "have"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Indefinite pronouns like 'Everyone', 'Everybody', 'Someone', 'Somebody' are always singular and require a singular verb ('has').",
+        "hi": "अनिश्चित सर्वनाम (Indefinite pronouns) जैसे 'Everyone', 'Everybody', 'Someone', 'Somebody' हमेशा singular होते हैं और इनके साथ singular verb ('has') का प्रयोग होता है।"
+      },
+      "pyq": "SSC MTS 2020"
+    },
+    {
+      "question": {
+        "en": "Some of the players ________ injured during the practice match.",
+        "hi": "अभ्यास मैच के दौरान कुछ खिलाड़ी घायल ________ गए थे।"
+      },
+      "options": {
+        "en": [
+          "were",
+          "has been",
+          "was",
+          "is"
+        ],
+        "hi": [
+          "were",
+          "has been",
+          "was",
+          "is"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'Some of' followed by a plural countable noun ('players') takes a plural verb. Therefore, 'were' is correct.",
+        "hi": "'Some of' के बाद जब plural countable noun ('players') आता है, तो plural verb का प्रयोग होता है। इसलिए 'were' सही है।"
+      },
+      "pyq": "IBPS PO 2018"
+    },
+    {
+      "question": {
+        "en": "More candidates than one ________ applied for the single vacancy.",
+        "hi": "एक से अधिक उम्मीदवारों ने इस एकल रिक्ति के लिए आवेदन ________ किया है।"
+      },
+      "options": {
+        "en": [
+          "has",
+          "have",
+          "is",
+          "was"
+        ],
+        "hi": [
+          "has",
+          "have",
+          "is",
+          "was"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The structure 'More + plural noun + than one' takes a plural verb. Since 'candidates' is plural, the correct verb is 'have'.",
+        "hi": "'More + plural noun + than one' संरचना में plural verb का प्रयोग होता है। चूँकि 'candidates' plural है, इसलिए सही क्रिया 'have' होगी।"
+      },
+      "pyq": "SSC CGL 2017"
+    },
+    {
+      "question": {
+        "en": "He is one of those players who ________ selected for the national team.",
+        "hi": "वह उन खिलाड़ियों में से एक हैं जिन्हें राष्ट्रीय टीम के लिए चुना ________ गया था।"
+      },
+      "options": {
+        "en": [
+          "is",
+          "has been",
+          "was",
+          "were"
+        ],
+        "hi": [
+          "is",
+          "has been",
+          "was",
+          "were"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The relative pronoun 'who' refers to the plural antecedent 'players', so it takes a plural verb ('were').",
+        "hi": "Relative pronoun 'who' plural antecedent 'players' को संदर्भित करता है, इसलिए इसके साथ plural verb ('were') का प्रयोग होता है।"
+      },
+      "pyq": "SSC CGL 2019"
+    },
+    {
+      "question": {
+        "en": "A number of citizens ________ protested against the new tax laws.",
+        "hi": "कई नागरिकों ने नए कर कानूनों के खिलाफ विरोध प्रदर्शन ________ किया है।"
+      },
+      "options": {
+        "en": [
+          "is",
+          "have",
+          "was",
+          "has"
+        ],
+        "hi": [
+          "is",
+          "have",
+          "was",
+          "has"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "'A number of' indicates a plural quantity and always takes a plural verb ('have').",
+        "hi": "'A number of' बहुवचन मात्रा को दर्शाता है और इसके साथ हमेशा plural verb ('have') का प्रयोग होता है।"
+      },
+      "pyq": "CDS 2022"
+    },
+    {
+      "question": {
+        "en": "The number of wild tigers in the reserve ________ increased over the last decade.",
+        "hi": "पिछले दशक में रिजर्व में जंगली बाघों की संख्या में वृद्धि ________ हुई है।"
+      },
+      "options": {
+        "en": [
+          "has",
+          "have",
+          "are",
+          "were"
+        ],
+        "hi": [
+          "has",
+          "have",
+          "are",
+          "were"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'The number of' refers to a single unit of quantity and takes a singular verb ('has').",
+        "hi": "'The number of' मात्रा की एक एकल इकाई को दर्शाता है और इसके साथ singular verb ('has') का प्रयोग होता है।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "No other country ________ as diverse as India.",
+        "hi": "कोई अन्य देश भारत जितना विविध ________ है।"
+      },
+      "options": {
+        "en": [
+          "have been",
+          "are",
+          "were",
+          "is"
+        ],
+        "hi": [
+          "have been",
+          "are",
+          "were",
+          "is"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "'No other' is followed by a singular noun ('country') and takes a singular verb. Thus, 'is' is the correct answer.",
+        "hi": "'No other' के बाद singular noun ('country') आता है और इसके साथ singular verb का प्रयोग होता है। अतः 'is' सही उत्तर है।"
+      },
+      "pyq": "NDA 2020"
+    },
+    {
+      "question": {
+        "en": "Not only the parents but also the child ________ excited about the magic show.",
+        "hi": "न केवल माता-पिता बल्कि बच्चा भी जादू के शो को लेकर उत्साहित ________ था।"
+      },
+      "options": {
+        "en": [
+          "was",
+          "are",
+          "were",
+          "have been"
+        ],
+        "hi": [
+          "was",
+          "are",
+          "were",
+          "have been"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "In 'Not only...but also' structures, the verb agrees with the nearest subject ('child', which is singular). Hence, 'was' is correct.",
+        "hi": "'Not only...but also' संरचनाओं में, verb सबसे पास वाले subject ('child', जो singular है) के अनुसार होती है। इसलिए 'was' सही है।"
+      },
+      "pyq": "SSC CHSL 2021"
+    },
+    {
+      "question": {
+        "en": "The captain, along with his crew members, ________ lost in the storm.",
+        "hi": "कप्तान, अपने चालक दल के सदस्यों के साथ, तूफान में खो ________ गया था।"
+      },
+      "options": {
+        "en": [
+          "are",
+          "were",
+          "was",
+          "have been"
+        ],
+        "hi": [
+          "are",
+          "were",
+          "was",
+          "have been"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "When a subject is accompanied by words like 'along with', the verb agrees with the first subject ('The captain', which is singular). Hence, 'was' is correct.",
+        "hi": "जब subject के साथ 'along with' जैसे शब्दों का प्रयोग होता है, तो verb पहले subject ('The captain', जो singular है) के अनुसार होती है। इसलिए 'was' सही है।"
+      },
+      "pyq": "NDA 2021"
+    },
+    {
+      "question": {
+        "en": "More than one employee ________ resigned due to the new policy.",
+        "hi": "नई नीति के कारण एक से अधिक कर्मचारियों ने इस्तीफा ________ दे दिया है।"
+      },
+      "options": {
+        "en": [
+          "are",
+          "have",
+          "were",
+          "has"
+        ],
+        "hi": [
+          "are",
+          "have",
+          "were",
+          "has"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "According to the rule, 'More than one + singular noun' takes a singular verb. Therefore, 'has' is the correct verb.",
+        "hi": "नियम के अनुसार, 'More than one + singular noun' के साथ singular verb का प्रयोग होता है। इसलिए 'has' सही क्रिया है।"
+      },
+      "pyq": "SSC CPO 2020"
+    },
+    {
+      "question": {
+        "en": "Either you or he ________ responsible for this mistake.",
+        "hi": "या तो आप या वह इस गलती के लिए जिम्मेदार ________ हैं।"
+      },
+      "options": {
+        "en": [
+          "is",
+          "were",
+          "are",
+          "am"
+        ],
+        "hi": [
+          "is",
+          "were",
+          "are",
+          "am"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "When subjects are joined by 'Either...or', the verb agrees with the nearest subject. The nearest subject is 'he' (singular), so the verb is 'is'.",
+        "hi": "जब subjects को 'Either...or' से जोड़ा जाता है, तो verb सबसे पास वाले subject के अनुसार होती है। पास का subject 'he' (singular) है, इसलिए verb 'is' होगी।"
+      },
+      "pyq": "CDS 2020"
+    },
+    {
+      "question": {
+        "en": "More than one person ________ involved in the conspiracy.",
+        "hi": "साजिश में एक से अधिक व्यक्ति शामिल ________ थे।"
+      },
+      "options": {
+        "en": [
+          "were",
+          "have been",
+          "was",
+          "are"
+        ],
+        "hi": [
+          "were",
+          "have been",
+          "was",
+          "are"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "'More than one' followed by a singular noun ('person') takes a singular verb. Thus, 'was' is correct.",
+        "hi": "'More than one' के बाद जब singular noun ('person') आता है, तो singular verb का प्रयोग होता है। अतः 'was' सही है।"
+      },
+      "pyq": "NDA 2018"
+    },
+    {
+      "question": {
+        "en": "One of my friends ________ opening a new restaurant next week.",
+        "hi": "मेरे दोस्तों में से एक अगले सप्ताह एक नया रेस्तरां खोल ________ रहा है।"
+      },
+      "options": {
+        "en": [
+          "are",
+          "have been",
+          "were",
+          "is"
+        ],
+        "hi": [
+          "are",
+          "have been",
+          "were",
+          "is"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The structure 'One of + plural noun' always takes a singular verb because the real subject is 'One'. Therefore, 'is' is correct.",
+        "hi": "'One of + plural noun' संरचना में हमेशा singular verb का प्रयोग होता है क्योंकि वास्तविक subject 'One' (एक) है। इसलिए 'is' सही है।"
+      },
+      "pyq": "SSC CGL 2019"
+    },
+    {
+      "question": {
+        "en": "The director and the producer ________ arrived at the venue.",
+        "hi": "निर्देशक और निर्माता कार्यक्रम स्थल पर पहुंच ________ गए हैं।"
+      },
+      "options": {
+        "en": [
+          "have",
+          "is",
+          "was",
+          "has"
+        ],
+        "hi": [
+          "have",
+          "is",
+          "was",
+          "has"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Since there are two separate articles ('The director' and 'the producer'), they refer to two different people. Thus, a plural verb ('have') is used.",
+        "hi": "चूँकि यहाँ दो अलग-अलग articles ('The director' और 'the producer') का प्रयोग हुआ है, ये दो अलग-अलग व्यक्तियों को दर्शाते हैं। इसलिए plural verb ('have') का प्रयोग होगा।"
+      },
+      "pyq": "SSC CGL 2019"
+    },
+    {
+      "question": {
+        "en": "The number of road accidents ________ decreased significantly this year.",
+        "hi": "इस वर्ष सड़क दुर्घटनाओं की संख्या में काफी कमी ________ आई है।"
+      },
+      "options": {
+        "en": [
+          "has",
+          "have",
+          "were",
+          "are"
+        ],
+        "hi": [
+          "has",
+          "have",
+          "were",
+          "are"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The phrase 'The number of + plural noun' takes a singular verb because it refers to a specific singular quantity/number. Hence, 'has' is correct.",
+        "hi": "वाक्यांश 'The number of + plural noun' के साथ singular verb का प्रयोग होता है क्योंकि यह एक विशिष्ट निश्चित संख्या को दर्शाता है। अतः 'has' सही है।"
+      },
+      "pyq": "SBI PO 2021"
+    },
+    {
+      "question": {
+        "en": "The teacher, as well as her students, ________ excited about the field trip.",
+        "hi": "शिक्षिका, और साथ ही उनके छात्र भी, फील्ड ट्रिप को लेकर उत्साहित ________ हैं।"
+      },
+      "options": {
+        "en": [
+          "were",
+          "are",
+          "is",
+          "have been"
+        ],
+        "hi": [
+          "were",
+          "are",
+          "is",
+          "have been"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "When subjects are joined by 'as well as', the verb agrees with the first subject ('The teacher', which is singular). Thus, 'is' is correct.",
+        "hi": "जब subjects को 'as well as' से जोड़ा जाता है, तो verb पहले subject ('The teacher', जो singular है) के अनुसार होती है। अतः 'is' सही है।"
+      },
+      "pyq": "SSC CHSL 2019"
+    },
+    {
+      "question": {
+        "en": "The news of his sudden demise ________ shocking to everyone.",
+        "hi": "उनके आकस्मिक निधन का समाचार सभी के लिए चौंकाने वाला ________।"
+      },
+      "options": {
+        "en": [
+          "was",
+          "have been",
+          "are",
+          "were"
+        ],
+        "hi": [
+          "was",
+          "have been",
+          "are",
+          "were"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Nouns like 'News', 'Mathematics', 'Politics' are plural in form but singular in meaning, so they take a singular verb ('was').",
+        "hi": "'News', 'Mathematics', 'Politics' जैसे nouns दिखने में plural लगते हैं लेकिन अर्थ में singular होते हैं, इसलिए इनके साथ singular verb ('was') का प्रयोग होता है।"
+      },
+      "pyq": "NDA 2019"
+    },
+    {
+      "question": {
+        "en": "Each of the boys ________ given a certificate of participation.",
+        "hi": "प्रत्येक लड़के को भागीदारी का प्रमाण पत्र ________ दिया गया।"
+      },
+      "options": {
+        "en": [
+          "were",
+          "have been",
+          "are",
+          "was"
+        ],
+        "hi": [
+          "were",
+          "have been",
+          "are",
+          "was"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "'Each' is always singular and takes a singular verb. 'Each of the boys' means each individual boy, so 'was' is correct.",
+        "hi": "'Each' हमेशा singular होता है और इसके साथ singular verb का प्रयोग होता है। 'Each of the boys' का अर्थ प्रत्येक व्यक्तिगत लड़का है, इसलिए 'was' सही है।"
+      },
+      "pyq": "SSC CHSL 2021"
+    },
+    {
+      "question": {
+        "en": "Several issues ________ raised during the board meeting yesterday.",
+        "hi": "कल बोर्ड की बैठक के दौरान कई मुद्दे उठाए ________ गए थे।"
+      },
+      "options": {
+        "en": [
+          "were",
+          "has been",
+          "was",
+          "is"
+        ],
+        "hi": [
+          "were",
+          "has been",
+          "was",
+          "is"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Words like 'Several', 'Many', 'Few' are always plural and take a plural verb. Thus, 'were' is correct.",
+        "hi": "'Several', 'Many', 'Few' जैसे शब्द हमेशा plural होते हैं और इनके साथ plural verb का प्रयोग होता है। अतः 'were' सही है।"
+      },
+      "pyq": "SSC CGL 2016"
+    },
+    {
+      "question": {
+        "en": "Both of the sisters ________ highly talented in classical dance.",
+        "hi": "दोनों बहनें शास्त्रीय नृत्य में अत्यधिक प्रतिभाशाली ________ हैं।"
+      },
+      "options": {
+        "en": [
+          "is",
+          "are",
+          "has been",
+          "was"
+        ],
+        "hi": [
+          "is",
+          "are",
+          "has been",
+          "was"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "'Both' is always plural and takes a plural verb. Therefore, 'are' is the correct choice.",
+        "hi": "'Both' हमेशा plural होता है और इसके साथ plural verb का प्रयोग होता है। इसलिए 'are' सही विकल्प है।"
+      },
+      "pyq": "SSC CHSL 2018"
+    },
+    {
+      "question": {
+        "en": "This is one of the most interesting novels that ________ been published this year.",
+        "hi": "यह इस वर्ष प्रकाशित होने वाले सबसे दिलचस्प उपन्यासों में से एक ________ है।"
+      },
+      "options": {
+        "en": [
+          "was",
+          "has",
+          "have",
+          "is"
+        ],
+        "hi": [
+          "was",
+          "has",
+          "have",
+          "is"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "When 'one of + plural noun' is followed by a relative pronoun ('that'), the verb agrees with the plural noun ('novels'). Thus, 'have' is correct.",
+        "hi": "जब 'one of + plural noun' के बाद relative pronoun ('that') आता है, तो verb plural noun ('novels') के अनुसार होती है। अतः 'have' सही है।"
+      },
+      "pyq": "SSC CPO 2021"
+    },
+    {
+      "question": {
+        "en": "Neither the teacher nor the students ________ present in the laboratory.",
+        "hi": "न तो शिक्षक और न ही छात्र प्रयोगशाला में उपस्थित ________ थे।"
+      },
+      "options": {
+        "en": [
+          "was",
+          "is",
+          "were",
+          "has been"
+        ],
+        "hi": [
+          "was",
+          "is",
+          "were",
+          "has been"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "When subjects are joined by 'Neither...nor', the verb agrees with the nearest subject. 'students' is plural, so the verb must be plural ('were').",
+        "hi": "जब subjects को 'Neither...nor' से जोड़ा जाता है, तो verb सबसे पास वाले subject के अनुसार होती है। 'students' plural है, इसलिए verb भी plural ('were') होगी।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "Either the manager or his assistants ________ responsible for the error.",
+        "hi": "इस त्रुटि के लिए या तो प्रबंधक या उनके सहायक जिम्मेदार ________ हैं।"
+      },
+      "options": {
+        "en": [
+          "was",
+          "is",
+          "has been",
+          "are"
+        ],
+        "hi": [
+          "was",
+          "is",
+          "has been",
+          "are"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "When subjects are joined by 'Either...or', the verb agrees with the nearest subject ('assistants', which is plural). Hence, 'are' is correct.",
+        "hi": "जब subjects को 'Either...or' से जोड़ा जाता है, तो verb सबसे पास वाले subject ('assistants', जो plural है) के अनुसार होती है। इसलिए 'are' सही है।"
+      },
+      "pyq": "SSC CGL 2017"
+    },
+    {
+      "question": {
+        "en": "A number of students ________ participating in the annual sports meet.",
+        "hi": "वार्षिक खेलकूद प्रतियोगिता में कई छात्र भाग ले ________ रहे हैं।"
+      },
+      "options": {
+        "en": [
+          "was",
+          "is",
+          "are",
+          "has been"
+        ],
+        "hi": [
+          "was",
+          "is",
+          "are",
+          "has been"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The phrase 'A number of + plural noun' always takes a plural verb because it means 'many'. Thus, 'are' is correct.",
+        "hi": "वाक्यांश 'A number of + plural noun' के साथ हमेशा plural verb का प्रयोग होता है क्योंकि इसका अर्थ 'कई' (many) होता है। अतः 'are' सही है।"
+      },
+      "pyq": "SSC CGL 2022"
+    }
+  ]
+}

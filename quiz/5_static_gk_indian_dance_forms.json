@@ -1,0 +1,1308 @@
+{
+  "quizName": "5. Static Gk - Indian Dance Forms",
+  "mapName": "9. CA",
+  "score": "Not submitted",
+  "timerSeconds": 900,
+  "questions": [
+    {
+      "question": {
+        "en": "Which of the following is a traditional female-only folk dance of Punjab, performed in a circle?",
+        "hi": "निम्नलिखित में से कौन सा पंजाब का केवल महिलाओं द्वारा किया जाने वाला एक पारंपरिक लोक नृत्य है, जो एक घेरे में किया जाता है?"
+      },
+      "options": {
+        "en": [
+          "Dhamal",
+          "Giddha",
+          "Bhangra",
+          "Jhumar"
+        ],
+        "hi": [
+          "धमाल",
+          "गिद्धा",
+          "भांगड़ा",
+          "झूमर"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Giddha is a popular female-only folk dance of Punjab, characterized by energetic clapping and performance of 'bolis' (couplets).",
+        "hi": "गिद्धा पंजाब का केवल महिलाओं द्वारा किया जाने वाला एक लोकप्रिय लोक नृत्य है, जिसकी विशेषता ऊर्जावान ताली बजाना और 'बोलियाँ' (दोहे) गाना है।"
+      },
+      "pyq": "SSC CHSL 2019"
+    },
+    {
+      "question": {
+        "en": "Which of the following classical dances features the 'tribhanga' (three-bend) posture as its most prominent and unique stance?",
+        "hi": "निम्नलिखित में से किस शास्त्रीय नृत्य में 'त्रिभंग' (तीन-झुकाव) मुद्रा इसकी सबसे प्रमुख और अनूठी मुद्रा के रूप में शामिल है?"
+      },
+      "options": {
+        "en": [
+          "Kuchipudi",
+          "Sattriya",
+          "Bharatanatyam",
+          "Odissi"
+        ],
+        "hi": [
+          "कुचिपुड़ी",
+          "सत्रिया",
+          "भरतनाट्यम",
+          "ओडिसी"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Odissi dance is characterized by the 'tribhanga' posture, where the body is bent at three places: the neck, waist, and knee.",
+        "hi": "ओडिसी नृत्य की विशेषता 'त्रिभंग' मुद्रा है, जिसमें शरीर तीन स्थानों से मुड़ा होता है: गर्दन, कमर और घुटना।"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "Which legendary dancer is credited with reviving and popularizing Bharatanatyam in the 20th century after it faced decline during British rule?",
+        "hi": "किस प्रसिद्ध नर्तकी को 20वीं शताब्दी में ब्रिटिश शासन के दौरान गिरावट का सामना करने के बाद भरतनाट्यम को पुनर्जीवित और लोकप्रिय बनाने का श्रेय दिया जाता है?"
+      },
+      "options": {
+        "en": [
+          "Birju Maharaj",
+          "Sonal Mansingh",
+          "Mallika Sarabhai",
+          "Rukmini Devi Arundale"
+        ],
+        "hi": [
+          "बिरजू महाराज",
+          "सोनाल मानसिंह",
+          "मल्लिका साराभाई",
+          "रुक्मिणी देवी अरुंडेल"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Rukmini Devi Arundale played a crucial role in reviving Bharatanatyam from its decline, establishing the Kalakshetra Foundation.",
+        "hi": "रुक्मिणी देवी अरुंडेल ने भरतनाट्यम को उसके पतन से उबारने और इसे पुनर्जीवित करने में महत्वपूर्ण भूमिका निभाई, तथा कलाक्षेत्र फाउंडेशन की स्थापना की।"
+      },
+      "pyq": "SSC CGL 2022"
+    },
+    {
+      "question": {
+        "en": "'Sattriya', recognized as a classical dance form by Sangeet Natak Akademi in 2000, originates from which Indian state?",
+        "hi": "वर्ष 2000 में संगीत नाटक अकादमी द्वारा शास्त्रीय नृत्य शैली के रूप में मान्यता प्राप्त 'सत्रिया' की उत्पत्ति किस भारतीय राज्य से हुई है?"
+      },
+      "options": {
+        "en": [
+          "Assam",
+          "Odisha",
+          "Manipur",
+          "West Bengal"
+        ],
+        "hi": [
+          "असम",
+          "ओडिशा",
+          "मणिपुर",
+          "पश्चिम बंगाल"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Sattriya is a classical dance form that originated in the Vaishnavite monasteries (Sattras) of Assam, initiated by the saint Sankaradeva.",
+        "hi": "सत्रिया एक शास्त्रीय नृत्य शैली है जिसकी उत्पत्ति असम के वैष्णव मठों (सत्रों) में हुई थी, जिसे संत शंकरदेव ने शुरू किया था।"
+      },
+      "pyq": "UPSC CSE 2014"
+    },
+    {
+      "question": {
+        "en": "'Lavani', known for its powerful rhythm and social themes, is a popular folk dance of which state?",
+        "hi": "'लावणी', जो अपनी शक्तिशाली लय और सामाजिक विषयों के लिए जानी जाती है, किस राज्य का एक लोकप्रिय लोक नृत्य है?"
+      },
+      "options": {
+        "en": [
+          "Goa",
+          "Maharashtra",
+          "Gujarat",
+          "Karnataka"
+        ],
+        "hi": [
+          "गोवा",
+          "महाराष्ट्र",
+          "गुजरात",
+          "कर्नाटक"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Lavani is a traditional folk dance-music genre of Maharashtra, performed to the beats of the Dholki.",
+        "hi": "लावणी महाराष्ट्र की एक पारंपरिक लोक नृत्य-संगीत शैली है, जिसे ढोलकी की थाप पर प्रस्तुत किया जाता है।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "Who initiated the 'Sattriya' dance form in the 15th century as a medium to propagate the Bhakti movement?",
+        "hi": "15वीं शताब्दी में भक्ति आंदोलन के प्रचार के माध्यम के रूप में 'सत्रिया' नृत्य शैली की शुरुआत किसने की थी?"
+      },
+      "options": {
+        "en": [
+          "Srimanta Sankaradeva",
+          "Chaitanya Mahaprabhu",
+          "Tulsidas",
+          "Kabir Das"
+        ],
+        "hi": [
+          "श्रीमंत शंकरदेव",
+          "चैतन्य महाप्रभु",
+          "तुलसीदास",
+          "कबीर दास"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Srimanta Sankaradeva, a great Vaishnavite saint and reformer of Assam, created Sattriya to present mythological stories in a simple way.",
+        "hi": "असम के एक महान वैष्णव संत और सुधारक श्रीमंत शंकरदेव ने पौराणिक कहानियों को सरल तरीके से प्रस्तुत करने के लिए सत्रिया का निर्माण किया था।"
+      },
+      "pyq": "UPSC CSE 2014"
+    },
+    {
+      "question": {
+        "en": "In which classical dance form do dancers wear a barrel-shaped drum-like skirt called 'Kumil'?",
+        "hi": "किस शास्त्रीय नृत्य शैली में नर्तक 'कुमिल' नामक बैरल के आकार की ड्रम जैसी स्कर्ट पहनते हैं?"
+      },
+      "options": {
+        "en": [
+          "Sattriya",
+          "Odissi",
+          "Manipuri",
+          "Kathakali"
+        ],
+        "hi": [
+          "सत्रिया",
+          "ओडिसी",
+          "मणिपुरी",
+          "कथकली"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "In Manipuri dance, female dancers wear a unique, stiff, barrel-shaped skirt called Kumil, decorated with mirrors and gold embroidery.",
+        "hi": "मणिपुरी नृत्य में, महिला नर्तकियाँ 'कुमिल' नामक एक अनूठी, सख्त, बैरल के आकार की स्कर्ट पहनती हैं, जो दर्पणों और सोने की कढ़ाई से सजी होती है।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "Which classical dance form is known for its elaborate and heavy makeup, dramatic costumes, and stories based on Hindu epics?",
+        "hi": "कौन सी शास्त्रीय नृत्य शैली अपने विस्तृत और भारी मेकअप, नाटकीय वेशभूषा और हिंदू महाकाव्यों पर आधारित कहानियों के लिए जानी जाती है?"
+      },
+      "options": {
+        "en": [
+          "Bharatanatyam",
+          "Kathak",
+          "Mohiniyattam",
+          "Kathakali"
+        ],
+        "hi": [
+          "भरतनाट्यम",
+          "कथक",
+          "मोहिनीअट्टम",
+          "कथकली"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Kathakali from Kerala is famous for its elaborate makeup (Vesham), large headgears, and dramatic presentation of epic battles.",
+        "hi": "केरल का कथकली अपने विस्तृत श्रृंगार (वेशम), बड़े मुकुट और महाकाव्य लड़ाइयों की नाटकीय प्रस्तुति के लिए प्रसिद्ध है।"
+      },
+      "pyq": "SSC CGL 2019"
+    },
+    {
+      "question": {
+        "en": "The folk dance 'Phag' is performed by farmers of Haryana during which festival?",
+        "hi": "हरियाणा के किसानों द्वारा 'फाग' लोक नृत्य किस त्योहार के दौरान किया जाता है?"
+      },
+      "options": {
+        "en": [
+          "Dussehra",
+          "Diwali",
+          "Makar Sankranti",
+          "Holi"
+        ],
+        "hi": [
+          "दशहरा",
+          "दिवाली",
+          "मकर संक्रांति",
+          "होली"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Phag dance is a seasonal folk dance performed by the agricultural community of Haryana in the month of Phalgun to celebrate Holi.",
+        "hi": "फाग नृत्य हरियाणा के कृषि समुदाय द्वारा होली मनाने के लिए फाल्गुन के महीने में किया जाने वाला एक मौसमी लोक नृत्य है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "The 'Lai Haraoba' festival of Manipur is celebrated to please which group of traditional deities?",
+        "hi": "मणिपुर का 'लाई हराओबा' त्योहार किस पारंपरिक देवताओं के समूह को प्रसन्न करने के लिए मनाया जाता है?"
+      },
+      "options": {
+        "en": [
+          "Umang Lai (Forest deities)",
+          "Goddess Durga",
+          "Lord Shiva",
+          "Lord Vishnu"
+        ],
+        "hi": [
+          "उमंग लाई (वन देवता)",
+          "देवी दुर्गा",
+          "भगवान शिव",
+          "भगवान विष्णु"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Lai Haraoba translates to 'merrymaking of the gods' and is celebrated to please the 'Umang Lai' or forest deities of the Meitei community.",
+        "hi": "लाई हराओबा का अनुवाद 'देवताओं का आमोद-प्रमोद' है और यह मैतेई समुदाय के 'उमंग लाई' या वन देवताओं को प्रसन्न करने के लिए मनाया जाता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "'Sattriya' classical dance of Assam is performed in prayer halls called:",
+        "hi": "असम का 'सत्रिया' शास्त्रीय नृत्य प्रार्थना कक्षों में किया जाता है जिन्हें क्या कहा जाता है?"
+      },
+      "options": {
+        "en": [
+          "Viharas",
+          "Gharanas",
+          "Sattras / Namghars",
+          "Mandapas"
+        ],
+        "hi": [
+          "विहार",
+          "घराने",
+          "सत्र / नामघर",
+          "मंडप"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Sattriya was nurtured in the Sattras (monasteries) and performed in the Namghars (prayer halls) of Assam.",
+        "hi": "सत्रिया का पोषण सत्रों (मठों) में हुआ और इसे असम के नामघरों (प्रार्थना कक्षों) में प्रस्तुत किया जाता था।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "With which classical dance form is the ancient 'Devadasi' tradition historically associated?",
+        "hi": "प्राचीन 'देवदासी' परंपरा ऐतिहासिक रूप से किस शास्त्रीय नृत्य शैली से जुड़ी हुई है?"
+      },
+      "options": {
+        "en": [
+          "Kuchipudi",
+          "Kathakali",
+          "Sattriya",
+          "Bharatanatyam"
+        ],
+        "hi": [
+          "कुचिपुड़ी",
+          "कथकली",
+          "सत्रिया",
+          "भरतनाट्यम"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Bharatanatyam was historically performed by temple dancers known as Devadasis, which is why it was earlier known as Sadir Attam.",
+        "hi": "भरतनाट्यम ऐतिहासिक रूप से देवदासी नामक मंदिर नर्तकियों द्वारा किया जाता था, यही कारण है कि इसे पहले 'सदिर अट्टम' के नाम से जाना जाता था।"
+      },
+      "pyq": "SSC CHSL 2020"
+    },
+    {
+      "question": {
+        "en": "The classical dance 'Mohiniyattam' literally translates to the dance of:",
+        "hi": "शास्त्रीय नृत्य 'मोहिनीअट्टम' का शाब्दिक अनुवाद किसका नृत्य है?"
+      },
+      "options": {
+        "en": [
+          "The Enchantress",
+          "The Destroyer",
+          "The Storyteller",
+          "The Creator"
+        ],
+        "hi": [
+          "जादूगरनी (मोहिनी)",
+          "विनाशक",
+          "कहानीकार",
+          "सृष्टिकर्ता"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "'Mohini' refers to the mythical enchantress avatar of Lord Vishnu, and 'Attam' means dance. Thus, it translates to 'Dance of the Enchantress'.",
+        "hi": "'मोहिनी' भगवान विष्णु के पौराणिक जादूगरनी अवतार को संदर्भित करता है, और 'अट्टम' का अर्थ नृत्य है। इस प्रकार, इसका अनुवाद 'जादूगरनी का नृत्य' है।"
+      },
+      "pyq": "SSC MTS 2020"
+    },
+    {
+      "question": {
+        "en": "The traditional folk dance 'Phoolpati' is specifically performed by unmarried girls during which festival in the Malwa region?",
+        "hi": "पारंपरिक लोक नृत्य 'फूलपाती' मालवा क्षेत्र में किस त्योहार के दौरान विशेष रूप से अविवाहित लड़कियों द्वारा किया जाता है?"
+      },
+      "options": {
+        "en": [
+          "Diwali",
+          "Raksha Bandhan",
+          "Navratri",
+          "Holi"
+        ],
+        "hi": [
+          "दिवाली",
+          "रक्षा बंधन",
+          "नवरात्रि",
+          "होली"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Phoolpati is a folk dance of Madhya Pradesh performed by unmarried girls during the Navratri festival.",
+        "hi": "फूलपाती मध्य प्रदेश का एक लोक नृत्य है जो नवरात्रि उत्सव के दौरान अविवाहित लड़कियों द्वारा किया जाता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "'Yakshagana' is a traditional theatre-dance form that combines dance, music, dialogue, and costume, originating from which state?",
+        "hi": "'यक्षगान' एक पारंपरिक रंगमंच-नृत्य शैली है जो नृत्य, संगीत, संवाद और वेशभूषा को जोड़ती है, इसकी उत्पत्ति किस राज्य से हुई है?"
+      },
+      "options": {
+        "en": [
+          "Kerala",
+          "Karnataka",
+          "Tamil Nadu",
+          "Andhra Pradesh"
+        ],
+        "hi": [
+          "केरल",
+          "कर्नाटक",
+          "तमिलनाडु",
+          "आंध्र प्रदेश"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Yakshagana is a traditional dance-drama form of Karnataka, depicting stories from Hindu epics like Ramayana and Mahabharata.",
+        "hi": "यक्षगान कर्नाटक की एक पारंपरिक नृत्य-नाटक शैली है, जिसमें रामायण और महाभारत जैसे हिंदू महाकाव्यों की कहानियों को दर्शाया जाता है।"
+      },
+      "pyq": "UPSC CSE 2012"
+    },
+    {
+      "question": {
+        "en": "In Kathakali, characters are color-coded. What does the green makeup (Pacha) represent?",
+        "hi": "कथकली में, पात्रों को रंगों के अनुसार वर्गीकृत किया जाता है। हरा मेकअप (पच्चा) क्या दर्शाता है?"
+      },
+      "options": {
+        "en": [
+          "Demonic characters",
+          "Evil female characters",
+          "Forest dwellers and hunters",
+          "Noble and virtuous characters (Kings/Gods)"
+        ],
+        "hi": [
+          "राक्षसी पात्र",
+          "दुष्ट महिला पात्र",
+          "वनवासी और शिकारी",
+          "कुलीन और गुणी पात्र (राजा/देवता)"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "In Kathakali, green makeup (Pacha) represents noble, heroic, and divine characters like Lord Rama, Krishna, or virtuous kings.",
+        "hi": "कथकली में, हरा मेकअप (पच्चा) भगवान राम, कृष्ण या गुणी राजाओं जैसे कुलीन, नायक और दिव्य पात्रों को दर्शाता है।"
+      },
+      "pyq": "SSC CGL 2019"
+    },
+    {
+      "question": {
+        "en": "'Panthi' is a highly energetic devotional folk dance associated with which community of Chhattisgarh?",
+        "hi": "'पंथी' छत्तीसगढ़ के किस समुदाय से जुड़ा एक अत्यंत ऊर्जावान भक्ति लोक नृत्य है?"
+      },
+      "options": {
+        "en": [
+          "Bhil Tribe",
+          "Oraon Tribe",
+          "Satnami Community",
+          "Gond Tribe"
+        ],
+        "hi": [
+          "भील जनजाति",
+          "उरांव जनजाति",
+          "सतनामी समुदाय",
+          "गोंड जनजाति"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Panthi dance is a major folk dance of the Satnami community in Chhattisgarh, performed on Guru Ghasidas Jayanti.",
+        "hi": "पंथी नृत्य छत्तीसगढ़ में सतनामी समुदाय का एक प्रमुख लोक नृत्य है, जो गुरु घासीदास जयंती पर किया जाता है।"
+      },
+      "pyq": "CGPSC 2018"
+    },
+    {
+      "question": {
+        "en": "'Lai Haraoba' is an ancient ritualistic festival and dance form of which state?",
+        "hi": "'लाई हराओबा' किस राज्य का एक प्राचीन अनुष्ठानिक त्योहार और नृत्य शैली है?"
+      },
+      "options": {
+        "en": [
+          "Mizoram",
+          "Manipur",
+          "Nagaland",
+          "Assam"
+        ],
+        "hi": [
+          "मिजोरम",
+          "मणिपुर",
+          "नागालैंड",
+          "असम"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Lai Haraoba is a traditional festival celebrated by the Meitei community of Manipur, featuring ritualistic dances to please local deities.",
+        "hi": "लाई हराओबा मणिपुर के मैतेई समुदाय द्वारा मनाया जाने वाला एक पारंपरिक त्योहार है, जिसमें स्थानीय देवताओं को प्रसन्न करने के लिए अनुष्ठानिक नृत्य किए जाते हैं।"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "'Sarhul' is a prominent spring festival and dance celebrated by tribes in which Indian state?",
+        "hi": "'सरहुल' किस भारतीय राज्य में जनजातियों द्वारा मनाया जाने वाला एक प्रमुख वसंत त्योहार और नृत्य है?"
+      },
+      "options": {
+        "en": [
+          "Jharkhand",
+          "Bihar",
+          "Odisha",
+          "Chhattisgarh"
+        ],
+        "hi": [
+          "झारखंड",
+          "बिहार",
+          "ओडिशा",
+          "छत्तीसगढ़"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Sarhul is a major tribal festival and dance of Jharkhand, celebrating the worship of nature and the Sal tree.",
+        "hi": "सरहुल झारखंड का एक प्रमुख आदिवासी त्योहार और नृत्य है, जिसमें प्रकृति और साल के पेड़ की पूजा की जाती है।"
+      },
+      "pyq": "JPSC 2019"
+    },
+    {
+      "question": {
+        "en": "The term 'Kathak' is derived from which Sanskrit word, which literally means 'to tell a story'?",
+        "hi": " 'कथक' शब्द की उत्पत्ति किस संस्कृत शब्द से हुई है, जिसका शाब्दिक अर्थ है 'कहानी कहना'?"
+      },
+      "options": {
+        "en": [
+          "Kavya",
+          "Kathakar",
+          "Katha",
+          "Kathan"
+        ],
+        "hi": [
+          "काव्य",
+          "कथाकार",
+          "कथा",
+          "कथन"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The word Kathak is derived from 'Katha', meaning story, and 'Kathakar', meaning storyteller. It is the dance of storytellers.",
+        "hi": "कथक शब्द की उत्पत्ति 'कथा' से हुई है, जिसका अर्थ कहानी है, और 'कथाकार' का अर्थ कहानी सुनाने वाला है। यह कहानीकारों का नृत्य है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "In which state of India did the classical dance form 'Kathakali' originate?",
+        "hi": "शास्त्रीय नृत्य शैली 'कथकली' की उत्पत्ति भारत के किस राज्य में हुई थी?"
+      },
+      "options": {
+        "en": [
+          "Tamil Nadu",
+          "Kerala",
+          "Andhra Pradesh",
+          "Karnataka"
+        ],
+        "hi": [
+          "तमिलनाडु",
+          "केरल",
+          "आंध्र प्रदेश",
+          "कर्नाटक"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Kathakali originated in the state of Kerala in southwestern India during the 17th century.",
+        "hi": "कथकली की उत्पत्ति 17वीं शताब्दी के दौरान दक्षिण-पश्चिमी भारत के केरल राज्य में हुई थी।"
+      },
+      "pyq": "RRB NTPC 2019"
+    },
+    {
+      "question": {
+        "en": "Which of the following is a key characteristic of Indian Folk Dances?",
+        "hi": "निम्नलिखित में से कौन सा भारतीय लोक नृत्यों का एक प्रमुख लक्षण है?"
+      },
+      "options": {
+        "en": [
+          "They are mostly spontaneous, simple, and community-driven.",
+          "They require rigid adherence to Natya Shastra rules.",
+          "They are taught only through formal guru-shishya academies.",
+          "They are performed only in royal courts."
+        ],
+        "hi": [
+          "वे अधिकतर स्वतःस्फूर्त, सरल और समुदाय-संचालित होते हैं।",
+          "उनके लिए नाट्यशास्त्र के नियमों का कड़ाई से पालन आवश्यक है।",
+          "वे केवल औपचारिक गुरु-शिष्य अकादमियों के माध्यम से सिखाए जाते हैं।",
+          "वे केवल शाही दरबारों में किए जाते हैं।"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Folk dances are simple, spontaneous, and energetic celebrations of local life, festivals, and harvests, lacking the rigid structures of classical dances.",
+        "hi": "लोक नृत्य स्थानीय जीवन, त्योहारों और फसलों की कटाई के सरल, स्वतःस्फूर्त और ऊर्जावान उत्सव होते हैं, जिनमें शास्त्रीय नृत्यों की तरह कठोर संरचना नहीं होती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "'Garba' and 'Dandiya' are vibrant folk dances associated with which Indian state?",
+        "hi": "'गरबा' और 'डांडिया' किस भारतीय राज्य से जुड़े जीवंत लोक नृत्य हैं?"
+      },
+      "options": {
+        "en": [
+          "Madhya Pradesh",
+          "Gujarat",
+          "Maharashtra",
+          "Rajasthan"
+        ],
+        "hi": [
+          "मध्य प्रदेश",
+          "गुजरात",
+          "महाराष्ट्र",
+          "राजस्थान"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Garba and Dandiya are popular folk dances of Gujarat, performed extensively during the nine nights of the Navratri festival.",
+        "hi": "गरबा और डांडिया गुजरात के लोकप्रिय लोक नृत्य हैं, जो नवरात्रि उत्सव की नौ रातों के दौरान बड़े पैमाने पर किए जाते हैं।"
+      },
+      "pyq": "SSC MTS 2021"
+    },
+    {
+      "question": {
+        "en": "Which of the following states is famous for the 'Ghoomar' folk dance, which is traditionally performed by the Bhil tribe?",
+        "hi": "निम्नलिखित में से कौन सा राज्य 'घूमर' लोक नृत्य के लिए प्रसिद्ध है, जो पारंपरिक रूप से भील जनजाति द्वारा किया जाता है?"
+      },
+      "options": {
+        "en": [
+          "Madhya Pradesh",
+          "Gujarat",
+          "Maharashtra",
+          "Rajasthan"
+        ],
+        "hi": [
+          "मध्य प्रदेश",
+          "गुजरात",
+          "महाराष्ट्र",
+          "राजस्थान"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Ghoomar was originally performed by the Bhil tribe of Rajasthan to worship Goddess Saraswati, and later integrated into Rajput culture.",
+        "hi": "घूमर मूल रूप से राजस्थान की भील जनजाति द्वारा देवी सरस्वती की पूजा के लिए किया जाता था, और बाद में इसे राजपूत संस्कृति में एकीकृत किया गया।"
+      },
+      "pyq": "UPSC CSE 2013"
+    },
+    {
+      "question": {
+        "en": "Which classical dance form is centered around the theme of Lord Krishna and Radha's love (Raslila) and is known for its soft, gentle movements?",
+        "hi": "कौन सी शास्त्रीय नृत्य शैली भगवान कृष्ण और राधा के प्रेम (रासलीला) के विषय पर केंद्रित है और अपनी कोमल, सौम्य गतिविधियों के लिए जानी जाती है?"
+      },
+      "options": {
+        "en": [
+          "Manipuri",
+          "Bharatanatyam",
+          "Kathakali",
+          "Kuchipudi"
+        ],
+        "hi": [
+          "मणिपुरी",
+          "भरतनाट्यम",
+          "कथकली",
+          "कुचिपुड़ी"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Manipuri dance is deeply spiritual and revolves around Vaishnavite themes, primarily the Raslila of Radha and Krishna, emphasizing delicate movements.",
+        "hi": "मणिपुरी नृत्य अत्यधिक आध्यात्मिक है और वैष्णव विषयों, मुख्य रूप से राधा और कृष्ण की रासलीला के इर्द-गिर्द घूमता है, जिसमें कोमल गतिविधियों पर जोर दिया जाता है।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "Which of the following folk dances is performed by carrying a brass pitcher filled with water and balancing it on the head?",
+        "hi": "निम्नलिखित में से कौन सा लोक नृत्य पानी से भरे पीतल के घड़े को सिर पर रखकर और उसे संतुलित करके किया जाता है?"
+      },
+      "options": {
+        "en": [
+          "Matki",
+          "Rouf",
+          "Phoolpati",
+          "Nati"
+        ],
+        "hi": [
+          "मटकी",
+          "रौफ",
+          "फूलपाती",
+          "नाटी"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Matki is a folk dance of Madhya Pradesh (specifically Malwa) where women balance a water-filled brass pitcher on their heads while dancing.",
+        "hi": "मटकी मध्य प्रदेश (विशेष रूप से मालवा) का एक लोक नृत्य है जहां महिलाएं नृत्य करते समय अपने सिर पर पानी से भरे पीतल के घड़े को संतुलित करती हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "'Lai Haraoba' literally means:",
+        "hi": "'लाई हराओबा' का शाब्दिक अर्थ क्या है?"
+      },
+      "options": {
+        "en": [
+          "Victory of Light",
+          "Festivity of the Gods",
+          "Dance of the Forest",
+          "Sorrow of the Earth"
+        ],
+        "hi": [
+          "प्रकाश की विजय",
+          "देवताओं का आमोद-प्रमोद",
+          "वन का नृत्य",
+          "पृथ्वी का दुख"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Lai Haraoba is a Manipuri festival that translates to 'merrymaking or festivity of the gods'.",
+        "hi": "लाई हराओबा मणिपुर का एक त्योहार है जिसका शाब्दिक अर्थ 'देवताओं का आमोद-प्रमोद या उत्सव' है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "What is a key distinguishing feature of Classical Dances compared to Folk Dances?",
+        "hi": "लोक नृत्यों की तुलना में शास्त्रीय नृत्यों की एक प्रमुख विशिष्ट विशेषता क्या है?"
+      },
+      "options": {
+        "en": [
+          "They are entirely spontaneous and unstructured.",
+          "They do not require any formal training.",
+          "They are based on strict rules, mudras, and shastric traditions.",
+          "They are performed only during community festivals."
+        ],
+        "hi": [
+          "वे पूरी तरह से स्वतःस्फूर्त और असंरचित होते हैं।",
+          "उनके लिए किसी औपचारिक प्रशिक्षण की आवश्यकता नहीं होती है।",
+          "वे सख्त नियमों, मुद्राओं और शास्त्रीय परंपराओं पर आधारित होते हैं।",
+          "वे केवल सामुदायिक त्योहारों के दौरान किए जाते हैं।"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Classical dances are highly structured, rule-bound, and based on ancient treatises like the Natya Shastra, whereas folk dances are spontaneous and community-driven.",
+        "hi": "शास्त्रीय नृत्य अत्यधिक संरचित, नियमबद्ध और नाट्यशास्त्र जैसे प्राचीन ग्रंथों पर आधारित होते हैं, जबकि लोक नृत्य स्वतःस्फूर्त और समुदाय-संचालित होते हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "The classical dance form 'Kuchipudi' originated in which state of India?",
+        "hi": "शास्त्रीय नृत्य शैली 'कुचिपुड़ी' की उत्पत्ति भारत के किस राज्य में हुई थी?"
+      },
+      "options": {
+        "en": [
+          "Tamil Nadu",
+          "Kerala",
+          "Andhra Pradesh",
+          "Odisha"
+        ],
+        "hi": [
+          "तमिलनाडु",
+          "केरल",
+          "आंध्र प्रदेश",
+          "ओडिशा"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Kuchipudi originated in a village named Kuchipudi (Kuchelapuram) in the Krishna district of Andhra Pradesh.",
+        "hi": "कुचिपुड़ी की उत्पत्ति आंध्र प्रदेश के कृष्णा जिले के कुचिपुड़ी (कुचेलपुरम) नामक गाँव से हुई थी।"
+      },
+      "pyq": "UPSC CSE 2012"
+    },
+    {
+      "question": {
+        "en": "'Nati', a dance form that made it to the Guinness Book of World Records as the largest folk dance, belongs to which state?",
+        "hi": "सबसे बड़े लोक नृत्य के रूप में गिनीज बुक ऑफ वर्ल्ड रिकॉर्ड्स में जगह बनाने वाली नृत्य शैली 'नाटी' किस राज्य से संबंधित है?"
+      },
+      "options": {
+        "en": [
+          "Punjab",
+          "Jammu and Kashmir",
+          "Uttarakhand",
+          "Himachal Pradesh"
+        ],
+        "hi": [
+          "पंजाब",
+          "जम्मू और कश्मीर",
+          "उत्तराखंड",
+          "हिमाचल प्रदेश"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Nati is the traditional folk dance of Himachal Pradesh, performed during major festivals and cultural celebrations.",
+        "hi": "नाटी हिमाचल प्रदेश का पारंपरिक लोक नृत्य है, जो प्रमुख त्योहारों और सांस्कृतिक उत्सवों के दौरान किया जाता है।"
+      },
+      "pyq": "HPPSC 2021"
+    },
+    {
+      "question": {
+        "en": "Which classical dance form is considered the oldest surviving classical dance of India?",
+        "hi": "किस शास्त्रीय नृत्य शैली को भारत का सबसे पुराना जीवित शास्त्रीय नृत्य माना जाता है?"
+      },
+      "options": {
+        "en": [
+          "Kathak",
+          "Kathakali",
+          "Bharatanatyam",
+          "Odissi"
+        ],
+        "hi": [
+          "कथक",
+          "कथकली",
+          "भरतनाट्यम",
+          "ओडिसी"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Bharatanatyam, originating from Tamil Nadu, is considered the oldest classical dance form of India, with roots dating back over 2000 years.",
+        "hi": "तमिलनाडु से उत्पन्न भरतनाट्यम को भारत की सबसे पुरानी शास्त्रीय नृत्य शैली माना जाता है, जिसकी जड़ें 2000 से अधिक वर्ष पुरानी हैं।"
+      },
+      "pyq": "UPSC CSE 2016"
+    },
+    {
+      "question": {
+        "en": "'Bihu' is the most famous folk dance of which northeastern state, celebrated during harvest festivals?",
+        "hi": "'बिहू' किस पूर्वोत्तर राज्य का सबसे प्रसिद्ध लोक नृत्य है, जो फसल कटाई के त्योहारों के दौरान मनाया जाता है?"
+      },
+      "options": {
+        "en": [
+          "Meghalaya",
+          "Arunachal Pradesh",
+          "Assam",
+          "Tripura"
+        ],
+        "hi": [
+          "मेघालय",
+          "अरुणाचल प्रदेश",
+          "असम",
+          "त्रिपुरा"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Bihu is a joyful folk dance of Assam, characterized by rapid hand movements and brisk steps, celebrating seasonal festivals.",
+        "hi": "बिहू असम का एक आनंदमयी लोक नृत्य है, जिसकी विशेषता हाथ की तेज गतियाँ और फुर्तीले कदम हैं, जो मौसमी त्योहारों का जश्न मनाते हैं।"
+      },
+      "pyq": "SSC CGL 2022"
+    },
+    {
+      "question": {
+        "en": "'Karagattam' is an ancient folk dance performed by balancing a decorated pot on the head. Which state does it belong to?",
+        "hi": "'करगट्टम' सिर पर सजे हुए बर्तन को संतुलित करके किया जाने वाला एक प्राचीन लोक नृत्य है। यह किस राज्य से संबंधित है?"
+      },
+      "options": {
+        "en": [
+          "Tamil Nadu",
+          "Andhra Pradesh",
+          "Karnataka",
+          "Kerala"
+        ],
+        "hi": [
+          "तमिलनाडु",
+          "आंध्र प्रदेश",
+          "कर्नाटक",
+          "केरल"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Karagattam is a traditional Tamil folk dance performed in praise of the rain goddess Mariamman, balancing a clay or metal pot (Karagam).",
+        "hi": "करगट्टम एक पारंपरिक तमिल लोक नृत्य है जो वर्षा की देवी मरिअम्मन की प्रशंसा में किया जाता है, जिसमें मिट्टी या धातु के बर्तन (करगम) को संतुलित किया जाता है।"
+      },
+      "pyq": "TNPSC 2020"
+    },
+    {
+      "question": {
+        "en": "'Rouf' is a highly popular traditional folk dance performed primarily by women in which region?",
+        "hi": "'रौफ' मुख्य रूप से महिलाओं द्वारा किया जाने वाला एक अत्यंत लोकप्रिय पारंपरिक लोक नृत्य किस क्षेत्र का है?"
+      },
+      "options": {
+        "en": [
+          "Jammu and Kashmir",
+          "Ladakh",
+          "Himachal Pradesh",
+          "Uttarakhand"
+        ],
+        "hi": [
+          "जम्मू और कश्मीर",
+          "लद्दाख",
+          "हिमाचल प्रदेश",
+          "उत्तराखंड"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Rouf is a traditional folk dance of Jammu and Kashmir, performed by women during the spring season and Eid festival.",
+        "hi": "रौफ जम्मू और कश्मीर का एक पारंपरिक लोक नृत्य है, जो वसंत ऋतु और ईद के त्योहार के दौरान महिलाओं द्वारा किया जाता है।"
+      },
+      "pyq": "SSC CHSL 2021"
+    },
+    {
+      "question": {
+        "en": "The 'Dhamal' dance of Haryana is believed to have roots dating back to which epic period?",
+        "hi": "हरियाणा के 'धमाल' नृत्य की जड़ें किस महाकाव्य काल से जुड़ी मानी जाती हैं?"
+      },
+      "options": {
+        "en": [
+          "Mahabharata",
+          "Mughal period",
+          "Ramayana",
+          "Rigvedic period"
+        ],
+        "hi": [
+          "महाभारत",
+          "मुगल काल",
+          "रामायण",
+          "ऋग्वैदिक काल"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Dhamal dance is a popular folk dance of Haryana, whose origins are believed to date back to the time of the Mahabharata.",
+        "hi": "धमाल नृत्य हरियाणा का एक लोकप्रिय लोक नृत्य है, जिसकी उत्पत्ति महाभारत के समय से मानी जाती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "'Jhumar', 'Phag', and 'Dhamal' are popular traditional folk dances of which Indian state?",
+        "hi": "'झूमर', 'फाग' और 'धमाल' किस भारतीय राज्य के लोकप्रिय पारंपरिक लोक नृत्य हैं?"
+      },
+      "options": {
+        "en": [
+          "Haryana",
+          "Himachal Pradesh",
+          "Rajasthan",
+          "Punjab"
+        ],
+        "hi": [
+          "हरियाणा",
+          "हिमाचल प्रदेश",
+          "राजस्थान",
+          "पंजाब"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Jhumar, Phag, and Dhamal are traditional folk dances performed in Haryana during harvests and seasonal festivals.",
+        "hi": "झूमर, फाग और धमाल हरियाणा में फसलों की कटाई और मौसमी त्योहारों के दौरान किए जाने वाले पारंपरिक लोक नृत्य हैं।"
+      },
+      "pyq": "HSSC 2019"
+    },
+    {
+      "question": {
+        "en": "Which classical dance form of India is deeply associated with the state of Odisha and is known for its fluid, sculpture-like poses?",
+        "hi": "भारत की कौन सी शास्त्रीय नृत्य शैली ओडिशा राज्य से गहराई से जुड़ी हुई है और अपनी तरल, मूर्तिकला जैसी मुद्राओं के लिए जानी जाती है?"
+      },
+      "options": {
+        "en": [
+          "Kathak",
+          "Odissi",
+          "Manipuri",
+          "Sattriya"
+        ],
+        "hi": [
+          "कथक",
+          "ओडिसी",
+          "मणिपुरी",
+          "सत्रिया"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Odissi, originating from Odisha, is famous for its lyrical grace and the iconic 'tribhanga' (three-bend) posture, which resembles temple sculptures.",
+        "hi": "ओडिशा से उत्पन्न ओडिसी अपने गीतात्मक सौंदर्य और प्रतिष्ठित 'त्रिभंग' (तीन-झुकाव) मुद्रा के लिए प्रसिद्ध है, जो मंदिर की मूर्तियों से मिलती-जुलती है।"
+      },
+      "pyq": "SSC MTS 2020"
+    },
+    {
+      "question": {
+        "en": "Pandit Birju Maharaj, a legendary exponent of Indian classical dance, was associated with which dance form?",
+        "hi": "भारतीय शास्त्रीय नृत्य के प्रसिद्ध प्रतिपादक पंडित बिरजू महाराज किस नृत्य शैली से जुड़े थे?"
+      },
+      "options": {
+        "en": [
+          "Kuchipudi",
+          "Odissi",
+          "Kathakali",
+          "Kathak"
+        ],
+        "hi": [
+          "कुचिपुड़ी",
+          "ओडिसी",
+          "कथकली",
+          "कथक"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Pandit Birju Maharaj was a doyen of the Lucknow 'Kalka-Bindadin' gharana of Kathak dance.",
+        "hi": "पंडित बिरजू महाराज कथक नृत्य के लखनऊ 'कालका-बिंदादीन' घराने के एक प्रमुख प्रतिपादक थे।"
+      },
+      "pyq": "SSC MTS 2021"
+    },
+    {
+      "question": {
+        "en": "Which dance form represents the cosmic dance of Lord Shiva and is deeply rooted in Tamil Nadu's temple heritage?",
+        "hi": "कौन सी नृत्य शैली भगवान शिव के ब्रह्मांडीय नृत्य का प्रतिनिधित्व करती है और तमिलनाडु की मंदिर विरासत में गहराई से निहित है?"
+      },
+      "options": {
+        "en": [
+          "Kuchipudi",
+          "Bharatanatyam",
+          "Mohiniyattam",
+          "Kathakali"
+        ],
+        "hi": [
+          "कुचिपुड़ी",
+          "भरतनाट्यम",
+          "मोहिनीअट्टम",
+          "कथकली"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Bharatanatyam is closely associated with Lord Shiva in his Nataraja form and has been preserved through Tamil Nadu's temple traditions.",
+        "hi": "भरतनाट्यम भगवान शिव के नटराज रूप से निकटता से जुड़ा हुआ है और इसे तमिलनाडु की मंदिर परंपराओं के माध्यम से संरक्षित किया गया है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "'Matki' and 'Phoolpati' are traditional folk dances belonging to which central state of India?",
+        "hi": "'मटकी' और 'फूलपाती' भारत के किस मध्य राज्य से संबंधित पारंपरिक लोक नृत्य हैं?"
+      },
+      "options": {
+        "en": [
+          "Chhattisgarh",
+          "Madhya Pradesh",
+          "Uttar Pradesh",
+          "Rajasthan"
+        ],
+        "hi": [
+          "छत्तीसगढ़",
+          "मध्य प्रदेश",
+          "उत्तर प्रदेश",
+          "राजस्थान"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Matki and Phoolpati are folk dances of Madhya Pradesh, with Matki being a solo pitcher dance and Phoolpati performed during Navratri in Malwa.",
+        "hi": "मटकी और फूलपाती मध्य प्रदेश के लोक नृत्य हैं, जिसमें मटकी एक एकल घड़ा नृत्य है और फूलपाती मालवा में नवरात्रि के दौरान किया जाता है।"
+      },
+      "pyq": "MPPSC 2020"
+    },
+    {
+      "question": {
+        "en": "Which classical dance form of North India is characterized by a blend of Hindu and Mughal cultural influences?",
+        "hi": "उत्तर भारत की कौन सी शास्त्रीय नृत्य शैली हिंदू और मुगल सांस्कृतिक प्रभावों के मिश्रण के लिए जानी जाती है?"
+      },
+      "options": {
+        "en": [
+          "Manipuri",
+          "Kathak",
+          "Kathakali",
+          "Sattriya"
+        ],
+        "hi": [
+          "मणिपुरी",
+          "कथक",
+          "कथकली",
+          "सत्रिया"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Kathak evolved under both Hindu temple traditions and the patronage of Mughal courts, resulting in a unique synthesis of both cultures.",
+        "hi": "कथक का विकास हिंदू मंदिर परंपराओं और मुगल दरबारों के संरक्षण दोनों के तहत हुआ, जिसके परिणामस्वरूप दोनों संस्कृतियों का एक अनूठा संश्लेषण हुआ।"
+      },
+      "pyq": "UPSC CSE 2014"
+    },
+    {
+      "question": {
+        "en": "'Ghoomar', a dance featuring graceful twirling movements by women wearing flowing skirts, is the state dance of which state?",
+        "hi": "'घूमर', जिसमें घेरदार घाघरा पहने महिलाओं द्वारा सुंदर चक्करदार गतियाँ की जाती हैं, किस राज्य का राज्य नृत्य है?"
+      },
+      "options": {
+        "en": [
+          "Gujarat",
+          "Madhya Pradesh",
+          "Uttar Pradesh",
+          "Rajasthan"
+        ],
+        "hi": [
+          "गुजरात",
+          "मध्य प्रदेश",
+          "उत्तर प्रदेश",
+          "राजस्थान"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Ghoomar is a traditional and highly popular folk dance of Rajasthan, originally developed by the Bhil tribe and later adopted by Rajasthani royalty.",
+        "hi": "घूमर राजस्थान का एक पारंपरिक और अत्यधिक लोकप्रिय लोक नृत्य है, जिसे मूल रूप से भील जनजाति द्वारा विकसित किया गया था और बाद में राजस्थानी राजघरानों द्वारा अपनाया गया।"
+      },
+      "pyq": "RAS 2018"
+    },
+    {
+      "question": {
+        "en": "Which of the following ancient treatises is the primary source of rules and techniques for Indian Classical Dances?",
+        "hi": "निम्नलिखित में से कौन सा प्राचीन ग्रंथ भारतीय शास्त्रीय नृत्यों के नियमों और तकनीकों का प्राथमिक स्रोत है?"
+      },
+      "options": {
+        "en": [
+          "Natya Shastra",
+          "Abhinaya Darpana",
+          "Manusmriti",
+          "Rigveda"
+        ],
+        "hi": [
+          "नाट्यशास्त्र",
+          "अभिनय दर्पण",
+          "मनुस्मृति",
+          "ऋग्वेद"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Natya Shastra, compiled by Sage Bharata, is the foundational treatise for Indian classical dances, detailing mudras, expressions, and structures.",
+        "hi": "भरत मुनि द्वारा संकलित नाट्यशास्त्र भारतीय शास्त्रीय नृत्यों का आधारभूत ग्रंथ है, जिसमें मुद्राओं, भावों और संरचनाओं का विस्तृत विवरण है।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "Identify the folk dance form from the options given below:",
+        "hi": "नीचे दिए गए विकल्पों में से लोक नृत्य शैली की पहचान करें:"
+      },
+      "options": {
+        "en": [
+          "Kuchipudi",
+          "Mohiniyattam",
+          "Kathakali",
+          "Yakshagana"
+        ],
+        "hi": [
+          "कुचिपुड़ी",
+          "मोहिनीअट्टम",
+          "कथकली",
+          "यक्षगान"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Yakshagana is a traditional folk/theatre dance form of Karnataka, while Kathakali, Kuchipudi, and Mohiniyattam are classical dances.",
+        "hi": "यक्षगान कर्नाटक की एक पारंपरिक लोक/रंगमंच नृत्य शैली है, जबकि कथकली, कुचिपुड़ी और मोहिनीअट्टम शास्त्रीय नृत्य हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "The classical dance 'Kathak' is traditionally organized into different schools of training known as:",
+        "hi": "शास्त्रीय नृत्य 'कथक' पारंपरिक रूप से प्रशिक्षण के विभिन्न स्कूलों में व्यवस्थित है जिन्हें क्या कहा जाता है?"
+      },
+      "options": {
+        "en": [
+          "Sampradayas",
+          "Sattras",
+          "Gharanas",
+          "Akharas"
+        ],
+        "hi": [
+          "संप्रदाय",
+          "सत्र",
+          "घराने",
+          "अखाड़े"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Kathak is divided into major gharanas (schools) named after the cities where they developed, such as Lucknow, Jaipur, and Benares.",
+        "hi": "कथक को प्रमुख घरानों (स्कूलों) में विभाजित किया गया है, जिनका नाम उन शहरों के नाम पर रखा गया है जहाँ वे विकसित हुए, जैसे लखनऊ, जयपुर और बनारस।"
+      },
+      "pyq": "SSC CGL 2021"
+    },
+    {
+      "question": {
+        "en": "Which of the following is a classical dance form, NOT a folk dance?",
+        "hi": "निम्नलिखित में से कौन सी एक शास्त्रीय नृत्य शैली है, न कि लोक नृत्य?"
+      },
+      "options": {
+        "en": [
+          "Lavani",
+          "Ghoomar",
+          "Sattriya",
+          "Bihu"
+        ],
+        "hi": [
+          "लावणी",
+          "घूमर",
+          "सत्रिया",
+          "बिहू"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Sattriya is one of the eight recognized classical dance forms of India, whereas Bihu, Ghoomar, and Lavani are folk dances.",
+        "hi": "सत्रिया भारत की आठ मान्यता प्राप्त शास्त्रीय नृत्य शैलियों में से एक है, जबकि बिहू, घूमर और लावणी लोक नृत्य हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which classical dance form from Kerala is performed exclusively by female dancers and is characterized by graceful, swaying movements?",
+        "hi": "केरल की कौन सी शास्त्रीय नृत्य शैली विशेष रूप से महिला नर्तकियों द्वारा की जाती है और इसकी विशेषता कोमल, लहराती गतियाँ हैं?"
+      },
+      "options": {
+        "en": [
+          "Sattriya",
+          "Kathakali",
+          "Kuchipudi",
+          "Mohiniyattam"
+        ],
+        "hi": [
+          "सत्रिया",
+          "कथकली",
+          "कुचिपुड़ी",
+          "मोहिनीअट्टम"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Mohiniyattam, which literally means 'dance of the enchantress', is a solo female classical dance of Kerala known for its graceful movements.",
+        "hi": "मोहिनीअट्टम, जिसका शाब्दिक अर्थ 'जादूगरनी का नृत्य' है, केरल का एक एकल महिला शास्त्रीय नृत्य है जो अपनी सुंदर और कोमल गतिविधियों के लिए जाना जाता है।"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "Which folk dance of Central India is performed to pay homage to Guru Ghasidas?",
+        "hi": "मध्य भारत का कौन सा लोक नृत्य गुरु घासीदास को श्रद्धांजलि देने के लिए किया जाता है?"
+      },
+      "options": {
+        "en": [
+          "Sarhul",
+          "Matki",
+          "Panthi",
+          "Phoolpati"
+        ],
+        "hi": [
+          "सरहुल",
+          "मटकी",
+          "पंथी",
+          "फूलपाती"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Panthi dance is the devotional dance of the Satnami community of Chhattisgarh, dedicated to Guru Ghasidas.",
+        "hi": "पंथी नृत्य छत्तीसगढ़ के सतनामी समुदाय का भक्ति नृत्य है, जो गुरु घासीदास को समर्पित है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "'Bhangra' and 'Giddha' are world-famous energetic folk dances of which state?",
+        "hi": "'भांगड़ा' और 'गिद्धा' किस राज्य के विश्व प्रसिद्ध ऊर्जावान लोक नृत्य हैं?"
+      },
+      "options": {
+        "en": [
+          "Rajasthan",
+          "Punjab",
+          "Himachal Pradesh",
+          "Haryana"
+        ],
+        "hi": [
+          "राजस्थान",
+          "पंजाब",
+          "हिमाचल प्रदेश",
+          "हरियाणा"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Bhangra (performed by men) and Giddha (performed by women) are highly energetic and rhythmic folk dances of Punjab.",
+        "hi": "भांगड़ा (पुरुषों द्वारा किया जाने वाला) और गिद्धा (महिलाओं द्वारा किया जाने वाला) पंजाब के अत्यधिक ऊर्जावान और लयबद्ध लोक नृत्य हैं।"
+      },
+      "pyq": "SSC MTS 2018"
+    },
+    {
+      "question": {
+        "en": "Which of the following is NOT a folk dance of Haryana?",
+        "hi": "निम्नलिखित में से कौन सा हरियाणा का लोक नृत्य नहीं है?"
+      },
+      "options": {
+        "en": [
+          "Phag",
+          "Dhamal",
+          "Jhumar",
+          "Nati"
+        ],
+        "hi": [
+          "फाग",
+          "धमाल",
+          "झूमर",
+          "नाटी"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Nati is a folk dance of Himachal Pradesh, whereas Jhumar, Phag, and Dhamal are from Haryana.",
+        "hi": "नाटी हिमाचल प्रदेश का लोक नृत्य है, जबकि झूमर, फाग और धमाल हरियाणा के हैं।"
+      },
+      "pyq": ""
+    }
+  ]
+}

@@ -28,12 +28,17 @@ window.APP_CONFIG = {
     { label: "TRE4 Computer Science", file: "TRE4_Computer_Science.json" }
   ],
   preImportedQuizzes: [
-    
+    { label: "3. English - Direct → Indirect", file: "3_english_direct_indirect.json" },
+    { label: "3. English - Active ⬌ Passive Voice", file: "3_english_active_passive_voice.json"},
+    { label: "3. English - subject verb agreement", file: "3_english_subject_verb_agreement.json"},
+    { label: "4. Polity - Articles 12-35→ Fundamental Rights", file: "fm_quiz.json" },
+    { label: "5. Static Gk - Indian Dance Forms", file: "5_static_gk_indian_dance_forms.json"},
+    { label: "5. Static Gk - Rivers of India", file: "5_static_gk_rivers_of_india.json"},
     { label: "6. History - Indus Valley (2500-1600 BCE)", file: "ivc_quiz.json" },
     { label: "7. Economy - FYP", file: "fyp_quiz.json" },
-    { label: "4. Polity - Articles 12-35→ Fundamental Rights", file: "fm_quiz.json" },
-    { label: "3. English - Direct → Indirect", file: "3_english_direct_indirect.json" },
-    { label: "3. English - Active ⬌ Passive Voice", file: "3_english_active_passive_voice.json"}
+    { label: "7. Economy - National Income", file: "7_economy_national_income.json"},
+    { label: "TRE4 Computer Science - Operating System", file: "tre4_computer_science_operating_system.json"},
+    { label: "TRE4 Computer Science - Theory of Computation", file: "tre4_computer_science_theory_of_computation.json"}
   ],
   preImportedTests: [
     { label: "SSC CGL 12-09-2025 Shift 1", file: "ssc/cgl/ssc_cgl_12-9-2025_shift_1.json" },

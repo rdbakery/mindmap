@@ -1,0 +1,1334 @@
+{
+  "quizName": "TRE4 (Computer Science) - Operating system",
+  "mapName": "9. CA",
+  "score": "Not submitted",
+  "timerSeconds": 900,
+  "questions": [
+    {
+      "question": {
+        "en": "What is the key difference between Context Switching and Mode Switching?",
+        "hi": "कॉन्टेक्स्ट स्विचिंग (Context Switching) और मोड स्विचिंग (Mode Switching) के बीच मुख्य अंतर क्या है?"
+      },
+      "options": {
+        "en": [
+          "There is no difference; both terms are completely synonymous",
+          "Mode switching swaps processes out of main memory, while context switching does not",
+          "Context switching is performed by hardware alone, whereas mode switching is done by application code",
+          "Context switching saves and restores process state (PCB), while mode switching changes CPU privilege level (User to Kernel mode)"
+        ],
+        "hi": [
+          "कोई अंतर नहीं है; दोनों शब्द पूरी तरह से पर्यायवाची हैं",
+          "मोड स्विचिंग मुख्य मेमोरी से प्रोसेस को स्वैप करता है, जबकि कॉन्टेक्स्ट स्विचिंग ऐसा नहीं करता है",
+          "कॉन्टेक्स्ट स्विचिंग अकेले हार्डवेयर द्वारा किया जाता है, जबकि मोड स्विचिंग एप्लिकेशन कोड द्वारा किया जाता है",
+          "कॉन्टेक्स्ट स्विचिंग प्रोसेस स्टेट (PCB) को सहेजता और पुनर्स्थापित करता है, जबकि मोड स्विचिंग CPU विशेषाधिकार स्तर (यूज़र से कर्नेल मोड) को बदलता है"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Context switching involves saving the state of the currently running process and loading the state of another process. Mode switching changes execution privilege (e.g., from User mode to Kernel mode when a system call occurs) without necessarily switching processes.",
+        "hi": "कॉन्टेक्स्ट स्विचिंग में वर्तमान में चल रहे प्रोसेस की स्थिति को सहेजना और दूसरे प्रोसेस की स्थिति को लोड करना शामिल है। मोड स्विचिंग निष्पादन विशेषाधिकार को बदलता है (जैसे, सिस्टम कॉल होने पर यूज़र मोड से कर्नेल मोड में) बिना प्रोसेस को स्विच किए।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "In Inter-Process Communication (IPC), how does Shared Memory differ from Message Passing?",
+        "hi": "इंटर-प्रोसेस कम्युनिकेशन (IPC) में, शेयर्ड मेमोरी (Shared Memory) मैसेज पासिंग (Message Passing) से किस प्रकार भिन्न है?"
+      },
+      "options": {
+        "en": [
+          "Shared memory is only used in single-core systems, while message passing is for multi-core",
+          "Shared memory uses a common memory region with no system calls needed for every transfer, while message passing relies on system calls for every exchange",
+          "Message passing requires common variables to be shared between processes",
+          "Shared memory is much slower than message passing"
+        ],
+        "hi": [
+          "शेयर्ड मेमोरी का उपयोग केवल सिंगल-कोर सिस्टम में किया जाता है, जबकि मैसेज पासिंग मल्टी-कोर के लिए है",
+          "शेयर्ड मेमोरी एक सामान्य मेमोरी क्षेत्र का उपयोग करती है जिसमें प्रत्येक ट्रांसफर के लिए सिस्टम कॉल की आवश्यकता नहीं होती है, जबकि मैसेज पासिंग प्रत्येक एक्सचेंज के लिए सिस्टम कॉल पर निर्भर करता है",
+          "मैसेज पासिंग के लिए प्रोसेस के बीच साझा किए जाने वाले सामान्य वेरिएबल्स की आवश्यकता होती है",
+          "शेयर्ड मेमोरी मैसेज पासिंग की तुलना में बहुत धीमी है"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Shared Memory establishes a shared address space between processes, making data transfer very fast without kernel intervention. Message Passing uses system calls (like send/receive), which introduces kernel overhead but is easier to implement in distributed systems.",
+        "hi": "शेयर्ड मेमोरी प्रोसेस के बीच एक साझा पता स्थान स्थापित करती है, जिससे कर्नेल हस्तक्षेप के बिना डेटा ट्रांसफर बहुत तेज़ हो जाता है। मैसेज पासिंग सिस्टम कॉल (जैसे सेंड/रिसीव) का उपयोग करता है, जो कर्नेल ओवरहेड लाता है लेकिन वितरित सिस्टम में लागू करना आसान है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which scheduler is responsible for moving processes from the 'New' state to the 'Ready' state?",
+        "hi": "कौन सा शेड्यूलर प्रोसेस को 'न्यू' (New) स्थिति से 'रेडी' (Ready) स्थिति में ले जाने के लिए जिम्मेदार है?"
+      },
+      "options": {
+        "en": [
+          "Medium-term Scheduler",
+          "Short-term Scheduler",
+          "Long-term Scheduler (Job Scheduler)",
+          "I/O Scheduler"
+        ],
+        "hi": [
+          "मीडियम-टर्म शेड्यूलर (Medium-term Scheduler)",
+          "शॉर्ट-टर्म शेड्यूलर (Short-term Scheduler)",
+          "लॉन्ग-टर्म शेड्यूलर / जॉब शेड्यूलर (Long-term Scheduler)",
+          "I/O शेड्यूलर"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Long-term scheduler, or Job Scheduler, selects processes from a pool in secondary memory and loads them into main memory (Ready Queue) for execution.",
+        "hi": "लॉन्ग-टर्म शेड्यूलर, या जॉब शेड्यूलर, सेकेंडरी मेमोरी में पूल से प्रोसेस का चयन करता है और उन्हें निष्पादन के लिए मुख्य मेमोरी (रेडी क्यू) में लोड करता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "What is the maximum single file size supported by the FAT32 file system, and does it support file-level security permissions?",
+        "hi": "FAT32 फ़ाइल सिस्टम द्वारा समर्थित अधिकतम सिंगल फ़ाइल आकार क्या है, और क्या यह फ़ाइल-स्तरीय सुरक्षा अनुमतियों का समर्थन करता है?"
+      },
+      "options": {
+        "en": [
+          "Unlimited, and it supports encryption and journaling",
+          "4 GB, and it supports full file-level security permissions",
+          "4 GB, and it does NOT support file-level security permissions",
+          "2 GB, and it does NOT support file-level security permissions"
+        ],
+        "hi": [
+          "असीमित, और यह एन्क्रिप्शन और जर्नलिंग का समर्थन करता है",
+          "4 GB, और यह पूर्ण फ़ाइल-स्तरीय सुरक्षा अनुमतियों का समर्थन करता है",
+          "4 GB, और यह फ़ाइल-स्तरीय सुरक्षा अनुमतियों का समर्थन नहीं करता है",
+          "2 GB, और यह फ़ाइल-स्तरीय सुरक्षा अनुमतियों का समर्थन नहीं करता है"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "FAT32, developed by Microsoft, has a strict maximum single file size limit of 4 GB and lacks modern security features like file-level permissions and journaling.",
+        "hi": "माइक्रोसॉफ्ट द्वारा विकसित FAT32 में 4 GB की सख्त अधिकतम सिंगल फ़ाइल आकार सीमा है और इसमें फ़ाइल-स्तरीय अनुमतियों और जर्नलिंग जैसी आधुनिक सुरक्षा सुविधाओं का अभाव है।"
+      },
+      "pyq": "BPSC TRE3 2024"
+    },
+    {
+      "question": {
+        "en": "How is Turnaround Time (TAT) calculated for a process in CPU scheduling?",
+        "hi": "CPU शेड्यूलिंग में किसी प्रोसेस के लिए टर्नअराउंड टाइम (TAT) की गणना कैसे की जाती है?"
+      },
+      "options": {
+        "en": [
+          "TAT = Waiting Time + Response Time",
+          "TAT = Arrival Time + Burst Time",
+          "TAT = Burst Time - Waiting Time",
+          "TAT = Finish Time - Arrival Time"
+        ],
+        "hi": [
+          "TAT = वेटिंग टाइम (Waiting Time) + रिस्पॉन्स टाइम (Response Time)",
+          "TAT = अराइवल टाइम (Arrival Time) + बर्स्ट टाइम (Burst Time)",
+          "TAT = बर्स्ट टाइम (Burst Time) - वेटिंग टाइम (Waiting Time)",
+          "TAT = फिनिश टाइम (Finish Time) - अराइवल टाइम (Arrival Time)"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Turnaround Time is the total interval of time from the submission of a process (Arrival Time) to its completion (Finish Time). Thus, TAT = Finish Time - Arrival Time.",
+        "hi": "टर्नअराउंड टाइम किसी प्रोसेस को सबमिट करने (अराइवल टाइम) से लेकर उसके पूरा होने (फिनिश टाइम) तक का कुल समय अंतराल है। इस प्रकार, TAT = फिनिश टाइम - अराइवल टाइम।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which multithreading model multiplexes many user-level threads to a smaller or equal number of kernel-level threads, offering the best overall flexibility?",
+        "hi": "कौन सा मल्टीथ्रेडिंग मॉडल कई यूजर-लेवल थ्रेड्स को कर्नेल-लेवल थ्रेड्स की समान या उससे कम संख्या में मल्टीप्लेक्स करता है, जो समग्र रूप से सर्वोत्तम लचीलापन प्रदान करता है?"
+      },
+      "options": {
+        "en": [
+          "One-to-One",
+          "One-to-Many",
+          "Many-to-Many",
+          "Many-to-One"
+        ],
+        "hi": [
+          "वन-टू-वन (One-to-One)",
+          "वन-टू-मेनी (One-to-Many)",
+          "मेनी-टू-मेनी (Many-to-Many)",
+          "मेनी-टू-वन (Many-to-One)"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Many-to-Many model multiplexes many user-level threads to a smaller or equal number of kernel threads, allowing programmers to create as many threads as needed while allowing kernel threads to run in parallel on multiprocessors.",
+        "hi": "मेनी-टू-मेनी मॉडल कई यूजर-लेवल थ्रेड्स को कर्नेल थ्रेड्स की समान या उससे कम संख्या में मल्टीप्लेक्स करता है, जिससे प्रोग्रामर आवश्यकतानुसार कई थ्रेड बना सकते हैं जबकि कर्नेल थ्रेड्स को मल्टीप्रोसेसर पर समानांतर में चलने की अनुमति मिलती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "In early operating systems, what was the primary role of a 'Resident Monitor'?",
+        "hi": "शुरुआती ऑपरेटिंग सिस्टम में, 'रेसिडेंट मॉनिटर' (Resident Monitor) की प्राथमिक भूमिका क्या थी?"
+      },
+      "options": {
+        "en": [
+          "A system to partition physical memory into dynamic frames",
+          "A hardware device used to monitor the temperature of vacuum tubes",
+          "A security tool used to detect process deadlocks in real-time",
+          "A small software program that remained permanently in memory to automatically load and execute jobs sequentially"
+        ],
+        "hi": [
+          "भौतिक मेमोरी को डायनेमिक फ्रेम में विभाजित करने की एक प्रणाली",
+          "वैक्यूम ट्यूबों के तापमान की निगरानी के लिए उपयोग किया जाने वाला एक हार्डवेयर उपकरण",
+          "वास्तविक समय में प्रोसेस डेडलॉक का पता लगाने के लिए उपयोग किया जाने वाला एक सुरक्षा उपकरण",
+          "एक छोटा सॉफ्टवेयर प्रोग्राम जो नौकरियों (jobs) को क्रमिक रूप से स्वचालित रूप से लोड और निष्पादित करने के लिए मेमोरी में स्थायी रूप से रहता था"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "In early batch systems, the Resident Monitor was the predecessor to the modern OS. It stayed in main memory and automated job transitions, loading the next job as soon as the current one finished.",
+        "hi": "शुरुआती बैच सिस्टम में, रेसिडेंट मॉनिटर आधुनिक OS का पूर्ववर्ती था। यह मुख्य मेमोरी में रहता था और जॉब ट्रांजिशन को स्वचालित करता था, जैसे ही वर्तमान काम समाप्त होता था, अगला काम लोड कर देता था।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "In disk scheduling, what does 'Seek Time' represent?",
+        "hi": "डिस्क शेड्यूलिंग में, 'सीक टाइम' (Seek Time) क्या दर्शाता है?"
+      },
+      "options": {
+        "en": [
+          "The time taken for the desired sector to rotate under the read-write head",
+          "The sum of rotational latency and transfer rate",
+          "The time taken to position the read-write head over the desired cylinder/track",
+          "The time taken to transfer data from the disk to main memory"
+        ],
+        "hi": [
+          "वांछित सेक्टर को रीड-राइट हेड के नीचे घूमने में लगने वाला समय",
+          "घूर्णन विलंबता (rotational latency) और स्थानांतरण दर का योग",
+          "रीड-राइट हेड को वांछित सिलेंडर/ट्रैक पर रखने में लगने वाला समय",
+          "डिस्क से मुख्य मेमोरी में डेटा स्थानांतरित करने में लगने वाला समय"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Seek Time is the time required to move the disk arm containing the read-write heads to the specific track or cylinder where the requested data is located.",
+        "hi": "सीक टाइम रीड-राइट हेड वाले डिस्क आर्म को उस विशिष्ट ट्रैक या सिलेंडर पर ले जाने के लिए आवश्यक समय है जहां अनुरोधित डेटा स्थित है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which CPU scheduling algorithm is mathematically proven to yield the minimum average waiting time for a constant set of stationary processes?",
+        "hi": "स्थिर प्रोसेस के एक निश्चित सेट के लिए न्यूनतम औसत प्रतीक्षा समय देने के लिए कौन सा CPU शेड्यूलिंग एल्गोरिदम गणितीय रूप से सिद्ध है?"
+      },
+      "options": {
+        "en": [
+          "First Come First Served (FCFS)",
+          "Shortest Job First (SJF)",
+          "Round Robin (RR)",
+          "Priority Scheduling"
+        ],
+        "hi": [
+          "फर्स्ट कम फर्स्ट सर्व्ड (FCFS)",
+          "शॉर्टेस्ट जॉब फर्स्ट (SJF)",
+          "राउंड रॉबिन (RR)",
+          "प्रायोरिटी शेड्यूलिंग (Priority Scheduling)"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Shortest Job First (SJF) scheduling is optimal because it minimizes the average waiting time for a given set of processes by scheduling the shortest job first.",
+        "hi": "शॉर्टेस्ट जॉब फर्स्ट (SJF) शेड्यूलिंग इष्टतम (optimal) है क्योंकि यह सबसे छोटे काम को पहले शेड्यूल करके प्रोसेस के दिए गए सेट के लिए औसत प्रतीक्षा समय को न्यूनतम करता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "What is a major disadvantage of User-Level Threads (ULT) compared to Kernel-Level Threads (KLT)?",
+        "hi": "कर्नेल-लेवल थ्रेड्स (KLT) की तुलना में यूजर-लेवल थ्रेड्स (ULT) का एक बड़ा नुकसान क्या है?"
+      },
+      "options": {
+        "en": [
+          "User-level threads require hardware virtualization support to execute",
+          "They cannot share the data section of the parent process",
+          "Context switching between user-level threads is slower than kernel-level threads",
+          "If one user-level thread performs a blocking system call, the entire process and all its threads are blocked"
+        ],
+        "hi": [
+          "यूजर-लेवल थ्रेड्स को निष्पादित करने के लिए हार्डवेयर वर्चुअलाइजेशन समर्थन की आवश्यकता होती है",
+          "वे पैरेंट प्रोसेस के डेटा सेक्शन को साझा नहीं कर सकते",
+          "यूजर-लेवल थ्रेड्स के बीच कॉन्टेक्स्ट स्विचिंग कर्नेल-लेवल थ्रेड्स की तुलना में धीमी होती है",
+          "यदि एक यूजर-लेवल थ्रेड ब्लॉकिंग सिस्टम कॉल करता है, तो पूरा प्रोसेस और उसके सभी थ्रेड्स ब्लॉक हो जाते हैं"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Because the kernel is unaware of user-level threads, if one thread blocks (e.g., during I/O), the kernel blocks the entire process, preventing other threads in that process from running.",
+        "hi": "चूंकि कर्नेल यूजर-लेवल थ्रेड्स से अनजान होता है, यदि एक थ्रेड ब्लॉक हो जाता है (जैसे, I/O के दौरान), तो कर्नेल पूरे प्रोसेस को ब्लॉक कर देता है, जिससे उस प्रोसेस के अन्य थ्रेड चलने से रुक जाते हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which mode transition occurs when a user application executes a system call?",
+        "hi": "जब कोई यूज़र एप्लिकेशन सिस्टम कॉल निष्पादित करता है तो कौन सा मोड संक्रमण (transition) होता है?"
+      },
+      "options": {
+        "en": [
+          "Hardware Mode to Software Mode",
+          "User Mode to Kernel Mode",
+          "Kernel Mode to User Mode",
+          "Ready State to Running State"
+        ],
+        "hi": [
+          "हार्डवेयर मोड से सॉफ्टवेयर मोड (Hardware Mode to Software Mode)",
+          "यूज़र मोड से कर्नेल मोड (User Mode to Kernel Mode)",
+          "कर्नेल मोड से यूज़र मोड (Kernel Mode to User Mode)",
+          "रेडी स्टेट से रनिंग स्टेट (Ready State to Running State)"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "A system call acts as a gateway for user programs to request services from the OS kernel. This triggers a transition from the lower privilege User Mode to the higher privilege Kernel Mode.",
+        "hi": "एक सिस्टम कॉल यूज़र प्रोग्रामों के लिए OS कर्नेल से सेवाओं का अनुरोध करने के लिए एक प्रवेश द्वार के रूप में कार्य करता है। यह कम विशेषाधिकार वाले यूज़र मोड से उच्च विशेषाधिकार वाले कर्नेल मोड में संक्रमण को ट्रिगर करता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which requirements of the Critical Section problem does Peterson's Algorithm satisfy?",
+        "hi": "पीटरसन का एल्गोरिदम क्रिटिकल सेक्शन समस्या की किन आवश्यकताओं को पूरा करता है?"
+      },
+      "options": {
+        "en": [
+          "Progress and Bounded Waiting only",
+          "Mutual Exclusion and Bounded Waiting only",
+          "Mutual Exclusion, Progress, and Bounded Waiting",
+          "Mutual Exclusion and Progress only"
+        ],
+        "hi": [
+          "केवल प्रोग्रेस और बाउंडेड वेटिंग",
+          "केवल म्यूचुअल एक्सक्लूजन और बाउंडेड वेटिंग",
+          "म्यूचुअल एक्सक्लूजन (Mutual Exclusion), प्रोग्रेस (Progress), और बाउंडेड वेटिंग (Bounded Waiting)",
+          "केवल म्यूचुअल एक्सक्लूजन और प्रोग्रेस"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Peterson's Algorithm is a classic software-based solution to the critical section problem for two processes. It successfully satisfies all three requirements: Mutual Exclusion, Progress, and Bounded Waiting.",
+        "hi": "पीटरसन का एल्गोरिदम दो प्रोसेस के लिए क्रिटिकल सेक्शन समस्या का एक क्लासिक सॉफ्टवेयर-आधारित समाधान है। यह तीनों आवश्यकताओं को सफलतापूर्वक पूरा करता है: म्यूचुअल एक्सक्लूजन, प्रोग्रेस और बाउंडेड वेटिंग।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "What are the primary goals of an Operating System?",
+        "hi": "ऑपरेटिंग सिस्टम के प्राथमिक लक्ष्य क्या हैं?"
+      },
+      "options": {
+        "en": [
+          "Ensure the computer never requires secondary storage",
+          "Provide direct hardware access to user programs without any interface",
+          "Maximize throughput and user-friendliness",
+          "Minimize hardware utilization and run applications in isolation"
+        ],
+        "hi": [
+          "यह सुनिश्चित करना कि कंप्यूटर को कभी सेकेंडरी स्टोरेज की आवश्यकता न हो",
+          "बिना किसी इंटरफ़ेस के यूज़र प्रोग्रामों को सीधे हार्डवेयर एक्सेस प्रदान करना",
+          "थ्रूपुट (throughput) और यूज़र-फ्रेंडलीनेस को अधिकतम करना",
+          "हार्डवेयर उपयोग को न्यूनतम करना और एप्लिकेशनों को अलग-अलग चलाना"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The main goals of an operating system are to make the computer system convenient/user-friendly to use and to manage the computer hardware in an efficient manner (maximizing throughput).",
+        "hi": "ऑपरेटिंग सिस्टम के मुख्य लक्ष्य कंप्यूटर सिस्टम को उपयोग करने में सुविधाजनक/यूज़र-फ्रेंडली बनाना और कंप्यूटर हार्डवेयर को कुशल तरीके से प्रबंधित करना (थ्रूपुट को अधिकतम करना) है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Why is Segmentation considered a 'User View' of memory management?",
+        "hi": "सेगमेंटेशन (Segmentation) को मेमोरी प्रबंधन का 'यूज़र व्यू' (User View) क्यों माना जाता है?"
+      },
+      "options": {
+        "en": [
+          "It completely hides the existence of secondary storage from the user",
+          "It maps memory according to logical units of a program (e.g., main, functions, stack, variables) which are natural to a programmer",
+          "It splits the operating system code into equal parts for ease of use",
+          "It allows users to manually specify physical RAM addresses for execution"
+        ],
+        "hi": [
+          "यह उपयोगकर्ता से सेकेंडरी स्टोरेज के अस्तित्व को पूरी तरह से छुपाता है",
+          "यह एक प्रोग्राम की तार्किक इकाइयों (जैसे, मुख्य, फ़ंक्शन, स्टैक, वेरिएबल) के अनुसार मेमोरी को मैप करता है जो एक प्रोग्रामर के लिए स्वाभाविक हैं",
+          "यह उपयोग में आसानी के लिए ऑपरेटिंग सिस्टम कोड को समान भागों में विभाजित करता है",
+          "यह उपयोगकर्ताओं को निष्पादन के लिए भौतिक रैम पतों को मैन्युअल रूप से निर्दिष्ट करने की अनुमति देता है"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Segmentation supports a user/programmer's view of memory. Instead of viewing memory as a linear array of bytes, a program is seen as a collection of variable-sized segments (code, stack, data, etc.).",
+        "hi": "सेगमेंटेशन मेमोरी के यूज़र/प्रोग्रामर दृष्टिकोण का समर्थन करता है। मेमोरी को बाइट्स के रैखिक सरणी के रूप में देखने के बजाय, एक प्रोग्राम को विभिन्न आकारों के सेगमेंट (कोड, स्टैक, डेटा, आदि) के संग्रह के रूप में देखा जाता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following is NOT one of the four necessary (Coffman) conditions for a deadlock to occur?",
+        "hi": "निम्नलिखित में से कौन सा डेडलॉक होने के लिए आवश्यक चार (कॉफमैन) शर्तों में से एक नहीं है?"
+      },
+      "options": {
+        "en": [
+          "Preemption",
+          "Hold and Wait",
+          "Mutual Exclusion",
+          "Circular Wait"
+        ],
+        "hi": [
+          "प्रिेम्पशन (Preemption - जबरन रोकना)",
+          "होल्ड एंड वेट (Hold and Wait - रोकना और प्रतीक्षा करना)",
+          "म्यूचुअल एक्सक्लूजन (Mutual Exclusion - परस्पर अपवर्जन)",
+          "सर्कुलर वेट (Circular Wait - वृत्ताकार प्रतीक्षा)"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The four Coffman conditions are Mutual Exclusion, Hold and Wait, No Preemption, and Circular Wait. 'Preemption' actually prevents deadlocks, whereas 'No Preemption' is the necessary condition for a deadlock.",
+        "hi": "चार कॉफमैन शर्तें हैं: म्यूचुअल एक्सक्लूजन, होल्ड एंड वेट, नो प्रिेम्पशन (No Preemption), और सर्कुलर वेट। 'प्रिेम्पशन' वास्तव में डेडलॉक को रोकता है, जबकि 'नो प्रिेम्पशन' डेडलॉक के लिए आवश्यक शर्त है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "In CPU scheduling, what is the definition of 'Throughput'?",
+        "hi": "CPU शेड्यूलिंग में, 'थ्रूपुट' (Throughput) की परिभाषा क्या है?"
+      },
+      "options": {
+        "en": [
+          "The number of completed processes per unit of time",
+          "The time a process spends waiting in the ready queue",
+          "The total time taken from process submission to completion",
+          "The interval from submission of a request to the first response"
+        ],
+        "hi": [
+          "प्रति इकाई समय में पूरे होने वाले प्रोसेस की संख्या",
+          "एक प्रोसेस द्वारा रेडी क्यू में प्रतीक्षा करने में बिताया गया समय",
+          "प्रोसेस सबमिशन से पूरा होने तक का कुल समय",
+          "अनुरोध प्रस्तुत करने से लेकर पहली प्रतिक्रिया तक का अंतराल"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Throughput is a performance metric defined as the number of processes that a system can execute and complete per unit of time (e.g., processes per second).",
+        "hi": "थ्रूपुट एक प्रदर्शन मीट्रिक है जिसे प्रति इकाई समय में सिस्टम द्वारा निष्पादित और पूर्ण किए जा सकने वाले प्रोसेस की संख्या (जैसे, प्रति सेकंड प्रोसेस) के रूप में परिभाषित किया जाता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "What is the key difference between Deadlock and Starvation?",
+        "hi": "डेडलॉक (Deadlock) और स्टारवेशन (Starvation) के बीच मुख्य अंतर क्या है?"
+      },
+      "options": {
+        "en": [
+          "Starvation is solved by the Ostrich algorithm, whereas deadlock is solved by aging",
+          "Deadlock is a software bug, while starvation is always a hardware defect",
+          "In deadlock, the entire system or set of processes is stuck and cannot progress; in starvation, a process waits indefinitely while other processes continue to execute",
+          "There is no difference; both represent the exact same state"
+        ],
+        "hi": [
+          "स्टारवेशन को ऑस्ट्रिच एल्गोरिदम द्वारा हल किया जाता है, जबकि डेडलॉक को एजिंग द्वारा हल किया जाता है",
+          "डेडलॉक एक सॉफ्टवेयर बग है, जबकि स्टारवेशन हमेशा एक हार्डवेयर दोष है",
+          "डेडलॉक में, पूरा सिस्टम या प्रोसेस का समूह अटक जाता है और आगे नहीं बढ़ सकता; स्टारवेशन में, एक प्रोसेस अनिश्चित काल तक प्रतीक्षा करता है जबकि अन्य प्रोसेस निष्पादित होते रहते हैं",
+          "कोई अंतर नहीं है; दोनों बिल्कुल एक ही स्थिति का प्रतिनिधित्व करते हैं"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Deadlock is a circular waiting state where no involved process can make progress. Starvation is a resource allocation issue where a low-priority process waits indefinitely because other high-priority processes keep getting the resource, though the system as a whole is progressing.",
+        "hi": "डेडलॉक एक वृत्ताकार प्रतीक्षा स्थिति है जहां कोई भी शामिल प्रोसेस आगे नहीं बढ़ सकता है। स्टारवेशन एक संसाधन आवंटन समस्या है जहां एक कम प्राथमिकता वाला प्रोसेस अनिश्चित काल तक प्रतीक्षा करता है क्योंकि अन्य उच्च प्राथमिकता वाले प्रोसेस संसाधन प्राप्त करते रहते हैं, हालांकि समग्र रूप से सिस्टम आगे बढ़ रहा होता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "If a program executes the fork() system call 3 times sequentially, how many total processes (including the original parent process) will exist?",
+        "hi": "यदि कोई प्रोग्राम क्रमिक रूप से 3 बार fork() सिस्टम कॉल निष्पादित करता है, तो कुल कितने प्रोसेस (मूल पैरेंट प्रोसेस सहित) अस्तित्व में होंगे?"
+      },
+      "options": {
+        "en": [
+          "8",
+          "9",
+          "6",
+          "3"
+        ],
+        "hi": [
+          "8",
+          "9",
+          "6",
+          "3"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The formula for the total number of processes created by 'n' sequential fork() calls is 2^n. For n = 3, 2^3 = 8 processes are created in total.",
+        "hi": "'n' क्रमिक fork() कॉल द्वारा बनाए गए कुल प्रोसेस की संख्या का सूत्र 2^n है। n = 3 के लिए, कुल 2^3 = 8 प्रोसेस बनते हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "What is the main objective of Virtual Memory?",
+        "hi": "वर्चुअल मेमोरी का मुख्य उद्देश्य क्या है?"
+      },
+      "options": {
+        "en": [
+          "To allow execution of processes that are larger than the physical main memory",
+          "To increase the access speed of the CPU registers",
+          "To encrypt all process data automatically",
+          "To completely replace physical RAM with secondary storage devices"
+        ],
+        "hi": [
+          "उन प्रोसेस के निष्पादन की अनुमति देना जो भौतिक मुख्य मेमोरी से बड़े हैं",
+          "CPU रजिस्टरों की एक्सेस स्पीड बढ़ाना",
+          "सभी प्रोसेस डेटा को स्वचालित रूप से एन्क्रिप्ट करना",
+          "भौतिक रैम को पूरी तरह से सेकेंडरी स्टोरेज डिवाइस से बदलना"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Virtual memory separates logical memory from physical memory, allowing programs to execute even if only a portion of them is loaded into RAM. This gives the illusion of a much larger main memory.",
+        "hi": "वर्चुअल मेमोरी तार्किक मेमोरी को भौतिक मेमोरी से अलग करती है, जिससे प्रोग्राम को निष्पादित करने की अनुमति मिलती है भले ही उनका केवल एक हिस्सा रैम में लोड हो। यह बहुत बड़ी मुख्य मेमोरी का भ्रम देता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "What is the primary benefit of 'journaling' in the NTFS file system?",
+        "hi": "NTFS फ़ाइल सिस्टम में 'जर्नलिंग' (journaling) का प्राथमिक लाभ क्या है?"
+      },
+      "options": {
+        "en": [
+          "It prevents file corruption by logging metadata changes before applying them, allowing quick recovery after crashes",
+          "It automatically defragments the hard disk in real-time",
+          "It compresses all user files to save storage space",
+          "It allows dual-booting with non-Windows systems without partitioning"
+        ],
+        "hi": [
+          "यह परिवर्तनों को लागू करने से पहले मेटाडेटा परिवर्तनों को लॉग करके फ़ाइल भ्रष्टाचार को रोकता है, जिससे क्रैश के बाद त्वरित रिकवरी की अनुमति मिलती है",
+          "यह वास्तविक समय में हार्ड डिस्क को स्वचालित रूप से डीफ़्रेग्मेंट करता है",
+          "यह स्टोरेज स्पेस बचाने के लिए सभी यूज़र फाइलों को कंप्रेस करता है",
+          "यह बिना पार्टिशन किए गैर-विंडोज सिस्टम के साथ डुअल-बूटिंग की अनुमति देता है"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Journaling records transactions in a log file (journal) before writing them to the main disk. If a crash or power failure occurs, the OS uses this journal to restore consistency and prevent data corruption.",
+        "hi": "जर्नलिंग लेनदेन को मुख्य डिस्क पर लिखने से पहले एक लॉग फ़ाइल (जर्नल) में रिकॉर्ड करता है। यदि कोई क्रैश या बिजली की विफलता होती है, तो OS स्थिरता बहाल करने और डेटा भ्रष्टाचार को रोकने के लिए इस जर्नल का उपयोग करता है।"
+      },
+      "pyq": "BPSC TRE3 2024"
+    },
+    {
+      "question": {
+        "en": "Which computing device, invented in 1642, could perform addition and subtraction directly, and multiplication and division through repeated operations?",
+        "hi": "1642 में आविष्कृत कौन सा कंप्यूटिंग उपकरण सीधे जोड़ और घटाव कर सकता था, और बार-बार जोड़कर और घटाकर गुणा और भाग कर सकता था?"
+      },
+      "options": {
+        "en": [
+          "Pascaline",
+          "Turing Machine",
+          "Analytic Engine",
+          "Abacus"
+        ],
+        "hi": [
+          "पास्कलाइन (Pascaline)",
+          "ट्यूरिंग मशीन (Turing Machine)",
+          "एनालिटिक इंजन (Analytic Engine)",
+          "एबाकस (Abacus)"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The Pascaline, invented by Blaise Pascal in 1642, was a mechanical calculator capable of doing addition and subtraction directly, and multiplication and division through repeated processes.",
+        "hi": "1642 में ब्लेज़ पास्कल द्वारा आविष्कृत पास्कलाइन एक मैकेनिकल कैलकुलेटर था जो सीधे जोड़ और घटाव करने में सक्षम था, और बार-बार की प्रक्रियाओं के माध्यम से गुणा और भाग करता था।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "What is the 'Ostrich Algorithm' approach to handling deadlocks?",
+        "hi": "डेडलॉक से निपटने के लिए 'ऑस्ट्रिच एल्गोरिदम' (Ostrich Algorithm) दृष्टिकोण क्या है?"
+      },
+      "options": {
+        "en": [
+          "Detect and recover from deadlock by terminating processes",
+          "Avoid deadlock by dynamically checking resource safety",
+          "Ignore the deadlock problem entirely, assuming it happens very rarely",
+          "Prevent deadlock by breaking the circular wait condition"
+        ],
+        "hi": [
+          "प्रोसेस को समाप्त करके डेडलॉक का पता लगाना और उससे उबरना",
+          "संसाधन सुरक्षा की गतिशील रूप से जांच करके डेडलॉक से बचना",
+          "डेडलॉक की समस्या को पूरी तरह से अनदेखा करना, यह मानकर कि यह बहुत कम होता है",
+          "सर्कुलर वेट स्थिति को तोड़कर डेडलॉक को रोकना"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Ostrich Algorithm is a strategy of ignoring the deadlock problem, named after the myth of an ostrich sticking its head in the sand. It is used when deadlocks are extremely rare and the cost of prevention/detection is too high.",
+        "hi": "ऑस्ट्रिच एल्गोरिदम डेडलॉक की समस्या को अनदेखा करने की एक रणनीति है, जिसका नाम रेत में सिर छिपाने वाले शुतुरमुर्ग के मिथक पर रखा गया है। इसका उपयोग तब किया जाता है जब डेडलॉक अत्यंत दुर्लभ होते हैं और रोकथाम/पहचान की लागत बहुत अधिक होती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "What occurs during a Translation Lookaside Buffer (TLB) hit?",
+        "hi": "ट्रांसलेशन लुकासाइड बफर (TLB) हिट के दौरान क्या होता है?"
+      },
+      "options": {
+        "en": [
+          "The frame number is immediately retrieved from the fast associative cache without accessing the Page Table in RAM",
+          "The CPU must halt execution to perform a slow lookup in secondary storage",
+          "The page table is completely rewritten to make room for new addresses",
+          "A page fault interrupt is generated because the page is missing"
+        ],
+        "hi": [
+          "रैम में पेज टेबल तक पहुंचे बिना फास्ट एसोसिएटिव कैश से फ्रेम नंबर तुरंत प्राप्त किया जाता है",
+          "सेकेंडरी स्टोरेज में धीमी खोज करने के लिए CPU को निष्पादन रोकना होगा",
+          "नए पतों के लिए जगह बनाने के लिए पेज टेबल को पूरी तरह से फिर से लिखा जाता है",
+          "एक पेज फॉल्ट इंटरप्ट उत्पन्न होता है क्योंकि पेज गायब है"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "A TLB hit means the logical page-to-physical frame mapping is found in the high-speed hardware cache (TLB), allowing immediate address translation and saving a memory access cycle.",
+        "hi": "TLB हिट का मतलब है कि लॉजिकल पेज-टू-फिजिकल फ्रेम मैपिंग हाई-स्पीड हार्डवेयर कैश (TLB) में पाई जाती है, जिससे तुरंत पता अनुवाद की अनुमति मिलती है और मेमोरी एक्सेस चक्र की बचत होती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "What is an interrupt that cannot be disabled or ignored by the CPU called?",
+        "hi": "वह इंटरप्ट जिसे CPU द्वारा अक्षम (disable) या अनदेखा नहीं किया जा सकता, क्या कहलाता है?"
+      },
+      "options": {
+        "en": [
+          "Maskable Interrupt",
+          "Software Interrupt",
+          "Non-Maskable Interrupt (NMI)",
+          "Timer Interrupt"
+        ],
+        "hi": [
+          "मास्केबल इंटरप्ट (Maskable Interrupt)",
+          "सॉफ्टवेयर इंटरप्ट (Software Interrupt)",
+          "नॉन-मास्केबल इंटरप्ट / NMI (Non-Maskable Interrupt)",
+          "टाइमर इंटरप्ट (Timer Interrupt)"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "A Non-Maskable Interrupt (NMI) is a hardware interrupt that standard interrupt-masking techniques cannot ignore. It is typically reserved for critical system events like hardware failures.",
+        "hi": "नॉन-मास्केबल इंटरप्ट (NMI) एक हार्डवेयर इंटरप्ट है जिसे मानक इंटरप्ट-मास्किंग तकनीकों द्वारा अनदेखा नहीं किया जा सकता है। यह आमतौर पर हार्डवेयर विफलताओं जैसे महत्वपूर्ण सिस्टम इवेंट्स के लिए आरक्षित होता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which scheduling algorithm can dynamically change a process's priority over time to prevent starvation?",
+        "hi": "कौन सा शेड्यूलिंग एल्गोरिदम स्टारवेशन को रोकने के लिए समय के साथ प्रोसेस की प्राथमिकता को गतिशील रूप से बदल सकता है?"
+      },
+      "options": {
+        "en": [
+          "Multilevel Feedback Queue (MLFQ)",
+          "Shortest Job First (SJF)",
+          "First Come First Served (FCFS)",
+          "Fixed Priority Non-Preemptive"
+        ],
+        "hi": [
+          "मल्टीलेवल फीडबैक क्यू (MLFQ)",
+          "शॉर्टेस्ट जॉब फर्स्ट (SJF)",
+          "फर्स्ट कम फर्स्ट सर्व्ड (FCFS)",
+          "फिक्स्ड प्रायोरिटी नॉन-प्रिेम्प्टिव"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Unlike standard Multilevel Queue scheduling, MLFQ allows processes to move between queues based on their execution history and waiting time, dynamically adjusting priorities to prevent starvation.",
+        "hi": "मानक मल्टीलेवल क्यू शेड्यूलिंग के विपरीत, MLFQ प्रोसेस को उनके निष्पादन इतिहास और प्रतीक्षा समय के आधार पर कतारों के बीच स्थानांतरित होने की अनुमति देता है, जिससे स्टारवेशन को रोकने के लिए प्राथमिकताओं को गतिशील रूप से समायोजित किया जाता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "What is the correct sequence of steps when a page fault occurs?",
+        "hi": "पेज फ़ॉल्ट होने पर चरणों का सही क्रम क्या है?"
+      },
+      "options": {
+        "en": [
+          "Restart instruction -> Trap to OS -> Update Page Table -> Swap page",
+          "Trap to OS -> Restart instruction -> Swap page -> Update Page Table",
+          "Trap to OS -> Locate page on disk -> Swap page into free frame -> Update Page Table -> Restart instruction",
+          "Locate page on disk -> Swap page -> Restart instruction -> Trap to OS"
+        ],
+        "hi": [
+          "निर्देश को पुनरारंभ करना -> OS को ट्रैप -> पेज टेबल अपडेट करना -> पेज स्वैप करना",
+          "OS को ट्रैप -> निर्देश को पुनरारंभ करना -> पेज स्वैप करना -> पेज टेबल अपडेट करना",
+          "OS को ट्रैप -> डिस्क पर पेज का पता लगाना -> फ्री फ्रेम में पेज स्वैप करना -> पेज टेबल अपडेट करना -> निर्देश को पुनरारंभ करना",
+          "डिस्क पर पेज का पता लगाना -> पेज स्वैप करना -> निर्देश को पुनरारंभ करना -> OS को ट्रैप"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "When a page fault occurs, the hardware traps to the OS. The OS finds the page on disk, swaps it into a free physical frame (possibly evicting another), updates the page table, and restarts the instruction that caused the fault.",
+        "hi": "जब पेज फॉल्ट होता है, तो हार्डवेयर OS को ट्रैप करता है। OS डिस्क पर पेज ढूंढता है, उसे एक खाली भौतिक फ्रेम में स्वैप करता है (संभवतः दूसरे को बाहर निकालता है), पेज टेबल को अपडेट करता है, और उस निर्देश को पुनरारंभ करता है जिसके कारण फॉल्ट हुआ था।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which computer evolution milestone in 1937 was capable of solving any problem by executing programs stored on punched cards?",
+        "hi": "1937 में कंप्यूटर विकास का कौन सा मील का पत्थर पंच्ड कार्डों पर संग्रहीत कार्यक्रमों को निष्पादित करके किसी भी समस्या को हल करने में सक्षम था?"
+      },
+      "options": {
+        "en": [
+          "Tabulating Machine",
+          "EDVAC",
+          "Turing Machine",
+          "ENIAC"
+        ],
+        "hi": [
+          "टेबुलेटिंग मशीन (Tabulating Machine)",
+          "EDVAC",
+          "ट्यूरिंग मशीन (Turing Machine)",
+          "ENIAC"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Turing Machine, proposed by Alan Turing in 1937, was a mathematical model of computation capable of solving any problem by executing instructions stored on punched cards.",
+        "hi": "1937 में एलन ट्यूरिंग द्वारा प्रस्तावित ट्यूरिंग मशीन कंप्यूटेशन का एक गणितीय मॉडल था जो पंच्ड कार्डों पर संग्रहीत निर्देशों को निष्पादित करके किसी भी समस्या को हल करने में सक्षम था।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which memory management schemes suffer from internal and external fragmentation respectively?",
+        "hi": "कौन सी मेमोरी प्रबंधन योजनाएं क्रमशः आंतरिक (internal) और बाहरी (external) फ़्रेग्मेंटेशन से पीड़ित होती हैं?"
+      },
+      "options": {
+        "en": [
+          "Paging (Internal) and Segmentation (External)",
+          "Segmentation (Internal) and Paging (External)",
+          "Fixed Partitioning (External) and Dynamic Partitioning (Internal)",
+          "Contiguous Allocation (Internal) and Non-Contiguous Allocation (External)"
+        ],
+        "hi": [
+          "पेजिंग (आंतरिक) और सेगमेंटेशन (बाहरी)",
+          "सेगमेंटेशन (आंतरिक) और पेजिंग (बाहरी)",
+          "फिक्स्ड पार्टिशनिंग (बाहरी) और डायनेमिक पार्टिशनिंग (आंतरिक)",
+          "सन्निहित आवंटन (आंतरिक) और गैर-सन्निहित आवंटन (बाहरी)"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Paging uses fixed-size blocks, which can lead to unused space in the last allocated frame (Internal Fragmentation). Segmentation uses variable-size blocks, which can leave scattered, non-contiguous free spaces (External Fragmentation).",
+        "hi": "पेजिंग निश्चित आकार के ब्लॉकों का उपयोग करता है, जिससे अंतिम आवंटित फ्रेम में अप्रयुक्त स्थान हो सकता है (आंतरिक विखंडन)। सेगमेंटेशन परिवर्तनीय आकार के ब्लॉकों का उपयोग करता है, जो बिखरे हुए, गैर-सन्निहित मुक्त स्थान छोड़ सकता है (बाहरी विखंडन)।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "What mechanism does the Multilevel Feedback Queue (MLFQ) use to prevent starvation of low-priority processes?",
+        "hi": "मल्टीलेवल फीडबैक क्यू (MLFQ) कम प्राथमिकता वाले प्रोसेस के स्टारवेशन (भुखमरी) को रोकने के लिए किस तंत्र का उपयोग करता है?"
+      },
+      "options": {
+        "en": [
+          "Preempting high-priority processes randomly",
+          "First Come First Served execution in a single queue",
+          "Aging (gradually increasing priority of processes waiting for a long time)",
+          "Fixed time-slice allocation to all queues equally"
+        ],
+        "hi": [
+          "उच्च प्राथमिकता वाले प्रोसेस को बेतरतीब ढंग से रोकना (preempt)",
+          "एक ही कतार में फर्स्ट कम फर्स्ट सर्व्ड निष्पादन",
+          "एजिंग / उम्र बढ़ना (लंबे समय से प्रतीक्षा कर रहे प्रोसेस की प्राथमिकता को धीरे-धीरे बढ़ाना)",
+          "सभी कतारों को समान रूप से निश्चित समय-स्लाइस आवंटन"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "MLFQ prevents starvation by allowing processes to move between queues. 'Aging' is used to gradually promote processes that have waited too long in lower-priority queues to higher-priority queues.",
+        "hi": "MLFQ प्रोसेस को कतारों के बीच स्थानांतरित होने की अनुमति देकर स्टारवेशन को रोकता है। कम प्राथमिकता वाली कतारों में बहुत लंबे समय तक प्रतीक्षा करने वाले प्रोसेस को धीरे-धीरे उच्च प्राथमिकता वाली कतारों में बढ़ावा देने के लिए 'एजिंग' का उपयोग किया जाता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "What is a binary semaphore with busy waiting commonly referred to as?",
+        "hi": "बिजी वेटिंग (busy waiting) वाले बाइनरी सेमाफोर को आमतौर पर क्या कहा जाता है?"
+      },
+      "options": {
+        "en": [
+          "Monitor",
+          "Counting Semaphore",
+          "Spinlock",
+          "Mutex"
+        ],
+        "hi": [
+          "मॉनिटर (Monitor)",
+          "काउंटिंग सेमाफोर (Counting Semaphore)",
+          "स्पिनलॉक (Spinlock)",
+          "म्यूटेक्स (Mutex)"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "A binary semaphore that uses busy waiting (where a process repeatedly checks a condition in a loop) is known as a Spinlock.",
+        "hi": "एक बाइनरी सेमाफोर जो बिजी वेटिंग का उपयोग करता है (जहां एक प्रोसेस लूप में बार-बार स्थिति की जांच करता है) उसे स्पिनलॉक के रूप में जाना जाता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "What is the physical organization of a hard disk platter?",
+        "hi": "हार्ड डिस्क प्लैटर का भौतिक संगठन क्या होता है?"
+      },
+      "options": {
+        "en": [
+          "Divided into fixed-size frames and virtual pages",
+          "Divided into concentric circles called Tracks, which are further split into Sectors",
+          "Organized as a single linear tape of magnetic blocks",
+          "Divided into dynamic segments and base tables"
+        ],
+        "hi": [
+          "निश्चित आकार के फ्रेम और वर्चुअल पेजों में विभाजित",
+          "संकेंद्रित वृत्तों (concentric circles) में विभाजित जिन्हें ट्रैक कहा जाता है, जो आगे सेक्टरों में विभाजित होते हैं",
+          "चुंबकीय ब्लॉकों के एकल रैखिक टेप के रूप में व्यवस्थित",
+          "डायनेमिक सेगमेंट और बेस टेबल में विभाजित"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The surface of a hard disk platter is logically divided into concentric circles called tracks, and each track is further divided into smaller arcs called sectors, which are the basic units of disk storage.",
+        "hi": "हार्ड डिस्क प्लैटर की सतह तार्किक रूप से संकेंद्रित वृत्तों में विभाजित होती है जिन्हें ट्रैक कहा जाता है, और प्रत्येक ट्रैक को छोटे आर्क्स में विभाजित किया जाता है जिन्हें सेक्टर कहा जाता है, जो डिस्क स्टोरेज की बुनियादी इकाइयाँ हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "If there are P processes and each process requires n resources, what is the minimum number of resources R required to ensure that the system is deadlock-free?",
+        "hi": "यदि P प्रोसेस हैं और प्रत्येक प्रोसेस को n संसाधनों की आवश्यकता है, तो यह सुनिश्चित करने के लिए आवश्यक न्यूनतम संसाधनों R की संख्या क्या है कि सिस्टम डेडलॉक-मुक्त हो?"
+      },
+      "options": {
+        "en": [
+          "R >= P * n",
+          "R >= P(n + 1) - 1",
+          "R >= P(n - 1) + 1",
+          "R >= P + n"
+        ],
+        "hi": [
+          "R >= P * n",
+          "R >= P(n + 1) - 1",
+          "R >= P(n - 1) + 1",
+          "R >= P + n"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "To guarantee no deadlock, the worst-case allocation where every process holds (n-1) resources and waits for 1 more must be exceeded by at least 1 resource. Thus, R >= P(n-1) + 1.",
+        "hi": "डेडलॉक न होने की गारंटी के लिए, सबसे खराब स्थिति वाले आवंटन जहां प्रत्येक प्रोसेस (n-1) संसाधन रखता है और 1 और के लिए प्रतीक्षा करता है, से कम से कम 1 संसाधन अधिक होना चाहिए। इस प्रकार, R >= P(n-1) + 1।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "What is the purpose of 'Compaction' in Dynamic Partitioning memory allocation?",
+        "hi": "डायनेमिक पार्टिशनिंग मेमोरी आवंटन में 'कॉम्पैक्शन' (Compaction) का उद्देश्य क्या है?"
+      },
+      "options": {
+        "en": [
+          "To combine all small scattered free memory holes into one large contiguous free block",
+          "To reduce internal fragmentation in paging",
+          "To swap out inactive processes to make room in the ready queue",
+          "To compress files on the secondary storage disk"
+        ],
+        "hi": [
+          "सभी छोटे बिखरे हुए मुक्त मेमोरी होल्स को एक बड़े सन्निहित मुक्त ब्लॉक में संयोजित करना",
+          "पेजिंग में आंतरिक विखंडन को कम करना",
+          "रेडी क्यू में जगह बनाने के लिए निष्क्रिय प्रोसेस को स्वैप करना",
+          "सेकेंडरी स्टोरेज डिस्क पर फाइलों को कंप्रेस करना"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Compaction is a solution to external fragmentation. The OS shifts all allocated memory blocks to one side of RAM, merging all small free spaces (holes) into one large contiguous free block.",
+        "hi": "कॉम्पैक्शन बाहरी विखंडन का एक समाधान है। OS सभी आवंटित मेमोरी ब्लॉकों को रैम के एक तरफ स्थानांतरित करता है, जिससे सभी छोटे खाली स्थानों (होल्स) को एक बड़े सन्निहित मुक्त ब्लॉक में मिला दिया जाता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "What characterizes a Hard Real-Time Operating System (Hard RTOS)?",
+        "hi": "हार्ड रियल-टाइम ऑपरेटिंग सिस्टम (Hard RTOS) की क्या विशेषता है?"
+      },
+      "options": {
+        "en": [
+          "Strict adherence to deadlines, where a delay leads to catastrophic system failure",
+          "Lack of support for any hardware interrupts",
+          "Flexible deadlines where slight delays are acceptable without system failure",
+          "Optimized solely for high graphics rendering in video games"
+        ],
+        "hi": [
+          "समय सीमा (deadlines) का कड़ाई से पालन, जहां देरी से विनाशकारी सिस्टम विफलता होती है",
+          "किसी भी हार्डवेयर इंटरप्ट के लिए समर्थन की कमी",
+          "लचीली समय सीमा जहां सिस्टम विफलता के बिना मामूली देरी स्वीकार्य है",
+          "विशेष रूप से वीडियो गेम में उच्च ग्राफिक्स रेंडरिंग के लिए अनुकूलित"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "A Hard RTOS guarantees that critical tasks complete on time. Missing a deadline is considered a total system failure (e.g., in medical devices, military systems, or flight control).",
+        "hi": "एक हार्ड RTOS गारंटी देता है कि महत्वपूर्ण कार्य समय पर पूरे हों। समय सीमा चूकने को पूर्ण सिस्टम विफलता माना जाता है (जैसे, चिकित्सा उपकरणों, सैन्य प्रणालियों या उड़ान नियंत्रण में)।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "In a paging system, which of the following statements is true regarding the page offset?",
+        "hi": "पेजिंग सिस्टम में, पेज ऑफ़सेट (page offset) के संबंध में निम्नलिखित में से कौन सा कथन सत्य है?"
+      },
+      "options": {
+        "en": [
+          "The offset remains identical in both the logical and physical addresses",
+          "The offset size depends on the number of pages in the process",
+          "The offset is translated into a frame number by the MMU",
+          "The offset is stored directly inside the Page Table"
+        ],
+        "hi": [
+          "तार्किक और भौतिक दोनों पतों (addresses) में ऑफ़सेट समान रहता है",
+          "ऑफ़सेट का आकार प्रोसेस में पेजों की संख्या पर निर्भर करता है",
+          "ऑफ़सेट को MMU द्वारा फ्रेम नंबर में अनुवादित किया जाता है",
+          "ऑफ़सेट को सीधे पेज टेबल के अंदर संग्रहीत किया जाता है"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The page offset specifies the exact byte location within a page/frame. Since pages and frames are of identical size, the offset remains unchanged during logical-to-physical address translation.",
+        "hi": "पेज ऑफ़सेट पेज/फ्रेम के भीतर सटीक बाइट स्थान को निर्दिष्ट करता है। चूंकि पेज और फ्रेम समान आकार के होते हैं, इसलिए तार्किक-से-भौतिक पता अनुवाद के दौरान ऑफ़सेट अपरिवर्तित रहता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "What is 'Thrashing' in the context of virtual memory?",
+        "hi": "वर्चुअल मेमोरी के संदर्भ में 'थ्रैशिंग' (Thrashing) क्या है?"
+      },
+      "options": {
+        "en": [
+          "The process of cleaning up deleted files from secondary storage",
+          "A physical damage to the hard drive sectors due to high speed rotation",
+          "A condition where a process spends more time paging (swapping pages in and out) than executing instructions",
+          "A security attack where multiple processes try to access the same page table"
+        ],
+        "hi": [
+          "सेकेंडरी स्टोरेज से हटाई गई फ़ाइलों को साफ करने की प्रक्रिया",
+          "उच्च गति रोटेशन के कारण हार्ड ड्राइव सेक्टरों को होने वाली भौतिक क्षति",
+          "एक ऐसी स्थिति जिसमें कोई प्रोसेस निर्देशों को निष्पादित करने की तुलना में पेजिंग (पेजों को अंदर और बाहर स्वैप करने) में अधिक समय व्यतीत करता है",
+          "एक सुरक्षा हमला जहां कई प्रोसेस एक ही पेज टेबल तक पहुंचने का प्रयास करते हैं"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Thrashing occurs when the degree of multiprogramming is too high, and the system does not have enough physical memory frames, causing continuous page faults and constant swapping, which drops CPU utilization to near zero.",
+        "hi": "थ्रैशिंग तब होती है जब मल्टीप्रोग्रामिंग की डिग्री बहुत अधिक होती है, और सिस्टम के पास पर्याप्त भौतिक मेमोरी फ्रेम नहीं होते हैं, जिससे लगातार पेज फॉल्ट और निरंतर स्वैपिंग होती है, जिससे CPU उपयोगिता लगभग शून्य हो जाती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Why does a process transition to the 'Suspend Wait' state instead of remaining in the 'Waiting/Blocked' state?",
+        "hi": "कोई प्रोसेस 'वेटिंग/ब्लॉक' (Waiting/Blocked) स्थिति में रहने के बजाय 'सस्पेंड वेट' (Suspend Wait) स्थिति में क्यों स्थानांतरित होता है?"
+      },
+      "options": {
+        "en": [
+          "To allow the process to execute instructions directly in secondary storage",
+          "Because the process has encountered a critical system error",
+          "Due to main memory shortage or long expected I/O wait, causing the OS to swap it out to secondary storage",
+          "Because the CPU scheduling algorithm forces all waiting processes to release memory"
+        ],
+        "hi": [
+          "प्रोसेस को सीधे सेकेंडरी स्टोरेज में निर्देशों को निष्पादित करने की अनुमति देने के लिए",
+          "क्योंकि प्रोसेस में एक गंभीर सिस्टम त्रुटि आई है",
+          "मुख्य मेमोरी की कमी या लंबे समय तक अपेक्षित I/O प्रतीक्षा के कारण, जिससे OS इसे सेकेंडरी स्टोरेज में स्वैप कर देता है",
+          "क्योंकि CPU शेड्यूलिंग एल्गोरिदम सभी प्रतीक्षा कर रहे प्रोसेस को मेमोरी जारी करने के लिए मजबूर करता है"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "When the waiting/blocked queue is full or there is a shortage of main memory, the OS swaps out waiting processes to secondary storage, placing them in the 'Suspend Wait' state.",
+        "hi": "जब वेटिंग/ब्लॉक क्यू भर जाती है या मुख्य मेमोरी की कमी होती है, तो OS प्रतीक्षा कर रहे प्रोसेस को सेकेंडरी स्टोरेज में स्वैप कर देता है, जिससे वे 'सस्पेंड वेट' स्थिति में आ जाते हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "The Dining Philosophers problem is a classic synchronization problem that primarily illustrates which risk?",
+        "hi": "डाइनिंग फिलॉसफर्स समस्या एक क्लासिक सिंक्रोनाइज़ेशन समस्या है जो मुख्य रूप से किस जोखिम को दर्शाती है?"
+      },
+      "options": {
+        "en": [
+          "Deadlock",
+          "Race Condition",
+          "Thrashing",
+          "Internal Fragmentation"
+        ],
+        "hi": [
+          "डेडलॉक (Deadlock)",
+          "रेस कंडीशन (Race Condition)",
+          "थ्रैशिंग (Thrashing)",
+          "इंटरनल फ्रेग्मेंटेशन (Internal Fragmentation)"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The Dining Philosophers problem illustrates the challenges of allocating resources among multiple processes without causing deadlock (where every philosopher holds one chopstick and waits indefinitely for another).",
+        "hi": "डाइनिंग फिलॉसफर्स समस्या बिना डेडलॉक (जहां प्रत्येक दार्शनिक एक चॉपस्टिक रखता है और दूसरे के लिए अनिश्चित काल तक प्रतीक्षा करता है) पैदा किए कई प्रोसेस के बीच संसाधनों को आवंटित करने की चुनौतियों को दर्शाती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "What is the primary purpose of the Banker's Algorithm in an Operating System?",
+        "hi": "ऑपरेटिंग सिस्टम में बैंकर एल्गोरिदम (Banker's Algorithm) का प्राथमिक उद्देश्य क्या है?"
+      },
+      "options": {
+        "en": [
+          "Deadlock Avoidance by keeping the system in a safe state",
+          "Dynamic CPU scheduling for priority processes",
+          "Deadlock Detection through Resource Allocation Graphs",
+          "Deadlock Prevention by breaking the Mutual Exclusion condition"
+        ],
+        "hi": [
+          "सिस्टम को सुरक्षित स्थिति (safe state) में रखकर डेडलॉक से बचना (Deadlock Avoidance)",
+          "प्राथमिकता वाले प्रोसेस के लिए डायनेमिक CPU शेड्यूलिंग",
+          "रिसोर्स एलोकेशन ग्राफ के माध्यम से डेडलॉक का पता लगाना (Deadlock Detection)",
+          "म्यूचुअल एक्सक्लूजन स्थिति को तोड़कर डेडलॉक को रोकना (Deadlock Prevention)"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The Banker's Algorithm is a deadlock avoidance algorithm. It tests for safety by simulating the allocation of predetermined maximum possible amounts of all resources, ensuring the system never enters an unsafe state.",
+        "hi": "बैंकर एल्गोरिदम एक डेडलॉक बचाव (avoidance) एल्गोरिदम है। यह सभी संसाधनों की पूर्व-निर्धारित अधिकतम संभावित मात्रा के आवंटन का अनुकरण करके सुरक्षा की जांच करता है, जिससे यह सुनिश्चित होता है कि सिस्टम कभी भी असुरक्षित स्थिति में प्रवेश न करे।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following resources is NOT shared among threads of the same process?",
+        "hi": "निम्नलिखित में से कौन सा संसाधन एक ही प्रोसेस के थ्रेड्स के बीच साझा नहीं किया जाता है?"
+      },
+      "options": {
+        "en": [
+          "Data section",
+          "OS Resources (like open files)",
+          "Stack and Registers",
+          "Code section"
+        ],
+        "hi": [
+          "डेटा सेक्शन (Data section)",
+          "OS संसाधन (जैसे खुली हुई फाइलें)",
+          "स्टैक और रजिस्टर्स (Stack and Registers)",
+          "कोड सेक्शन (Code section)"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "While threads share the code, data, and OS resources of their parent process, each thread has its own unique Program Counter, Register set, Stack, and Thread ID.",
+        "hi": "जबकि थ्रेड्स अपने पैरेंट प्रोसेस के कोड, डेटा और OS संसाधनों को साझा करते हैं, प्रत्येक थ्रेड का अपना विशिष्ट प्रोग्राम काउंटर, रजिस्टर सेट, स्टैक और थ्रेड ID होता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Consider a disk queue with requests for I/O to blocks on cylinders: 98, 183, 37, 122, 14, 124, 65, 67. If the initial disk head position is 53, calculate the total head movements using the First Come First Served (FCFS) algorithm.",
+        "hi": "सिलेंडर पर ब्लॉकों के लिए I/O के अनुरोधों वाली एक डिस्क कतार पर विचार करें: 98, 183, 37, 122, 14, 124, 65, 67। यदि प्रारंभिक डिस्क हेड स्थिति 53 है, तो फर्स्ट कम फर्स्ट सर्व्ड (FCFS) एल्गोरिदम का उपयोग करके कुल हेड मूवमेंट की गणना करें।"
+      },
+      "options": {
+        "en": [
+          "640",
+          "314",
+          "630",
+          "620"
+        ],
+        "hi": [
+          "640",
+          "314",
+          "630",
+          "620"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "FCFS processes requests in order: |53-98| + |98-183| + |183-37| + |37-122| + |122-14| + |14-124| + |124-65| + |65-67| = 45 + 85 + 146 + 85 + 108 + 110 + 59 + 2 = 640.",
+        "hi": "FCFS अनुरोधों को क्रम में संसाधित करता है: |53-98| + |98-183| + |183-37| + |37-122| + |122-14| + |14-124| + |124-65| + |65-67| = 45 + 85 + 146 + 85 + 108 + 110 + 59 + 2 = 640।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "A race condition occurs when:",
+        "hi": "रेस कंडीशन (Race condition) तब होती है जब:"
+      },
+      "options": {
+        "en": [
+          "A process is waiting indefinitely because other processes keep getting higher priority",
+          "The CPU switches from User Mode to Kernel Mode via a system call",
+          "Two processes are waiting for resources held by each other in a circular fashion",
+          "Multiple processes/threads access and manipulate shared data concurrently, and the final outcome depends on the execution order"
+        ],
+        "hi": [
+          "एक प्रोसेस अनिश्चित काल तक प्रतीक्षा कर रहा है क्योंकि अन्य प्रोसेस को उच्च प्राथमिकता मिलती रहती है",
+          "CPU सिस्टम कॉल के माध्यम से यूज़र मोड से कर्नेल मोड में स्विच करता है",
+          "दो प्रोसेस एक दूसरे के पास मौजूद संसाधनों के लिए वृत्ताकार तरीके से प्रतीक्षा कर रहे हैं",
+          "कई प्रोसेस/थ्रेड्स समवर्ती रूप से साझा डेटा तक पहुंचते हैं और उसमें हेरफेर करते हैं, और अंतिम परिणाम निष्पादन के क्रम पर निर्भर करता है"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "A race condition is a concurrency bug where the output of a program is unpredictable because multiple threads access shared resources simultaneously without proper synchronization.",
+        "hi": "रेस कंडीशन एक समवर्ती बग (concurrency bug) है जहां प्रोग्राम का परिणाम अप्रत्याशित होता है क्योंकि कई थ्रेड्स उचित सिंक्रोनाइज़ेशन के बिना एक साथ साझा संसाधनों तक पहुंचते हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following can trigger a transition from User Mode to Kernel Mode?",
+        "hi": "निम्नलिखित में से कौन यूज़र मोड से कर्नेल मोड में संक्रमण को ट्रिगर कर सकता है?"
+      },
+      "options": {
+        "en": [
+          "System Call, Hardware Interrupt, and Software Exception",
+          "Only System Calls",
+          "Only Hardware Interrupts",
+          "Only compiler execution"
+        ],
+        "hi": [
+          "सिस्टम कॉल, हार्डवेयर इंटरप्ट, और सॉफ्टवेयर एक्सेप्शन",
+          "केवल सिस्टम कॉल",
+          "केवल हार्डवेयर इंटरप्ट",
+          "केवल कंपाइलर निष्पादन"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Any interrupt (hardware), trap/exception (software error like divide-by-zero), or explicit system call from user programs will cause the CPU to switch from User Mode to Kernel Mode to let the OS handle the event.",
+        "hi": "कोई भी इंटरप्ट (हार्डवेयर), ट्रैप/एक्सेप्शन (सॉफ्टवेयर त्रुटि जैसे शून्य से विभाजन), या यूज़र प्रोग्राम से स्पष्ट सिस्टम कॉल CPU को यूज़र मोड से कर्नेल मोड में स्विच करने का कारण बनेगी ताकि OS इवेंट को संभाल सके।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following is NOT typically stored within a Process Control Block (PCB)?",
+        "hi": "निम्नलिखित में से कौन सा आमतौर पर प्रोसेस कंट्रोल ब्लॉक (PCB) के भीतर संग्रहीत नहीं होता है?"
+      },
+      "options": {
+        "en": [
+          "Process State",
+          "CPU Registers",
+          "Bootstrap loader address",
+          "Program Counter"
+        ],
+        "hi": [
+          "प्रोसेस स्टेट (Process State)",
+          "CPU रजिस्टर्स (CPU Registers)",
+          "बूटस्ट्रैप लोडर एड्रेस (Bootstrap loader address)",
+          "प्रोग्राम काउंटर (Program Counter)"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Bootstrap loader is a separate utility used to load the OS during startup. The PCB stores process-specific information like Program Counter, Process State, Registers, and ID.",
+        "hi": "बूटस्ट्रैप लोडर एक अलग उपयोगिता है जिसका उपयोग स्टार्टअप के दौरान OS को लोड करने के लिए किया जाता है। PCB प्रोसेस-विशिष्ट जानकारी जैसे प्रोग्राम काउंटर, प्रोसेस स्टेट, रजिस्टर्स और ID को संग्रहीत करता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "What is the primary architectural structure/flow of an Operating System?",
+        "hi": "ऑपरेटिंग सिस्टम की प्राथमिक आर्किटेक्चरल संरचना/प्रवाह क्या है?"
+      },
+      "options": {
+        "en": [
+          "User -> OS -> Applications -> Hardware",
+          "User -> Applications -> OS -> Hardware",
+          "Hardware -> OS -> User -> Applications",
+          "OS -> User -> Applications -> Hardware"
+        ],
+        "hi": [
+          "यूज़र -> OS -> एप्लीकेशन -> हार्डवेयर",
+          "यूज़र -> एप्लीकेशन -> OS -> हार्डवेयर",
+          "हार्डवेयर -> OS -> यूज़र -> एप्लीकेशन",
+          "OS -> यूज़र -> एप्लीकेशन -> हार्डवेयर"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The logical structure of a computer system flows from the User to Applications, which interact with the OS, which in turn controls the physical Hardware.",
+        "hi": "कंप्यूटर सिस्टम की तार्किक संरचना यूज़र से एप्लीकेशन की ओर बहती है, जो OS के साथ बातचीत करती है, और OS बदले में भौतिक हार्डवेयर को नियंत्रित करता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which component is unique to a thread and stored in its Thread Control Block (TCB) rather than the Process Control Block (PCB)?",
+        "hi": "कौन सा घटक एक थ्रेड के लिए विशिष्ट है और प्रोसेस कंट्रोल ब्लॉक (PCB) के बजाय उसके थ्रेड कंट्रोल ब्लॉक (TCB) में संग्रहीत होता है?"
+      },
+      "options": {
+        "en": [
+          "Shared File Descriptors",
+          "Thread ID, Registers, and Stack",
+          "Global Variables and Data Section",
+          "Process ID and Memory Limits"
+        ],
+        "hi": [
+          "साझा फ़ाइल डिस्क्रिप्टर",
+          "थ्रेड ID, रजिस्टर्स, और स्टैक (Thread ID, Registers, and Stack)",
+          "ग्लोबल वेरिएबल्स और डेटा सेक्शन",
+          "प्रोसेस ID और मेमोरी सीमाएं"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Each thread has its own execution context. Therefore, Thread ID, register states, and stack pointers are unique to each thread and stored in its TCB. Global data and files are stored in the PCB and shared.",
+        "hi": "प्रत्येक थ्रेड का अपना निष्पादन संदर्भ होता है। इसलिए, थ्रेड ID, रजिस्टर स्थिति और स्टैक पॉइंटर्स प्रत्येक थ्रेड के लिए विशिष्ट होते हैं और इसके TCB में संग्रहीत होते हैं। ग्लोबल डेटा और फाइलें PCB में संग्रहीत और साझा की जाती हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following is classified as System Software?",
+        "hi": "निम्नलिखित में से किसे सिस्टम सॉफ्टवेयर के रूप में वर्गीकृत किया गया है?"
+      },
+      "options": {
+        "en": [
+          "Web Browsers and Word Processors",
+          "Customized Billing and Reservation Software",
+          "Database Management Systems and Spreadsheet software",
+          "Operating Systems and Device Drivers"
+        ],
+        "hi": [
+          "वेब ब्राउज़र और वर्ड प्रोसेसर (Web Browsers and Word Processors)",
+          "अनुकूलित बिलिंग और आरक्षण सॉफ्टवेयर",
+          "डेटाबेस मैनेजमेंट सिस्टम और स्प्रेडशीट सॉफ्टवेयर",
+          "ऑपरेटिंग सिस्टम और डिवाइस ड्राइवर (Operating Systems and Device Drivers)"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "System software manages and controls computer hardware and provides a platform for application software to run. Operating systems, device drivers, and utility programs are system software.",
+        "hi": "सिस्टम सॉफ्टवेयर कंप्यूटर हार्डवेयर को प्रबंधित और नियंत्रित करता है और एप्लिकेशन सॉफ्टवेयर को चलाने के लिए एक मंच प्रदान करता है। ऑपरेटिंग सिस्टम, डिवाइस ड्राइवर और उपयोगिता प्रोग्राम सिस्टम सॉफ्टवेयर हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which memory allocation strategy chooses the smallest free partition that is big enough to satisfy the process request?",
+        "hi": "कौन सी मेमोरी आवंटन रणनीति सबसे छोटे फ्री पार्टिशन को चुनती है जो प्रोसेस के अनुरोध को पूरा करने के लिए पर्याप्त बड़ा हो?"
+      },
+      "options": {
+        "en": [
+          "Next Fit",
+          "First Fit",
+          "Best Fit",
+          "Worst Fit"
+        ],
+        "hi": [
+          "नेक्स्ट फिट (Next Fit)",
+          "फर्स्ट फिट (First Fit)",
+          "बेस्ट फिट (Best Fit)",
+          "वर्स्ट फिट (Worst Fit)"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The 'Best Fit' strategy searches the entire list of free partitions and allocates the smallest block that is large enough, which minimizes leftover unused space.",
+        "hi": "'बेस्ट फिट' रणनीति फ्री पार्टिशन की पूरी सूची की खोज करती है और सबसे छोटे ब्लॉक को आवंटित करती है जो पर्याप्त बड़ा हो, जिससे बचा हुआ अप्रयुक्त स्थान न्यूनतम हो जाता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "In process state transition, when does a process enter the 'Suspend Ready' state?",
+        "hi": "प्रोसेस स्टेट ट्रांजिशन में, एक प्रोसेस 'सस्पेंड रेडी' (Suspend Ready) स्थिति में कब प्रवेश करता है?"
+      },
+      "options": {
+        "en": [
+          "When the process is waiting for an I/O event in secondary storage",
+          "When the process finishes its execution and waits for deletion",
+          "When the Ready Queue is full and a higher priority job arrives, swapping the process to secondary storage",
+          "When the CPU is idle and no processes are in the Ready Queue"
+        ],
+        "hi": [
+          "जब प्रोसेस सेकेंडरी स्टोरेज में I/O इवेंट की प्रतीक्षा कर रहा होता है",
+          "जब प्रोसेस अपना निष्पादन समाप्त कर लेता है और डिलीट होने की प्रतीक्षा करता है",
+          "जब रेडी क्यू (Ready Queue) भर जाती है और उच्च प्राथमिकता वाला काम आ जाता है, जिससे प्रोसेस को सेकेंडरी स्टोरेज में स्वैप करना पड़ता है",
+          "जब CPU खाली होता है और रेडी क्यू में कोई प्रोसेस नहीं होता है"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "A process enters the 'Suspend Ready' state when the Ready Queue in main memory is full, and the OS swaps out a process to secondary memory to accommodate higher priority processes.",
+        "hi": "एक प्रोसेस 'सस्पेंड रेडी' स्थिति में तब प्रवेश करता है जब मुख्य मेमोरी में रेडी क्यू भर जाती है, और OS उच्च प्राथमिकता वाले प्रोसेस को जगह देने के लिए एक प्रोसेस को सेकेंडरी मेमोरी में स्वैप कर देता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "From which perspective is Paging designed, and how does it divide memory?",
+        "hi": "पेजिंग (Paging) किस दृष्टिकोण से डिज़ाइन किया गया है, और यह मेमोरी को कैसे विभाजित करता है?"
+      },
+      "options": {
+        "en": [
+          "System view, dividing physical memory into fixed-size frames and logical memory into pages",
+          "Compiler view, allocating contiguous memory blocks dynamically",
+          "Hardware view, dividing disk space into virtual tracks",
+          "User view, dividing memory into variable-sized logical segments"
+        ],
+        "hi": [
+          "सिस्टम व्यू, भौतिक मेमोरी को निश्चित आकार के फ्रेम और तार्किक मेमोरी को पेज में विभाजित करना",
+          "कंपाइलर व्यू, गतिशील रूप से सन्निहित मेमोरी ब्लॉकों का आवंटन करना",
+          "हार्डवेयर व्यू, डिस्क स्थान को वर्चुअल ट्रैक में विभाजित करना",
+          "यूज़र व्यू, मेमोरी को परिवर्तनशील आकार के तार्किक सेगमेंट में विभाजित करना"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Paging is a system-centric memory management scheme. It divides physical memory into fixed-size blocks called frames, and logical memory into blocks of the same size called pages, avoiding external fragmentation.",
+        "hi": "पेजिंग एक सिस्टम-केंद्रित मेमोरी प्रबंधन योजना है। यह भौतिक मेमोरी को निश्चित आकार के ब्लॉकों में विभाजित करता है जिन्हें फ्रेम कहा जाता है, और तार्किक मेमोरी को उसी आकार के ब्लॉकों में विभाजित करता है जिन्हें पेज कहा जाता है, जिससे बाहरी विखंडन से बचा जा सकता है।"
+      },
+      "pyq": "BPSC TRE3 2024"
+    },
+    {
+      "question": {
+        "en": "How does the LOOK disk scheduling algorithm differ from the SCAN algorithm?",
+        "hi": "LOOK डिस्क शेड्यूलिंग एल्गोरिदम SCAN एल्गोरिदम से किस प्रकार भिन्न है?"
+      },
+      "options": {
+        "en": [
+          "LOOK moves the head randomly, while SCAN moves sequentially",
+          "LOOK does not require a read-write head to function",
+          "LOOK only moves the arm as far as the last request in each direction, whereas SCAN goes all the way to the end of the disk",
+          "LOOK is non-preemptive while SCAN is preemptive"
+        ],
+        "hi": [
+          "LOOK हेड को बेतरतीब ढंग से ले जाता है, जबकि SCAN क्रमिक रूप से चलता है",
+          "LOOK को कार्य करने के लिए रीड-राइट हेड की आवश्यकता नहीं होती है",
+          "LOOK केवल प्रत्येक दिशा में अंतिम अनुरोध तक आर्म को ले जाता है, जबकि SCAN डिस्क के अंत तक जाता है",
+          "LOOK गैर-प्रिेम्प्टिव है जबकि SCAN प्रिेम्प्टिव है"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The LOOK algorithm is an optimization of SCAN (Elevator). Instead of traveling to the very edge of the disk (0 or max cylinder), LOOK reverses direction as soon as there are no more requests in the current direction.",
+        "hi": "LOOK एल्गोरिदम SCAN (लिफ्ट) का एक अनुकूलन है। डिस्क के बिल्कुल किनारे (0 या अधिकतम सिलेंडर) तक जाने के बजाय, वर्तमान दिशा में कोई और अनुरोध न होने पर LOOK तुरंत दिशा बदल देता है।"
+      },
+      "pyq": ""
+    }
+  ]
+}

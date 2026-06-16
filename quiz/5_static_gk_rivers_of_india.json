@@ -1,0 +1,2608 @@
+{
+  "quizName": "5. Static Gk - Rivers of India",
+  "mapName": "9. CA",
+  "score": "Not submitted",
+  "timerSeconds": 900,
+  "questions": [
+    {
+      "question": {
+        "en": "Himalayan rivers are characterized by which of the following features due to their young age?",
+        "hi": "हिमालयी नदियों की उनकी युवा अवस्था के कारण निम्नलिखित में से कौन सी विशेषता है?"
+      },
+      "options": {
+        "en": [
+          "V-shaped valleys",
+          "Broad and shallow valleys",
+          "Oxbow lakes in mountains",
+          "U-shaped valleys"
+        ],
+        "hi": [
+          "V-आकार की घाटियाँ",
+          "चौड़ी और उथली घाटियाँ",
+          "पर्वतों में गोखुर झीलें",
+          "U-आकार की घाटियाँ"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Himalayan rivers are in their youth stage and actively erode their beds, forming deep V-shaped valleys and gorges.",
+        "hi": "हिमालयी नदियां अपनी युवा अवस्था में हैं और सक्रिय रूप से अपने तलों का क्षरण करती हैं, जिससे गहरी V-आकार की घाटियाँ और गॉर्ज बनते हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers flows westwards and drains into the Gulf of Khambhat?",
+        "hi": "निम्नलिखित में से कौन सी नदी पश्चिम की ओर बहती है और खंभात की खाड़ी में गिरती है?"
+      },
+      "options": {
+        "en": [
+          "Kaveri",
+          "Tapti",
+          "Krishna",
+          "Mahanadi"
+        ],
+        "hi": [
+          "कावेरी",
+          "ताप्ती",
+          "कृष्णा",
+          "महानदी"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The Tapti river flows westward and drains into the Gulf of Khambhat (Arabian Sea) in Gujarat.",
+        "hi": "ताप्ती नदी पश्चिम की ओर बहती है और गुजरात में खंभात की खाड़ी (अरब सागर) में गिरती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers is NOT part of the Ganga river system?",
+        "hi": "निम्नलिखित में से कौन सी नदी गंगा नदी प्रणाली का हिस्सा नहीं है?"
+      },
+      "options": {
+        "en": [
+          "Son",
+          "Kosi",
+          "Mahanadi",
+          "Yamuna"
+        ],
+        "hi": [
+          "सोन",
+          "कोसी",
+          "महानदी",
+          "यमुना"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Mahanadi is an independent Peninsular river system that flows into the Bay of Bengal, whereas Yamuna, Kosi, and Son are part of the Ganga basin.",
+        "hi": "महानदी एक स्वतंत्र प्रायद्वीपीय नदी प्रणाली है जो बंगाल की खाड़ी में गिरती है, जबकि यमुना, कोसी और सोन गंगा बेसिन का हिस्सा हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers rises in the Amarkantak Plateau of Madhya Pradesh?",
+        "hi": "निम्नलिखित में से कौन सी नदी मध्य प्रदेश के अमरकंटक पठार से निकलती है?"
+      },
+      "options": {
+        "en": [
+          "Narmada",
+          "Godavari",
+          "Tapti",
+          "Mahi"
+        ],
+        "hi": [
+          "नर्मदा",
+          "गोदावरी",
+          "ताप्ती",
+          "माही"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The Narmada river originates from the Amarkantak Hills in Anuppur district of Madhya Pradesh.",
+        "hi": "नर्मदा नदी मध्य प्रदेश के अनूपपुर जिले में अमरकंटक पहाड़ियों से निकलती है।"
+      },
+      "pyq": "MPPSC 2019"
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers is a major tributary of the Brahmaputra?",
+        "hi": "निम्नलिखित में से कौन सी नदी ब्रह्मपुत्र की एक प्रमुख सहायक नदी है?"
+      },
+      "options": {
+        "en": [
+          "Son",
+          "Kosi",
+          "Gandak",
+          "Lohit"
+        ],
+        "hi": [
+          "सोन",
+          "कोसी",
+          "गंडक",
+          "लोहित"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Lohit, Subansiri, Manas, and Teesta are important tributaries of the Brahmaputra. Gandak, Kosi, and Son are part of the Ganga system.",
+        "hi": "लोहित, सुबनसिरी, मानस और तीस्ता ब्रह्मपुत्र की महत्वपूर्ण सहायक नदियां हैं। गंडक, कोसी और सोन गंगा प्रणाली का हिस्सा हैं।"
+      },
+      "pyq": "UPSC CSE 2016"
+    },
+    {
+      "question": {
+        "en": "The river Yamuna meets the Ganga at which of the following cities?",
+        "hi": "यमुना नदी निम्नलिखित में से किस शहर में गंगा से मिलती है?"
+      },
+      "options": {
+        "en": [
+          "Haridwar",
+          "Prayagraj",
+          "Patna",
+          "Varanasi"
+        ],
+        "hi": [
+          "हरिद्वार",
+          "प्रयागराज",
+          "पटना",
+          "वाराणसी"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The Yamuna river meets the Ganga at Triveni Sangram in Prayagraj (formerly Allahabad), Uttar Pradesh.",
+        "hi": "यमुना नदी उत्तर प्रदेश के प्रयागराज (पूर्व में इलाहाबाद) में त्रिवेणी संगम पर गंगा से मिलती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "The Indus Water Treaty allocates about what percentage of total water of the Indus system to Pakistan?",
+        "hi": "सिंधु जल संधि सिंधु प्रणाली के कुल जल का लगभग कितना प्रतिशत पाकिस्तान को आवंटित करती है?"
+      },
+      "options": {
+        "en": [
+          "50%",
+          "90%",
+          "20%",
+          "80%"
+        ],
+        "hi": [
+          "50%",
+          "90%",
+          "20%",
+          "80%"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The Indus Water Treaty allocates about 80% of the water of the Indus system to Pakistan, while India gets about 20% of the water.",
+        "hi": "सिंधु जल संधि सिंधु प्रणाली के लगभग 80% जल को पाकिस्तान को आवंटित करती है, जबकि भारत को लगभग 20% जल प्राप्त होता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following is the longest Peninsular river of India?",
+        "hi": "निम्नलिखित में से कौन सी भारत की सबसे लंबी प्रायद्वीपीय नदी है?"
+      },
+      "options": {
+        "en": [
+          "Krishna",
+          "Godavari",
+          "Mahanadi",
+          "Narmada"
+        ],
+        "hi": [
+          "कृष्णा",
+          "गोदावरी",
+          "महानदी",
+          "नर्मदा"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The Godavari is the longest Peninsular river with a length of about 1,465 km, and is also called the 'Dakshin Ganga'.",
+        "hi": "गोदावरी लगभग 1,465 किमी की लंबाई के साथ सबसे लंबी प्रायद्वीपीय नदी है, और इसे 'दक्षिण गंगा' भी कहा जाता है।"
+      },
+      "pyq": "SSC CGL 2020"
+    },
+    {
+      "question": {
+        "en": "Where does the Indus river system originate?",
+        "hi": "सिंधु नदी प्रणाली का उद्गम कहाँ होता है?"
+      },
+      "options": {
+        "en": [
+          "Yamunotri Glacier",
+          "Near Mansarovar Lake (Tibet)",
+          "Gangotri Glacier",
+          "Amarkantak Hills"
+        ],
+        "hi": [
+          "यमुनोत्री हिमनद",
+          "मानसरोवर झील के पास (तिब्बत)",
+          "गंगोत्री हिमनद",
+          "अमरकंटक पहाड़ियाँ"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The Indus river originates in the northern slopes of the Kailash Range in Tibet near Lake Mansarovar.",
+        "hi": "सिंधु नदी तिब्बत में कैलाश श्रेणी के उत्तरी ढलानों में मानसरोवर झील के पास से निकलती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "The river Mahanadi originates from the highlands of which of the following states?",
+        "hi": "महानदी का उद्गम निम्नलिखित में से किस राज्य के उच्च भूमि से होता है?"
+      },
+      "options": {
+        "en": [
+          "Madhya Pradesh",
+          "Maharashtra",
+          "Chhattisgarh",
+          "Odisha"
+        ],
+        "hi": [
+          "मध्य प्रदेश",
+          "महाराष्ट्र",
+          "छत्तीसगढ़",
+          "ओडिशा"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Mahanadi river originates in the Sihawa highlands in Dhamtari district of Chhattisgarh.",
+        "hi": "महानदी छत्तीसगढ़ के धमतरी जिले में सिहावा उच्च भूमि से निकलती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following is the largest river system in Jammu and Kashmir?",
+        "hi": "निम्नलिखित में से कौन सी जम्मू और कश्मीर की सबसे बड़ी नदी प्रणाली है?"
+      },
+      "options": {
+        "en": [
+          "Brahmaputra System",
+          "Indus System",
+          "Narmada System",
+          "Ganga System"
+        ],
+        "hi": [
+          "ब्रह्मपुत्र प्रणाली",
+          "सिंधु प्रणाली",
+          "नर्मदा प्रणाली",
+          "गंगा प्रणाली"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The Indus River and its major tributaries (Jhelum, Chenab) form the dominant river system in Jammu and Kashmir.",
+        "hi": "सिंधु नदी और उसकी प्रमुख सहायक नदियां (झेलम, चिनाब) जम्मू और कश्मीर में प्रमुख नदी प्रणाली बनाती हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "What is the general flow direction of the Indus River in its upper course in India?",
+        "hi": "भारत में अपने ऊपरी मार्ग में सिंधु नदी के बहने की सामान्य दिशा क्या है?"
+      },
+      "options": {
+        "en": [
+          "Northwest",
+          "Southwest",
+          "North to South",
+          "East to West"
+        ],
+        "hi": [
+          "उत्तर-पश्चिम",
+          "दक्षिण-पश्चिम",
+          "उत्तर से दक्षिण",
+          "पूर्व से पश्चिम"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The Indus river flows northwest from Tibet, enters India in Ladakh, and then turns southwest to flow through Pakistan into the Arabian Sea.",
+        "hi": "सिंधु नदी तिब्बत से उत्तर-पश्चिम की ओर बहती है, लद्दाख में भारत में प्रवेश करती है, और फिर पाकिस्तान से होकर अरब सागर में गिरने के लिए दक्षिण-पश्चिम की ओर मुड़ जाती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following is a tributary of the Godavari river?",
+        "hi": "निम्नलिखित में से कौन सी गोदावरी नदी की सहायक नदी है?"
+      },
+      "options": {
+        "en": [
+          "Manjra",
+          "Tungabhadra",
+          "Bhima",
+          "Koyna"
+        ],
+        "hi": [
+          "मंजिरा",
+          "तुंगभद्रा",
+          "भीमा",
+          "कोयना"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Manjra is a right-bank tributary of the Godavari river. Bhima, Tungabhadra, and Koyna are tributaries of the Krishna river.",
+        "hi": "मंजिरा गोदावरी नदी की दाईं ओर की सहायक नदी है। भीमा, तुंगभद्रा और कोयना कृष्णा नदी की सहायक नदियां हैं।"
+      },
+      "pyq": "UPSC CSE 2015"
+    },
+    {
+      "question": {
+        "en": "Which of the following is the correct sequence of the tributaries of the Indus river from North to South?",
+        "hi": "उत्तर से दक्षिण की ओर सिंधु नदी की सहायक नदियों का सही क्रम निम्नलिखित में से कौन सा है?"
+      },
+      "options": {
+        "en": [
+          "Sutlej, Ravi, Chenab, Jhelum",
+          "Jhelum, Chenab, Ravi, Sutlej",
+          "Ravi, Jhelum, Chenab, Sutlej",
+          "Chenab, Jhelum, Ravi, Sutlej"
+        ],
+        "hi": [
+          "सतलुज, रावी, चिनाब, झेलम",
+          "झेलम, चिनाब, रावी, सतलुज",
+          "रावी, झेलम, चिनाब, सतलुज",
+          "चिनाब, झेलम, रावी, सतलुज"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The correct geographical sequence from North to South is Jhelum, Chenab, Ravi, Beas, and Sutlej.",
+        "hi": "उत्तर से दक्षिण की ओर सही भौगोलिक क्रम झेलम, चिनाब, रावी, ब्यास और सतलुज है।"
+      },
+      "pyq": "UPSC CSE 2021"
+    },
+    {
+      "question": {
+        "en": "Which river is known as the 'Salt River' of India due to its brackish water in the lower course?",
+        "hi": "निचले मार्ग में खारे पानी के कारण किस नदी को भारत की 'लवण नदी' (साल्ट रिवर) कहा जाता है?"
+      },
+      "options": {
+        "en": [
+          "Sabarmati",
+          "Tapti",
+          "Luni",
+          "Mahi"
+        ],
+        "hi": [
+          "साबरमती",
+          "ताप्ती",
+          "लूनी",
+          "माही"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Luni river is known as the Salt River of India. It is an endorheic river that originates in the Aravalli Range and ends in the Rann of Kutch.",
+        "hi": "लूनी नदी को भारत की लवण नदी के रूप में जाना जाता है। यह एक अंतर्देशीय नदी है जो अरावली श्रेणी से निकलती है और कच्छ के रण में समाप्त होती है।"
+      },
+      "pyq": "RPSC 2016"
+    },
+    {
+      "question": {
+        "en": "The Brahmaputra river is also known by which of the following names in Tibet?",
+        "hi": "तिब्बत में ब्रह्मपुत्र नदी को निम्नलिखित में से किस नाम से भी जाना जाता है?"
+      },
+      "options": {
+        "en": [
+          "Jamuna",
+          "Dihang",
+          "Yarlung Tsangpo",
+          "Padma"
+        ],
+        "hi": [
+          "जमुना",
+          "दिहांग",
+          "यारलुंग त्सांगपो",
+          "पद्मा"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Brahmaputra is known as the Yarlung Tsangpo in Tibet before entering India.",
+        "hi": "भारत में प्रवेश करने से पहले तिब्बत में ब्रह्मपुत्र को यारलुंग त्सांगपो के नाम से जाना जाता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "At which of the following places do the rivers Alaknanda and Bhagirathi meet to form the Ganga?",
+        "hi": "निम्नलिखित में से किस स्थान पर अलकनंदा और भागीरथी नदियां मिलकर गंगा का निर्माण करती हैं?"
+      },
+      "options": {
+        "en": [
+          "Karnaprayag",
+          "Rudraprayag",
+          "Vishnuprayag",
+          "Devprayag"
+        ],
+        "hi": [
+          "कर्णप्रयाग",
+          "रुद्रप्रयाग",
+          "विष्णुप्रयाग",
+          "देवप्रयाग"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The Alaknanda and Bhagirathi rivers meet at Devprayag in Uttarakhand, from where the combined river is known as the Ganga.",
+        "hi": "उत्तराखंड के देवप्रयाग में अलकनंदा और भागीरथी नदियां मिलती हैं, जहां से इस संयुक्त नदी को गंगा के नाम से जाना जाता है।"
+      },
+      "pyq": "MPPSC 2015"
+    },
+    {
+      "question": {
+        "en": "What primary reason prevents the west-flowing rivers like Narmada and Tapti from forming deltas?",
+        "hi": "नर्मदा और ताप्ती जैसी पश्चिम की ओर बहने वाली नदियों को डेल्टा बनाने से रोकने का प्राथमिक कारण क्या है?"
+      },
+      "options": {
+        "en": [
+          "They have very long courses",
+          "They carry too much silt",
+          "They flow through hard rock rift valleys and have high gradients",
+          "They are perennial rivers"
+        ],
+        "hi": [
+          "उनके मार्ग बहुत लंबे हैं",
+          "वे बहुत अधिक गाद ले जाती हैं",
+          "वे कठोर चट्टानी भ्रंश घाटियों से होकर बहती हैं और उनका ढाल तीव्र होता है",
+          "वे बारहमासी नदियां हैं"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Because they flow through hard rock rift valleys, they do not erode much silt, and their high gradient causes fast currents, preventing silt deposition to form deltas.",
+        "hi": "चूंकि वे कठोर चट्टानी भ्रंश घाटियों से होकर बहती हैं, इसलिए वे अधिक गाद का क्षरण नहीं करती हैं, और उनके तीव्र ढाल के कारण तेज धाराएँ बनती हैं, जो डेल्टा बनाने के लिए गाद के जमाव को रोकती हैं।"
+      },
+      "pyq": "UPSC CSE 2013"
+    },
+    {
+      "question": {
+        "en": "The river Sutlej originates from which of the following lakes in Tibet?",
+        "hi": "सतलुज नदी तिब्बत में निम्नलिखित में से किस झील से निकलती है?"
+      },
+      "options": {
+        "en": [
+          "Mansarovar Lake",
+          "Wular Lake",
+          "Pangong Tso",
+          "Rakas Lake (Rakshastal)"
+        ],
+        "hi": [
+          "मानसरोवर झील",
+          "वुलर झील",
+          "पैंगोंग त्सो",
+          "राकस झील (राक्षसताल)"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The Sutlej river originates from the Rakas Lake (Rakshastal) in Tibet near Lake Mansarovar.",
+        "hi": "सतलुज नदी तिब्बत में मानसरोवर झील के पास राकस झील (राक्षसताल) से निकलती है।"
+      },
+      "pyq": "HPPSC 2020"
+    },
+    {
+      "question": {
+        "en": "The river Kaveri has its source in which of the following hills?",
+        "hi": "कावेरी नदी का उद्गम निम्नलिखित में से किस पहाड़ी में है?"
+      },
+      "options": {
+        "en": [
+          "Cardamom Hills",
+          "Brahmagiri Hills",
+          "Amarkantak",
+          "Mahabaleshwar"
+        ],
+        "hi": [
+          "इलायची पहाड़ियाँ",
+          "ब्रह्मगिरी पहाड़ियाँ",
+          "अमरकंटक",
+          "महाबलेश्वर"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The Kaveri river originates in the Brahmagiri Range of the Western Ghats (Talakaveri in Kodagu district, Karnataka).",
+        "hi": "कावेरी नदी पश्चिमी घाट की ब्रह्मगिरी श्रेणी (कोडागु जिले, कर्नाटक में तलकावेरी) से निकलती है।"
+      },
+      "pyq": "UPSC CSE 2016"
+    },
+    {
+      "question": {
+        "en": "At which of the following places does the Ganga river emerge from the mountains into the plains?",
+        "hi": "निम्नलिखित में से किस स्थान पर गंगा नदी पहाड़ों से निकलकर मैदानों में प्रवेश करती है?"
+      },
+      "options": {
+        "en": [
+          "Rishikesh",
+          "Devprayag",
+          "Haridwar",
+          "Prayagraj"
+        ],
+        "hi": [
+          "ऋषिकेश",
+          "देवप्रयाग",
+          "हरिद्वार",
+          "प्रयागराज"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Ganga river emerges from the hilly areas of the Himalayas into the plains at Haridwar in Uttarakhand.",
+        "hi": "गंगा नदी उत्तराखंड के हरिद्वार में हिमालय के पहाड़ी क्षेत्रों से निकलकर मैदानों में प्रवेश करती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers originates in the western slopes of the Aravalli Range and flows into the Rann of Kutch?",
+        "hi": "निम्नलिखित में से कौन सी नदी अरावली श्रेणी के पश्चिमी ढलानों से निकलती है और कच्छ के रण में विलीन हो जाती है?"
+      },
+      "options": {
+        "en": [
+          "Mahi",
+          "Chambal",
+          "Sabarmati",
+          "Luni"
+        ],
+        "hi": [
+          "माही",
+          "चंबल",
+          "साबरमती",
+          "लूनी"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The Luni river originates in the Pushkar valley of the Aravalli Range and ends in the marshy lands of the Rann of Kutch.",
+        "hi": "लूनी नदी अरावली श्रेणी की पुष्कर घाटी से निकलती है और कच्छ के रण की दलदली भूमि में समाप्त होती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers is known for its seasonal character and depends entirely on rain, often drying up during summers?",
+        "hi": "निम्नलिखित में से कौन सी नदी अपने मौसमी चरित्र के लिए जानी जाती है और पूरी तरह से वर्षा पर निर्भर करती है, जो अक्सर गर्मियों के दौरान सूख जाती है?"
+      },
+      "options": {
+        "en": [
+          "Ganga",
+          "Subarnarekha",
+          "Indus",
+          "Brahmaputra"
+        ],
+        "hi": [
+          "गंगा",
+          "सुवर्णरेखा",
+          "सिंधु",
+          "ब्रह्मपुत्र"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Subarnarekha is a Peninsular river, which is seasonal and rain-fed, unlike the perennial Himalayan rivers like Ganga, Brahmaputra, and Indus.",
+        "hi": "सुवर्णरेखा एक प्रायद्वीपीय नदी है, जो मौसमी और वर्षा आधारित है, गंगा, ब्रह्मपुत्र और सिंधु जैसी बारहमासी हिमालयी नदियों के विपरीत।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers does NOT form a delta when it empties into the sea?",
+        "hi": "निम्नलिखित में से कौन सी नदी समुद्र में गिरते समय डेल्टा नहीं बनाती है?"
+      },
+      "options": {
+        "en": [
+          "Godavari",
+          "Tapti",
+          "Krishna",
+          "Ganga"
+        ],
+        "hi": [
+          "गोदावरी",
+          "ताप्ती",
+          "कृष्णा",
+          "गंगा"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Tapti is a west-flowing river that forms an estuary instead of a delta. Ganga, Godavari, and Krishna form massive deltas.",
+        "hi": "ताप्ती पश्चिम की ओर बहने वाली नदी है जो डेल्टा के बजाय एस्चुअरी बनाती है। गंगा, गोदावरी और कृष्णा विशाल डेल्टा बनाती हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers is known for its high-gradient flow and forms deep gorges in Ladakh?",
+        "hi": "निम्नलिखित में से कौन सी नदी अपने तीव्र ढाल वाले प्रवाह के लिए जानी जाती है और लद्दाख में गहरे गॉर्ज बनाती है?"
+      },
+      "options": {
+        "en": [
+          "Ganga",
+          "Indus",
+          "Godavari",
+          "Krishna"
+        ],
+        "hi": [
+          "गंगा",
+          "सिंधु",
+          "गोदावरी",
+          "कृष्णा"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The Indus river flows through Ladakh, carving deep, spectacular gorges between the Ladakh and Zaskar ranges.",
+        "hi": "सिंधु नदी लद्दाख से होकर बहती है, और लद्दाख और जास्कर श्रेणियों के बीच गहरे, शानदार गॉर्ज बनाती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which river forms the geographical boundary between North India and South India?",
+        "hi": "कौन सी नदी उत्तर भारत और दक्षिण भारत के बीच भौगोलिक सीमा बनाती है?"
+      },
+      "options": {
+        "en": [
+          "Mahanadi",
+          "Krishna",
+          "Godavari",
+          "Narmada"
+        ],
+        "hi": [
+          "महानदी",
+          "कृष्णा",
+          "गोदावरी",
+          "नर्मदा"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The Narmada river is traditionally and geographically considered the boundary between North India and South India.",
+        "hi": "नर्मदा नदी को पारंपरिक और भौगोलिक रूप से उत्तर भारत और दक्षिण भारत के बीच की सीमा माना जाता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers forms the famous 'Shivasamudram Waterfalls'?",
+        "hi": "निम्नलिखित में से कौन सी नदी प्रसिद्ध 'शिवसमुद्रम जलप्रपात' बनाती है?"
+      },
+      "options": {
+        "en": [
+          "Kaveri",
+          "Krishna",
+          "Narmada",
+          "Godavari"
+        ],
+        "hi": [
+          "कावेरी",
+          "कृष्णा",
+          "नर्मदा",
+          "गोदावरी"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The Shivasamudram Falls is located on the Kaveri River in Chamarajanagar district of Karnataka.",
+        "hi": "शिवसमुद्रम प्रपात कर्नाटक के चामराजनगर जिले में कावेरी नदी पर स्थित है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "The Wular Lake, one of the largest freshwater lakes in Asia, is fed by which of the following rivers?",
+        "hi": "एशिया की सबसे बड़ी मीठे पानी की झीलों में से एक, वुलर झील, को निम्नलिखित में से किस नदी से जल प्राप्त होता है?"
+      },
+      "options": {
+        "en": [
+          "Jhelum",
+          "Ravi",
+          "Sutlej",
+          "Chenab"
+        ],
+        "hi": [
+          "झेलम",
+          "रावी",
+          "सतलुज",
+          "चिनाब"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The Jhelum river flows into and feeds the Wular Lake in Jammu and Kashmir.",
+        "hi": "झेलम नदी जम्मू और कश्मीर में वुलर झील में प्रवेश करती है और इसे जल प्रदान करती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which Peninsular river is also referred to as the 'Vridha Ganga' (Old Ganga)?",
+        "hi": "किस प्रायद्वीपीय नदी को 'वृद्ध गंगा' (बूढ़ी गंगा) भी कहा जाता है?"
+      },
+      "options": {
+        "en": [
+          "Krishna",
+          "Godavari",
+          "Kaveri",
+          "Narmada"
+        ],
+        "hi": [
+          "कृष्णा",
+          "गोदावरी",
+          "कावेरी",
+          "नर्मदा"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The Godavari river, because of its age, size, and length, is often referred to as 'Vridha Ganga'.",
+        "hi": "गोदावरी नदी को उसकी आयु, आकार और लंबाई के कारण अक्सर 'वृद्ध गंगा' कहा जाता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following is the largest river basin entirely within India?",
+        "hi": "निम्नलिखित में से कौन सा पूरी तरह से भारत के भीतर सबसे बड़ा नदी बेसिन है?"
+      },
+      "options": {
+        "en": [
+          "Godavari Basin",
+          "Indus Basin",
+          "Ganga Basin",
+          "Krishna Basin"
+        ],
+        "hi": [
+          "गोदावरी बेसिन",
+          "सिंधु बेसिन",
+          "गंगा बेसिन",
+          "कृष्णा बेसिन"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Ganga Basin is the largest river basin entirely within India, covering about 26% of the country's land area.",
+        "hi": "गंगा बेसिन पूरी तरह से भारत के भीतर सबसे बड़ा नदी बेसिन है, जो देश के लगभग 26% भूमि क्षेत्र को कवर करता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following is a major tributary of the Krishna river?",
+        "hi": "निम्नलिखित में से कौन सी कृष्णा नदी की एक प्रमुख सहायक नदी है?"
+      },
+      "options": {
+        "en": [
+          "Tungabhadra",
+          "Mahanadi",
+          "Kaveri",
+          "Pranhita"
+        ],
+        "hi": [
+          "तुंगभद्रा",
+          "महानदी",
+          "कावेरी",
+          "प्राणहिता"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Tungabhadra is a major tributary of the Krishna river. Pranhita is a tributary of the Godavari.",
+        "hi": "तुंगभद्रा कृष्णा नदी की एक प्रमुख सहायक नदी है। प्राणहिता गोदावरी की सहायक नदी है।"
+      },
+      "pyq": "UPSC CSE 2019"
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers does NOT originate in India?",
+        "hi": "निम्नलिखित में से कौन सी नदी भारत में उत्पन्न नहीं होती है?"
+      },
+      "options": {
+        "en": [
+          "Beas",
+          "Sutlej",
+          "Ravi",
+          "Chenab"
+        ],
+        "hi": [
+          "ब्यास",
+          "सतलुज",
+          "रावी",
+          "चिनाब"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The Sutlej river originates in Tibet near Mount Kailash and Lake Mansarovar, outside the political boundaries of India.",
+        "hi": "सतलुज नदी भारत की राजनीतिक सीमाओं से बाहर, तिब्बत में कैलाश पर्वत और मानसरोवर झील के पास से निकलती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "The Yamuna river, the largest tributary of the Ganga, originates from which glacier?",
+        "hi": "गंगा की सबसे बड़ी सहायक नदी यमुना किस हिमनद से निकलती है?"
+      },
+      "options": {
+        "en": [
+          "Baltoro",
+          "Ymunotri (Banderpunch)",
+          "Gangotri",
+          "Siachen"
+        ],
+        "hi": [
+          "बाल्टोरो",
+          "यमुनोत्री (बंदरपूंछ)",
+          "गंगोत्री",
+          "सियाचिन"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The Yamuna river originates from the Yamunotri Glacier on the Banderpunch peaks in Uttarakhand.",
+        "hi": "यमुना नदी उत्तराखंड में बंदरपूंछ चोटियों पर यमुनोत्री हिमनद से निकलती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "The river Krishna originates near which of the following places?",
+        "hi": "कृष्णा नदी का उद्गम निम्नलिखित में से किस स्थान के निकट होता है?"
+      },
+      "options": {
+        "en": [
+          "Mahabaleshwar",
+          "Betul",
+          "Nasik",
+          "Amarkantak"
+        ],
+        "hi": [
+          "महाबलेश्वर",
+          "बैतुल",
+          "नासिक",
+          "अमरकंटक"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The Krishna river originates near Mahabaleshwar in the Western Ghats of Maharashtra.",
+        "hi": "कृष्णा नदी महाराष्ट्र के पश्चिमी घाट में महाबलेश्वर के पास से निकलती है।"
+      },
+      "pyq": "MPSC 2018"
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers is an antecedent river, meaning it existed before the Himalayas were uplifted?",
+        "hi": "निम्नलिखित में से कौन सी नदी एक पूर्ववर्ती (एंटीसिडेंट) नदी है, जिसका अर्थ है कि यह हिमालय के उत्थान से पहले मौजूद थी?"
+      },
+      "options": {
+        "en": [
+          "Sutlej",
+          "Mahanadi",
+          "Godavari",
+          "Yamuna"
+        ],
+        "hi": [
+          "सतलुज",
+          "महानदी",
+          "गोदावरी",
+          "यमुना"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The Sutlej, Indus, and Brahmaputra are antecedent rivers because they cut deep gorges through the Himalayas, indicating they existed before the mountain range was formed.",
+        "hi": "सतलुज, सिंधु और ब्रह्मपुत्र पूर्ववर्ती नदियां हैं क्योंकि वे हिमालय के माध्यम से गहरे गॉर्ज काटती हैं, जो दर्शाता है कि वे पर्वत श्रृंखला के बनने से पहले मौजूद थीं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following is the longest river in India?",
+        "hi": "निम्नलिखित में से कौन सी भारत की सबसे लंबी नदी है?"
+      },
+      "options": {
+        "en": [
+          "Ganga",
+          "Indus",
+          "Godavari",
+          "Brahmaputra"
+        ],
+        "hi": [
+          "गंगा",
+          "सिंधु",
+          "गोदावरी",
+          "ब्रह्मपुत्र"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Ganga is the longest river in India, flowing over a distance of 2,525 km through India and Bangladesh.",
+        "hi": "गंगा भारत की सबसे लंबी नदी है, जो भारत और बांग्लादेश में 2,525 किमी की दूरी तय करती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers is also known as the 'Dihang' in Arunachal Pradesh?",
+        "hi": "अरुणाचल प्रदेश में निम्नलिखित में से किस नदी को 'दिहांग' के नाम से भी जाना जाता है?"
+      },
+      "options": {
+        "en": [
+          "Teesta",
+          "Lohit",
+          "Subansiri",
+          "Brahmaputra"
+        ],
+        "hi": [
+          "तीस्ता",
+          "लोहित",
+          "सुबनसिरी",
+          "ब्रह्मपुत्र"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The Brahmaputra river is known as the Dihang (or Siang) in Arunachal Pradesh before it enters Assam.",
+        "hi": "असम में प्रवेश करने से पहले अरुणाचल प्रदेश में ब्रह्मपुत्र नदी को दिहांग (या सियांग) के नाम से जाना जाता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers is also known as 'Tsangpo' in its upper course?",
+        "hi": "निम्नलिखित में से किस नदी को उसके ऊपरी मार्ग में 'त्सांगपो' के नाम से भी जाना जाता है?"
+      },
+      "options": {
+        "en": [
+          "Ganga",
+          "Sutlej",
+          "Indus",
+          "Brahmaputra"
+        ],
+        "hi": [
+          "गंगा",
+          "सतलुज",
+          "सिंधु",
+          "ब्रह्मपुत्र"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The Brahmaputra river is known as the Tsangpo in Tibet before it enters India through Arunachal Pradesh.",
+        "hi": "ब्रह्मपुत्र नदी को अरुणाचल प्रदेश के रास्ते भारत में प्रवेश करने से पहले तिब्बत में त्सांगपो के नाम से जाना जाता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following is the largest peninsular river system flowing into the Bay of Bengal?",
+        "hi": "बंगाल की खाड़ी में गिरने वाली सबसे बड़ी प्रायद्वीपीय नदी प्रणाली निम्नलिखित में से कौन सी है?"
+      },
+      "options": {
+        "en": [
+          "Krishna Basin",
+          "Mahanadi Basin",
+          "Godavari Basin",
+          "Kaveri Basin"
+        ],
+        "hi": [
+          "कृष्णा बेसिन",
+          "महानदी बेसिन",
+          "गोदावरी बेसिन",
+          "कावेरी बेसिन"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Godavari Basin is the largest peninsular river basin in India, covering about 10% of India's total geographical area.",
+        "hi": "गोदावरी बेसिन भारत का सबसे बड़ा प्रायद्वीपीय नदी बेसिन है, जो भारत के कुल भौगोलिक क्षेत्र का लगभग 10% कवर करता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "The famous Jog Falls (Gersoppa) is located on which of the following rivers?",
+        "hi": "प्रसिद्ध जोग जलप्रपात (गरसोप्पा) निम्नलिखित में से किस नदी पर स्थित है?"
+      },
+      "options": {
+        "en": [
+          "Narmada",
+          "Sharavati",
+          "Godavari",
+          "Kaveri"
+        ],
+        "hi": [
+          "नर्मदा",
+          "शरावती",
+          "गोदावरी",
+          "कावेरी"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Jog Falls is located on the Sharavati river in Shimoga district of Karnataka.",
+        "hi": "जोग प्रपात कर्नाटक के शिमोगा जिले में शरावती नदी पर स्थित है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers flows between the Vindhya and Satpura mountain ranges?",
+        "hi": "निम्नलिखित में से कौन सी नदी विंध्य और सतपुड़ा पर्वत श्रृंखलाओं के बीच बहती है?"
+      },
+      "options": {
+        "en": [
+          "Narmada",
+          "Tapti",
+          "Mahanadi",
+          "Godavari"
+        ],
+        "hi": [
+          "नर्मदा",
+          "ताप्ती",
+          "महानदी",
+          "गोदावरी"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The Narmada river flows through a rift valley located between the Vindhya range to the north and the Satpura range to the south.",
+        "hi": "नर्मदा नदी उत्तर में विंध्य श्रेणी और दक्षिण में सतपुड़ा श्रेणी के बीच स्थित एक भ्रंश घाटी से होकर बहती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Under the Indus Water Treaty of 1960, which set of rivers was allocated to India for unrestricted use?",
+        "hi": "1960 की सिंधु जल संधि के तहत, नदियों का कौन सा समूह भारत को अप्रतिबंधित उपयोग के लिए आवंटित किया गया था?"
+      },
+      "options": {
+        "en": [
+          "Jhelum, Chenab, Sutlej",
+          "Indus, Ravi, Beas",
+          "Ravi, Beas, Sutlej",
+          "Indus, Jhelum, Chenab"
+        ],
+        "hi": [
+          "झेलम, चिनाब, सतलुज",
+          "सिंधु, रावी, ब्यास",
+          "रावी, ब्यास, सतलुज",
+          "सिंधु, झेलम, चिनाब"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Under the Indus Water Treaty of 1960, India was given unrestricted rights over the eastern rivers: Ravi, Beas, and Sutlej.",
+        "hi": "1960 की सिंधु जल संधि के तहत, भारत को पूर्वी नदियों: रावी, ब्यास और सतलुज पर अप्रतिबंधित अधिकार दिए गए थे।"
+      },
+      "pyq": "UPSC CSE 2021"
+    },
+    {
+      "question": {
+        "en": "Which river is historically known as the 'Sorrow of Bengal'?",
+        "hi": "किस नदी को ऐतिहासिक रूप से 'बंगाल का शोक' कहा जाता है?"
+      },
+      "options": {
+        "en": [
+          "Hooghly",
+          "Kosi",
+          "Mahanadi",
+          "Damodar"
+        ],
+        "hi": [
+          "हुगली",
+          "कोसी",
+          "महानदी",
+          "दामोदर"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The Damodar river was known as the 'Sorrow of Bengal' due to its devastating floods in the plains of West Bengal before flood control measures were built.",
+        "hi": "दामोदर नदी को बाढ़ नियंत्रण उपायों के निर्माण से पहले पश्चिम बंगाल के मैदानों में विनाशकारी बाढ़ के कारण 'बंगाल का शोक' कहा जाता था।"
+      },
+      "pyq": "WBCS 2017"
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers is famous for the 'Dhuandhar Falls' near Jabalpur?",
+        "hi": "निम्नलिखित में से कौन सी नदी जबलपुर के निकट 'धुआंधार जलप्रपात' के लिए प्रसिद्ध है?"
+      },
+      "options": {
+        "en": [
+          "Narmada",
+          "Chambal",
+          "Mahi",
+          "Tapti"
+        ],
+        "hi": [
+          "नर्मदा",
+          "चंबल",
+          "माही",
+          "ताप्ती"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The Dhuandhar Falls is located on the Narmada River in Bhedaghat near Jabalpur, Madhya Pradesh.",
+        "hi": "धुआंधार जलप्रपात मध्य प्रदेश के जबलपुर के पास भेड़ाघाट में नर्मदा नदी पर स्थित है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "The Alaknanda river originates from which of the following glaciers?",
+        "hi": "अलकनंदा नदी निम्नलिखित में से किस हिमनद से निकलती है?"
+      },
+      "options": {
+        "en": [
+          "Gangotri Glacier",
+          "Milam Glacier",
+          "Satopanth Glacier",
+          "Yamunotri Glacier"
+        ],
+        "hi": [
+          "गंगोत्री हिमनद",
+          "मिलाम हिमनद",
+          "सतोपंथ हिमनद",
+          "यमुनोत्री हिमनद"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Alaknanda river originates from the Satopanth Glacier in Uttarakhand.",
+        "hi": "अलकनंदा नदी उत्तराखंड में सतोपंथ हिमनद से निकलती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "What is the dominant drainage pattern of the Peninsular plateau rivers?",
+        "hi": "प्रायद्वीपीय पठार की नदियों का प्रमुख अपवाह प्रतिरूप (ड्रेनेज पैटर्न) क्या है?"
+      },
+      "options": {
+        "en": [
+          "Trellis",
+          "Radial",
+          "Centripetal",
+          "Dendritic"
+        ],
+        "hi": [
+          "जालीदार (ट्रेलीस)",
+          "अरीय (रेडियल)",
+          "अभिकेंद्री",
+          "द्रुमाकृतिक (डेंड्रिटिक)"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Most Peninsular rivers flow through gentle gradients over a stable plateau, forming a dendritic (tree-like) drainage pattern.",
+        "hi": "अधिकांश प्रायद्वीपीय नदियां एक स्थिर पठार पर मंद ढाल से होकर बहती हैं, जिससे एक द्रुमाकृतिक (वृक्षाकार) अपवाह प्रतिरूप बनता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following is a key characteristic of Peninsular rivers compared to Himalayan rivers?",
+        "hi": "हिमालयी नदियों की तुलना में प्रायद्वीपीय नदियों की एक प्रमुख विशेषता निम्नलिखित में से कौन सी है?"
+      },
+      "options": {
+        "en": [
+          "They are perennial",
+          "They are seasonal and rain-fed",
+          "They are in their young stage",
+          "They are highly flood-prone"
+        ],
+        "hi": [
+          "वे बारहमासी होती हैं",
+          "वे मौसमी और वर्षा पर निर्भर होती हैं",
+          "वे अपनी युवा अवस्था में हैं",
+          "वे अत्यधिक बाढ़ प्रवण होती हैं"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Peninsular rivers are seasonal and rain-fed, meaning their flow decreases drastically during the dry season, unlike glacier-fed Himalayan rivers.",
+        "hi": "प्रायद्वीपीय नदियां मौसमी और वर्षा पर निर्भर होती हैं, जिसका अर्थ है कि हिमनद से पोषित हिमालयी नदियों के विपरीत, शुष्क मौसम के दौरान उनका प्रवाह काफी कम हो जाता है।"
+      },
+      "pyq": "UPSC CSE 2012"
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers is also known as the 'Lavanavari' (Salt River) in Sanskrit?",
+        "hi": "संस्कृत में निम्नलिखित में से किस नदी को 'लवणावारी' (लवण नदी) के नाम से भी जाना जाता है?"
+      },
+      "options": {
+        "en": [
+          "Sabarmati",
+          "Luni",
+          "Mahi",
+          "Tapti"
+        ],
+        "hi": [
+          "साबरमती",
+          "लूनी",
+          "माही",
+          "ताप्ती"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The name 'Luni' is derived from the Sanskrit word 'Lavanavari', which means 'Salt River', due to its high salinity.",
+        "hi": "नाम 'लूनी' संस्कृत शब्द 'लवणावारी' से लिया गया है, जिसका अर्थ है 'लवण नदी', इसकी उच्च लवणता के कारण।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following is NOT a characteristic of Himalayan rivers?",
+        "hi": "निम्नलिखित में से कौन सी विशेषता हिमालयी नदियों की नहीं है?"
+      },
+      "options": {
+        "en": [
+          "They are perennial",
+          "They form V-shaped valleys",
+          "They have short, seasonal courses",
+          "They are glacier and rain-fed"
+        ],
+        "hi": [
+          "वे बारहमासी होती हैं",
+          "वे V-आकार की घाटियाँ बनाती हैं",
+          "उनके मार्ग छोटे और मौसमी होते हैं",
+          "वे हिमनद और वर्षा से पोषित होती हैं"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Himalayan rivers have long courses extending thousands of kilometers, and they are perennial, not short or seasonal.",
+        "hi": "हिमालयी नदियों के मार्ग हजारों किलोमीटर तक फैले लंबे होते हैं, और वे बारहमासी होती हैं, न कि छोटी या मौसमी।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers is a tributary of the Indus and flows through the famous Solang Valley in Himachal Pradesh?",
+        "hi": "निम्नलिखित में से कौन सी नदी सिंधु की सहायक नदी है और हिमाचल प्रदेश की प्रसिद्ध सोलांग घाटी से होकर बहती है?"
+      },
+      "options": {
+        "en": [
+          "Chenab",
+          "Sutlej",
+          "Beas",
+          "Ravi"
+        ],
+        "hi": [
+          "चिनाब",
+          "सतलुज",
+          "ब्यास",
+          "रावी"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Beas river originates near Beas Kund in the Rohtang Pass and flows through the Kullu and Solang valleys of Himachal Pradesh.",
+        "hi": "ब्यास नदी रोहतांग दर्रे में ब्यास कुंड के पास से निकलती है और हिमाचल प्रदेश की कुल्लू और सोलांग घाटियों से होकर बहती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "The Godavari river originates from which of the following places in Maharashtra?",
+        "hi": "गोदावरी नदी महाराष्ट्र के निम्नलिखित में से किस स्थान से निकलती है?"
+      },
+      "options": {
+        "en": [
+          "Bhimashankar",
+          "Lonavala",
+          "Trimbakeshwar (Nasik)",
+          "Mahabaleshwar"
+        ],
+        "hi": [
+          "भीमाशंकर",
+          "लोनावला",
+          "त्र्यंबकेश्वर (नासिक)",
+          "महाबलेश्वर"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Godavari river originates from Trimbakeshwar in the Nasik district of Maharashtra.",
+        "hi": "गोदावरी नदी महाराष्ट्र के नासिक जिले में त्र्यंबकेश्वर से निकलती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "The Bhagirathi river originates from which of the following glaciers?",
+        "hi": "भागीरथी नदी निम्नलिखित में से किस हिमनद से निकलती है?"
+      },
+      "options": {
+        "en": [
+          "Gangotri",
+          "Milam",
+          "Pindari",
+          "Yamunotri"
+        ],
+        "hi": [
+          "गंगोत्री",
+          "मिलाम",
+          "पिंडारी",
+          "यमुनोत्री"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The Bhagirathi river originates from the Gangotri Glacier at Gaumukh in Uttarakhand.",
+        "hi": "भागीरथी नदी उत्तराखंड में गौमुख में गंगोत्री हिमनद से निकलती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers is a tributary of the Ganga and flows northwards from the peninsular plateau?",
+        "hi": "निम्नलिखित में से कौन सी नदी गंगा की सहायक नदी है और प्रायद्वीपीय पठार से उत्तर की ओर बहती है?"
+      },
+      "options": {
+        "en": [
+          "Kosi",
+          "Gandak",
+          "Son",
+          "Gomti"
+        ],
+        "hi": [
+          "कोसी",
+          "गंडक",
+          "सोन",
+          "गोमती"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Son river originates on the Amarkantak plateau and flows northwards to join the Ganga near Patna.",
+        "hi": "सोन नदी अमरकंटक पठार से निकलती है और उत्तर की ओर बहकर पटना के पास गंगा में मिल जाती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following is an east-flowing peninsular river that forms a delta?",
+        "hi": "निम्नलिखित में से कौन सी पूर्व की ओर बहने वाली प्रायद्वीपीय नदी है जो डेल्टा बनाती है?"
+      },
+      "options": {
+        "en": [
+          "Krishna",
+          "Narmada",
+          "Mahi",
+          "Tapti"
+        ],
+        "hi": [
+          "कृष्णा",
+          "नर्मदा",
+          "माही",
+          "ताप्ती"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Krishna is an east-flowing river that drains into the Bay of Bengal and forms a delta. Narmada, Tapti, and Mahi are west-flowing rivers.",
+        "hi": "कृष्णा पूर्व की ओर बहने वाली नदी है जो बंगाल की खाड़ी में गिरती है और डेल्टा बनाती है। नर्मदा, ताप्ती और माही पश्चिम की ओर बहने वाली नदियां हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following states does NOT share the basin of the Narmada River?",
+        "hi": "निम्नलिखित में से कौन सा राज्य नर्मदा नदी के बेसिन को साझा नहीं करता है?"
+      },
+      "options": {
+        "en": [
+          "Rajasthan",
+          "Gujarat",
+          "Madhya Pradesh",
+          "Maharashtra"
+        ],
+        "hi": [
+          "राजस्थान",
+          "गुजरात",
+          "मध्य प्रदेश",
+          "महाराष्ट्र"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The Narmada basin is shared by Madhya Pradesh, Gujarat, and Maharashtra. Rajasthan does not share the Narmada river basin.",
+        "hi": "नर्मदा बेसिन मध्य प्रदेश, गुजरात और महाराष्ट्र द्वारा साझा किया जाता है। राजस्थान नर्मदा नदी बेसिन को साझा नहीं करता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "The river Yamuna flows parallel to the Ganga for about how many kilometers before merging at Prayagraj?",
+        "hi": "यमुना नदी प्रयागराज में मिलने से पहले लगभग कितने किलोमीटर तक गंगा के समानांतर बहती है?"
+      },
+      "options": {
+        "en": [
+          "1376 km",
+          "2525 km",
+          "850 km",
+          "500 km"
+        ],
+        "hi": [
+          "1376 किमी",
+          "2525 किमी",
+          "850 किमी",
+          "500 किमी"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The Yamuna river has a total length of about 1,376 km and flows parallel to the Ganga before their confluence at Prayagraj.",
+        "hi": "यमुना नदी की कुल लंबाई लगभग 1,376 किमी है और यह प्रयागराज में उनके संगम से पहले गंगा के समानांतर बहती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers is also known as the 'Sorrow of Odisha' due to its frequent floods in the past?",
+        "hi": "अतीत में बार-बार आने वाली बाढ़ के कारण निम्नलिखित में से किस नदी को 'ओडिशा का शोक' भी कहा जाता है?"
+      },
+      "options": {
+        "en": [
+          "Baitarani",
+          "Subarnarekha",
+          "Brahmani",
+          "Mahanadi"
+        ],
+        "hi": [
+          "वैतरणी",
+          "सुवर्णरेखा",
+          "ब्राह्मणी",
+          "महानदी"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The Mahanadi was historically known as the 'Sorrow of Odisha' due to devastating floods, which were later controlled by constructing the Hirakud Dam.",
+        "hi": "महानदी को ऐतिहासिक रूप से विनाशकारी बाढ़ के कारण 'ओडिशा का शोक' कहा जाता था, जिसे बाद में हीराकुंड बांध बनाकर नियंत्रित किया गया।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following is NOT a right-bank tributary of the Indus river?",
+        "hi": "निम्नलिखित में से कौन सी सिंधु नदी की दाईं ओर की सहायक नदी नहीं है?"
+      },
+      "options": {
+        "en": [
+          "Gilgit",
+          "Shyok",
+          "Kabul",
+          "Jhelum"
+        ],
+        "hi": [
+          "गिलगित",
+          "श्योक",
+          "काबुल",
+          "झेलम"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Jhelum is a left-bank tributary of the Indus (part of the 5 main rivers), while Shyok, Gilgit, and Kabul are right-bank tributaries.",
+        "hi": "झेलम सिंधु की बाईं ओर की सहायक नदी है (5 मुख्य नदियों का हिस्सा), जबकि श्योक, गिलगित और काबुल दाईं ओर की सहायक नदियां हैं।"
+      },
+      "pyq": "UPSC CSE 2020"
+    },
+    {
+      "question": {
+        "en": "Which of the following is a major left-bank tributary of the Ganga that originates in the plains (Pilibhit, UP) rather than the Himalayas?",
+        "hi": "निम्नलिखित में से कौन सी गंगा की बाईं ओर की एक प्रमुख सहायक नदी है जो हिमालय के बजाय मैदानों (पीलीभीत, यूपी) से निकलती है?"
+      },
+      "options": {
+        "en": [
+          "Gandak",
+          "Ghaghara",
+          "Gomti",
+          "Kosi"
+        ],
+        "hi": [
+          "गंडक",
+          "घाघरा",
+          "गोमती",
+          "कोसी"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Gomti river is unique because it originates from Gomat Taal (Fulhar Lake) in Pilibhit, Uttar Pradesh, which is in the plains, unlike other Himalayan tributaries.",
+        "hi": "गोमती नदी अद्वितीय है क्योंकि यह उत्तर प्रदेश के पीलीभीत में गोमत ताल (फुलहर झील) से निकलती है, जो मैदानों में है, अन्य हिमालयी सहायक नदियों के विपरीत।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following is a seasonal river?",
+        "hi": "निम्नलिखित में से कौन सी एक मौसमी नदी है?"
+      },
+      "options": {
+        "en": [
+          "Indus",
+          "Brahmaputra",
+          "Godavari",
+          "Ganga"
+        ],
+        "hi": [
+          "सिंधु",
+          "ब्रह्मपुत्र",
+          "गोदावरी",
+          "गंगा"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Godavari is a Peninsular river and is seasonal (rain-fed), unlike the Himalayan rivers (Ganga, Indus, Brahmaputra) which are perennial (glacier-fed).",
+        "hi": "गोदावरी एक प्रायद्वीपीय नदी है और मौसमी (वर्षा आधारित) है, हिमालयी नदियों (गंगा, सिंधु, ब्रह्मपुत्र) के विपरीत जो बारहमासी (हिमनद-पोषित) हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following west-flowing rivers does NOT form a delta but forms an estuary?",
+        "hi": "निम्नलिखित में से कौन सी पश्चिम की ओर बहने वाली नदी डेल्टा नहीं बनाती बल्कि एस्चुअरी बनाती है?"
+      },
+      "options": {
+        "en": [
+          "Godavari",
+          "Kaveri",
+          "Mahanadi",
+          "Narmada"
+        ],
+        "hi": [
+          "गोदावरी",
+          "कावेरी",
+          "महानदी",
+          "नर्मदा"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Narmada flows westward and forms an estuary because it flows through a hard rocky rift valley and has a high gradient, preventing silt deposition.",
+        "hi": "नर्मदा पश्चिम की ओर बहती है और एस्चुअरी बनाती है क्योंकि यह एक कठोर चट्टानी भ्रंश घाटी से होकर बहती है और इसका ढाल तीव्र होता है, जो गाद के जमाव को रोकता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "The Majuli island, the largest inhabited riverine island in the world, is located on which of the following rivers?",
+        "hi": "विश्व का सबसे बड़ा बसा हुआ नदी द्वीप, माजुली द्वीप, निम्नलिखित में से किस नदी पर स्थित है?"
+      },
+      "options": {
+        "en": [
+          "Indus",
+          "Brahmaputra",
+          "Ganga",
+          "Godavari"
+        ],
+        "hi": [
+          "सिंधु",
+          "ब्रह्मपुत्र",
+          "गंगा",
+          "गोदावरी"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Majuli is a large river island in the Brahmaputra River in Assam, India, and was the first island to be made a district in India.",
+        "hi": "माजुली भारत के असम में ब्रह्मपुत्र नदी में स्थित एक बड़ा नदी द्वीप है, और यह भारत में जिला बनने वाला पहला द्वीप था।"
+      },
+      "pyq": "Assam PSC 2018"
+    },
+    {
+      "question": {
+        "en": "Which of the following is NOT a tributary of the Indus river?",
+        "hi": "निम्नलिखित में से कौन सी नदी सिंधु नदी की सहायक नदी नहीं है?"
+      },
+      "options": {
+        "en": [
+          "Chenab",
+          "Chambal",
+          "Ravi",
+          "Jhelum"
+        ],
+        "hi": [
+          "चिनाब",
+          "चंबल",
+          "रावी",
+          "झेलम"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The major tributaries of the Indus are Jhelum, Chenab, Ravi, Beas, and Sutlej. Chambal is a tributary of the Yamuna river.",
+        "hi": "सिंधु की प्रमुख सहायक नदियां झेलम, चिनाब, रावी, ब्यास और सतलुज हैं। चंबल यमुना नदी की सहायक नदी है।"
+      },
+      "pyq": "MP Police 2017"
+    },
+    {
+      "question": {
+        "en": "Which of the following is the largest tributary of the Krishna river by volume of water?",
+        "hi": "जल की मात्रा के हिसाब से कृष्णा नदी की सबसे बड़ी सहायक नदी निम्नलिखित में से कौन सी है?"
+      },
+      "options": {
+        "en": [
+          "Malaprabha",
+          "Tungabhadra",
+          "Ghataprabha",
+          "Bhima"
+        ],
+        "hi": [
+          "मालप्रभा",
+          "तुंगभद्रा",
+          "घाटप्रभा",
+          "भीमा"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Tungabhadra is the chief tributary of the Krishna river and contributes the maximum water volume to it.",
+        "hi": "तुंगभद्रा कृष्णा नदी की मुख्य सहायक नदी है और इसमें अधिकतम जल की मात्रा का योगदान करती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Under the 1960 Indus Water Treaty, Pakistan has unrestricted rights over which of the following rivers?",
+        "hi": "1960 की सिंधु जल संधि के तहत, पाकिस्तान को निम्नलिखित में से किस नदी पर अप्रतिबंधित अधिकार प्राप्त हैं?"
+      },
+      "options": {
+        "en": [
+          "Chenab, Ravi, Sutlej",
+          "Indus, Jhelum, Chenab",
+          "Indus, Ravi, Beas",
+          "Ravi, Beas, Sutlej"
+        ],
+        "hi": [
+          "चिनाब, रावी, सतलुज",
+          "सिंधु, झेलम, चिनाब",
+          "सिंधु, रावी, ब्यास",
+          "रावी, ब्यास, सतलुज"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The treaty gave Pakistan unrestricted use of the three western rivers: Indus, Jhelum, and Chenab.",
+        "hi": "इस संधि ने पाकिस्तान को तीन पश्चिमी नदियों: सिंधु, झेलम और चिनाब के अप्रतिबंधित उपयोग का अधिकार दिया।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers is known as 'Dakshin Ganga' (Ganga of the South) because of its length and large basin?",
+        "hi": "निम्नलिखित में से किस नदी को उसकी लंबाई और बड़े बेसिन के कारण 'दक्षिण गंगा' कहा जाता है?"
+      },
+      "options": {
+        "en": [
+          "Krishna",
+          "Godavari",
+          "Kaveri",
+          "Mahanadi"
+        ],
+        "hi": [
+          "कृष्णा",
+          "गोदावरी",
+          "कावेरी",
+          "महानदी"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The Godavari river is the longest peninsular river in India and is referred to as 'Dakshin Ganga' or 'Vridha Ganga'.",
+        "hi": "गोदावरी नदी भारत की सबसे लंबी प्रायद्वीपीय नदी है और इसे 'दक्षिण गंगा' या 'वृद्ध गंगा' कहा जाता है।"
+      },
+      "pyq": "SSC CGL 2019"
+    },
+    {
+      "question": {
+        "en": "Which river is famously known as the 'Sorrow of Bihar' due to its frequent course changes and devastating floods?",
+        "hi": "अपने बार-बार मार्ग बदलने और विनाशकारी बाढ़ के कारण किस नदी को 'बिहार का शोक' कहा जाता है?"
+      },
+      "options": {
+        "en": [
+          "Son",
+          "Ghaghara",
+          "Kosi",
+          "Gandak"
+        ],
+        "hi": [
+          "सोन",
+          "घाघरा",
+          "कोसी",
+          "गंडक"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Kosi river is called the 'Sorrow of Bihar' because of its high sediment load, which leads to frequent course shifting and heavy flooding.",
+        "hi": "कोसी नदी को इसके अत्यधिक तलछट भार के कारण 'बिहार का शोक' कहा जाता है, जिससे बार-बार मार्ग परिवर्तन और भारी बाढ़ आती है।"
+      },
+      "pyq": "BPSC 2018"
+    },
+    {
+      "question": {
+        "en": "The Sundarbans Delta, the largest delta in the world, is formed by which of the following rivers?",
+        "hi": "विश्व का सबसे बड़ा डेल्टा, सुंदरबन डेल्टा, निम्नलिखित में से किस नदी द्वारा बनाया गया है?"
+      },
+      "options": {
+        "en": [
+          "Godavari and Krishna",
+          "Ganga and Brahmaputra",
+          "Narmada and Tapti",
+          "Indus and Jhelum"
+        ],
+        "hi": [
+          "गोदावरी और कृष्णा",
+          "गंगा और ब्रह्मपुत्र",
+          "नर्मदा और ताप्ती",
+          "सिंधु और झेलम"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The Sundarbans Delta is formed by the confluence of the Ganga and Brahmaputra rivers before they empty into the Bay of Bengal.",
+        "hi": "सुंदरबन डेल्टा का निर्माण गंगा और ब्रह्मपुत्र नदियों के संगम से होता है, इससे पहले कि वे बंगाल की खाड़ी में गिरती हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following Himalayan rivers is highly flood-prone due to massive sediment accumulation?",
+        "hi": "अत्यधिक तलछट संचय के कारण निम्नलिखित में से कौन सी हिमालयी नदी अत्यधिक बाढ़ प्रवण है?"
+      },
+      "options": {
+        "en": [
+          "Kosi",
+          "Godavari",
+          "Narmada",
+          "Yamuna"
+        ],
+        "hi": [
+          "कोसी",
+          "गोदावरी",
+          "नर्मदा",
+          "यमुना"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The Kosi river is highly flood-prone because it brings down a large amount of sediment from the Himalayas, clogging its channel and causing it to change its course frequently.",
+        "hi": "कोसी नदी अत्यधिक बाढ़ प्रवण है क्योंकि यह हिमालय से बड़ी मात्रा में तलछट लाती है, जिससे इसका मार्ग अवरुद्ध हो जाता है और यह बार-बार अपना मार्ग बदलती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers is NOT a left-bank tributary of the Ganga?",
+        "hi": "निम्नलिखित में से कौन सी नदी गंगा की बाईं ओर की सहायक नदी नहीं है?"
+      },
+      "options": {
+        "en": [
+          "Son",
+          "Ghaghara",
+          "Gomti",
+          "Ramganga"
+        ],
+        "hi": [
+          "सोन",
+          "घाघरा",
+          "गोमती",
+          "रामगंगा"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The Son river is a major right-bank tributary of the Ganga, whereas Ramganga, Gomti, and Ghaghara are left-bank tributaries.",
+        "hi": "सोन नदी गंगा की एक प्रमुख दाईं ओर की सहायक नदी है, जबकि रामगंगा, गोमती और घाघरा बाईं ओर की सहायक नदियां हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "The region of Punjab is historically called the 'Land of Five Rivers'. Which of the following is NOT part of those five rivers?",
+        "hi": "पंजाब क्षेत्र को ऐतिहासिक रूप से 'पांच नदियों की भूमि' कहा जाता है। निम्नलिखित में से कौन सी नदी उन पांच नदियों का हिस्सा नहीं है?"
+      },
+      "options": {
+        "en": [
+          "Yamuna",
+          "Sutlej",
+          "Chenab",
+          "Jhelum"
+        ],
+        "hi": [
+          "यमुना",
+          "सतलुज",
+          "चिनाब",
+          "झेलम"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The five rivers of Punjab are Jhelum, Chenab, Ravi, Beas, and Sutlej. Yamuna is not a part of this group.",
+        "hi": "पंजाब की पांच नदियां झेलम, चिनाब, रावी, ब्यास और सतलुज हैं। यमुना इस समूह का हिस्सा नहीं है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers flows through a rift valley in India?",
+        "hi": "निम्नलिखित में से कौन सी नदी भारत में एक भ्रंश घाटी (रिफ्ट वैली) से होकर बहती है?"
+      },
+      "options": {
+        "en": [
+          "Kaveri",
+          "Krishna",
+          "Narmada",
+          "Godavari"
+        ],
+        "hi": [
+          "कावेरी",
+          "कृष्णा",
+          "नर्मदा",
+          "गोदावरी"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Narmada and Tapti rivers flow westward through rift valleys formed by faulting between the Vindhya and Satpura ranges.",
+        "hi": "नर्मदा और ताप्ती नदियां विंध्य और सतपुड़ा श्रेणियों के बीच फॉल्टिंग द्वारा निर्मित भ्रंश घाटियों से होकर पश्चिम की ओर बहती हैं।"
+      },
+      "pyq": "UPSC CSE 2013"
+    },
+    {
+      "question": {
+        "en": "The river Chenab is formed by the confluence of which two rivers?",
+        "hi": "चिनाब नदी किन दो नदियों के संगम से बनती है?"
+      },
+      "options": {
+        "en": [
+          "Jhelum and Ravi",
+          "Chandra and Bhaga",
+          "Indus and Gilgit",
+          "Beas and Sutlej"
+        ],
+        "hi": [
+          "झेलम और रावी",
+          "चंद्र और भागा",
+          "सिंधु और गिलगित",
+          "ब्यास और सतलुज"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The Chenab river is formed by the confluence of the Chandra and Bhaga rivers at Tandi in Lahaul Valley, Himachal Pradesh.",
+        "hi": "चिनाब नदी का निर्माण हिमाचल प्रदेश के लाहौल घाटी में तांडी में चंद्र और भागा नदियों के संगम से होता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "In which Indian state does the Brahmaputra river enter India first?",
+        "hi": "ब्रह्मपुत्र नदी सर्वप्रथम भारत के किस राज्य में प्रवेश करती है?"
+      },
+      "options": {
+        "en": [
+          "Sikkim",
+          "Arunachal Pradesh",
+          "Meghalaya",
+          "Assam"
+        ],
+        "hi": [
+          "सिक्किम",
+          "अरुणाचल प्रदेश",
+          "मेघालय",
+          "असम"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The Brahmaputra river enters India through Arunachal Pradesh near Namcha Barwa, where it is called the Dihang or Siang.",
+        "hi": "ब्रह्मपुत्र नदी नामचा बरवा के पास अरुणाचल प्रदेश से होकर भारत में प्रवेश करती है, जहाँ इसे दिहांग या सियांग कहा जाता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "The river Beas joins the river Sutlej at which of the following places in Punjab?",
+        "hi": "ब्यास नदी पंजाब में निम्नलिखित में से किस स्थान पर सतलुज नदी से मिलती है?"
+      },
+      "options": {
+        "en": [
+          "Ropar",
+          "Harike",
+          "Pathankot",
+          "Ludhiana"
+        ],
+        "hi": [
+          "रोपड़",
+          "हरीके",
+          "पठानकोट",
+          "लुधियाना"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The Beas river meets the Sutlej river at Harike in the Firozpur district of Punjab, India.",
+        "hi": "ब्यास नदी भारत के पंजाब के फिरोजपुर जिले में हरीके नामक स्थान पर सतलुज नदी से मिलती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers of India crosses the Tropic of Cancer twice?",
+        "hi": "भारत की निम्नलिखित में से कौन सी नदी कर्क रेखा को दो बार पार करती है?"
+      },
+      "options": {
+        "en": [
+          "Tapti",
+          "Luni",
+          "Narmada",
+          "Mahi"
+        ],
+        "hi": [
+          "ताप्ती",
+          "लूनी",
+          "नर्मदा",
+          "माही"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The Mahi river is the only river in India that cuts across the Tropic of Cancer twice, first in Madhya Pradesh and then in Gujarat.",
+        "hi": "माही नदी भारत की एकमात्र ऐसी नदी है जो कर्क रेखा को दो बार काटती है, पहले मध्य प्रदेश में और फिर गुजरात में।"
+      },
+      "pyq": "MPPSC 2018"
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers does NOT flow through Himachal Pradesh?",
+        "hi": "निम्नलिखित में से कौन सी नदी हिमाचल प्रदेश से होकर नहीं बहती है?"
+      },
+      "options": {
+        "en": [
+          "Ravi",
+          "Jhelum",
+          "Sutlej",
+          "Beas"
+        ],
+        "hi": [
+          "रावी",
+          "झेलम",
+          "सतलुज",
+          "ब्यास"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The Jhelum river originates in Jammu and Kashmir (Verinag) and flows into Pakistan without entering Himachal Pradesh.",
+        "hi": "झेलम नदी जम्मू और कश्मीर (वेरीनाग) से निकलती है और हिमाचल प्रदेश में प्रवेश किए बिना पाकिस्तान में चली जाती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers is a right-bank tributary of the Yamuna?",
+        "hi": "निम्नलिखित में से कौन सी नदी यमुना की दाईं ओर की सहायक नदी है?"
+      },
+      "options": {
+        "en": [
+          "Hindan",
+          "Varuna",
+          "Chambal",
+          "Rind"
+        ],
+        "hi": [
+          "हिंडन",
+          "वरुणा",
+          "चंबल",
+          "रिंद"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "Chambal, Sind, Betwa, and Ken are major right-bank tributaries of the Yamuna, originating from the Peninsular plateau.",
+        "hi": "चंबल, सिंध, बेतवा और केन यमुना की प्रमुख दाईं ओर की सहायक नदियां हैं, जो प्रायद्वीपीय पठार से निकलती हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers is NOT an east-flowing river?",
+        "hi": "निम्नलिखित में से कौन सी पूर्व की ओर बहने वाली नदी नहीं है?"
+      },
+      "options": {
+        "en": [
+          "Godavari",
+          "Mahanadi",
+          "Tapti",
+          "Krishna"
+        ],
+        "hi": [
+          "गोदावरी",
+          "महानदी",
+          "ताप्ती",
+          "कृष्णा"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Tapti river is a west-flowing river that empties into the Arabian Sea. Godavari, Krishna, and Mahanadi are east-flowing rivers.",
+        "hi": "ताप्ती नदी पश्चिम की ओर बहने वाली नदी है जो अरब सागर में गिरती है। गोदावरी, कृष्णा और महानदी पूर्व की ओर बहने वाली नदियां हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following river basins is shared by the states of Maharashtra, Karnataka, and Andhra Pradesh?",
+        "hi": "निम्नलिखित में से कौन सा नदी बेसिन महाराष्ट्र, कर्नाटक और आंध्र प्रदेश राज्यों द्वारा साझा किया जाता है?"
+      },
+      "options": {
+        "en": [
+          "Kaveri",
+          "Narmada",
+          "Mahanadi",
+          "Krishna"
+        ],
+        "hi": [
+          "कावेरी",
+          "नर्मदा",
+          "महानदी",
+          "कृष्णा"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The Krishna River basin is shared by Maharashtra, Karnataka, Telangana, and Andhra Pradesh.",
+        "hi": "कृष्णा नदी बेसिन महाराष्ट्र, कर्नाटक, तेलंगाना और आंध्र प्रदेश द्वारा साझा किया जाता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers does NOT flow into the Bay of Bengal?",
+        "hi": "निम्नलिखित में से कौन सी नदी बंगाल की खाड़ी में नहीं गिरती है?"
+      },
+      "options": {
+        "en": [
+          "Krishna",
+          "Mahanadi",
+          "Kaveri",
+          "Narmada"
+        ],
+        "hi": [
+          "कृष्णा",
+          "महानदी",
+          "कावेरी",
+          "नर्मदा"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "Narmada is a major west-flowing river that empties into the Arabian Sea, whereas Mahanadi, Krishna, and Kaveri flow eastwards into the Bay of Bengal.",
+        "hi": "नर्मदा एक प्रमुख पश्चिम की ओर बहने वाली नदी है जो अरब सागर में गिरती है, जबकि महानदी, कृष्णा और कावेरी पूर्व की ओर बंगाल की खाड़ी में बहती हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which river has the highest water discharge (volume of flow) in India?",
+        "hi": "भारत में किस नदी का जल प्रवाह (प्रवाह की मात्रा) सबसे अधिक है?"
+      },
+      "options": {
+        "en": [
+          "Indus",
+          "Ganga",
+          "Godavari",
+          "Brahmaputra"
+        ],
+        "hi": [
+          "सिंधु",
+          "गंगा",
+          "गोदावरी",
+          "ब्रह्मपुत्र"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The Brahmaputra river carries the highest volume of water and sediment discharge among all Indian rivers.",
+        "hi": "ब्रह्मपुत्र नदी सभी भारतीय नदियों में सबसे अधिक जल और तलछट का प्रवाह वहन करती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers is the primary source of water for the Indira Gandhi Canal?",
+        "hi": "निम्नलिखित में से कौन सी नदी इंदिरा गांधी नहर के लिए जल का प्राथमिक स्रोत है?"
+      },
+      "options": {
+        "en": [
+          "Chenab",
+          "Sutlej",
+          "Beas",
+          "Ravi"
+        ],
+        "hi": [
+          "चिनाब",
+          "सतलुज",
+          "ब्यास",
+          "रावी"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The Indira Gandhi Canal starts from the Harike Barrage at the confluence of the Satlej and Beas rivers, with Sutlej being the primary water source.",
+        "hi": "इंदिरा गांधी नहर सतलुज और ब्यास नदियों के संगम पर स्थित हरीके बैराज से शुरू होती है, जिसमें सतलुज प्राथमिक जल स्रोत है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "What is the name of the Brahmaputra river at its origin in Tibet?",
+        "hi": "तिब्बत में अपने उद्गम स्थल पर ब्रह्मपुत्र नदी का नाम क्या है?"
+      },
+      "options": {
+        "en": [
+          "Tsangpo",
+          "Jamuna",
+          "Meghna",
+          "Dihang"
+        ],
+        "hi": [
+          "त्सांगपो",
+          "जमुना",
+          "मेघना",
+          "दिहांग"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The Brahmaputra river originates near Lake Mansarovar in Tibet, where it is known as the Yarlung Tsangpo.",
+        "hi": "ब्रह्मपुत्र नदी तिब्बत में मानसरोवर झील के पास से निकलती है, जहां इसे यारलुंग त्सांगपो के नाम से जाना जाता है।"
+      },
+      "pyq": "UPPSC 2016"
+    },
+    {
+      "question": {
+        "en": "What is the name of the combined stream of the Ganga and Brahmaputra in Bangladesh before it falls into the Bay of Bengal?",
+        "hi": "बंगाल की खाड़ी में गिरने से पहले बांग्लादेश में गंगा और ब्रह्मपुत्र की संयुक्त धारा का नाम क्या है?"
+      },
+      "options": {
+        "en": [
+          "Jamuna",
+          "Padma",
+          "Meghna",
+          "Dihang"
+        ],
+        "hi": [
+          "जमुना",
+          "पद्मा",
+          "मेघना",
+          "दिहांग"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "In Bangladesh, the Ganga is known as Padma and the Brahmaputra as Jamuna. Their combined stream is known as the Meghna, which empties into the Bay of Bengal.",
+        "hi": "बांग्लादेश में गंगा को पद्मा और ब्रह्मपुत्र को जमुना के नाम से जाना जाता है। इनकी संयुक्त धारा को मेघना के नाम से जाना जाता है, जो बंगाल की खाड़ी में गिरती है।"
+      },
+      "pyq": "UPPSC 2015"
+    },
+    {
+      "question": {
+        "en": "The Indus Water Treaty (1960) between India and Pakistan was mediated by which international organization?",
+        "hi": "भारत और पाकिस्तान के बीच सिंधु जल संधि (1960) की मध्यस्थता किस अंतरराष्ट्रीय संगठन ने की थी?"
+      },
+      "options": {
+        "en": [
+          "Asian Development Bank",
+          "United Nations",
+          "World Bank",
+          "International Court of Justice"
+        ],
+        "hi": [
+          "एशियाई विकास बैंक",
+          "संयुक्त राष्ट्र",
+          "विश्व बैंक",
+          "अंतरराष्ट्रीय न्यायालय"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Indus Water Treaty was signed in Karachi on September 19, 1960, by Indian PM Jawaharlal Nehru and Pakistani President Ayub Khan, mediated by the World Bank.",
+        "hi": "सिंधु जल संधि पर 19 सितंबर 1960 को कराची में भारतीय पीएम जवाहरलाल नेहरू और पाकिस्तानी राष्ट्रपति अयूब खान ने हस्ताक्षर किए थे, जिसकी मध्यस्थता विश्व बैंक ने की थी।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers has its source in the Kailash Range in Tibet, very close to the sources of the Indus and Sutlej?",
+        "hi": "निम्नलिखित में से किस नदी का स्रोत तिब्बत में कैलाश श्रेणी में है, जो सिंधु और सतलुज के स्रोतों के बहुत करीब है?"
+      },
+      "options": {
+        "en": [
+          "Jhelum",
+          "Brahmaputra",
+          "Yamuna",
+          "Ganga"
+        ],
+        "hi": [
+          "झेलम",
+          "ब्रह्मपुत्र",
+          "यमुना",
+          "गंगा"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The Brahmaputra, Indus, and Sutlej rivers all originate in close proximity near Lake Mansarovar and Mount Kailash in Tibet.",
+        "hi": "ब्रह्मपुत्र, सिंधु और सतलुज नदियां सभी तिब्बत में मानसरोवर झील और कैलाश पर्वत के पास एक दूसरे के बहुत करीब से निकलती हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "The river Brahmaputra, after entering India, is joined by which of the following tributaries in Assam?",
+        "hi": "ब्रह्मपुत्र नदी, भारत में प्रवेश करने के बाद, असम में निम्नलिखित में से किस सहायक नदी से मिलती है?"
+      },
+      "options": {
+        "en": [
+          "Kosi and Gandak",
+          "Yamuna and Son",
+          "Teesta and Mahananda",
+          "Dibang and Lohit"
+        ],
+        "hi": [
+          "कोसी और गंडक",
+          "यमुना और सोन",
+          "तीस्ता और महानंदा",
+          "दिबांग और लोहित"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "The Dihang (Brahmaputra) is joined by the Dibang and Lohit rivers at the head of the Assam Valley to form the Brahmaputra river.",
+        "hi": "दिहांग (ब्रह्मपुत्र) असम घाटी के मुहाने पर दिबांग और लोहित नदियों से मिलकर ब्रह्मपुत्र नदी का निर्माण करती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following west-flowing rivers forms an estuary instead of a delta?",
+        "hi": "निम्नलिखित में से कौन सी पश्चिम की ओर बहने वाली नदी डेल्टा के बजाय एस्चुअरी (ज्वारनदमुख) बनाती है?"
+      },
+      "options": {
+        "en": [
+          "Tapti",
+          "Krishna",
+          "Mahanadi",
+          "Godavari"
+        ],
+        "hi": [
+          "ताप्ती",
+          "कृष्णा",
+          "महानदी",
+          "गोदावरी"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "West-flowing rivers like Narmada and Tapti flow through hard rocky terrains and high gradients, preventing them from carrying enough silt to form deltas; hence they form estuaries.",
+        "hi": "नर्मदा और ताप्ती जैसी पश्चिम की ओर बहने वाली नदियां कठोर चट्टानी इलाकों और तीव्र ढाल से होकर बहती हैं, जिससे वे डेल्टा बनाने के लिए पर्याप्त गाद नहीं ले जा पातीं; इसलिए वे एस्चुअरी बनाती हैं।"
+      },
+      "pyq": "UPSC CSE 2014"
+    },
+    {
+      "question": {
+        "en": "Which river system has the largest river basin in the Indian subcontinent region?",
+        "hi": "भारतीय उपमहाद्वीप क्षेत्र में किस नदी प्रणाली का नदी बेसिन सबसे बड़ा है?"
+      },
+      "options": {
+        "en": [
+          "Godavari",
+          "Ganga",
+          "Indus",
+          "Brahmaputra"
+        ],
+        "hi": [
+          "गोदावरी",
+          "गंगा",
+          "सिंधु",
+          "ब्रह्मपुत्र"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Indus River basin is one of the largest river basins in the world, covering a massive area across Tibet, India, and Pakistan.",
+        "hi": "सिंधु नदी बेसिन दुनिया के सबसे बड़े नदी बेसिनों में से एक है, जो तिब्बत, भारत और पाकिस्तान में एक विशाल क्षेत्र को कवर करता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "The Chambal river, known for its badland topography (ravines), is a tributary of which river?",
+        "hi": "चंबल नदी, जो अपने बीहड़ (बैडलैंड टोपोग्राफी) के लिए जानी जाती है, किस नदी की सहायक नदी है?"
+      },
+      "options": {
+        "en": [
+          "Ganga",
+          "Yamuna",
+          "Indus",
+          "Narmada"
+        ],
+        "hi": [
+          "गंगा",
+          "यमुना",
+          "सिंधु",
+          "नर्मदा"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The Chambal river is a major tributary of the Yamuna river, joining it in Uttar Pradesh.",
+        "hi": "चंबल नदी यमुना नदी की एक प्रमुख सहायक नदी है, जो उत्तर प्रदेश में इसमें मिलती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following is a major right-bank tributary of the Ganga?",
+        "hi": "निम्नलिखित में से कौन सी गंगा की एक प्रमुख दाईं ओर की सहायक नदी है?"
+      },
+      "options": {
+        "en": [
+          "Ghaghara",
+          "Kosi",
+          "Son",
+          "Gandak"
+        ],
+        "hi": [
+          "घाघरा",
+          "कोसी",
+          "सोन",
+          "गंडक"
+        ]
+      },
+      "answer": 2,
+      "explanation": {
+        "en": "The Son river is a major right-bank tributary of the Ganga, originating from the Amarkantak plateau.",
+        "hi": "सोन नदी गंगा की एक प्रमुख दाईं ओर की सहायक नदी है, जो अमरकंटक पठार से निकलती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "In which year was the landmark Indus Water Treaty signed between India and Pakistan?",
+        "hi": "भारत और पाकिस्तान के बीच ऐतिहासिक सिंधु जल संधि पर किस वर्ष हस्ताक्षर किए गए थे?"
+      },
+      "options": {
+        "en": [
+          "1950",
+          "1960",
+          "1947",
+          "1972"
+        ],
+        "hi": [
+          "1950",
+          "1960",
+          "1947",
+          "1972"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The Indus Water Treaty was signed in Karachi on September 19, 1960, to distribute the waters of the Indus system.",
+        "hi": "सिंधु प्रणाली के जल के बंटवारे के लिए 19 सितंबर 1960 को कराची में सिंधु जल संधि पर हस्ताक्षर किए गए थे।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following is the correct geographical definition of an estuary, which is formed by rivers like Narmada?",
+        "hi": "एक एस्चुअरी (ज्वारनदमुख) की सही भौगोलिक परिभाषा निम्नलिखित में से कौन सी है, जो नर्मदा जैसी नदियों द्वारा बनाई जाती है?"
+      },
+      "options": {
+        "en": [
+          "A lake formed when a meandering river bend is cut off",
+          "A triangular tract of sediment deposited at the mouth of a river",
+          "A deep valley with very steep sides carved by a river",
+          "A semi-enclosed coastal body of water where freshwater from rivers mixes with saltwater from the ocean"
+        ],
+        "hi": [
+          "एक विसर्पी नदी के मोड़ के कट जाने से बनी झील",
+          "नदी के मुहाने पर जमा तलछट का एक त्रिकोणीय क्षेत्र",
+          "नदी द्वारा काटी गई बहुत खड़ी ढलानों वाली एक गहरी घाटी",
+          "एक अर्ध-बंद तटीय जल निकाय जहां नदियों का मीठा पानी समुद्र के खारे पानी के साथ मिलता है"
+        ]
+      },
+      "answer": 3,
+      "explanation": {
+        "en": "An estuary is a coastal area where freshwater from rivers meets and mixes with saltwater from the ocean. This is typical of west-flowing rivers like Narmada and Tapti.",
+        "hi": "एक एस्चुअरी एक तटीय क्षेत्र है जहां नदियों का मीठा पानी समुद्र के खारे पानी से मिलता और मिश्रित होता है। यह नर्मदा और ताप्ती जैसी पश्चिम की ओर बहने वाली नदियों की विशेषता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers is known for its high seasonal variability and is heavily dependent on the Southwest Monsoon?",
+        "hi": "निम्नलिखित में से कौन सी नदी अपनी उच्च मौसमी परिवर्तनशीलता के लिए जानी जाती है और दक्षिण-पश्चिम मानसून पर बहुत अधिक निर्भर है?"
+      },
+      "options": {
+        "en": [
+          "Ganga",
+          "Kaveri",
+          "Brahmaputra",
+          "Indus"
+        ],
+        "hi": [
+          "गंगा",
+          "कावेरी",
+          "ब्रह्मपुत्र",
+          "सिंधु"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Peninsular rivers like the Kaveri are rain-fed and highly seasonal, depending directly on monsoon rains, unlike perennial Himalayan rivers.",
+        "hi": "कावेरी जैसी प्रायद्वीपीय नदियां वर्षा पर निर्भर और अत्यधिक मौसमी होती हैं, जो बारहमासी हिमालयी नदियों के विपरीत सीधे मानसून की बारिश पर निर्भर करती हैं।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "The city of Srinagar is located on the banks of which of the following rivers?",
+        "hi": "श्रीनगर शहर निम्नलिखित में से किस नदी के तट पर स्थित है?"
+      },
+      "options": {
+        "en": [
+          "Ravi",
+          "Jhelum",
+          "Chenab",
+          "Sutlej"
+        ],
+        "hi": [
+          "रावी",
+          "झेलम",
+          "चिनाब",
+          "सतलुज"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Srinagar, the summer capital of Jammu and Kashmir, is situated on the banks of the Jhelum River, a major tributary of the Indus.",
+        "hi": "जम्मू-कश्मीर की ग्रीष्मकालीन राजधानी श्रीनगर, सिंधु की एक प्रमुख सहायक नदी झेलम के तट पर स्थित है।"
+      },
+      "pyq": "JKPSC 2019"
+    },
+    {
+      "question": {
+        "en": "What is the primary source of water for the Himalayan rivers, making them perennial in nature?",
+        "hi": "हिमालयी नदियों के जल का प्राथमिक स्रोत क्या है, जो उन्हें बारहमासी बनाता है?"
+      },
+      "options": {
+        "en": [
+          "Oceanic tides",
+          "Glaciers and rainfall",
+          "Only rainfall",
+          "Only groundwater"
+        ],
+        "hi": [
+          "समुद्री ज्वार",
+          "हिमनद और वर्षा",
+          "केवल वर्षा",
+          "केवल भूजल"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Himalayan rivers are perennial because they receive water from both the melting of glaciers (during dry seasons) and rainfall (during monsoons).",
+        "hi": "हिमालयी नदियां बारहमासी होती हैं क्योंकि उन्हें हिमनदों के पिघलने (शुष्क मौसम के दौरान) और वर्षा (मानसून के दौरान) दोनों से जल प्राप्त होता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "The river Ravi originates near which of the following mountain passes in Himachal Pradesh?",
+        "hi": "रावी नदी हिमाचल प्रदेश में निम्नलिखित में से किस दर्रे के पास से निकलती है?"
+      },
+      "options": {
+        "en": [
+          "Shipki La",
+          "Rohtang Pass",
+          "Nathu La",
+          "Bara Lacha La"
+        ],
+        "hi": [
+          "शिपकी ला",
+          "रोहतांग दर्रा",
+          "नाथू ला",
+          "बारा लाचा ला"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The Ravi river originates near the Rohtang Pass in the Kangra district of Himachal Pradesh.",
+        "hi": "रावी नदी हिमाचल प्रदेश के कांगड़ा जिले में रोहतांग दर्रे के पास से निकलती है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following rivers has its basin shared by the maximum number of Indian states?",
+        "hi": "निम्नलिखित में से किस नदी के बेसिन को सर्वाधिक संख्या में भारतीय राज्य साझा करते हैं?"
+      },
+      "options": {
+        "en": [
+          "Mahanadi",
+          "Ganga",
+          "Krishna",
+          "Godavari"
+        ],
+        "hi": [
+          "महानदी",
+          "गंगा",
+          "कृष्णा",
+          "गोदावरी"
+        ]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "The Ganga Basin is the largest in India and is shared by 11 states (including major states like Uttarakhand, UP, Bihar, WB, MP, Rajasthan, etc.).",
+        "hi": "गंगा बेसिन भारत में सबसे बड़ा है और इसे 11 राज्यों (उत्तराखंड, यूपी, बिहार, पश्चिम बंगाल, एमपी, राजस्थान आदि जैसे प्रमुख राज्यों सहित) द्वारा साझा किया जाता है।"
+      },
+      "pyq": ""
+    },
+    {
+      "question": {
+        "en": "Which of the following is a left-bank tributary of the Ganga?",
+        "hi": "निम्नलिखित में से कौन सी गंगा की बाईं ओर की सहायक नदी है?"
+      },
+      "options": {
+        "en": [
+          "Gandak",
+          "Chambal",
+          "Son",
+          "Yamuna"
+        ],
+        "hi": [
+          "गंडक",
+          "चंबल",
+          "सोन",
+          "यमुना"
+        ]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Gandak is a left-bank tributary of the Ganga. Yamuna and Son are right-bank tributaries.",
+        "hi": "गंडक गंगा की बाईं ओर की सहायक नदी है। यमुना और सोन दाईं ओर की सहायक नदियां हैं।"
+      },
+      "pyq": ""
+    }
+  ]
+}
