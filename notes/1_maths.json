@@ -1,0 +1,870 @@
+{
+  "id": "qikam9wie4",
+  "text": "1. maths",
+  "collapsed": false,
+  "children": [
+    {
+      "id": "u28ux6xtqcm",
+      "text": "Number System",
+      "collapsed": true,
+      "important": false,
+      "note": "",
+      "youtube": "",
+      "children": [
+        {
+          "id": "c019d0uzxw4",
+          "text": "Sum of Natural Numbers",
+          "collapsed": true,
+          "important": false,
+          "note": "IMPORTANT SUM FORMULAS\n│\n├── 1. Sum of First n Natural Numbers\n│   └── S = n(n + 1) / 2\n│\n├── 2. Sum of Squares of First n Natural Numbers\n│   └── S = n(n + 1)(2n + 1) / 6\n│\n├── 3. Sum of Cubes of First n Natural Numbers\n│   └── S = [n(n + 1) / 2]²\n│\n├── 4. Sum of First n Even Numbers\n│   └── S = n(n + 1)\n│\n├── 5. Sum of First n Odd Numbers\n│   └── S = n²\n│\n├── 6. Sum of Consecutive Numbers\n│   └── Sum = n/2 × (First + Last)\n│\n├── 7. Arithmetic Progression (AP) Sum\n│   └── S = n/2 [2a + (n − 1)d]\n│\n├── 8. Geometric Progression (GP) Sum\n│   │\n│   ├── Finite GP\n│   │   └── S = a(rⁿ − 1)/(r − 1)\n│   │\n│   └── Infinite GP (|r| < 1)\n│       └── S = a/(1 − r)\n│\n├── 9. Sum of First n Multiples of x\n│   └── S = x × n(n + 1)/2\n│\n├── 10. Sum of Integers from a to b\n│   └── S = [(a + b) × Number of Terms]/2",
+          "youtube": "",
+          "children": [],
+          "_h": 41,
+          "_x": 601,
+          "_y": 60.5,
+          "_realH": 41,
+          "_realW": 228
+        },
+        {
+          "id": "1tdr9gak7nj",
+          "text": "Sum of Even/Odd Numbers",
+          "collapsed": true,
+          "important": false,
+          "note": "",
+          "youtube": "",
+          "children": [],
+          "_h": 41,
+          "_x": 601,
+          "_y": 125.5,
+          "_realH": 41,
+          "_realW": 246
+        },
+        {
+          "id": "a700q16i88l",
+          "text": "Dividend = Divisor x quotient + Remainder",
+          "collapsed": true,
+          "important": false,
+          "note": "",
+          "youtube": "",
+          "children": [],
+          "_h": 41,
+          "_x": 601,
+          "_y": 190.5,
+          "_realH": 41,
+          "_realW": 348
+        }
+      ],
+      "_h": 41,
+      "_x": 313,
+      "_y": 60.5,
+      "_realH": 41,
+      "_realW": 168
+    },
+    {
+      "id": "peh0f0dhq4",
+      "text": "Proficiency",
+      "collapsed": true,
+      "important": false,
+      "note": "QUESTION:\n│\n├── From a sample of 200 software engineers, determine the ratio of those proficient in Python to those proficient in Java.\n│\n├── Given:\n│   ├── Python & Java = 50\n│   ├── Python only = 70\n│   ├── Java only = 60\n│   └── Neither = 20\n│\n├── SOLUTION:\n│   ├── Python = 70 + 50 = 120\n│   ├── Java = 60 + 50 = 110\n│\n└── ANSWER:\n    └── Ratio = 120 : 110 = 12 : 11",
+      "youtube": "",
+      "examHistory": [
+        {
+          "exam": "CGL",
+          "year": "2025"
+        }
+      ],
+      "children": [],
+      "_h": 41,
+      "_x": 313,
+      "_y": 125.5,
+      "_realH": 41,
+      "_realW": 133
+    },
+    {
+      "id": "vqz3jhd0rnm",
+      "text": "Profit and loss",
+      "collapsed": true,
+      "important": false,
+      "note": "PROFIT & LOSS ⭐ (SSC CGL)\n│\n├── 🔰 Basics\n│   ├── CP → Cost Price (खरीद मूल्य)\n│   ├── SP → Selling Price (विक्रय मूल्य)\n│   ├── Profit → SP - CP\n│   └── Loss → CP - SP\n│\n├── 📊 Percentage & Formulas ⭐\n│   ├── Profit% = (Profit / CP) × 100\n│   ├── Loss% = (Loss / CP) × 100\n│   ├── SP = CP × (100 + Profit%) / 100\n│   ├── SP = CP × (100 - Loss%) / 100\n│   ├── CP = SP × 100 / (100 + Profit%)\n│   └── CP = SP × 100 / (100 - Loss%)\n│\n├── 🔄 Successive Changes ⭐\n│   ├── Net % = a + b + (ab/100)\n│   └── Use sign (+ profit, - loss)\n│\n├── ⚖️ Discount & MP\n│   ├── Discount = MP - SP\n│   ├── SP = MP × (100 - discount%) / 100\n│   └── MP = CP × (100 + markup%) / 100\n│\n├── ⚠️ Important Concepts ⭐\n│   ├── False Weight → Gain% = (error / true weight) × 100\n│   ├── Profit on SP vs CP\n│   ├── Equal Profit & Loss → Loss% = x² / 100\n│   └── Successive Discount → a + b - (ab/100)\n│\n├── 🔥 Shortcut Tricks\n│   ├── 20% → ×1.2 / ×0.8\n│   ├── 25% → ×5/4 / ×3/4\n│   └── 50% → ×3/2 / ×1/2\n│\n├── 📌 Important Cases ⭐\n│   ├── SP same → CP ratio = (100+profit%) : (100-loss%)\n│   ├── CP same → SP ratio = (100+profit%) : (100-loss%)\n│   └── Profit = Loss → always overall loss\n│\n└── ⚡ Quick Revision\n    ├── Profit = SP - CP\n    ├── Loss = CP - SP\n    ├── % always on CP\n    └── Successive → a + b + ab/100",
+      "youtube": "",
+      "examHistory": [],
+      "children": [
+        {
+          "id": "uygde78y0b",
+          "text": "sp + cp + Profit",
+          "collapsed": true,
+          "important": false,
+          "note": "Q. A shopkeeper increases the selling price of an article by 15%. After increasing the selling price, the profit percentage changes from 5% to 15%. The percentage increase in the cost price is:\n\nAnswer: 5%\n\nExplanation:\n\nLet initial CP = 100\n\nInitial profit = 5%\n⇒ SP₁ = 100 + 5 = 105\n\nSP increased by 15%\n⇒ SP₂ = 105 × 115/100 = 120.75\n\nNow new profit = 15%\n⇒ CP₂ = SP₂ × 100 / 115\n⇒ CP₂ = 120.75 × 100 / 115 = 105\n\nIncrease in CP = 105 − 100 = 5\n\nPercentage increase = (5 / 100) × 100 = 5%",
+          "youtube": "https://youtube.com/shorts/LOZFOMnQMXQ",
+          "examHistory": [
+            {
+              "exam": "CPO",
+              "year": "2022"
+            }
+          ],
+          "children": [],
+          "_h": 41,
+          "_x": 587,
+          "_y": 190.5,
+          "_realH": 41,
+          "_realW": 161
+        },
+        {
+          "id": "2dpq7lsca52",
+          "text": "Partnership",
+          "collapsed": true,
+          "important": false,
+          "note": "",
+          "youtube": "",
+          "examHistory": [],
+          "children": [
+            {
+              "id": "rvf2goqjnt",
+              "text": "Investment × Time",
+              "collapsed": true,
+              "important": false,
+              "note": "Tag:\nPartnership → Investment × Time\n\nQuestion:\nArvind started a business by investing ₹80,000. After 4 months, Bhavin joined with ₹1,20,000. At the end of 8 months from the start, Chandan joined with ₹1,60,000. If the total profit is ₹1,05,000 at the end of the year, find the share of Chandan.\n\nअरविंद ने ₹80,000 निवेश करके एक व्यवसाय शुरू किया। 4 महीने बाद, भाविन ₹1,20,000 के साथ शामिल हो गया। शुरुआत से 8 महीने के अंत में, चंदन ₹1,60,000 के साथ शामिल हो गया। यदि कुल लाभ ₹1,05,000 है, तो चंदन का हिस्सा ज्ञात कीजिए।\n\nOptions:\nA) ₹26,500\nB) ₹26,000\nC) ₹26,200\nD) ₹26,250\n\nSolution:\n\nProfit ∝ Investment × Time\n\nArvind = 80,000 × 12 = 9,60,000\nBhavin = 1,20,000 × 8 = 9,60,000\nChandan = 1,60,000 × 4 = 6,40,000\n\nProfit Ratio:\n\n9,60,000 : 9,60,000 : 6,40,000\n= 3 : 3 : 2\n\nTotal Ratio = 3 + 3 + 2 = 8\n\nChandan's Share\n\n= (2/8) × 1,05,000\n= ₹26,250\n\nAnswer:\n₹26,250 (Option D)\n\nShortcut:\n80 × 12 : 120 × 8 : 160 × 4\n= 960 : 960 : 640\n= 3 : 3 : 2\n\nChandan's Share\n= (2/8) × 1,05,000\n= ₹26,250",
+              "youtube": "",
+              "examHistory": [
+                {
+                  "exam": "CGL",
+                  "year": "2025"
+                }
+              ],
+              "children": [],
+              "_h": 41,
+              "_x": 843,
+              "_y": 255.5,
+              "_realH": 41,
+              "_realW": 185
+            },
+            {
+              "id": "2hjt3t7xzrf",
+              "text": "Investment × Time",
+              "collapsed": true,
+              "important": false,
+              "note": "Question:\nA and B start a business. A invests ₹80,000 for 9 months, B invests ₹1,20,000 for 6 months. What is B's share of a ₹45,000 profit?\n\nSolution:\nProfit ∝ Investment × Time\n\nA’s investment = 80,000 × 9 = 7,20,000\nB’s investment = 1,20,000 × 6 = 7,20,000\n\nProfit ratio = 1 : 1\n\nB’s share = (1/2) × 45,000\n= ₹22,500\n\nAnswer: ₹22,500",
+              "youtube": "",
+              "examHistory": [
+                {
+                  "exam": "CGL",
+                  "year": "2025"
+                }
+              ],
+              "children": [],
+              "_h": 41,
+              "_x": 843,
+              "_y": 320.5,
+              "_realH": 41,
+              "_realW": 185
+            },
+            {
+              "id": "n7s12z23vpi",
+              "text": "Working Partner",
+              "collapsed": true,
+              "important": false,
+              "note": "Tag:\nPartnership → Working Partner\n\nQuestion:\nA and B contribute to a business investment in the ratio 3 : 5. They earn a profit of ₹64,000. A is a working partner and receives 10% of the profit extra. What is A's total share?\n\nA और B किसी व्यवसाय में 3 : 5 के अनुपात में निवेश करते हैं। वे ₹64,000 का लाभ कमाते हैं। A एक कार्यकारी (Working) साझेदार है और उसे लाभ का 10% अतिरिक्त मिलता है। A का कुल हिस्सा क्या है?\n\nOptions:\nA) ₹26,500\nB) ₹28,000\nC) ₹38,500\nD) ₹36,000\n\nSolution:\n\nTotal Profit = ₹64,000\n\nA receives 10% of profit extra as working partner.\n\nExtra share of A\n\n= 10% of ₹64,000\n= ₹6,400\n\nRemaining profit to be divided\n\n= ₹64,000 − ₹6,400\n= ₹57,600\n\nInvestment ratio\n\nA : B = 3 : 5\n\nA's share from remaining profit\n\n= (3/8) × 57,600\n= ₹21,600\n\nTotal share of A\n\n= ₹21,600 + ₹6,400\n= ₹28,000\n\nAnswer:\n₹28,000 (Option B)\n\nShortcut:\n\n10% of ₹64,000 = ₹6,400\n\nRemaining = ₹57,600\n\nA's share = (3/8) × 57,600\n= ₹21,600\n\nTotal = ₹21,600 + ₹6,400\n= ₹28,000\n\nAnswer:\n₹28,000",
+              "youtube": "",
+              "examHistory": [
+                {
+                  "exam": "CGL",
+                  "year": "2025"
+                }
+              ],
+              "children": [],
+              "_h": 41,
+              "_x": 843,
+              "_y": 385.5,
+              "_realH": 41,
+              "_realW": 168
+            }
+          ],
+          "_h": 41,
+          "_x": 587,
+          "_y": 255.5,
+          "_realH": 41,
+          "_realW": 136
+        },
+        {
+          "id": "gqbv56lviz",
+          "text": "Dishonest",
+          "collapsed": true,
+          "important": false,
+          "note": "Question:\nA dishonest dealer professes to sell his goods at cost price but uses a weight of 900 grams for a kilogram. What is his gain percentage?\n\nएक बेईमान दुकानदार वस्तु को क्रय मूल्य पर बेचने का दावा करता है, लेकिन 1 किलोग्राम के स्थान पर केवल 900 ग्राम तौलता है। उसका लाभ प्रतिशत कितना है?\n\nOptions:\nA) 10%\nB) 12.5%\nC) 9.09%\nD) 11.11%\n\nSolution:\nCost Price of 1000 g = Selling Price of 1000 g\n\nBut dealer gives only 900 g.\n\nGain = (1000 − 900) = 100 g\n\nGain % =\n(100 / 900) × 100\n= 11.11%\n\nAnswer: 11.11%\n(Option D)",
+          "youtube": "",
+          "examHistory": [
+            {
+              "exam": "CHSL",
+              "year": "2021"
+            }
+          ],
+          "children": [],
+          "_h": 41,
+          "_x": 587,
+          "_y": 320.5,
+          "_realH": 41,
+          "_realW": 125
+        },
+        {
+          "id": "wkt2l8ad18r",
+          "text": "Profit ∝ Investment × Time",
+          "collapsed": true,
+          "important": false,
+          "note": "Question:\nArvind started a business by investing ₹80,000. After 4 months, Bhavin joined with ₹1,20,000. At the end of 8 months from the start, Chandan joined with ₹1,60,000. If the total profit is ₹1,05,000 at the end of the year, find the share of Chandan.\n\nअरविंद ने ₹80,000 निवेश करके एक व्यवसाय शुरू किया। 4 महीने बाद, भाविन ₹1,20,000 के साथ शामिल हो गया। शुरुआत से 8 महीने के अंत में, चंदन ₹1,60,000 के साथ शामिल हो गया। यदि कुल लाभ ₹1,05,000 है, तो चंदन का हिस्सा ज्ञात कीजिए।\n\nOptions:\nA) ₹26,500\nB) ₹26,000\nC) ₹26,200\nD) ₹26,250\n\nSolution:\n\nProfit ∝ Investment × Time\n\nArvind = 80,000 × 12 = 9,60,000\nBhavin = 1,20,000 × 8 = 9,60,000\nChandan = 1,60,000 × 4 = 6,40,000\n\nRatio:\n\n9,60,000 : 9,60,000 : 6,40,000\n= 3 : 3 : 2\n\nTotal ratio = 3 + 3 + 2 = 8\n\nChandan's share\n\n= (2/8) × 1,05,000\n= 26,250\n\nAnswer: ₹26,250\n(Option D)",
+          "youtube": "",
+          "examHistory": [
+            {
+              "exam": "CGL",
+              "year": "2025"
+            }
+          ],
+          "children": [],
+          "_h": 41,
+          "_x": 587,
+          "_y": 385.5,
+          "_realH": 41,
+          "_realW": 236
+        },
+        {
+          "id": "hwm7rv3pzna",
+          "text": "Investment Return",
+          "collapsed": true,
+          "important": false,
+          "note": "",
+          "youtube": "",
+          "examHistory": [],
+          "children": [
+            {
+              "id": "ynkh4thtpza",
+              "text": "Rent Calculation",
+              "collapsed": true,
+              "important": false,
+              "note": "Question:\nA landlord bought a flat for ₹8,00,000. He wants to earn a 9% annual return on his investment after paying ₹2,000 per month for maintenance. What should be the monthly rent he charges?\n\nएक मकान मालिक ने ₹8,00,000 में एक फ्लैट खरीदा। वह रखरखाव के लिए हर महीने ₹2,000 का भुगतान करने के बाद अपने निवेश पर 9% वार्षिक रिटर्न कमाना चाहता है। उसे हर महीने कितना किराया लेना चाहिए?\n\nOptions:\nA) ₹7,000\nB) ₹7,500\nC) ₹8,000\nD) ₹8,500\n\nSolution:\n\n9% of 8,00,000 = 72,000\n\nAdd yearly maintenance:\n72,000 + (2,000 × 12)\n= 72,000 + 24,000\n= 96,000\n\nMonthly Rent\n= 96,000 ÷ 12\n= ₹8,000",
+              "youtube": "",
+              "examHistory": [
+                {
+                  "exam": "CGL",
+                  "year": "2025"
+                }
+              ],
+              "children": [],
+              "_h": 41,
+              "_x": 891,
+              "_y": 450.5,
+              "_realH": 41,
+              "_realW": 172
+            }
+          ],
+          "_h": 41,
+          "_x": 587,
+          "_y": 450.5,
+          "_realH": 41,
+          "_realW": 184
+        },
+        {
+          "id": "lmfjzpirfmo",
+          "text": "Marked Price",
+          "collapsed": true,
+          "important": false,
+          "note": "",
+          "youtube": "",
+          "examHistory": [],
+          "children": [
+            {
+              "id": "o3ufrqtef1",
+              "text": "Successive Discount",
+              "collapsed": true,
+              "important": false,
+              "note": "Tag:\nProfit & Loss → Marked Price → Successive Discount\n\nQuestion:\nA retailer marks an air conditioner 80% above its cost price. He offers a first discount of 25% on the marked price. During a festive offer, an additional discount of 10% is applied on the already discounted price. If the final selling price is ₹15,552, what is the approximate cost price of the air conditioner?\n\nएक खुदरा विक्रेता एक एयर कंडीशनर को उसके लागत मूल्य से 80% अधिक मूल्य पर बेचता है। वह अंकित मूल्य पर 25% की पहली छूट प्रदान करता है। एक त्यौहारी ऑफर के दौरान, पहले से छूट वाले मूल्य पर 10% की अतिरिक्त छूट लागू की जाती है। यदि अंतिम विक्रय मूल्य ₹15,552 है, तो एयर कंडीशनर का अनुमानित लागत मूल्य क्या है?\n\nOptions:\nA) ₹9,000\nB) ₹9,200\nC) ₹12,800\nD) ₹10,000\n\nSolution:\n\nLet Cost Price = CP\n\nMarked Price = 180% of CP\n\nMP = 1.8 × CP\n\nAfter first discount of 25%:\n\nPrice = 1.8 × CP × 75/100\n\nAfter additional discount of 10%:\n\nSP = 1.8 × CP × 75/100 × 90/100\n\n15,552 = 1.215 × CP\n\nCP = 15,552 / 1.215\n\nCP = ₹12,800\n\nAnswer:\n₹12,800 (Option C)\n\nShortcut:\n\nSuccessive Discount Factor\n\n= 180% × 75% × 90%\n= 1.8 × 0.75 × 0.90\n= 1.215\n\nCP = 15,552 ÷ 1.215\n= ₹12,800",
+              "youtube": "",
+              "examHistory": [
+                {
+                  "exam": "CGL",
+                  "year": "2025"
+                }
+              ],
+              "children": [],
+              "_h": 41,
+              "_x": 853,
+              "_y": 515.5,
+              "_realH": 41,
+              "_realW": 199
+            }
+          ],
+          "_h": 41,
+          "_x": 587,
+          "_y": 515.5,
+          "_realH": 41,
+          "_realW": 146
+        },
+        {
+          "id": "f116m6u00bs",
+          "text": "Discount + Free Items",
+          "collapsed": true,
+          "important": false,
+          "note": "Tag:\nProfit & Loss → Discount + Free Items\n\nQuestion:\nA toy manufacturer produced 1200 toy cars at a total cost of ₹90,000. He donated 200 cars to a charity event. For the rest, he announced a 10% discount on the market price of ₹120 per car. He also offered 2 toy cars free for every 8 toy cars purchased. If all 1200 toy cars were distributed, what is his overall gain or loss percentage?\n\nएक खिलौना निर्माता ने ₹90,000 की कुल लागत से 1200 खिलौना कारें बनाई। उसने 200 कारें एक चैरिटी कार्यक्रम में दान कर दीं। बाकी के लिए, उसने ₹120 प्रति कार के बाजार मूल्य पर 10% की छूट की घोषणा की। उसने खरीदी गई हर 8 खिलौना कारों के लिए 2 खिलौना कारें मुफ्त देने की भी पेशकश की। यदि सभी 1200 खिलौना कारें वितरित की गईं, तो उसका कुल लाभ या हानि प्रतिशत क्या है?\n\nOptions:\nA) 4% Loss\nB) 4% Profit\nC) 5% Loss\nD) 5% Profit\n\nSolution:\n\nTotal cars produced = 1200\n\nDonated cars = 200\n\nRemaining cars = 1000\n\nOffer: Buy 8, Get 2 Free\n\nThus, for every 10 cars distributed,\npayment is received for only 8 cars.\n\nIf 1000 cars are distributed,\n\nPaid cars = (8/10) × 1000\n= 800 cars\n\nSelling price per paid car\n\n= 120 × 90%\n= ₹108\n\nTotal Revenue\n\n= 800 × 108\n= ₹86,400\n\nTotal Cost\n\n= ₹90,000\n\nLoss\n\n= 90,000 − 86,400\n= ₹3,600\n\nLoss %\n\n= (3600 / 90000) × 100\n= 4%\n\nAnswer:\n4% Loss (Option A)\n\nShortcut:\n\n1000 cars sold under Buy 8 Get 2 Free\n\n⇒ Revenue received for only 800 cars\n\nSP per car = 120 × 90%\n= ₹108\n\nRevenue = 800 × 108\n= ₹86,400\n\nLoss = 90,000 − 86,400\n= ₹3,600\n\nLoss % = 4%",
+          "youtube": "",
+          "examHistory": [
+            {
+              "exam": "CGL",
+              "year": "2025"
+            }
+          ],
+          "children": [],
+          "_h": 41,
+          "_x": 587,
+          "_y": 580.5,
+          "_realH": 41,
+          "_realW": 207
+        },
+        {
+          "id": "dtppxtih13",
+          "text": "Mixture & Alligation",
+          "collapsed": true,
+          "important": false,
+          "note": "Tag:\nProfit & Loss → Mixture & Alligation\n\nQuestion:\nA candy shop owner buys three kinds of candies: red, blue, and green. Red candies are purchased at 3 for ₹15, blue candies at 4 for ₹18, and green candies at 5 for ₹22. He mixes them in the ratio 1 : 1 : 2. He sells all the mixed candies at 2 for ₹10. What is his approximate gain or loss percentage?\n\nएक कैंडी शॉप का मालिक तीन तरह की कैंडी खरीदता है: लाल, नीली और हरी। लाल कैंडी 3 के लिए ₹15, नीली कैंडी 4 के लिए ₹18 और हरी कैंडी 5 के लिए ₹22 में खरीदी जाती हैं। वह उन्हें 1 : 1 : 2 के अनुपात में मिलाता है। वह सभी मिश्रित कैंडी 2 के लिए ₹10 में बेचता है। उसका अनुमानित लाभ या हानि प्रतिशत क्या है?\n\nOptions:\nA) Loss of 9.2%\nB) Profit of 9.29%\nC) Profit of 10%\nD) Loss of 10%\n\nSolution:\n\nCost per candy:\n\nRed = ₹15/3 = ₹5\n\nBlue = ₹18/4 = ₹4.5\n\nGreen = ₹22/5 = ₹4.4\n\nMixing ratio = 1 : 1 : 2\n\nAverage Cost Price per candy\n\n= (1×5 + 1×4.5 + 2×4.4)/(1+1+2)\n\n= (5 + 4.5 + 8.8)/4\n\n= 18.3/4\n\n= ₹4.575\n\nSelling Price per candy\n\n= ₹10/2\n\n= ₹5\n\nProfit per candy\n\n= 5 − 4.575\n\n= ₹0.425\n\nProfit %\n\n= (0.425/4.575) × 100\n\n≈ 9.29%\n\nAnswer:\nProfit of 9.29% (Option B)\n\nShortcut:\n\nCP of candies:\n\nRed = ₹5\nBlue = ₹4.5\nGreen = ₹4.4\n\nAverage CP\n\n= (5 + 4.5 + 2×4.4)/4\n\n= ₹4.575\n\nSP = ₹5\n\nProfit %\n\n≈ (5 − 4.575)/4.575 × 100\n\n≈ 9.29%\n\nAnswer:\nProfit of 9.29%",
+          "youtube": "",
+          "examHistory": [
+            {
+              "exam": "CGL",
+              "year": "2025"
+            }
+          ],
+          "children": [],
+          "_h": 41,
+          "_x": 587,
+          "_y": 645.5,
+          "_realH": 41,
+          "_realW": 189
+        }
+      ],
+      "_h": 41,
+      "_x": 313,
+      "_y": 190.5,
+      "_realH": 41,
+      "_realW": 154
+    },
+    {
+      "id": "833amqwftgf",
+      "text": "Interest",
+      "collapsed": true,
+      "important": false,
+      "note": "",
+      "youtube": "",
+      "examHistory": [],
+      "children": [
+        {
+          "id": "l7qkf3ksqke",
+          "text": "Simple interest",
+          "collapsed": true,
+          "important": false,
+          "note": "Simple Interest (SI)\n\nSI = (P × R × T) / 100\n\nWhere:\nP = Principal (मूलधन)\nR = Rate of Interest per annum (वार्षिक ब्याज दर)\nT = Time in years (समय)\nSI = Simple Interest (साधारण ब्याज)",
+          "youtube": "",
+          "examHistory": [],
+          "children": [
+            {
+              "id": "jz68d25ug99",
+              "text": "Principal Finding(consecutive year Amount)",
+              "collapsed": true,
+              "important": false,
+              "note": "Question:\nA sum invested at simple interest amounts to ₹1,01,264 in 3 years and ₹1,01,654 in 4 years. Calculate the amount invested.\n\nसाधारण ब्याज पर निवेश की गई एक राशि 3 वर्षों में ₹1,01,264 और 4 वर्षों में ₹1,01,654 हो जाती है। निवेश की गई राशि ज्ञात कीजिए।\n\nOptions:\nA) ₹1,00,194\nB) ₹2,01,094\nC) ₹1,01,094\nD) ₹1,00,094\n\nSolution:\n\nAmount after 4 years = ₹1,01,654  \nAmount after 3 years = ₹1,01,264  \n\nSimple Interest for 1 year:\n\n= 1,01,654 − 1,01,264  \n= ₹390  \n\nInterest for 3 years:\n\n= 390 × 3  \n= ₹1,170  \n\nPrincipal (Amount Invested):\n\n= 1,01,264 − 1,170  \n= ₹1,00,094  \n\nAnswer: ₹1,00,094  \n(Option D)",
+              "youtube": "",
+              "examHistory": [
+                {
+                  "exam": "CGL",
+                  "year": "2025"
+                }
+              ],
+              "children": [],
+              "_h": 41,
+              "_x": 822,
+              "_y": 710.5,
+              "_realH": 41,
+              "_realW": 363
+            }
+          ],
+          "_h": 41,
+          "_x": 542,
+          "_y": 255.5,
+          "_realH": 41,
+          "_realW": 160
+        },
+        {
+          "id": "id49l3bbjr",
+          "text": "Compound interest",
+          "collapsed": true,
+          "important": false,
+          "note": "A = P × (1 + R/100)^n\n\nWhere:\nA = Final Amount\nP = Principal Amount\nR = Rate of Interest\nn = Time (in years)\n\nCompound Interest Formula",
+          "youtube": "",
+          "examHistory": [],
+          "children": [
+            {
+              "id": "s1frcg7iz89",
+              "text": "Principal Finding (consecutive year Amount)",
+              "collapsed": true,
+              "important": false,
+              "note": "Question:\nA sum becomes ₹6,600 in 2 years and ₹7,920 in 3 years at compound interest. What is the original principal?\n\nचक्रवृद्धि ब्याज पर एक धनराशि 2 वर्ष में ₹6,600 तथा 3 वर्ष में ₹7,920 हो जाती है। मूल मूलधन क्या है?\n\nOptions:\nA) ₹4,000.33\nB) ₹5,583.33\nC) ₹4,583.33\nD) ₹6,583.33\n\nSolution:\nAmount after 2 years = ₹6,600\nAmount after 3 years = ₹7,920\n\nRate factor for 1 year:\n7920 / 6600 = 1.2\n\nSo, rate = 20%\n\nNow,\nA = P(1 + r/100)^2\n\n6600 = P(1.2)^2\n6600 = P × 1.44\n\nP = 6600 / 1.44\nP = 4583.33\n\nAnswer: ₹4,583.33",
+              "youtube": "",
+              "examHistory": [
+                {
+                  "exam": "CGL",
+                  "year": "2025"
+                }
+              ],
+              "children": [],
+              "_h": 41,
+              "_x": 855,
+              "_y": 320.5,
+              "_realH": 41,
+              "_realW": 367
+            },
+            {
+              "id": "fcpqc3zkueg",
+              "text": "Mixed Period(Years + Months)",
+              "collapsed": true,
+              "important": false,
+              "note": "Tag:\nCompound Interest → Mixed Period (Years + Months)\n\nQuestion:\nFind the compound interest on ₹8,000 at 12% per annum for 3 years 4 months, compounded annually.\n\n₹8,000 पर 3 वर्ष 4 माह के लिए 12% वार्षिक दर से वार्षिक संयोजित चक्रवृद्धि ब्याज ज्ञात कीजिए।\n\nOptions:\nA) ₹3,000\nB) ₹4,000\nC) ₹3,689\nD) ₹3,600\n\nSolution:\n\nPrincipal (P) = ₹8,000\n\nRate (R) = 12% p.a.\n\nTime = 3 years 4 months\n\nAmount after 3 years\n\n= 8000 × (1.12)³\n\n= 8000 × 1.404928\n\n= ₹11,239.424\n\nFor remaining 4 months, simple interest is charged on the amount after 3 years:\n\nSI\n\n= (11239.424 × 12 × 4)/(100 × 12)\n\n= ₹449.577\n\nTotal Amount\n\n= 11239.424 + 449.577\n\n= ₹11,689.001\n\nCompound Interest\n\n= 11,689.001 − 8,000\n\n= ₹3,689.001\n\n≈ ₹3,689\n\nAnswer:\n₹3,689 (Option C)\n\nShortcut:\n\n(1.12)³ ≈ 1.404928\n\nAmount after 3 years\n\n≈ 8000 × 1.404928\n\n≈ ₹11,240\n\nExtra 4 months interest\n\n= 4% of 11,240\n\n≈ ₹450\n\nTotal Amount\n\n≈ 11,240 + 450\n\n≈ ₹11,690\n\nCI\n\n≈ 11,690 − 8,000\n\n≈ ₹3,690\n\n≈ ₹3,689\n\nAnswer:\n₹3,689",
+              "youtube": "",
+              "examHistory": [
+                {
+                  "exam": "CGL",
+                  "year": "2025"
+                }
+              ],
+              "children": [],
+              "_h": 41,
+              "_x": 855,
+              "_y": 385.5,
+              "_realH": 41,
+              "_realW": 264
+            }
+          ],
+          "_h": 41,
+          "_x": 542,
+          "_y": 320.5,
+          "_realH": 41,
+          "_realW": 193
+        }
+      ],
+      "_h": 41,
+      "_x": 313,
+      "_y": 255.5,
+      "_realH": 41,
+      "_realW": 109
+    },
+    {
+      "id": "52c2vkk0w52",
+      "text": "Mensuration",
+      "collapsed": true,
+      "important": false,
+      "note": "",
+      "youtube": "",
+      "examHistory": [],
+      "children": [
+        {
+          "id": "cqo5m1jxask",
+          "text": "Circle & Annulus (Ring)",
+          "collapsed": true,
+          "important": false,
+          "note": "Tag:\nMensuration → Circle & Annulus (Ring)\n\nQuestion:\nA ring-shaped disc has outer radius 10 cm and inner radius 7 cm. What is the approximate ratio of the ring's area to the whole outer circle?\n\nएक वलय (Ring) के आकार की डिस्क की बाहरी त्रिज्या 10 सेमी और आंतरिक त्रिज्या 7 सेमी है। वलय के क्षेत्रफल और पूरे बाहरी वृत्त के क्षेत्रफल का लगभग अनुपात क्या है?\n\nOptions:\nA) 1 : 2\nB) 2 : 3\nC) 3 : 4\nD) 4 : 5\n\nSolution:\n\nOuter circle area\n\n= π(10²)\n= 100π\n\nInner circle area\n\n= π(7²)\n= 49π\n\nRing area\n\n= 100π − 49π\n= 51π\n\nRequired ratio\n\n= 51π : 100π\n= 51 : 100\n\n≈ 1 : 2\n\nAnswer:\n1 : 2 (Option A)\n\nShortcut:\n\nRing Area / Outer Circle Area\n\n= (R² − r²)/R²\n\n= (10² − 7²)/10²\n\n= (100 − 49)/100\n\n= 51/100\n\n≈ 1/2\n\nAnswer:\n1 : 2",
+          "youtube": "",
+          "examHistory": [
+            {
+              "exam": "CGL",
+              "year": "2025"
+            }
+          ],
+          "children": [],
+          "_h": 41,
+          "_x": 576,
+          "_y": 515.5,
+          "_realH": 41,
+          "_realW": 217
+        }
+      ],
+      "_h": 41,
+      "_x": 313,
+      "_y": 320.5,
+      "_realH": 41,
+      "_realW": 143
+    },
+    {
+      "id": "kksjbir77ui",
+      "text": "Coins",
+      "collapsed": true,
+      "important": false,
+      "note": "",
+      "youtube": "",
+      "examHistory": [],
+      "children": [
+        {
+          "id": "qd2loqiryh9",
+          "text": "Coins given in ratio",
+          "collapsed": true,
+          "important": false,
+          "note": "Question:\nA bag contains coins of denomination of Rs. 1, Rs. 2 and Rs. 5 in the ratio of 4 : 5 : 8. If the total value of these coins is Rs. 432, then what is the number of Rs. 2 coins?\n\nएक थैले में ₹1, ₹2 और ₹5 के सिक्के 4 : 5 : 8 के अनुपात में हैं। यदि इन सिक्कों का कुल मूल्य ₹432 है, तो ₹2 के सिक्कों की संख्या कितनी है?\n\nSolution:\n\nLet the number of coins be:\n\n₹1 coins = 4x  \n₹2 coins = 5x  \n₹5 coins = 8x  \n\nTotal value:\n\n(1 × 4x) + (2 × 5x) + (5 × 8x) = 432\n\n4x + 10x + 40x = 432\n\n54x = 432\n\nx = 8\n\nNumber of ₹2 coins:\n\n= 5x  \n= 5 × 8  \n= 40\n\nAnswer: 40 coins",
+          "youtube": "",
+          "examHistory": [],
+          "children": [],
+          "_h": 41,
+          "_x": 529,
+          "_y": 385.5,
+          "_realH": 41,
+          "_realW": 190
+        }
+      ],
+      "_h": 41,
+      "_x": 313,
+      "_y": 385.5,
+      "_realH": 41,
+      "_realW": 96
+    },
+    {
+      "id": "pnvs3jan5y",
+      "text": "Pyq",
+      "collapsed": true,
+      "important": false,
+      "note": "",
+      "youtube": "https://www.oliveboard.in/blog/ssc-cgl-tier-1-pyps/",
+      "examHistory": [],
+      "children": [
+        {
+          "id": "3m0vojlhrre",
+          "text": "ssc-cgl-12th-sep-shift-1",
+          "collapsed": true,
+          "important": false,
+          "note": "",
+          "youtube": "https://download.oliveboard.in/pdf/ssc-cgl-12th-sep-shift-1.pdf",
+          "examHistory": [],
+          "children": [],
+          "_h": 41,
+          "_x": 515,
+          "_y": 645.5,
+          "_realH": 41,
+          "_realW": 225
+        },
+        {
+          "id": "obbquoeu0o",
+          "text": "ssc-cgl-12th-sep-shift-2",
+          "collapsed": true,
+          "important": false,
+          "note": "",
+          "youtube": "https://download.oliveboard.in/pdf/ssc-cgl-12th-sep-shift-2.pdf",
+          "examHistory": [],
+          "children": [],
+          "_h": 41,
+          "_x": 515,
+          "_y": 710.5,
+          "_realH": 41,
+          "_realW": 229
+        }
+      ],
+      "_h": 41,
+      "_x": 313,
+      "_y": 450.5,
+      "_realH": 41,
+      "_realW": 82
+    },
+    {
+      "id": "0kvo50qd3d8q",
+      "text": "Price exchange",
+      "collapsed": true,
+      "important": false,
+      "note": "Question:\nA company placed an order for 20 high-end laptops and some quantity of standard desktops. The price of a high-end laptop was 5 times that of a standard desktop. Due to a mistake, the number of laptops and desktops was interchanged in the delivery. This caused the total bill to increase by 80%. What was the ratio of the number of high-end laptops to standard desktops in the original order?\n\nएक कंपनी ने 20 हाई-एंड लैपटॉप और कुछ स्टैंडर्ड डेस्कटॉप का ऑर्डर दिया। हाई-एंड लैपटॉप की कीमत स्टैंडर्ड डेस्कटॉप की कीमत से 5 गुना थी। गलती से डिलीवरी में लैपटॉप और डेस्कटॉप की संख्या आपस में बदल गई। इससे कुल बिल 80% बढ़ गया। मूल ऑर्डर में हाई-एंड लैपटॉप और स्टैंडर्ड डेस्कटॉप की संख्या का अनुपात क्या था?\n\nOptions:\nA) 1 : 2\nB) 2 : 1\nC) 5 : 2\nD) 2 : 5\n\nSolution:\n\nLet the price of one desktop = ₹1\n\nThen, price of one laptop = ₹5\n\nOriginal order:\nLaptops = 20\nDesktops = x\n\nOriginal bill:\n= 20 × 5 + x × 1\n= 100 + x\n\nAfter interchange:\nLaptops = x\nDesktops = 20\n\nNew bill:\n= 5x + 20\n\nGiven that the bill increased by 80%,\n\n5x + 20 = 1.8(100 + x)\n\n5x + 20 = 180 + 1.8x\n\n3.2x = 160\n\nx = 50\n\nTherefore, original ratio of\nLaptops : Desktops\n\n= 20 : 50\n= 2 : 5\n\nAnswer: 2 : 5\n(Option D)",
+      "youtube": "",
+      "examHistory": [],
+      "children": [],
+      "_h": 41,
+      "_x": 313,
+      "_y": 515.5,
+      "_realH": 41,
+      "_realW": 163
+    },
+    {
+      "id": "dqvn3fjqduc",
+      "text": "Ratio & Proportion",
+      "collapsed": true,
+      "important": false,
+      "note": "",
+      "youtube": "",
+      "examHistory": [],
+      "children": [
+        {
+          "id": "gaha699ih3l",
+          "text": "Mixture",
+          "collapsed": true,
+          "important": false,
+          "note": "Tag:\nRatio & Proportion → Mixture\n\nQuestion:\nA 40-liter mixture contains juice and water in the ratio 5:3. How much water (in liters) must be added to this mixture to change the ratio of juice to water to 2:3?\n\n40 लीटर के मिश्रण में जूस और पानी का अनुपात 5:3 है। जूस और पानी का अनुपात 2:3 करने के लिए इस मिश्रण में कितना पानी (लीटर में) मिलाया जाना चाहिए?\n\nOptions:\nA) 15.5 litres\nB) 22.5 litres\nC) 25 litres\nD) 30 litres\n\nSolution:\n\nTotal mixture = 40 litres\n\nJuice : Water = 5 : 3\n\nJuice = (5/8) × 40\n= 25 litres\n\nWater = (3/8) × 40\n= 15 litres\n\nLet x litres of water be added.\n\nThen,\n\n25 : (15 + x) = 2 : 3\n\n75 = 30 + 2x\n\n2x = 45\n\nx = 22.5 litres\n\nAnswer:\n22.5 litres (Option B)\n\nShortcut:\n\nJuice = 25 L (fixed)\n\nFor ratio 2 : 3,\n\nIf Juice = 25,\nWater required = (3/2) × 25\n= 37.5 L\n\nExtra water to be added\n= 37.5 − 15\n= 22.5 L\n\nAnswer:\n22.5 litres",
+          "youtube": "",
+          "examHistory": [
+            {
+              "exam": "CGL",
+              "year": "2025"
+            }
+          ],
+          "children": [],
+          "_h": 41,
+          "_x": 615,
+          "_y": 580.5,
+          "_realH": 41,
+          "_realW": 106
+        },
+        {
+          "id": "jahg7nopz8s",
+          "text": "Addition in Ratio",
+          "collapsed": true,
+          "important": false,
+          "note": "Question:\nThe number of red, blue, and green marbles in a bag is in the ratio 3 : 4 : 6. If 20 red marbles, 15 blue marbles, and an unknown number of green marbles are added to the bag, the ratio of red, blue, and green marbles becomes 4 : 5 : 7. Determine the number of green marbles added.\n\nएक बैग में लाल, नीले और हरे मार्बल की संख्या का अनुपात 3 : 4 : 6 है। यदि बैग में 20 लाल मार्बल, 15 नीले मार्बल और x हरे मार्बल डाले जाएँ, तो लाल, नीले और हरे मार्बल का अनुपात 4 : 5 : 7 हो जाता है। डाले गए हरे मार्बल की संख्या ज्ञात कीजिए।\n\nSolution:\n\nLet the initial numbers be:\n\nRed = 3k\nBlue = 4k\nGreen = 6k\n\nAfter adding marbles:\n\nRed = 3k + 20\nBlue = 4k + 15\nGreen = 6k + x\n\nGiven,\n\n(3k + 20) / (4k + 15) = 4 / 5\n\n5(3k + 20) = 4(4k + 15)\n\n15k + 100 = 16k + 60\n\nk = 40\n\nInitial marbles:\n\nRed = 120\nBlue = 160\nGreen = 240\n\nAfter addition:\n\nRed = 140\nBlue = 175\n\nSince the new ratio is 4 : 5 : 7,\n\n4 parts = 140\n\n1 part = 35\n\n7 parts = 245\n\nTherefore,\n\n240 + x = 245\n\nx = 5\n\nAnswer: 5",
+          "youtube": "",
+          "examHistory": [
+            {
+              "exam": "CGL",
+              "year": "2025"
+            }
+          ],
+          "children": [],
+          "_h": 41,
+          "_x": 615,
+          "_y": 645.5,
+          "_realH": 41,
+          "_realW": 170
+        },
+        {
+          "id": "5p3dsmbtep9",
+          "text": "Alligation (Mixture)",
+          "collapsed": true,
+          "important": false,
+          "note": "Tag:\nRatio & Proportion → Alligation (Mixture)\n\nQuestion:\nTwo oils priced at ₹90 per kg and ₹150 per kg are blended and sold at ₹144 per kg, achieving a profit margin of 20%. What is the ratio of the two oils in the mixture?\n\n₹90 प्रति किलोग्राम और ₹150 प्रति किलोग्राम की कीमत वाले दो तेलों को मिश्रित करके ₹144 प्रति किलोग्राम की दर से बेचा जाता है, जिससे 20% का लाभ प्राप्त होता है। मिश्रण में दोनों तेलों का अनुपात क्या है?\n\nOptions:\nA) 1 : 1\nB) 2 : 1\nC) 3 : 2\nD) 4 : 1\n\nSolution:\n\nSelling Price = ₹144/kg\n\nProfit = 20%\n\nCost Price of mixture\n\n= 144 × 100/120\n= ₹120/kg\n\nUsing Alligation:\n\nCheaper Oil = ₹90/kg\nMixture Price = ₹120/kg\nCostlier Oil = ₹150/kg\n\nRatio of quantities\n\n= (150 − 120) : (120 − 90)\n\n= 30 : 30\n\n= 1 : 1\n\nAnswer:\n1 : 1 (Option A)\n\nHandwritten Method:\n\nLet x kg of ₹90 oil and y kg of ₹150 oil be mixed.\n\nAverage Cost = ₹120/kg\n\n(90x + 150y)/(x + y) = 120\n\n90x + 150y = 120x + 120y\n\n30y = 30x\n\nx = y\n\nTherefore,\n\nRatio = 1 : 1\n\nShortcut (Alligation):\n\n      ₹90      30\n         \\    /\n          ₹120\n         /    \\\n      ₹150     30\n\nRatio = 30 : 30 = 1 : 1\n\nAnswer:\n1 : 1",
+          "youtube": "",
+          "examHistory": [
+            {
+              "exam": "CGL",
+              "year": "2025"
+            }
+          ],
+          "children": [],
+          "_h": 41,
+          "_x": 615,
+          "_y": 710.5,
+          "_realH": 41,
+          "_realW": 188
+        },
+        {
+          "id": "mexk9vmcs9",
+          "text": "Cost & Quantity",
+          "collapsed": true,
+          "important": false,
+          "note": "Tag:\nRatio & Proportion → Cost & Quantity\n\nQuestion:\nA company placed an order for 20 high-end laptops and some quantity of standard desktops. The price of a high-end laptop was 5 times that of a standard desktop. Due to a mistake, the number of laptops and desktops was interchanged in the delivery. This caused the total bill to increase by 80%. What was the ratio of the number of high-end laptops to standard desktops in the original order?\n\nएक कंपनी ने 20 हाई-एंड लैपटॉप और कुछ मात्रा में स्टैंडर्ड डेस्कटॉप का ऑर्डर दिया। हाई-एंड लैपटॉप की कीमत स्टैंडर्ड डेस्कटॉप की कीमत से 5 गुना थी। एक गलती के कारण, डिलीवरी में लैपटॉप और डेस्कटॉप की संख्या आपस में बदल गई। इससे कुल बिल 80% बढ़ गया। मूल ऑर्डर में हाई-एंड लैपटॉप और स्टैंडर्ड डेस्कटॉप की संख्या का अनुपात क्या था?\n\nOptions:\nA) 1 : 2\nB) 2 : 1\nC) 5 : 2\nD) 2 : 5\n\nSolution:\n\nLet the price of one desktop = ₹1\n\nThen price of one laptop = ₹5\n\nLet the number of desktops in the original order be x.\n\nOriginal Bill\n\n= (20 × 5) + (x × 1)\n\n= 100 + x\n\nAfter interchange:\n\nLaptops = x\n\nDesktops = 20\n\nNew Bill\n\n= (5x) + 20\n\nGiven:\n\nNew Bill = 180% of Original Bill\n\n5x + 20 = 1.8(100 + x)\n\n5x + 20 = 180 + 1.8x\n\n3.2x = 160\n\nx = 50\n\nRequired Ratio\n\nLaptops : Desktops\n\n= 20 : 50\n\n= 2 : 5\n\nAnswer:\n2 : 5 (Option D)\n\nShortcut:\n\nPrice Ratio = 5 : 1\n\nOriginal Quantity = 20 : x\n\n80% increase ⇒ New Bill = 180% of Original Bill\n\n5x + 20 = 1.8(100 + x)\n\n⇒ x = 50\n\nRequired Ratio\n\n= 20 : 50\n\n= 2 : 5\n\nAnswer:\n2 : 5",
+          "youtube": "",
+          "examHistory": [
+            {
+              "exam": "CGL",
+              "year": "2025"
+            }
+          ],
+          "children": [],
+          "_h": 41,
+          "_x": 615,
+          "_y": 775.5,
+          "_realH": 41,
+          "_realW": 166
+        },
+        {
+          "id": "kif5wodv2ej",
+          "text": "Addition in Ratio",
+          "collapsed": true,
+          "important": false,
+          "note": "Tag:\nRatio & Proportion → Addition in Ratio\n\nQuestion:\nThe ratio of boys to girls in a school is 7 : 5. If 20 more girls join the school, the new ratio of boys to girls becomes 7 : 6. What is the total number of students in the school initially?\n\nएक स्कूल में लड़कों और लड़कियों का अनुपात 7 : 5 है। यदि 20 और लड़कियाँ स्कूल में शामिल हो जाती हैं, तो लड़कों और लड़कियों का नया अनुपात 7 : 6 हो जाता है। शुरू में स्कूल में छात्रों की कुल संख्या कितनी थी?\n\nOptions:\nA) 200\nB) 240\nC) 300\nD) 360\n\nSolution:\n\nLet the number of boys and girls be:\n\nBoys = 7x\n\nGirls = 5x\n\nAfter 20 girls join:\n\nBoys : Girls\n\n= 7x : (5x + 20)\n\nGiven,\n\n7x/(5x + 20) = 7/6\n\n6 × 7x = 7(5x + 20)\n\n42x = 35x + 140\n\n7x = 140\n\nx = 20\n\nInitially,\n\nBoys = 7 × 20 = 140\n\nGirls = 5 × 20 = 100\n\nTotal students\n\n= 140 + 100\n\n= 240\n\nAnswer:\n240 (Option B)\n\nShortcut:\n\nRatio changes from\n\n7 : 5 → 7 : 6\n\nGirls increase by 1 part\n\n1 part = 20\n\nTherefore,\n\n5 parts = 100 (Girls)\n\nBoys = 7 parts = 140\n\nTotal = 140 + 100\n\n= 240\n\nAnswer:\n240",
+          "youtube": "",
+          "examHistory": [
+            {
+              "exam": "CGL",
+              "year": "2025"
+            }
+          ],
+          "children": [],
+          "_h": 41,
+          "_x": 615,
+          "_y": 840.5,
+          "_realH": 41,
+          "_realW": 170
+        }
+      ],
+      "_h": 41,
+      "_x": 313,
+      "_y": 580.5,
+      "_realH": 41,
+      "_realW": 182
+    },
+    {
+      "id": "a9wkj3nambj",
+      "text": "Time & Work",
+      "collapsed": true,
+      "important": false,
+      "note": "",
+      "youtube": "",
+      "examHistory": [],
+      "children": [
+        {
+          "id": "gi17am4ki9h",
+          "text": "Remaining Work",
+          "collapsed": true,
+          "important": false,
+          "note": "Tag:\nTime & Work → Remaining Work\n\nQuestion:\nA is able to complete a task in 15 days, while B takes 20 days to finish the same task. If they collaborate and work together for 4 days, what fraction of the work will still remain?\n\nA किसी काम को 15 दिनों में पूरा कर सकता है, जबकि B को उसी काम को पूरा करने में 20 दिन लगते हैं। यदि वे मिलकर 4 दिन काम करें, तो काम का कितना भाग शेष रह जाएगा?\n\nOptions:\nA) 1/4\nB) 7/15\nC) 8/15\nD) 11/15\n\nSolution:\n\nAnswer:\n8/15 (Option C)\n\nHandwritten Method:\n\nA → 15 days\n\nA one day work = 1/15\n\nB → 20 days\n\nB one day work = 1/20\n\n4 day work by A and B\n\n= 4(1/15 + 1/20)\n\n= 4(4/60 + 3/60)\n\n= 4 × 7/60\n\n= 7/15\n\nRemaining work\n\n= 1 − 7/15\n\n= 8/15\n\nShortcut (LCM Method):\n\nLCM(15, 20) = 60\n\nTotal Work = 60 units\n\nA's 1 day work = 4 units\nB's 1 day work = 3 units\n\nTogether = 7 units/day\n\nIn 4 days = 28 units\n\nRemaining work\n\n= 60 − 28\n= 32 units\n\nFraction remaining\n\n= 32/60\n= 8/15\n\nAnswer:\n8/15",
+          "youtube": "",
+          "examHistory": [
+            {
+              "exam": "CGL",
+              "year": "2025"
+            }
+          ],
+          "children": [],
+          "_h": 41,
+          "_x": 576,
+          "_y": 645.5,
+          "_realH": 41,
+          "_realW": 170
+        },
+        {
+          "id": "0u4b3j4nspy",
+          "text": "Pipes & Cisterns",
+          "collapsed": true,
+          "important": false,
+          "note": "Tag:\nTime & Work → Pipes & Cisterns\n\nQuestion:\nThree pipes, A, B, and C are capable of filling a tank in 6, 8, and 12 hours, respectively. When all three pipes are opened together, they operate for 2 hours before pipe C is closed. How much additional time will it take to completely fill the tank after that?\n\nतीन पाइप A, B और C एक टैंक को क्रमशः 6, 8 और 12 घंटे में भर सकते हैं। जब तीनों पाइप एक साथ खोले जाते हैं, तो वे 2 घंटे तक काम करते हैं। इसके बाद पाइप C को बंद कर दिया जाता है। टैंक को पूरी तरह भरने में इसके बाद कितना अतिरिक्त समय लगेगा?\n\nOptions:\nA) 6/7 hours\nB) 2/6 hours\nC) 3/5 hours\nD) 9/2 hours\n\nSolution:\n\nAnswer:\n6/7 hours (Option A)\n\nShortcut (LCM Method):\n\nLCM(6, 8, 12) = 24\n\nA = 4 units/hour\nB = 3 units/hour\nC = 2 units/hour\n\nTogether = 9 units/hour\n\nIn 2 hours = 18 units\n\nTotal work = 24 units\n\nRemaining = 24 − 18 = 6 units\n\nAfter C is closed,\n\nA + B = 7 units/hour\n\nTime = 6/7 hour\n\nAnswer:\n6/7 hours",
+          "youtube": "",
+          "examHistory": [
+            {
+              "exam": "CGL",
+              "year": "2025"
+            }
+          ],
+          "children": [],
+          "_h": 41,
+          "_x": 576,
+          "_y": 710.5,
+          "_realH": 41,
+          "_realW": 168
+        }
+      ],
+      "_h": 41,
+      "_x": 313,
+      "_y": 645.5,
+      "_realH": 41,
+      "_realW": 143
+    },
+    {
+      "id": "fqekfynob86",
+      "text": "Speed, Time & Distance",
+      "collapsed": true,
+      "important": false,
+      "note": "",
+      "youtube": "",
+      "examHistory": [],
+      "children": [
+        {
+          "id": "2ngqab6oruo",
+          "text": "Relative Speed",
+          "collapsed": true,
+          "important": false,
+          "note": "Tag:\nSpeed, Time & Distance → Relative Speed\n\nQuestion:\nTwo cars, X and Y, start from points 360 km apart and travel at constant speeds. If they move towards each other, they meet in 4 hours. If they move in the same direction, they meet in 12 hours. What is the speed of car X? (Assume X is the faster car.)\n\nदो कारें, X और Y, 360 किमी दूर स्थित बिंदुओं से चलना शुरू करती हैं और समान गति से यात्रा करती हैं। यदि वे एक-दूसरे की ओर बढ़ती हैं, तो 4 घंटे में मिलती हैं। यदि वे एक ही दिशा में चलती हैं, तो 12 घंटे में मिलती हैं। कार X की गति क्या है? (मान लें कि X तेज़ कार है।)\n\nOptions:\nA) 60 km/h\nB) 75 km/h\nC) 45 km/h\nD) 90 km/h\n\nSolution:\n\nDistance between cars = 360 km\n\nWhen moving towards each other:\n\n(X + Y) × 4 = 360\n\nX + Y = 90\n\nWhen moving in the same direction:\n\n(X − Y) × 12 = 360\n\nX − Y = 30\n\nAdding the equations:\n\n(X + Y) + (X − Y) = 90 + 30\n\n2X = 120\n\nX = 60 km/h\n\nAnswer:\n60 km/h (Option A)\n\nShortcut:\n\nRelative speed towards each other\n\n= 360/4\n= 90 km/h\n\nRelative speed in same direction\n\n= 360/12\n= 30 km/h\n\nFaster speed\n\n= (90 + 30)/2\n= 60 km/h\n\nAnswer:\n60 km/h",
+          "youtube": "",
+          "examHistory": [
+            {
+              "exam": "CGL",
+              "year": "2025"
+            }
+          ],
+          "children": [],
+          "_h": 41,
+          "_x": 666.6,
+          "_y": 710.5,
+          "_realH": 41,
+          "_realW": 160
+        }
+      ],
+      "_h": 41,
+      "_x": 313,
+      "_y": 710.5,
+      "_realH": 41,
+      "_realW": 221
+    },
+    {
+      "id": "j5psjan91z",
+      "text": "Average",
+      "collapsed": true,
+      "important": false,
+      "note": "",
+      "youtube": "",
+      "examHistory": [],
+      "children": [
+        {
+          "id": "pl7jld5j5wg",
+          "text": "Weighted Average",
+          "collapsed": true,
+          "important": false,
+          "note": "Tag:\nAverage → Weighted Average\n\nQuestion:\nIn a team of 75 employees, the average monthly sales per employee is ₹1.8 lakh. If 30 junior employees average ₹1.2 lakh each, what is the average monthly sales figure (in ₹ lakh) for the senior employees?\n\n75 कर्मचारियों की एक टीम में, प्रति कर्मचारी औसत मासिक बिक्री ₹1.8 लाख है। यदि 30 जूनियर कर्मचारियों में से प्रत्येक की औसत बिक्री ₹1.2 लाख है, तो वरिष्ठ कर्मचारियों की औसत मासिक बिक्री (₹ लाख में) क्या है?\n\nOptions:\nA) ₹4.2 lakh\nB) ₹2.2 lakh\nC) ₹2.8 lakh\nD) ₹2.7 lakh\n\nSolution:\n\nTotal employees = 75\n\nAverage sales = ₹1.8 lakh\n\nTotal sales\n\n= 75 × 1.8\n= ₹135 lakh\n\nJunior employees = 30\n\nJunior sales\n\n= 30 × 1.2\n= ₹36 lakh\n\nSenior employees\n\n= 75 − 30\n= 45\n\nSenior sales\n\n= 135 − 36\n= ₹99 lakh\n\nAverage sales of seniors\n\n= 99/45\n\n= ₹2.2 lakh\n\nAnswer:\n₹2.2 lakh (Option B)\n\nShortcut:\n\nTotal sales = 75 × 1.8 = 135 lakh\n\nJunior sales = 30 × 1.2 = 36 lakh\n\nSenior sales = 135 − 36 = 99 lakh\n\nSeniors = 45\n\nAverage = 99 ÷ 45\n\n= ₹2.2 lakh\n\nAnswer:\n₹2.2 lakh",
+          "youtube": "",
+          "examHistory": [
+            {
+              "exam": "CGL",
+              "year": "2025"
+            }
+          ],
+          "children": [],
+          "_h": 41,
+          "_x": 548,
+          "_y": 775.5,
+          "_realH": 41,
+          "_realW": 186
+        }
+      ],
+      "_h": 41,
+      "_x": 313,
+      "_y": 775.5,
+      "_realH": 41,
+      "_realW": 115
+    },
+    {
+      "id": "zqhwo6zrxl",
+      "text": "Percentage",
+      "collapsed": true,
+      "important": false,
+      "note": "",
+      "youtube": "",
+      "examHistory": [],
+      "children": [
+        {
+          "id": "a7vkjae04x7",
+          "text": "Increase & Decrease",
+          "collapsed": true,
+          "important": false,
+          "note": "Tag:\nPercentage → Increase & Decrease\n\nQuestion:\nThe price of petrol shot up by 5%. Before the hike, the price was ₹82 per litre. A man travels 3045 km every month and his car gives a mileage of 15 km per litre. What is the increase in the monthly expenditure (to the nearest ₹) on the man's travel due to the hike in the petrol prices?\n\nपेट्रोल की कीमत में 5% की वृद्धि हुई। बढ़ोतरी से पहले कीमत ₹82 प्रति लीटर थी। एक आदमी हर महीने 3045 किलोमीटर की यात्रा करता है और उसकी कार 15 किलोमीटर प्रति लीटर का माइलेज देती है। पेट्रोल की कीमतों में बढ़ोतरी के कारण आदमी की यात्रा पर मासिक खर्च (निकटतम रुपये में) में कितनी वृद्धि हुई है?\n\nOptions:\nA) ₹820\nB) ₹832\nC) ₹845\nD) ₹850\n\nSolution:\n\nDistance travelled per month\n\n= 3045 km\n\nMileage\n\n= 15 km/litre\n\nPetrol consumed\n\n= 3045 ÷ 15\n= 203 litres\n\nIncrease in petrol price\n\n= 5% of ₹82\n\n= (5/100) × 82\n= ₹4.10 per litre\n\nIncrease in monthly expenditure\n\n= 203 × 4.10\n\n= ₹832.30\n\n≈ ₹832\n\nAnswer:\n₹832 (Option B)\n\nShortcut:\n\nPetrol used\n\n= 3045/15\n= 203 litres\n\n5% of ₹82\n= ₹4.10\n\nExtra expense\n\n= 203 × 4.10\n\n≈ ₹832\n\nAnswer:\n₹832",
+          "youtube": "",
+          "examHistory": [
+            {
+              "exam": "CGL",
+              "year": "2025"
+            }
+          ],
+          "children": [],
+          "_h": 41,
+          "_x": 570,
+          "_y": 1100.5,
+          "_realH": 41,
+          "_realW": 201
+        }
+      ],
+      "_h": 41,
+      "_x": 313,
+      "_y": 840.5,
+      "_realH": 41,
+      "_realW": 137
+    }
+  ],
+  "_h": 821,
+  "_x": 80,
+  "_y": 450.5,
+  "_realH": 41,
+  "_realW": 113,
+  "note": "Tables: up to 30\nSquares: up to 50\nCubes: up to 20"
+}

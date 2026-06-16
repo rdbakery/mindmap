@@ -17,15 +17,16 @@ window.APP_CONFIG = {
     inspectMode: true          // Set to false to disable DevTools and right-click
   },
   preImportedMaps: [
-    { label: "1. Maths", file: "maths.json" },
-    { label: "2. Reasoning", file: "Reasoning.json" },
-    { label: "3. English", file: "English.json" },
-    { label: "4. Polity", file: "Polity.json" },
-    { label: "5. Static Gk", file: "Static_Gk.json" },
-    { label: "6. History", file: "History.json" },
-    { label: "7. Economy", file: "Economy.json" },
-    { label: "8. Battles", file: "Battles.json" },
-    { label: "TRE4 Computer Science", file: "TRE4_Computer_Science.json" }
+    { label: "1. Maths", file: "1_maths.json" },
+    { label: "2. Reasoning", file: "2_reasoning.json" },
+    { label: "3. English", file: "3_english.json" },
+    { label: "4. Polity", file: "4_polity.json" },
+    { label: "5. Static Gk", file: "5_static_gk.json" },
+    { label: "6. History", file: "6_history.json" },
+    { label: "7. Economy", file: "7_economy.json" },
+    { label: "8. Battles", file: "8_battles.json" },
+    { label: "10. Geography", file: "10_geography.json" },
+    { label: "11. TRE4 Computer Science", file: "11_tre4_computer_science.json" }
   ],
   preImportedQuizzes: [
     { label: "3. English - Direct → Indirect", file: "3_english_direct_indirect.json" },

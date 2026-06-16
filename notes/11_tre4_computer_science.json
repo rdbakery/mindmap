@@ -1,6 +1,6 @@
 {
   "id": "pofg1r15tl",
-  "text": "TRE4 (Computer Science)",
+  "text": "11. TRE4 (Computer Science)",
   "collapsed": false,
   "children": [
     {
@@ -6244,7 +6244,7 @@
         }
       ],
       "_h": 41,
-      "_x": 456,
+      "_x": 481.6,
       "_y": 60.5,
       "_realH": 41,
       "_realW": 329
@@ -7602,9 +7602,9 @@
               "_realW": 143
             }
           ],
-          "_h": 5178,
-          "_x": 636.8,
-          "_y": 25509,
+          "_h": 41,
+          "_x": 804.8,
+          "_y": 125.5,
           "_realH": 41,
           "_realW": 127,
           "note": "Automata (singular: automaton) are abstract mathematical machines used in Theory of Computation to model how computers process input and make decisions.\n\nAn automaton is a system that:\nTakes an input (like a string of symbols)\nMoves through a set of states\nFollows rules (transitions)\nProduces an output (accept or reject)\n\nAutomata = State Machine\nDFA→ 1 path only\nNFA → multiple paths\nPDA → uses stack\nTM → most powerful\n\nDFA < NFA = PDA < TM (in terms of power)"
@@ -8023,9 +8023,9 @@
               "_realW": 194
             }
           ],
-          "_h": 1471,
-          "_x": 636.8,
-          "_y": 28857.5,
+          "_h": 41,
+          "_x": 804.8,
+          "_y": 190.5,
           "_realH": 41,
           "_realW": 231
         },
@@ -8097,9 +8097,9 @@
               "_realW": 300
             }
           ],
-          "_h": 236,
-          "_x": 636.8,
-          "_y": 29735,
+          "_h": 41,
+          "_x": 804.8,
+          "_y": 255.5,
           "_realH": 41,
           "_realW": 174
         },
@@ -8222,9 +8222,9 @@
               "_realW": 396
             }
           ],
-          "_h": 431,
-          "_x": 636.8,
-          "_y": 30092.5,
+          "_h": 41,
+          "_x": 804.8,
+          "_y": 320.5,
           "_realH": 41,
           "_realW": 261
         },
@@ -8235,8 +8235,8 @@
           "important": false,
           "children": [],
           "_h": 41,
-          "_x": 636.8,
-          "_y": 30352.5,
+          "_x": 804.8,
+          "_y": 385.5,
           "_realH": 41,
           "_realW": 164,
           "note": "A Turing Machine is a theoretical computing machine that can simulate any algorithm.\n\n✓ Components\nInfinite Tape (Memory)\nRead/Write Head\nState Control Unit\n\nWorking\nRead symbol from tape\nWrite symbol\nMove tape Left / Right\nChange state"
@@ -8799,9 +8799,9 @@
               "_realW": 206
             }
           ],
-          "_h": 2186,
-          "_x": 636.8,
-          "_y": 31490,
+          "_h": 41,
+          "_x": 804.8,
+          "_y": 450.5,
           "_realH": 41,
           "_realW": 391
         },
@@ -9192,9 +9192,9 @@
               "_realW": 271
             }
           ],
-          "_h": 1471,
-          "_x": 636.8,
-          "_y": 33342.5,
+          "_h": 41,
+          "_x": 804.8,
+          "_y": 515.5,
           "_realH": 41,
           "_realW": 402
         },
@@ -9699,9 +9699,9 @@
               "_realW": 209
             }
           ],
-          "_h": 1666,
-          "_x": 636.8,
-          "_y": 34935,
+          "_h": 41,
+          "_x": 804.8,
+          "_y": 580.5,
           "_realH": 41,
           "_realW": 172
         },
@@ -10231,9 +10231,9 @@
               "_realW": 232
             }
           ],
-          "_h": 1731,
-          "_x": 636.8,
-          "_y": 36657.5,
+          "_h": 41,
+          "_x": 804.8,
+          "_y": 645.5,
           "_realH": 41,
           "_realW": 245
         },
@@ -10687,15 +10687,15 @@
               "_realW": 176
             }
           ],
-          "_h": 1601,
-          "_x": 636.8,
-          "_y": 38347.5,
+          "_h": 41,
+          "_x": 804.8,
+          "_y": 710.5,
           "_realH": 41,
           "_realW": 291
         }
       ],
       "_h": 41,
-      "_x": 456,
+      "_x": 481.6,
       "_y": 125.5,
       "_realH": 41,
       "_realW": 218
@@ -12400,7 +12400,7 @@
         }
       ],
       "_h": 41,
-      "_x": 456,
+      "_x": 481.6,
       "_y": 190.5,
       "_realH": 41,
       "_realW": 141,
@@ -12431,8 +12431,8 @@
               "important": false,
               "children": [],
               "_h": 41,
-              "_x": 929.2,
-              "_y": 45302.5,
+              "_x": 1097.2,
+              "_y": 255.5,
               "_realH": 41,
               "_realW": 166,
               "note": "It was a mechanical device capable of doing simple arithmetic calculations only."
@@ -12444,8 +12444,8 @@
               "important": false,
               "children": [],
               "_h": 41,
-              "_x": 929.2,
-              "_y": 45367.5,
+              "_x": 1097.2,
+              "_y": 320.5,
               "_realH": 41,
               "_realW": 161,
               "note": "do addition and subtraction of two numbers directly and multiplication and division through repeated addition and subtraction"
@@ -12457,8 +12457,8 @@
               "important": false,
               "children": [],
               "_h": 41,
-              "_x": 929.2,
-              "_y": 45432.5,
+              "_x": 1097.2,
+              "_y": 385.5,
               "_realH": 41,
               "_realW": 201,
               "note": "a mechanical computing device for inputting, processing, storing and displaying the output"
@@ -12470,8 +12470,8 @@
               "important": false,
               "children": [],
               "_h": 41,
-              "_x": 929.2,
-              "_y": 45497.5,
+              "_x": 1097.2,
+              "_y": 450.5,
               "_realH": 41,
               "_realW": 233
             },
@@ -12482,8 +12482,8 @@
               "important": false,
               "children": [],
               "_h": 41,
-              "_x": 929.2,
-              "_y": 45562.5,
+              "_x": 1097.2,
+              "_y": 515.5,
               "_realH": 41,
               "_realW": 200,
               "note": "capable of solving any problem by executing the program stored on the punched cards."
@@ -12495,8 +12495,8 @@
               "important": false,
               "children": [],
               "_h": 41,
-              "_x": 929.2,
-              "_y": 45627.5,
+              "_x": 1097.2,
+              "_y": 580.5,
               "_realH": 41,
               "_realW": 188,
               "note": "capable of storing data as well as program in the memory."
@@ -12508,8 +12508,8 @@
               "important": false,
               "children": [],
               "_h": 41,
-              "_x": 929.2,
-              "_y": 45692.5,
+              "_x": 1097.2,
+              "_y": 645.5,
               "_realH": 41,
               "_realW": 161
             },
@@ -12520,15 +12520,15 @@
               "important": false,
               "children": [],
               "_h": 41,
-              "_x": 929.2,
-              "_y": 45757.5,
+              "_x": 1097.2,
+              "_y": 710.5,
               "_realH": 41,
               "_realW": 216
             }
           ],
-          "_h": 41,
+          "_h": 496,
           "_x": 758,
-          "_y": 255.5,
+          "_y": 483,
           "_realH": 41,
           "_realW": 212
         },
@@ -12577,7 +12577,7 @@
           ],
           "_h": 41,
           "_x": 758,
-          "_y": 320.5,
+          "_y": 775.5,
           "_realH": 41,
           "_realW": 141
         },
@@ -12650,7 +12650,7 @@
           ],
           "_h": 41,
           "_x": 758,
-          "_y": 385.5,
+          "_y": 840.5,
           "_realH": 41,
           "_realW": 91
         },
@@ -13071,7 +13071,7 @@
           ],
           "_h": 41,
           "_x": 758,
-          "_y": 450.5,
+          "_y": 905.5,
           "_realH": 41,
           "_realW": 158,
           "note": "New → Ready → Running → (Waiting → Ready) → Terminated            ↑       Suspend Ready"
@@ -13448,7 +13448,7 @@
           ],
           "_h": 41,
           "_x": 758,
-          "_y": 515.5,
+          "_y": 970.5,
           "_realH": 41,
           "_realW": 134,
           "note": ""
@@ -13540,7 +13540,7 @@
           ],
           "_h": 41,
           "_x": 758,
-          "_y": 580.5,
+          "_y": 1035.5,
           "_realH": 41,
           "_realW": 209
         },
@@ -13577,7 +13577,7 @@
           ],
           "_h": 41,
           "_x": 758,
-          "_y": 645.5,
+          "_y": 1100.5,
           "_realH": 41,
           "_realW": 306
         },
@@ -14372,7 +14372,7 @@
           ],
           "_h": 41,
           "_x": 758,
-          "_y": 710.5,
+          "_y": 1165.5,
           "_realH": 41,
           "_realW": 366
         },
@@ -14439,7 +14439,7 @@
               ],
               "_h": 41,
               "_x": 1036,
-              "_y": 775.5,
+              "_y": 1230.5,
               "_realH": 41,
               "_realW": 161
             },
@@ -14500,7 +14500,7 @@
               ],
               "_h": 41,
               "_x": 1036,
-              "_y": 840.5,
+              "_y": 1295.5,
               "_realH": 41,
               "_realW": 112
             },
@@ -14547,9 +14547,9 @@
                   "_realW": 310
                 }
               ],
-              "_h": 171,
+              "_h": 41,
               "_x": 1036,
-              "_y": 970.5,
+              "_y": 1360.5,
               "_realH": 41,
               "_realW": 212
             },
@@ -14584,9 +14584,9 @@
                   "_realW": 409
                 }
               ],
-              "_h": 106,
+              "_h": 41,
               "_x": 1036,
-              "_y": 1133,
+              "_y": 1425.5,
               "_realH": 41,
               "_realW": 290
             },
@@ -14659,7 +14659,7 @@
               ],
               "_h": 41,
               "_x": 1036,
-              "_y": 1230.5,
+              "_y": 1490.5,
               "_realH": 41,
               "_realW": 304
             },
@@ -15062,7 +15062,7 @@
               ],
               "_h": 41,
               "_x": 1036,
-              "_y": 1295.5,
+              "_y": 1555.5,
               "_realH": 41,
               "_realW": 115
             },
@@ -15222,15 +15222,15 @@
               ],
               "_h": 41,
               "_x": 1036,
-              "_y": 1360.5,
+              "_y": 1620.5,
               "_realH": 41,
               "_realW": 146,
               "note": "Way for user programs to talk to the Operating System\n\n\n+----------------------+\n|     User Mode        |\n|  (Chrome, Java, etc) |\n+----------------------+\n          |\n      System Call\n          ↓\n+----------------------+\n|     Kernel Mode      |\n|   (Operating System) |\n+----------------------+\n          |\n       Hardware"
             }
           ],
-          "_h": 626,
+          "_h": 431,
           "_x": 758,
-          "_y": 1068,
+          "_y": 1425.5,
           "_realH": 41,
           "_realW": 158,
           "note": "💻 OPERATING SYSTEM → MULTITHREADING (CPU) ⭐\n\n--------------------------------------------------\n📌 1. INTRODUCTION / CORE CONCEPT\n--------------------------------------------------\n→ Thread = Basic CPU utilization unit\n→ Also called Lightweight Process\n\nComponents:\n→ Program Counter (PC)\n→ Thread ID\n→ Stack\n→ Registers\n\nShared Resources:\n→ Code, Data, OS Resources\n\n--------------------------------------------------\n📌 2. BENEFITS OF MULTITHREADING\n--------------------------------------------------\n✔ Responsiveness (fast execution)\n✔ Resource Sharing\n✔ Economy (less overhead)\n✔ Scalability (multi-core support)\n\n--------------------------------------------------\n📌 3. THREAD TYPES\n--------------------------------------------------\n\nUser-Level Threads (ULT)\n→ Managed by user/library\n→ Faster context switching\n→ ❌ Blocking Issue:\n   If one thread performs blocking I/O,\n   → Entire process blocks\n   → All threads get blocked\n\nKernel-Level Threads (KLT)\n→ Managed by OS\n→ Supports multiprocessing ✔\n→ ✔ If one thread blocks → others continue\n→ Slower than ULT\n\n--------------------------------------------------\n📌 4. MULTITHREADING MODELS\n--------------------------------------------------\n\nMany-to-One\n→ Many user threads → One kernel thread\n→ No parallelism ❌\n→ Blocking problem ❌\n\nOne-to-One\n→ One user thread → One kernel thread\n→ True parallelism ✔\n→ No blocking issue ✔\n\nMany-to-Many\n→ Many user threads → Many kernel threads\n→ Multiplexing → Best model ✔\n\n--------------------------------------------------\n📌 5. MULTICORE PROGRAMMING CHALLENGES\n--------------------------------------------------\n→ Dividing Activity\n→ Balance (load balancing)\n→ Data Splitting\n→ Data Dependency\n→ Testing & Debugging\n\n--------------------------------------------------\n📌 6. PROBLEMS IN MULTITHREADING ⚠️\n--------------------------------------------------\n❌ Race Condition\n❌ Deadlock\n❌ Starvation\n\n--------------------------------------------------\n📌 7. SYSTEM SUPPORT\n--------------------------------------------------\n→ System Calls (thread/process control)\n\n--------------------------------------------------\n📌 8. QUICK EXAM REVISION 🔥\n--------------------------------------------------\n✔ Thread = Smallest execution unit\n✔ Lightweight process\n✔ Many-to-Many = Best model\n✔ ULT → One blocks → All blocked ❌\n✔ KLT → Threads independent ✔\n✔ Common issues → Race, Deadlock, Starvation\n\n--------------------------------------------------\n🎯 FINAL\n--------------------------------------------------\n👉 Multithreading = High-weightage OS topic\n👉 Asked in theory + concept + case-based questions"
@@ -15284,9 +15284,9 @@
                   "_realW": 205
                 }
               ],
-              "_h": 171,
-              "_x": 926,
-              "_y": 55507.5,
+              "_h": 41,
+              "_x": 1094,
+              "_y": 1685.5,
               "_realH": 41,
               "_realW": 189
             },
@@ -15345,9 +15345,9 @@
                   "_realW": 206
                 }
               ],
-              "_h": 236,
-              "_x": 926,
-              "_y": 55735,
+              "_h": 41,
+              "_x": 1094,
+              "_y": 1750.5,
               "_realH": 41,
               "_realW": 201
             },
@@ -15431,9 +15431,9 @@
                   "_realW": 111
                 }
               ],
-              "_h": 366,
-              "_x": 926,
-              "_y": 56060,
+              "_h": 41,
+              "_x": 1094,
+              "_y": 1815.5,
               "_realH": 41,
               "_realW": 245
             },
@@ -15492,16 +15492,16 @@
                   "_realW": 114
                 }
               ],
-              "_h": 236,
-              "_x": 926,
-              "_y": 56385,
+              "_h": 41,
+              "_x": 1094,
+              "_y": 1880.5,
               "_realH": 41,
               "_realW": 178
             }
           ],
-          "_h": 41,
+          "_h": 236,
           "_x": 758,
-          "_y": 1425.5,
+          "_y": 1783,
           "_realH": 41,
           "_realW": 210,
           "note": "--------------------------------------------------\n📌 1. BASICS\n--------------------------------------------------\n→ Disk Scheduling = Order of servicing I/O requests\n→ Only ONE request served at a time (others wait in queue)\n→ Also called I/O Scheduling\n\n✔ Total Overhead Movement = Total Head Movement\n✔ = Total distance covered by disk arm\n\n--------------------------------------------------\n📌 2. FORMULAS ⭐\n--------------------------------------------------\nDisk Access Time = Seek Time + Rotational Latency + Transfer Time\n\nTotal Seek Time = Total Head Movement × Seek Time\n\n--------------------------------------------------\n📌 3. PERFORMANCE METRICS\n--------------------------------------------------\n→ Seek Time → Head movement time\n→ Rotational Latency → Sector rotation time\n→ Transfer Time → Data read/write time\n\n--------------------------------------------------\n📌 4. GOALS\n--------------------------------------------------\n✔ Minimize Seek Time\n✔ Maximize Throughput\n✔ Minimize Latency\n✔ Fairness\n\n--------------------------------------------------\n📌 5. ALGORITHMS + NUMERICALS\n--------------------------------------------------\n\n1️⃣ FCFS (First Come First Serve)\n→ Serve in given order (no sorting)\n→ No starvation | High seek time ❌\n\n📊 NUMERICAL:\nQueue = 50,82,170,43,140,24,16,190\nHead = 50\n\nTotal Overhead Movement =\n(82-50) + (170-82) + (170-43) + (140-43) + (140-24) + (24-16) + (190-16)\n\n= 32 + 88 + 127 + 97 + 116 + 8 + 174\n✔ Total = 642\n\n--------------------------------------------------\n\n2️⃣ SSTF (Shortest Seek Time First)\n→ Choose nearest request\n→ Fast but starvation possible ❌\n\n📊 NUMERICAL:\nQueue = 82,170,43,140,24,16,190\nHead = 50\n\nTotal Overhead Movement =\n(50-43) + (43-24) + (24-16) + (82-16) + (140-82) + (170-140) + (190-170)\n\n= 7 + 19 + 8 + 66 + 58 + 30 + 20\n✔ Total = 208\n\n--------------------------------------------------\n\n3️⃣ SCAN (Elevator)\n→ Move in one direction, then reverse\n\n📊 NUMERICAL:\nHead = 50, Direction → larger\nDisk end = 199\n\nTotal Overhead Movement =\n(199 - 50) + (199 - 16)\n\n✔ Total = 332\n\n--------------------------------------------------\n\n4️⃣ C-SCAN\n→ Move in one direction + jump to start\n\n📊 NUMERICAL:\nTotal Overhead Movement =\n(199 - 50) + (199 - 0) + (43 - 0)\n\n✔ Total = 391\n\n--------------------------------------------------\n\n5️⃣ LOOK\n→ Stop at last request (no disk end)\n\n📊 NUMERICAL:\nTotal Overhead Movement =\n(190 - 50) + (190 - 16)\n\n✔ Total = 314\n\n--------------------------------------------------\n\n6️⃣ C-LOOK\n→ Circular + optimized (no disk end)\n\n📊 NUMERICAL:\nTotal Overhead Movement =\n(190 - 50) + (190 - 16) + (43 - 16)\n\n✔ Total = 341\n\n--------------------------------------------------\n📌 6. EXAM TIPS 🔥\n--------------------------------------------------\n✔ Always use absolute difference | |\n✔ Include every movement\n✔ Direction matters in SCAN/C-SCAN\n✔ FCFS → follow order only\n\n--------------------------------------------------\n🎯 FINAL:\n→ “Total Overhead Movement” = Most important in numericals",
@@ -15958,7 +15958,7 @@
           ],
           "_h": 41,
           "_x": 758,
-          "_y": 1490.5,
+          "_y": 1945.5,
           "_realH": 41,
           "_realW": 281
         },
@@ -16383,7 +16383,7 @@
           ],
           "_h": 41,
           "_x": 758,
-          "_y": 1555.5,
+          "_y": 2010.5,
           "_realH": 41,
           "_realW": 178
         },
@@ -16874,7 +16874,7 @@
           ],
           "_h": 41,
           "_x": 758,
-          "_y": 1620.5,
+          "_y": 2075.5,
           "_realH": 41,
           "_realW": 311
         },
@@ -17047,7 +17047,7 @@
           ],
           "_h": 41,
           "_x": 758,
-          "_y": 1685.5,
+          "_y": 2140.5,
           "_realH": 41,
           "_realW": 163
         },
@@ -17059,7 +17059,7 @@
           "children": [],
           "_h": 41,
           "_x": 758,
-          "_y": 1750.5,
+          "_y": 2205.5,
           "_realH": 41,
           "_realW": 126,
           "note": "A condition in which a process spends more time paging than executing\n\nThrashing occurs when the system is so busy moving pages in and out of memory that very little actual processing is being done."
@@ -17072,7 +17072,7 @@
           "children": [],
           "_h": 41,
           "_x": 758,
-          "_y": 1815.5,
+          "_y": 2270.5,
           "_realH": 41,
           "_realW": 97
         },
@@ -17084,7 +17084,7 @@
           "children": [],
           "_h": 41,
           "_x": 758,
-          "_y": 1880.5,
+          "_y": 2335.5,
           "_realH": 41,
           "_realW": 147
         },
@@ -17099,7 +17099,7 @@
           "children": [],
           "_h": 41,
           "_x": 758,
-          "_y": 1945.5,
+          "_y": 2400.5,
           "_realH": 41,
           "_realW": 130
         },
@@ -17114,13 +17114,13 @@
           "children": [],
           "_h": 41,
           "_x": 758,
-          "_y": 2010.5,
+          "_y": 2465.5,
           "_realH": 41,
           "_realW": 186
         }
       ],
       "_h": 41,
-      "_x": 456,
+      "_x": 481.6,
       "_y": 255.5,
       "_realH": 41,
       "_realW": 182
@@ -20568,7 +20568,7 @@
         }
       ],
       "_h": 41,
-      "_x": 456,
+      "_x": 481.6,
       "_y": 320.5,
       "_realH": 41,
       "_realW": 259
@@ -23850,7 +23850,7 @@
         }
       ],
       "_h": 41,
-      "_x": 456,
+      "_x": 481.6,
       "_y": 385.5,
       "_realH": 41,
       "_realW": 279
@@ -28757,7 +28757,7 @@
         }
       ],
       "_h": 41,
-      "_x": 456,
+      "_x": 481.6,
       "_y": 450.5,
       "_realH": 41,
       "_realW": 207
@@ -31709,7 +31709,7 @@
         }
       ],
       "_h": 41,
-      "_x": 456,
+      "_x": 481.6,
       "_y": 515.5,
       "_realH": 41,
       "_realW": 204
@@ -31723,7 +31723,7 @@
       "youtube": "",
       "children": [],
       "_h": 41,
-      "_x": 456,
+      "_x": 481.6,
       "_y": 580.5,
       "_realH": 41,
       "_realW": 168
@@ -31965,7 +31965,7 @@
         }
       ],
       "_h": 41,
-      "_x": 456,
+      "_x": 481.6,
       "_y": 645.5,
       "_realH": 41,
       "_realW": 86
@@ -31990,7 +31990,7 @@
         }
       ],
       "_h": 41,
-      "_x": 456,
+      "_x": 481.6,
       "_y": 710.5,
       "_realH": 41,
       "_realW": 91
@@ -32207,7 +32207,7 @@
         }
       ],
       "_h": 41,
-      "_x": 456,
+      "_x": 481.6,
       "_y": 775.5,
       "_realH": 41,
       "_realW": 104,
@@ -32222,7 +32222,7 @@
       "youtube": "",
       "children": [],
       "_h": 41,
-      "_x": 456,
+      "_x": 481.6,
       "_y": 840.5,
       "_realH": 41,
       "_realW": 76
@@ -32335,7 +32335,7 @@
         }
       ],
       "_h": 41,
-      "_x": 456,
+      "_x": 481.6,
       "_y": 905.5,
       "_realH": 41,
       "_realW": 161
@@ -32349,7 +32349,7 @@
       "youtube": "",
       "children": [],
       "_h": 41,
-      "_x": 456,
+      "_x": 481.6,
       "_y": 970.5,
       "_realH": 41,
       "_realW": 135
@@ -35339,7 +35339,7 @@
         }
       ],
       "_h": 41,
-      "_x": 456,
+      "_x": 481.6,
       "_y": 1035.5,
       "_realH": 41,
       "_realW": 197
@@ -35351,7 +35351,7 @@
       "important": false,
       "children": [],
       "_h": 41,
-      "_x": 456,
+      "_x": 481.6,
       "_y": 1100.5,
       "_realH": 41,
       "_realW": 145
@@ -35961,7 +35961,7 @@
         }
       ],
       "_h": 41,
-      "_x": 456,
+      "_x": 481.6,
       "_y": 1165.5,
       "_realH": 41,
       "_realW": 116
@@ -36052,7 +36052,7 @@
         }
       ],
       "_h": 41,
-      "_x": 456,
+      "_x": 481.6,
       "_y": 1230.5,
       "_realH": 41,
       "_realW": 119
@@ -36067,7 +36067,7 @@
       "examHistory": [],
       "children": [],
       "_h": 41,
-      "_x": 456,
+      "_x": 481.6,
       "_y": 1295.5,
       "_realH": 41,
       "_realW": 159
@@ -36082,7 +36082,7 @@
       "examHistory": [],
       "children": [],
       "_h": 41,
-      "_x": 456,
+      "_x": 481.6,
       "_y": 1360.5,
       "_realH": 41,
       "_realW": 154
@@ -36097,7 +36097,7 @@
       "examHistory": [],
       "children": [],
       "_h": 41,
-      "_x": 456,
+      "_x": 481.6,
       "_y": 1425.5,
       "_realH": 41,
       "_realW": 215
@@ -36107,5 +36107,5 @@
   "_x": 80,
   "_y": 743,
   "_realH": 41,
-  "_realW": 235
+  "_realW": 251
 }
