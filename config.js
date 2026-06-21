@@ -18,19 +18,19 @@ window.APP_CONFIG = {
   },
   preImportedMaps: [
     { label: "1. Maths", file: "1_maths.json" },
+    { label: "10. Geography", file: "10_geography.json" },
+    { label: "11. TRE4 Computer Science", file: "11_tre4_computer_science.json" },
     { label: "2. Reasoning", file: "2_reasoning.json" },
     { label: "3. English", file: "3_english.json" },
     { label: "4. Polity", file: "4_polity.json" },
     { label: "5. Static Gk", file: "5_static_gk.json" },
     { label: "6. History", file: "6_history.json" },
     { label: "7. Economy", file: "7_economy.json" },
-    { label: "8. Battles", file: "8_battles.json" },
-    { label: "10. Geography", file: "10_geography.json" },
-    { label: "11. TRE4 Computer Science", file: "11_tre4_computer_science.json" }
+    { label: "8. Battles", file: "8_battles.json" }
   ],
   preImportedQuizzes: [
-    { label: "3. English - Direct → Indirect", file: "3_english_direct_indirect.json" },
     { label: "3. English - Active ⬌ Passive Voice", file: "3_english_active_passive_voice.json"},
+    { label: "3. English - Direct → Indirect", file: "3_english_direct_indirect.json" },
     { label: "3. English - subject verb agreement", file: "3_english_subject_verb_agreement.json"},
     { label: "4. Polity - Articles 12-35→ Fundamental Rights", file: "fm_quiz.json" },
     { label: "5. Static Gk - Indian Dance Forms", file: "5_static_gk_indian_dance_forms.json"},

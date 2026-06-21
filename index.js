@@ -480,12 +480,15 @@ async function refreshSelector(){
 
   const preImportedGroup = document.createElement("optgroup");
   preImportedGroup.label = "Pre Imported";
-  APP_CONFIG.preImportedMaps.forEach(map=>{
-    const option = document.createElement("option");
-    option.value = `preimport:${map.file}`;
-    option.textContent = map.label;
-    preImportedGroup.appendChild(option);
-  });
+  APP_CONFIG.preImportedMaps
+    .slice()
+    .sort((a, b) => a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }))
+    .forEach(map=>{
+      const option = document.createElement("option");
+      option.value = `preimport:${map.file}`;
+      option.textContent = map.label;
+      preImportedGroup.appendChild(option);
+    });
   mapSelector.appendChild(preImportedGroup);
 }
 
@@ -542,12 +545,15 @@ async function refreshQuizSelector() {
   if (APP_CONFIG.preImportedQuizzes && APP_CONFIG.preImportedQuizzes.length > 0) {
     const preImportedGroup = document.createElement("optgroup");
     preImportedGroup.label = "Pre Imported";
-    APP_CONFIG.preImportedQuizzes.forEach(quiz => {
-      const option = document.createElement("option");
-      option.value = `preimport:${quiz.file}`;
-      option.textContent = quiz.label;
-      preImportedGroup.appendChild(option);
-    });
+    APP_CONFIG.preImportedQuizzes
+      .slice()
+      .sort((a, b) => a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }))
+      .forEach(quiz => {
+        const option = document.createElement("option");
+        option.value = `preimport:${quiz.file}`;
+        option.textContent = quiz.label;
+        preImportedGroup.appendChild(option);
+      });
     quizSelector.appendChild(preImportedGroup);
   }
   
@@ -616,12 +622,15 @@ async function refreshTestSelector() {
   if (preImportedTests.length > 0) {
     const group = document.createElement("optgroup");
     group.label = "Pre Imported Tests";
-    preImportedTests.forEach(test => {
-      const option = document.createElement("option");
-      option.value = `preimport:${test.file}`;
-      option.textContent = test.label;
-      group.appendChild(option);
-    });
+    preImportedTests
+      .slice()
+      .sort((a, b) => a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }))
+      .forEach(test => {
+        const option = document.createElement("option");
+        option.value = `preimport:${test.file}`;
+        option.textContent = test.label;
+        group.appendChild(option);
+      });
     selector.appendChild(group);
   }
 

@@ -31,7 +31,19 @@
     <button onclick="deleteMap()">🗑 Delete</button>
     <button onclick="undo()">↶ Undo</button>
     <button onclick="redo()">↷ Redo</button>
+    <div class="search-box">
+      <input type="search" placeholder="Search node…" 
+        oninput="searchNodes(this.value)" id="searchInput">
+
+      <span id="searchCount">0/0</span>
+
+      <button onclick="prevSearch()">▲</button>
+      <button onclick="nextSearch()">▼</button>
+      <button onclick="clearSearch()">✖</button>
+    </div>
     <button onclick="exportJSON()">📄 Export JSON</button>
+    <button onclick="exportPNG()" id="exportPngBtn">🖼 Export PNG</button>
+    <button onclick="exportPDF()" id="exportPdfBtn">📕 Export PDF</button>
     <button onclick="toggleFilterDropdown(event)" id="filterBtn">🔍 Filter</button>
     <select id="testSelector" onchange="startSelectedTest(this.value)">
       <option value="">📝 Start Test...</option>
@@ -49,18 +61,6 @@
       title="Collapse All" onclick="toggleAllNodes()"></button>
     <button id="quizModeBtn" onclick="toggleQuizMode()">🧠 Quiz Mode</button>
     <button id="revealQuizBtn" onclick="revealAllQuizAnswers()" hidden>Reveal All</button>
-      <div class="search-box">
-  <input type="search" placeholder="Search node…" 
-    oninput="searchNodes(this.value)" id="searchInput">
-
-  <span id="searchCount">0/0</span>
-
-  <button onclick="prevSearch()">▲</button>
-  <button onclick="nextSearch()">▼</button>
-  <button onclick="clearSearch()">✖</button>
-  <button onclick="exportPNG()" id="exportPngBtn">🖼 Export PNG</button>
-  <button onclick="exportPDF()" id="exportPdfBtn">📕 Export PDF</button>
-</div>
 
 <button onclick="window.open('https://youtu.be/5iraDyHm6WY', '_blank')" title="View User Guide">
   🎥 User Guide
