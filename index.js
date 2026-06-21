@@ -1500,6 +1500,7 @@ h.innerHTML = `
   m.innerHTML = `
   <button onclick="addChild('${n.id}')">➕ Add</button>
   <button onclick="editNode('${n.id}')">✏️ Edit</button>
+  ${n.id !== currentMap.id ? `<button onclick="deleteNode('${n.id}')">🗑️ Delete</button>` : ""}
   <button onclick="expandAllChildren('${n.id}')">🌿 Expand branch</button>
   ${APP_CONFIG.features.importantMarker ? `<button onclick="toggleImportant('${n.id}')">${n.important ? "⭐ Remove Important" : "⭐ Mark Important"}</button>` : ""}
   ${APP_CONFIG.features.focusMode ? `<button onclick="toggleFocus('${n.id}')">${focusedNodeId === n.id ? "🎯 Exit focus" : "🎯 Focus"}</button>` : ""}
