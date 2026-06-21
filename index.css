@@ -719,9 +719,9 @@ body.dark-mode .node.drop-after {
   /* 🎯 professional readable text */
   color: #374151;
 
-  line-height: 1.6;
+  line-height: 1.45;
 
-  white-space: pre-wrap;
+  white-space: normal;
   word-break: break-word;
 
   margin: 0;
@@ -737,6 +737,67 @@ body.dark-mode .node.drop-after {
 .node.active-hit {
   transform: scale(1.05);
   z-index: 999;
+}
+
+.note-editor-hint {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.note-viewer-body h1,
+.note-viewer-body h2,
+.note-viewer-body h3,
+.note-viewer-body h4,
+.note-viewer-body h5,
+.note-viewer-body h6 {
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.note-viewer-body h1 { font-size: 20px; }
+.note-viewer-body h2 { font-size: 18px; }
+.note-viewer-body h3 { font-size: 16px; }
+
+.note-viewer-body blockquote {
+  margin: 8px 0;
+  padding: 10px 12px;
+  border-left: 4px solid #d1d5db;
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
+.note-viewer-body ul,
+.note-viewer-body ol {
+  margin: 4px 0;
+  padding-left: 20px;
+}
+
+.note-viewer-body li {
+  margin: 0 0 1px 0;
+  line-height: 1.25;
+}
+
+.note-viewer-body code {
+  background: rgba(15, 23, 42, 0.05);
+  color: #111827;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+.note-viewer-body pre {
+  margin: 12px 0;
+  padding: 12px;
+  background: #111827;
+  color: #f8fafc;
+  overflow-x: auto;
+  border-radius: 10px;
+}
+
+.note-viewer-body a {
+  color: #2563eb;
+  text-decoration: underline;
 }
 
 .node.active-hit .node-text {
