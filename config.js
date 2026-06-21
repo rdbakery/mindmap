@@ -4,7 +4,7 @@ window.APP_CONFIG = {
     youtube: true,
     pyq: true,
     quizMode: false,
-    focusMode: true,
+    focusMode: false,
     importantMarker: true,
     search: true,
     darkMode: true,
