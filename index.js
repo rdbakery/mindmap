@@ -233,11 +233,11 @@ function renderMarkdown(raw) {
       return;
     }
 
-    const unorderedMatch = line.match(/^[-*+]\s+(.*)$/);
-    const orderedMatch = line.match(/^(\d+)\.\s+(.*)$/);
+    const unorderedMatch = line.match(/^([\-\*\+\.]\s+)(.*)$/);
+    const orderedMatch = line.match(/^(\d+)(?:[\.)])\s+(.*)$/);
     if (unorderedMatch || orderedMatch) {
       const listType = unorderedMatch ? 'ul' : 'ol';
-      const itemText = inlineFormat((unorderedMatch || orderedMatch)[1]);
+      const itemText = inlineFormat(unorderedMatch ? unorderedMatch[2] : orderedMatch[2]);
 
       if (!currentList || currentList.type !== listType) {
         flushParagraph();
