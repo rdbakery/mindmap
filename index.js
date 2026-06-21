@@ -167,6 +167,160 @@ function escapeHtml(text) {
     .replace(/'/g, "&#39;");
 }
 
+function renderMarkdown(raw) {
+  let text = String(raw || "").replace(/\r/g, "");
+
+  const codeBlocks = [];
+  text = text.replace(/```(?:[^\n]*\n)?([\s\S]*?)```/g, (_m, code) => {
+    const safeCode = escapeHtml(code);
+    const placeholder = `@@CODEBLOCK_${codeBlocks.length}@@`;
+    codeBlocks.push(`<pre><code>${safeCode}</code></pre>`);
+    return placeholder;
+  });
+
+  text = escapeHtml(text);
+
+  const lines = text.split('\n');
+  const blocks = [];
+  let currentParagraph = [];
+  let currentList = null;
+
+  const flushParagraph = () => {
+    if (!currentParagraph.length) return;
+    blocks.push({ type: 'paragraph', content: currentParagraph });
+    currentParagraph = [];
+  };
+
+  const flushList = () => {
+    if (!currentList) return;
+    blocks.push(currentList);
+    currentList = null;
+  };
+
+  const inlineFormat = (str) => {
+    str = str.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noreferrer">$1</a>');
+    str = str.replace(/`([^`]+)`/g, '<code>$1</code>');
+    str = str.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    str = str.replace(/__(.*?)__/g, '<strong>$1</strong>');
+    str = str.replace(/\*(.*?)\*/g, '<em>$1</em>');
+    str = str.replace(/_(.*?)_/g, '<em>$1</em>');
+    return str;
+  };
+
+  lines.forEach((rawLine) => {
+    const line = rawLine.trim();
+
+    if (line === '') {
+      flushParagraph();
+      flushList();
+      return;
+    }
+
+    const headingMatch = line.match(/^(#{1,6})\s+(.*)$/);
+    if (headingMatch) {
+      flushParagraph();
+      flushList();
+      const level = headingMatch[1].length;
+      blocks.push({ type: 'heading', level, content: inlineFormat(headingMatch[2]) });
+      return;
+    }
+
+    const blockquoteMatch = line.match(/^>\s?(.*)$/);
+    if (blockquoteMatch) {
+      flushParagraph();
+      flushList();
+      blocks.push({ type: 'blockquote', content: inlineFormat(blockquoteMatch[1]) });
+      return;
+    }
+
+    const unorderedMatch = line.match(/^[-*+]\s+(.*)$/);
+    const orderedMatch = line.match(/^(\d+)\.\s+(.*)$/);
+    if (unorderedMatch || orderedMatch) {
+      const listType = unorderedMatch ? 'ul' : 'ol';
+      const itemText = inlineFormat((unorderedMatch || orderedMatch)[1]);
+
+      if (!currentList || currentList.type !== listType) {
+        flushParagraph();
+        flushList();
+        currentList = { type: listType, items: [] };
+      }
+      currentList.items.push(itemText);
+      return;
+    }
+
+    currentParagraph.push(inlineFormat(line));
+  });
+
+  flushParagraph();
+  flushList();
+
+  const html = blocks
+    .map((block) => {
+      if (block.type === 'paragraph') {
+        return `<p>${block.content.join('<br>')}</p>`;
+      }
+      if (block.type === 'heading') {
+        return `<h${block.level}>${block.content}</h${block.level}>`;
+      }
+      if (block.type === 'blockquote') {
+        return `<blockquote>${block.content}</blockquote>`;
+      }
+      if (block.type === 'ul' || block.type === 'ol') {
+        const items = block.items.map(item => `<li>${item}</li>`).join('');
+        return `<${block.type}>${items}</${block.type}>`;
+      }
+      return '';
+    })
+    .join('');
+
+  const rendered = html.replace(/@@CODEBLOCK_(\d+)@@/g, (_match, idx) => codeBlocks[Number(idx)] || '');
+  return rendered;
+}
+
+function highlightRenderedHtml(html, query) {
+  if (!query) return html;
+
+  const container = document.createElement('div');
+  container.innerHTML = html;
+
+  const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, null, false);
+  const textNodes = [];
+  while (walker.nextNode()) {
+    textNodes.push(walker.currentNode);
+  }
+
+  const needle = query.toLowerCase();
+  textNodes.forEach(node => {
+    const raw = node.nodeValue;
+    const lower = raw.toLowerCase();
+    let idx = lower.indexOf(needle);
+    if (idx === -1) return;
+
+    const frag = document.createDocumentFragment();
+    let start = 0;
+
+    while (idx !== -1) {
+      if (idx > start) {
+        frag.appendChild(document.createTextNode(raw.slice(start, idx)));
+      }
+      const mark = document.createElement('span');
+      mark.className = 'search-match';
+      mark.textContent = raw.slice(idx, idx + needle.length);
+      frag.appendChild(mark);
+      start = idx + needle.length;
+      idx = lower.indexOf(needle, start);
+    }
+
+    if (start < raw.length) {
+      frag.appendChild(document.createTextNode(raw.slice(start)));
+    }
+
+    node.parentNode.replaceChild(frag, node);
+  });
+
+  return container.innerHTML;
+}
+
 function highlightSearchMatch(text, query) {
   const raw = String(text || "");
   if (!query) return escapeHtml(raw);
@@ -929,6 +1083,7 @@ function editNote(id){
 
   editor.innerHTML = `
     <div class="note-editor-header"><span>${node.text}</span></div>
+    <div class="note-editor-hint">Markdown supported: headings, **bold**, *italic*, \`code\`, lists, and [links](https://example.com).</div>
     <textarea class="note-editor-textarea">${node.note || ""}</textarea>
     <div class="note-editor-actions">
       <button class="cancel">Cancel</button>
@@ -1594,7 +1749,8 @@ function openNoteViewer(id){
   viewer.className = "note-viewer";
 
   const noteText = node.note || "No note";
-  const highlightedNote = highlightSearchMatch(noteText, searchQuery);
+  const noteHtml = renderMarkdown(noteText);
+  const highlightedNote = searchQuery ? highlightRenderedHtml(noteHtml, searchQuery) : noteHtml;
   const safeTitle = escapeHtml(node.text || "");
 
   viewer.innerHTML = `
