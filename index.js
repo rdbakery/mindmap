@@ -810,6 +810,7 @@ function addChild(id){
   important: false,
   note: "",
   youtube: "",
+  viewMap: "",
   examHistory: [],   // ✅ NEW
   children: []
 });
@@ -1078,6 +1079,90 @@ function closeYoutubeEditors(){
   document.querySelectorAll(".youtube-editor").forEach(e => e.remove());
 }
 
+function editViewMap(id) {
+  const node = find(currentMap, id);
+  const nodeEl = document.querySelector(`.node[data-id="${id}"]`);
+  if (!node || !nodeEl) return;
+
+  closeYoutubeEditors(); // reuse same editor overlay style
+
+  const rect = nodeEl.getBoundingClientRect();
+  const editor = document.createElement("div");
+  editor.className = "youtube-editor";
+  editor.dataset.id = id;
+
+  editor.innerHTML = `
+    <div class="youtube-editor-header">View Map Link</div>
+
+    <input type="text"
+      class="youtube-input"
+      placeholder="Paste map URL..."
+      value="${node.viewMap || ""}"
+    />
+
+    <div class="youtube-editor-actions">
+      <button class="open">▶ Open</button>
+      ${node.viewMap ? `<button class="remove">Remove</button>` : ""}
+      <button class="cancel">Cancel</button>
+      <button class="save">Save</button>
+    </div>
+  `;
+
+  document.body.appendChild(editor);
+
+  let left = rect.right + 12;
+  let top = rect.top;
+
+  if (left + 320 > window.innerWidth) {
+    left = rect.left - 332;
+  }
+
+  if (top + 180 > window.innerHeight) {
+    top = window.innerHeight - 200;
+  }
+
+  if (left < 10) left = 10;
+  if (top < 10) top = 10;
+
+  editor.style.left = left + "px";
+  editor.style.top = top + "px";
+
+  const input = editor.querySelector(".youtube-input");
+  input.focus();
+
+  editor.querySelector(".open").onclick = () => {
+    if (input.value.trim()) {
+      window.open(input.value.trim(), "_blank");
+    }
+  };
+
+  const removeBtn = editor.querySelector(".remove");
+  if (removeBtn) {
+    removeBtn.onclick = () => {
+      if (confirm("Remove View Map link?")) {
+        pushHistory();
+        node.viewMap = "";
+        editor.remove();
+        render();
+      }
+    };
+  }
+
+  editor.querySelector(".cancel").onclick = () => editor.remove();
+
+  editor.querySelector(".save").onclick = () => {
+    pushHistory();
+    node.viewMap = input.value.trim();
+    editor.remove();
+    render();
+  };
+}
+
+function openViewMap(id) {
+  const node = find(currentMap, id);
+  if (!node?.viewMap) return;
+  window.open(node.viewMap, "_blank");
+}
 
 function toggleNode(id){
   pushHistory();
@@ -1437,9 +1522,22 @@ ${APP_CONFIG.features.youtube ? (isAdmin
       `
       : ""
     )) : ""}
-  ${isAdmin ? `<button onclick="openQuizSettingsModal('${n.id}')">🤖 Generate AI Quiz</button>` : ""}
-  <button onclick="deleteNode('${n.id}')">🗑 Delete</button>
-`;
+  ${isAdmin 
+    ? `
+      <button onclick="editViewMap('${n.id}')">
+        ${n.viewMap ? "🗺️ Edit View Map" : "➕ Add View Map"}
+      </button>
+    `
+    : (n.viewMap 
+        ? `
+          <button onclick="openViewMap('${n.id}')">
+            🗺️ View Map
+          </button>
+        `
+        : ""
+      )
+  }
+  `;
 
   const menuBtn = h.querySelector("button");
   if (quizMode) {
@@ -1449,7 +1547,11 @@ ${APP_CONFIG.features.youtube ? (isAdmin
     menuBtn.onclick = e => {
       e.stopPropagation();
       closeMenus();
-      m.style.display = "block";
+      if (m.style.display === "block") {
+        m.style.display = "none";
+      } else {
+        m.style.display = "block";
+      }
     };
   }
 
