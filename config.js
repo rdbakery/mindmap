@@ -1,3 +1,17 @@
+/*
+1. add 
+2. edit
+3. delete
+4. expand branch
+5. mark important
+6. add notes
+7. add pyq
+8. add youtube video
+9. add map
+10. generate AI quiz
+
+*/
+
 window.APP_CONFIG = {
   features: {
     notes: true,

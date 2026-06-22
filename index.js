@@ -1660,6 +1660,7 @@ h.innerHTML = `
   ${APP_CONFIG.features.importantMarker ? `<button onclick="toggleImportant('${n.id}')">${n.important ? "⭐ Remove Important" : "⭐ Mark Important"}</button>` : ""}
   ${APP_CONFIG.features.focusMode ? `<button onclick="toggleFocus('${n.id}')">${focusedNodeId === n.id ? "🎯 Exit focus" : "🎯 Focus"}</button>` : ""}
   ${APP_CONFIG.features.notes ? `<button onclick="editNote('${n.id}')">📝 Add note</button>` : ""}
+  ${isAdmin ? `<button onclick="openQuizSettingsModal('${n.id}')">🤖 Generate AI Quiz</button>` : ""}
 ${(isAdmin && APP_CONFIG.features.pyq) ? `
 <button onclick="editExamHistory('${n.id}')">
 📚 Add PYQ</button>
