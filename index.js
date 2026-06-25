@@ -3870,28 +3870,41 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
   const nodeEl = nodeId ? document.querySelector(`.node[data-id="${nodeId}"]`) : null;
   if (nodeEl) {
     const rect = nodeEl.getBoundingClientRect();
+    const modalRect = modal.getBoundingClientRect();
     let left = rect.right + 12;
     let top = rect.top;
     let arrowClass = "arrow-left";
 
-    const boxWidth = 550;
-    const minRequiredHeight = 450; // Minimum desired height for the quiz to look good
+    const boxWidth = modalRect.width || 550;
+    const boxHeight = modalRect.height || 450;
 
     if (left + boxWidth > window.innerWidth) {
       left = rect.left - boxWidth - 12;
       arrowClass = "arrow-right";
     }
-    if (left < 10) { left = 10; arrowClass = "arrow-left"; }
-    
-    if (top + minRequiredHeight > window.innerHeight) {
-      top = window.innerHeight - minRequiredHeight - 10;
+    if (left < 10) {
+      left = 10;
+      arrowClass = "arrow-left";
     }
-    if (top < 10) { top = 10; }
 
-    modal.classList.add(arrowClass);
-    modal.style.left = left + "px";
-    modal.style.top = top + "px";
-    modal.style.maxHeight = `calc(100vh - ${top}px - 10px)`; // Enforces boundary
+    if (top + boxHeight > window.innerHeight) {
+      top = Math.max(10, window.innerHeight - boxHeight - 10);
+    }
+    if (top < 10) {
+      top = 10;
+    }
+
+    if (left + boxWidth > window.innerWidth || top + boxHeight > window.innerHeight) {
+      modal.style.top = "50%";
+      modal.style.left = "50%";
+      modal.style.transform = "translate(-50%, -50%)";
+      modal.style.maxHeight = "85vh";
+    } else {
+      modal.classList.add(arrowClass);
+      modal.style.left = left + "px";
+      modal.style.top = top + "px";
+      modal.style.maxHeight = `calc(100vh - 20px)`;
+    }
   } else {
     modal.style.top = "50%";
     modal.style.left = "50%";
