@@ -110,8 +110,84 @@ function getTodayPassword() {
   return `${day}${month}${year}@YT`; // 🔑 your pattern
 }
 
-function enableAdminMode() {
-  const pass = prompt("Enter Admin Password:");
+function promptForAdminPassword() {
+  return new Promise((resolve) => {
+    const existingModal = document.getElementById('adminPasswordModal');
+    const existingOverlay = document.getElementById('adminPasswordOverlay');
+    if (existingModal) existingModal.remove();
+    if (existingOverlay) existingOverlay.remove();
+
+    const overlay = document.createElement('div');
+    overlay.id = 'adminPasswordOverlay';
+    overlay.style.cssText = "position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:99998;";
+    document.body.appendChild(overlay);
+
+    const modal = document.createElement('div');
+    modal.id = 'adminPasswordModal';
+    modal.className = 'note-editor';
+    modal.style.cssText = "position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;max-width:380px;z-index:99999;padding:0;box-sizing:border-box;cursor:default;";
+
+    modal.innerHTML = `
+      <div class="note-editor-header" style="padding:20px; border-bottom:1px solid rgba(128,128,128,0.2); display:flex; justify-content:space-between; align-items:center; font-size:16px;">
+        <span>🔐 Admin Login</span>
+        <button class="close" id="closeAdminPasswordBtn" style="background:transparent;border:none;font-size:18px;cursor:pointer;color:inherit;">✖</button>
+      </div>
+      <div style="padding:20px;">
+        <div style="margin-bottom:18px; font-size:14px; color:#4b5563;">Enter the daily admin password to enable admin mode.</div>
+        <div style="position:relative; display:flex; align-items:center; gap:8px;">
+          <input id="adminPasswordInput" type="password" placeholder="Admin password" style="width:100%; padding:10px 44px 10px 12px; border-radius:10px; border:1px solid #d1d5db; font-size:14px; background:transparent; color:inherit; box-sizing:border-box;" />
+          <button id="adminPasswordToggleBtn" type="button" style="position:absolute; right:12px; background:transparent; border:none; cursor:pointer; font-size:16px; color:#6b7280;">👁️</button>
+        </div>
+        <div class="note-editor-actions" style="margin-top:20px; justify-content:flex-end;">
+          <button id="cancelAdminPasswordBtn" class="cancel">Cancel</button>
+          <button id="submitAdminPasswordBtn" class="save">Enter</button>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    const passwordInput = document.getElementById('adminPasswordInput');
+    const toggleBtn = document.getElementById('adminPasswordToggleBtn');
+
+    const closeModal = () => {
+      modal.remove();
+      overlay.remove();
+    };
+
+    toggleBtn.onclick = () => {
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        toggleBtn.textContent = '🙈';
+      } else {
+        passwordInput.type = 'password';
+        toggleBtn.textContent = '👁️';
+      }
+      passwordInput.focus();
+    };
+
+    document.getElementById('closeAdminPasswordBtn').onclick = () => { closeModal(); resolve(null); };
+    document.getElementById('cancelAdminPasswordBtn').onclick = () => { closeModal(); resolve(null); };
+    document.getElementById('submitAdminPasswordBtn').onclick = () => {
+      const value = passwordInput.value.trim();
+      closeModal();
+      resolve(value);
+    };
+
+    passwordInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        document.getElementById('submitAdminPasswordBtn').click();
+      }
+    });
+
+    passwordInput.focus();
+  });
+}
+
+async function enableAdminMode() {
+  const pass = await promptForAdminPassword();
+  if (pass === null) return;
 
   if (pass === getTodayPassword()) {
     isAdmin = true;
