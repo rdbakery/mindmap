@@ -15,6 +15,7 @@
 window.APP_CONFIG = {
   features: {
     notes: true,
+    noteFormatting: false,
     youtube: true,
     pyq: true,
     quizMode: false,

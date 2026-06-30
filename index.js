@@ -1159,7 +1159,7 @@ function editNote(id){
 
   editor.innerHTML = `
     <div class="note-editor-header"><span>${node.text}</span></div>
-    <div class="note-editor-hint">Markdown supported: headings, **bold**, *italic*, \`code\`, lists, and [links](https://example.com).</div>
+    <div class="note-editor-hint">${APP_CONFIG.features.noteFormatting ? "Markdown supported: headings, **bold**, *italic*, `code`, lists, and [links](https://example.com)." : "Plain text notes only; markdown rendering is disabled in this build."}</div>
     <textarea class="note-editor-textarea">${node.note || ""}</textarea>
     <div class="note-editor-actions">
       <button class="cancel">Cancel</button>
@@ -1826,7 +1826,9 @@ function openNoteViewer(id){
   viewer.className = "note-viewer";
 
   const noteText = node.note || "No note";
-  const noteHtml = renderMarkdown(noteText);
+  const noteHtml = APP_CONFIG.features.noteFormatting
+    ? renderMarkdown(noteText)
+    : escapeHtml(noteText).replace(/\n/g, "<br>");
   const highlightedNote = searchQuery ? highlightRenderedHtml(noteHtml, searchQuery) : noteHtml;
   const safeTitle = escapeHtml(node.text || "");
 
