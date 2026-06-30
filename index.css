@@ -1300,6 +1300,14 @@ body.dark-mode .node {
   box-shadow: 0 0 0 1px #444;
 }
 
+body.dark-mode .node.important {
+  box-shadow:
+    0 0 0 2px red,
+    0 0 0 4px rgba(245, 158, 11, 0.22),
+    0 6px 16px rgba(245, 158, 11, 0.25);
+  border: 1px solid rgba(251, 191, 36, 0.65);
+}
+
 body.dark-mode .node-text,
 body.dark-mode .menu-btn,
 body.dark-mode .note-icon {
