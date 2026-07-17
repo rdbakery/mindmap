@@ -1508,6 +1508,8 @@ body.dark-mode .quiz-pyq-tag {
 }
 
 /* ===== QUIZ PAGINATION GRID ===== */
+button.quiz-nav-btn,
+button.exam-question-chip,
 .quiz-nav-btn,
 .exam-question-chip {
   width: 32px;
@@ -1525,40 +1527,52 @@ body.dark-mode .quiz-pyq-tag {
   transition: all 0.2s;
   padding: 0;
 }
+button.quiz-nav-btn:hover,
+button.exam-question-chip:hover,
 .quiz-nav-btn:hover,
 .exam-question-chip:hover {
-  background: #f3f4f6;
+  background: #f3f4f6 !important;
 }
+button.quiz-nav-btn.visited,
+button.exam-question-chip.visited,
 .quiz-nav-btn.visited,
 .exam-question-chip.visited {
-  background: #ede9fe;
-  border-color: #a78bfa;
-  color: #3730a3;
+  background: #ede9fe !important;
+  border-color: #a78bfa !important;
+  color: #3730a3 !important;
 }
+button.quiz-nav-btn.answered,
+button.exam-question-chip.answered,
 .quiz-nav-btn.answered,
 .exam-question-chip.answered {
-  background: #dcfce3;
-  border-color: #86efac;
-  color: #166534;
+  background: #dcfce3 !important;
+  border-color: #86efac !important;
+  color: #166534 !important;
 }
+button.quiz-nav-btn.active,
+button.exam-question-chip.active,
 .quiz-nav-btn.active,
 .exam-question-chip.active {
-  border-color: #3b82f6;
-  background: #eff6ff;
-  color: #1d4ed8;
-  box-shadow: 0 0 0 2px rgba(59,130,246,0.3);
+  border-color: #3b82f6 !important;
+  background: #eff6ff !important;
+  color: #1d4ed8 !important;
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.3) !important;
 }
+button.quiz-nav-btn.correct,
+button.exam-question-chip.correct,
 .quiz-nav-btn.correct,
 .exam-question-chip.correct {
-  background: #22c55e;
-  border-color: #16a34a;
-  color: white;
+  background: #22c55e !important;
+  border-color: #16a34a !important;
+  color: white !important;
 }
+button.quiz-nav-btn.wrong,
+button.exam-question-chip.wrong,
 .quiz-nav-btn.wrong,
 .exam-question-chip.wrong {
-  background: #ef4444;
-  border-color: #dc2626;
-  color: white;
+  background: #ef4444 !important;
+  border-color: #dc2626 !important;
+  color: white !important;
 }
 
 body.dark-mode .quiz-nav-btn,

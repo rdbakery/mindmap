@@ -746,7 +746,7 @@ async function refreshQuizSelector() {
     const quizId = e.target.value;
     const quizData = await loadQuiz(quizId);
     if (quizData && quizData.questions) {
-      showAIQuizModal(JSON.parse(JSON.stringify(quizData.questions)), true, quizId, quizData.timerSeconds !== undefined ? quizData.timerSeconds : 600, null, undefined, (quizData.quizName || quizData.mapName || quizData.name));
+      showAIQuizModal(JSON.parse(JSON.stringify(quizData.questions)), true, quizId, quizData.timerSeconds !== undefined ? quizData.timerSeconds : 600, null, undefined, (quizData.quizName || quizData.mapName || quizData.name), quizData.quizMode || 'submit');
     }
     e.target.value = ""; 
   };
@@ -2127,7 +2127,7 @@ async function importQuizData(data, fileName = ""){
   showFlashMessage("✅ Quiz loaded successfully");
 
   // Automatically start the imported quiz
-  showAIQuizModal(JSON.parse(JSON.stringify(data.questions)), true, null, data.timerSeconds !== undefined ? data.timerSeconds : 600, null, undefined, quizName);
+  showAIQuizModal(JSON.parse(JSON.stringify(data.questions)), true, null, data.timerSeconds !== undefined ? data.timerSeconds : 600, null, undefined, quizName, data.quizMode || 'submit');
 }
 
 async function importTestJSON(e){
@@ -3738,7 +3738,7 @@ ${content}`;
   }
 }
 
-async function generateQuizForNode(id, content, settings = { qsCount: 25, qsDiff: "Medium", qsTimer: 600, qsLang: "English" }) {
+async function generateQuizForNode(id, content, settings = { qsCount: 25, qsDiff: "Medium", qsTimer: 600, qsLang: "English", quizMode: "submit" }) {
   if (!content) {
     const node = find(currentMap, id);
     if (!node) return;
@@ -3788,17 +3788,18 @@ async function generateQuizForNode(id, content, settings = { qsCount: 25, qsDiff
       mapName: currentMap.text,
       score: `0/${quizData.length}`,
       timerSeconds: settings.qsTimer,
+      quizMode: settings.quizMode || 'submit',
       questions: quizData
     };
     await saveQuiz(newQuizId, quizName, quizExport);
     showFlashMessage("✅ Quiz automatically saved!");
     refreshQuizSelector();
 
-    showAIQuizModal(quizData, false, newQuizId, settings.qsTimer, id, defaultLang, quizName);
+    showAIQuizModal(quizData, false, newQuizId, settings.qsTimer, id, defaultLang, quizName, settings.quizMode || 'submit');
   }
 }
 
-async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSeconds = 600, nodeId = null, defaultLang = 'en', quizTitle = null) {
+async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, timerSeconds = 600, nodeId = null, defaultLang = 'en', quizTitle = null, quizMode = 'submit') {
   const existing = document.getElementById('aiQuizModal');
   const existingOverlay = document.getElementById('aiQuizOverlay');
   if (existing) existing.remove();
@@ -3846,6 +3847,8 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
 
   let currentQuestionIndex = 0;
   let isSubmitted = false;
+  let skipSubmitConfirm = false;
+  let quizModeState = quizMode === 'instant' ? 'instant' : 'submit';
 
   const renderDualLang = (obj, field) => {
     if (typeof obj[field] === 'string' || Array.isArray(obj[field])) {
@@ -3889,11 +3892,18 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
     .ai-quiz-wrapper[data-lang="hi"] .lang-en { display: none !important; }
   </style>
   <div class="note-editor-header" style="padding:20px; border-bottom:1px solid rgba(128,128,128,0.2); font-size:18px; display:flex; justify-content:space-between; align-items:center; flex-shrink:0;">
-    <div style="display:flex; align-items:center; gap:12px;">
+    <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
       <span id="aiQuizTitle">${escapeHtml(displayTitle)}</span>
       <button id="toggleQuizLangBtn" style="background:transparent; border:1px solid #d1d5db; border-radius:4px; padding:4px 8px; font-size:12px; cursor:pointer; color:inherit;">
         🌐 Translate
       </button>
+      <span id="quizModeBadge" style="padding:4px 10px; border-radius:999px; font-size:12px; font-weight:600; background:${quizModeState === 'instant' ? '#dbeafe' : '#f3f4f6'}; color:${quizModeState === 'instant' ? '#1d4ed8' : '#374151'};">
+        ${quizModeState === 'instant' ? '⚡ Instant Feedback' : '📝 Submit at End'}
+      </span>
+      <select id="quizModeSelect" style="padding:4px 8px; border-radius:6px; border:1px solid #d1d5db; font-size:12px; background:transparent; color:inherit;">
+        <option value="submit" ${quizModeState === 'submit' ? 'selected' : ''}>📝 Submit at End</option>
+        <option value="instant" ${quizModeState === 'instant' ? 'selected' : ''}>⚡ Instant Feedback</option>
+      </select>
     </div>
     <span id="aiQuizTimer" style="color:#ef4444; font-weight:bold; font-size:16px;">
       ${timerSeconds > 0 ? Math.floor(timerSeconds/60).toString().padStart(2,'0') + ':' + (timerSeconds%60).toString().padStart(2,'0') : 'Untimed'}
@@ -3990,20 +4000,101 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
     modal.style.maxHeight = "85vh";
   }
 
+  const persistQuizMode = async () => {
+    if (!savedQuizId) return;
+    try {
+      const existing = await loadQuiz(savedQuizId);
+      if (!existing) return;
+      const updated = {
+        ...existing,
+        quizMode: quizModeState,
+        questions: quizData
+      };
+      await saveQuiz(savedQuizId, existing.quizName || existing.mapName || existing.name || 'Quiz', updated);
+    } catch (e) {
+      console.error('Unable to persist quiz mode', e);
+    }
+  };
+
+  const showQuestionFeedback = (qIndex, selectedValue, { autoAdvance = false, showResult = false } = {}) => {
+    const q = quizData[qIndex];
+    const feedback = document.getElementById(`feedback-q${qIndex}`);
+    const explanationDiv = document.getElementById(`explanation-q${qIndex}`);
+    const navBtn = modal.querySelector(`.quiz-nav-btn[data-index="${qIndex}"]`);
+    const optionInputs = modal.querySelectorAll(`input[name="q${qIndex}"]`);
+    const selectedRadio = selectedValue === null ? null : modal.querySelector(`input[name="q${qIndex}"][value="${selectedValue}"]`);
+    const correctRadio = modal.querySelector(`input[name="q${qIndex}"][value="${q.answer}"]`);
+
+    if (!feedback || !explanationDiv || !navBtn) return;
+
+    q.userAnswer = selectedValue === null ? null : parseInt(selectedValue, 10);
+    navBtn.classList.remove('answered', 'correct', 'wrong', 'unattempted');
+    if (quizModeState === 'instant' || showResult) {
+      optionInputs.forEach(r => r.disabled = true);
+    }
+
+    if (!showResult) {
+      navBtn.classList.add('answered');
+      navBtn.classList.add('visited');
+      return;
+    }
+
+    if (selectedValue === null) {
+      feedback.style.display = 'block';
+      feedback.innerHTML = `⚠️ <span class="lang-en">Please select an answer.</span><span class="lang-hi">कृपया एक उत्तर चुनें।</span> (Correct: ${getCorrectOptHtml(q)})`;
+      feedback.style.color = '#f59e0b';
+      navBtn.classList.add('unattempted');
+    } else if (parseInt(selectedValue, 10) === q.answer) {
+      feedback.style.display = 'none';
+      navBtn.classList.add('correct');
+    } else {
+      feedback.style.display = 'none';
+      if (selectedRadio && selectedRadio.parentElement) {
+        selectedRadio.parentElement.style.color = '#ef4444';
+        selectedRadio.parentElement.style.textDecoration = 'line-through';
+      }
+      navBtn.classList.add('wrong');
+    }
+
+    if (correctRadio && correctRadio.parentElement) {
+      correctRadio.parentElement.style.background = '#d1fae5';
+      correctRadio.parentElement.style.color = '#065f46';
+      correctRadio.parentElement.style.fontWeight = 'bold';
+    }
+
+    if (q.explanation) {
+      const explanationText = renderDualLang(q, 'explanation');
+      if (explanationText) {
+        explanationDiv.innerHTML = `💡 <strong><span class="lang-en">Explanation</span><span class="lang-hi">व्याख्या</span>:</strong> ${explanationText}`;
+        explanationDiv.style.display = 'block';
+      }
+    }
+
+    if (autoAdvance && quizModeState === 'instant') {
+      window.setTimeout(() => {
+        if (isSubmitted || !document.getElementById('aiQuizModal')) return;
+        if (currentQuestionIndex < quizData.length - 1) {
+          currentQuestionIndex++;
+          updateQuizView();
+        } else {
+          skipSubmitConfirm = true;
+          document.getElementById('submitAiQuizBtn').click();
+          skipSubmitConfirm = false;
+        }
+      }, 900);
+    }
+  };
+
   // Pagination Update Logic
   function updateQuizView() {
     modal.querySelectorAll('.quiz-question-container').forEach((el, i) => {
       el.style.display = i === currentQuestionIndex ? 'block' : 'none';
     });
     modal.querySelectorAll('.quiz-nav-btn').forEach((btn, i) => {
+      btn.classList.toggle('active', i === currentQuestionIndex);
       if (i === currentQuestionIndex) {
-        btn.classList.add('active');
-        if (!isSubmitted) {
-          btn.classList.add('visited');
-        }
+        btn.classList.add('visited');
         btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
-      } else {
-        btn.classList.remove('active');
       }
     });
     document.getElementById('prevQuizBtn').disabled = currentQuestionIndex === 0;
@@ -4012,10 +4103,16 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
 
   // Bind Navigation Events
   document.getElementById('prevQuizBtn').onclick = () => {
-    if (currentQuestionIndex > 0) { currentQuestionIndex--; updateQuizView(); }
+    if (currentQuestionIndex > 0) {
+      currentQuestionIndex--;
+      updateQuizView();
+    }
   };
   document.getElementById('nextQuizBtn').onclick = () => {
-    if (currentQuestionIndex < quizData.length - 1) { currentQuestionIndex++; updateQuizView(); }
+    if (currentQuestionIndex < quizData.length - 1) {
+      currentQuestionIndex++;
+      updateQuizView();
+    }
   };
   modal.querySelectorAll('.quiz-nav-btn').forEach(btn => {
     btn.onclick = () => {
@@ -4024,13 +4121,27 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
     };
   });
 
+  const modeSelect = document.getElementById('quizModeSelect');
+  if (modeSelect) {
+    modeSelect.onchange = async () => {
+      quizModeState = modeSelect.value === 'instant' ? 'instant' : 'submit';
+      const badge = document.getElementById('quizModeBadge');
+      if (badge) {
+        badge.textContent = quizModeState === 'instant' ? '⚡ Instant Feedback' : '📝 Submit at End';
+        badge.style.background = quizModeState === 'instant' ? '#dbeafe' : '#f3f4f6';
+        badge.style.color = quizModeState === 'instant' ? '#1d4ed8' : '#374151';
+      }
+      await persistQuizMode();
+      showFlashMessage(`✅ Quiz mode set to ${quizModeState === 'instant' ? 'Instant Feedback' : 'Submit at End'}`);
+    };
+  }
+
   // Mark as Answered on Click
   modal.querySelectorAll('input[type="radio"]').forEach(radio => {
     radio.addEventListener('change', (e) => {
       if (isSubmitted) return;
       const qIndex = parseInt(e.target.name.substring(1));
-      const btn = modal.querySelector(`.quiz-nav-btn[data-index="${qIndex}"]`);
-      if (btn && !btn.classList.contains('answered')) btn.classList.add('answered');
+      showQuestionFeedback(qIndex, e.target.value, { autoAdvance: false, showResult: quizModeState === 'instant' });
     });
   });
 
@@ -4057,6 +4168,7 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
           mapName: currentMap.text,
           score: scoreText,
           timerSeconds: timerSeconds,
+          quizMode: quizModeState,
           questions: quizData
         };
         const b = new Blob([JSON.stringify(quizExport, null, 2)], {type: "application/json"});
@@ -4110,7 +4222,7 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
   }
   
   document.getElementById('submitAiQuizBtn').onclick = () => {
-    if (!isTimeUp && !confirm("Are you sure you want to submit your answers?")) return;
+    if (!skipSubmitConfirm && !isTimeUp && !confirm("Are you sure you want to submit your answers?")) return;
     
     if (timerInterval) clearInterval(timerInterval);
     isSubmitted = true;
@@ -4118,51 +4230,18 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
     
     quizData.forEach((q, i) => {
       const selected = document.querySelector(`input[name="q${i}"]:checked`);
-      const feedback = document.getElementById(`feedback-q${i}`);
-      const explanationDiv = document.getElementById(`explanation-q${i}`);
       const navBtn = modal.querySelector(`.quiz-nav-btn[data-index="${i}"]`);
       
-      navBtn.classList.remove('answered');
+      navBtn.classList.remove('answered', 'correct', 'wrong', 'unattempted');
       
-      q.userAnswer = selected ? parseInt(selected.value) : null;
-
-      // Highlight the correct option in green
-      const correctRadio = document.querySelector(`input[name="q${i}"][value="${q.answer}"]`);
-      if (correctRadio && correctRadio.parentElement) {
-        correctRadio.parentElement.style.background = '#d1fae5'; // green background
-        correctRadio.parentElement.style.color = '#065f46';
-        correctRadio.parentElement.style.fontWeight = 'bold';
-      }
-
       if (!selected) {
-        feedback.style.display = 'block';
-        feedback.innerHTML = `⚠️ <span class="lang-en">Please select an answer.</span><span class="lang-hi">कृपया एक उत्तर चुनें।</span> (Correct: ${getCorrectOptHtml(q)})`;
-        feedback.style.color = '#f59e0b'; // orange
-        navBtn.classList.add('unattempted'); // counts as wrong but visualizes as unattempted
+        showQuestionFeedback(i, null, { showResult: true });
       } else if (parseInt(selected.value) === q.answer) {
-        feedback.style.display = 'none';
+        showQuestionFeedback(i, selected.value, { showResult: true });
         score++;
-        navBtn.classList.add('correct');
       } else {
-        feedback.style.display = 'none';
-        
-        // Strike through the incorrect selection in red
-        selected.parentElement.style.color = '#ef4444';
-        selected.parentElement.style.textDecoration = 'line-through';
-        navBtn.classList.add('wrong');
+        showQuestionFeedback(i, selected.value, { showResult: true });
       }
-
-      // Show explanation
-      if (q.explanation) {
-        const explanationText = renderDualLang(q, 'explanation');
-        if (explanationText) {
-          explanationDiv.innerHTML = `💡 <strong><span class="lang-en">Explanation</span><span class="lang-hi">व्याख्या</span>:</strong> ${explanationText}`;
-          explanationDiv.style.display = 'block';
-        }
-      }
-      
-      // Disable radios
-      modal.querySelectorAll(`input[name="q${i}"]`).forEach(r => r.disabled = true);
     });
     
     const header = modal.querySelector('.note-editor-header');
@@ -4222,7 +4301,7 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
           // ignore
         }
       }
-      showAIQuizModal(JSON.parse(JSON.stringify(quizData)), true, savedQuizId, timerSeconds, nodeId, currentLang, title);
+      showAIQuizModal(JSON.parse(JSON.stringify(quizData)), true, savedQuizId, timerSeconds, nodeId, currentLang, title, quizModeState);
     };
 
   };
