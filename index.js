@@ -1647,7 +1647,9 @@ function draw(n, depth){
 const el = document.createElement("div");
 const hiddenInQuiz = isNodeHiddenInQuiz(n);
 const nodeLabel = hiddenInQuiz ? "?" : n.text;
-
+const hasExplanation = Boolean(n.youtube);
+const hasViewMap = Boolean(n.viewMap);
+const hasBothLinks = hasExplanation && hasViewMap;
 
 el.className =
   "node" +
@@ -1655,9 +1657,8 @@ el.className =
   (n.note ? " has-note" : "") +
   (hiddenInQuiz ? " quiz-hidden" : "") +
   (nodeMatchesSearch(n) ? " search-hit" : "") +
-  (searchResults[searchIndex] === n.id ? " active-hit" : "");
-
-// 🔥 ADD AFTER className
+  (searchResults[searchIndex] === n.id ? " active-hit" : "") +
+  (hasBothLinks ? " has-rich-links" : hasExplanation ? " has-explanation-link" : hasViewMap ? " has-viewmap-link" : "");
 
 
 if (focusedNodeId && !isInFocusedPath(n, focusedNodeId)) {

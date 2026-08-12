@@ -96,6 +96,41 @@ body {
   background: #fde68a !important;  /* soft yellow */
 }
 
+.node.has-explanation-link,
+.node.has-viewmap-link,
+.node.has-rich-links {
+  padding-right: 32px;
+}
+
+.node.has-explanation-link::before,
+.node.has-viewmap-link::before,
+.node.has-rich-links::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.node.has-explanation-link::before {
+  background: #38bdf8;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.15);
+}
+
+.node.has-viewmap-link::before {
+  background: #f59e0b;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.15);
+}
+
+.node.has-rich-links::before {
+  background: #8b5cf6;
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.18);
+}
 
 .node.important {
   box-shadow:
