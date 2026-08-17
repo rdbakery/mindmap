@@ -26,11 +26,26 @@
 <div class="toolbar">
   <div class="toolbar-inner">
     <select id="mapSelector"></select>
+
+    <!-- Map management -->
     <button onclick="createMap()">➕ New</button>
     <button onclick="renameMap()">✏️ Rename</button>
     <button onclick="deleteMap()">🗑 Delete</button>
+    <label class="import-btn">
+      📥 Import Mind Map
+      <input type="file" accept=".json" onchange="importJSON(event)" hidden>
+    </label>
+
+    <!-- Export / Share -->
+    <button onclick="exportJSON()">📄 Export JSON</button>
+    <button onclick="exportPNG()" id="exportPngBtn">🖼 Export PNG</button>
+    <button onclick="exportPDF()" id="exportPdfBtn">📕 Export PDF</button>
+
+    <!-- Edit actions -->
     <button onclick="undo()">↶ Undo</button>
     <button onclick="redo()">↷ Redo</button>
+
+    <!-- Search -->
     <div class="search-box">
       <input type="search" placeholder="Search node…" 
         oninput="searchNodes(this.value)" id="searchInput">
@@ -41,10 +56,13 @@
       <button onclick="nextSearch()">▼</button>
       <button onclick="clearSearch()">✖</button>
     </div>
-    <button onclick="exportJSON()">📄 Export JSON</button>
-    <button onclick="exportPNG()" id="exportPngBtn">🖼 Export PNG</button>
-    <button onclick="exportPDF()" id="exportPdfBtn">📕 Export PDF</button>
+
+    <!-- View controls -->
+    <button id="toggleAllBtn" class="expand-collapse-btn"
+      title="Collapse All" onclick="toggleAllNodes()"></button>
     <button onclick="toggleFilterDropdown(event)" id="filterBtn">🔍 Filter</button>
+
+    <!-- Tests -->
     <select id="testSelector" onchange="startSelectedTest(this.value)">
       <option value="">📝 Start Test...</option>
     </select>
@@ -53,21 +71,12 @@
       <input type="file" accept=".json" onchange="importTestJSON(event)" hidden>
     </label>
 
-    <label class="import-btn">
-      📥 Import Mind Map
-      <input type="file" accept=".json" onchange="importJSON(event)" hidden>
-    </label>
-    <button id="toggleAllBtn" class="expand-collapse-btn"
-      title="Collapse All" onclick="toggleAllNodes()"></button>
+    <!-- Quiz & utilities -->
     <button id="quizModeBtn" onclick="toggleQuizMode()">🧠 Quiz Mode</button>
     <button id="revealQuizBtn" onclick="revealAllQuizAnswers()" hidden>Reveal All</button>
 
-<button onclick="window.open('https://youtu.be/5iraDyHm6WY', '_blank')" title="View User Guide">
-  🎥 User Guide
-</button>
-      <button onclick="isAdmin ? disableAdminMode() : enableAdminMode()">
-  🔐 Admin
-</button>
+    <button onclick="window.open('https://youtu.be/5iraDyHm6WY', '_blank')" title="View User Guide">🎥 User Guide</button>
+    <button onclick="isAdmin ? disableAdminMode() : enableAdminMode()">🔐 Admin</button>
   </div>
 </div>
 
