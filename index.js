@@ -1606,7 +1606,6 @@ async function render(){
   }
 
   updateSearchIndicator(); // ✅ add here
-  try { fitToolbar(); } catch (e) { /* ignore */ }
 }
 
 function renderExamBadge(node) {
@@ -2334,10 +2333,6 @@ function closeMenus(){
 }
 document.body.onclick=closeMenus;
 
-window.addEventListener('resize', () => {
-  try { fitToolbar(); } catch (e) {}
-});
-
 
 
 function fitToolbar() {
@@ -2348,16 +2343,9 @@ function fitToolbar() {
   const available = toolbar.clientWidth;
   const DESIGN_WIDTH = 1400; // must match CSS
 
-  // On narrow viewports prefer horizontal scrolling instead of scaling
-  if (available < 800) {
-    inner.style.transform = '';
-    inner.style.justifyContent = 'flex-start';
-    return;
-  }
-
   let scale = available / DESIGN_WIDTH;
   scale = Math.min(scale, 1);     // no zoom-in
-  scale = Math.max(scale, 0.8);  // readable minimum on larger screens
+  scale = Math.max(scale, 0.65);  // readable minimum
 
   inner.style.transform = `scale(${scale})`;
 }
