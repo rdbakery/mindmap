@@ -205,6 +205,8 @@ body {
   left: 0;
   right: 0;
   height: 64px;
+  min-height: 64px;
+  max-height: 64px;
   z-index: 10010;
 
   background: linear-gradient(to right, #eef4f1, #f8faf9);
@@ -227,6 +229,8 @@ body {
   padding: 0 24px;
 
   transform-origin: left center;
+  overflow-x: auto; /* allow horizontal scroll when items overflow */
+  -webkit-overflow-scrolling: touch;
 }
 
 
@@ -239,6 +243,22 @@ body {
   border-radius: 8px;
   background: #ffffff;
   border: 1px solid #a3b5aa;
+  flex: 0 0 auto;
+}
+
+/* Mobile adjustments: keep toolbar compact and scrollable */
+@media (max-width: 600px) {
+  .toolbar { height: 56px; min-height:56px; max-height:56px; }
+  .toolbar-inner { padding: 0 12px; gap: 8px; }
+  .toolbar button, .toolbar select, .toolbar input[type="search"] {
+    font-size: 13px; padding: 6px 10px; border-radius:6px;
+  }
+  .search-box input { width: 140px; }
+}
+
+@media (max-width: 400px) {
+  .toolbar { height: 52px; min-height:52px; max-height:52px; }
+  .search-box input { width: 120px; }
 }
 
 
