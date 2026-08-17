@@ -1643,6 +1643,21 @@ if (!APP_CONFIG.features.pyq || !node.examHistory?.some(e => e.exam)) return "";
   `;
 }
 
+function renderQuizBadge(node) {
+  if (!node || !node.aiQuiz) return "";
+
+  const clickHandler = `onclick="event.stopPropagation(); startNodeQuiz('${node.id}')"`;
+  const title = escapeHtml(node.aiQuiz.quizName || (node.text ? node.text + ' - Quiz' : 'Quiz'));
+
+  return `
+    <div class="quiz-badge-group">
+      <div class="quiz-badge" ${clickHandler} title="Start quiz: ${title}">
+        🧠 Quiz
+      </div>
+    </div>
+  `;
+}
+
 function draw(n, depth){
 const el = document.createElement("div");
 const hiddenInQuiz = isNodeHiddenInQuiz(n);
@@ -1720,7 +1735,7 @@ h.innerHTML = `
   <div class="node-body">
     <div class="node-body">
   <span class="node-text">${nodeLabel}</span>
-  ${renderExamBadge(n)}
+  ${renderExamBadge(n)}${renderQuizBadge(n)}
 </div>
   </div>
   <button class="menu-btn${quizMode ? " quiz-disabled" : ""}">⋮</button>
@@ -1737,6 +1752,7 @@ h.innerHTML = `
   ${APP_CONFIG.features.importantMarker ? `<button onclick="toggleImportant('${n.id}')">${n.important ? "⭐ Remove Important" : "⭐ Mark Important"}</button>` : ""}
   ${APP_CONFIG.features.focusMode ? `<button onclick="toggleFocus('${n.id}')">${focusedNodeId === n.id ? "🎯 Exit focus" : "🎯 Focus"}</button>` : ""}
   ${APP_CONFIG.features.notes ? `<button onclick="editNote('${n.id}')">📝 Add note</button>` : ""}
+  ${n.aiQuiz ? `<button onclick="startNodeQuiz('${n.id}')">▶ Start Quiz</button>` : ""}
   ${isAdmin ? `<button onclick="openQuizSettingsModal('${n.id}')">🤖 Generate AI Quiz</button>` : ""}
 ${(isAdmin && APP_CONFIG.features.pyq) ? `
 <button onclick="editExamHistory('${n.id}')">
@@ -2023,10 +2039,26 @@ function openYoutube(id){
 /* ================= EXPORT ================= */
 function exportJSON(){
   showFlashMessage("⬇️ Exporting JSON...");
-  const b=new Blob([JSON.stringify(currentMap,null,2)],{type:"application/json"});
+
+  // Deep clone to ensure we serialize current state only
+  const exportData = JSON.parse(JSON.stringify(currentMap));
+
+  // Check whether any node in the map has an attached AI quiz
+  function hasAnyNodeQuiz(node) {
+    if (!node) return false;
+    if (node.aiQuiz) return true;
+    return (node.children || []).some(hasAnyNodeQuiz);
+  }
+
+  const hasQuiz = hasAnyNodeQuiz(exportData);
+
+  const filenameBase = safeName(currentMap.text) || 'mindmap';
+  const filename = hasQuiz ? `${filenameBase}_with_quiz.json` : `${filenameBase}.json`;
+
+  const b=new Blob([JSON.stringify(exportData,null,2)],{type:"application/json"});
   const a=document.createElement("a");
   a.href=URL.createObjectURL(b);
-  a.download=`${safeName(currentMap.text)}.json`;
+  a.download=filename;
   a.click();
 }
 async function importJSON(e){
@@ -2098,6 +2130,18 @@ async function importMindMapData(data){
   await refreshSelector();
   render();
   showFlashMessage("✅ Mind map imported");
+}
+
+function startNodeQuiz(nodeId) {
+  const node = find(currentMap, nodeId);
+  if (!node || !node.aiQuiz || !Array.isArray(node.aiQuiz.questions)) return;
+
+  const quizData = JSON.parse(JSON.stringify(node.aiQuiz.questions));
+  const timer = node.aiQuiz.timerSeconds !== undefined ? node.aiQuiz.timerSeconds : 600;
+  const mode = node.aiQuiz.quizMode || 'submit';
+  const title = node.aiQuiz.quizName || (node.text ? `${node.text} - Quiz` : 'Quiz');
+
+  showAIQuizModal(quizData, false, null, timer, nodeId, 'en', title, mode);
 }
 
 async function importPreImportedQuiz(fileName){
@@ -3772,18 +3816,11 @@ async function generateQuizForNode(id, content, settings = { qsCount: 25, qsDiff
   if (quizData && Array.isArray(quizData)) {
     const defaultLang = settings.qsLang === "Hindi" ? "hi" : "en";
     
-    // Auto-save generated quiz
+    // Save generated quiz on the node (do not add to global saved quizzes list)
     const node = find(currentMap, id);
     const baseName = `${currentMap.text} - ${node ? node.text : 'Quiz'}`;
     let quizName = baseName;
-    const existingQuizzes = await listQuizzes();
-    let counter = 1;
-    while (existingQuizzes.some(q => q.name.trim().toLowerCase() === quizName.trim().toLowerCase())) {
-      quizName = `${baseName} (${counter})`;
-      counter++;
-    }
 
-    const newQuizId = uid();
     const quizExport = {
       quizName: quizName,
       mapName: currentMap.text,
@@ -3792,11 +3829,15 @@ async function generateQuizForNode(id, content, settings = { qsCount: 25, qsDiff
       quizMode: settings.quizMode || 'submit',
       questions: quizData
     };
-    await saveQuiz(newQuizId, quizName, quizExport);
-    showFlashMessage("✅ Quiz automatically saved!");
-    refreshQuizSelector();
 
-    showAIQuizModal(quizData, false, newQuizId, settings.qsTimer, id, defaultLang, quizName, settings.quizMode || 'submit');
+    pushHistory();
+    if (node) {
+      node.aiQuiz = quizExport;
+    }
+    await saveMap(activeId, currentMap.text, currentMap);
+    showFlashMessage("✅ Quiz saved to node!");
+
+    showAIQuizModal(quizData, false, null, settings.qsTimer, id, defaultLang, quizName, settings.quizMode || 'submit');
   }
 }
 
@@ -3887,6 +3928,8 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
   }
   displayTitle = displayTitle || '🤖 AI Generated Quiz';
 
+  const showDeleteBtn = Boolean(savedQuizId || (nodeId && find(currentMap, nodeId) && find(currentMap, nodeId).aiQuiz));
+
   let html = `
   <style>
     .ai-quiz-wrapper[data-lang="en"] .lang-hi { display: none !important; }
@@ -3937,7 +3980,7 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
       <button class="cancel" id="nextQuizBtn" ${quizData.length <= 1 ? 'disabled' : ''}>Next ▶</button>
     </div>
     <div id="quizActionButtons" style="display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end;">
-      ${savedQuizId ? `<button class="cancel" id="deleteAiQuizBtn" style="background:#fee2e2; color:#ef4444; border-color:#fca5a5;">🗑️ Delete</button>` : ''}
+      ${showDeleteBtn ? `<button class="cancel" id="deleteAiQuizBtn" style="background:#fee2e2; color:#ef4444; border-color:#fca5a5;">🗑️ Delete</button>` : ''}
       <button class="cancel" id="exportAiQuizBtn" style="background:#10b981; border-color:#059669; color:white;">⬇️ Export</button>
       <button class="cancel" id="closeAiQuizBtn">Close</button>
       <button class="save" id="submitAiQuizBtn">Submit</button>
@@ -4002,16 +4045,20 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
   }
 
   const persistQuizMode = async () => {
-    if (!savedQuizId) return;
     try {
-      const existing = await loadQuiz(savedQuizId);
-      if (!existing) return;
-      const updated = {
-        ...existing,
-        quizMode: quizModeState,
-        questions: quizData
-      };
-      await saveQuiz(savedQuizId, existing.quizName || existing.mapName || existing.name || 'Quiz', updated);
+      if (savedQuizId) {
+        const existing = await loadQuiz(savedQuizId);
+        if (!existing) return;
+        const updated = { ...existing, quizMode: quizModeState, questions: quizData };
+        await saveQuiz(savedQuizId, existing.quizName || existing.mapName || existing.name || 'Quiz', updated);
+      } else if (nodeId) {
+        const node = find(currentMap, nodeId);
+        if (!node) return;
+        node.aiQuiz = node.aiQuiz || {};
+        node.aiQuiz.quizMode = quizModeState;
+        node.aiQuiz.questions = quizData;
+        await saveMap(activeId, currentMap.text, currentMap);
+      }
     } catch (e) {
       console.error('Unable to persist quiz mode', e);
     }
@@ -4162,6 +4209,12 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
             exportName = safeName(existing.name);
             actualQuizName = existing.name;
           }
+        } else if (nodeId) {
+          const node = find(currentMap, nodeId);
+          if (node && node.aiQuiz && node.aiQuiz.quizName) {
+            exportName = safeName(node.aiQuiz.quizName);
+            actualQuizName = node.aiQuiz.quizName;
+          }
         }
 
         const quizExport = {
@@ -4209,17 +4262,31 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
     overlay.remove();
   };
 
-  if (savedQuizId) {
-    document.getElementById('deleteAiQuizBtn').onclick = async () => {
-      if (confirm("Are you sure you want to delete this saved quiz?")) {
-        await deleteQuizDB(savedQuizId);
-        if (timerInterval) clearInterval(timerInterval);
-        modal.remove();
-        overlay.remove();
-        refreshQuizSelector();
-        showFlashMessage("🗑️ Quiz deleted successfully!");
-      }
-    };
+  if (savedQuizId || nodeId) {
+    const delBtn = document.getElementById('deleteAiQuizBtn');
+    if (delBtn) {
+      delBtn.onclick = async () => {
+        if (!confirm("Are you sure you want to delete this saved quiz?")) return;
+        if (savedQuizId) {
+          await deleteQuizDB(savedQuizId);
+          if (timerInterval) clearInterval(timerInterval);
+          modal.remove();
+          overlay.remove();
+          refreshQuizSelector();
+          showFlashMessage("🗑️ Quiz deleted successfully!");
+        } else if (nodeId) {
+          pushHistory();
+          const node = find(currentMap, nodeId);
+          if (node && node.aiQuiz) delete node.aiQuiz;
+          await saveMap(activeId, currentMap.text, currentMap);
+          if (timerInterval) clearInterval(timerInterval);
+          modal.remove();
+          overlay.remove();
+          render();
+          showFlashMessage("🗑️ Quiz removed from node.");
+        }
+      };
+    }
   }
   
   document.getElementById('submitAiQuizBtn').onclick = () => {
@@ -4265,7 +4332,7 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
 
     const actionsDiv = document.getElementById('quizActionButtons');
     actionsDiv.innerHTML = `
-      ${savedQuizId ? `<button class="cancel" id="deleteAiQuizBtn" style="background:#fee2e2; color:#ef4444; border-color:#fca5a5;">🗑️ Delete</button>` : ''}
+      ${showDeleteBtn ? `<button class="cancel" id="deleteAiQuizBtn" style="background:#fee2e2; color:#ef4444; border-color:#fca5a5;">🗑️ Delete</button>` : ''}
       <button class="cancel" id="exportAiQuizBtn" style="background:#10b981; border-color:#059669; color:white;">⬇️ Export</button>
       <button class="cancel" id="closeAiQuizBtn">Close</button>
       <button class="save" id="retakeAiQuizBtn">🔄 Retake</button>
@@ -4273,16 +4340,29 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
 
     bindExport(`${score}/${quizData.length}`);
 
-    if (savedQuizId) {
-      document.getElementById('deleteAiQuizBtn').onclick = async () => {
-        if (confirm("Are you sure you want to delete this saved quiz?")) {
-          await deleteQuizDB(savedQuizId);
-          modal.remove();
-          overlay.remove();
-          refreshQuizSelector();
-          showFlashMessage("🗑️ Quiz deleted successfully!");
-        }
-      };
+    if (savedQuizId || nodeId) {
+      const delBtn2 = document.getElementById('deleteAiQuizBtn');
+      if (delBtn2) {
+        delBtn2.onclick = async () => {
+          if (!confirm("Are you sure you want to delete this saved quiz?")) return;
+          if (savedQuizId) {
+            await deleteQuizDB(savedQuizId);
+            modal.remove();
+            overlay.remove();
+            refreshQuizSelector();
+            showFlashMessage("🗑️ Quiz deleted successfully!");
+          } else if (nodeId) {
+            pushHistory();
+            const node = find(currentMap, nodeId);
+            if (node && node.aiQuiz) delete node.aiQuiz;
+            await saveMap(activeId, currentMap.text, currentMap);
+            modal.remove();
+            overlay.remove();
+            render();
+            showFlashMessage("🗑️ Quiz removed from node.");
+          }
+        };
+      }
     }
 
     document.getElementById('closeAiQuizBtn').onclick = () => {
@@ -4301,6 +4381,9 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
         } catch (e) {
           // ignore
         }
+      } else if (nodeId) {
+        const node = find(currentMap, nodeId);
+        if (node && node.aiQuiz) title = node.aiQuiz.quizName || (node.text ? `${node.text} - Quiz` : (currentMap ? `${currentMap.text} - Quiz` : 'Quiz'));
       }
       showAIQuizModal(JSON.parse(JSON.stringify(quizData)), true, savedQuizId, timerSeconds, nodeId, currentLang, title, quizModeState);
     };

@@ -1542,6 +1542,28 @@ body.dark-mode .quiz-pyq-tag {
   border-color: #78350f;
 }
 
+/* ===== NODE QUIZ BADGE ===== */
+.quiz-badge-group {
+  display: inline-block;
+  margin-left: 6px;
+}
+.quiz-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  background: #e6f2ff;
+  color: #1e3a8a;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+body.dark-mode .quiz-badge {
+  background: #1e293b;
+  color: #93c5fd;
+  border-color: #0b1220;
+}
+
 /* ===== QUIZ PAGINATION GRID ===== */
 button.quiz-nav-btn,
 button.exam-question-chip,
