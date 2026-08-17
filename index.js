@@ -3835,6 +3835,7 @@ async function generateQuizForNode(id, content, settings = { qsCount: 25, qsDiff
       node.aiQuiz = quizExport;
     }
     await saveMap(activeId, currentMap.text, currentMap);
+    await render();
     showFlashMessage("✅ Quiz saved to node!");
 
     showAIQuizModal(quizData, false, null, settings.qsTimer, id, defaultLang, quizName, settings.quizMode || 'submit');
@@ -4042,6 +4043,72 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
     modal.style.left = "50%";
     modal.style.transform = "translate(-50%, -50%)";
     modal.style.maxHeight = "85vh";
+  }
+
+  // Make modal draggable by header (mouse + touch)
+  try {
+    const headerEl = modal.querySelector('.note-editor-header');
+    if (headerEl) {
+      headerEl.style.cursor = 'move';
+
+      let isDragging = false;
+      let offsetX = 0, offsetY = 0;
+
+      const onMouseMove = (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const clientX = e.clientX || (e.touches && e.touches[0] && e.touches[0].clientX);
+        const clientY = e.clientY || (e.touches && e.touches[0] && e.touches[0].clientY);
+        if (!clientX || !clientY) return;
+        let left = clientX - offsetX;
+        let top = clientY - offsetY;
+
+        // clamp to viewport
+        const pad = 8;
+        const w = Math.max(200, modal.offsetWidth || 300);
+        const h = Math.max(160, modal.offsetHeight || 200);
+        left = Math.max(pad, Math.min(left, window.innerWidth - w - pad));
+        top = Math.max(pad, Math.min(top, window.innerHeight - h - pad));
+
+        modal.style.left = left + 'px';
+        modal.style.top = top + 'px';
+        modal.style.transform = '';
+        modal.classList.remove('arrow-left','arrow-right');
+      };
+
+      const onMouseUp = () => {
+        if (!isDragging) return;
+        isDragging = false;
+        document.body.style.userSelect = '';
+        document.removeEventListener('mousemove', onMouseMove);
+        document.removeEventListener('mouseup', onMouseUp);
+        document.removeEventListener('touchmove', onMouseMove);
+        document.removeEventListener('touchend', onMouseUp);
+      };
+
+      headerEl.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        const rect = modal.getBoundingClientRect();
+        offsetX = e.clientX - rect.left;
+        offsetY = e.clientY - rect.top;
+        document.body.style.userSelect = 'none';
+        document.addEventListener('mousemove', onMouseMove);
+        document.addEventListener('mouseup', onMouseUp);
+      });
+
+      headerEl.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        const t = e.touches[0];
+        const rect = modal.getBoundingClientRect();
+        offsetX = t.clientX - rect.left;
+        offsetY = t.clientY - rect.top;
+        document.body.style.userSelect = 'none';
+        document.addEventListener('touchmove', onMouseMove, { passive: false });
+        document.addEventListener('touchend', onMouseUp);
+      });
+    }
+  } catch (err) {
+    console.error('Draggable modal init failed', err);
   }
 
   const persistQuizMode = async () => {
