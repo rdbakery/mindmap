@@ -1,5 +1,5 @@
 {
-  "id": "m3ghry1fhq",
+  "id": "4gqx1fifle3",
   "text": "2. Reasoning ",
   "collapsed": 0,
   "children": [
@@ -82,13 +82,13 @@
           "children": [],
           "_h": 41,
           "_x": 618,
-          "_y": 255.5,
+          "_y": 125.5,
           "_realH": 41,
           "_realW": 148
         },
         {
           "id": "c1ieubvbzjc",
-          "text": "भाई का बेटा = भतीजा",
+          "text": "भतीजा nephew (brother's son)",
           "collapsed": true,
           "important": false,
           "note": "",
@@ -96,9 +96,25 @@
           "children": [],
           "_h": 41,
           "_x": 618,
-          "_y": 320.5,
+          "_y": 190.5,
           "_realH": 41,
-          "_realW": 186
+          "_realW": 264
+        },
+        {
+          "id": "7hhcduwplfp",
+          "text": "भतीजी niece (brother's daughter)",
+          "collapsed": true,
+          "important": false,
+          "note": "",
+          "youtube": "",
+          "viewMap": "",
+          "examHistory": [],
+          "children": [],
+          "_h": 41,
+          "_x": 618,
+          "_y": 255.5,
+          "_realH": 41,
+          "_realW": 286
         },
         {
           "id": "uekvjbmcyb",
@@ -110,7 +126,7 @@
           "children": [],
           "_h": 41,
           "_x": 618,
-          "_y": 385.5,
+          "_y": 320.5,
           "_realH": 41,
           "_realW": 182
         },
@@ -125,9 +141,29 @@
           "children": [],
           "_h": 41,
           "_x": 618,
-          "_y": 450.5,
+          "_y": 385.5,
           "_realH": 41,
           "_realW": 160
+        },
+        {
+          "id": "xdoxenmlqi",
+          "text": "Pointing type",
+          "collapsed": true,
+          "important": false,
+          "note": "Tag:\nReasoning → Blood Relation\n\nQuestion:\nPointing to a woman, John says, \"She is the wife of my uncle's only son.\" How is the woman related to John?\n\nएक महिला की ओर इशारा करते हुए जॉन कहता है, \"वह मेरे चाचा के इकलौते बेटे की पत्नी है।\" वह महिला जॉन से किस प्रकार संबंधित है?\n\nOptions:\nA) Sister (बहन)\nB) Cousin (चचेरी बहन)\nC) Sister-in-law (भाभी)\nD) Niece (भतीजी)\n\n       Uncle\n             │\nJohn ─── Son = Wife",
+          "youtube": "",
+          "examHistory": [
+            {
+              "exam": "CGL",
+              "year": "2025"
+            }
+          ],
+          "children": [],
+          "_h": 41,
+          "_x": 618,
+          "_y": 450.5,
+          "_realH": 41,
+          "_realW": 148
         }
       ],
       "_h": 41,
@@ -154,7 +190,7 @@
           "children": [],
           "_h": 41,
           "_x": 651,
-          "_y": 60.5,
+          "_y": 190.5,
           "_realH": 41,
           "_realW": 170
         }
@@ -183,7 +219,7 @@
           "children": [],
           "_h": 41,
           "_x": 629,
-          "_y": 125.5,
+          "_y": 255.5,
           "_realH": 41,
           "_realW": 143
         },
@@ -197,7 +233,7 @@
           "children": [],
           "_h": 41,
           "_x": 629,
-          "_y": 190.5,
+          "_y": 320.5,
           "_realH": 41,
           "_realW": 165
         }
@@ -207,11 +243,166 @@
       "_y": 255.5,
       "_realH": 41,
       "_realW": 164
+    },
+    {
+      "id": "6pxk85tt12q",
+      "text": "Seating Arrangement",
+      "collapsed": true,
+      "important": false,
+      "note": "Tag:\nReasoning → Seating Arrangement\n\nQuestion:\nA is facing North. B is seated second to the right of A. Who is sitting immediately to the left of B?\n\nA उत्तर दिशा की ओर मुख करके बैठा है। B, A के दाईं ओर दूसरे स्थान पर बैठा है। B के ठीक बाईं ओर कौन बैठा है?\n\nOptions:\nA) The person seated to the immediate right of A\nB) The person seated opposite to A\nC) The person seated to the immediate left of A\nD) Cannot be determined\n\nSolution:\n\nShortcut:\n\nA → facing North\n\nB = second right of A\n\nA → X → B\n\nLeft of B = X\n\nAnswer:\nThe person seated to the immediate right of A",
+      "youtube": "",
+      "examHistory": [
+        {
+          "exam": "CGL",
+          "year": "2025"
+        }
+      ],
+      "children": [],
+      "_h": 41,
+      "_x": 345,
+      "_y": 320.5,
+      "_realH": 41,
+      "_realW": 207
+    },
+    {
+      "id": "af2califu09",
+      "text": "Number & Digit Pair",
+      "collapsed": true,
+      "important": false,
+      "note": "[Topic: Number & Digit Pair Reasoning]\n\n[Question]\nHow many pairs of digits are there in the given number, that have as many numbers between them as in the series of natural numbers both in backward and forward direction?\n\n61823954\n\n[Options]\n1. Two\n2. One\n3. Three\n4. Five\n5. Six\n\n[Solution]\n\nGiven number: 6 1 8 2 3 9 5 4\n\nForward direction:\n(6, 8) → 1 digit between them; 1 natural number (7) → ✓\n(2, 3) → 0 digits between them; 0 natural numbers → ✓\n(2, 5) → 2 digits between them (3, 9); 2 natural numbers (3, 4) → ✓\n(3, 5) → 1 digit between them (9); 1 natural number (4) → ✓\n\nBackward direction:\n(4, 5) → 0 digits between them; 0 natural numbers → ✓\n\nTotal valid pairs:\n4 + 1 = 5\n\n[Answer]\n5 (Option 4)",
+      "youtube": "",
+      "viewMap": "",
+      "examHistory": [],
+      "children": [],
+      "_h": 41,
+      "_x": 345,
+      "_y": 385.5,
+      "_realH": 41,
+      "_realW": 192
+    },
+    {
+      "id": "objuy3bqh9i",
+      "text": "Inequality",
+      "collapsed": true,
+      "important": false,
+      "note": "1. Both elements same\n2. All three sign(><=) present \n3. Both the conclusion are always wrong\n\nConclusion: Either 1 or 2 corret\n\n\nNote: if sign change no relation \nNotes2: if > comes in between then > sign should be there not >=\n\n6 > 8 >= 9 = 10 >= 11\na. 8>11 (wrong)\nb. 6 > 11 (correct)\n\n6 > 8 ≥ 9 = 10 ≥ 11\n│\n└───────────────► 6 > 11 ✅\n\n8 ≥ 9 = 10 ≥ 11\n│\n└───────────────► 8 ≥ 11\n                  NOT 8 > 11 ❌",
+      "youtube": "",
+      "viewMap": "http://youtube.com/post/Ugkx4S5lhk9wQrWfYhm77Q64GMY-JtqNin0t?si=DWx1Otd3x07Aa4hl",
+      "examHistory": [],
+      "children": [
+        {
+          "id": "psxvbhcw24",
+          "text": "Coded Inequality",
+          "collapsed": true,
+          "important": false,
+          "note": "[Topic: Inequality – Coded Inequality]\n\n[Question]\n\nDirections: In the following question assuming the given statements to be true, find which of the conclusions among the given conclusions is/are definitely true and then give your answers accordingly.\n\nStatement:\n\nA ≤ P > K ≤ D; M ≤ O = K > A; J > D\n\nConclusion:\n\nI. M < D\nII. D = M\nIII. A > D\n\nOptions:\n\n1. Both conclusions I and II are True\n2. Only conclusion III is True\n3. Only conclusion III and either conclusion I or II is True\n4. All conclusions are True\n5. Either conclusion I or II is True\n\n[Solution]\n\nFrom the statement:\n\nM ≤ O = K ≤ D\n\nTherefore:\n\nM ≤ D\n\nThis means either:\n\nM < D  → Conclusion I ✓\n\nOR\n\nM = D  → Conclusion II ✓\n\nSo, either Conclusion I or Conclusion II must be true.\n\nNow:\n\nO = K > A\nand\nK ≤ D\n\nTherefore:\n\nA < K ≤ D\n\nHence:\n\nA < D\n\nSo, Conclusion III (A > D) is FALSE. ✗\n\nTherefore, either Conclusion I or II is definitely true.\n\n[Answer]\n\n5. Either conclusion I or II is True",
+          "youtube": "",
+          "viewMap": "",
+          "examHistory": [],
+          "children": [],
+          "_h": 41,
+          "_x": 610,
+          "_y": 450.5,
+          "_realH": 41,
+          "_realW": 176
+        }
+      ],
+      "_h": 41,
+      "_x": 345,
+      "_y": 450.5,
+      "_realH": 41,
+      "_realW": 145
+    },
+    {
+      "id": "7fl4yowxix7",
+      "text": "Number Series",
+      "collapsed": true,
+      "important": false,
+      "note": "[Topic: Number Series – Wrong Number]\n\n[Question]\n\nIn the following number series, a wrong number is given. Find out the wrong number.\n\n2, 3, 6, 14, 45, 157.5, 630\n\n[Options]\n\n1. 157.5\n2. 14\n3. 45\n4. 630\n5. 6\n\n[Solution]\n\nObserve the pattern:\n\n2 × 1.5 = 3\n3 × 2 = 6\n6 × 2.5 = 15\n15 × 3 = 45\n45 × 3.5 = 157.5\n157.5 × 4 = 630\n\nSo, the correct series should be:\n\n2, 3, 6, 15, 45, 157.5, 630\n\nBut the given series has 14 instead of 15.\n\nTherefore, the wrong number is 14.\n\n[Answer]\n\n2. 14",
+      "youtube": "",
+      "viewMap": "",
+      "examHistory": [
+        {
+          "exam": "IBPS SO IT",
+          "year": "2019"
+        }
+      ],
+      "children": [],
+      "_h": 41,
+      "_x": 345,
+      "_y": 515.5,
+      "_realH": 41,
+      "_realW": 158
+    },
+    {
+      "id": "b6fbf7mx6ut",
+      "text": "Coding-Decoding",
+      "collapsed": true,
+      "important": false,
+      "note": "",
+      "youtube": "",
+      "viewMap": "",
+      "examHistory": [],
+      "children": [
+        {
+          "id": "kxqohc565gj",
+          "text": "Sentence Coding",
+          "collapsed": true,
+          "important": false,
+          "note": "[Topic: Coding-Decoding – Sentence Coding]\n\n[Question]\n\nDirections: Study the following information carefully and answer the given questions.\n\nIn a certain code language:\n\n‘lo by er’ means ‘moon shine brightly’,\n‘po puke er ron’ means ‘light come from moon’,\n‘pol by lus ria’ means ‘house are brightly lit’,\n‘us lus bp po lq’ means ‘lit lamp bring illusion light’.\n\nCode ‘lo puke pol by’ is for which of the following sentences in the given language?\n\n[Options]\n\n1. House lit shine brightly\n2. Shine lamp come brightly\n3. Houses illusion come brightly\n4. Shine come house brightly\n5. None of these",
+          "youtube": "",
+          "viewMap": "http://youtube.com/post/UgkxSUej7yC6dYVr31KYDozUl21jqTR7e3PK?si=9vUEDHQeymR1SUy8",
+          "examHistory": [],
+          "children": [],
+          "_h": 41,
+          "_x": 647,
+          "_y": 580.5,
+          "_realH": 41,
+          "_realW": 197
+        },
+        {
+          "id": "tla1q1isoab",
+          "text": "Word Coding",
+          "collapsed": true,
+          "important": false,
+          "note": "[Topic: Coding-Decoding – Word Coding]\n\n[Question]\n\nDirection: Study the information below and answer the following question.\n\nIn a certain code language:\n\n‘wheel ship fruit goat’ is written as ‘#5L &4P %4T @5T’.\n\n‘watch gloat fun starch’ is written as ‘#5H &6H @3N %5T’.\n\n‘glucose friend wait smile’ is written as ‘#4T @6D %7E &5E’.\n\nWhich of the following is the code for ‘White’?\n\n[Options]\n\n1. #6W\n2. @5E\n3. #5E\n4. &5E\n5. None of these\n\n[Solution]\n\nObserve the coding pattern:\n\n1st element = Symbol\n2nd element = Number of letters in the word\n3rd element = Last letter of the word\n\nExamples:\n\nwheel → #5L\n5 letters, last letter = L\n\nship → &4P\n4 letters, last letter = P\n\nfruit → %4T\n5 letters? ❌\n\nTherefore, the coding is based on the given pattern:\nSymbol + Number of letters + Last letter.\n\nFor the word:\n\nWhite\n\nNumber of letters:\nW H I T E = 5\n\nLast letter = E\n\nTherefore:\n\nWhite → #5E\n\n[Answer]\n\n3. #5E",
+          "youtube": "",
+          "viewMap": "",
+          "examHistory": [],
+          "children": [],
+          "_h": 41,
+          "_x": 647,
+          "_y": 645.5,
+          "_realH": 41,
+          "_realW": 148
+        }
+      ],
+      "_h": 41,
+      "_x": 345,
+      "_y": 580.5,
+      "_realH": 41,
+      "_realW": 182
+    },
+    {
+      "id": "o4hlp9854d",
+      "text": "Syllogism",
+      "collapsed": true,
+      "important": false,
+      "note": "(As there is no relation defined between pencil and sharpener, all possibilities will be true between pencil and sharpener. Possible diagram is shown below\n\nIf not possibility given, then check for possibility then put negative",
+      "youtube": "https://drive.google.com/file/d/1XDOZ_JcslZIcwZBlxJyHQP6eQir4YOiu/view?usp=drivesdk",
+      "viewMap": "http://youtube.com/post/UgkxZsEduf5S5nCWGhjWACWaQ7dPxdSLq11u?si=9N8M1oPZdJJ_VJCO",
+      "examHistory": [],
+      "children": [],
+      "_h": 41,
+      "_x": 345,
+      "_y": 645.5,
+      "_realH": 41,
+      "_realW": 143
     }
   ],
-  "_h": 236,
+  "_h": 626,
   "_x": 80,
-  "_y": 158,
+  "_y": 353,
   "_realH": 41,
   "_realW": 145
 }

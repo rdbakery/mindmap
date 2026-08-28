@@ -1,7 +1,7 @@
 {
-  "id": "qikam9wie4",
+  "id": "6vwbu1elu8p",
   "text": "1. maths",
-  "collapsed": false,
+  "collapsed": 0,
   "children": [
     {
       "id": "u28ux6xtqcm",
@@ -52,6 +52,22 @@
           "_y": 190.5,
           "_realH": 41,
           "_realW": 348
+        },
+        {
+          "id": "1gophf4e5og",
+          "text": "Geometric Series",
+          "collapsed": true,
+          "important": false,
+          "note": "Geometric Series (अनंत गुणोत्तर श्रेणी)\n│\n├── Definition\n│   └── ऐसी श्रेणी जिसमें प्रत्येक पद पिछले पद का निश्चित गुणज हो\n│\n├── Common Ratio (r)\n│   └── r = (दूसरा पद / पहला पद)\n│\n├── Convergence Condition\n│   ├── |r| < 1  → Convergent (योग संभव)\n│   └── |r| ≥ 1 → Divergent (योग संभव नहीं)\n│\n├── Sum of Infinite GP\n│   └── S = a / (1 - r)\n│\n├── Example 1 (Divergent)\n│   ├── 2 + 4 + 8 + 16 + ...\n│   ├── r = 2\n│   └── |r| > 1 → Divergent\n│\n├── Example 2 (Convergent)\n│   ├── 1 - 1/2 + 1/4 - 1/8 + ...\n│   ├── a = 1\n│   ├── r = -1/2\n│   ├── |r| = 1/2 < 1\n│   └── Sum = 1 / [1 - (-1/2)] = 2/3\n│\n├── Important Facts\n│   ├── a = First Term\n│   ├── r = Common Ratio\n│   └── Infinite GP sum exists only when |r| < 1\n│\n└── Quick Trick\n    └── \"Mod r less than 1 → Sum Done\"",
+          "youtube": "",
+          "viewMap": "",
+          "examHistory": [],
+          "children": [],
+          "_h": 41,
+          "_x": 601,
+          "_y": 255.5,
+          "_realH": 41,
+          "_realW": 175
         }
       ],
       "_h": 41,
@@ -91,7 +107,7 @@
       "children": [
         {
           "id": "uygde78y0b",
-          "text": "sp + cp + Profit",
+          "text": "Cp + sp + Profit",
           "collapsed": true,
           "important": false,
           "note": "Q. A shopkeeper increases the selling price of an article by 15%. After increasing the selling price, the profit percentage changes from 5% to 15%. The percentage increase in the cost price is:\n\nAnswer: 5%\n\nExplanation:\n\nLet initial CP = 100\n\nInitial profit = 5%\n⇒ SP₁ = 100 + 5 = 105\n\nSP increased by 15%\n⇒ SP₂ = 105 × 115/100 = 120.75\n\nNow new profit = 15%\n⇒ CP₂ = SP₂ × 100 / 115\n⇒ CP₂ = 120.75 × 100 / 115 = 105\n\nIncrease in CP = 105 − 100 = 5\n\nPercentage increase = (5 / 100) × 100 = 5%",
@@ -104,10 +120,10 @@
           ],
           "children": [],
           "_h": 41,
-          "_x": 587,
+          "_x": 607,
           "_y": 190.5,
           "_realH": 41,
-          "_realW": 161
+          "_realW": 183
         },
         {
           "id": "2dpq7lsca52",
@@ -119,11 +135,11 @@
           "examHistory": [],
           "children": [
             {
-              "id": "rvf2goqjnt",
-              "text": "Investment × Time",
+              "id": "wkt2l8ad18r",
+              "text": "Profit ∝ Investment × Time",
               "collapsed": true,
               "important": false,
-              "note": "Tag:\nPartnership → Investment × Time\n\nQuestion:\nArvind started a business by investing ₹80,000. After 4 months, Bhavin joined with ₹1,20,000. At the end of 8 months from the start, Chandan joined with ₹1,60,000. If the total profit is ₹1,05,000 at the end of the year, find the share of Chandan.\n\nअरविंद ने ₹80,000 निवेश करके एक व्यवसाय शुरू किया। 4 महीने बाद, भाविन ₹1,20,000 के साथ शामिल हो गया। शुरुआत से 8 महीने के अंत में, चंदन ₹1,60,000 के साथ शामिल हो गया। यदि कुल लाभ ₹1,05,000 है, तो चंदन का हिस्सा ज्ञात कीजिए।\n\nOptions:\nA) ₹26,500\nB) ₹26,000\nC) ₹26,200\nD) ₹26,250\n\nSolution:\n\nProfit ∝ Investment × Time\n\nArvind = 80,000 × 12 = 9,60,000\nBhavin = 1,20,000 × 8 = 9,60,000\nChandan = 1,60,000 × 4 = 6,40,000\n\nProfit Ratio:\n\n9,60,000 : 9,60,000 : 6,40,000\n= 3 : 3 : 2\n\nTotal Ratio = 3 + 3 + 2 = 8\n\nChandan's Share\n\n= (2/8) × 1,05,000\n= ₹26,250\n\nAnswer:\n₹26,250 (Option D)\n\nShortcut:\n80 × 12 : 120 × 8 : 160 × 4\n= 960 : 960 : 640\n= 3 : 3 : 2\n\nChandan's Share\n= (2/8) × 1,05,000\n= ₹26,250",
+              "note": "Question:\nArvind started a business by investing ₹80,000. After 4 months, Bhavin joined with ₹1,20,000. At the end of 8 months from the start, Chandan joined with ₹1,60,000. If the total profit is ₹1,05,000 at the end of the year, find the share of Chandan.\n\nअरविंद ने ₹80,000 निवेश करके एक व्यवसाय शुरू किया। 4 महीने बाद, भाविन ₹1,20,000 के साथ शामिल हो गया। शुरुआत से 8 महीने के अंत में, चंदन ₹1,60,000 के साथ शामिल हो गया। यदि कुल लाभ ₹1,05,000 है, तो चंदन का हिस्सा ज्ञात कीजिए।\n\nOptions:\nA) ₹26,500\nB) ₹26,000\nC) ₹26,200\nD) ₹26,250\n\nSolution:\n\nProfit ∝ Investment × Time\n\nArvind = 80,000 × 12 = 9,60,000\nBhavin = 1,20,000 × 8 = 9,60,000\nChandan = 1,60,000 × 4 = 6,40,000\n\nRatio:\n\n9,60,000 : 9,60,000 : 6,40,000\n= 3 : 3 : 2\n\nTotal ratio = 3 + 3 + 2 = 8\n\nChandan's share\n\n= (2/8) × 1,05,000\n= 26,250\n\nAnswer: ₹26,250\n(Option D)",
               "youtube": "",
               "examHistory": [
                 {
@@ -136,7 +152,7 @@
               "_x": 843,
               "_y": 255.5,
               "_realH": 41,
-              "_realW": 185
+              "_realW": 236
             },
             {
               "id": "2hjt3t7xzrf",
@@ -180,7 +196,7 @@
             }
           ],
           "_h": 41,
-          "_x": 587,
+          "_x": 607,
           "_y": 255.5,
           "_realH": 41,
           "_realW": 136
@@ -200,30 +216,10 @@
           ],
           "children": [],
           "_h": 41,
-          "_x": 587,
+          "_x": 607,
           "_y": 320.5,
           "_realH": 41,
           "_realW": 125
-        },
-        {
-          "id": "wkt2l8ad18r",
-          "text": "Profit ∝ Investment × Time",
-          "collapsed": true,
-          "important": false,
-          "note": "Question:\nArvind started a business by investing ₹80,000. After 4 months, Bhavin joined with ₹1,20,000. At the end of 8 months from the start, Chandan joined with ₹1,60,000. If the total profit is ₹1,05,000 at the end of the year, find the share of Chandan.\n\nअरविंद ने ₹80,000 निवेश करके एक व्यवसाय शुरू किया। 4 महीने बाद, भाविन ₹1,20,000 के साथ शामिल हो गया। शुरुआत से 8 महीने के अंत में, चंदन ₹1,60,000 के साथ शामिल हो गया। यदि कुल लाभ ₹1,05,000 है, तो चंदन का हिस्सा ज्ञात कीजिए।\n\nOptions:\nA) ₹26,500\nB) ₹26,000\nC) ₹26,200\nD) ₹26,250\n\nSolution:\n\nProfit ∝ Investment × Time\n\nArvind = 80,000 × 12 = 9,60,000\nBhavin = 1,20,000 × 8 = 9,60,000\nChandan = 1,60,000 × 4 = 6,40,000\n\nRatio:\n\n9,60,000 : 9,60,000 : 6,40,000\n= 3 : 3 : 2\n\nTotal ratio = 3 + 3 + 2 = 8\n\nChandan's share\n\n= (2/8) × 1,05,000\n= 26,250\n\nAnswer: ₹26,250\n(Option D)",
-          "youtube": "",
-          "examHistory": [
-            {
-              "exam": "CGL",
-              "year": "2025"
-            }
-          ],
-          "children": [],
-          "_h": 41,
-          "_x": 587,
-          "_y": 385.5,
-          "_realH": 41,
-          "_realW": 236
         },
         {
           "id": "hwm7rv3pzna",
@@ -250,14 +246,14 @@
               "children": [],
               "_h": 41,
               "_x": 891,
-              "_y": 450.5,
+              "_y": 385.5,
               "_realH": 41,
               "_realW": 172
             }
           ],
           "_h": 41,
-          "_x": 587,
-          "_y": 450.5,
+          "_x": 607,
+          "_y": 385.5,
           "_realH": 41,
           "_realW": 184
         },
@@ -286,14 +282,14 @@
               "children": [],
               "_h": 41,
               "_x": 853,
-              "_y": 515.5,
+              "_y": 450.5,
               "_realH": 41,
               "_realW": 199
             }
           ],
           "_h": 41,
-          "_x": 587,
-          "_y": 515.5,
+          "_x": 607,
+          "_y": 450.5,
           "_realH": 41,
           "_realW": 146
         },
@@ -312,8 +308,8 @@
           ],
           "children": [],
           "_h": 41,
-          "_x": 587,
-          "_y": 580.5,
+          "_x": 607,
+          "_y": 515.5,
           "_realH": 41,
           "_realW": 207
         },
@@ -332,17 +328,39 @@
           ],
           "children": [],
           "_h": 41,
-          "_x": 587,
-          "_y": 645.5,
+          "_x": 607,
+          "_y": 580.5,
           "_realH": 41,
           "_realW": 189
+        },
+        {
+          "id": "bfzi3h080y",
+          "text": "Comparison of Quantities",
+          "collapsed": true,
+          "important": false,
+          "note": "Tag:\nProfit & Loss → Comparison of Quantities\n\nQuestion:\nIn the following question, two quantities A and B are given. On solving these quantities, obtain the respective values of A and B. Solve both quantities and select the correct option.\n\nनिम्नलिखित प्रश्न में, A और B से अंकित दो राशियाँ दी गई हैं। इन राशियों को हल करके क्रमशः राशि A और B प्राप्त कीजिए। दोनों राशियों को हल कीजिए और सही विकल्प चुनिए।\n\nFind the cost price of the article.\n\nवस्तु का क्रय मूल्य ज्ञात कीजिए।\n\nQuantity A:\nA shopkeeper offers a discount of 10% on an article and still earns a profit of 20%. If the marked price of the article is ₹12,000, find its cost price.\n\nराशि A:\nएक दुकानदार एक वस्तु पर 10% की छूट देता है और फिर भी 20% लाभ अर्जित करता है। यदि वस्तु का अंकित मूल्य ₹12,000 है, तो उसका क्रय मूल्य ज्ञात कीजिए।\n\nQuantity B:\nOn selling an article for ₹10,800, a shopkeeper earns a profit of 12.5%. Find the cost price of the article.\n\nराशि B:\nएक वस्तु को ₹10,800 में बेचने पर एक दुकानदार 12.5% का लाभ अर्जित करता है। वस्तु का क्रय मूल्य ज्ञात कीजिए।\n\nOptions:\n1) Quantity A > Quantity B\n2) Quantity A ≥ Quantity B\n3) Quantity A < Quantity B\n4) Quantity A > Quantity B\n5) Quantity A = Quantity B or no relation\n\nSolution:\n\nQuantity A:\n\nMarked Price = ₹12,000\n\n10% discount ⇒ Selling Price\n\n= 90% of 12,000\n= ₹10,800\n\n20% profit means:\n\nSP = 120% of CP\n\nCP = 10,800 × 100/120\n= ₹9,000\n\nQuantity A = ₹9,000\n\nQuantity B:\n\nSP = ₹10,800\n\n12.5% profit = 1/8\n\nTherefore,\n\nSP = 9/8 × CP\n\nCP = 10,800 × 8/9\n= ₹9,600\n\nQuantity B = ₹9,600\n\nComparison:\n\n₹9,000 < ₹9,600\n\nTherefore,\n\nQuantity A < Quantity B",
+          "youtube": "",
+          "viewMap": "",
+          "examHistory": [
+            {
+              "exam": "IBPS SO IT",
+              "year": "2019"
+            }
+          ],
+          "children": [],
+          "_h": 41,
+          "_x": 607,
+          "_y": 645.5,
+          "_realH": 41,
+          "_realW": 236
         }
       ],
       "_h": 41,
       "_x": 313,
       "_y": 190.5,
       "_realH": 41,
-      "_realW": 154
+      "_realW": 174,
+      "viewMap": "http://youtube.com/post/UgkxEeAKYjg1LY8gaIFXdV082mt1Ck7O8CBx?si=6xfqEpDLSFOuQj6O"
     },
     {
       "id": "833amqwftgf",
@@ -439,9 +457,9 @@
               "_realW": 264
             }
           ],
-          "_h": 41,
+          "_h": 106,
           "_x": 542,
-          "_y": 320.5,
+          "_y": 353,
           "_realH": 41,
           "_realW": 193
         }
@@ -477,9 +495,63 @@
           "children": [],
           "_h": 41,
           "_x": 576,
-          "_y": 515.5,
+          "_y": 775.5,
           "_realH": 41,
           "_realW": 217
+        },
+        {
+          "id": "ahu55aryhof",
+          "text": "Cylinder",
+          "collapsed": true,
+          "important": false,
+          "note": "",
+          "youtube": "",
+          "viewMap": "http://youtube.com/post/Ugkxl-xD9OE2UoKidDsRy3kpjTEoX_w2qRts?si=2dtZ0J3qHRhF0qyI",
+          "examHistory": [],
+          "children": [
+            {
+              "id": "1z8x43ewdu7",
+              "text": "Curved Surface Area",
+              "collapsed": true,
+              "important": false,
+              "note": "Tag:\nMensuration → Cylinder → Curved Surface Area\n\nQuestion:\nA cylinder has a curved surface area of 440 cm². If the circumference of its base is 44 cm, what is the height of the cylinder?\n\nएक बेलन का वक्र पृष्ठीय क्षेत्रफल 440 वर्ग सेमी है। यदि आधार की परिधि 44 सेमी है, तो बेलन की ऊँचाई कितनी है?\n\nOptions:\n1) 15 cm\n2) 8 cm\n3) 10 cm\n4) 12 cm\n5) 20 cm\n\nSolution:\n\nCurved Surface Area of Cylinder\n= Circumference of base × Height\n\n440 = 44 × h\n\nh = 440/44\n\nh = 10 cm\n\nAnswer:\n10 cm (Option 3)\n\n\nHeight = Curved Surface Area ÷ Base Circumference\n\n= 440 ÷ 44\n= 10 cm\n\nAnswer: 10 cm",
+              "youtube": "",
+              "viewMap": "",
+              "examHistory": [
+                {
+                  "exam": "IBPS SO IT",
+                  "year": "2019"
+                }
+              ],
+              "children": [],
+              "_h": 41,
+              "_x": 830,
+              "_y": 840.5,
+              "_realH": 41,
+              "_realW": 201
+            }
+          ],
+          "_h": 41,
+          "_x": 576,
+          "_y": 840.5,
+          "_realH": 41,
+          "_realW": 134
+        },
+        {
+          "id": "jarzagcylpe",
+          "text": "Triangle",
+          "collapsed": true,
+          "important": false,
+          "note": "",
+          "youtube": "",
+          "viewMap": "http://youtube.com/post/UgkxQ3IcdIcNW1NwHLBy3wzK3UA4zIXbr0z3?si=h8Ck9xREIxcehTt4",
+          "examHistory": [],
+          "children": [],
+          "_h": 41,
+          "_x": 576,
+          "_y": 905.5,
+          "_realH": 41,
+          "_realW": 133
         }
       ],
       "_h": 41,
@@ -539,7 +611,7 @@
           "children": [],
           "_h": 41,
           "_x": 515,
-          "_y": 645.5,
+          "_y": 580.5,
           "_realH": 41,
           "_realW": 225
         },
@@ -554,7 +626,7 @@
           "children": [],
           "_h": 41,
           "_x": 515,
-          "_y": 710.5,
+          "_y": 645.5,
           "_realH": 41,
           "_realW": 229
         }
@@ -563,7 +635,7 @@
       "_x": 313,
       "_y": 450.5,
       "_realH": 41,
-      "_realW": 82
+      "_realW": 102
     },
     {
       "id": "0kvo50qd3d8q",
@@ -594,7 +666,7 @@
           "text": "Mixture",
           "collapsed": true,
           "important": false,
-          "note": "Tag:\nRatio & Proportion → Mixture\n\nQuestion:\nA 40-liter mixture contains juice and water in the ratio 5:3. How much water (in liters) must be added to this mixture to change the ratio of juice to water to 2:3?\n\n40 लीटर के मिश्रण में जूस और पानी का अनुपात 5:3 है। जूस और पानी का अनुपात 2:3 करने के लिए इस मिश्रण में कितना पानी (लीटर में) मिलाया जाना चाहिए?\n\nOptions:\nA) 15.5 litres\nB) 22.5 litres\nC) 25 litres\nD) 30 litres\n\nSolution:\n\nTotal mixture = 40 litres\n\nJuice : Water = 5 : 3\n\nJuice = (5/8) × 40\n= 25 litres\n\nWater = (3/8) × 40\n= 15 litres\n\nLet x litres of water be added.\n\nThen,\n\n25 : (15 + x) = 2 : 3\n\n75 = 30 + 2x\n\n2x = 45\n\nx = 22.5 litres\n\nAnswer:\n22.5 litres (Option B)\n\nShortcut:\n\nJuice = 25 L (fixed)\n\nFor ratio 2 : 3,\n\nIf Juice = 25,\nWater required = (3/2) × 25\n= 37.5 L\n\nExtra water to be added\n= 37.5 − 15\n= 22.5 L\n\nAnswer:\n22.5 litres",
+          "note": "Tag:\nRatio & Proportion → Mixture\n\nQuestion:\nA 40-liter mixture contains juice and water in the ratio 5:3. How much water (in liters) must be added to this mixture to change the ratio of juice to water to 2:3?\n\n40 लीटर के मिश्रण में जूस और पानी का अनुपात 5:3 है। जूस और पानी का अनुपात 2:3 करने के लिए इस मिश्रण में कितना पानी (लीटर में) मिलाया जाना चाहिए?\n\nOptions:\nA) 15.5 litres\nB) 22.5 litres\nC) 25 litres\nD) 30 litres\n\nSolution:\n\nTotal mixture = 40 litres\n\nJuice : Water = 5 : 3\n\nJuice = (5/8) × 40\n= 25 litres\n\nWater = (3/8) × 40\n= 15 litres\n\nLet x litres of water be added.\n\nThen,\n\n25 : (15 + x) = 2 : 3\n\n75 = 30 + 2x\n\n2x = 45\n\nx = 22.5 litres\n\nAnswer:\n22.5 litres (Option B)",
           "youtube": "",
           "examHistory": [
             {
@@ -642,7 +714,29 @@
               "year": "2025"
             }
           ],
-          "children": [],
+          "children": [
+            {
+              "id": "tutnpyzsq1j",
+              "text": "Mixture & Alligation",
+              "collapsed": true,
+              "important": false,
+              "note": "Tag:\nRatio & Proportion → Mixture & Alligation\n\nQuestion:\nVessel A contains milk and water in the ratio 3 : 7, while vessel B contains milk and water in the ratio 5 : 7. In what ratio should quantities be taken from the two vessels so that the resulting mixture has milk and water in the ratio 17 : 28?\n\nपात्र A में दूध और पानी को 3 : 7 के अनुपात में और पात्र B में 5 : 7 के अनुपात में मिलाया गया। दोनों पात्रों में से किस अनुपात में मात्रा लेनी चाहिए जिससे बने मिश्रण में दूध और पानी 17 : 28 के अनुपात में हो?\n\nOptions:\n1) 2 : 3\n2) 3 : 4\n3) 1 : 2\n4) 2 : 5\n5) 2 : 1\n\nShort Solution:\n\nLet the quantity taken from vessel A = a.\n\nThen quantity from vessel B = (1 − a).\n\nMilk fraction in A = 3/10\n\nMilk fraction in B = 5/12\n\nRequired milk fraction:\n\n= 17/(17 + 28)\n= 17/45\n\nTherefore,\n\n(3/10)a + (5/12)(1 − a) = 17/45\n\n⇒ 3a/10 + 5/12 − 5a/12 = 17/45\n\n⇒ 5/12 − 17/45 = 7a/60\n\n⇒ 7/180 = 7a/60\n\n⇒ a = 1/3\n\nSo, quantity from B\n\n= 1 − a\n= 2/3\n\nTherefore,\n\nA : B = 1/3 : 2/3\n= 1 : 2\n\nAnswer:\n1 : 2 (Option 3)\n\nShortcut:\n\nMilk fractions:\n\nA = 3/10 = 54/180\nB = 5/12 = 75/180\nRequired = 17/45 = 68/180\n\nAlligation:\n\nA : B\n= (75 − 68) : (68 − 54)\n= 7 : 14\n= 1 : 2\n\nAnswer:\n1 : 2",
+              "youtube": "",
+              "viewMap": "",
+              "examHistory": [
+                {
+                  "exam": "IBPS SO IT",
+                  "year": "2019"
+                }
+              ],
+              "children": [],
+              "_h": 41,
+              "_x": 923,
+              "_y": 840.5,
+              "_realH": 41,
+              "_realW": 189
+            }
+          ],
           "_h": 41,
           "_x": 615,
           "_y": 710.5,
@@ -744,6 +838,27 @@
           "_y": 710.5,
           "_realH": 41,
           "_realW": 168
+        },
+        {
+          "id": "r6i76x8zoxs",
+          "text": "Men, Women & Children",
+          "collapsed": true,
+          "important": false,
+          "note": "Tag:\nTime & Work → Men, Women & Children\n\nQuestion:\n5 men, 6 women and 4 children can complete a work in 10 days. 6 women and 6 children can complete the same work in 20 days, while 2 men and 6 women can complete it in 18 days. In how many days will 2 men and 1 woman complete the work?\n\n5 पुरुष, 6 महिलाएं और 4 बच्चे एक कार्य को 10 दिनों में पूरा कर सकते हैं। 6 महिलाएं और 6 बच्चे उसे 20 दिनों में पूरा कर सकते हैं, जबकि 2 पुरुष और 6 महिलाएं उस कार्य को 18 दिनों में पूरा कर सकते हैं। 2 पुरुष और 1 महिला उस कार्य को कितने दिनों में पूरा करेंगे?\n\nOptions:\n1) 30 दिन\n2) 36 दिन\n3) 42 दिन\n4) 40 दिन\n5) 52 दिन\n\nSolution:\n\nLet the 1-day work rates of a man, woman and child be M, W and C.\n\n5M + 6W + 4C = 1/10  ...(1)\n\n6W + 6C = 1/20  ...(2)\n\n2M + 6W = 1/18  ...(3)\n\nFrom (2):\n\nW + C = 1/120\n\nFrom (3):\n\nM + 3W = 1/36\n\nSolving with (1):\n\nM = 1/90\n\nW = 1/180\n\nTherefore,\n\n2M + W\n\n= 2(1/90) + 1/180\n\n= 2/90 + 1/180\n\n= 4/180 + 1/180\n\n= 5/180\n\n= 1/36\n\nTherefore, time required\n\n= 36 days\n\nAnswer:\n36 दिन (Option 2)",
+          "youtube": "",
+          "viewMap": "",
+          "examHistory": [
+            {
+              "exam": "IBPS SO IT",
+              "year": "2019"
+            }
+          ],
+          "children": [],
+          "_h": 41,
+          "_x": 576,
+          "_y": 775.5,
+          "_realH": 41,
+          "_realW": 224
         }
       ],
       "_h": 41,
@@ -780,6 +895,27 @@
           "_y": 710.5,
           "_realH": 41,
           "_realW": 160
+        },
+        {
+          "id": "tbgugsmcrxl",
+          "text": "Relative Speed2",
+          "collapsed": true,
+          "important": false,
+          "note": "Tag:\nTime, Speed & Distance → Relative Speed\n\nQuestion:\nA person travels from X to Y at a constant speed. If his speed had been increased by 10 km/h, he would have taken 1 hour less to cover the distance. If his speed had been increased by another 10 km/h, he would have taken 45 minutes less. Find the distance between X and Y.\n\nएक व्यक्ति X से Y तक एक स्थिर गति से यात्रा करता है। यदि उसकी गति 10 किमी/घंटा बढ़ी होती, तो उसे दूरी तय करने में 1 घंटा कम लगता। यदि उसकी गति 10 किमी/घंटा और बढ़ी होती, तो उसे 45 मिनट और कम लगते। X और Y के बीच की दूरी ज्ञात कीजिए।\n\nOptions:\n1) 300 km\n2) 380 km\n3) 400 km\n4) 340 km\n5) 420 km\n\nSolution:\n\nLet original speed = v km/h\n\nLet distance = D km\n\nFirst condition:\n\nD/v − D/(v + 10) = 1\n\nSecond condition:\n\nD/(v + 10) − D/(v + 20) = 45/60\n= 3/4\n\nDivide the two equations:\n\n[v(v + 10)] / [(v + 10)(v + 20)]\n= 1 / (3/4)\n\nv/(v + 20) = 4/3\n\n3v = 4v − 60\n\nv = 60 km/h\n\nNow,\n\nD/v − D/(v + 10) = 1\n\nD/60 − D/70 = 1\n\nD(70 − 60)/(60 × 70) = 1\n\nD/420 = 1\n\nD = 420 km\n\nAnswer:\n420 km (Option 5)\n\nTime saved:\n\n1st increase = 1 hour\n2nd increase = 45 min = 3/4 hour\n\nRatio = 1 : 3/4 = 4 : 3\n\nFor equal speed increases of 10 km/h:\n\nv/(v + 20) = 4/3\n\n⇒ v = 60 km/h\n\nDistance = v(v + 10)/10\n\n= 60 × 70 / 10\n\n= 420 km\n\nAnswer: 420 km",
+          "youtube": "",
+          "viewMap": "",
+          "examHistory": [
+            {
+              "exam": "IBPS SO IT",
+              "year": "2019"
+            }
+          ],
+          "children": [],
+          "_h": 41,
+          "_x": 666.6,
+          "_y": 775.5,
+          "_realH": 41,
+          "_realW": 168
         }
       ],
       "_h": 41,
@@ -849,7 +985,7 @@
           "children": [],
           "_h": 41,
           "_x": 570,
-          "_y": 1100.5,
+          "_y": 840.5,
           "_realH": 41,
           "_realW": 201
         }
@@ -859,11 +995,32 @@
       "_y": 840.5,
       "_realH": 41,
       "_realW": 137
+    },
+    {
+      "id": "89yn4topurk",
+      "text": "quadratic equation",
+      "collapsed": true,
+      "important": false,
+      "note": "",
+      "youtube": "",
+      "viewMap": "http://youtube.com/post/UgkxTNkOvWL3Nbzhx7C9OPbJZ7zjkZ1PCdfz?si=W_Cn6Az1LvF5zuEm",
+      "examHistory": [
+        {
+          "exam": "IBPS SO IT",
+          "year": "2019"
+        }
+      ],
+      "children": [],
+      "_h": 41,
+      "_x": 313,
+      "_y": 905.5,
+      "_realH": 41,
+      "_realW": 212
     }
   ],
-  "_h": 821,
+  "_h": 886,
   "_x": 80,
-  "_y": 450.5,
+  "_y": 483,
   "_realH": 41,
   "_realW": 113,
   "note": "Tables: up to 30\nSquares: up to 50\nCubes: up to 20"

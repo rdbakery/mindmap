@@ -33,9 +33,31 @@
           "note": "Exact words are written inside quotation marks.\nExample: He said, \"I am happy.\"",
           "youtube": "",
           "examHistory": [],
-          "children": [],
+          "children": [
+            {
+              "id": "8qzkz9o44pt",
+              "text": "if/whether",
+              "collapsed": true,
+              "important": false,
+              "note": "Tag:\nEnglish → Direct & Indirect Speech\n\nQuestion:\nA sentence is provided in direct speech. From the four given options, choose the one that most accurately conveys the sentence in its corresponding indirect speech.\n\nDirect Speech:\nHe asked me, \"Have you done your homework?\"\n\nप्रत्यक्ष कथन:\nउसने मुझसे पूछा, \"क्या तुमने अपना गृहकार्य कर लिया है?\"\n\nOptions:\nA) He asked me if I had done my homework.\nB) He asked me have I done my homework.\nC) He asked me whether I have done my homework.\nD) He asked me whether had I done my homework.\n\nAnswer:\nA) He asked me if I had done my homework.\n\nShortcut:\nYes/No Question → asked + if/whether + Subject + had + V3",
+              "youtube": "",
+              "viewMap": "",
+              "examHistory": [
+                {
+                  "exam": "CGL",
+                  "year": "2025"
+                }
+              ],
+              "children": [],
+              "_h": 41,
+              "_x": 883,
+              "_y": 125.5,
+              "_realH": 41,
+              "_realW": 128
+            }
+          ],
           "_h": 41,
-          "_x": 856,
+          "_x": 611,
           "_y": 125.5,
           "_realH": 41,
           "_realW": 152
@@ -48,9 +70,26 @@
           "note": "The same idea is reported without quotation marks.\nExample: He said that he was happy.",
           "youtube": "",
           "examHistory": [],
-          "children": [],
+          "children": [
+            {
+              "id": "zfzjt1lz4q",
+              "text": "would → will",
+              "collapsed": true,
+              "important": false,
+              "note": "Tag:\nEnglish → Direct & Indirect Speech\n\nQuestion:\nA sentence is provided in indirect speech. From the four given options, choose the one that most accurately conveys the sentence in its corresponding direct speech.\n\nIndirect Speech:\nHe said that he would join the meeting after lunch.\n\nOptions:\nA) \"I will join the meeting after lunch,\" he said.\nB) \"I would join the meeting after lunch,\" he said.\nC) \"I shall join the meeting after lunch,\" he said.\nD) \"I can join the meeting after lunch,\" he said.\n\nAnswer:\nA) \"I will join the meeting after lunch,\" he said.\n\nShortcut:\nwould → will (Direct Speech)",
+              "youtube": "",
+              "viewMap": "",
+              "examHistory": [],
+              "children": [],
+              "_h": 41,
+              "_x": 895,
+              "_y": 190.5,
+              "_realH": 41,
+              "_realW": 141
+            }
+          ],
           "_h": 41,
-          "_x": 856,
+          "_x": 611,
           "_y": 190.5,
           "_realH": 41,
           "_realW": 164
@@ -238,11 +277,188 @@
       "_y": 710.5,
       "_realH": 41,
       "_realW": 152
+    },
+    {
+      "id": "9tzu9gokg2",
+      "text": "Synonyms",
+      "collapsed": true,
+      "important": false,
+      "note": "PERFIDIOUS",
+      "youtube": "",
+      "viewMap": "",
+      "examHistory": [],
+      "children": [
+        {
+          "id": "dxnogkn23yf",
+          "text": "PERFIDIOUS",
+          "collapsed": true,
+          "important": false,
+          "note": "Disloyal",
+          "youtube": "",
+          "viewMap": "",
+          "examHistory": [],
+          "children": [],
+          "_h": 41,
+          "_x": 569,
+          "_y": 775.5,
+          "_realH": 41,
+          "_realW": 133
+        }
+      ],
+      "_h": 41,
+      "_x": 320,
+      "_y": 775.5,
+      "_realH": 41,
+      "_realW": 129
+    },
+    {
+      "id": "k626eshhh9c",
+      "text": "homonym",
+      "collapsed": true,
+      "important": false,
+      "note": "Tag:\nEnglish → Vocabulary → Homonym\n\nQuestion:\nSelect the sentence containing the homonym of the highlighted word.\n\nThe choir began the \"introit\" at the priest's signal.\n\nहाइलाइट किए गए शब्द के समनाम (Homonym) वाले वाक्य का चयन कीजिए।\n\nThe choir began the introit at the priest's signal.\n\nOptions:\nA) The child sang the introit during the intermission.\nB) The introit was replaced by an organ improvisation.\nC) The missal included Latin text for the introit.\nD) The cantor rehearsed the Sunday introit.\n\nAnswer:\nD) The cantor rehearsed the Sunday introit.",
+      "youtube": "",
+      "viewMap": "",
+      "examHistory": [
+        {
+          "exam": "CGL",
+          "year": "2025"
+        }
+      ],
+      "children": [],
+      "_h": 41,
+      "_x": 320,
+      "_y": 840.5,
+      "_realH": 41,
+      "_realW": 129
+    },
+    {
+      "id": "oyuxepolzck",
+      "text": "Despite",
+      "collapsed": true,
+      "important": false,
+      "note": "इसके बावजूद",
+      "youtube": "",
+      "viewMap": "",
+      "examHistory": [],
+      "children": [],
+      "_h": 41,
+      "_x": 320,
+      "_y": 905.5,
+      "_realH": 41,
+      "_realW": 109
+    },
+    {
+      "id": "gl7v7onmgia",
+      "text": "Sentence Improvement",
+      "collapsed": true,
+      "important": false,
+      "note": "Tag:\nEnglish → Sentence Improvement\n\nQuestion:\nChoose the most suitable option to replace the highlighted part of the sentence:\n\nThe doctor advised him to avoid eating sweets and doing exercise regularly.\n\nOptions:\nA) avoiding sweets and doing regular exercise\nB) to avoid sweets and to exercises regularly\nC) to avoid eating sweets and to exercise regularly\nD) to not eat sweets and do exercises\n\nAnswer: C\nShortcut:\nParallel Structure → to avoid ... and to exercise ...",
+      "youtube": "",
+      "viewMap": "",
+      "examHistory": [
+        {
+          "exam": "CGL",
+          "year": "2025"
+        }
+      ],
+      "children": [],
+      "_h": 41,
+      "_x": 320,
+      "_y": 970.5,
+      "_realH": 41,
+      "_realW": 221
+    },
+    {
+      "id": "wboc5ajwwd",
+      "text": "Para Jumble",
+      "collapsed": true,
+      "important": false,
+      "note": "1. If sentence start from it, then it cannot be 1st line\n2. Try to find the any two consecutive sentence",
+      "youtube": "",
+      "viewMap": "",
+      "examHistory": [],
+      "children": [
+        {
+          "id": "g0153wh2ey",
+          "text": "It",
+          "collapsed": true,
+          "important": false,
+          "note": "Tag:\nEnglish → Para Jumble\n\nQuestion:\nRearrange the following sentences to form a coherent paragraph:\n\n1. It is a process that involves the systematic and objective investigation of a subject to discover new facts or to confirm existing ones.\n2. Research is a foundational pillar of academic and scientific progress.\n3. This can be either theoretical, aiming to expand knowledge, or applied, seeking to solve a practical problem.\n4. The findings of this investigation are then documented and peer-reviewed to ensure validity and credibility.\n\nOptions:\nA) 2, 1, 3, 4\nB) 1, 2, 4, 3\nC) 4, 3, 2, 1\nD) 3, 4, 1, 2\n\nAnswer:\nA) 2, 1, 3, 4\n\nShortcut:\nIntroduction → Definition → Types → Outcome",
+          "youtube": "",
+          "viewMap": "",
+          "examHistory": [
+            {
+              "exam": "CGL",
+              "year": "2025"
+            }
+          ],
+          "children": [],
+          "_h": 41,
+          "_x": 585,
+          "_y": 1035.5,
+          "_realH": 41,
+          "_realW": 65
+        }
+      ],
+      "_h": 41,
+      "_x": 320,
+      "_y": 1035.5,
+      "_realH": 41,
+      "_realW": 145
+    },
+    {
+      "id": "mhmoe5wdnwr",
+      "text": "Misspelt",
+      "collapsed": true,
+      "important": false,
+      "note": "Confusing Words (Important Spellings)\n│\n├── Accommodate → समायोजित करना (cc + mm)\n├── Recommend → सिफारिश करना (mm)\n├── Condemned → निंदा की गई\n├── Embarrassment → शर्मिंदगी (rr + ss)\n├── Idiosyncrasy → विशेष स्वभाव\n├── Entrepreneur → उद्यमी (preneur)\n├── Volunteer → स्वयंसेवक\n├── Discrepancy → विसंगति\n├── Definite → निश्चित\n├── Efficiency → दक्षता\n├── Intellectual → बौद्धिक\n├── Temporarily → अस्थायी रूप से\n├── Occurrence → घटना (cc + rr)\n├── Scenario → परिदृश्य\n├── Successfully → सफलतापूर्वक (cc + ss)\n├── Referred → संदर्भित किया (rr)\n├── Separate → अलग (par, not seperate)\n├── Publicly → सार्वजनिक रूप से\n├── Fulfillment → पूर्ति (ll)\n├── Believe → विश्वास करना (ie)\n├── Receive → प्राप्त करना (ei)\n├── Archive → अभिलेखागार\n├── Achieve → प्राप्त करना (ie)\n├── Receipts → रसीदें (ei)\n├── Economic → आर्थिक\n├── Privilege → विशेषाधिकार (ilege)\n├── Millennium → सहस्राब्दी (ll + nn)\n├── Obsession → जुनून (ss)\n├── Enthusiastic → उत्साही\n├── Miscellaneous → विविध (scell)\n├── Mischievous → शरारती (ie, not mischievious)\n├── Reconciliation → सुलह / मेल-मिलाप (cc)\n└── Obedient → आज्ञाकारी (ie)",
+      "youtube": "",
+      "viewMap": "",
+      "examHistory": [],
+      "children": [],
+      "_h": 41,
+      "_x": 320,
+      "_y": 1100.5,
+      "_realH": 41,
+      "_realW": 113
+    },
+    {
+      "id": "9hv7y6eba27",
+      "text": "Vocab",
+      "collapsed": true,
+      "important": false,
+      "note": "1. lopsided : with one side lower or smaller than the other",
+      "youtube": "",
+      "viewMap": "",
+      "examHistory": [],
+      "children": [],
+      "_h": 41,
+      "_x": 320,
+      "_y": 1165.5,
+      "_realH": 41,
+      "_realW": 102
+    },
+    {
+      "id": "ipzc4yctsn",
+      "text": "Since and for",
+      "collapsed": true,
+      "important": false,
+      "note": "",
+      "youtube": "http://youtube.com/post/Ugkxx6jNrdtKy--vdsPkt5V7lHUh1KabMwi8?si=16ERgKrphj2Qdf6-",
+      "viewMap": "",
+      "examHistory": [],
+      "children": [],
+      "_h": 41,
+      "_x": 320,
+      "_y": 1230.5,
+      "_realH": 41,
+      "_realW": 168
     }
   ],
-  "_h": 691,
+  "_h": 1211,
   "_x": 80,
-  "_y": 385.5,
+  "_y": 645.5,
   "_realH": 41,
   "_realW": 120
 }
