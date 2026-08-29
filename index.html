@@ -35,9 +35,14 @@
       📥 Import Mind Map
       <input type="file" accept=".json" onchange="importJSON(event)" hidden>
     </label>
+    <label class="import-btn">
+      📦 Import All Maps
+      <input type="file" accept=".json" onchange="importAllMaps(event)" hidden>
+    </label>
 
     <!-- Export / Share -->
     <button onclick="exportJSON()">📄 Export JSON</button>
+    <button onclick="exportAllMaps()">📦 Export All Maps</button>
     <button onclick="exportPNG()" id="exportPngBtn">🖼 Export PNG</button>
     <button onclick="exportPDF()" id="exportPdfBtn">📕 Export PDF</button>
 

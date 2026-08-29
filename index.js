@@ -2061,6 +2061,92 @@ function exportJSON(){
   a.download=filename;
   a.click();
 }
+
+async function exportAllMaps() {
+  showFlashMessage("📦 Exporting all maps...");
+
+  const savedMaps = await listMaps();
+  const maps = await Promise.all(savedMaps.map(async ({ id, name }) => {
+    const data = await loadMap(id);
+    return {
+      id,
+      name: name || (data && data.text) || 'Untitled Map',
+      data: data || { id, text: name || 'Untitled Map', children: [] }
+    };
+  }));
+
+  const payload = {
+    version: 1,
+    exportedAt: new Date().toISOString(),
+    maps,
+  };
+
+  const fileName = `mindmap-gurukul-all-maps-${new Date().toISOString().replace(/[:.]/g, '-')}.json`;
+  const b = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(b);
+  a.download = fileName;
+  a.click();
+  showFlashMessage("✅ All maps exported");
+}
+
+async function importAllMaps(e){
+  const f = e.target.files[0];
+  if(!f) return;
+
+  const r = new FileReader();
+  r.onload = async () => {
+    try {
+      const raw = JSON.parse(r.result);
+      const bundle = Array.isArray(raw) ? raw : (raw && Array.isArray(raw.maps) ? raw.maps : [raw]);
+
+      if (!bundle.length) {
+        throw new Error("No mind maps found in this file.");
+      }
+
+      const existingMaps = await listMaps();
+      const importedIds = [];
+      let created = 0;
+      let skipped = 0;
+
+      for (const item of bundle) {
+        const mapData = item && item.data ? item.data : item;
+        if (!mapData || !mapData.text) continue;
+
+        const name = String(mapData.text || item?.name || "Imported Map").trim();
+        const exists = existingMaps.some(m => m.name && m.name.trim().toLowerCase() === name.toLowerCase());
+        if (exists) {
+          skipped += 1;
+          continue;
+        }
+
+        const newId = uid();
+        const normalized = { ...mapData, id: newId, text: name };
+        await saveMap(newId, normalized.text, normalized);
+        existingMaps.push({ id: newId, name: normalized.text });
+        importedIds.push(newId);
+        created += 1;
+      }
+
+      if (created === 0) {
+        throw new Error("No new maps were imported. All maps already exist.");
+      }
+
+      activeId = importedIds[0];
+      currentMap = await loadMap(activeId);
+      await refreshSelector();
+      render();
+      showFlashMessage(`✅ Imported ${created} map(s)${skipped ? ` (${skipped} skipped)` : ""}`);
+    } catch (err) {
+      alert(err.message || "Invalid all-maps backup file.");
+    } finally {
+      e.target.value = "";
+    }
+  };
+
+  r.readAsText(f);
+}
+
 async function importJSON(e){
   const f = e.target.files[0];
   if(!f) return;
