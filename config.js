@@ -31,6 +31,9 @@ window.APP_CONFIG = {
     alwaysPromptApiKey: false, // Set to true to always ask for API key
     inspectMode: true          // Set to false to disable DevTools and right-click
   },
+  ai: {
+    geminiModel: "gemini-3.6-flash"
+  },
   preImportedMaps: [
     { label: "1. Maths", file: "1_maths.json" },
     { label: "10. Geography", file: "10_geography.json" },

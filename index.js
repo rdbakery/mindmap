@@ -5,6 +5,11 @@ if (typeof window.APP_CONFIG === 'undefined') {
 }
 const APP_CONFIG = window.APP_CONFIG;
 
+function getGeminiGenerateContentUrl(apiKey) {
+  const model = APP_CONFIG.ai?.geminiModel || "gemini-3.6-flash";
+  return `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(apiKey)}`;
+}
+
 if (!APP_CONFIG.dev.inspectMode) {
   document.addEventListener("contextmenu", function (e) {
     e.preventDefault();
@@ -2965,7 +2970,7 @@ Rules:
   }
 }`;
 
-  const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${apiKey}`, {
+  const response = await fetch(getGeminiGenerateContentUrl(apiKey), {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -3818,7 +3823,7 @@ Mind Map Content:
 ${content}`;
 
   try {
-    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${apiKey}`, {
+    const response = await fetch(getGeminiGenerateContentUrl(apiKey), {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
