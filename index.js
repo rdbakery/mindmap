@@ -2232,7 +2232,7 @@ function startNodeQuiz(nodeId) {
   const mode = node.aiQuiz.quizMode || 'submit';
   const title = node.aiQuiz.quizName || (node.text ? `${node.text} - Quiz` : 'Quiz');
 
-  showAIQuizModal(quizData, false, null, timer, nodeId, 'en', title, mode);
+  showAIQuizModal(quizData, true, null, timer, nodeId, 'en', title, mode);
 }
 
 async function importPreImportedQuiz(fileName){
@@ -3929,7 +3929,7 @@ async function generateQuizForNode(id, content, settings = { qsCount: 25, qsDiff
     await render();
     showFlashMessage("✅ Quiz saved to node!");
 
-    showAIQuizModal(quizData, false, null, settings.qsTimer, id, defaultLang, quizName, settings.quizMode || 'submit');
+    showAIQuizModal(quizData, true, null, settings.qsTimer, id, defaultLang, quizName, settings.quizMode || 'submit');
   }
 }
 
@@ -3942,10 +3942,14 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
   // Shuffle for retakes
   if (isRetake) {
     showFlashMessage("🔄 Shuffling questions for a new attempt!");
+    const originalQuestionOrder = quizData.slice();
     // Shuffle questions
     for (let i = quizData.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [quizData[i], quizData[j]] = [quizData[j], quizData[i]];
+    }
+    if (quizData.length > 1 && quizData.every((question, index) => question === originalQuestionOrder[index])) {
+      [quizData[0], quizData[1]] = [quizData[1], quizData[0]];
     }
     // Shuffle options
     quizData.forEach(q => {
@@ -4532,18 +4536,25 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
       modal.remove();
       overlay.remove();
       let title = null;
+      let retakeQuizData = quizData;
       if (savedQuizId) {
         try {
           const existing = await loadQuiz(savedQuizId);
-          if (existing) title = existing.quizName || existing.mapName || (currentMap ? `${currentMap.text} - Quiz` : 'Quiz');
+          if (existing) {
+            retakeQuizData = JSON.parse(JSON.stringify(existing.questions));
+            title = existing.quizName || existing.mapName || (currentMap ? `${currentMap.text} - Quiz` : 'Quiz');
+          }
         } catch (e) {
           // ignore
         }
       } else if (nodeId) {
         const node = find(currentMap, nodeId);
-        if (node && node.aiQuiz) title = node.aiQuiz.quizName || (node.text ? `${node.text} - Quiz` : (currentMap ? `${currentMap.text} - Quiz` : 'Quiz'));
+        if (node && node.aiQuiz) {
+          retakeQuizData = JSON.parse(JSON.stringify(node.aiQuiz.questions));
+          title = node.aiQuiz.quizName || (node.text ? `${node.text} - Quiz` : (currentMap ? `${currentMap.text} - Quiz` : 'Quiz'));
+        }
       }
-      showAIQuizModal(JSON.parse(JSON.stringify(quizData)), true, savedQuizId, timerSeconds, nodeId, currentLang, title, quizModeState);
+      showAIQuizModal(JSON.parse(JSON.stringify(retakeQuizData)), true, savedQuizId, timerSeconds, nodeId, currentLang, title, quizModeState);
     };
 
   };
