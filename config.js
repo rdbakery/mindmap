@@ -37,8 +37,7 @@ window.APP_CONFIG = {
   preImportedMaps: [
     { label: "1. Maths", file: "1_maths.json" },
     { label: "10. Geography", file: "10_geography.json" },
-    { label: "11. TRE4 Computer Science", file: "11_tre4_computer_science.json" },
-    { label: "12. SET Computer Science", file: "12_stet_computer_science.json" },
+    { label: "11. TRE4 Computer Science", file: "11_computer_science_with_quiz.json" },
     { label: "2. Reasoning", file: "2_reasoning.json" },
     { label: "3. English", file: "3_english.json" },
     { label: "4. Polity", file: "4_polity.json" },
