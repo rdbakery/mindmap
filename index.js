@@ -743,21 +743,6 @@ async function removeReviewItem(id) {
   await saveStudyProgress(progress);
 }
 
-function openRevisionTarget(item, openQuiz = false) {
-  const node = item.nodeId ? find(currentMap, item.nodeId) : null;
-  if (!node) {
-    showFlashMessage("The original node is not available in the current map.");
-    return;
-  }
-  closeProgressDashboard();
-  if (openQuiz && node.aiQuiz) {
-    startNodeQuiz(node.id);
-    return;
-  }
-  expandPathToNode(currentMap, node.id);
-  render().then(() => focusNode(node.id));
-}
-
 /* ================= STATE ================= */
 let currentMap=null, activeId=null;
 let undoStack=[], redoStack=[];
@@ -4841,8 +4826,6 @@ async function openProgressDashboard(filterState = {}) {
       </div>
       <div class="study-review-actions">
         <button data-action="review" data-id="${escapeHtml(item.id)}">Review</button>
-        ${item.nodeId ? `<button data-action="open-node" data-id="${escapeHtml(item.id)}">Open node</button>` : ""}
-        ${item.nodeId && find(currentMap, item.nodeId)?.aiQuiz ? `<button data-action="open-quiz" data-id="${escapeHtml(item.id)}">Open quiz</button>` : ""}
         ${dueItems.includes(item) ? `<button data-action="complete" data-id="${escapeHtml(item.id)}">Done</button>` : ""}
         <button data-action="remove" data-id="${escapeHtml(item.id)}">Remove</button>
       </div>
@@ -4865,6 +4848,7 @@ async function openProgressDashboard(filterState = {}) {
       <div><h2>Progress Dashboard</h2><p>Track performance, weak subjects, and scheduled revision.</p></div>
       <button class="study-close-btn" data-action="close" title="Close">✖</button>
     </div>
+    <div class="study-dashboard-content">
     <div class="study-stat-grid">
       <div><strong>${progress.attempts.length}</strong><span>Attempts</span></div>
       <div><strong>${accuracy}%</strong><span>Accuracy</span></div>
@@ -4891,6 +4875,7 @@ async function openProgressDashboard(filterState = {}) {
       </div>
       ${reviewRows}
     </section>
+    </div>
   `;
   modal.onclick = async event => {
     const button = event.target.closest("[data-action]");
@@ -4909,7 +4894,6 @@ async function openProgressDashboard(filterState = {}) {
     const item = progress.reviewItems[button.dataset.id];
     if (!item) return;
     if (action === "review") return openReviewItem(item);
-    if (action === "open-node" || action === "open-quiz") return openRevisionTarget(item, action === "open-quiz");
     if (action === "complete") await markReviewItemComplete(item.id);
     if (action === "remove") {
       if (!confirm("Remove this question from the Mistake Notebook?")) return;
@@ -4951,8 +4935,6 @@ function openReviewItem(item) {
     <div class="study-answer right-answer"><strong>Correct answer:</strong> ${escapeHtml(item.answer || "Not available")}</div>
     ${item.explanation ? `<div class="study-explanation"><strong>Explanation:</strong> ${escapeHtml(item.explanation)}</div>` : ""}
     <div class="study-review-actions">
-      ${item.nodeId ? `<button data-open-node>Open node</button>` : ""}
-      ${item.nodeId && find(currentMap, item.nodeId)?.aiQuiz ? `<button data-open-quiz>Open quiz</button>` : ""}
       <button data-close>Close</button><button class="save" data-done>Reviewed tomorrow</button>
     </div>
   `;
@@ -4960,16 +4942,6 @@ function openReviewItem(item) {
   overlay.onclick = event => { if (event.target === overlay) close(); };
   modal.onclick = async event => {
     if (event.target.closest("[data-close]")) return close();
-    if (event.target.closest("[data-open-node]")) {
-      close();
-      openRevisionTarget(item);
-      return;
-    }
-    if (event.target.closest("[data-open-quiz]")) {
-      close();
-      openRevisionTarget(item, true);
-      return;
-    }
     if (event.target.closest("[data-done]")) {
       await markReviewItemComplete(item.id);
       close();

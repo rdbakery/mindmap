@@ -273,6 +273,10 @@ body {
   width: min(620px, 92vw);
 }
 
+.study-review-modal .study-review-actions {
+  justify-content: flex-end;
+}
+
 .study-dashboard-header,
 .study-review-actions,
 .study-review-row,
@@ -287,6 +291,21 @@ body {
 .study-dashboard-header p,
 .study-dashboard-modal h3 {
   margin-top: 0;
+}
+
+.study-dashboard-modal > .study-dashboard-header {
+  flex-shrink: 0;
+}
+
+.study-dashboard-modal {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.study-dashboard-content {
+  min-height: 0;
+  overflow: auto;
 }
 
 .study-dashboard-header p,
@@ -607,6 +626,10 @@ body.dark-mode .study-review-modal {
   background: #202a24;
   color: #e5e7eb;
   border-color: #46544b;
+}
+
+body.dark-mode .study-review-question {
+  color: #1b1b1b;
 }
 
 body.dark-mode .study-stat-grid > div,
