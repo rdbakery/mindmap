@@ -4301,8 +4301,8 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
       el.style.display = i === currentQuestionIndex ? 'block' : 'none';
     });
     modal.querySelectorAll('.quiz-nav-btn').forEach((btn, i) => {
-      btn.classList.toggle('active', i === currentQuestionIndex);
-      if (i === currentQuestionIndex) {
+      if (!isSubmitted) btn.classList.toggle('active', i === currentQuestionIndex);
+      if (!isSubmitted && i === currentQuestionIndex) {
         btn.classList.add('visited');
         btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
       }
