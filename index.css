@@ -1615,6 +1615,13 @@ button.exam-question-chip.active,
   color: #1d4ed8 !important;
   box-shadow: 0 0 0 2px rgba(59,130,246,0.3) !important;
 }
+
+.ai-quiz-wrapper {
+  resize: both;
+  min-width: 320px;
+  min-height: 360px;
+}
+
 button.quiz-nav-btn.correct,
 button.exam-question-chip.correct,
 .quiz-nav-btn.correct,
