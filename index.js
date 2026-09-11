@@ -1937,7 +1937,6 @@ h.innerHTML = `
   ${APP_CONFIG.features.focusMode ? `<button onclick="toggleFocus('${n.id}')">${focusedNodeId === n.id ? "🎯 Exit focus" : "🎯 Focus"}</button>` : ""}
   ${APP_CONFIG.features.notes ? `<button onclick="editNote('${n.id}')">📝 Add note</button>` : ""}
   ${APP_CONFIG.features.studyDashboard ? `<button onclick="addStudyTodo('${n.id}')">${studyTodoDate ? `✅ Todo: ${studyTodoDate}` : "📌 Add Study Todo"}</button>` : ""}
-  ${n.aiQuiz ? `<button onclick="startNodeQuiz('${n.id}')">▶ Start Quiz</button>` : ""}
   ${isAdmin ? `<button onclick="openQuizSettingsModal('${n.id}')">🤖 Generate AI Quiz</button>` : ""}
 ${(isAdmin && APP_CONFIG.features.pyq) ? `
 <button onclick="editExamHistory('${n.id}')">
