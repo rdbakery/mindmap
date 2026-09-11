@@ -593,9 +593,10 @@ async function listQuizzes(){
 }
 
 const PROGRESS_KEY = "progress/dashboard.json";
+const studyTodoDates = new Map();
 
 function emptyStudyProgress() {
-  return { attempts: [], reviewItems: {} };
+  return { attempts: [], reviewItems: {}, todos: [], reviewHistory: [], dailyGoals: {} };
 }
 
 async function loadStudyProgress() {
@@ -606,9 +607,16 @@ async function loadStudyProgress() {
       .get(PROGRESS_KEY)
       .onsuccess = event => {
         const data = event.target.result?.json || emptyStudyProgress();
+        const reviewItems = data.reviewItems && typeof data.reviewItems === "object" ? data.reviewItems : {};
+        Object.values(reviewItems).forEach(item => {
+          if (item.type === "quiz" && item.subject === item.title) item.subject = "General";
+        });
         resolve({
           attempts: Array.isArray(data.attempts) ? data.attempts : [],
-          reviewItems: data.reviewItems && typeof data.reviewItems === "object" ? data.reviewItems : {}
+          reviewItems,
+          todos: Array.isArray(data.todos) ? data.todos : [],
+          reviewHistory: Array.isArray(data.reviewHistory) ? data.reviewHistory : [],
+          dailyGoals: data.dailyGoals && typeof data.dailyGoals === "object" ? data.dailyGoals : {}
         });
       };
   });
@@ -649,13 +657,13 @@ async function recordStudyAttempt({ type, title, items, score, total }) {
       id: key,
       type,
       title: title || "Untitled",
-      subject: item.subject || title || "General",
+      subject: item.subject || "General",
       question: item.question,
       answer: item.answer,
       userAnswer: item.userAnswer,
       explanation: item.explanation || "",
+      nodeId: item.nodeId || previous?.nodeId || null,
       correct: item.correct,
-      difficult: previous?.difficult || !item.correct,
       attempts: (previous?.attempts || 0) + 1,
       intervalDays,
       updatedAt: now.toISOString(),
@@ -666,10 +674,44 @@ async function recordStudyAttempt({ type, title, items, score, total }) {
   await saveStudyProgress(progress);
 }
 
-async function setReviewItemDifficulty(id) {
+function localDateKey(date = new Date()) {
+  const local = new Date(date);
+  const year = local.getFullYear();
+  const month = String(local.getMonth() + 1).padStart(2, "0");
+  const day = String(local.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+function shiftDateKey(dateKey, amount) {
+  const date = new Date(`${dateKey}T12:00:00`);
+  date.setDate(date.getDate() + amount);
+  return localDateKey(date);
+}
+
+async function addStudyTodo(nodeId) {
+  if (!APP_CONFIG.features.studyDashboard) return;
+  const node = find(currentMap, nodeId);
+  if (!node) return;
   const progress = await loadStudyProgress();
-  if (!progress.reviewItems[id]) return;
-  progress.reviewItems[id].difficult = !progress.reviewItems[id].difficult;
+  const today = localDateKey();
+  const alreadyAdded = progress.todos.some(todo => todo.nodeId === nodeId && todo.date === today);
+  if (alreadyAdded) {
+    showFlashMessage("This node is already in today's study todos.");
+    return;
+  }
+  progress.todos.push({ id: uid(), nodeId, nodeText: node.text, mapId: activeId, date: today, completed: false, createdAt: new Date().toISOString() });
+  await saveStudyProgress(progress);
+  studyTodoDates.set(nodeId, today);
+  render();
+  showFlashMessage("✅ Added to today's study todos");
+}
+
+async function toggleStudyTodo(id) {
+  const progress = await loadStudyProgress();
+  const todo = progress.todos.find(item => item.id === id);
+  if (!todo) return;
+  todo.completed = !todo.completed;
+  todo.completedAt = todo.completed ? new Date().toISOString() : null;
   await saveStudyProgress(progress);
 }
 
@@ -678,7 +720,30 @@ async function markReviewItemComplete(id) {
   if (!progress.reviewItems[id]) return;
   progress.reviewItems[id].nextReviewAt = new Date(Date.now() + 86400000).toISOString();
   progress.reviewItems[id].updatedAt = new Date().toISOString();
+  progress.reviewHistory.push({ id: uid(), reviewItemId: id, date: localDateKey(), completedAt: new Date().toISOString() });
   await saveStudyProgress(progress);
+}
+
+async function removeReviewItem(id) {
+  const progress = await loadStudyProgress();
+  if (!progress.reviewItems[id]) return;
+  delete progress.reviewItems[id];
+  await saveStudyProgress(progress);
+}
+
+function openRevisionTarget(item, openQuiz = false) {
+  const node = item.nodeId ? find(currentMap, item.nodeId) : null;
+  if (!node) {
+    showFlashMessage("The original node is not available in the current map.");
+    return;
+  }
+  closeProgressDashboard();
+  if (openQuiz && node.aiQuiz) {
+    startNodeQuiz(node.id);
+    return;
+  }
+  expandPathToNode(currentMap, node.id);
+  render().then(() => focusNode(node.id));
 }
 
 /* ================= STATE ================= */
@@ -696,6 +761,9 @@ let undoStack=[], redoStack=[];
   if (localStorage.getItem("isAdmin") === "true") {
     isAdmin = true;
   }
+
+  const progressDashboardBtn = document.getElementById("progressDashboardBtn");
+  if (progressDashboardBtn) progressDashboardBtn.hidden = !APP_CONFIG.features.studyDashboard;
 
   await document.fonts.ready;
   const maps=await listMaps();
@@ -716,6 +784,9 @@ currentMap={
     activeId=maps[0].id;
     currentMap=await loadMap(activeId);
   }
+
+    const savedStudyProgress = await loadStudyProgress();
+    savedStudyProgress.todos.forEach(todo => studyTodoDates.set(todo.nodeId, todo.date));
 
   if (APP_CONFIG.features.darkMode) {
     const toolbarInner = document.querySelector('.toolbar-inner');
@@ -1760,6 +1831,7 @@ function renderQuizBadge(node) {
 
 function draw(n, depth){
 const el = document.createElement("div");
+const studyTodoDate = studyTodoDates.get(n.id);
 const hiddenInQuiz = isNodeHiddenInQuiz(n);
 const nodeLabel = hiddenInQuiz ? "?" : n.text;
 const hasExplanation = Boolean(n.youtube);
@@ -1852,6 +1924,7 @@ h.innerHTML = `
   ${APP_CONFIG.features.importantMarker ? `<button onclick="toggleImportant('${n.id}')">${n.important ? "⭐ Remove Important" : "⭐ Mark Important"}</button>` : ""}
   ${APP_CONFIG.features.focusMode ? `<button onclick="toggleFocus('${n.id}')">${focusedNodeId === n.id ? "🎯 Exit focus" : "🎯 Focus"}</button>` : ""}
   ${APP_CONFIG.features.notes ? `<button onclick="editNote('${n.id}')">📝 Add note</button>` : ""}
+  ${APP_CONFIG.features.studyDashboard ? `<button onclick="addStudyTodo('${n.id}')">${studyTodoDate ? `✅ Todo: ${studyTodoDate}` : "📌 Add Study Todo"}</button>` : ""}
   ${n.aiQuiz ? `<button onclick="startNodeQuiz('${n.id}')">▶ Start Quiz</button>` : ""}
   ${isAdmin ? `<button onclick="openQuizSettingsModal('${n.id}')">🤖 Generate AI Quiz</button>` : ""}
 ${(isAdmin && APP_CONFIG.features.pyq) ? `
@@ -3465,7 +3538,7 @@ function openExamTestScreen(examJson) {
       total: totalMarks,
       items: questions.map(q => ({
         id: q.id,
-        subject: q.section,
+        subject: currentMap?.text || "General",
         question: q.question.en,
         answer: q.answer,
         userAnswer: answers.get(q.id) || null,
@@ -4587,7 +4660,7 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
 
     recordStudyAttempt({
       type: "quiz",
-      title: displayTitle,
+      title: nodeId && find(currentMap, nodeId)?.text ? find(currentMap, nodeId).text : displayTitle,
       score,
       total: quizData.length,
       items: quizData.map((q, i) => {
@@ -4597,11 +4670,12 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
         const selectedAnswer = selected ? options[parseInt(selected.value, 10)] || selected.value : null;
         return {
           id: i + 1,
-          subject: displayTitle,
+          subject: currentMap?.text || "General",
           question: typeof q.question === "string" ? q.question : q.question?.en || q.question?.hi || "",
           answer: correctAnswer,
           userAnswer: selectedAnswer,
           correct: Boolean(selected && parseInt(selected.value, 10) === q.answer),
+          nodeId,
           explanation: typeof q.explanation === "string" ? q.explanation : q.explanation?.en || q.explanation?.hi || ""
         };
       })
@@ -4709,17 +4783,31 @@ function closeProgressDashboard() {
   document.getElementById("studyDashboardModal")?.remove();
 }
 
-async function openProgressDashboard() {
+async function openProgressDashboard(filterState = {}) {
+  if (!APP_CONFIG.features.studyDashboard) return;
   closeProgressDashboard();
   const progress = await loadStudyProgress();
+  const selectedDate = filterState.date || localDateKey();
   const items = Object.values(progress.reviewItems);
   const dueItems = items.filter(item => new Date(item.nextReviewAt) <= new Date());
-  const difficultItems = items.filter(item => item.difficult || !item.correct);
+  const subjects = [...new Set(items.map(item => item.subject).filter(Boolean))].sort();
+  const titles = [...new Set(items.map(item => item.title).filter(Boolean))].sort();
+  const isDue = item => new Date(item.nextReviewAt) <= new Date();
+  const matchesFilter = item => {
+    if (filterState.subject && item.subject !== filterState.subject) return false;
+    if (filterState.source && item.type !== filterState.source) return false;
+    if (filterState.title && item.title !== filterState.title) return false;
+    return true;
+  };
+  const filteredItems = items.filter(item => !item.correct).filter(matchesFilter);
+  const dayTodos = progress.todos.filter(todo => todo.date === selectedDate);
+  const completedTodos = dayTodos.filter(todo => todo.completed).length;
+  const todoProgress = dayTodos.length ? Math.round((completedTodos / dayTodos.length) * 100) : 0;
   const attempted = progress.attempts.reduce((sum, attempt) => sum + attempt.attempted, 0);
   const correct = progress.attempts.reduce((sum, attempt) => sum + attempt.correct, 0);
   const accuracy = attempted ? Math.round((correct / attempted) * 100) : 0;
   const weakSubjects = {};
-  difficultItems.forEach(item => {
+  filteredItems.forEach(item => {
     weakSubjects[item.subject] = (weakSubjects[item.subject] || 0) + 1;
   });
   const weakSubjectRows = Object.entries(weakSubjects)
@@ -4727,16 +4815,25 @@ async function openProgressDashboard() {
     .slice(0, 5)
     .map(([subject, count]) => `<div class="study-list-row"><span>${escapeHtml(subject)}</span><strong>${count} weak</strong></div>`)
     .join("") || `<div class="study-empty">Complete a quiz or test to identify weak subjects.</div>`;
-  const reviewRows = difficultItems.slice(0, 20).map(item => `
+  const optionMarkup = (options, selected, placeholder) => `<option value="">${placeholder}</option>${options.map(option => {
+    const labels = {
+      quiz: "Quiz",
+      test: "Test"
+    };
+    return `<option value="${escapeHtml(option)}" ${selected === option ? "selected" : ""}>${escapeHtml(labels[option] || option)}</option>`;
+  }).join("")}`;
+  const reviewRows = filteredItems.slice(0, 20).map(item => `
     <div class="study-review-row">
       <div>
         <strong>${escapeHtml(item.question || "Question")}</strong>
-        <small>${escapeHtml(item.title)} · ${item.correct ? "Needs reinforcement" : "Incorrect"} · Next: ${new Date(item.nextReviewAt).toLocaleDateString()}</small>
+        <small>${escapeHtml(item.title)} · ${item.type === "test" ? "Test" : "Quiz"} · ${item.correct ? "Needs reinforcement" : "Incorrect"} · Next: ${new Date(item.nextReviewAt).toLocaleDateString()}</small>
       </div>
       <div class="study-review-actions">
         <button data-action="review" data-id="${escapeHtml(item.id)}">Review</button>
-        <button data-action="difficulty" data-id="${escapeHtml(item.id)}">${item.difficult ? "Unmark" : "Difficult"}</button>
+        ${item.nodeId ? `<button data-action="open-node" data-id="${escapeHtml(item.id)}">Open node</button>` : ""}
+        ${item.nodeId && find(currentMap, item.nodeId)?.aiQuiz ? `<button data-action="open-quiz" data-id="${escapeHtml(item.id)}">Open quiz</button>` : ""}
         ${dueItems.includes(item) ? `<button data-action="complete" data-id="${escapeHtml(item.id)}">Done</button>` : ""}
+        <button data-action="remove" data-id="${escapeHtml(item.id)}">Remove</button>
       </div>
     </div>
   `).join("") || `<div class="study-empty">Your mistake notebook is empty.</div>`;
@@ -4768,7 +4865,21 @@ async function openProgressDashboard() {
       <section><h3>Weak Subjects</h3>${weakSubjectRows}</section>
       <section><h3>Spaced Repetition</h3><p class="study-muted">Incorrect questions return tomorrow. Correct answers extend the interval up to 30 days.</p><strong>${dueItems.length} review${dueItems.length === 1 ? "" : "s"} due now</strong></section>
     </div>
-    <section class="study-mistakes"><h3>Mistake Notebook</h3>${reviewRows}</section>
+    <section class="study-day-panel">
+      <div class="study-day-header"><div><span class="study-section-kicker">Daily plan</span><h3>Daily Todos</h3><p class="study-muted">Track node todos day by day.</p></div><div class="study-day-controls"><button data-day-shift="-1" title="Previous day">◀</button><input type="date" data-day-picker value="${selectedDate}"><button data-day-shift="1" title="Next day">▶</button></div></div>
+      <div class="study-todo-header"><h4>Todos for ${selectedDate === localDateKey() ? "Today" : selectedDate}</h4><span>${completedTodos}/${dayTodos.length} complete</span></div>
+      <div class="study-progress-track"><span style="width:${todoProgress}%"></span></div>
+      <div class="study-todo-list">${dayTodos.map(todo => `<label class="study-todo-row"><input type="checkbox" data-todo-id="${escapeHtml(todo.id)}" ${todo.completed ? "checked" : ""}><span class="${todo.completed ? "completed" : ""}">${escapeHtml(todo.nodeText)}</span></label>`).join("") || `<div class="study-empty">No node todos for this day. Add one from any node menu.</div>`}</div>
+    </section>
+    <section class="study-mistakes">
+      <div class="study-mistakes-header"><h3>Mistake Notebook</h3><span>${filteredItems.length} shown</span></div>
+      <div class="study-filter-grid">
+        <label>Subject<select data-filter="subject">${optionMarkup(subjects, filterState.subject, "All subjects")}</select></label>
+        <label>Quiz/Test<select data-filter="source">${optionMarkup(["quiz", "test"], filterState.source, "Quiz and tests")}</select></label>
+        <label>Quiz or test<select data-filter="title">${optionMarkup(titles, filterState.title, "All quizzes/tests")}</select></label>
+      </div>
+      ${reviewRows}
+    </section>
   `;
   modal.onclick = async event => {
     const button = event.target.closest("[data-action]");
@@ -4778,11 +4889,28 @@ async function openProgressDashboard() {
     const item = progress.reviewItems[button.dataset.id];
     if (!item) return;
     if (action === "review") return openReviewItem(item);
-    if (action === "difficulty") await setReviewItemDifficulty(item.id);
+    if (action === "open-node" || action === "open-quiz") return openRevisionTarget(item, action === "open-quiz");
     if (action === "complete") await markReviewItemComplete(item.id);
+    if (action === "remove") {
+      if (!confirm("Remove this question from the Mistake Notebook?")) return;
+      await removeReviewItem(item.id);
+    }
     openProgressDashboard();
   };
   document.body.appendChild(modal);
+  modal.querySelectorAll("select[data-filter]").forEach(select => {
+    select.onchange = () => openProgressDashboard({
+      ...filterState,
+      [select.dataset.filter]: select.value
+    });
+  });
+  modal.querySelector("[data-day-picker]").onchange = event => openProgressDashboard({ ...filterState, date: event.target.value });
+  modal.querySelectorAll("[data-day-shift]").forEach(button => {
+    button.onclick = () => openProgressDashboard({ ...filterState, date: shiftDateKey(selectedDate, Number(button.dataset.dayShift)) });
+  });
+  modal.querySelectorAll("[data-todo-id]").forEach(input => {
+    input.onchange = () => toggleStudyTodo(input.dataset.todoId).then(() => openProgressDashboard({ ...filterState, date: selectedDate }));
+  });
 }
 
 function openReviewItem(item) {
@@ -4802,12 +4930,26 @@ function openReviewItem(item) {
     <div class="study-answer wrong-answer"><strong>Your answer:</strong> ${escapeHtml(item.userAnswer || "Not attempted")}</div>
     <div class="study-answer right-answer"><strong>Correct answer:</strong> ${escapeHtml(item.answer || "Not available")}</div>
     ${item.explanation ? `<div class="study-explanation"><strong>Explanation:</strong> ${escapeHtml(item.explanation)}</div>` : ""}
-    <div class="study-review-actions"><button data-close>Close</button><button class="save" data-done>Reviewed tomorrow</button></div>
+    <div class="study-review-actions">
+      ${item.nodeId ? `<button data-open-node>Open node</button>` : ""}
+      ${item.nodeId && find(currentMap, item.nodeId)?.aiQuiz ? `<button data-open-quiz>Open quiz</button>` : ""}
+      <button data-close>Close</button><button class="save" data-done>Reviewed tomorrow</button>
+    </div>
   `;
   const close = () => { overlay.remove(); modal.remove(); };
   overlay.onclick = event => { if (event.target === overlay) close(); };
   modal.onclick = async event => {
     if (event.target.closest("[data-close]")) return close();
+    if (event.target.closest("[data-open-node]")) {
+      close();
+      openRevisionTarget(item);
+      return;
+    }
+    if (event.target.closest("[data-open-quiz]")) {
+      close();
+      openRevisionTarget(item, true);
+      return;
+    }
     if (event.target.closest("[data-done]")) {
       await markReviewItemComplete(item.id);
       close();

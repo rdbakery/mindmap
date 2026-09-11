@@ -354,6 +354,176 @@ body {
   border-radius: 8px;
 }
 
+.study-day-panel {
+  margin-bottom: 20px;
+  padding: 16px;
+  border: 1px solid #dbe4de;
+  border-radius: 8px;
+}
+
+.study-day-header,
+.study-todo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.study-day-header h3,
+.study-day-header p,
+.study-todo-header h4 {
+  margin-top: 0;
+}
+
+.study-section-kicker {
+  display: block;
+  margin-bottom: 4px;
+  color: #6aa84f;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.study-day-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.study-day-controls button {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #374151;
+  cursor: pointer;
+}
+
+.study-day-header input,
+.study-goal-grid input {
+  box-sizing: border-box;
+  padding: 7px 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #1f2937;
+}
+
+.study-goal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.study-goal-grid label,
+.study-goal-grid > div {
+  display: grid;
+  gap: 5px;
+  align-content: center;
+  color: #4b5563;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.study-goal-grid strong {
+  color: #166534;
+  font-size: 20px;
+}
+
+.study-goal-grid span {
+  font-weight: 400;
+}
+
+.study-todo-header {
+  margin-top: 8px;
+}
+
+.study-todo-header h4 {
+  margin-bottom: 0;
+}
+
+.study-todo-header span {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.study-progress-track {
+  height: 7px;
+  margin: 10px 0 4px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e5ebe6;
+}
+
+.study-progress-track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #6aa84f, #22c55e);
+  transition: width 0.2s ease;
+}
+
+.study-todo-list {
+  margin-top: 8px;
+}
+
+.study-todo-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eef2ef;
+  cursor: pointer;
+}
+
+.study-todo-row .completed {
+  color: #6b7280;
+  text-decoration: line-through;
+}
+
+.study-mistakes-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.study-mistakes-header span {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.study-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(120px, 1fr));
+  gap: 8px;
+  margin: 12px 0 8px;
+}
+
+.study-filter-grid label {
+  display: grid;
+  gap: 4px;
+  color: #4b5563;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.study-filter-grid select {
+  width: 100%;
+  min-width: 0;
+  padding: 7px 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #1f2937;
+  font: inherit;
+  font-weight: 400;
+}
+
 .study-list-row {
   padding: 8px 0;
   border-bottom: 1px solid #eef2ef;
@@ -424,9 +594,48 @@ body.dark-mode .study-mistakes {
   border-color: #46544b;
 }
 
+body.dark-mode .study-day-panel {
+  border-color: #46544b;
+}
+
+body.dark-mode .study-day-header input,
+body.dark-mode .study-goal-grid input {
+  background: #29352e;
+  color: #e5e7eb;
+  border-color: #526258;
+}
+
+body.dark-mode .study-day-controls button {
+  background: #29352e;
+  color: #e5e7eb;
+  border-color: #526258;
+}
+
+body.dark-mode .study-progress-track {
+  background: #37463b;
+}
+
+body.dark-mode .study-goal-grid label,
+body.dark-mode .study-goal-grid > div {
+  color: #cbd5e1;
+}
+
+body.dark-mode .study-filter-grid label {
+  color: #cbd5e1;
+}
+
+body.dark-mode .study-filter-grid select {
+  background: #29352e;
+  color: #e5e7eb;
+  border-color: #526258;
+}
+
 @media (max-width: 700px) {
   .study-stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .study-dashboard-columns { grid-template-columns: 1fr; }
+  .study-filter-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .study-goal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .study-day-header { align-items: flex-start; flex-direction: column; }
   .study-review-row { flex-direction: column; }
   .study-review-actions { width: 100%; justify-content: flex-start; }
 }

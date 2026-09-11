@@ -24,7 +24,8 @@ window.APP_CONFIG = {
     search: true,
     darkMode: true,
     exportImage: false,
-    exportPDF: false
+    exportPDF: false,
+    studyDashboard: true
   },
   dev: {
     mockAIQuizResponse: false, // Set to true to return mock quiz data
