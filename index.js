@@ -715,6 +715,18 @@ async function toggleStudyTodo(id) {
   await saveStudyProgress(progress);
 }
 
+async function removeStudyTodo(id) {
+  const progress = await loadStudyProgress();
+  const todo = progress.todos.find(item => item.id === id);
+  if (!todo) return;
+  progress.todos = progress.todos.filter(item => item.id !== id);
+  await saveStudyProgress(progress);
+  if (!progress.todos.some(item => item.nodeId === todo.nodeId)) {
+    studyTodoDates.delete(todo.nodeId);
+  }
+  await render();
+}
+
 async function markReviewItemComplete(id) {
   const progress = await loadStudyProgress();
   if (!progress.reviewItems[id]) return;
@@ -4866,10 +4878,10 @@ async function openProgressDashboard(filterState = {}) {
       <section><h3>Spaced Repetition</h3><p class="study-muted">Incorrect questions return tomorrow. Correct answers extend the interval up to 30 days.</p><strong>${dueItems.length} review${dueItems.length === 1 ? "" : "s"} due now</strong></section>
     </div>
     <section class="study-day-panel">
-      <div class="study-day-header"><div><span class="study-section-kicker">Daily plan</span><h3>Daily Todos</h3><p class="study-muted">Track node todos day by day.</p></div><div class="study-day-controls"><button data-day-shift="-1" title="Previous day">◀</button><input type="date" data-day-picker value="${selectedDate}"><button data-day-shift="1" title="Next day">▶</button></div></div>
+      <div class="study-day-header"><div><span class="study-section-kicker">Daily plan</span><h3>Daily Study Tasks</h3><p class="study-muted">Organize and monitor node-based study tasks by date.</p></div><div class="study-day-controls"><button data-day-shift="-1" title="Previous day">◀</button><input type="date" data-day-picker value="${selectedDate}"><button data-day-shift="1" title="Next day">▶</button></div></div>
       <div class="study-todo-header"><h4>Todos for ${selectedDate === localDateKey() ? "Today" : selectedDate}</h4><span>${completedTodos}/${dayTodos.length} complete</span></div>
       <div class="study-progress-track"><span style="width:${todoProgress}%"></span></div>
-      <div class="study-todo-list">${dayTodos.map(todo => `<label class="study-todo-row"><input type="checkbox" data-todo-id="${escapeHtml(todo.id)}" ${todo.completed ? "checked" : ""}><span class="${todo.completed ? "completed" : ""}">${escapeHtml(todo.nodeText)}</span></label>`).join("") || `<div class="study-empty">No node todos for this day. Add one from any node menu.</div>`}</div>
+      <div class="study-todo-list">${dayTodos.map(todo => `<div class="study-todo-row"><label><input type="checkbox" data-todo-id="${escapeHtml(todo.id)}" ${todo.completed ? "checked" : ""}><span class="${todo.completed ? "completed" : ""}">${escapeHtml(todo.nodeText)}</span></label><span class="study-todo-actions"><button type="button" data-todo-action="remove" data-todo-id="${escapeHtml(todo.id)}" title="Remove task">🗑</button></span></div>`).join("") || `<div class="study-empty">No study tasks are scheduled for this date. Add one from a node menu.</div>`}</div>
     </section>
     <section class="study-mistakes">
       <div class="study-mistakes-header"><h3>Mistake Notebook</h3><span>${filteredItems.length} shown</span></div>
@@ -4883,6 +4895,15 @@ async function openProgressDashboard(filterState = {}) {
   `;
   modal.onclick = async event => {
     const button = event.target.closest("[data-action]");
+    const todoButton = event.target.closest("[data-todo-action]");
+    if (todoButton) {
+      const todoId = todoButton.dataset.todoId;
+      if (todoButton.dataset.todoAction === "remove") {
+        if (!confirm("Remove this todo?")) return;
+        await removeStudyTodo(todoId);
+      }
+      return openProgressDashboard({ ...filterState, date: selectedDate });
+    }
     if (!button) return;
     const action = button.dataset.action;
     if (action === "close") return closeProgressDashboard();
