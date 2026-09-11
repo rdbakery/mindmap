@@ -592,12 +592,107 @@ async function listQuizzes(){
   });
 }
 
+const PROGRESS_KEY = "progress/dashboard.json";
+
+function emptyStudyProgress() {
+  return { attempts: [], reviewItems: {} };
+}
+
+async function loadStudyProgress() {
+  const db = await openDB();
+  return new Promise(resolve => {
+    db.transaction(STORE)
+      .objectStore(STORE)
+      .get(PROGRESS_KEY)
+      .onsuccess = event => {
+        const data = event.target.result?.json || emptyStudyProgress();
+        resolve({
+          attempts: Array.isArray(data.attempts) ? data.attempts : [],
+          reviewItems: data.reviewItems && typeof data.reviewItems === "object" ? data.reviewItems : {}
+        });
+      };
+  });
+}
+
+async function saveStudyProgress(progress) {
+  const db = await openDB();
+  db.transaction(STORE, "readwrite")
+    .objectStore(STORE)
+    .put({ key: PROGRESS_KEY, json: progress });
+}
+
+async function recordStudyAttempt({ type, title, items, score, total }) {
+  const progress = await loadStudyProgress();
+  const now = new Date();
+  const attempt = {
+    id: uid(),
+    type,
+    title: title || "Untitled",
+    score,
+    total,
+    correct: items.filter(item => item.correct).length,
+    attempted: items.filter(item => item.userAnswer !== null && item.userAnswer !== undefined && item.userAnswer !== "").length,
+    date: now.toISOString()
+  };
+
+  progress.attempts.unshift(attempt);
+  progress.attempts = progress.attempts.slice(0, 200);
+
+  items.forEach(item => {
+    const key = `${type}:${safeName(title || "untitled")}:${item.id}`;
+    const previous = progress.reviewItems[key];
+    const intervalDays = item.correct
+      ? Math.min((previous?.intervalDays || 1) * 2 + 1, 30)
+      : 1;
+    progress.reviewItems[key] = {
+      ...previous,
+      id: key,
+      type,
+      title: title || "Untitled",
+      subject: item.subject || title || "General",
+      question: item.question,
+      answer: item.answer,
+      userAnswer: item.userAnswer,
+      explanation: item.explanation || "",
+      correct: item.correct,
+      difficult: previous?.difficult || !item.correct,
+      attempts: (previous?.attempts || 0) + 1,
+      intervalDays,
+      updatedAt: now.toISOString(),
+      nextReviewAt: new Date(now.getTime() + intervalDays * 86400000).toISOString()
+    };
+  });
+
+  await saveStudyProgress(progress);
+}
+
+async function setReviewItemDifficulty(id) {
+  const progress = await loadStudyProgress();
+  if (!progress.reviewItems[id]) return;
+  progress.reviewItems[id].difficult = !progress.reviewItems[id].difficult;
+  await saveStudyProgress(progress);
+}
+
+async function markReviewItemComplete(id) {
+  const progress = await loadStudyProgress();
+  if (!progress.reviewItems[id]) return;
+  progress.reviewItems[id].nextReviewAt = new Date(Date.now() + 86400000).toISOString();
+  progress.reviewItems[id].updatedAt = new Date().toISOString();
+  await saveStudyProgress(progress);
+}
+
 /* ================= STATE ================= */
 let currentMap=null, activeId=null;
 let undoStack=[], redoStack=[];
 
 /* ================= INIT ================= */
 (async()=>{
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./sw.js").catch(error => {
+      console.warn("Offline cache registration failed", error);
+    });
+  }
+
   if (localStorage.getItem("isAdmin") === "true") {
     isAdmin = true;
   }
@@ -3363,6 +3458,22 @@ function openExamTestScreen(examJson) {
       submittedAt: new Date().toISOString()
     };
 
+    recordStudyAttempt({
+      type: "test",
+      title: exam.name,
+      score,
+      total: totalMarks,
+      items: questions.map(q => ({
+        id: q.id,
+        subject: q.section,
+        question: q.question.en,
+        answer: q.answer,
+        userAnswer: answers.get(q.id) || null,
+        correct: answers.get(q.id) === q.answer,
+        explanation: q.explanation?.en || ""
+      }))
+    }).catch(error => console.error("Unable to save test progress", error));
+
     document.getElementById("examSubmitBtn").disabled = true;
     document.getElementById("examTimer").textContent = `Score ${score}/${totalMarks}`;
     const secTimer = document.getElementById("examSectionTimer");
@@ -4473,6 +4584,28 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
         showQuestionFeedback(i, selected.value, { showResult: true });
       }
     });
+
+    recordStudyAttempt({
+      type: "quiz",
+      title: displayTitle,
+      score,
+      total: quizData.length,
+      items: quizData.map((q, i) => {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        const options = Array.isArray(q.options) ? q.options : q.options?.en || [];
+        const correctAnswer = options[q.answer] || "";
+        const selectedAnswer = selected ? options[parseInt(selected.value, 10)] || selected.value : null;
+        return {
+          id: i + 1,
+          subject: displayTitle,
+          question: typeof q.question === "string" ? q.question : q.question?.en || q.question?.hi || "",
+          answer: correctAnswer,
+          userAnswer: selectedAnswer,
+          correct: Boolean(selected && parseInt(selected.value, 10) === q.answer),
+          explanation: typeof q.explanation === "string" ? q.explanation : q.explanation?.en || q.explanation?.hi || ""
+        };
+      })
+    }).catch(error => console.error("Unable to save quiz progress", error));
     
     const header = modal.querySelector('.note-editor-header');
     header.innerHTML = `<div style="display:flex; align-items:center; gap:12px;">
@@ -4558,6 +4691,130 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
     };
 
   };
+}
+
+function studyStreak(attempts) {
+  const days = new Set(attempts.map(attempt => attempt.date.slice(0, 10)));
+  let streak = 0;
+  const cursor = new Date();
+  while (days.has(cursor.toISOString().slice(0, 10))) {
+    streak++;
+    cursor.setDate(cursor.getDate() - 1);
+  }
+  return streak;
+}
+
+function closeProgressDashboard() {
+  document.getElementById("studyDashboardOverlay")?.remove();
+  document.getElementById("studyDashboardModal")?.remove();
+}
+
+async function openProgressDashboard() {
+  closeProgressDashboard();
+  const progress = await loadStudyProgress();
+  const items = Object.values(progress.reviewItems);
+  const dueItems = items.filter(item => new Date(item.nextReviewAt) <= new Date());
+  const difficultItems = items.filter(item => item.difficult || !item.correct);
+  const attempted = progress.attempts.reduce((sum, attempt) => sum + attempt.attempted, 0);
+  const correct = progress.attempts.reduce((sum, attempt) => sum + attempt.correct, 0);
+  const accuracy = attempted ? Math.round((correct / attempted) * 100) : 0;
+  const weakSubjects = {};
+  difficultItems.forEach(item => {
+    weakSubjects[item.subject] = (weakSubjects[item.subject] || 0) + 1;
+  });
+  const weakSubjectRows = Object.entries(weakSubjects)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 5)
+    .map(([subject, count]) => `<div class="study-list-row"><span>${escapeHtml(subject)}</span><strong>${count} weak</strong></div>`)
+    .join("") || `<div class="study-empty">Complete a quiz or test to identify weak subjects.</div>`;
+  const reviewRows = difficultItems.slice(0, 20).map(item => `
+    <div class="study-review-row">
+      <div>
+        <strong>${escapeHtml(item.question || "Question")}</strong>
+        <small>${escapeHtml(item.title)} · ${item.correct ? "Needs reinforcement" : "Incorrect"} · Next: ${new Date(item.nextReviewAt).toLocaleDateString()}</small>
+      </div>
+      <div class="study-review-actions">
+        <button data-action="review" data-id="${escapeHtml(item.id)}">Review</button>
+        <button data-action="difficulty" data-id="${escapeHtml(item.id)}">${item.difficult ? "Unmark" : "Difficult"}</button>
+        ${dueItems.includes(item) ? `<button data-action="complete" data-id="${escapeHtml(item.id)}">Done</button>` : ""}
+      </div>
+    </div>
+  `).join("") || `<div class="study-empty">Your mistake notebook is empty.</div>`;
+
+  const overlay = document.createElement("div");
+  overlay.id = "studyDashboardOverlay";
+  overlay.className = "study-dashboard-overlay";
+  overlay.onclick = event => {
+    if (event.target === overlay) closeProgressDashboard();
+  };
+  document.body.appendChild(overlay);
+
+  const modal = document.createElement("div");
+  modal.id = "studyDashboardModal";
+  modal.className = "study-dashboard-modal";
+  modal.innerHTML = `
+    <div class="study-dashboard-header">
+      <div><h2>Progress Dashboard</h2><p>Track performance, weak subjects, and scheduled revision.</p></div>
+      <button class="study-close-btn" data-action="close" title="Close">✖</button>
+    </div>
+    <div class="study-stat-grid">
+      <div><strong>${progress.attempts.length}</strong><span>Attempts</span></div>
+      <div><strong>${accuracy}%</strong><span>Accuracy</span></div>
+      <div><strong>${attempted}</strong><span>Questions attempted</span></div>
+      <div><strong>${studyStreak(progress.attempts)}</strong><span>Day streak</span></div>
+      <div><strong>${dueItems.length}</strong><span>Due for review</span></div>
+    </div>
+    <div class="study-dashboard-columns">
+      <section><h3>Weak Subjects</h3>${weakSubjectRows}</section>
+      <section><h3>Spaced Repetition</h3><p class="study-muted">Incorrect questions return tomorrow. Correct answers extend the interval up to 30 days.</p><strong>${dueItems.length} review${dueItems.length === 1 ? "" : "s"} due now</strong></section>
+    </div>
+    <section class="study-mistakes"><h3>Mistake Notebook</h3>${reviewRows}</section>
+  `;
+  modal.onclick = async event => {
+    const button = event.target.closest("[data-action]");
+    if (!button) return;
+    const action = button.dataset.action;
+    if (action === "close") return closeProgressDashboard();
+    const item = progress.reviewItems[button.dataset.id];
+    if (!item) return;
+    if (action === "review") return openReviewItem(item);
+    if (action === "difficulty") await setReviewItemDifficulty(item.id);
+    if (action === "complete") await markReviewItemComplete(item.id);
+    openProgressDashboard();
+  };
+  document.body.appendChild(modal);
+}
+
+function openReviewItem(item) {
+  const existing = document.getElementById("studyReviewModal");
+  const existingOverlay = document.getElementById("studyReviewOverlay");
+  existing?.remove();
+  existingOverlay?.remove();
+  const overlay = document.createElement("div");
+  overlay.id = "studyReviewOverlay";
+  overlay.className = "study-dashboard-overlay";
+  const modal = document.createElement("div");
+  modal.id = "studyReviewModal";
+  modal.className = "study-review-modal";
+  modal.innerHTML = `
+    <div class="study-dashboard-header"><div><h2>Review Question</h2><p>${escapeHtml(item.title)}</p></div><button class="study-close-btn" data-close>✖</button></div>
+    <p class="study-review-question">${escapeHtml(item.question || "Question")}</p>
+    <div class="study-answer wrong-answer"><strong>Your answer:</strong> ${escapeHtml(item.userAnswer || "Not attempted")}</div>
+    <div class="study-answer right-answer"><strong>Correct answer:</strong> ${escapeHtml(item.answer || "Not available")}</div>
+    ${item.explanation ? `<div class="study-explanation"><strong>Explanation:</strong> ${escapeHtml(item.explanation)}</div>` : ""}
+    <div class="study-review-actions"><button data-close>Close</button><button class="save" data-done>Reviewed tomorrow</button></div>
+  `;
+  const close = () => { overlay.remove(); modal.remove(); };
+  overlay.onclick = event => { if (event.target === overlay) close(); };
+  modal.onclick = async event => {
+    if (event.target.closest("[data-close]")) return close();
+    if (event.target.closest("[data-done]")) {
+      await markReviewItemComplete(item.id);
+      close();
+      openProgressDashboard();
+    }
+  };
+  document.body.append(overlay, modal);
 }
 
 /* ================= PREVENT ACCIDENTAL REFRESH ================= */
