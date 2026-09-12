@@ -4919,6 +4919,11 @@ function openReviewItem(item) {
   const existingOverlay = document.getElementById("studyReviewOverlay");
   const dashboard = document.getElementById("studyDashboardModal");
   const dashboardContent = dashboard?.querySelector(".study-dashboard-content");
+  const dashboardFilterState = Object.fromEntries(
+    [...(dashboard?.querySelectorAll("select[data-filter]") || [])]
+      .map(select => [select.dataset.filter, select.value])
+      .filter(([, value]) => value)
+  );
   const dashboardScrollTop = dashboardContent?.scrollTop || 0;
   const dashboardRows = dashboardContent ? [...dashboardContent.querySelectorAll("[data-review-row-id]")] : [];
   const reviewRow = dashboardRows.find(row => row.dataset.reviewRowId === item.id);
@@ -4963,14 +4968,14 @@ function openReviewItem(item) {
     if (event.target.closest("[data-done]")) {
       await markReviewItemComplete(item.id);
       close();
-      await openProgressDashboard();
+      await openProgressDashboard(dashboardFilterState);
       restoreDashboardPosition();
     }
     if (event.target.closest("[data-remove-reviewed]")) {
       if (!confirm("Remove this question from the Mistake Notebook?")) return;
       await removeReviewItem(item.id);
       close();
-      await openProgressDashboard();
+      await openProgressDashboard(dashboardFilterState);
       restoreDashboardPosition();
     }
   };
