@@ -4810,7 +4810,7 @@ async function openProgressDashboard(filterState = {}) {
     };
     return `<option value="${escapeHtml(option)}" ${selected === option ? "selected" : ""}>${escapeHtml(labels[option] || option)}</option>`;
   }).join("")}`;
-  const reviewRows = filteredItems.slice(0, 20).map(item => `
+  const reviewRows = filteredItems.map(item => `
     <div class="study-review-row" data-review-row-id="${escapeHtml(item.id)}">
       <div>
         <strong>${escapeHtml(item.question || "Question")}</strong>
