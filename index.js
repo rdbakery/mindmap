@@ -2231,6 +2231,59 @@ function exportJSON(){
   a.click();
 }
 
+async function exportStudyDashboard() {
+  const progress = await loadStudyProgress();
+  const payload = {
+    version: 1,
+    exportedAt: new Date().toISOString(),
+    dashboard: progress
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = `mindmap-gurukul-dashboard-${new Date().toISOString().replace(/[:.]/g, "-")}.json`;
+  link.click();
+  URL.revokeObjectURL(link.href);
+  showFlashMessage("✅ Dashboard exported");
+}
+
+async function importStudyDashboard(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  try {
+    const raw = JSON.parse(await file.text());
+    const data = raw && raw.dashboard ? raw.dashboard : raw;
+    if (!data || typeof data !== "object" || Array.isArray(data)) {
+      throw new Error("Invalid dashboard backup file.");
+    }
+
+    const progress = emptyStudyProgress();
+    progress.attempts = Array.isArray(data.attempts) ? data.attempts : [];
+    progress.reviewItems = data.reviewItems && typeof data.reviewItems === "object" && !Array.isArray(data.reviewItems)
+      ? data.reviewItems
+      : {};
+    progress.todos = Array.isArray(data.todos) ? data.todos : [];
+    progress.reviewHistory = Array.isArray(data.reviewHistory) ? data.reviewHistory : [];
+    progress.dailyGoals = data.dailyGoals && typeof data.dailyGoals === "object" && !Array.isArray(data.dailyGoals)
+      ? data.dailyGoals
+      : {};
+
+    await saveStudyProgress(progress);
+    studyTodoDates.clear();
+    progress.todos.forEach(todo => {
+      if (todo.nodeId && todo.date) studyTodoDates.set(todo.nodeId, todo.date);
+    });
+    closeProgressDashboard();
+    showFlashMessage("✅ Dashboard imported");
+    openProgressDashboard();
+  } catch (error) {
+    alert(error.message || "Invalid dashboard backup file.");
+  } finally {
+    event.target.value = "";
+  }
+}
+
 async function exportAllMaps() {
   showFlashMessage("📦 Exporting all maps...");
 
@@ -4846,7 +4899,11 @@ async function openProgressDashboard(filterState = {}) {
   modal.innerHTML = `
     <div class="study-dashboard-header">
       <div><h2>Progress Dashboard</h2><p>Track performance, weak subjects, and scheduled revision.</p></div>
-      <button class="study-close-btn" data-action="close" title="Close">✖</button>
+      <div class="study-dashboard-actions">
+        <button type="button" data-dashboard-export title="Export dashboard data">📤 Export JSON</button>
+        <label class="import-btn" title="Import dashboard data">📥 Import JSON<input type="file" accept=".json,application/json" data-dashboard-import hidden></label>
+        <button class="study-close-btn" data-action="close" title="Close">✖</button>
+      </div>
     </div>
     <div class="study-dashboard-content">
     <div class="study-stat-grid">
@@ -4902,6 +4959,8 @@ async function openProgressDashboard(filterState = {}) {
     openProgressDashboard();
   };
   document.body.appendChild(modal);
+  modal.querySelector("[data-dashboard-export]").onclick = exportStudyDashboard;
+  modal.querySelector("[data-dashboard-import]").onchange = importStudyDashboard;
   modal.querySelectorAll("select[data-filter]").forEach(select => {
     select.onchange = () => openProgressDashboard({
       ...filterState,
