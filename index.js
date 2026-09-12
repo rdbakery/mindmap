@@ -750,7 +750,10 @@ const LAST_ACTIVE_MAP_KEY = "lastActiveMapId";
 
 /* ================= INIT ================= */
 (async()=>{
-  if ("serviceWorker" in navigator) {
+  const canRegisterServiceWorker =
+    "serviceWorker" in navigator && ["http:", "https:"].includes(window.location.protocol);
+
+  if (canRegisterServiceWorker) {
     navigator.serviceWorker.register("./sw.js").catch(error => {
       console.warn("Offline cache registration failed", error);
     });
