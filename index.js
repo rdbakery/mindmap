@@ -730,6 +730,7 @@ async function removeStudyTodo(id) {
 async function markReviewItemComplete(id) {
   const progress = await loadStudyProgress();
   if (!progress.reviewItems[id]) return;
+  progress.reviewItems[id].reviewed = true;
   progress.reviewItems[id].nextReviewAt = new Date(Date.now() + 86400000).toISOString();
   progress.reviewItems[id].updatedAt = new Date().toISOString();
   progress.reviewHistory.push({ id: uid(), reviewItemId: id, date: localDateKey(), completedAt: new Date().toISOString() });
@@ -4810,15 +4811,14 @@ async function openProgressDashboard(filterState = {}) {
     return `<option value="${escapeHtml(option)}" ${selected === option ? "selected" : ""}>${escapeHtml(labels[option] || option)}</option>`;
   }).join("")}`;
   const reviewRows = filteredItems.slice(0, 20).map(item => `
-    <div class="study-review-row">
+    <div class="study-review-row" data-review-row-id="${escapeHtml(item.id)}">
       <div>
         <strong>${escapeHtml(item.question || "Question")}</strong>
         <small>${escapeHtml(item.title)} · ${item.type === "test" ? "Test" : "Quiz"} · ${item.correct ? "Needs reinforcement" : "Incorrect"} · Next: ${new Date(item.nextReviewAt).toLocaleDateString()}</small>
       </div>
       <div class="study-review-actions">
-        <button data-action="review" data-id="${escapeHtml(item.id)}">Review</button>
+        <button class="${item.reviewed ? "reviewed" : ""}" data-action="review" data-id="${escapeHtml(item.id)}">${item.reviewed ? "Reviewed" : "Review"}</button>
         ${dueItems.includes(item) ? `<button data-action="complete" data-id="${escapeHtml(item.id)}">Done</button>` : ""}
-        <button data-action="remove" data-id="${escapeHtml(item.id)}">Remove</button>
       </div>
     </div>
   `).join("") || `<div class="study-empty">Your mistake notebook is empty.</div>`;
@@ -4890,7 +4890,7 @@ async function openProgressDashboard(filterState = {}) {
     if (!item) return;
     if (action === "review") return openReviewItem(item);
     if (action === "complete") await markReviewItemComplete(item.id);
-    if (action === "remove") {
+    if (action === "remove" || action === "remove-reviewed") {
       if (!confirm("Remove this question from the Mistake Notebook?")) return;
       await removeReviewItem(item.id);
     }
@@ -4917,6 +4917,14 @@ async function openProgressDashboard(filterState = {}) {
 function openReviewItem(item) {
   const existing = document.getElementById("studyReviewModal");
   const existingOverlay = document.getElementById("studyReviewOverlay");
+  const dashboard = document.getElementById("studyDashboardModal");
+  const dashboardContent = dashboard?.querySelector(".study-dashboard-content");
+  const dashboardScrollTop = dashboardContent?.scrollTop || 0;
+  const dashboardRows = dashboardContent ? [...dashboardContent.querySelectorAll("[data-review-row-id]")] : [];
+  const reviewRow = dashboardRows.find(row => row.dataset.reviewRowId === item.id);
+  const reviewRowIndex = reviewRow ? dashboardRows.indexOf(reviewRow) : -1;
+  const dashboardContentTop = dashboardContent?.getBoundingClientRect().top || 0;
+  const reviewRowTop = reviewRow ? reviewRow.getBoundingClientRect().top - dashboardContentTop : null;
   existing?.remove();
   existingOverlay?.remove();
   const overlay = document.createElement("div");
@@ -4932,17 +4940,38 @@ function openReviewItem(item) {
     <div class="study-answer right-answer"><strong>Correct answer:</strong> ${escapeHtml(item.answer || "Not available")}</div>
     ${item.explanation ? `<div class="study-explanation"><strong>Explanation:</strong> ${escapeHtml(item.explanation)}</div>` : ""}
     <div class="study-review-actions">
-      <button data-close>Close</button><button class="save" data-done>Reviewed tomorrow</button>
+      <button data-close>Close</button><button data-remove-reviewed>Reviewed Remove</button><button class="save" data-done>Review done</button>
     </div>
   `;
   const close = () => { overlay.remove(); modal.remove(); };
+  const restoreDashboardPosition = () => {
+    const refreshedContent = document.querySelector("#studyDashboardModal .study-dashboard-content");
+    if (!refreshedContent) return;
+    const refreshedRows = [...refreshedContent.querySelectorAll("[data-review-row-id]")];
+    const refreshedRow = refreshedRows.find(row => row.dataset.reviewRowId === item.id)
+      || (reviewRowIndex >= 0 ? refreshedRows[Math.min(reviewRowIndex, refreshedRows.length - 1)] : null);
+    if (!refreshedRow || reviewRowTop === null) {
+      refreshedContent.scrollTop = dashboardScrollTop;
+      return;
+    }
+    const refreshedTop = refreshedRow.getBoundingClientRect().top - refreshedContent.getBoundingClientRect().top;
+    refreshedContent.scrollTop += refreshedTop - reviewRowTop;
+  };
   overlay.onclick = event => { if (event.target === overlay) close(); };
   modal.onclick = async event => {
     if (event.target.closest("[data-close]")) return close();
     if (event.target.closest("[data-done]")) {
       await markReviewItemComplete(item.id);
       close();
-      openProgressDashboard();
+      await openProgressDashboard();
+      restoreDashboardPosition();
+    }
+    if (event.target.closest("[data-remove-reviewed]")) {
+      if (!confirm("Remove this question from the Mistake Notebook?")) return;
+      await removeReviewItem(item.id);
+      close();
+      await openProgressDashboard();
+      restoreDashboardPosition();
     }
   };
   document.body.append(overlay, modal);

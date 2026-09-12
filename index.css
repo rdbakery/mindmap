@@ -277,6 +277,12 @@ body {
   justify-content: flex-end;
 }
 
+.study-review-actions button.reviewed {
+  background: #166534;
+  border-color: #166534;
+  color: #ffffff;
+}
+
 .study-dashboard-header,
 .study-review-actions,
 .study-review-row,
@@ -694,6 +700,12 @@ body.dark-mode .study-review-actions button {
   background: #29352e;
   color: #e5e7eb;
   border-color: #526258;
+}
+
+body.dark-mode .study-review-actions button.reviewed {
+  background: #6aa84f;
+  border-color: #6aa84f;
+  color: #102015;
 }
 
 body.dark-mode .study-dashboard-actions > button:not(.study-close-btn) {
