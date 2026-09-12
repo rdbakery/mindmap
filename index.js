@@ -755,9 +755,9 @@ const LAST_ACTIVE_MAP_KEY = "lastActiveMapId";
     "serviceWorker" in navigator && ["http:", "https:"].includes(window.location.protocol);
 
   if (canRegisterServiceWorker) {
-    navigator.serviceWorker.register("./sw.js").catch(error => {
-      console.warn("Offline cache registration failed", error);
-    });
+    navigator.serviceWorker.register("./sw.js", { updateViaCache: "none" })
+      .then(registration => registration.update())
+      .catch(error => console.warn("Offline cache registration failed", error));
   }
 
   if (localStorage.getItem("isAdmin") === "true") {
