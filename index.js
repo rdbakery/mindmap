@@ -746,6 +746,7 @@ async function removeReviewItem(id) {
 /* ================= STATE ================= */
 let currentMap=null, activeId=null;
 let undoStack=[], redoStack=[];
+const LAST_ACTIVE_MAP_KEY = "lastActiveMapId";
 
 /* ================= INIT ================= */
 (async()=>{
@@ -778,9 +779,11 @@ currentMap={
 
     await saveMap(activeId,currentMap.text,currentMap);
   } else {
-    activeId=maps[0].id;
+    const savedActiveId = localStorage.getItem(LAST_ACTIVE_MAP_KEY);
+    activeId = maps.some(map => map.id === savedActiveId) ? savedActiveId : maps[0].id;
     currentMap=await loadMap(activeId);
   }
+  localStorage.setItem(LAST_ACTIVE_MAP_KEY, activeId);
 
     const savedStudyProgress = await loadStudyProgress();
     savedStudyProgress.todos.forEach(todo => studyTodoDates.set(todo.nodeId, todo.date));
@@ -804,7 +807,6 @@ currentMap={
   }
 
   refreshSelector();
-  refreshQuizSelector();
   refreshTestSelector();
   render();
   showBackupWarningPopup();
@@ -888,74 +890,6 @@ async function refreshSelector(){
       preImportedGroup.appendChild(option);
     });
   mapSelector.appendChild(preImportedGroup);
-}
-
-async function refreshQuizSelector() {
-  let quizSelector = document.getElementById('quizSelector');
-  if (!quizSelector) {
-    quizSelector = document.createElement('select');
-    quizSelector.id = 'quizSelector';
-    
-    const toolbarInner = document.querySelector('.toolbar-inner');
-    if (toolbarInner) {
-      toolbarInner.appendChild(quizSelector);
-    }
-  }
-
-  quizSelector.onchange = async e => {
-    if (!e.target.value) return;
-
-    if (e.target.value.startsWith("preimport:")) {
-      await importPreImportedQuiz(e.target.value.replace("preimport:", ""));
-      e.target.value = "";
-      return;
-    }
-
-    const quizId = e.target.value;
-    const quizData = await loadQuiz(quizId);
-    if (quizData && quizData.questions) {
-      showAIQuizModal(JSON.parse(JSON.stringify(quizData.questions)), true, quizId, quizData.timerSeconds !== undefined ? quizData.timerSeconds : 600, null, undefined, (quizData.quizName || quizData.mapName || quizData.name), quizData.quizMode || 'submit');
-    }
-    e.target.value = ""; 
-  };
-  
-  const defaultOpt = document.createElement('option');
-  defaultOpt.value = "";
-  defaultOpt.textContent = "🧠 Start Saved Quiz...";
-  quizSelector.innerHTML = "";
-  quizSelector.appendChild(defaultOpt);
-  
-  const quizzes = await listQuizzes();
-  quizzes.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
-  
-  if (quizzes.length > 0) {
-    const savedGroup = document.createElement("optgroup");
-    savedGroup.label = "Saved Quizzes";
-    quizzes.forEach(q => {
-      const o = document.createElement("option");
-      o.value = q.id;
-      o.textContent = q.name;
-      savedGroup.appendChild(o);
-    });
-    quizSelector.appendChild(savedGroup);
-  }
-
-  if (APP_CONFIG.preImportedQuizzes && APP_CONFIG.preImportedQuizzes.length > 0) {
-    const preImportedGroup = document.createElement("optgroup");
-    preImportedGroup.label = "Pre Imported";
-    APP_CONFIG.preImportedQuizzes
-      .slice()
-      .sort((a, b) => a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }))
-      .forEach(quiz => {
-        const option = document.createElement("option");
-        option.value = `preimport:${quiz.file}`;
-        option.textContent = quiz.label;
-        preImportedGroup.appendChild(option);
-      });
-    quizSelector.appendChild(preImportedGroup);
-  }
-  
-  quizSelector.style.display = (quizzes.length > 0 || (APP_CONFIG.preImportedQuizzes && APP_CONFIG.preImportedQuizzes.length > 0)) ? "inline-block" : "none";
 }
 
 async function refreshTestSelector() {
@@ -1080,6 +1014,7 @@ mapSelector.onchange = async e => {
 
   activeId = e.target.value;
   currentMap = await loadMap(activeId);
+  localStorage.setItem(LAST_ACTIVE_MAP_KEY, activeId);
   undoStack = [];
   redoStack = [];
   allCollapsed = false; // ✅ reset icon state
@@ -1095,6 +1030,7 @@ async function createMap(){
   undoStack=[]; redoStack=[];
   resetQuizState();
   await saveMap(activeId,n,currentMap);
+  localStorage.setItem(LAST_ACTIVE_MAP_KEY, activeId);
   refreshSelector(); render();
 }
 
@@ -1112,6 +1048,7 @@ async function deleteMap(){
   if(!maps.length) location.reload();
   activeId=maps[0].id;
   currentMap=await loadMap(activeId);
+  localStorage.setItem(LAST_ACTIVE_MAP_KEY, activeId);
   resetQuizState();
   refreshSelector(); render();
 }
@@ -2356,6 +2293,7 @@ async function importAllMaps(e){
 
       activeId = importedIds[0];
       currentMap = await loadMap(activeId);
+      localStorage.setItem(LAST_ACTIVE_MAP_KEY, activeId);
       await refreshSelector();
       render();
       showFlashMessage(`✅ Imported ${created} map(s)${skipped ? ` (${skipped} skipped)` : ""}`);
@@ -2424,6 +2362,7 @@ async function importMindMapData(data){
 
   activeId = uid();
   currentMap = { ...data, id: activeId };
+  localStorage.setItem(LAST_ACTIVE_MAP_KEY, activeId);
   undoStack = [];
   redoStack = [];
   allCollapsed = false;
@@ -2465,8 +2404,6 @@ async function importPreImportedQuiz(fileName){
     await importQuizData(data, fileName);
   } catch (err) {
     alert(err.message || "Unable to import pre imported quiz.");
-  } finally {
-    await refreshQuizSelector();
   }
 }
 
@@ -4667,7 +4604,6 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
           if (timerInterval) clearInterval(timerInterval);
           modal.remove();
           overlay.remove();
-          refreshQuizSelector();
           showFlashMessage("🗑️ Quiz deleted successfully!");
         } else if (nodeId) {
           pushHistory();
@@ -4767,7 +4703,6 @@ async function showAIQuizModal(quizData, isRetake = false, savedQuizId = null, t
             await deleteQuizDB(savedQuizId);
             modal.remove();
             overlay.remove();
-            refreshQuizSelector();
             showFlashMessage("🗑️ Quiz deleted successfully!");
           } else if (nodeId) {
             pushHistory();
