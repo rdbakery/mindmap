@@ -211,7 +211,8 @@ function disableAdminMode() {
 }
 
 function searchNodes(q){
-  searchQuery = q.toLowerCase();
+  const normalizedQuery = q.trim().toLowerCase();
+  searchQuery = normalizedQuery.length >= 3 ? normalizedQuery : "";
 
   searchResults = [];
   collectSearchResults(currentMap);
@@ -802,7 +803,9 @@ currentMap={
       toolbarInner.prepend(darkModeBtn);
     }
 
-    // Restore preference
+    const savedTheme = localStorage.getItem('appTheme') === 'default' ? 'default' : 'study';
+    document.body.classList.remove('theme-default', 'theme-study');
+    document.body.classList.add(`theme-${savedTheme}`);
     if (localStorage.getItem('darkMode') === 'true') {
       document.body.classList.add('dark-mode');
       const btn = document.getElementById('darkModeBtn');
@@ -1911,6 +1914,7 @@ ${APP_CONFIG.features.youtube ? (isAdmin
         m.style.display = "none";
       } else {
         m.style.display = "block";
+        el.classList.add("menu-open");
       }
     };
   }
@@ -2579,6 +2583,7 @@ function measureNodes() {
 
 function closeMenus(){
   document.querySelectorAll(".menu").forEach(m=>m.style.display="none");
+  document.querySelectorAll(".node.menu-open").forEach(node=>node.classList.remove("menu-open"));
 }
 document.body.onclick=closeMenus;
 
@@ -4771,7 +4776,7 @@ function closeProgressDashboard() {
   document.getElementById("studyDashboardModal")?.remove();
 }
 
-async function openProgressDashboard(filterState = {}) {
+async function openProgressDashboard(filterState = {}, options = {}) {
   if (!APP_CONFIG.features.studyDashboard) return;
   closeProgressDashboard();
   const progress = await loadStudyProgress();
@@ -4860,7 +4865,7 @@ async function openProgressDashboard(filterState = {}) {
 
   const modal = document.createElement("div");
   modal.id = "studyDashboardModal";
-  modal.className = "study-dashboard-modal";
+  modal.className = `study-dashboard-modal${options.skipAnimation ? " no-animation" : ""}`;
   modal.innerHTML = `
     <div class="study-dashboard-header">
       <div><h2>Progress Dashboard</h2><p>Track performance, weak subjects, and scheduled revision.</p></div>
@@ -5017,7 +5022,7 @@ function openReviewItem(item) {
   overlay.className = "study-dashboard-overlay";
   const modal = document.createElement("div");
   modal.id = "studyReviewModal";
-  modal.className = "study-review-modal";
+  modal.className = "study-review-modal no-animation";
   modal.innerHTML = `
     <div class="study-dashboard-header"><div><h2>Review Question</h2><p>${escapeHtml(item.title)}</p></div><button class="study-close-btn" data-close>✖</button></div>
     <p class="study-review-question">${escapeHtml(item.question || "Question")}</p>
@@ -5048,14 +5053,14 @@ function openReviewItem(item) {
     if (event.target.closest("[data-done]")) {
       await markReviewItemComplete(item.id);
       close();
-      await openProgressDashboard(dashboardFilterState);
+      await openProgressDashboard(dashboardFilterState, { skipAnimation: true });
       restoreDashboardPosition();
     }
     if (event.target.closest("[data-remove-reviewed]")) {
       if (!confirm("Remove this question from the Mistake Notebook?")) return;
       await removeReviewItem(item.id);
       close();
-      await openProgressDashboard(dashboardFilterState);
+      await openProgressDashboard(dashboardFilterState, { skipAnimation: true });
       restoreDashboardPosition();
     }
   };
