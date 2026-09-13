@@ -4776,6 +4776,7 @@ async function openProgressDashboard(filterState = {}) {
   closeProgressDashboard();
   const progress = await loadStudyProgress();
   const selectedDate = filterState.date || localDateKey();
+  const progressDate = filterState.progressDate || localDateKey();
   const items = Object.values(progress.reviewItems);
   const dueItems = items.filter(item => new Date(item.nextReviewAt) <= new Date());
   const subjects = [...new Set(items.map(item => item.subject).filter(Boolean))].sort();
@@ -4785,6 +4786,8 @@ async function openProgressDashboard(filterState = {}) {
     if (filterState.subject && item.subject !== filterState.subject) return false;
     if (filterState.source && item.type !== filterState.source) return false;
     if (filterState.title && item.title !== filterState.title) return false;
+    if (filterState.reviewed === "reviewed" && !item.reviewed) return false;
+    if (filterState.reviewed === "unreviewed" && item.reviewed) return false;
     return true;
   };
   const filteredItems = items.filter(item => !item.correct).filter(matchesFilter);
@@ -4794,6 +4797,29 @@ async function openProgressDashboard(filterState = {}) {
   const attempted = progress.attempts.reduce((sum, attempt) => sum + attempt.attempted, 0);
   const correct = progress.attempts.reduce((sum, attempt) => sum + attempt.correct, 0);
   const accuracy = attempted ? Math.round((correct / attempted) * 100) : 0;
+  const historyAttempts = progress.attempts.filter(attempt => localDateKey(new Date(attempt.date)) === progressDate);
+  const historyAttempted = historyAttempts.reduce((sum, attempt) => sum + Number(attempt.attempted || 0), 0);
+  const historyCorrect = historyAttempts.reduce((sum, attempt) => sum + Number(attempt.correct || 0), 0);
+  const historyIncorrect = Math.max(historyAttempted - historyCorrect, 0);
+  const historyTotal = historyAttempts.reduce((sum, attempt) => sum + Number(attempt.total || 0), 0);
+  const historyNotAttempted = Math.max(historyTotal - historyAttempted, 0);
+  const historyByTopic = Object.entries(historyAttempts.reduce((acc, attempt) => {
+    const topic = attempt.title || "Untitled";
+    const row = acc[topic] || { title: topic, attempted: 0, correct: 0, total: 0 };
+    row.attempted += Number(attempt.attempted || 0);
+    row.correct += Number(attempt.correct || 0);
+    row.total += Number(attempt.total || 0);
+    acc[topic] = row;
+    return acc;
+  }, {}))
+    .sort(([, a], [, b]) => (b.total || 0) - (a.total || 0))
+    .map(([title, row]) => ({
+      title,
+      attempted: row.attempted,
+      correct: row.correct,
+      incorrect: Math.max(row.attempted - row.correct, 0),
+      notAttempted: Math.max(row.total - row.attempted, 0)
+    }));
   const weakSubjects = {};
   filteredItems.forEach(item => {
     weakSubjects[item.subject] = (weakSubjects[item.subject] || 0) + 1;
@@ -4806,7 +4832,9 @@ async function openProgressDashboard(filterState = {}) {
   const optionMarkup = (options, selected, placeholder) => `<option value="">${placeholder}</option>${options.map(option => {
     const labels = {
       quiz: "Quiz",
-      test: "Test"
+      test: "Test",
+      reviewed: "Reviewed",
+      unreviewed: "Not reviewed"
     };
     return `<option value="${escapeHtml(option)}" ${selected === option ? "selected" : ""}>${escapeHtml(labels[option] || option)}</option>`;
   }).join("")}`;
@@ -4818,7 +4846,6 @@ async function openProgressDashboard(filterState = {}) {
       </div>
       <div class="study-review-actions">
         <button class="${item.reviewed ? "reviewed" : ""}" data-action="review" data-id="${escapeHtml(item.id)}">${item.reviewed ? "Reviewed" : "Review"}</button>
-        ${dueItems.includes(item) ? `<button data-action="complete" data-id="${escapeHtml(item.id)}">Done</button>` : ""}
       </div>
     </div>
   `).join("") || `<div class="study-empty">Your mistake notebook is empty.</div>`;
@@ -4853,7 +4880,36 @@ async function openProgressDashboard(filterState = {}) {
     </div>
     <div class="study-dashboard-columns">
       <section><h3>Weak Subjects</h3>${weakSubjectRows}</section>
-      <section><h3>Spaced Repetition</h3><p class="study-muted">Incorrect questions return tomorrow. Correct answers extend the interval up to 30 days.</p><strong>${dueItems.length} review${dueItems.length === 1 ? "" : "s"} due now</strong></section>
+      <section>
+        <h3>Previous Progress</h3>
+        <div class="study-history-card">
+          <label class="study-history-date">
+            <span>Select date</span>
+            <input type="date" data-progress-date value="${progressDate}">
+          </label>
+          <div class="study-history-grid">
+            <div><strong>${historyAttempted}</strong><span>Attempted</span></div>
+            <div><strong>${historyCorrect}</strong><span>Correct</span></div>
+            <div><strong>${historyIncorrect}</strong><span>Incorrect</span></div>
+            <div><strong>${historyNotAttempted}</strong><span>Not attempted</span></div>
+          </div>
+          <div class="study-history-list">
+            ${historyByTopic.length ? historyByTopic.map(item => `
+              <div class="study-history-topic">
+                <div>
+                  <strong>${escapeHtml(item.title)}</strong>
+                  <small>${item.attempted} attempted · ${item.correct} correct</small>
+                </div>
+                <div class="study-history-metrics">
+                  <span>✓ ${item.correct}</span>
+                  <span>✕ ${item.incorrect}</span>
+                  <span>○ ${item.notAttempted}</span>
+                </div>
+              </div>
+            `).join("") : `<div class="study-empty">No quiz or test attempts recorded for this date.</div>`}
+          </div>
+        </div>
+      </section>
     </div>
     <section class="study-day-panel">
       <div class="study-day-header"><div><span class="study-section-kicker">Daily plan</span><h3>Daily Study Tasks</h3><p class="study-muted">Organize and monitor node-based study tasks by date.</p></div><div class="study-day-controls"><button data-day-shift="-1" title="Previous day">◀</button><input type="date" data-day-picker value="${selectedDate}"><button data-day-shift="1" title="Next day">▶</button></div></div>
@@ -4867,6 +4923,7 @@ async function openProgressDashboard(filterState = {}) {
         <label>Subject<select data-filter="subject">${optionMarkup(subjects, filterState.subject, "All subjects")}</select></label>
         <label>Quiz/Test<select data-filter="source">${optionMarkup(["quiz", "test"], filterState.source, "Quiz and tests")}</select></label>
         <label>Quiz or test<select data-filter="title">${optionMarkup(titles, filterState.title, "All quizzes/tests")}</select></label>
+        <label>Review status<select data-filter="reviewed">${optionMarkup(["reviewed", "unreviewed"], filterState.reviewed, "All review status")}</select></label>
       </div>
       ${reviewRows}
     </section>
@@ -4886,10 +4943,30 @@ async function openProgressDashboard(filterState = {}) {
     if (!button) return;
     const action = button.dataset.action;
     if (action === "close") return closeProgressDashboard();
+    if (action === "focus-due") {
+      const dueItems = Object.values(progress.reviewItems)
+        .filter(item => !item.correct && new Date(item.nextReviewAt) <= new Date())
+        .sort((a, b) => new Date(a.nextReviewAt) - new Date(b.nextReviewAt));
+      const target = dueItems[0];
+      if (target) return openReviewItem(target);
+      return openProgressDashboard({ ...filterState });
+    }
+    if (action === "focus-weak") {
+      const weakItems = Object.values(progress.reviewItems)
+        .filter(item => !item.correct)
+        .sort((a, b) => (b.mistakeCount || 0) - (a.mistakeCount || 0));
+      const target = weakItems[0];
+      if (target) {
+        if (target.subject && filterState.subject !== target.subject) {
+          return openProgressDashboard({ ...filterState, subject: target.subject });
+        }
+        return openReviewItem(target);
+      }
+      return openProgressDashboard({ ...filterState });
+    }
     const item = progress.reviewItems[button.dataset.id];
     if (!item) return;
     if (action === "review") return openReviewItem(item);
-    if (action === "complete") await markReviewItemComplete(item.id);
     if (action === "remove" || action === "remove-reviewed") {
       if (!confirm("Remove this question from the Mistake Notebook?")) return;
       await removeReviewItem(item.id);
@@ -4906,6 +4983,9 @@ async function openProgressDashboard(filterState = {}) {
     });
   });
   modal.querySelector("[data-day-picker]").onchange = event => openProgressDashboard({ ...filterState, date: event.target.value });
+  modal.querySelector("[data-progress-date]")?.addEventListener("change", event => {
+    openProgressDashboard({ ...filterState, progressDate: event.target.value, date: selectedDate });
+  });
   modal.querySelectorAll("[data-day-shift]").forEach(button => {
     button.onclick = () => openProgressDashboard({ ...filterState, date: shiftDateKey(selectedDate, Number(button.dataset.dayShift)) });
   });

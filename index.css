@@ -435,6 +435,106 @@ body {
   border-radius: 8px;
 }
 
+.study-history-card {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #d5e7d1;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f4fbf2 0%, #eef8ff 100%);
+}
+
+.study-history-date {
+  display: grid;
+  gap: 6px;
+  color: #4b5563;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.study-history-date input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 7px 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #1f2937;
+  font: inherit;
+}
+
+.study-history-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.study-history-grid > div {
+  padding: 12px 10px;
+  border: 1px solid #dbe4de;
+  border-radius: 8px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.study-history-grid strong,
+.study-history-grid span {
+  display: block;
+}
+
+.study-history-grid strong {
+  color: #166534;
+  font-size: 20px;
+}
+
+.study-history-grid span {
+  margin-top: 4px;
+  color: #4b5563;
+  font-size: 12px;
+}
+
+.study-history-list {
+  display: grid;
+  gap: 8px;
+}
+
+.study-history-topic {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid #dbe4de;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.study-history-topic strong,
+.study-history-topic small {
+  display: block;
+}
+
+.study-history-topic small {
+  color: #6b7280;
+  margin-top: 3px;
+}
+
+.study-history-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+  color: #374151;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.study-history-metrics span {
+  padding: 4px 6px;
+  border-radius: 999px;
+  background: #f3f4f6;
+}
+
 .study-day-panel {
   margin-bottom: 20px;
   padding: 16px;
@@ -737,6 +837,44 @@ body.dark-mode .study-dashboard-actions > .study-close-btn {
 body.dark-mode .study-dashboard-columns section,
 body.dark-mode .study-mistakes {
   border-color: #46544b;
+}
+
+body.dark-mode .study-history-card {
+  background: linear-gradient(135deg, rgba(31, 54, 39, 0.9) 0%, rgba(20, 30, 38, 0.9) 100%);
+  border-color: #51695d;
+}
+
+body.dark-mode .study-history-date {
+  color: #cbd5e1;
+}
+
+body.dark-mode .study-history-date input {
+  background: #29352e;
+  color: #e5e7eb;
+  border-color: #526258;
+}
+
+body.dark-mode .study-history-grid > div {
+  background: #29352e;
+  border-color: #526258;
+}
+
+body.dark-mode .study-history-grid strong {
+  color: #b7e0a2;
+}
+
+body.dark-mode .study-history-topic {
+  background: rgba(41, 53, 46, 0.7);
+  border-color: #526258;
+}
+
+body.dark-mode .study-history-topic small {
+  color: #cbd5e1;
+}
+
+body.dark-mode .study-history-metrics span {
+  background: rgba(107, 114, 128, 0.25);
+  color: #e5e7eb;
 }
 
 body.dark-mode .study-day-panel {
